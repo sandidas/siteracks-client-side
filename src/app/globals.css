@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --color-text: rgb(54, 54, 54);
+    --color-light: rgb(245, 245, 245);
+    --color-success: rgb(0, 200, 81);
+    --color-info: rgb(51, 181, 229);
+    --color-warn: rgb(255, 187, 51);
+    --color-error: rgb(254, 78, 78);
+
+    --color-background: rgb(255, 255, 255);
+    --color-primary: rgb(20, 168, 0);
+    --color-secondary: rgb(29, 67, 84);
+    --color-title: rgb(54, 54, 54);
+    --color-secondary-on: rgb(224, 224, 224);
+    --color-surface: rgb(17, 20, 36);
+    --color-surface-two: rgb(245, 71, 73);
+    --color-surface-three: rgb(87, 101, 251);
+    --color-surface-four: rgb(242, 243, 249);
+    --color-surface-five: rgb(2, 200, 240);
+  }
+
+  :root[class="dark"] {
+    --color-text: rgb(95, 106, 119);
+    --color-light: rgb(245, 245, 245);
+    --color-success: rgb(0, 200, 81);
+    --color-info: rgb(51, 181, 229);
+    --color-warn: rgb(255, 187, 51);
+    --color-error: rgb(254, 78, 78);
+
+    --color-background: rgb(7, 10, 27);
+    --color-primary: rgb(20, 168, 0);
+    --color-secondary: rgb(29, 67, 84);
+    --color-title: rgb(255, 255, 255);
+    --color-secondary-on: rgb(224, 224, 224);
+    --color-surface: rgb(17, 20, 36);
+    --color-surfaceTwo: rgb(245, 71, 73);
+    --color-surfaceThree: rgb(87, 101, 251);
+    --color-surfaceFour: rgb(242, 243, 249);
+    --color-surfaceFive: rgb(2, 200, 240);
+  }
+
+  @font-face {
+    font-family: "Ubuntu";
+    src: url("../../public/fonts/Ubuntu-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Ubuntu";
+    src: url("../../public/fonts/Ubuntu-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Ubuntu";
+    src: url("../../public/fonts/Ubuntu-Italic.woff2") format("woff2");
+    font-weight: normal;
+    font-display: swap;
+    font-style: Italic;
+  }
+
+  @font-face {
+    font-family: "Ubuntu";
+    src: url("../../public/fonts/Ubuntu-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Ubuntu";
+    src: url("../../public/fonts/Ubuntu-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-BoldItalic.woff2") format("woff2");
+    font-weight: bold;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: bold;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-BlackItalic.woff2") format("woff2");
+    font-weight: 900;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: Italic;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mulish";
+    src: url("../../public/fonts/Mulish-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+div,
+a,
+ul,
+ol,
+li,
+span,
+input,
+button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  font-family: "Ubuntu", Poppins, Mulish, sans-serif;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--color-light);
+  background: var(--color-primary);
+}
+
+::selection {
+  color: var(--color-light);
+  background: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Barlow", Poppins, Mulish, sans-serif;
+}
+
+header, header span, header a{font-family: 'Mulish', Poppins, Barlow!important;}
