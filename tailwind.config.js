@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./Components/**/*.{js,ts,jsx,tsx}",
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -15,6 +15,7 @@ module.exports = {
         ubuntu: ['"Ubuntu"', "Poppins", "Mulish", "cursive"],
         barlow: ['"Barlow"', "Poppins", "Mulish", "cursive"],
         mulish: ['"Mulish"', "Poppins", "Barlow", "cursive"],
+        poppins: ['"Poppins"', "Barlow", "Barlow", "cursive"],
       },
     },
     colors: {

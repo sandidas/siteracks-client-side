@@ -22,7 +22,6 @@ import WebsiteBackup from "../../../public/images/nav/websiteBackup.svg";
 import WildCardCertificate from "../../../public/images/nav/wildCardCertificate.svg";
 import WordPressHosting from "../../../public/images/nav/wordPressHosting.svg";
 import Link from "next/link";
-import "./headerMegaMenu.css";
 const useStyles = createStyles((theme) => ({
   link: {
     display: "flex",
@@ -208,6 +207,9 @@ export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const [domainLinksOpened, { toggle: toggleDomainLinks }] = useDisclosure(false);
+  const [websiteLinksOpened, { toggle: toggleWebsiteLinks }] = useDisclosure(false);
+  const [securityLinksOpened, { toggle: toggleSecurityLinks }] = useDisclosure(false);
+  const [helpLinksOpened, { toggle: toggleHelpLinks }] = useDisclosure(false);
 
   const { classes, theme } = useStyles();
 
@@ -230,7 +232,7 @@ export function HeaderMegaMenu() {
       </Group>
     </UnstyledButton>
   ));
-// Domain menu Item for desktop 
+  // Domain menu Item for desktop
   const domainLinks = domainMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
@@ -250,7 +252,7 @@ export function HeaderMegaMenu() {
       </Group>
     </UnstyledButton>
   ));
-// website menu Item for desktop 
+  // website menu Item for desktop
   const websiteLinks = websiteMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
@@ -271,8 +273,7 @@ export function HeaderMegaMenu() {
     </UnstyledButton>
   ));
 
-  
-// security menu Item for desktop 
+  // security menu Item for desktop
   const securityLinks = securityMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
@@ -293,9 +294,7 @@ export function HeaderMegaMenu() {
     </UnstyledButton>
   ));
 
-
-
-// help menu Item for desktop 
+  // help menu Item for desktop
   const helpLinks = helpMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
@@ -316,11 +315,8 @@ export function HeaderMegaMenu() {
     </UnstyledButton>
   ));
 
-
-
-
   return (
-    <Box pb={10}>
+    <Box pb={10} className="overflow-hidden">
       <Header height={60} px="md" className="bg-transparent border-none px-0">
         <Group position="apart" sx={{ height: "100%" }}>
           <Group>
@@ -462,7 +458,7 @@ export function HeaderMegaMenu() {
         </Group>
       </Header>
 
-      <Drawer opened={drawerOpened} onClose={closeDrawer} size="100%" padding="md" title="Navigation" className={classes.hiddenDesktop} zIndex={1000000}>
+      <Drawer opened={drawerOpened} onClose={closeDrawer} size="100%" padding="md" title={<Logo />} className={classes.hiddenDesktop} zIndex={1000000}>
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
@@ -480,6 +476,7 @@ export function HeaderMegaMenu() {
           </UnstyledButton>
           <Collapse in={linksOpened}>{webHostinglinks}</Collapse>
 
+          {/* // domain items  */}
           <UnstyledButton className={classes.link} onClick={toggleDomainLinks}>
             <Center inline>
               <Box component="span" mr={5}>
@@ -490,18 +487,43 @@ export function HeaderMegaMenu() {
           </UnstyledButton>
           <Collapse in={domainLinksOpened}>{domainLinks}</Collapse>
 
-          <a href="#" className={classes.link}>
-            Learn
-          </a>
-          <a href="#" className={classes.link}>
-            Academy
-          </a>
+          {/* website items  */}
+          <UnstyledButton className={classes.link} onClick={toggleWebsiteLinks}>
+            <Center inline>
+              <Box component="span" mr={5}>
+                Website
+              </Box>
+              <ChevronDownIcon className="h-4 w-4 text-blue-500" />
+            </Center>
+          </UnstyledButton>
+          <Collapse in={websiteLinksOpened}>{websiteLinks}</Collapse>
+
+          {/* security items  */}
+          <UnstyledButton className={classes.link} onClick={toggleSecurityLinks}>
+            <Center inline>
+              <Box component="span" mr={5}>
+                Security
+              </Box>
+              <ChevronDownIcon className="h-4 w-4 text-blue-500" />
+            </Center>
+          </UnstyledButton>
+          <Collapse in={securityLinksOpened}>{securityLinks}</Collapse>
+
+          {/* help items  */}
+          <UnstyledButton className={classes.link} onClick={toggleHelpLinks}>
+            <Center inline>
+              <Box component="span" mr={5}>
+                Help
+              </Box>
+              <ChevronDownIcon className="h-4 w-4 text-blue-500" />
+            </Center>
+          </UnstyledButton>
+          <Collapse in={helpLinksOpened}>{helpLinks}</Collapse>
 
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
           <Group position="center" grow pb="xl" px="md">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            <Button>Log in</Button>
           </Group>
         </ScrollArea>
       </Drawer>

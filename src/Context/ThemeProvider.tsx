@@ -35,6 +35,7 @@ export const ThemeProvider = ({ children }: any) => {
   useEffect(() => {
     const currentTheme = checkCurrentTheme();
     if (currentTheme) {
+      //@ts-ignore
       setColorScheme(currentTheme);
     } else {
       if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
@@ -80,19 +81,18 @@ export const ThemeProvider = ({ children }: any) => {
             },
             primaryColor: "main",
 
-            fontSizes: {
-              xs: 17,
-              sm: 17,
-              md: 18,
-              lg: 18,
-              xl: 18,
-            },
+            // fontSizes: {
+            //   xs: 17,
+            //   sm: 17,
+            //   md: 18,
+            //   lg: 18,
+            //   xl: 18,
+            // },
           }}
           withGlobalStyles
           withNormalizeCSS
         >
           {children}
-          <Button>Primary button</Button>
         </MantineProvider>
       </ColorSchemeProvider>
     </ThemeContext.Provider>

@@ -1,8 +1,8 @@
 "use client"; // this is a client component
 
 import Header from "@/Components/Header/Header";
+// import Header from "@/Components/Header/Header";
 import { ThemeProvider } from "@/Context/ThemeProvider";
-import "./globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -326,6 +326,9 @@ button {
   border: 0;
   outline: 0;
   margin: 0;
+}
+p {
+  font-size: 18px; line-height: 30px;
   font-family: "Ubuntu", Poppins, Mulish, sans-serif;
 }
 
@@ -349,4 +352,11 @@ h6 {
   font-family: "Barlow", Poppins, Mulish, sans-serif;
 }
 
-header, header span, header a{font-family: 'Mulish', Poppins, Barlow!important;}
+html{
+  @apply text-primary;
+}
+header,
+header span,
+header a {
+  font-family: "Mulish", Poppins, Barlow !important;
+}

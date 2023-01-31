@@ -1,5 +1,5 @@
 "use client"; // this is a client component
-import Image from "next/image";
+
 import { Inter } from "@next/font/google";
 import styles from "./page.module.css";
 import { Button } from "@mantine/core";
@@ -9,9 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      
-      <HomeBanner />
+    <main>
       <Button>Primary button</Button>
     </main>
   );
