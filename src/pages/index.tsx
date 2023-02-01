@@ -2,6 +2,12 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import Header from "@/Components/Header/Header";
 import HomeBanner from "@/Components/Home/HomeBanner";
+import HomeCard from "@/Components/Home/HomeCard";
+import FeatureOne from "@/Components/Home/FeatureOne";
+import FeatureTwo from "@/Components/Home/FeatureTwo";
+import FeatureThree from "@/Components/Home/FeatureThree";
+import HomeReview from "@/Components/Home/HomeReview";
+import HomeFaq from "@/Components/Home/HomeFaq";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +28,12 @@ export default function Home() {
         </div>
 
         <div className="max-w-screen-2xl mx-auto px-5">
-
+        <HomeCard />
+        <FeatureOne />
+        <FeatureTwo />
+        <FeatureThree />
+        <HomeReview />
+        <HomeFaq />
         </div>
       </main>
     </>

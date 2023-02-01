@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import HomeBannerImage from "../../../public/images/homeBanner.svg"
-import HomeBannerImageSurface from "./public/images/homeBannerBgSurface.svg"
 
 const HomeBanner = () => {
 
