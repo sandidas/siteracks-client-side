@@ -213,7 +213,7 @@ export function HeaderMegaMenu() {
 
   const { classes, theme } = useStyles();
 
-  const webHostinglinks = hostingMenuItems.map((item) => (
+  const webHostingLinks = hostingMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
         <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
@@ -316,11 +316,11 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <Box pb={10} className="overflow-hidden">
+    <Box pb={10} className="overflow-hidden max-w-screen-2xl mx-auto px-5">
       <Header height={60} px="md" className="bg-transparent border-none px-0">
         <Group position="apart" sx={{ height: "100%" }}>
           <Group>
-            <Logo />
+            <Link href="/"><Logo /></Link>
           </Group>
           <Group sx={{ height: "100%" }} spacing={0} className={classes.hiddenMobile}>
             <a href="#" className={classes.link}></a>
@@ -349,7 +349,7 @@ export function HeaderMegaMenu() {
                 <Divider my="sm" mx="-md" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
                 <SimpleGrid cols={3} spacing={0}>
-                  {webHostinglinks}
+                  {webHostingLinks}
                 </SimpleGrid>
 
                 <div className={classes.dropdownFooter}>
@@ -474,7 +474,7 @@ export function HeaderMegaMenu() {
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
             </Center>
           </UnstyledButton>
-          <Collapse in={linksOpened}>{webHostinglinks}</Collapse>
+          <Collapse in={linksOpened}>{webHostingLinks}</Collapse>
 
           {/* // domain items  */}
           <UnstyledButton className={classes.link} onClick={toggleDomainLinks}>

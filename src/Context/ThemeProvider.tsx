@@ -81,13 +81,13 @@ export const ThemeProvider = ({ children }: any) => {
             },
             primaryColor: "main",
 
-            // fontSizes: {
-            //   xs: 17,
-            //   sm: 17,
-            //   md: 18,
-            //   lg: 18,
-            //   xl: 18,
-            // },
+            fontSizes: {
+              xs: 17,
+              sm: 17,
+              md: 18,
+              lg: 18,
+              xl: 18,
+            },
           }}
           withGlobalStyles
           withNormalizeCSS

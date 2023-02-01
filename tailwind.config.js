@@ -1,4 +1,5 @@
 // /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -17,29 +18,30 @@ module.exports = {
         mulish: ['"Mulish"', "Poppins", "Barlow", "cursive"],
         poppins: ['"Poppins"', "Barlow", "Barlow", "cursive"],
       },
+      colors: {
+        text: "var(--color-text)",
+        light: "var(--color-light)",
+        success: "var(--color-success)",
+        info: "var(--color-info)",
+        warn: "var(--color-warn)",
+        error: "var(--color-error)",
+  
+        background: "var(--color-background)",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        title: "var(--color-title)",
+        secondaryOn: "var(--color-secondary-on)",
+        surface: "var(--color-surface)",
+        surfaceTwo: "var(--color-surfaceTwo)",
+        surfaceThree: "var(--color-surfaceThree)",
+        surfaceFour: "var(--color-surfaceFour)",
+        surfaceFive: "var(--color-surfaceFive)",
+  
+        transparent: "transparent",
+        current: "currentColor",
+      },
     },
-    colors: {
-      text: "var(--color-text)",
-      light: "var(--color-light)",
-      success: "var(--color-success)",
-      info: "var(--color-info)",
-      warn: "var(--color-warn)",
-      error: "var(--color-error)",
 
-      background: "var(--color-background)",
-      primary: "var(--color-primary)",
-      secondary: "var(--color-secondary)",
-      title: "var(--color-title)",
-      secondaryOn: "var(--color-secondary-on)",
-      surface: "var(--color-surface)",
-      surfaceTwo: "var(--color-surfaceTwo)",
-      surfaceThree: "var(--color-surfaceThree)",
-      surfaceFour: "var(--color-surfaceFour)",
-      surfaceFive: "var(--color-surfaceFive)",
-
-      transparent: "transparent",
-      current: "currentColor",
-    },
   },
   plugins: [],
   corePlugins: {

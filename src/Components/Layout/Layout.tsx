@@ -4,12 +4,12 @@ import Header from "../Header/Header";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="px-[4vw] dark:bg-background">
+    <>
       <ThemeProvider>
         <Header />
         {children}
       </ThemeProvider>
-    </div>
+    </>
   );
 };
 

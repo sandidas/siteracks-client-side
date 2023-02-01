@@ -6,6 +6,7 @@ import HomeBanner from "@/Components/Home/HomeBanner";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const mainBannerClass = `bg-center bg-contain bg-repeat bg-[url('../../public/images/homeBannerBgSurface.svg')]`
   return (
     <>
       <Head>
@@ -15,7 +16,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <HomeBanner />
+
+        <div className={mainBannerClass}>
+          <HomeBanner />
+        </div>
+
+        <div className="max-w-screen-2xl mx-auto px-5">
+
+        </div>
       </main>
     </>
   );
