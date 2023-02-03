@@ -1,5 +1,5 @@
 // /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -13,10 +13,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        poppins: ['"Poppins"', "Barlow", "Barlow", "cursive"],
         ubuntu: ['"Ubuntu"', "Poppins", "Mulish", "cursive"],
         barlow: ['"Barlow"', "Poppins", "Mulish", "cursive"],
         mulish: ['"Mulish"', "Poppins", "Barlow", "cursive"],
-        poppins: ['"Poppins"', "Barlow", "Barlow", "cursive"],
       },
       colors: {
         text: "var(--color-text)",
@@ -25,7 +25,7 @@ module.exports = {
         info: "var(--color-info)",
         warn: "var(--color-warn)",
         error: "var(--color-error)",
-  
+
         background: "var(--color-background)",
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
@@ -36,12 +36,11 @@ module.exports = {
         surfaceThree: "var(--color-surfaceThree)",
         surfaceFour: "var(--color-surfaceFour)",
         surfaceFive: "var(--color-surfaceFive)",
-  
+
         transparent: "transparent",
         current: "currentColor",
       },
     },
-
   },
   plugins: [],
   corePlugins: {

@@ -80,13 +80,14 @@ export const ThemeProvider = ({ children }: any) => {
               main: ["#72cb66", "#5bc24d", "#43b933", "#2cb11a", "#14a800", "#14a800", "#14A800", "#108600", "#0e7600", "#084300"],
             },
             primaryColor: "main",
+            fontFamily: 'Poppins, Mulish, Ubuntu, sans-serif',
 
             fontSizes: {
               xs: 17,
               sm: 17,
               md: 18,
-              lg: 18,
-              xl: 18,
+              lg: 20,
+              xl: 22,
             },
           }}
           withGlobalStyles

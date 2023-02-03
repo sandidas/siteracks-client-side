@@ -23,14 +23,14 @@
   }
 
   :root[class="dark"] {
-    --color-text: rgb(144,150,156);
+    --color-text: rgb(144, 150, 156);
     --color-light: rgb(245, 245, 245);
     --color-success: rgb(0, 200, 81);
     --color-info: rgb(51, 181, 229);
     --color-warn: rgb(255, 187, 51);
     --color-error: rgb(254, 78, 78);
 
-    --color-background: rgb(18,18,18);
+    --color-background: rgb(18, 18, 18);
     --color-primary: rgb(20, 168, 0);
     --color-secondary: rgb(29, 67, 84);
     --color-title: rgb(255, 255, 255);
@@ -43,6 +43,61 @@
   }
   /* importing font css */
   @import url("font.css");
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/Poppins-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+  }
 }
 
 * {
@@ -72,16 +127,20 @@ span,
 input,
 button {
   padding: 0;
-  border: 0;
+  /* border: 0; */
   outline: 0;
   margin: 0;
 }
-p {
+p,
+button {
   font-size: 18px;
   /* line-height: 30px; */
-  font-family: "Poppins", Ubuntu, Mulish, sans-serif;
+  font-family: "Poppins", Barlow, Mulish, sans-serif;
+  /* font-family: "Ubuntu", Poppins, Mulish, sans-serif; */
 }
-
+a {
+  text-decoration: none;
+}
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--color-light);
@@ -93,21 +152,16 @@ p {
   background: var(--color-primary);
 }
 
-
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Poppins", Barlow, Mulish, sans-serif;
+h6,
+button {
+  font-family: "Poppins", Barlow, Mulish, sans-serif!important;
 }
 
 html {
   @apply text-primary;
-}
-header,
-header span,
-header a {
-  font-family: "Poppins", Mulish, Ubuntu, Barlow !important;
 }

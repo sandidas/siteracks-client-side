@@ -220,11 +220,11 @@ export function HeaderMegaMenu() {
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500"/>
+            <item.icon className="w-1/4 h-14 fill-slate-300 dark:fill-slate-400"/>
           </div>
 
-          <Text size="sm" weight={500}>
-            {item.title}
+          <Text size="xl" weight={600} className="dark:text-slate-200">
+          {item.title}
           </Text>
           <Text size="xs" color="dimmed">
             {item.description}
