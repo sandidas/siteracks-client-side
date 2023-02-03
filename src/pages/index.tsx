@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import Header from "@/Components/Header/Header";
 import HomeBanner from "@/Components/Home/HomeBanner";
 import HomeCard from "@/Components/Home/HomeCard";
 import FeatureOne from "@/Components/Home/FeatureOne";
@@ -8,11 +7,11 @@ import FeatureTwo from "@/Components/Home/FeatureTwo";
 import FeatureThree from "@/Components/Home/FeatureThree";
 import HomeReview from "@/Components/Home/HomeReview";
 import HomeFaq from "@/Components/Home/HomeFaq";
+import BgLight from "../../public/images/exclusiveWebHosting.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const mainBannerClass = `bg-green-50 dark:bg-background bg-center bg-contain bg-repeat bg-[url('../../public/images/homeBannerBgSurface.svg')]`
   return (
     <>
       <Head>
@@ -22,18 +21,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
-        <div className={mainBannerClass}>
+        <div style={{backgroundImage:`url(${<BgLight />})`, height:'100%', width:'100%'}} className={`bg-center bg-contain bg-repeat bg-[url(${(<BgLight width="1100px" height="700px" />)})]`}>
           <HomeBanner />
         </div>
 
         <div className="max-w-screen-2xl mx-auto px-5">
-        <HomeCard />
-        <FeatureOne />
-        <FeatureTwo />
-        <FeatureThree />
-        <HomeReview />
-        <HomeFaq />
+          <HomeCard />
+          <FeatureOne />
+          <FeatureTwo />
+          <FeatureThree />
+          <HomeReview />
+          <HomeFaq />
         </div>
       </main>
     </>
