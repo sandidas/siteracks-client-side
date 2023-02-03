@@ -16,8 +16,7 @@ const HomeBanner = () => {
       </div>
 
       <div className="flex flex-col justify-start items-center">
-
-        <Image src={HomeBannerImage} alt="me" className="max-w-md h-96"  />
+        <HomeBannerImage className="w-3/4 h-96" /> 
       </div>
     </section>
   );

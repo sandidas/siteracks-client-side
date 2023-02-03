@@ -219,7 +219,8 @@ export function HeaderMegaMenu() {
         <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
-            <Image src={item.icon} alt="me" width="50" height="50" />
+            {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
+            <item.icon className="w-1/4 h-14"/>
           </div>
 
           <Text size="sm" weight={500}>
@@ -239,7 +240,8 @@ export function HeaderMegaMenu() {
         <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
-            <Image src={item.icon} alt="me" width="50" height="50" />
+            {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
+            <item.icon className="w-1/4 h-14"/>
           </div>
 
           <Text size="sm" weight={500}>
@@ -259,7 +261,8 @@ export function HeaderMegaMenu() {
         <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
-            <Image src={item.icon} alt="me" width="50" height="50" />
+            {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
+            <item.icon className="w-1/4 h-14"/>
           </div>
 
           <Text size="sm" weight={500}>
@@ -280,7 +283,8 @@ export function HeaderMegaMenu() {
         <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
-            <Image src={item.icon} alt="me" width="50" height="50" />
+            {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
+            <item.icon className="w-1/4 h-14"/>
           </div>
 
           <Text size="sm" weight={500}>
@@ -301,7 +305,8 @@ export function HeaderMegaMenu() {
         <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
-            <Image src={item.icon} alt="me" width="50" height="50" />
+            {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
+            <item.icon className="w-1/4 h-14"/>
           </div>
 
           <Text size="sm" weight={600}>
