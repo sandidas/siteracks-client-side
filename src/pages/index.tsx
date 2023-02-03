@@ -12,7 +12,7 @@ import HomeFaq from "@/Components/Home/HomeFaq";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const mainBannerClass = `bg-center bg-contain bg-repeat bg-[url('../../public/images/homeBannerBgSurface.svg')]`
+  const mainBannerClass = `bg-green-50 dark:bg-background bg-center bg-contain bg-repeat bg-[url('../../public/images/homeBannerBgSurface.svg')]`
   return (
     <>
       <Head>

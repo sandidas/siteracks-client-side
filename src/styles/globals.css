@@ -16,10 +16,10 @@
     --color-title: rgb(54, 54, 54);
     --color-secondary-on: rgb(224, 224, 224);
     --color-surface: rgb(17, 20, 36);
-    --color-surface-two: rgb(245, 71, 73);
-    --color-surface-three: rgb(87, 101, 251);
-    --color-surface-four: rgb(242, 243, 249);
-    --color-surface-five: rgb(2, 200, 240);
+    --color-surfaceTwo: rgb(245, 71, 73);
+    --color-surfaceThree: rgb(87, 101, 251);
+    --color-surfaceFour: rgb(242, 243, 249);
+    --color-surfaceFive: rgb(2, 200, 240);
   }
 
   :root[class="dark"] {
