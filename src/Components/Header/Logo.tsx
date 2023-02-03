@@ -10,8 +10,8 @@ const Logo = () => {
 
 
   return <>{isDarkMode === "light" ?
-  <SiteRacksLogoLight alt="SiteRacks" width="220px"  height="40px" /> : 
-  <SiteRacksLogoDark alt="SiteRacks" width="220px" height="40px" />
+  <SiteRacksLogoLight alt="SiteRacks" width="220px"  height="35px" /> : 
+  <SiteRacksLogoDark alt="SiteRacks" width="220px" height="35px" />
   
   }</>;
 };
