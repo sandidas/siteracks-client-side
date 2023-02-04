@@ -173,3 +173,35 @@ html {
   background-attachment: fixed;
   background-repeat: repeat;
 } */
+
+/*
+Text:
+Poppins - 400×
+Size 18px
+Line Height 28px
+Color #363636
+
+
+Card title:
+Poppins - 700×
+Size 27px, Line Height 42px
+Color #363636
+- font-bold text-3xl
+
+Article Title:
+Size 36px, Line Height 45px
+- text-4xl md:text-5xl
+
+Section title:
+Poppins - 700×
+Size 48px, Line Height 60px
+Color #363636
+- text-4xl md:text-5xl
+
+Banner Title:
+Poppins - 700×
+Size 60px, Line Height 75px
+Color #363636
+
+
+*/

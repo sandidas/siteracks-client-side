@@ -11,7 +11,7 @@ const FeatureOne = () => {
             <WordPressHosting className="w-3/4 h-96" />
           </div>
           <div className="flex flex-col gap-5 items-start">
-            <h2 className="font-poppins flex flex-col">
+            <h2 className="font-poppins flex flex-col font-bold">
               <span className="text-4xl md:text-4xl text-title md:leading-tight">Outperform the Competition</span> <span className="text-2xl text-slate-500 font-light">with Exclusive Web Hosting</span>
             </h2>
             <p className="text-text text-xl">We’re here to help you find the right hosting for your business website. With years of experience supporting the online success of local and international businesses, our exclusive web hosting solutions are the best in the market.</p>
@@ -26,7 +26,7 @@ const FeatureOne = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 py-[8vh] gap-[8vw]">
           <div className="flex flex-col gap-5 items-start">
-            <h2 className="font-poppins flex flex-col">
+            <h2 className="font-poppins flex flex-col font-bold">
               <span className="text-4xl md:text-4xl text-title md:leading-tight">Optimal performance</span> <span className="text-2xl text-slate-500 font-light">for your website or web app</span>
             </h2>
             <p className="text-text text-xl">When you choose SiteRacks, stay relaxed, knowing that your data is stored in our highly reliable data centers. This means you get optimal performance for your website or web app, equipping it to deliver superior customer experiences.</p>

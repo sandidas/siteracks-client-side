@@ -9,7 +9,7 @@ const HomeBanner = () => {
     <section
      className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 md:grid-cols-2 py-[8vh] gap-10">
       <div className="flex flex-col gap-5">
-        <h1 className="font-poppins text-5xl md:text-6xl md:leading-tight text-title">
+        <h1 className="font-poppins text-5xl md:text-6xl md:leading-tight text-title font-bold">
         <small className="text-2xl text-primary">Blazing Fast </small>
         <br />
         <span className="text-primary">Web Hosting</span> for Tomorrow's Business
