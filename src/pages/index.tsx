@@ -7,7 +7,6 @@ import FeatureTwo from "@/Components/Home/FeatureTwo";
 import FeatureThree from "@/Components/Home/FeatureThree";
 import HomeReview from "@/Components/Home/HomeReview";
 import HomeFaq from "@/Components/Home/HomeFaq";
-import BgLight from "../../public/images/exclusiveWebHosting.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +20,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div style={{backgroundImage:`url(${<BgLight />})`, height:'100%', width:'100%'}} className={`bg-center bg-contain bg-repeat bg-[url(${(<BgLight width="1100px" height="700px" />)})]`}>
+        {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
+        {/* // it's using on css. and css by defult catch public folder path. */}
+        <div style={{backgroundImage:`url('/images/homeBannerBgSurface.svg')`, backgroundSize:'contain', backgroundAttachment:'fixed', backgroundPosition:'top center'}}>
           <HomeBanner />
         </div>
 
