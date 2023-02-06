@@ -5,12 +5,12 @@ import Logo from "../Header/Logo";
 const Footer = () => {
   return (
     <>
-      <section className="max-w-screen-2xl mx-auto pt-[8vh]">
+      <section className="max-w-screen-2xl mx-auto pt-[8vh] px-5">
         <div className="flex justify-end">
           <Logo logoHeight="120px" logoWidth="900px" />
         </div>
       </section>
-      <footer className="bg-surface">
+      <footer className="bg-surface px-5">
         <section className="py-[8vh] grid grid-cols-1 md:grid-cols-5 gap-10 max-w-screen-2xl mx-auto">
           <div className="space-y-5">
             <h3 className="text-title font-bold text-3xl">Hosting </h3>

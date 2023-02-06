@@ -1,6 +1,8 @@
 import { Button } from "@mantine/core";
 import React from "react";
-import WordPressHosting from "../../../public/images/exclusiveWebHosting.svg";
+import OptimalPerformanceImage from "../../../public/images/optimalPerformanceImage.svg";
+import OutperformTheCompetition from "../../../public/images/outperformTheCompetition.svg";
+import BackgroundSurfacePrimary from "../../../public/images/bgSurfacePrimary.svg";
 
 const FeatureOne = () => {
   return (
@@ -8,7 +10,8 @@ const FeatureOne = () => {
       <article className="grid grid-cols-1 gap-[8vh]">
         <div className="grid grid-cols-1 md:grid-cols-2 py-[8vh] gap-[8vw]">
           <div className="flex flex-col justify-start items-center">
-            <WordPressHosting className="w-3/4 h-96" />
+            <OutperformTheCompetition className="w-3/4 h-96 fill-primary" />
+            <BackgroundSurfacePrimary className="w-5/12 h-96 fill-primary stroke-primary absolute left-0" />
           </div>
           <div className="flex flex-col gap-5 items-start">
             <h2 className="font-poppins flex flex-col font-bold">
@@ -35,7 +38,10 @@ const FeatureOne = () => {
               Get Started
             </Button>
           </div>
-          <div className="flex flex-col justify-start items-center"></div>
+          <div className="flex flex-col justify-start items-center">
+            <OptimalPerformanceImage className="w-3/4 h-96 fill-primary" />
+            <BackgroundSurfacePrimary className="w-3/4 h-96 fill-primary stroke-primary absolute right-0" />
+          </div>
         </div>
       </article>
     </section>
