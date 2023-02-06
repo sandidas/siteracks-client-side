@@ -95,7 +95,7 @@ const HomeFaq = () => {
             <Accordion.Control className="text-2xl py-5">What is the purpose of having a professional email address?</Accordion.Control>
             <Accordion.Panel>
               <p>There are numerous compelling reasons to transition from a free email to a domain-based email, but the following are the most prominent three:</p>
-              <p><br />
+              <br />
                 <ul className="list-disc pl-5">
                   <li>
                   A professional address such as hello@yourdomain.com instills more trust in customers compared to an unprofessional address like pizzahousr785@notmail.com.
@@ -106,8 +106,9 @@ const HomeFaq = () => {
                   <li>
                   Customized email addresses enhance the promotion of your business. With every email you send, you are providing your web address to both existing customers and potential clients, thereby motivating them to check out your website.
                   </li>
-                </ul> <br />
-              </p>
+                </ul>
+                 <br />
+              
             </Accordion.Panel>
           </Accordion.Item>
 
