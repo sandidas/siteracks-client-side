@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer base {
   :root {
-    --color-text: rgb(54, 54, 54);
+    --color-text: rgb(141,141,141);
     --color-light: rgb(245, 245, 245);
     --color-success: rgb(0, 200, 81);
     --color-info: rgb(51, 181, 229);

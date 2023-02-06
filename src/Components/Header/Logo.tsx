@@ -5,15 +5,34 @@ import { useThemeContext } from "@/Context/ThemeProvider";
 import Image from "next/image";
 import SiteRacksLogoDark from "../../../public/logo/siteRacksLogoDark.svg";
 import SiteRacksLogoLight from "../../../public/logo/siteRacksLogoLight.svg";
-const Logo = () => {
+
+type statusProps = {
+  logoHeight?: string;
+  logoWidth?: string;
+};
+const Logo = (props: statusProps) => {
+  let { logoHeight, logoWidth } = props;
+  if (logoHeight) {
+    logoHeight = logoHeight;
+  } else {
+    logoHeight = "35px";
+  }
+
+  if (logoWidth) {
+    logoWidth = logoWidth;
+  } else {
+    logoWidth = "220px";
+  }
+
   const { toggleColorScheme, colorScheme: isDarkMode } = useThemeContext();
 
-
-  return <>{isDarkMode === "light" ?
-  <SiteRacksLogoLight alt="SiteRacks" width="220px"  height="35px" /> : 
-  <SiteRacksLogoDark alt="SiteRacks" width="220px" height="35px" />
+  return <>{
+    isDarkMode === "light" ? 
+  <SiteRacksLogoLight alt="SiteRacks" width={logoWidth} height={logoHeight} className='max-w-full' /> : 
+  <SiteRacksLogoDark alt="SiteRacks" width={logoWidth} height={logoHeight} className='max-w-full' />
   
-  }</>;
+}
+</>;
 };
 
 export default Logo;
