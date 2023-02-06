@@ -220,11 +220,11 @@ export function HeaderMegaMenu() {
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-300 dark:fill-slate-400"/>
+            <item.icon className="w-1/4 h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
           <Text size="xl" weight={600} className="dark:text-slate-200">
-          {item.title}
+            {item.title}
           </Text>
           <Text size="xs" color="dimmed">
             {item.description}
@@ -241,7 +241,7 @@ export function HeaderMegaMenu() {
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500"/>
+            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
           </div>
 
           <Text size="sm" weight={500}>
@@ -262,7 +262,7 @@ export function HeaderMegaMenu() {
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500"/>
+            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
           </div>
 
           <Text size="sm" weight={500}>
@@ -284,7 +284,7 @@ export function HeaderMegaMenu() {
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500"/>
+            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
           </div>
 
           <Text size="sm" weight={500}>
@@ -306,7 +306,7 @@ export function HeaderMegaMenu() {
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500"/>
+            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
           </div>
 
           <Text size="sm" weight={600}>
@@ -325,7 +325,9 @@ export function HeaderMegaMenu() {
       <Header fixed={true} height={60} px="md" className="bg-background border-none px-5 max-w-screen-2xl mx-auto">
         <Group position="apart" sx={{ height: "100%" }}>
           <Group>
-            <Link href="/" className="flex"><Logo /></Link>
+            <Link href="/" className="flex">
+              <Logo />
+            </Link>
           </Group>
           <Group sx={{ height: "100%" }} spacing={0} className={classes.hiddenMobile}>
             <a href="#" className={classes.link}></a>
@@ -452,6 +454,9 @@ export function HeaderMegaMenu() {
                 </SimpleGrid>
               </HoverCard.Dropdown>
             </HoverCard>
+            <a href="#" className={`${classes.link} uppercase font-bold`}>
+              Affiliate
+            </a>
           </Group>
 
           <Group className={classes.hiddenMobile}>

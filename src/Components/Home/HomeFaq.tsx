@@ -17,6 +17,8 @@ const useStyles = createStyles((theme) => ({
     transition: "transform 150ms ease",
     padding: "10px 20px",
     marginTop: "10px",
+    color:'#8d8d8d',
+
 
     "&[data-active]": {
       transform: "scale(1.03)",
@@ -45,7 +47,7 @@ const HomeFaq = () => {
         <h2 className="font-poppins text-4xl md:text-5xl text-title md:leading-tight font-bold">Frequently Asked Questions</h2>
       </div>
 
-      <div className="py-[5vh] max-w-7xl mx-auto text-xl">
+      <div className="py-[5vh] max-w-6xl mx-auto text-xl">
         <Accordion defaultValue="customization" classNames={classes} className={classes.root}>
           <Accordion.Item value="customization">
             <Accordion.Control className="text-2xl py-5">What is business email hosting?</Accordion.Control>
@@ -94,9 +96,10 @@ const HomeFaq = () => {
           <Accordion.Item value="professionalEmail">
             <Accordion.Control className="text-2xl py-5">What is the purpose of having a professional email address?</Accordion.Control>
             <Accordion.Panel>
-              <p>There are numerous compelling reasons to transition from a free email to a domain-based email, but the following are the most prominent three:</p>
+              There are numerous compelling reasons to transition from a free email to a domain-based email, but the following are the most prominent three:
               <br />
-                <ul className="list-disc pl-5">
+              <br />
+                <ul className="list-disc pl-10">
                   <li>
                   A professional address such as hello@yourdomain.com instills more trust in customers compared to an unprofessional address like pizzahousr785@notmail.com.
                   </li>
@@ -107,7 +110,7 @@ const HomeFaq = () => {
                   Customized email addresses enhance the promotion of your business. With every email you send, you are providing your web address to both existing customers and potential clients, thereby motivating them to check out your website.
                   </li>
                 </ul>
-                 <br />
+            
               
             </Accordion.Panel>
           </Accordion.Item>
@@ -115,12 +118,12 @@ const HomeFaq = () => {
           <Accordion.Item value="businessWebsite">
             <Accordion.Control className="text-2xl py-5">What is the purpose of having a website for your business?</Accordion.Control>
             <Accordion.Panel>
-            <p>Every local business, regardless of its size and scope of operation, requires a website. This is because the internet is the initial destination for individuals seeking information about a particular product or service. A website can benefit any business by:</p> <br />
-            <ul className="list-disc pl-5">
+            Every local business, regardless of its size and scope of operation, requires a website. This is because the internet is the initial destination for individuals seeking information about a particular product or service. A website can benefit any business by: <br /><br />
+            <ul className="list-disc pl-10">
               <li>Promote and sell your products and services</li>
               <li>Establish connections with potential clients (while maintaining relationships with current clients)</li>
             </ul> <br />
-            <p>The greatest advantage of creating a website is that it is more accessible and cost-effective than you may expect. SiteRacks provides a comprehensive array of web-building tools, as well as hosting, email, and marketing solutions to aid businesses in expanding their online presence.</p>
+            The greatest advantage of creating a website is that it is more accessible and cost-effective than you may expect. SiteRacks provides a comprehensive array of web-building tools, as well as hosting, email, and marketing solutions to aid businesses in expanding their online presence.
             </Accordion.Panel>
           </Accordion.Item>
         </Accordion>
