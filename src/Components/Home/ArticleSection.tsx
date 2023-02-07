@@ -8,10 +8,10 @@ const FeatureOne = () => {
   return (
     <section>
       <article className="grid grid-cols-1 gap-[8vh]">
-        <div className="grid grid-cols-1 md:grid-cols-2 py-[8vh] gap-[8vw]">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-[2vh] md:py-[8vh] gap-[8vw]">
           <div className="flex flex-col justify-start items-center">
-            <OutperformTheCompetition className="w-3/4 h-96 fill-primary" />
-            <BackgroundSurfacePrimary className="w-5/12 h-96 fill-primary stroke-primary absolute left-0" />
+            <OutperformTheCompetition className="w-3/4 h-72 fill-primary" />
+            <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" />
           </div>
           <div className="flex flex-col gap-5 items-start">
             <h2 className="font-poppins flex flex-col font-bold">
@@ -27,8 +27,8 @@ const FeatureOne = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 py-[8vh] gap-[8vw]">
-          <div className="flex flex-col gap-5 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-[2vh] md:py-[8vh] gap-[8vw]">
+          <div className="flex flex-col gap-5 items-start order-2 md:order-1">
             <h2 className="font-poppins flex flex-col font-bold">
               <span className="text-4xl md:text-4xl text-title md:leading-tight">Optimal performance</span> <span className="text-2xl text-slate-500 font-light">for your website or web app</span>
             </h2>
@@ -38,9 +38,9 @@ const FeatureOne = () => {
               Get Started
             </Button>
           </div>
-          <div className="flex flex-col justify-start items-center">
-            <OptimalPerformanceImage className="w-3/4 h-96 fill-primary" />
-            <BackgroundSurfacePrimary className="w-3/4 h-96 fill-primary stroke-primary absolute right-0" />
+          <div className="flex flex-col justify-start items-center order-1 md:order-2">
+            <OptimalPerformanceImage className="w-3/4 h-72 fill-primary" />
+            <BackgroundSurfacePrimary className="w-3/4 h-72 fill-primary stroke-primary absolute right-0" />
           </div>
         </div>
       </article>
