@@ -1,5 +1,6 @@
 import React from "react";
-import HostingServicesIcon from "../../../public/images/website/hostingServices.svg";
+import AmazonIcon from "../../../public/images/website/amazonIcon.svg";
+import DigitaloceanIcon from "../../../public/images/website/digitaloceanIcon.svg";
 import PremiumCloudIcon from "../../../public/images/website/premiumCloudIcon.svg";
 import LatestTechIcon from "../../../public/images/website/latestTechIconNew.svg";
 import ImproveUptimeIcon from "../../../public/images/website/uptimeIcon.svg";
@@ -21,9 +22,12 @@ const SiteRacksParkSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-[5vh]">
         <FeatureCard>
           <div className="space-y-5">
-            <PremiumCloudIcon className="fill-primary w-14 h-14" />
+            <div className="flex gap-5">
+              <AmazonIcon className="fill-primary w-16 h-14" />
+              <DigitaloceanIcon className="fill-primary w-8 h-12" />
+            </div>
             <h3 className="text-title font-bold text-3xl">Premium Cloud </h3>
-            <p className="text-text">Enjoy better latency and lesser downtimes while keeping your account and data always secured.</p>
+            <p className="text-text">Enjoy better latency and lesser downtime while keeping your account and data always secured. Our platform is built with Premium AWS Cloud and Digital Ocean Cloud servers.</p>
           </div>
         </FeatureCard>
 

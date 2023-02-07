@@ -1,20 +1,21 @@
 import { Button } from "@mantine/core";
 import React from "react";
-import OptimalPerformanceImage from "../../../public/images/optimalPerformanceImage.svg";
-import OutperformTheCompetition from "../../../public/images/outperformTheCompetition.svg";
-import BackgroundSurfacePrimary from "../../../public/images/bgSurfacePrimary.svg";
+import OptimalPerformanceImage from "../../../public/images/competitionIcon.svg";
+import OutperformTheCompetition from "../../../public/images/50xSpeedMan.svg";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 
 const FeatureOne = () => {
   return (
     <section>
-      <article className="grid grid-cols-1 gap-[8vh]">
-        <div className="grid grid-cols-1 md:grid-cols-2 py-[2vh] md:py-[8vh] gap-[8vw]">
-          <div className="flex flex-col justify-start items-center">
-            <OutperformTheCompetition className="w-3/4 h-72 fill-primary" />
-            <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" />
+      <article className="grid grid-cols-1 gap-[4vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-[2vh] gap-20">
+          <div className="flex flex-col justify-start items-center bg-surface">
+            <div className="p-20 rounded-lg">
+              <OutperformTheCompetition className="w-full h-[500px] fill-primary" />
+            </div>
+            {/* <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" /> */}
           </div>
-          <div className="flex flex-col gap-5 items-start space-y-6 group">
+          <div className="flex flex-col justify-center gap-5 items-start space-y-6 group overflow-hidden">
             <div className="space-y-5">
               <h2 className="font-poppins flex flex-col font-bold">
                 <span className="text-4xl md:text-4xl text-title md:leading-tight">Outperform the Competition</span> <span className="text-2xl text-slate-500 font-light">with Exclusive Web Hosting</span>
@@ -31,8 +32,8 @@ const FeatureOne = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 py-[2vh] md:py-[8vh] gap-[8vw]">
-          <div className="flex flex-col gap-5 items-start space-y-6 order-2 md:order-1 group">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-[2vh] md:py-[8vh] gap-20">
+          <div className="flex flex-col gap-5 items-start space-y-6 order-2 md:order-1 group justify-center">
             <div className="space-y-5">
               <h2 className="font-poppins flex flex-col font-bold">
                 <span className="text-4xl md:text-4xl text-title md:leading-tight">Optimal performance</span> <span className="text-2xl text-slate-500 font-light">for your website or web app</span>
@@ -45,9 +46,10 @@ const FeatureOne = () => {
               <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
             </Button>
           </div>
-          <div className="flex flex-col justify-start items-center order-1 md:order-2">
-            <OptimalPerformanceImage className="w-3/4 h-72 fill-primary" />
-            <BackgroundSurfacePrimary className="w-3/4 h-72 fill-primary stroke-primary absolute right-0" />
+          <div className="flex flex-col justify-start items-center order-1 md:order-2 bg-surface">
+            <div className="p-20 rounded-lg">
+              <OptimalPerformanceImage className="w-full h-[450px] fill-primary" />
+            </div>
           </div>
         </div>
       </article>
