@@ -8,6 +8,7 @@ import SiteRacksParkSection from "@/Components/Home/SiteRacksParkSection";
 import HomeReview from "@/Components/Home/HomeReview";
 import HomeFaq from "@/Components/Home/HomeFaq";
 import HireAnExpert from "@/Components/Home/HireAnExpert";
+import LiveChat from "@/Components/LiveChat/LiveChat";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,9 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto px-5">
           <SiteRacksParkSection />
           <HomeReview />
+        </div>
+        <LiveChat />
+        <div className="max-w-screen-2xl mx-auto px-5">
           <HomeFaq />
         </div>
       </main>
