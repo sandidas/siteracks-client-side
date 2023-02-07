@@ -8,7 +8,7 @@ const FeatureOne = () => {
   return (
     <section>
       <article className="grid grid-cols-1 gap-[4vh]">
-        <div className="grid grid-cols-1 md:grid-cols-2 py-[2vh] gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 pt-[2vh] gap-20">
           <div className="flex flex-col justify-start items-center bg-surface">
             <div className="p-20 rounded-lg">
               <OutperformTheCompetition className="w-full h-[500px] fill-primary" />
@@ -32,11 +32,11 @@ const FeatureOne = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 py-[2vh] md:py-[8vh] gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 pb-[8vh] gap-20">
           <div className="flex flex-col gap-5 items-start space-y-6 order-2 md:order-1 group justify-center">
             <div className="space-y-5">
               <h2 className="font-poppins flex flex-col font-bold">
-                <span className="text-4xl md:text-4xl text-title md:leading-tight">Optimal performance</span> <span className="text-2xl text-slate-500 font-light">for your website or web app</span>
+                <span className="text-4xl md:text-4xl text-title md:leading-tight">100X  Optimal performance</span> <span className="text-2xl text-slate-500 font-light">for your website or web app</span>
               </h2>
               <p className="text-text text-xl">When you choose SiteRacks, stay relaxed, knowing that your data is stored in our highly reliable data centers. This means you get optimal performance for your website or web app, equipping it to deliver superior customer experiences.</p>
             </div>
