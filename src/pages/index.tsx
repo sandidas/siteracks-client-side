@@ -7,8 +7,7 @@ import WebsiteUpSection from "@/Components/Home/WebsiteUpSection";
 import SiteRacksParkSection from "@/Components/Home/SiteRacksParkSection";
 import HomeReview from "@/Components/Home/HomeReview";
 import HomeFaq from "@/Components/Home/HomeFaq";
-
-
+import HireAnExpert from "@/Components/Home/HireAnExpert";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +31,9 @@ export default function Home() {
           <HomeCard />
           <ArticleSection />
           <WebsiteUpSection />
+        </div>
+        <HireAnExpert />
+        <div className="max-w-screen-2xl mx-auto px-5">
           <SiteRacksParkSection />
           <HomeReview />
           <HomeFaq />

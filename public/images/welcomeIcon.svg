@@ -1,0 +1,1398 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="425" height="437">
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h425v437H0z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="b">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="c">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="d">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="e">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="f">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="g">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="h">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="i">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="j">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="k">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="l">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="m">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="n">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="o">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="p">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="q">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="r">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="s">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="t">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="u">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="v">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="w">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="x">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="y">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="z">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="A">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="B">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="C">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="D">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="E">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="F">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="G">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="H">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="I">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="J">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="K">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="L">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="M">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="N">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="O">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="P">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="Q">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="R">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="S">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="T">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="U">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="V">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="W">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="X">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="Y">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="Z">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aa">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ab">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ac">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ad">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ae">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="af">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ag">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ah">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ai">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aj">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ak">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="al">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="am">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="an">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ao">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ap">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aq">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ar">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="as">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="at">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="au">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="av">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aw">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ax">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ay">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="az">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aA">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aB">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aC">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aD">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aE">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aF">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aG">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aH">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aI">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aJ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aK">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aL">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aM">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aN">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aO">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aP">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aQ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aR">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aS">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aT">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aU">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aV">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aW">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aX">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aY">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="aZ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ba">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bb">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bc">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bd">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="be">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bf">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bg">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bh">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bi">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bj">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bk">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bl">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bm">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bn">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bo">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bp">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bq">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="br">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bs">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bt">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bu">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bv">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bw">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bx">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="by">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bz">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bA">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bB">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bC">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bD">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bE">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bF">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bG">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bH">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bI">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bJ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bK">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bL">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bM">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bN">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bO">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bP">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bQ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bR">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bS">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bT">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bU">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bV">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bW">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bX">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bY">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="bZ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ca">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cb">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cc">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cd">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ce">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cf">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cg">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ch">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ci">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cj">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ck">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cl">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cm">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cn">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="co">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cp">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cq">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cr">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cs">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ct">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cu">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cv">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cw">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cx">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cy">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cz">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cA">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cB">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cC">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cD">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cE">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cF">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cG">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cH">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cI">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cJ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cK">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cL">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cM">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cN">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cO">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cP">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cQ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cR">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cS">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cT">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cU">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cV">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cW">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cX">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cY">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="cZ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="da">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="db">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dc">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dd">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="de">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="df">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dg">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dh">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="di">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dj">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dk">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dl">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dm">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dn">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="do">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dp">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dq">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dr">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ds">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dt">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="du">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dv">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dw">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dx">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dy">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dz">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dA">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dB">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dC">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dD">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dE">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dF">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dG">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dH">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dI">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dJ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dK">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dL">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dM">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dN">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dO">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dP">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dQ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dR">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dS">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dT">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dU">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dV">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dW">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dX">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dY">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="dZ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ea">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eb">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ec">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ed">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ee">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ef">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eg">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eh">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ei">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ej">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ek">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="el">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="em">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="en">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eo">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ep">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eq">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="er">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="es">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="et">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eu">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ev">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ew">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ex">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ey">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ez">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eA">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eB">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eC">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eD">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eE">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eF">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eG">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eH">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eI">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eJ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eK">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eL">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eM">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eN">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eO">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eP">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eQ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eR">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eS">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eT">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eU">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eV">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eW">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eX">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eY">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="eZ">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fa">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fb">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fc">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fd">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fe">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ff">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fg">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fh">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fi">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fj">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fk">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fl">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fm">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fn">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fo">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fp">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fq">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fr">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fs">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="ft">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fu">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fv">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fw">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fx">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fy">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fz">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fA">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fB">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fC">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fD">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fE">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fF">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fG">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="fH">
+      <path d="M0 436V0h424v436z" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  
+  <g clip-path="url(#a)" transform="matrix(1 0 0 -1 0 437)">
+    <path fill="none" d="M0 0h425v437H0z"/>
+    <path fill="none" d="M0 0h425v437H0z"/>
+    <path fill="none" d="M0 0h425v437H0z"/>
+    <path fill="none" d="M0 0h425v437H0z"/>
+    <path fill="none" d="M0 0h425v437H0z"/>
+    <path fill="none" d="M0 436V0h424v436z"/>
+    <path fill="#E7EEEC" d="M396 153v11h-27 1v-11h-1 27zm0 0h-27v12h14l13-1v-11z" clip-path="url(#b)"/>
+    <path fill="#E7EEEC" d="M381 139v11h-26v-11h26zm0 0h-13l-7-1h-7v13h14l13-1v-11z" clip-path="url(#c)"/>
+    <path fill="#E7EEEC" d="m411 139-1 6v5h1-27 1v-11h-1 27zm0 0h-14l-6-1h-7v13h13l14-1v-11z" clip-path="url(#d)"/>
+    <path fill="#E7EEEC" d="M55 153v11H28h1v-11h-1 27zm0 0H28v12h14l13-1v-11z" clip-path="url(#e)"/>
+    <path fill="#E7EEEC" d="M40 139v11H14v-11h26zm0 0H27l-7-1h-7v13h14l13-1v-11z" clip-path="url(#f)"/>
+    <path fill="#E7EEEC" d="M277 312v12-1h-26v1-12 1h13l13-1zm0 0h-26l-1 12h28v-6l-1-6z" clip-path="url(#g)"/>
+    <path fill="#E7EEEC" d="M263 298v6l-1 6 1-1h-27l1 1v-12l-1 1h13l14-1zm0 0h-27v12h27v-12z" clip-path="url(#h)"/>
+    <path fill="#E7EEEC" d="M292 298v12-1h-26v1-12 1h13l13-1zm0 0h-27v12h28l-1-6v-6z" clip-path="url(#i)"/>
+    <path fill="#E7EEEC" d="M394 395v11h-26v-11h26zm0 0h-13l-7-1h-7v13h1l13-1h14l-1-6v-5z" clip-path="url(#j)"/>
+    <path fill="#E7EEEC" d="M409 381v11l-13-1h-13v1-11h26zm0 0-13-1h-14v12h27v-11z" clip-path="url(#k)"/>
+    <path fill="#E7EEEC" d="M40 395v11H14v-11h26zm0 0H27l-7-1h-7v13h1l13-1h13v-11z" clip-path="url(#l)"/>
+    <path fill="#E7EEEC" d="M75 300H21v66h54v-66z" clip-path="url(#m)"/>
+    <path fill="#FFF" d="M69 306H27v54h42v-54z" clip-path="url(#n)"/>
+    <path fill="#D5E2DE" d="M29 306h-2v54h2v-54z" clip-path="url(#o)"/>
+    <path fill="#D5E2DE" d="M76 300h-1v66h1v-66z" clip-path="url(#p)"/>
+    <path fill="#D5E2DE" d="M53 318H43v30h10v-30z" clip-path="url(#q)"/>
+    <path fill="#E7EEEC" d="M61 326H35v14h25v-14h1v15H34v-16h27v1z" clip-path="url(#r)"/>
+    <path fill="#E7EEEC" d="M117 220H63v65h54v-65z" clip-path="url(#s)"/>
+    <path fill="#FFF" d="M111 225H69v54h42v-54z" clip-path="url(#t)"/>
+    <path fill="#D5E2DE" d="M71 225h-2v54h2v-54z" clip-path="url(#u)"/>
+    <path fill="#D5E2DE" d="M119 220h-2v65h2v-65z" clip-path="url(#v)"/>
+    <path fill="#E7EEEC" d="M94 244h-8v21h8v-21z" clip-path="url(#w)"/>
+    <path fill="#D5E2DE" d="M101 238H79v14h22v-14h1v15H78v-16h24v1h-1z" clip-path="url(#x)"/>
+    <path fill="#E7EEEC" d="M410 19c0-10-88-19-198-19C103 0 14 9 14 19c0 11 89 20 198 20 110 0 198-9 198-20z" clip-path="url(#y)"/>
+    <path d="M378 187v-80 80z" clip-path="url(#z)"/>
+    <path d="m401 219-21-112h-1l22 112z" clip-path="url(#A)"/>
+    <path d="M378 107h-1l-7 140h1l7-138v-2z" clip-path="url(#B)"/>
+    <path fill="#FFBD18" d="M393 274c-2-7-6-12-10-15-5-6-11-9-11-10l2-5-3-1-3 1 2 5c0 1-24 13-22 36 1 12 8 16 14 18a30 30 0 0 0 9 1c3 0 22 0 23-19l-1-11z" clip-path="url(#C)"/>
+    <path fill="#F8AD05" d="m371 243-3 1 2 5c0 1-22 12-22 33v3c1 12 8 16 14 18-5-5-12-14-7-29a22 22 0 0 1 28-15c-5-6-11-9-11-10l2-5-3-1z" clip-path="url(#D)"/>
+    <path fill="#FFF" d="M387 292a5 5 0 1 0-11 0 5 5 0 0 0 11 0z" clip-path="url(#E)"/>
+    <path fill="#BDCDCA" d="M423 247c-2-6-6-11-9-15l-12-10 2-5-3-1-3 1 2 5c0 2-24 13-22 36 1 12 8 17 15 19a30 30 0 0 0 8 1c3 0 22-1 23-20 1-4 0-8-1-11z" clip-path="url(#F)"/>
+    <path fill="#8FA4A3" d="m402 222 2-5-3-1-3 1 2 5c0 2-24 13-22 36 1 12 8 17 15 19-6-5-13-15-8-30 5-14 18-18 29-15l-12-10z" clip-path="url(#G)"/>
+    <path fill="#FFF" d="M418 265a5 5 0 1 0-11 0 5 5 0 0 0 11 0z" clip-path="url(#H)"/>
+    <path fill="#00000C" d="M400 215c-2-6-6-11-10-15l-11-9 2-5-3-1-3 1 2 5c0 1-24 13-22 36 1 12 8 16 15 18a30 30 0 0 0 8 1c3 0 22 0 23-19l-1-12z" clip-path="url(#I)"/>
+    <path d="M355 227c1 12 8 16 15 18-6-5-13-14-8-30 5-14 18-18 28-15l-11-9 2-5-3-1-3 1 2 5c0 1-24 13-22 36z" clip-path="url(#J)"/>
+    <path fill="#FFF" d="M394 234a5 5 0 1 0-10 0 5 5 0 0 0 10 0z" clip-path="url(#K)"/>
+    <path fill="#FFBD18" d="M386 107h-15v19h15v-19z" clip-path="url(#L)"/>
+    <path d="M31 187v-80h-1v80h1z" clip-path="url(#M)"/>
+    <path d="M54 219 32 107h-1l22 112h1z" clip-path="url(#N)"/>
+    <path d="M30 107h-1l-6 140h1l6-138v-2z" clip-path="url(#O)"/>
+    <path fill="#BDCDCA" d="M45 274c-2-7-6-12-9-15l-12-10 2-5-3-1-3 1 2 5c0 1-24 13-22 36 1 12 8 16 15 18a30 30 0 0 0 8 1c4 0 22 0 23-19 1-4 0-8-1-11z" clip-path="url(#P)"/>
+    <path fill="#8FA4A3" d="m24 249 2-5-3-1-3 1 2 5c0 1-24 13-22 36 1 12 8 16 15 18-6-5-13-14-8-29 5-14 18-19 29-15l-12-10z" clip-path="url(#Q)"/>
+    <path fill="#FFF" d="M39 292a5 5 0 1 0-10 0 5 5 0 0 0 10 0z" clip-path="url(#R)"/>
+    <path fill="#00000C" d="M75 247c-2-6-5-11-9-15l-12-10 2-5-3-1-2 1c-1 1 1 4 1 5 1 2-23 13-22 36 1 12 9 17 15 19a30 30 0 0 0 8 1c4 0 22-1 24-20l-2-11z" clip-path="url(#S)"/>
+    <path d="m54 222 2-5-3-1-2 1c-1 1 1 4 1 5 1 2-23 13-22 36 1 12 9 17 15 19-6-5-13-15-8-30 5-14 19-18 29-15l-12-10z" clip-path="url(#T)"/>
+    <path fill="#FFF" d="M70 265a5 5 0 1 0-10 0 5 5 0 0 0 10 0z" clip-path="url(#U)"/>
+    <path fill="#FFBD18" d="M52 215c-2-6-5-11-9-15l-12-9 2-5-3-1-2 1 1 5c0 1-23 13-22 36 1 12 9 16 15 18a30 30 0 0 0 8 1c4 0 22 0 23-19 1-4 0-8-1-12z" clip-path="url(#V)"/>
+    <path fill="#F8AD05" d="m30 185-2 1 1 5-3 3h-1c-6 5-18 15-18 30v3c1 12 9 16 15 18-6-5-13-14-8-30a22 22 0 0 1 29-15l-12-9 2-5-3-1z" clip-path="url(#W)"/>
+    <path fill="#FFF" d="M46 234a5 5 0 1 0-10 0 5 5 0 0 0 10 0z" clip-path="url(#X)"/>
+    <path fill="#FFBD18" d="M38 107H24v19h14v-19z" clip-path="url(#Y)"/>
+    <path d="M6 107h103l103 1 103-1h103H6z" clip-path="url(#Z)"/>
+    <path fill="#FFBD18" d="M379 374a541 541 0 0 0-334 0l20 62c96-31 199-31 294 0l20-62z" clip-path="url(#aa)"/>
+    <path fill="#FFF" d="m117 403 5-1 2-9 4 8 6-1-7-11 2-10 12 20 6-1-16-25-5 1-4 12-7-11-5 1-6 30 6-1 4-23 5 8-2 13z" clip-path="url(#ab)"/>
+    <path fill="#FFF" d="m168 373-1-5-21 3 4 27 19-2v-5l-14 2-1-7 12-1v-5l-13 2v-7l15-2z" clip-path="url(#ac)"/>
+    <path fill="#FFF" d="m172 368 2 27h6l-2-23 16-1v-4l-22 1z" clip-path="url(#ad)"/>
+    <path fill="#FFF" d="M194 381a13 13 0 0 0 4 9 15 15 0 0 0 11 4c2 0 5 0 7-2l4-4-4-3a7 7 0 0 1-5 4h-2a8 8 0 0 1-9-5 10 10 0 0 1 0-7 9 9 0 0 1 5-5l3-1a10 10 0 0 1 5 1l2 1 1 2 5-2-2-3-3-2a16 16 0 0 0-8-2l-6 1a15 15 0 0 0-7 8l-1 6z" clip-path="url(#ae)"/>
+    <path fill="#FFF" d="m228 380 1-3 2-3a8 8 0 0 1 7-2 8 8 0 0 1 6 3l1 3a10 10 0 0 1-2 10 8 8 0 0 1-6 2 8 8 0 0 1-8-6l-1-4zm10-13a15 15 0 0 0-11 4 14 14 0 0 0-5 9l1 6a15 15 0 0 0 13 9l6-1a15 15 0 0 0 10-12l-1-6a14 14 0 0 0-7-8l-6-1z" clip-path="url(#af)"/>
+    <path fill="#FFF" d="m282 371-2 18-6-14-3-1-10 13 2-18-6-1-2 28h6l10-14 7 16 6 1 4-27-6-1z" clip-path="url(#ag)"/>
+    <path fill="#FFF" d="M315 381v-4l-21-4-4 27 20 4 1-5-15-3 2-6 12 2 1-4-13-2 2-7 15 2z" clip-path="url(#ah)"/>
+    <path fill="#FFF" d="m321 378-2 6 6 1 1-6-5-1zm-3 10-3 17 5 1 4-17-6-1z" clip-path="url(#ai)"/>
+    <path fill="#F8AD05" d="m64 414 3 7 1 4 1 3v-4a32 32 0 0 0-5-10z" clip-path="url(#aj)"/>
+    <path fill="#F8AD05" d="M71 415v3a137 137 0 0 1-1 9l1-3a20 20 0 0 0 0-9z" clip-path="url(#ak)"/>
+    <path fill="#F8AD05" d="M83 422h-3a12 12 0 0 0-6 3l-2 3a23 23 0 0 1 8-5l4-1h-1z" clip-path="url(#al)"/>
+    <path fill="#F8AD05" d="M361 414a35 35 0 0 0-4 10l-1 4 1-3 2-4 2-7z" clip-path="url(#am)"/>
+    <path fill="#F8AD05" d="M354 415a19 19 0 0 0 1 12 111 111 0 0 1-1-9v-3z" clip-path="url(#an)"/>
+    <path fill="#F8AD05" d="m342 422 3 1a21 21 0 0 1 8 5l-2-3a12 12 0 0 0-9-3z" clip-path="url(#ao)"/>
+    <path d="M72 428a2 2 0 1 0-4 0 2 2 0 0 0 4 0z" clip-path="url(#ap)"/>
+    <path d="M357 428a2 2 0 1 0-5 0 2 2 0 0 0 5 0z" clip-path="url(#aq)"/>
+    <path d="m152 309-2-3-3 2c0 2 1 3 2 3 2 0 3-1 3-2z" clip-path="url(#ar)"/>
+    <path d="M343 299c0-2 0-3-2-3l-3 2c0 1 1 3 3 3l2-2z" clip-path="url(#as)"/>
+    <path fill="#FFBD18" d="m288 318-1-1-1 1 1 1 1-1z" clip-path="url(#at)"/>
+    <path fill="#FFBD18" d="m136 318-1-1-1 1 1 1 1-1z" clip-path="url(#au)"/>
+    <path d="m318 397-1-1-2 1 1 1 2-1z" clip-path="url(#av)"/>
+    <path d="m254 239-1-1c-1-1-2 0-2 1l1 1 2-1z" clip-path="url(#aw)"/>
+    <path d="m233 415-1-1-1 1 1 2 1-2z" clip-path="url(#ax)"/>
+    <path fill="#FFBD18" d="m98 287-1-1-1 1 1 1 1-1z" clip-path="url(#ay)"/>
+    <path fill="#00313C" d="m305 188-1-1-2 1 1 1 2-1z" clip-path="url(#az)"/>
+    <path fill="#FFBD18" d="m140 210-1-2-1 2 1 1 1-1z" clip-path="url(#aA)"/>
+    <path fill="#FFBD18" d="M158 258c0-1-1-3-3-3l-2 2c0 2 1 3 2 3l3-2z" clip-path="url(#aB)"/>
+    <path fill="#00313C" d="M178 388c0-2-1-3-2-3l-3 2c0 2 1 3 2 3 2 0 3-1 3-2z" clip-path="url(#aC)"/>
+    <path fill="#00313C" d="m145 233-2-2c-1-1-2 0-3 2l2 3c2 0 3-1 3-3z" clip-path="url(#aD)"/>
+    <path d="M268 407c1-2 0-3-2-3l-2 2c-1 1 0 3 2 3l2-2z" clip-path="url(#aE)"/>
+    <path d="m266 325 4 1s-3 1-2 5c0 4 3 6 1 9l-3-1v-6c-1-2-2-5 0-8z" clip-path="url(#aF)"/>
+    <path fill="#00313C" d="m182 310-3 1s1-2-1-5c-3-3-6-2-7-6l3-2s1 4 4 5c2 1 4 3 4 7z" clip-path="url(#aG)"/>
+    <path d="m104 243-4 2s2-3-1-6c-2-3-6-2-7-6l4-1 3 4c3 2 5 3 5 7z" clip-path="url(#aH)"/>
+    <path fill="#FFBD18" d="m364 250-4 2s1-3-1-6-6-2-7-6l4-1 3 4c3 1 5 3 5 7z" clip-path="url(#aI)"/>
+    <path d="M118 343v4h-5c-3 2-3 6-7 6l-1-4s3 0 5-3c2-1 4-4 8-3z" clip-path="url(#aJ)"/>
+    <path fill="#FFBD18" d="M97 194v4s-2-2-5 0c-4 1-3 5-7 5l-1-4s3 0 5-2 4-4 8-3z" clip-path="url(#aK)"/>
+    <path fill="#00313C" d="m219 204 1 4s-3-2-6 0c-3 1-3 5-7 5l-1-4s4 0 6-2c1-2 3-4 7-3z" clip-path="url(#aL)"/>
+    <path fill="#FFBD18" d="M365 334v4s-2-2-5 0-3 5-7 6l-1-4s4 0 5-3c2-2 4-4 8-3z" clip-path="url(#aM)"/>
+    <path fill="#00313C" d="m148 190 1-4s1 2 5 2c4-1 5-4 8-3v4s-3-2-6 0c-2 2-5 3-8 1z" clip-path="url(#aN)"/>
+    <path fill="#FFBD18" d="m208 266-3 2s-3-4 0-7c0 0-1 3 3 5z" clip-path="url(#aO)"/>
+    <path fill="#FFBD18" d="m205 255 4 2s1 3-4 4c0 0 3-3 0-6z" clip-path="url(#aP)"/>
+    <path fill="#00313C" d="m102 417-4 2s-3-5 1-7c0 0-1 3 3 5z" clip-path="url(#aQ)"/>
+    <path fill="#00313C" d="m99 406 4 1s0 4-4 5c0 0 2-4 0-6z" clip-path="url(#aR)"/>
+    <path d="m234 327 2 3c1 0 3-1 3-3l-2-2c-2-1-3 0-3 2z" clip-path="url(#aS)"/>
+    <path fill="#FFBD18" d="M312 278c0 2 1 3 2 3 2 0 3-1 3-2l-2-3-3 2z" clip-path="url(#aT)"/>
+    <path fill="#FFBD18" d="M261 190c0 2 1 3 2 3 2 0 3-1 3-2l-2-3-3 2z" clip-path="url(#aU)"/>
+    <path fill="#FFBD18" d="m59 232 1 1 1-1-1-2-1 2z" clip-path="url(#aV)"/>
+    <path fill="#FFBD18" d="m255 259 1 1 1-1c1-1 0-1-1-2l-1 2z" clip-path="url(#aW)"/>
+    <path fill="#00000C" d="m222 359 1 1c1 1 2 0 2-1l-1-1-2 1z" clip-path="url(#aX)"/>
+    <path fill="#FFBD18" d="m314 348 2 3 3-3c0-1-1-2-3-2-1-1-2 0-2 2z" clip-path="url(#aY)"/>
+    <path fill="#00313C" d="M64 258c0 1 1 3 3 3l2-2c0-2 0-3-2-3l-3 2z" clip-path="url(#aZ)"/>
+    <path fill="#00313C" d="m166 347-6-2s-3 7 3 9c0 0-2-4 3-7z" clip-path="url(#ba)"/>
+    <path fill="#00313C" d="m165 362 5-3s-1-5-7-5c0 0 5 4 2 8z" clip-path="url(#bb)"/>
+    <path fill="#00313C" d="m351 203-6-2s-3 8 3 10c0 0-2-4 3-8z" clip-path="url(#bc)"/>
+    <path fill="#00313C" d="m350 219 5-4s-1-4-7-4c0 0 4 3 2 8z" clip-path="url(#bd)"/>
+    <path d="m312 253-1 6s8 2 9-4c0 0-4 3-8-2z" clip-path="url(#be)"/>
+    <path d="m327 252-4-5s-5 2-3 8c0 0 2-5 7-3z" clip-path="url(#bf)"/>
+    <path d="m172 211-6-1s-3 7 3 9c0 0-2-4 3-8z" clip-path="url(#bg)"/>
+    <path d="m171 227 5-3s-1-5-7-5c0 0 5 4 2 8z" clip-path="url(#bh)"/>
+    <path fill="#00313C" d="m275 364 4-2s3 5 0 7c0 0 0-3-4-5z" clip-path="url(#bi)"/>
+    <path fill="#00313C" d="m279 375-4-2s-1-3 4-4c0 0-3 3 0 6z" clip-path="url(#bj)"/>
+    <path fill="#FFBD18" d="M269 240v-4s6 0 5 4c0 0-2-2-5 0z" clip-path="url(#bk)"/>
+    <path fill="#FFBD18" d="m279 244-4 2s-3-2-1-6c0 0 1 5 5 4z" clip-path="url(#bl)"/>
+    <path fill="#FE5979" d="M134 21c2-1 66 0 68 1 1 1-3 61-3 61l-41-1 4-40-26-13c-2-2-4-8-2-8z" clip-path="url(#bm)"/>
+    <path fill="#FFF" d="M134 21c2-1 66 0 68 1l-1 27h-40l1-7-26-13c-2-2-4-8-2-8z" clip-path="url(#bn)"/>
+    <path fill="#8FA4A3" d="M134 20c2-1 66 0 69 1 1 1-1 22-1 22h-40v-1l-27-13c-2-2-4-9-1-9z" clip-path="url(#bo)"/>
+    <path d="m134 22 66 1v-1a1732 1732 0 0 0-66 0z" clip-path="url(#bp)"/>
+    <path d="M158 43c4 1 9 0 13-3l-13 2v1z" clip-path="url(#bq)"/>
+    <path d="M155 41c4 1 9 0 13-3h-1l-12 2v1z" clip-path="url(#br)"/>
+    <path d="M152 39c4 1 9 0 13-3h-1l-12 3c-1 0-1 0 0 0z" clip-path="url(#bs)"/>
+    <path fill="#00313C" d="M158 44h44l-7 104a991 991 0 0 0 20 79l9 33h-38l-10-32c-9-29-21-70-22-80-1-12 4-104 4-104z" clip-path="url(#bt)"/>
+    <path d="M160 52h40l-28-1-12 1z" clip-path="url(#bu)"/>
+    <path d="m217 255-7-25-7-24a2487 2487 0 0 1-12-49l-2-6v-3l6-89v-1 1l-5 89v3l1 6 13 49 13 49z" clip-path="url(#bv)"/>
+    <path d="M187 260c3-20 12-54 16-81l21 81h-37z" clip-path="url(#bw)"/>
+    <path fill="#FE5979" d="M278 21h-58c-1 1-2 10-2 21l-5 40h41l4-40v-1l18-11c2-2 4-8 2-9z" clip-path="url(#bx)"/>
+    <path fill="#FFF" d="M218 49v-7c0-11 1-20 2-21h58c2 1 0 7-2 9l-18 11v1l-1 7h-39z" clip-path="url(#by)"/>
+    <path fill="#8FA4A3" d="M280 20c-2-1-60 0-62 1v22h40v-1l21-13c2-2 4-9 1-9z" clip-path="url(#bz)"/>
+    <path d="m280 22-59 1v-1a1394 1394 0 0 1 59 0z" clip-path="url(#bA)"/>
+    <path d="M255 42c-5 1-12 1-17-2h1l16 1v1z" clip-path="url(#bB)"/>
+    <path d="M259 39c-6 2-12 2-17-1v-1l17 2z" clip-path="url(#bC)"/>
+    <path d="M263 37c-6 1-13 1-17-2l17 1v1z" clip-path="url(#bD)"/>
+    <path fill="#00313C" d="m187 260 6-36 6-3 16-177h44l-23 216h-49z" clip-path="url(#bE)"/>
+    <path d="M216 52h40l-28-1-12 1z" clip-path="url(#bF)"/>
+    <path d="M191 225a83 83 0 0 0 13-7l-13 7z" clip-path="url(#bG)"/>
+    <path d="m193 245 2-13v-3l1-2 4-3-5 2-1 5a116 116 0 0 0-1 14z" clip-path="url(#bH)"/>
+    <path d="m198 244 1-9v-9 4l-1 5v9z" clip-path="url(#bI)"/>
+    <path d="m200 217 2-21 3-20 5-41 9-79-8 80-5 40-3 20-3 21z" clip-path="url(#bJ)"/>
+    <path fill="#FE5979" d="M199 307c-6-8-24-32-36-33-8-1-34 1-40 3-3 1 4 26 8 25 5 0 28-6 31-5l31 18c9 5 11-1 6-8z" clip-path="url(#bK)"/>
+    <path fill="#FE5979" d="m124 277-19 1c-3 1-13 5-12 7 0 3 3 2 3 2s-4 2-3 5 5 1 5 1-4 3-3 5c1 3 5 1 5 1s-3 2-2 4c2 2 9-2 13-3l18-2-5-21z" clip-path="url(#bL)"/>
+    <path d="M100 299c5-3 7-4 13-4-6-1-9 0-13 4z" clip-path="url(#bM)"/>
+    <path d="M98 294c5-3 8-4 13-5-5 0-9 1-13 4v1z" clip-path="url(#bN)"/>
+    <path d="M96 287c6-2 9-3 14-3v-1c-6 0-9 1-14 4z" clip-path="url(#bO)"/>
+    <path fill="#FE5979" d="m131 302-9 5c-3 1-16 2-16-1-1-4 7-5 10-6 0 0 0-8 5-10s10 12 10 12z" clip-path="url(#bP)"/>
+    <path d="M106 305c2-4 7-4 10-4l1-1c0-3 1-8 4-10-4 2-5 6-5 10-4 1-9 1-10 5z" clip-path="url(#bQ)"/>
+    <path fill="#FFBD18" d="m174 306 15-16s10 10 15 21c4 10-5 10-12 6l-18-11z" clip-path="url(#bR)"/>
+    <path fill="#FFF" d="M204 311a48 48 0 0 1-3-2l-5-3-2-2a38 38 0 0 0-12-7h1a38 38 0 0 1 13 8h1l5 5a17 17 0 0 0 2 1v1-1zm-5-7-2 1-1 1-1 1-1 1-6 6 6-6v-1h1l1-1v-1l2-2h1v1zm5 6h-2l-1-1h-2a20 20 0 0 1-4-2l-1-1-10-7-2-2v1l2 1 10 8h1l4 3a13 13 0 0 0 3 0h2z" clip-path="url(#bS)"/>
+    <path d="m191 293-13 14h1l12-14z" clip-path="url(#bT)"/>
+    <path d="M204 311c-5-10-15-21-15-21l-7 7 19 22c3 0 6-2 3-8z" clip-path="url(#bU)"/>
+    <path fill="#FFBD18" d="m179 242 61-3c1 1-6 41-13 56-8 19-12 21-15 22l-15 1-9-17c-4-14-10-58-9-59z" clip-path="url(#bV)"/>
+    <path fill="#FFF" d="M215 315h-3l-3-1a24 24 0 0 1-7-4l-1-1-5-3a90 90 0 0 0-8-6 53 53 0 0 1 9 5l5 5a17 17 0 0 0 2 1l5 3a12 12 0 0 0 7 0l-1 1zm9-12a58 58 0 0 0-8-3l-6-1-6 1a24 24 0 0 0-7 5l-1 1-1 1a35 35 0 0 0-3 3 98 98 0 0 1 2-3h1l1-1v-1l2-2 6-3 6-2a26 26 0 0 1 10 3h1l3 1v1zm1-3h-1a8 8 0 0 0-4 1l-3 3-5 4a15 15 0 0 1-8 2h-5a21 21 0 0 1-5-3l-5-3v-1l5 3 1 1a20 20 0 0 0 6 2l1 1a15 15 0 0 0 9-3l5-3 4-3a10 10 0 0 1 4-2h1v1zm12-41a36 36 0 0 0-12-6l-4-1-6 2c-4 1-7 4-10 7l-8 10-3 2a33 33 0 0 1-7 5l-3 2v-1l3-1a24 24 0 0 0 7-5l2-3 9-9 4-4 6-4a14 14 0 0 1 9-1h1l2 1 10 5v1zm-1 7-6 7-5 4c-2 1-3 3-5 3l-6 2-7-1a38 38 0 0 1-13-8l-8-6a23 23 0 0 0-5-2v-1l5 2v1h1l7 6a32 32 0 0 0 3 2l10 6 7 1 6-2 9-7 7-8v1zm1-5-9-7-2-1-1-1-8-4-6-1-7 2-5 3-4 4-9 10-1 1-3 3a45 45 0 0 0 4-3v-1l9-9 10-8 6-2 6 1a30 30 0 0 1 8 5l3 2 9 6z" clip-path="url(#bW)"/>
+    <path fill="#FE5979" d="M215 308c6-8 25-31 37-33 8 0 33 2 39 5 3 1-5 25-8 25-6-1-28-7-31-6-3 0-14 7-31 17-10 5-11-1-6-8z" clip-path="url(#bX)"/>
+    <path fill="#FE5979" d="m290 280 19 1c3 1 13 5 12 8 0 2-3 2-3 2s4 2 3 5c-1 2-5 1-5 1s3 2 2 5-5 0-5 0 4 2 2 4c-2 3-8-2-12-3l-18-3 5-20z" clip-path="url(#bY)"/>
+    <path d="M314 302c-5-3-8-4-13-4 5 0 9 0 13 4 0 0 0 1 0 0z" clip-path="url(#bZ)"/>
+    <path d="M316 297c-5-3-8-4-14-5 6 0 9 1 14 5z" clip-path="url(#ca)"/>
+    <path d="M317 291c-5-3-8-4-13-4v-1c5 0 9 1 14 4l-1 1z" clip-path="url(#cb)"/>
+    <path fill="#FE5979" d="m283 305 9 5c3 1 15 2 16-1 0-4-7-5-11-6 0 0 1-8-4-10-5-3-10 12-10 12z" clip-path="url(#cc)"/>
+    <path d="M307 308c-2-3-6-4-10-4v-1c0-3-1-8-4-10 0 0 0-1 0 0 4 1 5 6 5 10 3 1 8 1 10 5h-1z" clip-path="url(#cd)"/>
+    <path fill="#FFBD18" d="m239 307-15-16s-10 10-15 21c-5 10 5 9 12 6l18-11z" clip-path="url(#ce)"/>
+    <path fill="#FFF" d="M233 304h-1l-5-4h-3a8 8 0 0 0-3 1h-1a10 10 0 0 1 4-2h3l1 1a22 22 0 0 1 5 4zm4 4a107 107 0 0 0-3-4l3 4h1-1zm-1 1z" clip-path="url(#cf)"/>
+    <path fill="#FFF" d="M237 305v-1h-2a8 8 0 0 0-4 1 13 13 0 0 0-1 1l-4 2-5 4a15 15 0 0 1-12 1l-1 1h1l3 1h4l6-2 5-4 3-3h1a9 9 0 0 1 4-2h1l1 1z" clip-path="url(#cg)"/>
+    <path fill="#FFF" d="m230 305-2-1-7-3h-1l-3-1 3 1-4 3-4 3-1 1h1l5-4 3-3 7 3 3 2v-1z" clip-path="url(#ch)"/>
+    <path d="m222 294 13 14-13-14z" clip-path="url(#ci)"/>
+    <path d="m227 294-2-3h-1a94 94 0 0 0-11 14l6-7 3-3 3-4h-1l3 3z" clip-path="url(#cj)"/>
+    <path d="m214 302 2-1 1-2-2 1-1 2z" clip-path="url(#ck)"/>
+    <path fill="#FE5979" d="M200 308c3-1 10 3 12 7l1 7v7l-15-2 1-9-1-1c0-1-1-8 2-9z" clip-path="url(#cl)"/>
+    <path d="M212 329c-1-3-4-13-12-12h-2l1 1-1 9 14 2z" clip-path="url(#cm)"/>
+    <path fill="#FE5979" d="M214 348c2-5 0-20-3-24-6-5-14-5-19 1-4 6-1 25 3 29 6 4 17 1 19-6z" clip-path="url(#cn)"/>
+    <path d="M203 339v-3 3z" clip-path="url(#co)"/>
+    <path d="M204 340c1 0 1-4-1-4-1 0-1 4 1 4z" clip-path="url(#cp)"/>
+    <path d="m197 339-2-2c2 0 2 1 2 2z" clip-path="url(#cq)"/>
+    <path d="M196 340c-2 1-2-3-1-3 2 0 2 3 1 3z" clip-path="url(#cr)"/>
+    <path d="m205 341-1 1h-1v1h2l1-1-1-1z" clip-path="url(#cs)"/>
+    <path d="M195 342h1l2 1v1h-2l-2-1 1-1z" clip-path="url(#ct)"/>
+    <path d="M202 329h-2l1-1 1 1z" clip-path="url(#cu)"/>
+    <path d="m201 332-2-1h-2v3l-1-1a52 52 0 0 0 2 11l-2-10h2v-2h3z" clip-path="url(#cv)"/>
+    <path d="m198 331 2-1h1l1 1-1 1-3-1z" clip-path="url(#cw)"/>
+    <path fill="#FF78F3" d="M200 330h1l1 1-2-1z" clip-path="url(#cx)"/>
+    <path d="M216 336c-4 0-6 5-5 9 0 0-11-2-12 6 0 0-2-3-6-4l-1-3c-2 0-3 3 0 6 0 0 0 4 3 7s6 1 6 1l6 2c4-1 6-4 6-4s5-1 6-5v-11c0-2-2-3-3-4z" clip-path="url(#cy)"/>
+    <path d="M200 352a10 10 0 0 1 0-4l3-3 4-1h2l2 1-2-1h-2l-5 1-2 3v4z" clip-path="url(#cz)"/>
+    <path d="m194 347 3 2 2 1 1 2-1-2-1-2a6 6 0 0 0-4-1z" clip-path="url(#cA)"/>
+    <path fill="#FE5979" d="M212 336s3 5 5 3c2-1 0-8-3-9-2-1-3 2-3 2l1 4z" clip-path="url(#cB)"/>
+    <path d="M216 337h1c-2 0-3-2-4-4l2 1v-1h-1l-1-2-1 1c0 2 2 5 4 5z" clip-path="url(#cC)"/>
+    <path d="M318 297c-2-9-2-21-8-28-5-6-12-9-19-10-16-3-36 1-42 17-3 7-1 19 7 21 4 2 8 1 12 1 5 1 10 3 13 7 7 8 7 15 11 24 0 2 1 4 3 5l7 2 6-1c4-1 8-6 10-10 3-3 4-6 3-10l-3-18z" clip-path="url(#cD)"/>
+    <path d="m318 292 3 25-3-20-3-21c-3-15-20-17-32-13v-1c11-3 25-3 31 9 3 6 3 14 4 21z" clip-path="url(#cE)"/>
+    <path d="M293 330h-1c-2-8-4-18-10-24-3-3-7-5-12-5h-10c-13 1-17-16-9-25-5 7-5 17 2 22 5 5 13 1 19 3 14 3 18 17 21 29z" clip-path="url(#cF)"/>
+    <path fill="#BB3B53" d="M306 290c15-19 27-42 25-49-4-9-21-26-31-33-3-3-20 20-17 23l23 18c1 1-5 29-7 35-3 11 1 15 7 6z" clip-path="url(#cG)"/>
+    <path fill="#BB3B53" d="M284 197c6 2 16 10 18 13s-12 22-16 22c-3 0-23-8-26-14-3-5 18-23 24-21z" clip-path="url(#cH)"/>
+    <path fill="#BB3B53" d="M267 225c3 0 0-4 0-4s5 4 8 2 0-6 0-6 5 4 7 1c3-2-1-5-1-6 0 0 4 2 6 0 3-4-7-8-9-12l6-3s-10-4-15-2c-2 1-2 4-2 4s-3-2-5 0l-1 4h-4l-1 4s-3 0-4 2c-2 4 8 18 15 16z" clip-path="url(#cI)"/>
+    <path d="M256 208c2 5 6 10 11 14l1-1c-5-4-9-8-12-13z" clip-path="url(#cJ)"/>
+    <path d="M261 203c3 5 7 11 14 14-4-2-11-9-14-14z" clip-path="url(#cK)"/>
+    <path d="M281 212c-5-3-10-7-13-13h-1c2 4 4 7 7 9l7 5v-1z" clip-path="url(#cL)"/>
+    <path d="m267 221 4 2 3 1 1-1 1-2-1-3-2-2 3 2 3 1 3-1 1-3-2-2-3-2 3 1h5l1-2-1-2-4-4-2-2-2-2 2 2 2 2 4 3 2 3-1 3h-6v-1l3 3v2l-1 2-4 1-4-2h1l1 3-1 2-2 1-4-1-3-2z" clip-path="url(#cM)"/>
+    <path fill="#BB3B53" d="M283 231s-26 2-22-9c1-3 10-14 12-12 3 2 0 7-2 10 0 0 9-2 12 4 2 4 0 7 0 7z" clip-path="url(#cN)"/>
+    <path d="m260 223 2-3 2-4 5-6 2-1h1a2 2 0 0 1 2 0l1 2v2l-1 4-3 4v-1a16 16 0 0 1 6 0l3 1 2 2a9 9 0 0 0-5-2 14 14 0 0 0-6 0h-1l1-1 2-3 1-4-1-3-3 1a38 38 0 0 0-5 6l-5 6z" clip-path="url(#cO)"/>
+    <path fill="#8FA4A3" d="m285 235 19-26s5 1 9 5c3 4 18 20 19 28 1 9-14 34-22 45-9 12-15 11-11-4l6-33-17-10-3-5z" clip-path="url(#cP)"/>
+    <path fill="#BDCDCA" d="m309 284-1 1 1-2 1-2-1 3zm8-27-1 2v-3l1-1v2zm7-29-1 1 1-2v1zm-15 3-2 2 1-2 1-2v2zm-7 43-1-1h-1 1l1 1 2 1-2-1zm-3-50-1-1h1a8 8 0 0 1 2 2l-2-1zm25 23-2-2 2 1 2 1h-2zm-22 48-2-1a8 8 0 0 1 3 1h-1zm14-24v-2a8 8 0 0 1 1 4l-1-2zm-9-25-1-2 1 2 1 2-1-2zm-10-8h-2l1-1h3l-2 1zm20 0h-2l2-1h2l-2 1zm-7-20h-2a8 8 0 0 1 4-1l-2 1zm-3 46-2 1 2-1 2-1-2 1z" clip-path="url(#cQ)"/>
+    <path fill="#BDCDCA" d="m310 214-5 8-13 18 12-19 6-7z" clip-path="url(#cR)"/>
+    <path fill="#BB3B53" d="M240 9c2-1 63 0 66 1a82 82 0 0 1 1 21v40l-41-1 1-31v-2l1-6v-1l-26-13c-3-2-4-8-2-8z" clip-path="url(#cS)"/>
+    <path fill="#FFBD18" d="M258 26z" clip-path="url(#cT)"/>
+    <path fill="#FFBD18" d="M240 9c2-1 63 0 66 1l1 17c-11-2-55-11-56-7 0 1 3 4 6 5l-15-8c-3-2-4-8-2-8z" clip-path="url(#cU)"/>
+    <path fill="#00000C" d="m320 247-11-111-1-25V34h-43s1 86 3 102l14 111h38z" clip-path="url(#cV)"/>
+    <path d="M267 42h39l-28-1-11 1z" clip-path="url(#cW)"/>
+    <path d="M300 91v37l5 37 5 36 4 41c0 1 0 1 0 0a1335 1335 0 0 0-13-109v-19l-1-18V46v45z" clip-path="url(#cX)"/>
+    <path d="m329 247-20-111-1-25-20 136h41z" clip-path="url(#cY)"/>
+    <path fill="#BB3B53" d="M342 5c2 0 57 29 58 31 1 1-3 9-8 19l-20 35-34-20 19-33-17-23c-1-3 0-9 2-9z" clip-path="url(#cZ)"/>
+    <path fill="#FFBD18" d="M342 5c2 0 57 29 58 31 1 1-2 7-6 15-8-6-45-34-48-31l1 3-7-9c-1-3 0-9 2-9z" clip-path="url(#da)"/>
+    <path fill="#00000C" d="m352 39 40 24s-46 66-46 72l-8 73s6 16-6 39h-50s3-22 9-36l11-5 5-73c1-16 45-94 45-94z" clip-path="url(#db)"/>
+    <path d="m350 48 9 6 25 14-24-15-10-5s-1 0 0 0z" clip-path="url(#dc)"/>
+    <path d="M289 212a82 82 0 0 0 13-7l-13 6v1z" clip-path="url(#dd)"/>
+    <path d="M295 219a99 99 0 0 0 0 22l1-20c0-3 2-8-1-9-4 0-6 8-6 10a74 74 0 0 0-1 19l1-14c0-2 2-15 6-14l1 2-1 4z" clip-path="url(#de)"/>
+    <path d="m295 213 1-3v-2l-1 2-1 3h1z" clip-path="url(#df)"/>
+    <path d="M326 244a46 46 0 0 0 6-17l1-4v-5l-1-9v1a6060 6060 0 0 0 8-76v-2l1-2 2-4 5-8 10-16 21-32-21 32-10 16-5 8-3 4-1 2v2a6037 6037 0 0 0-7 75v1l1 8-1 5v4a50 50 0 0 1-6 17z" clip-path="url(#dg)"/>
+    <path fill="#8FA4A3" d="M339 234h-59s-2 2-2 6l6 20s-3 5-2 11c3 10 14 23 15 24 4 3 9 3 12 1 13-6 27-40 31-54 1-4-1-8-1-8z" clip-path="url(#dh)"/>
+    <path fill="#BDCDCA" d="m309 284-1 1 1-2 1-2-1 3zm8-27-1 2v-3l1-1v2zm20-12-1 2 1-2 1-2-1 2zm-43 18-1 2 1-2 1-2-1 2zm-9-19-2 2 1-2 1-2v2zm44 24-1 2 1-2 1-2-1 2zm-27 6-2-1 2 1 2 1-2-1zm-6-23-2-1h3l1 1h-2zm28-4-2-2 2 1 2 1h-2zm-22 48-2-1h2l2 2-2-1zm-8-7-1-2 1 2 1 2-1-2zm-9-30-1-2 1 2 1 2-1-2zm31 13v-2a8 8 0 0 1 1 4l-1-2zm-9-25-1-2 1 2 1 2-1-2zm26-10-1-2 1 2 1 2-1-2zm-18 56v-2l1 1-1 1zm8-12v1h-2a8 8 0 0 1 3-1h-1zm-26-42h-2l1-1h3l-2 1zm34 18-2 1 2-1 2-1-2 1zm-42 21h-1a9 9 0 0 1 3-1l-2 1zm28-39h-2l2-1h2l-2 1zm-10 26-2 1 2-1 2-1-2 1z" clip-path="url(#di)"/>
+    <path d="M304 260a58 58 0 0 1-15 0h-2v-1a16 16 0 0 1 4 0h4a121 121 0 0 0 9 1z" clip-path="url(#dj)"/>
+    <path d="M311 256a63 63 0 0 1-13 3h-1v-1h3l3-1a204 204 0 0 0 8-1z" clip-path="url(#dk)"/>
+    <path fill="#FFBD18" d="M310 314s8 7 3 14c-4 7-11 8-15 7 0 0 9-3 11-8 3-6 1-13 1-13z" clip-path="url(#dl)"/>
+    <path fill="#BB3B53" d="M308 295c-1-1-5-8-10-7l-1 8-2 9 10 5 2 1v-7l1-1v-8z" clip-path="url(#dm)"/>
+    <path d="M307 306c-2-6-8-9-10-10l-2 9 10 5 2 1v-5z" clip-path="url(#dn)"/>
+    <path fill="#BB3B53" d="M284 319c-3-15 5-18 9-19 2 0 12-2 16 12 5 14-1 20-7 22-7 2-15-1-18-15z" clip-path="url(#do)"/>
+    <path d="M289 321h2v1h-2v-1z" clip-path="url(#dp)"/>
+    <path d="m299 319-1 1h-1v1h1l2-1-1-1z" clip-path="url(#dq)"/>
+    <path d="M297 317v-3 3z" clip-path="url(#dr)"/>
+    <path d="M298 318c1 0 1-4-1-3-1 0-1 3 1 3z" clip-path="url(#ds)"/>
+    <path d="M298 317h2l-1-1-1 1s0 1 0 0z" clip-path="url(#dt)"/>
+    <path d="m291 318-2-3c2 0 2 2 2 3z" clip-path="url(#du)"/>
+    <path d="M290 319c-2 0-2-3-1-3 2 0 2 3 1 3z" clip-path="url(#dv)"/>
+    <path d="M289 319h-1v-1l1 1z" clip-path="url(#dw)"/>
+    <path d="M295 308h-2 2z" clip-path="url(#dx)"/>
+    <path d="M291 313v-3l4 1h-4l1 2h-2l3 9c-2-3-3-6-3-10l1 1z" clip-path="url(#dy)"/>
+    <path d="m291 310 2-1h1l1 1-1 1-3-1z" clip-path="url(#dz)"/>
+    <path fill="#FF78F3" d="M293 309h1l1 1-2-1z" clip-path="url(#dA)"/>
+    <path d="M309 314c-1 0-5 4-5 12l1-8c0-1-2 3-2 9l-7-3-5-1 6 3-12-3s-1 8 5 12c6 3 14-1 17-3l5-5c3-4-1-13-3-13z" clip-path="url(#dB)"/>
+    <path fill="#BB3B53" d="M307 313s4 4 6 3c2-2-2-8-4-9-3 0-3 2-3 2l1 4z" clip-path="url(#dC)"/>
+    <path d="m312 314-4-4h2-2l-1-1c0-1 0 0 0 0 0 2 2 5 5 5z" clip-path="url(#dD)"/>
+    <path fill="#BB3B53" d="M314 284c19 4 48 15 50 21 1 5 1 25-2 43 0 3-27-2-26-5l4-29c0-2-19-11-29-19-10-7-4-13 3-11z" clip-path="url(#dE)"/>
+    <path fill="#BB3B53" d="M362 346v21c-1 4-4 15-7 15-3-1-2-4-2-4s-3 4-6 4c-3-1-1-6-1-6s-3 4-6 4c-3-1-1-6-1-6s-2 4-4 2 2-9 3-13l1-20 23 3z" clip-path="url(#dF)"/>
+    <path d="M339 374c4-5 4-8 4-14h1c0 6 0 10-4 15l-1-1z" clip-path="url(#dG)"/>
+    <path d="M345 377a33 33 0 0 0 5-16c0 7 0 10-4 16h-1z" clip-path="url(#dH)"/>
+    <path d="M353 378c2-6 3-9 3-16 1 7 0 11-3 16 0 0-1 0 0 0z" clip-path="url(#dI)"/>
+    <path fill="#BB3B53" d="m339 339-7 9c-2 3-4 16-2 17 4 1 7-7 8-11 0 0 9 3 13-2 3-5-12-13-12-13z" clip-path="url(#dJ)"/>
+    <path d="M332 365c4-2 5-7 6-11h1c3 1 9 1 12-2-3 4-8 4-12 3-2 4-3 9-7 10z" clip-path="url(#dK)"/>
+    <path fill="#8FA4A3" d="m335 337 29 3s3-3 3-6 0-29-4-32c-4-4-37-18-50-19s-9 9-1 13l27 19c1 1-4 11-4 14v8z" clip-path="url(#dL)"/>
+    <path fill="#BDCDCA" d="m365 333-8-1-20-2 20 2 8 1z" clip-path="url(#dM)"/>
+    <path d="m314 282 3 2 4 1a17 17 0 0 0-7-3z" clip-path="url(#dN)"/>
+    <path d="M316 281a6 6 0 0 0 2 3 11 11 0 0 0-2-3z" clip-path="url(#dO)"/>
+    <path fill="#BDCDCA" d="m360 328-2 1a8 8 0 0 1 4-2l-2 1zm-19 8-2 1a8 8 0 0 1 4-2l-2 1zm13-22-2 1 1-1 3-1-2 1zm-19-13h-2a8 8 0 0 1 4-1l-2 1zm16 22-1-2a8 8 0 0 1 2 4l-1-2zm-6-26-1-2 2 2v2l-1-2zm21 41-2-1-2-1 2 1 2 1zm-23-10-2-1 2 1 2 1-2-1zm19-18-2-1 2 1 2 1-2-1zm-18-1-2-1h2l2 1h-2zm-18-20-1-1 2 1 1 1-2-1zm-2 13-1 2a8 8 0 0 1 2-4l-1 2zm33 0-1 2v-2l1-2v2zm6 17-1 2 1-2 1-2-1 2zm-10 16-1 2 1-2 1-2-1 2zm-13-16-1 2 1-2 1-2-1 2zm-25-27v-2a8 8 0 0 1 1 4l-1-2zm-6-8-1 1 1-2v1z" clip-path="url(#dP)"/>
+    <path fill="#BB3B53" d="m96 294-1 7-1 10c-1 6-1 13 4 16l8 4c3 0 6 1 9-1l3-2 5-2c3-1 4-3 5-5a31 31 0 0 0 4-15l-2-6-2-8 3 12v8l-2 8-5 6 1-1c2-1 3-4 4-7l1-10-1-8-2-9 2-9 2-9c1-3 0-5-1-8-3-4-9-8-14-5l-3 3a41 41 0 0 0-8 11 96 96 0 0 0-9 22 94 94 0 0 1 11-27l3-4 4-4c-3 1-5 4-7 6l-4 9-7 18z" clip-path="url(#dQ)"/>
+    <path fill="#FF8AB6" d="m122 283 20-44 11-24c3-5-23-11-24-7l-6 26c-4 14-9 33-8 46 0 12 5 8 7 3z" clip-path="url(#dR)"/>
+    <path fill="#FF8AB6" d="M138 198c-1 1-2 1-2-2 1-3 4-13 0-14s-8 14-8 19l1 12 9-15z" clip-path="url(#dS)"/>
+    <path fill="#FF8AB6" d="M150 221c4-8 10-18 9-27l-1-3c-1-5-3-6-3-6-1-4-4-5-4-5s0-5-3-5c-4-1-3 7-4 11l-15 27 21 8z" clip-path="url(#dT)"/>
+    <path d="m147 200 3-9 1-11a37 37 0 0 1-4 20z" clip-path="url(#dU)"/>
+    <path d="M153 203c1-3 2-8 2-18a33 33 0 0 1-2 18z" clip-path="url(#dV)"/>
+    <path d="m156 205 2-14c0 6 0 8-2 14z" clip-path="url(#dW)"/>
+    <path d="m136 262-19-5-4 24c0 9 4 13 11 1 8-11 12-20 12-20z" clip-path="url(#dX)"/>
+    <path fill="#00000C" d="m133 261-16-4-4 24c0 5 1 9 4 8l16-28z" clip-path="url(#dY)"/>
+    <path fill="#00313C" d="m117 260 8 3 4 1 4 1-4-1-4-2-8-2z" clip-path="url(#dZ)"/>
+    <path fill="#FF8AB6" d="M160 13c-2 0-61 11-63 13-1 1 0 9 2 20l8 38 38-7-8-38 22-17c2-2 3-8 1-9z" clip-path="url(#ea)"/>
+    <path fill="#FFF" d="M160 13c-2 0-61 11-63 13-1 1 0 9 2 20l1 5 38-7-1-5 22-17c2-2 3-8 1-9z" clip-path="url(#eb)"/>
+    <path fill="#FFBD18" d="M160 13c-2 0-62 11-64 13l2 20 39-7 23-17c2-2 3-9 0-9z" clip-path="url(#ec)"/>
+    <path d="m160 16-60 11h-1a1617 1617 0 0 1 61-11z" clip-path="url(#ed)"/>
+    <path d="M157 25a8 8 0 0 1-10-6c1 3 5 6 9 6h1z" clip-path="url(#ee)"/>
+    <path d="M141 37c-4 1-9 0-12-2v-1l12 3z" clip-path="url(#ef)"/>
+    <path d="M144 35c-4 1-9 1-12-2-1 0 0-1 0 0l12 2z" clip-path="url(#eg)"/>
+    <path d="M146 34c-4 0-9 0-12-3h1l11 2v1z" clip-path="url(#eh)"/>
+    <path d="M149 32c-4 1-9 0-12-3l12 2v1z" clip-path="url(#ei)"/>
+    <path fill="#FFF" d="M104 36c-5 1-6-6-1-7 4-1 5 6 1 7z" clip-path="url(#ej)"/>
+    <path d="m141 39-5-2 3 6 2 2c1 1 6 4 5-1 0-2-4-4-5-5zm6 8c-2 2-5 1-6-1-3-2-5-6-6-9l1-1 10 5c1 2 3 4 1 6z" clip-path="url(#ek)"/>
+    <path d="M123 40c-2 4 3 3 5 3l2-2 6-4h-6c-2 1-6 1-7 3zm2-3 11-1v1c-2 3-5 6-9 7-2 1-5 1-5-2-1-2 1-4 3-5z" clip-path="url(#el)"/>
+    <path fill="#FFBD18" d="m141 46-44 8 14 77-22 109 37-1s25-100 26-109c1-16-11-84-11-84z" clip-path="url(#em)"/>
+    <path fill="#AD7900" d="M141 46h-2l-39 7 2 26a1693 1693 0 0 1 9 52l-3 15 3 23a3302 3302 0 0 0 7-29l1-8-1-8-1-8-4-16-6-32v-1l1 4 7 33 3 16 2 8-1 8-3 16-4 16v2l5 34 2 1 1 3c4 13 5 30 6 31 0 0 25-100 26-109v-3l-1-19v-1c-3-26-10-61-10-61z" clip-path="url(#en)"/>
+    <path d="m140 55-39 6a405 405 0 0 1 39-6z" clip-path="url(#eo)"/>
+    <path d="m97 232 2-8 2-8 4-16a1774 1774 0 0 0 11-48l3-16 1-8-2-8-3-16-7-33-1-4v1l6 32 4 16 1 8 1 8-1 8a2372 2372 0 0 1-21 92z" clip-path="url(#ep)"/>
+    <path d="m89 240 19-94 15 93-34 1z" clip-path="url(#eq)"/>
+    <path fill="#FF8AB6" d="M122 5c-2 0-62 3-64 5l-1 20 3 38 39-2-3-38v-1l24-13c2-2 4-8 2-9z" clip-path="url(#er)"/>
+    <path fill="#FFF" d="M122 5c-2 0-62 3-64 5l-1 20 1 5 38-2v-6l24-13c2-2 4-8 2-9z" clip-path="url(#es)"/>
+    <path fill="#FFBD18" d="M122 5c-2-1-63 3-65 4v21l39-3 25-13c2-2 4-9 1-9z" clip-path="url(#et)"/>
+    <path d="m122 7-62 4a1619 1619 0 0 1 62-4z" clip-path="url(#eu)"/>
+    <path d="M117 16a8 8 0 0 1-9-7c1 4 5 7 9 7z" clip-path="url(#ev)"/>
+    <path d="M100 26c-4 0-9-1-12-4l12 4z" clip-path="url(#ew)"/>
+    <path d="M103 25c-4 0-9-1-12-4v-1l12 4v1z" clip-path="url(#ex)"/>
+    <path d="M106 23c-4 1-9-1-12-4l12 4z" clip-path="url(#ey)"/>
+    <path d="M109 22c-4 0-9-1-12-4h1c3 1 7 3 11 3v1z" clip-path="url(#ez)"/>
+    <path fill="#FFF" d="M63 20c-4 0-5-7 0-7s5 7 0 7z" clip-path="url(#eA)"/>
+    <path d="m99 28-4-2 3 6 1 2c1 2 5 5 6 0 0-2-4-4-6-6zm6 9c-2 2-5 0-6-2l-5-10h1c3 2 7 3 9 6 2 1 3 4 1 6z" clip-path="url(#eB)"/>
+    <path d="M82 27c-3 3 3 3 4 3l3-1 6-3-5-1c-3 0-7 0-8 2zm2-3 11 1v1l-9 5c-2 1-5 0-6-2 0-3 2-4 4-5z" clip-path="url(#eC)"/>
+    <path fill="#FFBD18" d="M126 239s-1-17-6-31l-1-3-8-4L99 34l-43 3 10 93 8 73c-5 16 5 38 5 38l47-2z" clip-path="url(#eD)"/>
+    <path fill="#AD7900" d="M99 34h-3l-38 2-2 1 10 93 8 72v1l-2 10c0 14 7 28 7 28l17-1 30-1a139 139 0 0 0-7-34l-2-1-6-3-4-50-3-44-2-28-2-26-1-19z" clip-path="url(#eE)"/>
+    <path d="M97 42z" clip-path="url(#eF)"/>
+    <path d="m102 87-2-33h-1a2736 2736 0 0 0 8 115l4 32-5-57z" clip-path="url(#eG)"/>
+    <path d="m68 87 5 37 4 38 2 19 1 9 1 9-2 10v10a71 71 0 0 0 4 19l-4-18 1-9 2-9-1-8-1-10-2-18-9-75-5-42 4 38z" clip-path="url(#eH)"/>
+    <path d="m84 217 5 2 4 2 3 3 2 5-1-2-1-3-2-4a14 14 0 0 0-7-3h-3z" clip-path="url(#eI)"/>
+    <path d="M117 211a218 218 0 0 0 2 14l-1-8-1-8 1-2c2 0 2 1 3 2l2 8 1 8c0-6 0-11-3-17l-2-2v-1l-1-1v2l-1 2v3z" clip-path="url(#eJ)"/>
+    <path d="M121 206a80 80 0 0 1-13-7l13 6v1z" clip-path="url(#eK)"/>
+    <path d="m79 241 47-2 1 14s4 5 4 11-11 23-12 24c-4 4-10 5-14 2-17-13-26-49-26-49z" clip-path="url(#eL)"/>
+    <path d="m79 241 47-2 1 14s4 5 4 11-11 23-12 24c-4 4-10 5-14 2-17-13-26-49-26-49z" clip-path="url(#eM)"/>
+    <path fill="#FF8AB6" d="M97 282c-18 4-44 12-47 19-2 6 0 24 2 42 1 3 28-2 27-6l-5-28c1-2 18-12 28-20 10-7 2-9-5-7z" clip-path="url(#eN)"/>
+    <path fill="#FF8AB6" d="m52 342 1 20c1 4 4 15 7 15 3-1 3-4 3-4s2 4 5 4c3-1 2-6 2-6s2 4 5 3c3 0 1-5 1-5s2 4 4 2c3-2-2-9-3-13l-2-20-23 4z" clip-path="url(#eO)"/>
+    <path d="M76 369c-4-5-4-8-4-14h-1c0 6 0 10 5 14 0 1 0 0 0 0z" clip-path="url(#eP)"/>
+    <path d="M70 371a33 33 0 0 1-5-15c0 7 1 10 5 16v-1z" clip-path="url(#eQ)"/>
+    <path d="M63 373c-3-6-4-9-4-16-1 7 0 11 4 16z" clip-path="url(#eR)"/>
+    <path fill="#FF8AB6" d="m75 334 8 8c2 3 5 17 2 18-4 1-7-7-8-11 0 0-9 3-13-2-3-5 11-13 11-13z" clip-path="url(#eS)"/>
+    <path d="M84 360c-5-2-6-7-7-11h-1c-3 1-9 1-12-2 3 4 8 4 12 3 2 4 3 9 8 10z" clip-path="url(#eT)"/>
+    <path d="m74 286 11 18 19-15c7-7 7-11-7-8l-23 5z" clip-path="url(#eU)"/>
+    <path fill="#00313C" d="m87 301-4-7-2-4-2-4 2 4 2 4 4 7z" clip-path="url(#eV)"/>
+    <path fill="#FFBD18" d="M131 264c0-6-4-11-4-11l-1-14-47 2 8 24c1 0 8-5 17 1 5 3 6 13 6 13l14 1c3-6 7-13 7-16z" clip-path="url(#eW)"/>
+    <path fill="#AD7900" d="m126 239-30 1-17 1 8 24 8-2 9 3c5 3 6 13 6 13l13 1h1c3-6 7-13 7-16 0-6-4-11-4-11l-1-14z" clip-path="url(#eX)"/>
+    <path fill="#FFBD18" d="m110 279-6 11h1l6-11h-1z" clip-path="url(#eY)"/>
+    <path fill="#AD7900" d="m110 279-2 3-3 6-1 2h1l6-11h-1z" clip-path="url(#eZ)"/>
+    <path fill="#FFBD18" d="m123 280-6 10 1-1 6-9h-1z" clip-path="url(#fa)"/>
+    <path fill="#AD7900" d="m123 280-6 10 1-1 6-9h-1z" clip-path="url(#fb)"/>
+    <path fill="#FFBD18" d="M112 277a1 1 0 1 0-2 0 1 1 0 0 0 2 0z" clip-path="url(#fc)"/>
+    <path fill="#FFBD18" d="M124 279v-1h-1v1h1z" clip-path="url(#fd)"/>
+    <path d="m79 241 11-1h12a624 624 0 0 1 12-1h-12a480 480 0 0 0-23 2z" clip-path="url(#fe)"/>
+    <path d="M80 245h12l11-1a619 619 0 0 1 11-1l-11 1a462 462 0 0 0-23 1z" clip-path="url(#ff)"/>
+    <path d="M83 245a17 17 0 0 1-1-3v-1 2l1 2z" clip-path="url(#fg)"/>
+    <path d="M84 245a17 17 0 0 1-1-3v-1 2l1 2z" clip-path="url(#fh)"/>
+    <path d="M96 244a17 17 0 0 1 0-3v-1l-1 2 1 2z" clip-path="url(#fi)"/>
+    <path d="M97 244a17 17 0 0 1 0-3v-1l-1 2 1 2z" clip-path="url(#fj)"/>
+    <path d="M110 239a17 17 0 0 1 1 3v1-2l-1-2z" clip-path="url(#fk)"/>
+    <path d="M109 239a17 17 0 0 1 1 3v1-2l-1-2z" clip-path="url(#fl)"/>
+    <path d="M120 239a17 17 0 0 1 1 3v1-2l-1-2z" clip-path="url(#fm)"/>
+    <path d="M119 239a17 17 0 0 1 1 3v1-2l-1-2z" clip-path="url(#fn)"/>
+    <path d="M112 256a44 44 0 0 0 13-2l2-1h-4l-4 1a92 92 0 0 1-7 2z" clip-path="url(#fo)"/>
+    <path d="M106 253a46 46 0 0 0 11 1h1v-1h-6a151 151 0 0 1-6 0z" clip-path="url(#fp)"/>
+    <path fill="#FF8AB6" d="M107 289c0-1 6-7 10-6v17l-10 5h-2v-7l1-1v-1l1-7z" clip-path="url(#fq)"/>
+    <path d="M105 300c4-6 9-7 12-8v8l-10 5h-2v-5z" clip-path="url(#fr)"/>
+    <path fill="#FF8AB6" d="M127 314c3-14-5-18-8-19-3 0-12-2-17 11-5 14 0 20 7 22 6 2 14 0 18-14z" clip-path="url(#fs)"/>
+    <path fill="#BB3B53" d="M121 316h-2l1 1h2l-1-1z" clip-path="url(#ft)"/>
+    <path fill="#BB3B53" d="M111 314h1l1 1h-1l-1-1c-1 0 0-1 0 0z" clip-path="url(#fu)"/>
+    <path d="M114 311v-2 2z" clip-path="url(#fv)"/>
+    <path d="M113 312c-2 0-1-3 1-3l-1 3z" clip-path="url(#fw)"/>
+    <path d="M112 312v-1h-1l1-1 1 2h-1z" clip-path="url(#fx)"/>
+    <path d="m120 313 1-2-1 2z" clip-path="url(#fy)"/>
+    <path d="M120 314c2 1 3-2 1-3l-1 3z" clip-path="url(#fz)"/>
+    <path d="M121 314h1l1 1-1-2-1 1z" clip-path="url(#fA)"/>
+    <path d="M116 303h3l-2-1-1 1z" clip-path="url(#fB)"/>
+    <path d="M120 308v-3l-3 1h3l-1 2h2l-4 9 4-9h-1z" clip-path="url(#fC)"/>
+    <path d="m120 306-1-2h-1l-1 1v1h3z" clip-path="url(#fD)"/>
+    <path fill="#FF78F3" d="M119 304h-1l-1 1 2-1z" clip-path="url(#fE)"/>
+    <path fill="#BB3B53" d="M103 307c2 0 2 5 2 5s4 1 4 8c0 0 1-3-1-6 0 0 9 3 11 10l-2-5s3 2 4 5l4-5s-3 15-17 10c0 0-8-2-9-9-2-7 4-13 4-13z" clip-path="url(#fF)"/>
+    <path fill="#FF8AB6" d="M105 307s-4 4-6 2c-1-1 2-7 5-8 2 0 3 2 3 2l-2 4z" clip-path="url(#fG)"/>
+    <path d="m100 308 4-4h-2 2l1-1c0 2-2 5-5 5z" clip-path="url(#fH)"/>
+    <path fill="none" d="M0 0h425v437H0z"/>
+    <path fill="none" d="M0 0h425v437H0z"/>
+  </g>
+</svg>
