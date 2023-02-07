@@ -1,4 +1,4 @@
-import { createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, SimpleGrid, Anchor, Divider, Center, Box, Burger, Drawer, Collapse, ScrollArea, MantineProvider } from "@mantine/core";
+import { createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, SimpleGrid, ThemeIcon, Anchor, Divider, Center, Box, Burger, Drawer, Collapse, ScrollArea, ChevronIcon } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import SwitchDarkLight from "./SwitchDarkLight";
 import Image from "next/image";
@@ -322,7 +322,7 @@ export function HeaderMegaMenu() {
 
   return (
     <Box pb={0} className="overflow-hidden">
-      <Header fixed={true} height={60} px="md" className="border-none px-5 max-w-screen-2xl mx-auto">
+      <Header fixed={true} height={60} px="md" className="bg-background border-none px-5 max-w-screen-2xl mx-auto">
         <Group position="apart" sx={{ height: "100%" }}>
           <Group>
             <Link href="/" className="flex">
