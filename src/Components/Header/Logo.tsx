@@ -6,11 +6,11 @@ import Image from "next/image";
 import SiteRacksLogoDark from "../../../public/logo/siteRacksLogoDark.svg";
 import SiteRacksLogoLight from "../../../public/logo/siteRacksLogoLight.svg";
 
-type statusProps = {
+interface ILogo {
   logoHeight?: string;
   logoWidth?: string;
 };
-const Logo = (props: statusProps) => {
+const Logo = (props: ILogo) => {
   let { logoHeight, logoWidth } = props;
   if (logoHeight) {
     logoHeight = logoHeight;

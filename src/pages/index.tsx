@@ -8,6 +8,8 @@ import SiteRacksParkSection from "@/Components/Home/SiteRacksParkSection";
 import HomeReview from "@/Components/Home/HomeReview";
 import HomeFaq from "@/Components/Home/HomeFaq";
 
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -22,7 +24,7 @@ export default function Home() {
       <main>
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}
-        <div style={{backgroundImage:`url('/images/homeBannerBgSurface.svg')`, backgroundSize:'contain', backgroundAttachment:'fixed', backgroundPosition:'top center'}}>
+        <div style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundAttachment: "fixed", backgroundPosition: "top center" }}>
           <HomeBanner />
         </div>
 
@@ -38,3 +40,7 @@ export default function Home() {
     </>
   );
 }
+
+// Home.getLayout = function getLayout(page: ReactElement) {
+//   return <Layout>{page} </Layout>;
+// };

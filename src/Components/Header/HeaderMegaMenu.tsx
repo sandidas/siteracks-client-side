@@ -145,7 +145,7 @@ const websiteMenuItems = [
     icon: WordPressHosting,
     title: "WordPress Website Design",
     description: "This Pokémon’s cry is very loud and distracting",
-    linkUrl: "web-hosting",
+    linkUrl: "web-design",
   },
   {
     icon: CustomWebsiteDevelopment,
