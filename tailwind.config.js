@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['"Poppins"', "Barlow", "Mulish", "cursive"],
+        sans: ['"Poppins"', "Barlow", "Mulish", "cursive"],
         // ubuntu: ['"Ubuntu"', "Poppins", "Mulish", "cursive"],
         // barlow: ['"Barlow"', "Poppins", "Mulish", "cursive"],
         // mulish: ['"Mulish"', "Poppins", "Barlow", "cursive"],

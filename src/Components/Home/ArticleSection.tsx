@@ -11,10 +11,10 @@ const FeatureOne = () => {
         {/* Article First  */}
         <div className="grid grid-cols-1 md:grid-cols-2 pt-[2vh] gap-5 md:gap-32">
           {/* image container  */}
-          <div className="flex flex-col justify-center items-center bg-surface">
+          <div className="flex flex-col justify-center items-center">
             <div className="md:p-10 p-5">
               {/* image  */}
-              <OutperformTheCompetition className="w-[300px] md:w-[400px] h-auto fill-primary" />
+              <OutperformTheCompetition className="w-[300px] md:w-[500px] h-auto fill-primary" />
             </div>
           </div>
 
@@ -52,10 +52,10 @@ const FeatureOne = () => {
           </div>
 
           {/* image container  */}
-          <div className="flex flex-col justify-center items-center bg-surface order-1 md:order-2">
+          <div className="flex flex-col justify-center items-center order-1 md:order-2">
             <div className="md:p-10 p-5">
               {/* image  */}
-              <OptimalPerformanceImage className="w-[300px] md:w-[400px] h-auto fill-primary" />
+              <OptimalPerformanceImage className="w-[300px] md:w-[500px] h-auto fill-primary" />
             </div>
             {/* <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" /> */}
           </div>

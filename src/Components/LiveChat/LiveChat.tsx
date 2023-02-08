@@ -14,7 +14,7 @@ const LiveChat = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-[4vh]">
           <FeatureCard>
-            <div className="space-y-5">
+            <div className="space-y-5 md:min-h-[360px]">
               <EnvelopeOpenIcon className="fill-primary w-14 h-14" />
 
               <h3 className="text-title font-bold text-3xl">Support Ticket</h3>
@@ -28,7 +28,7 @@ const LiveChat = () => {
           </FeatureCard>
 
           <FeatureCard>
-            <div className="space-y-5">
+            <div className="space-y-5 md:min-h-[360px]">
               <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
               <h3 className="text-title font-bold text-3xl">Live Chat</h3>
@@ -42,7 +42,7 @@ const LiveChat = () => {
           </FeatureCard>
 
           <FeatureCard>
-            <div className="space-y-5">
+            <div className="space-y-5 md:min-h-[360px]">
               <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
               <h3 className="text-title font-bold text-3xl flex flex-col">

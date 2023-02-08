@@ -8,7 +8,8 @@ const HomeBanner = () => {
       <div className="flex flex-col gap-5 justify-center">
         <h1 className="font-poppins text-5xl md:text-6xl md:leading-tight text-title font-bold">
           <span className="">WordPress optimized</span> blazing fast  
-          <span className="text-primary"> web hosting</span> for tomorrow's business
+          <span className="text-primary"> web hosting</span> 
+          {/* for tomorrow's business */}
         </h1>
         <p className="text-text text-xl">Whether you are just starting, growing fast, or running a high-traffic website, your secure and reliable web hosting services allow you to choose what works best for your brand.</p>
       </div>
