@@ -9,6 +9,8 @@ import HomeReview from "@/Components/Home/HomeReview";
 import HomeFaq from "@/Components/Home/HomeFaq";
 import HireAnExpert from "@/Components/Home/HireAnExpert";
 import LiveChat from "@/Components/LiveChat/LiveChat";
+import FreeMigration from "@/Components/Home/FreeMigration";
+import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,11 +33,18 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto px-5">
           <HomeCard />
           <ArticleSection />
+        </div>
+        <FreeMigration />
+        <div className="max-w-screen-2xl mx-auto px-5">
           <WebsiteUpSection />
         </div>
         <HireAnExpert />
         <div className="max-w-screen-2xl mx-auto px-5">
           <SiteRacksParkSection />
+        </div>
+        
+        <MoneyBackGuarantee />
+        <div className="max-w-screen-2xl mx-auto px-5">
           <HomeReview />
         </div>
         <LiveChat />
