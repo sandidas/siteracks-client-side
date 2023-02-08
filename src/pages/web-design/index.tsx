@@ -1,3 +1,4 @@
+import Head from "next/head";
 import HomeCard from "@/Components/Home/HomeCard";
 import HomeFaq from "@/Components/Home/HomeFaq";
 import HomeReview from "@/Components/Home/HomeReview";
@@ -7,14 +8,19 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="mx-auto max-w-screen-2xl px-5">
-      <HomeCard />
-
-      <WebsiteUpSection />
-      <SiteRacksParkSection />
-      <HomeReview />
-      <HomeFaq />
-    </div>
+    <>
+      <Head>
+        <title>Web Design | SiteRacks</title>
+        <meta name="description" content="SiteRacks" />
+      </Head>
+      <div className="mx-auto max-w-screen-2xl px-5">
+        <HomeCard />
+        <WebsiteUpSection />
+        <SiteRacksParkSection />
+        <HomeReview />
+        <HomeFaq />
+      </div>
+    </>
   );
 };
 
