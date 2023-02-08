@@ -13,13 +13,13 @@
     <path id="ce" d="M268 350h-7l1 1 2 1 3-1 1-1z" clip-path="url(#i)"/>
     <path id="cf" d="M282 350h-3l-3 1 1 1h3l2-1v-1z" clip-path="url(#j)"/>
     <path id="cg" fill="#BD6D6F" d="M251 344s-6 4-7-3c-1-6 6-6 6-6l1 9z" clip-path="url(#k)"/>
-    <path id="ch" fill="#B33C3B" d="M249 338h-1l-1 2 1 2 1 1v-1 1l-2-1v-2c-1-1 0-2 1-3h1v1z" clip-path="url(#l)"/>
+    <path id="ch" fill="#FFA4A2" d="M249 338h-1l-1 2 1 2 1 1v-1 1l-2-1v-2c-1-1 0-2 1-3h1v1z" clip-path="url(#l)"/>
     <path id="ci" d="m261 363 5-2 1-1 17-5c4 2 2 6-1 7-4 3-8 6-13 7-4 1-12 0-16-5l-3-4-2-15 1-4c2 0 3 1 3 3v5s6 3 5 10c-1 2 1 4 3 4z" clip-path="url(#m)"/>
     <path id="cj" d="M258 361c1 2 4 3 6 2l5-5c1-1 3-3 5-3h6l3-2h4l4 2c-4 1-8 3-11 6-4 2-7 5-11 6s-9-1-11-4z" clip-path="url(#n)"/>
     <path id="ck" fill="#00313C" d="M235 335h3l1 2-1 4-2 4 1 5 2 2h3l7 1 2 1 1 3 1 6v3l2 2h5l3-2a16 16 0 0 0 3-3l1-1-1 1a1600 1600 0 0 1-6 5l-5-1-2-4v-6l-2-3-2-2h-9l-3-2v-5l1-4 1-4-1-2h-3z" clip-path="url(#o)"/>
     <path id="cl" fill="#00313C" d="M291 359v-1h-1l-3-1-5 3-1 2-2 3c-1 2-3 3-5 3l-4-2-2-3v-1 1a6 6 0 0 0 6 5c2 0 5-1 6-3l1-3 2-2 4-2h3l1 1z" clip-path="url(#p)"/>
     <path id="cm" d="M244 360v1l-2 1-1-1 1-3h3l3 2 1 3 2 3 2 3a10 10 0 0 0 11 1h-1l-4 1a10 10 0 0 1-8-5l-1-3-2-4-3-2-3 1c-1 1-2 2-1 3l1 1h1l1-1v-1z" clip-path="url(#q)"/>
-    <path id="cq" fill="#B33C3B" d="M270 317s-6 0-12 6c0 0 2-8 11-9l1 3z" clip-path="url(#r)"/>
+    <path id="cq" fill="#FFA4A2" d="M270 317s-6 0-12 6c0 0 2-8 11-9l1 3z" clip-path="url(#r)"/>
   </defs>
   <defs>
     <clipPath id="t">
@@ -854,9 +854,9 @@
     <path fill="#00313C" d="m245 146-7-2-7-1 7 2 7 1z" clip-path="url(#bQ)"/>
     <path fill="#00313C" d="m216 159-1-1-3-3a778 778 0 0 0-48-44l-38-32-11-10-3-3-1-1v1h1l3 3 11 10a2629373 2629373 0 0 0 86 76l3 3v1h1z" clip-path="url(#bR)"/>
     <path fill="#BD6D6F" d="m338 374 5 9 4 9 2 1 9-3v-6h4c1-1 0-3-2-4l-7-5-3-1h-1l-5-7-6 7z" clip-path="url(#bS)"/>
-    <path fill="#B33C3B" d="M362 384h-1l-4-1-4-1-1 1h5l4 1h1z" clip-path="url(#bT)"/>
-    <path fill="#B33C3B" d="M352 388h3v-3h-3v-1l1-1v-1 1h-1v2h3-1l1 3-2-1h-1v1z" clip-path="url(#bU)"/>
-    <path fill="#B33C3B" d="m351 383 1 3v2h-1 1v-2l-1-3z" clip-path="url(#bV)"/>
+    <path fill="#FFA4A2" d="M362 384h-1l-4-1-4-1-1 1h5l4 1h1z" clip-path="url(#bT)"/>
+    <path fill="#FFA4A2" d="M352 388h3v-3h-3v-1l1-1v-1 1h-1v2h3-1l1 3-2-1h-1v1z" clip-path="url(#bU)"/>
+    <path fill="#FFA4A2" d="m351 383 1 3v2h-1 1v-2l-1-3z" clip-path="url(#bV)"/>
     <use xlink:href="#bW" clip-path="url(#a)"/>
     <use xlink:href="#bX" clip-path="url(#b)"/>
     <use xlink:href="#bY" clip-path="url(#c)"/>

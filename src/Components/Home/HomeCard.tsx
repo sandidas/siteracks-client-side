@@ -20,7 +20,7 @@ const HomeCard = () => {
         <div>
           <div className="text-sky-600">Starting at</div>
           <div className="flex">
-            <div className="text-sky-600 font-bold text-5xl group-hover:text-white">$6.95 </div>
+            <div className="text-sky-600 font-bold text-5xl group-hover:text-white">$4.95 </div>
             <div className="text-sky-600 pt-3">/mo</div>
           </div>
         </div>
@@ -49,7 +49,7 @@ const HomeCard = () => {
         </Button>
         <div className="absolute top-0 right-0 bg-red-500 text-lime-50 px-3 font-medium rounded-l-md">Popular</div>
       </div>
-{/*  */}
+{/* business  */}
       <div className="space-y-5 shadow-md rounded-md bg-surfaceThree p-10 hover:-translate-y-3 duration-200 group">
         <div className="space-y-4 md:min-h-[280px]">
           <BusinessHosting className="fill-slate-50 w-20 h-20" />
@@ -59,7 +59,7 @@ const HomeCard = () => {
         <div>
           <div className="text-indigo-300">Starting at</div>
           <div className="flex">
-            <div className="text-indigo-300 font-bold text-5xl group-hover:text-white">$6.95 </div>
+            <div className="text-indigo-300 font-bold text-5xl group-hover:text-white">$12.90 </div>
             <div className="text-indigo-300 pt-3">/mo</div>
           </div>
         </div>
@@ -82,7 +82,7 @@ const HomeCard = () => {
         <div>
           <div className="text-red-700">Starting at</div>
           <div className="flex">
-            <div className="text-red-700 font-bold text-5xl group-hover:text-white">$6.95 </div>
+            <div className="text-red-700 font-bold text-5xl group-hover:text-white">$70.95 </div>
             <div className="text-red-700 pt-3">/mo</div>
           </div>
         </div>
