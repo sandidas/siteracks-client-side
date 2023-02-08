@@ -11,7 +11,7 @@ const HomeBanner = () => {
           <span className="text-primary"> Web Hosting</span>  
           {/*  */}
         </h1>
-        <p className="text-text text-xl">Whether you are just starting, growing fast, or running a high-traffic website, your secure and reliable web hosting services allow you to choose what works best for your brand.</p>
+        <p className="text-text text-xl leading-9">Whether you are just starting, growing fast, or running a high-traffic website, your secure and reliable web hosting services allow you to choose what works best for your brand.</p>
       </div>
 
       <div className="flex flex-col justify-start items-center w-full md:col-span-4">

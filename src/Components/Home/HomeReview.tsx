@@ -7,14 +7,14 @@ import { Rating } from "@mantine/core";
 
 const HomeReview = () => {
   return (
-    <section className="py-[8vh]">
+    <section className="py-[10vh]">
       <div className="flex flex-col pb-20 mx-auto max-w-7xl">
         <h2 className="text-4xl md:text-5xl text-title md:leading-tight font-bold">What Our Customers Are Saying</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 md:gap-5 mx-auto max-w-7xl">
         
         <div className="col-span-3"></div>
-        <div className="col-span-9 md:bg-surface rounded-lg py-10 md:py-20 md:px-10 gap-10 shadow-md grid grid-cols-1 md:grid-cols-8">
+        <div className="col-span-9 md:bg-surface rounded-lg py-10 md:py-20 md:px-10 gap-10 md:gap-20 shadow-md grid grid-cols-1 md:grid-cols-8">
             
           <div className="md:-ml-64 md:col-span-2">
             <Image src={sunviProfilePhoto} alt="Feedback" width={500} height={500} className="rounded-lg shadow-md" />

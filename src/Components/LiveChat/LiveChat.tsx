@@ -5,11 +5,11 @@ import FeatureCard from "../Card/FeatureCard";
 
 const LiveChat = () => {
   return (
-    <section className="py-[8vh]">
+    <section className="py-[10vh]">
       <div className="max-w-screen-2xl mx-auto px-5">
         <div className="flex flex-col pb-20 space-y-8 text-center max-w-3xl mx-auto">
           <h3 className="font-poppins text-4xl md:text-5xl text-title md:leading-tight font-bold">Our expert support team is happy to help you</h3>
-          <p className="text-text text-xl">We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.</p>
+          <p className="text-text text-xl leading-9">We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

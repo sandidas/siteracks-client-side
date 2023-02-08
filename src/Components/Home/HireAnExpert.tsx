@@ -5,7 +5,7 @@ import ExpertIcon from "../../../public/images/expertIcon.svg";
 
 const HireAnExpert = () => {
   return (
-    <article className="py-[8vh] bg-surface">
+    <article className="py-[10vh] bg-surface">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-32 max-w-screen-2xl mx-auto px-3 md:px-5">
         <div className="flex flex-col justify-start items-center ">
           <div className="w-full">
@@ -18,10 +18,10 @@ const HireAnExpert = () => {
             <h2 className="font-poppins flex flex-col font-bold">
               <span className="text-4xl md:text-5xl text-title md:leading-tight">Hire an Expert</span> <span className="text-2xl text-slate-500 font-light">a hassle-free solution</span>
             </h2>
-            <p className="text-text text-xl">
+            <p className="text-text text-xl leading-9">
             We have in-house experts in WordPress, Laravel, and React and have extensive experience in developing top-notch websites, web applications, and custom solutions. Our team is dedicated to delivering high-quality, reliable, and scalable solutions to meet our client's needs.{" "}
             </p> 
-            <ul className="text-text text-xl list-disc">
+            <ul className="text-text text-xl list-disc leading-10">
                 <li>Dedicated Support</li>
                 <li>Professional WordPress Website Design</li>
                 <li>Custom web development</li>

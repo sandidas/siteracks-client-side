@@ -10,7 +10,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 
 const HomeCard = () => {
   return (
-    <section className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-[8vh]">
+    <section className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-[10vh]">
       <div className="space-y-5 shadow-md rounded-md bg-surfaceFive p-10 hover:-translate-y-3 duration-200 group">
         <div className="space-y-4 md:min-h-[280px]">
           <WebHosting className="fill-white w-20 h-20" />

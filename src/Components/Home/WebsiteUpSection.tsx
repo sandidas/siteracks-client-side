@@ -13,10 +13,10 @@ import FeatureCardWithBG from "../Card/FeatureCardWithBG";
 const WebsiteUpSection = () => {
   return (
     <>
-      <section className="py-[8vh]">
+      <section className="py-[10vh]">
         <div className="flex flex-col space-y-8 text-center max-w-5xl mx-auto pb-20">
           <h3 className="text-4xl md:text-5xl text-title md:leading-tight font-bold">Get Your Website Up & Running Quickly</h3>
-          <p className="text-text text-xl">We ensure your website runs smoothly, even during traffic spikes. Our hosting solutions offer a complete foundation for your website. Focus on making sales and pleasing your customers while we do all the heavy lifting!</p>
+          <p className="text-text text-xl leading-9">We ensure your website runs smoothly, even during traffic spikes. Our hosting solutions offer a complete foundation for your website. Focus on making sales and pleasing your customers while we do all the heavy lifting!</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {/* card item  */}
