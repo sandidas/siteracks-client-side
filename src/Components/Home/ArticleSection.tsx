@@ -7,7 +7,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 const FeatureOne = () => {
   return (
     <section>
-      <article className="grid grid-cols-1 gap-[4vh] py-[8vh]">
+      <article className="grid grid-cols-1 gap-[2vh] py-[8vh]">
         {/* Article First  */}
         <div className="grid grid-cols-1 md:grid-cols-2 pt-[2vh] gap-5 md:gap-32">
           {/* image container  */}
