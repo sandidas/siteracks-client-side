@@ -5,8 +5,8 @@ import ExpertIcon from "../../../public/images/expertIcon.svg";
 
 const HireAnExpert = () => {
   return (
-    <article className="py-[2vh] bg-surface">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32 max-w-screen-2xl mx-auto px-5">
+    <article className="py-[8vh] md:py-[2vh] bg-surface">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-32 max-w-screen-2xl mx-auto px-5">
         <div className="flex flex-col justify-start items-center ">
           <div className="p-5 md:p-10 rounded-lg">
             <ExpertIcon className="w-96 md:w-[700px] h-auto fill-primary" />

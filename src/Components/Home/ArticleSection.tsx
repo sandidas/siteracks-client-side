@@ -1,25 +1,25 @@
 import { Button } from "@mantine/core";
 import React from "react";
-import OptimalPerformanceImage from "../../../public/images/competitionIcon.svg";
-import OutperformTheCompetition from "../../../public/images/50xSpeedMan.svg";
+import OptimalPerformanceImage from "../../../public/images/50xSpeedMan.svg";
+import OutperformTheCompetition from "../../../public/images/competitionIcon.svg";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 
 const FeatureOne = () => {
   return (
     <section>
-      <article className="grid grid-cols-1 gap-[2vh] py-[8vh]">
+      <article className="pb-[8vh]">
         {/* Article First  */}
-        <div className="grid grid-cols-1 md:grid-cols-2 pt-[2vh] gap-5 md:gap-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
           {/* image container  */}
-          <div className="flex flex-col justify-center items-center">
-            <div className="md:p-10 p-5">
+          <div className="flex flex-col justify-center items-center relative">
+            <div className="w-full overflow-hidden">
               {/* image  */}
-              <OutperformTheCompetition className="w-[300px] md:w-[500px] h-auto fill-primary" />
+              <OutperformTheCompetition className="w-full h-fit" />
             </div>
           </div>
 
           {/* Text Container  */}
-          <div className="flex flex-col justify-center gap-5 items-start space-y-6 group overflow-hidden">
+          <div className="flex flex-col justify-center space-y-6 group items-start">
             <div className="space-y-5">
               <h2 className="font-poppins flex flex-col font-bold">
                 <span className="text-4xl md:text-4xl text-title md:leading-tight">Outperform the Competition</span> <span className="text-2xl text-slate-500 font-light">with Exclusive Web Hosting</span>
@@ -36,7 +36,7 @@ const FeatureOne = () => {
           </div>
         </div>
         {/* Article Second  */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
           <div className="flex flex-col gap-5 items-start space-y-6 order-2 md:order-1 group justify-center">
             <div className="space-y-5">
               <h2 className="font-poppins flex flex-col font-bold">
@@ -53,14 +53,13 @@ const FeatureOne = () => {
 
           {/* image container  */}
           <div className="flex flex-col justify-center items-center order-1 md:order-2">
-            <div className="md:p-10 p-5">
+            <div className="w-full overflow-hidden">
               {/* image  */}
-              <OptimalPerformanceImage className="w-[300px] md:w-[500px] h-auto fill-primary" />
+              <OptimalPerformanceImage className="w-full h-fit fill-surface" />
             </div>
             {/* <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" /> */}
           </div>
         </div>
-
       </article>
     </section>
   );
