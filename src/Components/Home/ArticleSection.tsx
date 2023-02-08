@@ -19,8 +19,8 @@ const FeatureOne = () => {
           </div>
 
           {/* Text Container  */}
-          <div className="flex flex-col justify-center space-y-6 group items-start">
-            <div className="space-y-5">
+          <div className="flex flex-col justify-center space-y-12 group items-start">
+            <div className="space-y-8">
               <h2 className="font-poppins flex flex-col font-bold">
                 <span className="text-4xl md:text-4xl text-title md:leading-tight">Outperform the Competition</span> <span className="text-2xl text-slate-500 font-light">with Exclusive Web Hosting</span>
               </h2>
@@ -37,8 +37,9 @@ const FeatureOne = () => {
         </div>
         {/* Article Second  */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
-          <div className="flex flex-col gap-5 items-start space-y-6 order-2 md:order-1 group justify-center">
-            <div className="space-y-5">
+          <div className="flex flex-col space-y-12 items-start order-2 md:order-1 group justify-center">
+            
+            <div className="space-y-8">
               <h2 className="font-poppins flex flex-col font-bold">
                 <span className="text-4xl md:text-4xl text-title md:leading-tight">200X Optimal performance</span> <span className="text-2xl text-slate-500 font-light">for your website or web app</span>
               </h2>

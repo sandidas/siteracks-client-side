@@ -5,16 +5,16 @@ import ExpertIcon from "../../../public/images/expertIcon.svg";
 
 const HireAnExpert = () => {
   return (
-    <article className="py-[8vh] md:py-[2vh] bg-surface">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-32 max-w-screen-2xl mx-auto px-5">
+    <article className="py-[8vh] bg-surface">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-32 max-w-screen-2xl mx-auto px-3 md:px-5">
         <div className="flex flex-col justify-start items-center ">
-          <div className="p-5 md:p-10 rounded-lg">
-            <ExpertIcon className="w-96 md:w-[700px] h-auto fill-primary" />
+          <div className="w-full">
+            <ExpertIcon className="w-full h-fit fill-primary" />
           </div>
           {/* <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" /> */}
         </div>
-        <div className="flex flex-col justify-center gap-5 items-start space-y-6 group overflow-hidden">
-          <div className="space-y-5">
+        <div className="flex flex-col justify-center items-start space-y-12 group overflow-hidden">
+          <div className="space-y-8">
             <h2 className="font-poppins flex flex-col font-bold">
               <span className="text-4xl md:text-5xl text-title md:leading-tight">Hire an Expert</span> <span className="text-2xl text-slate-500 font-light">a hassle-free solution</span>
             </h2>
