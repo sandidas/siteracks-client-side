@@ -9,7 +9,7 @@ const FeatureOne = () => {
     <section>
       <article className="pb-[10vh]">
         {/* Article First  */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32">
           {/* image container  */}
           <div className="flex flex-col justify-center items-center relative">
             <div className="w-full overflow-hidden">
@@ -36,7 +36,7 @@ const FeatureOne = () => {
           </div>
         </div>
         {/* Article Second  */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 pt-32 md:pt-0">
           <div className="flex flex-col space-y-12 items-start order-2 md:order-1 group justify-center">
             
             <div className="space-y-8">
