@@ -22,7 +22,7 @@ const LiveChat = () => {
           {/* Right Column */}
           <div className="md:col-span-9 flex flex-col justify-center items-start space-y-12">
             <div className="space-y-8">
-              <h2 className="font-poppins flex flex-col font-bold">
+              <h2 className="flex flex-col font-bold">
                 <span className="text-2xl text-slate-500 font-light">Our expert support team is</span>
                 <span className="text-4xl lg:text-5xl text-light md:leading-tight">happy to help you</span>
               </h2>

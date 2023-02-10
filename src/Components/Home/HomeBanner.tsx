@@ -7,7 +7,7 @@ const HomeBanner = () => {
       
       {/* left column  */}
       <div className="md:col-span-8 flex flex-col space-y-8 justify-center">
-        <h1 className="font-poppins text-5xl lg:text-6xl md:leading-tight text-title font-bold">
+        <h1 className="text-5xl lg:text-6xl md:leading-tight text-title font-bold">
           <span className="">WordPress Optimized</span> Blazing Fast
           <span className="text-primary"> Web Hosting</span>
           {/*  */}
