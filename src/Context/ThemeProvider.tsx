@@ -82,7 +82,7 @@ export const ThemeProvider = ({ children }: any) => {
             },
             primaryColor: "main",
             fontFamily: "Poppins, Mulish, Ubuntu, sans-serif",
-            lineHeight: "2.1rem",
+            // lineHeight: "2.1rem",
 
             fontSizes: {
               xs: 17,

@@ -4,13 +4,13 @@ import React from "react";
 import Image from "next/image";
 import sunviProfilePhoto from "../../../public/images/sunviProfile.jpg";
 import { Rating } from "@mantine/core";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const HomeReview = () => {
   return (
     <section className="py-[10vh]">
-      <div className="flex flex-col pb-20 mx-auto max-w-7xl">
-        <h2 className="text-4xl lg:text-5xl text-title md:leading-tight font-bold">What Our Customers Are Saying</h2>
-      </div>
+      <SectionTitle title="What Our Customers Are Saying" leftAlign={true} /> 
+
       <div className="grid grid-cols-1 md:grid-cols-12 md:gap-5 mx-auto max-w-7xl">
         <div className="md:col-span-4 xl:col-span-3"></div>
         <div className="md:col-span-8 xl:col-span-9 md:bg-surface rounded-lg py-10 md:py-20 md:px-10 gap-3 md:gap-5 xl:gap-16 shadow-md grid grid-cols-1 md:grid-cols-8">

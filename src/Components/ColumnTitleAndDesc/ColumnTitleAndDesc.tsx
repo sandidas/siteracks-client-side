@@ -3,13 +3,15 @@ interface ITitleAndDescription {
   title: string;
   subTitle?: string;
   children?: any;
+  colorOnDark?: boolean;
 }
-const ColumnTitleAndDesc = ({ title, subTitle, children }: ITitleAndDescription) => {
+const ColumnTitleAndDesc = ({ title, subTitle, children, colorOnDark }: ITitleAndDescription) => {
   return (
     // If left alignment is not true then 'text-center' class will be not applied
     <div className="space-y-8">
       {/* Print without subtitle  */}
-      {title && !subTitle && <h2 className="text-4xl lg:text-5xl text-title md:leading-tight font-bold"> {title && title}</h2>}
+      {/* If color on dark background  */}
+      {title && !subTitle && <h2 className={`text-4xl lg:text-5xl lg:leading-snug font-bold ${colorOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>}
 
       {/* Print with subtitle  */}
       {title && subTitle && (
@@ -17,9 +19,9 @@ const ColumnTitleAndDesc = ({ title, subTitle, children }: ITitleAndDescription)
           {" "}
           {title && (
             <>
-              <span className="text-4xl lg:text-5xl text-title md:leading-tight font-bold">{title}</span>
+              <span className={`text-4xl lg:text-5xl lg:leading-snug font-bold ${colorOnDark ? "text-white" : "text-title"}`}>{title}</span>
 
-              <span className="text-2xl text-slate-500 font-light">{subTitle}</span>
+              <span className="text-2xl text-slate-500 leading-snug font-light">{subTitle}</span>
             </>
           )}
         </h2>

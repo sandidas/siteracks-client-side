@@ -3,6 +3,7 @@ import { ArrowLongRightIcon, ChatBubbleLeftRightIcon, EnvelopeOpenIcon } from "@
 import { Button } from "@mantine/core";
 import React, { useState } from "react";
 import FeatureCard from "../Card/FeatureCard";
+import ColumnTitleAndDesc from "../ColumnTitleAndDesc/ColumnTitleAndDesc";
 
 interface IWhatsApp {}
 
@@ -21,19 +22,16 @@ const LiveChat = () => {
 
           {/* Right Column */}
           <div className="md:col-span-9 flex flex-col justify-center items-start space-y-12">
-            <div className="space-y-8">
-              <h2 className="flex flex-col font-bold">
-                <span className="text-2xl text-slate-500 font-light">Our expert support team is</span>
-                <span className="text-4xl lg:text-5xl text-light md:leading-tight">happy to help you</span>
-              </h2>
+            <ColumnTitleAndDesc title={`Get 24x7 support`} subTitle={`Our expert support team is happy to help you.`} colorOnDark={true}>
               <p className="text-text text-xl leading-9">We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.</p>
-            </div>
+            </ColumnTitleAndDesc>
+
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-              <FeatureCard>
+              <FeatureCard background={true}>
                 <div className="space-y-5 min-h-[290px]">
                   <EnvelopeOpenIcon className="fill-primary w-14 h-14" />
 
-                  <h3 className="text-light font-bold text-3xl">Support Ticket</h3>
+                  <h3 className="text-title font-bold text-3xl">Support Ticket</h3>
                   <p className="text-text">If you are an existing client, please open a support ticket to get faster and more accurate assistance</p>
                 </div>
 
@@ -42,11 +40,11 @@ const LiveChat = () => {
                   <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
                 </Button>
               </FeatureCard>
-              <FeatureCard>
+              <FeatureCard background={true}>
                 <div className="space-y-5 min-h-[290px]">
                   <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
-                  <h3 className="text-light font-bold text-3xl">Live Chat</h3>
+                  <h3 className="text-title font-bold text-3xl">Live Chat</h3>
                   <p className="text-text">Connect with our knowledgeable sales team for answers to any questions or concerns.</p>
                 </div>
 
@@ -56,12 +54,12 @@ const LiveChat = () => {
                 </Button>
               </FeatureCard>
 
-              <FeatureCard>
+              <FeatureCard background={true}>
                 <div className="space-y-5 min-h-[290px]">
                   <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-title font-bold text-3xl flex flex-col">
-                    <span className="text-light">WhatsApp</span> <small className="text-primary font-light text-sm">Chat with dedicated expert.</small>{" "}
+                    <span className="text-title">WhatsApp</span> <small className="text-primary font-light text-sm">Chat with dedicated expert.</small>{" "}
                   </h3>
 
                   <p className="text-text">
