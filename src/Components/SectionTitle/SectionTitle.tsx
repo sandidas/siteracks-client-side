@@ -9,7 +9,7 @@ interface ITitleAndDescription {
 const SectionTitle = ({ title, subTitle, description, leftAlign }: ITitleAndDescription) => {
   return (
     // If left alignment is not true then 'text-center' class will be not applied
-    <div className={`flex flex-col space-y-8 max-w-5xl mx-auto pb-20 ${!leftAlign && " text-center"}`}>
+    <div className={`flex flex-col space-y-8 max-w-5xl mx-auto pb-10 lg:pb-20 ${!leftAlign && " text-center"}`}>
       {/* Print without subtitle  */}
       {title && !subTitle && <h2 className="text-4xl lg:text-5xl text-title md:leading-tight font-bold"> {title && title}</h2>}
 

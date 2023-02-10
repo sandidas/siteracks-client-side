@@ -18,7 +18,7 @@ const HomeReview = () => {
             <Image src={sunviProfilePhoto} alt="Feedback" width={500} height={500} className="rounded-lg shadow-md" />
           </div>
 
-          <div className="space-y-8 max-w-2xl  md:col-span-6">
+          <div className="space-y-8 pt-10 lg:pt-0 max-w-2xl  md:col-span-6">
             <h3 className="text-title font-bold text-3xl max-w-2xl">SiteRacks helps us to improve our productivity and customer experience.</h3>
             <p className="text-text">
               SiteRacks website was easy to navigate, and the sign-up process was quick and seamless. The control panel is user-friendly, and I can set up my website quickly. The 24/7 customer support is fantastic; they are always available to help with any questions or issues I may have. The
