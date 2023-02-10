@@ -13,8 +13,8 @@ const Footer = () => {
       <footer className="bg-surface px-5">
         <section className="py-[10vh] grid grid-cols-1 md:grid-cols-5 gap-10 max-w-screen-2xl mx-auto">
           <div className="space-y-5">
-            <h3 className="text-title font-bold text-3xl">Hosting </h3>
-            <ul className="space-y-1 text-text">
+            <h3 className="text-title font-bold text-xl uppercase">Hosting </h3>
+            <ul className="space-y-4 text-text text-sm">
               <li>
                 <Link href="/" className="hover:text-title">
                   Cloud Hosting
@@ -49,8 +49,8 @@ const Footer = () => {
           </div>
 
           <div className="space-y-5">
-            <h3 className="text-title font-bold text-3xl">Domain </h3>
-            <ul className="space-y-1 text-text">
+            <h3 className="text-title font-bold text-xl uppercase">Domain </h3>
+            <ul className="space-y-4 text-text text-sm">
               <li>
                 <Link href="/" className="hover:text-title">
                   Register a New Domain
@@ -75,8 +75,8 @@ const Footer = () => {
           </div>
 
           <div className="space-y-5">
-            <h3 className="text-title font-bold text-3xl">Security </h3>
-            <ul className="space-y-1 text-text">
+            <h3 className="text-title font-bold text-xl uppercase">Security </h3>
+            <ul className="space-y-4 text-text text-sm">
               <li>
                 <Link href="/" className="hover:text-title">
                   Website Backups
@@ -101,8 +101,8 @@ const Footer = () => {
           </div>
 
           <div className="space-y-5">
-            <h3 className="text-title font-bold text-3xl">Help</h3>
-            <ul className="space-y-1 text-text">
+            <h3 className="text-title font-bold text-xl uppercase">Help</h3>
+            <ul className="space-y-4 text-text text-sm">
               <li>
                 <Link href="/" className="hover:text-title">
                   Blogs
@@ -127,8 +127,8 @@ const Footer = () => {
           </div>
 
           <div className="space-y-5">
-            <h3 className="text-title font-bold text-3xl">SiteRacks </h3>
-            <ul className="space-y-1 text-text">
+            <h3 className="text-title font-bold text-xl uppercase">SiteRacks </h3>
+            <ul className="space-y-4 text-text text-sm">
               <li>
                 <Link href="/" className="hover:text-title">
                   About Us

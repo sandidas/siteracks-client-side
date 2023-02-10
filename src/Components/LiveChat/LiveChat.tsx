@@ -30,7 +30,7 @@ const LiveChat = () => {
             </div>
             <div className="grid grid-cols-3 gap-5">
               <FeatureCard>
-                <div className="space-y-5">
+                <div className="space-y-5 min-h-[290px]">
                   <EnvelopeOpenIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-light font-bold text-3xl">Support Ticket</h3>
@@ -43,7 +43,7 @@ const LiveChat = () => {
                 </Button>
               </FeatureCard>
               <FeatureCard>
-                <div className="space-y-5">
+                <div className="space-y-5 min-h-[290px]">
                   <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-light font-bold text-3xl">Live Chat</h3>
@@ -56,38 +56,36 @@ const LiveChat = () => {
                 </Button>
               </FeatureCard>
 
-              <div>
-                <FeatureCard>
-                  <div className="space-y-5">
-                    <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
+              <FeatureCard>
+                <div className="space-y-5 min-h-[290px]">
+                  <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
-                    <h3 className="text-title font-bold text-3xl flex flex-col">
-                      <span className="text-light">WhatsApp</span> <small className="text-primary font-light text-sm">Chat with dedicated expert.</small>{" "}
-                    </h3>
+                  <h3 className="text-title font-bold text-3xl flex flex-col">
+                    <span className="text-light">WhatsApp</span> <small className="text-primary font-light text-sm">Chat with dedicated expert.</small>{" "}
+                  </h3>
 
-                    <p className="text-text">
-                      Are you existing client? Get expert advice from our team of WordPress specialists.
-                      {!textShow && (
-                        <button className="text-primary" onClick={() => setTextShow(!textShow)}>
-                          Read More...
-                        </button>
-                      )}
-                      {textShow && "We can help you optimize your website for better performance, resolve technical issues, and provide customized solutions for your unique needs."}
-                      {textShow && (
-                        <button className="text-primary" onClick={() => setTextShow(!textShow)}>
-                          {" "}
-                          ...Hide{" "}
-                        </button>
-                      )}
-                    </p>
-                  </div>
+                  <p className="text-text">
+                    Are you existing client? Get expert advice from our team of WordPress specialists.
+                    {!textShow && (
+                      <button className="text-primary" onClick={() => setTextShow(!textShow)}>
+                        ...Read More
+                      </button>
+                    )}
+                    {textShow && "We can help you optimize your website for better performance, resolve technical issues, and provide customized solutions for your unique needs. "}
+                    {textShow && (
+                      <button className="text-primary" onClick={() => setTextShow(!textShow)}>
+                        {" "}
+                        ...Hide{" "}
+                      </button>
+                    )}
+                  </p>
+                </div>
 
-                  <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
-                    Get Started
-                    <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
-                  </Button>
-                </FeatureCard>
-              </div>
+                <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+                  Get Started
+                  <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+                </Button>
+              </FeatureCard>
             </div>
           </div>
         </div>
