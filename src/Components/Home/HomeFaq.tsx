@@ -44,7 +44,7 @@ const HomeFaq = () => {
   return (
     <section className="py-[10vh]">
       <div className="flex flex-col pb-20 text-center max-w-5xl mx-auto">
-        <h2 className="font-poppins text-4xl md:text-5xl text-title md:leading-tight font-bold">Frequently Asked Questions</h2>
+        <h2 className="font-poppins text-4xl lg:text-5xl text-title md:leading-tight font-bold">Frequently Asked Questions</h2>
       </div>
 
       <div className="max-w-6xl mx-auto text-xl leading-9">

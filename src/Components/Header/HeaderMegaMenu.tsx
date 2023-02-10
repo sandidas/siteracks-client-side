@@ -321,7 +321,7 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <Box pb={0} className="overflow-hidden">
+    <Box pb={0}>
       <Header fixed={true} height={60} px="md" className="border-none px-5 max-w-screen-2xl mx-auto">
         <Group position="apart" sx={{ height: "100%" }}>
           <Group>

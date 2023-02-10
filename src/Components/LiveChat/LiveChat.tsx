@@ -12,7 +12,7 @@ const LiveChat = () => {
   return (
     <>
       <article className="py-[10vh] bg-surfaceDark">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-32 max-w-screen-2xl mx-auto px-3 md:px-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 max-w-screen-2xl mx-auto px-3 md:px-5 gap-3 md:5 xl:gap-16 2xl:gap-32">
           {/* Left Column */}
           <div className="md:col-span-3 flex flex-col justify-start items-center">
             <div className="w-full">{/* <ExpertIcon className="w-full h-fit fill-primary" /> */}</div>
@@ -20,15 +20,15 @@ const LiveChat = () => {
           </div>
 
           {/* Right Column */}
-          <div className="md:col-span-9 flex flex-col justify-center items-start space-y-12 overflow-hidden">
+          <div className="md:col-span-9 flex flex-col justify-center items-start space-y-12">
             <div className="space-y-8">
               <h2 className="font-poppins flex flex-col font-bold">
                 <span className="text-2xl text-slate-500 font-light">Our expert support team is</span>
-                <span className="text-4xl md:text-5xl text-light md:leading-tight">happy to help you</span>
+                <span className="text-4xl lg:text-5xl text-light md:leading-tight">happy to help you</span>
               </h2>
               <p className="text-text text-xl leading-9">We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.</p>
             </div>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
               <FeatureCard>
                 <div className="space-y-5 min-h-[290px]">
                   <EnvelopeOpenIcon className="fill-primary w-14 h-14" />
