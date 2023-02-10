@@ -7,9 +7,9 @@ const HomeBanner = () => {
       
       {/* left column  */}
       <div className="md:col-span-8 flex flex-col space-y-8 justify-center">
-        <h1 className="text-5xl lg:text-6xl md:leading-tight text-title font-bold">
-          <span className="">WordPress Optimized</span> Blazing Fast
-          <span className="text-primary"> Web Hosting</span>
+        <h1 className="text-5xl lg:text-6xl md:leading-tight text-title font-bold flex flex-col lg:leading-">
+          <span className="">WordPress Optimized </span> 
+          <span className="text-primary">Blazing Fast Web Hosting</span>
           {/*  */}
         </h1>
         <p className="text-text text-xl leading-9">Whether you are just starting, growing fast, or running a high-traffic website, your secure and reliable web hosting services allow you to choose what works best for your brand.</p>
