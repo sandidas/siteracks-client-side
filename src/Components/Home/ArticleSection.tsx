@@ -22,7 +22,7 @@ const FeatureOne = () => {
           <div className="flex flex-col justify-center space-y-12 group items-start">
             <div className="space-y-8">
               <h2 className="font-poppins flex flex-col font-bold">
-                <span className="text-4xl md:text-4xl text-title md:leading-tight">Outperform the Competition</span> <span className="text-2xl text-slate-500 font-light">with Exclusive Web Hosting</span>
+                <span className="text-4xl md:text-5xl text-title md:leading-tight">Outperform the Competition</span> <span className="text-2xl text-slate-500 font-light">with Exclusive Web Hosting</span>
               </h2>
               <p className="text-text text-xl leading-9">We’re here to help you find the right hosting for your business website. With years of experience supporting the online success of local and international businesses, our exclusive web hosting solutions are the best in the market.</p>
 
@@ -41,7 +41,7 @@ const FeatureOne = () => {
             
             <div className="space-y-8">
               <h2 className="font-poppins flex flex-col font-bold">
-                <span className="text-4xl md:text-4xl text-title md:leading-tight">200X Optimal performance</span> <span className="text-2xl text-slate-500 font-light">for your website or web app</span>
+                <span className="text-4xl md:text-5xl text-title md:leading-tight">200X Optimal performance</span> <span className="text-2xl text-slate-500 font-light">for your website or web app</span>
               </h2>
               <p className="text-text text-xl leading-9">When you choose SiteRacks, stay relaxed, knowing that your data is stored in our highly reliable data centers. This means you get optimal performance for your website or web app, equipping it to deliver superior customer experiences.</p>
             </div>

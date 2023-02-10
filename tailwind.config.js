@@ -32,6 +32,7 @@ module.exports = {
         title: "var(--color-title)",
         secondaryOn: "var(--color-secondary-on)",
         surface: "var(--color-surface)",
+        surfaceDark: "var(--color-surfaceDark)",
         surfaceTwo: "var(--color-surfaceTwo)",
         surfaceThree: "var(--color-surfaceThree)",
         surfaceFour: "var(--color-surfaceFour)",
