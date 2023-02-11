@@ -47,7 +47,7 @@ const HomeFaq = () => {
 
       <SectionTitle title="Frequently Asked Questions" /> 
 
-      <div className="max-w-6xl mx-auto text-xl leading-9">
+      <div className="max-w-6xl mx-auto lg:text-xl lg:leading-9">
         <Accordion defaultValue="customization" classNames={classes} className={classes.root}>
           <Accordion.Item value="customization">
             <Accordion.Control className="text-2xl py-5">What is business email hosting?</Accordion.Control>

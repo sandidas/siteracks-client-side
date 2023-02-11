@@ -16,7 +16,7 @@ const HireAnExpert = () => {
         </div>
         <div className="flex flex-col justify-center items-start space-y-12 group">
           <ColumnTitleAndDesc title="Hire an Expert" subTitle="a hassle-free solution">
-            <p className="text-text text-xl leading-9">
+            <p className="text-text lg:text-xl lg:leading-9">
               We have in-house experts in WordPress, Laravel, and React and have extensive experience in developing top-notch websites, web applications, and custom solutions. Our team is dedicated to delivering high-quality, reliable, and scalable solutions to meet our client's needs.{" "}
             </p>
             <ul className="text-text text-xl list-disc leading-10 pl-5">

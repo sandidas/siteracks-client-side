@@ -27,7 +27,7 @@ const SectionTitle = ({ title, subTitle, description, leftAlign }: ITitleAndDesc
         </h2>
       )}
 
-      {description && <p className="text-text text-xl leading-9">{description}</p>}
+      {description && <p className="text-text lg:text-xl lg:leading-9">{description}</p>}
     </div>
   );
 };

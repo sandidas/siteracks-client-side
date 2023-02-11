@@ -20,10 +20,10 @@ const FreeMigration = () => {
           <div className="flex flex-col justify-center items-start space-y-12 group">
             {/* dynamic components */}
             <ColumnTitleAndDesc title={`Free Migration`} subTitle={`a hassle-free solution`}>
-              <p className="text-text text-xl leading-9">
+              <p className="text-text lg:text-xl lg:leading-9">
                 Our website migration service offers a hassle-free solution for transferring your website to our blazing-fast hosting service platform. Our team of experts will handle the entire process, including backup and restoring DNS updates, and website configuration.{" "}
               </p>
-              <p className="text-text text-xl leading-9">
+              <p className="text-text lg:text-xl lg:leading-9">
                 Whether you need to move a simple blog or a complex e-commerce site, we guarantee a smooth and seamless transition with no downtime. We aim to ensure your website is up and running on the new platform with all the necessary features, functionalities, and configurations. With our free
                 website migration service, you can focus on growing your business while we handle the technical details.
               </p>

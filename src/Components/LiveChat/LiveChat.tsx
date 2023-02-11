@@ -23,7 +23,7 @@ const LiveChat = () => {
           {/* Right Column */}
           <div className="md:col-span-9 flex flex-col justify-center items-start space-y-12">
             <ColumnTitleAndDesc title={`Get 24x7 support`} subTitle={`Our expert support team is happy to help you.`} colorOnDark={true}>
-              <p className="text-text text-xl leading-9">We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.</p>
+              <p className="text-text lg:text-xl lg:leading-9">We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.</p>
             </ColumnTitleAndDesc>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">

@@ -11,8 +11,8 @@ const WebHostingBanner = () => {
           <span className="text-primary"> Web Hosting</span>
           {/*  */}
         </h1>
-        <p className="text-text text-xl leading-9">Enjoy the lightning-fast speed and unparalleled security for your website. The best web hosting packages for startups and small business.</p>
-        <ul className="text-text text-xl space-y-3 list-disc pl-8">
+        <p className="text-text lg:text-xl lg:leading-9">Enjoy the lightning-fast speed and unparalleled security for your website. The best web hosting packages for startups and small business.</p>
+        <ul className="text-text lg:text-xl space-y-3 list-disc pl-8">
           <li>Latest technologies with advanced security.</li>
           <li>Install Wordpress in 1-Click</li>
           <li>User friendly dashboard</li>
