@@ -3,7 +3,7 @@ import React from 'react';
 const WebHostingPricing = () => {
     return (
         <div>
-            Content are pending loading.
+           This is pricing
         </div>
     );
 };
