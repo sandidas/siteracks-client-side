@@ -11,10 +11,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
+      {/* <head /> */}
       <body className="px-[4vw] dark:bg-background">
         <ThemeProvider>
-          <Header />
+          {/* <Header /> */}
           {children}
         </ThemeProvider>
       </body>

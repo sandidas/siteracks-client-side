@@ -5,57 +5,62 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button, Modal } from "@mantine/core";
 import React, { useState } from "react";
 
-import DummyImage from "../../../../public/images/webHosting/dummyImage.svg";
-import WHBlazingFast from "./SubCompo/WHBlazingFast";
-
-interface IModalData {
-  modalData?:any;
-}
+import DummyImage from "../../../../public/images/DummyArticle.svg";
+import WHPremiumWebsite from "./SubCompo/WHPremiumWebsite";
 
 const WebHostingArticle = () => {
-  const [modalOpened, setModalOpened] = useState(false);
-  const [modalData, setModalData] = useState<IModalData | undefined>(undefined);
+  const [modalOpened, setModalOpened] = useState<any | boolean>(false);
+  const [modalData, setModalData] = useState<any | null>(null);
 
-  const requestComponent = () => {
-    setModalData(<WHBlazingFast />);
+  const requestComponent = (itemName: String | null) => {
+    if (itemName === "WHPremiumWebsite") {
+      setModalData(<WHPremiumWebsite />);
+    }
+
+    // <WHPremiumWebsite />
   };
 
   return (
     <>
-      <article className="py-[10vh] bg-surface">
+      <section className="py-[10vh] bg-surface">
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
             <SectionTitle title="Maximize Your Offline Business with the Power of the Internet" description={`Maximize Your Offline Business by Utilizing the Power of Online Platforms. Get ahead of the competition and expand your reach to potential customers with the help of the internet.`} />
           </div>
 
-          {/* article Section  */}
+          {/* article container  */}
+
           <div className="grid grid-cols-2 gap-3 md:5 xl:gap-16 2xl:gap-32">
             {/* article Item */}
-            <div className="flex flex-col justify-center space-y-8 group items-start">
-              <div className="w-full bg-purple-400">
-                <DummyImage className="w-full h-fit" />{" "}
+            <article className="flex flex-col justify-center space-y-8 group items-start">
+              <div className="w-full bg-slate-200">
+                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
               </div>
-              <ColumnTitleAndDesc title="This is Title" subTitle="">
-                <p>We’re here to help you find the right hosting for your business website. With years of experience supporting the online success of local and international businesses, our exclusive web hosting solutions are the best in the market.</p>
+
+              <ColumnTitleAndDesc title="Premium Website Builder">
+                <p className="text-text lg:text-xl lg:leading-9">Premium Website Builder offers powerful tools, customization options, and professional design templates to create stunning websites easily.</p>
               </ColumnTitleAndDesc>
 
               <Button
+                variant="outline"
                 size="xl"
                 onClick={() => {
-                  setModalOpened(true), requestComponent();
+                  setModalOpened(true), requestComponent("WHPremiumWebsite");
                 }}
-                className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary"
+                className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary"
               >
-                This is Link <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+                Learn More
+                <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
               </Button>
-            </div>
+            </article>
           </div>
         </div>
-      </article>
+      </section>
 
-      <Modal centered opened={modalOpened} onClose={() => setModalOpened(false)}>
+      <Modal centered opened={modalOpened} size="xl" onClose={() => setModalOpened(false)} withCloseButton={false}>
         {/* Modal content */}
-        {modalData}
+
+        <div className="dark:bg-black">{modalData}</div>
       </Modal>
     </>
   );

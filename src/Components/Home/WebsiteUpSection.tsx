@@ -17,6 +17,7 @@ const WebsiteUpSection = () => {
       <section className="py-[10vh]">
         {/* Section title */}
         <SectionTitle
+          bottomSpace={true}
           title={`Get Your Website Up & Running Quickly`}
           description={`We ensure your website runs smoothly, even during traffic spikes. Our hosting solutions offer a complete foundation for your website. Focus on making sales and pleasing your customers while we do all the heavy lifting!`}
         />

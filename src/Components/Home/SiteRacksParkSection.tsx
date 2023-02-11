@@ -11,14 +11,14 @@ import NextGenSecIcon from "../../../public/images/website/securitySheldIcon.svg
 import MigrationIcon from "../../../public/images/website/migrationIcon.svg";
 import ClockSupportIcon from "../../../public/images/website/theClockSupport.svg";
 import FeatureCard from "../Card/FeatureCard";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const SiteRacksParkSection = () => {
   return (
     <section className="py-[10vh]">
-      <div className="flex flex-col text-center max-w-5xl mx-auto pb-20 space-y-8">
-        <h2 className="text-4xl lg:text-5xl text-title md:leading-tight font-bold">SiteRacks Perks</h2>
-        <p className="text-text lg:text-xl lg:leading-9">Get more than what you pay for—no technical jargon, unanticipated costs, or fancy add-ons that bring no value to your business. Enjoy user-friendly, superfast, extraordinary, and reliable hosting solutions all year.</p>
-      </div>
+      <SectionTitle bottomSpace={true} title="SiteRacks Perks" description={`Get more than what you pay for—no technical jargon, unanticipated costs, or fancy add-ons that bring no value to your business. Enjoy user-friendly, superfast, extraordinary, and reliable hosting solutions all year.`} />
+ 
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <FeatureCard >
           <div className="space-y-5">

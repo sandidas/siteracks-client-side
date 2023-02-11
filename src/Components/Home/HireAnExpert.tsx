@@ -2,7 +2,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import React from "react";
 import ExpertIcon from "../../../public/images/expertIcon.svg";
-import ColumnTitleAndDesc from "../ColumnTitleAndDesc/ColumnTitleAndDesc";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const HireAnExpert = () => {
   return (
@@ -14,18 +14,18 @@ const HireAnExpert = () => {
           </div>
           {/* <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" /> */}
         </div>
-        <div className="flex flex-col justify-center items-start space-y-12 group">
-          <ColumnTitleAndDesc title="Hire an Expert" subTitle="a hassle-free solution">
-            <p className="text-text lg:text-xl lg:leading-9">
-              We have in-house experts in WordPress, Laravel, and React and have extensive experience in developing top-notch websites, web applications, and custom solutions. Our team is dedicated to delivering high-quality, reliable, and scalable solutions to meet our client's needs.{" "}
-            </p>
-            <ul className="text-text text-xl list-disc leading-10 pl-5">
-              <li>Dedicated Support</li>
-              <li>Professional WordPress Website Design</li>
-              <li>Custom web development</li>
-              <li>SEO and marketing</li>
-            </ul>
-          </ColumnTitleAndDesc>
+        <div className="flex flex-col justify-center items-start space-y-8 group">
+          <SectionTitle title="Hire an Expert" subTitle="a hassle-free solution" leftAlign={true} />
+
+          <p className="text-text lg:text-xl lg:leading-9">
+            We have in-house experts in WordPress, Laravel, and React and have extensive experience in developing top-notch websites, web applications, and custom solutions. Our team is dedicated to delivering high-quality, reliable, and scalable solutions to meet our client's needs.{" "}
+          </p>
+          <ul className="text-text text-xl list-disc leading-10 pl-5">
+            <li>Dedicated Support</li>
+            <li>Professional WordPress Website Design</li>
+            <li>Custom web development</li>
+            <li>SEO and marketing</li>
+          </ul>
 
           <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
             Get Started
