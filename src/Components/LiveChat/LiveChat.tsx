@@ -35,7 +35,7 @@ const LiveChat = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
               <FeatureCard background={true}>
-                <div className="space-y-5 min-h-[290px]">
+                <div className="space-y-5 lg:min-h-[290px]">
                   <EnvelopeOpenIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-title font-bold text-3xl">Support Ticket</h3>
@@ -48,7 +48,7 @@ const LiveChat = () => {
                 </Button>
               </FeatureCard>
               <FeatureCard background={true}>
-                <div className="space-y-5 min-h-[290px]">
+                <div className="space-y-5 lg:min-h-[290px]">
                   <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-title font-bold text-3xl">Live Chat</h3>
@@ -62,7 +62,7 @@ const LiveChat = () => {
               </FeatureCard>
 
               <FeatureCard background={true}>
-                <div className="space-y-5 min-h-[290px]">
+                <div className="space-y-5 lg:min-h-[290px]">
                   <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-title font-bold text-3xl flex flex-col">

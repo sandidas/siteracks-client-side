@@ -1,20 +1,27 @@
 "use client"; // this is a client component
+import PlainButton from "@/Components/Buttons/PlainButton";
 import ColumnTitleAndDesc from "@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
+import { ArrowLongRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { Button, Modal } from "@mantine/core";
+import { useScrollLock } from "@mantine/hooks";
 import React, { useState } from "react";
 
 import DummyImage from "../../../../public/images/DummyArticle.svg";
 import WHPremiumWebsite from "./SubCompo/WHPremiumWebsite";
 
 const WebHostingArticle = () => {
-  const [modalOpened, setModalOpened] = useState<any | boolean>(false);
+  const [modalOpened, setModalOpened] = useState<boolean>(false);
   const [modalData, setModalData] = useState<any | null>(null);
+  const [modalTitle, setModalTitle] = useState<string | null>(null);
+  const [scrollLocked, setScrollLocked] = useScrollLock();
 
+  console.log(scrollLocked);
   const requestComponent = (itemName: String | null) => {
     if (itemName === "WHPremiumWebsite") {
+      setModalTitle("Premium Website Builder");
       setModalData(<WHPremiumWebsite />);
+      setScrollLocked((c) => !c);
     }
 
     // <WHPremiumWebsite />
@@ -25,7 +32,11 @@ const WebHostingArticle = () => {
       <section className="py-[10vh] bg-surface">
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
-            <SectionTitle title="Maximize Your Offline Business with the Power of the Internet" description={`Maximize Your Offline Business by Utilizing the Power of Online Platforms. Get ahead of the competition and expand your reach to potential customers with the help of the internet.`} />
+            <SectionTitle
+              title="Maximize Your Offline Business with the Power of the Internet"
+              bottomSpace={true}
+              description={`Maximize Your Offline Business by Utilizing the Power of Online Platforms. Get ahead of the competition and expand your reach to potential customers with the help of the internet.`}
+            />
           </div>
 
           {/* article container  */}
@@ -41,26 +52,45 @@ const WebHostingArticle = () => {
                 <p className="text-text lg:text-xl lg:leading-9">Premium Website Builder offers powerful tools, customization options, and professional design templates to create stunning websites easily.</p>
               </ColumnTitleAndDesc>
 
-              <Button
-                variant="outline"
-                size="xl"
-                onClick={() => {
+              <PlainButton
+                text="LEARN MORE"
+                handler={() => {
                   setModalOpened(true), requestComponent("WHPremiumWebsite");
                 }}
-                className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary"
-              >
-                Learn More
-                <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
-              </Button>
+              />
             </article>
           </div>
         </div>
       </section>
 
-      <Modal zIndex="99999" padding="md" lockScroll={true} opened={modalOpened} size="xl" onClose={() => setModalOpened(false)} >
+      <Modal
+        radius="xl"
+        zIndex="99999"
+        padding={0}
+        lockScroll={true}
+        opened={modalOpened}
+        size="xl"
+        onClose={() => {
+          setModalOpened(false), setModalData(null), setModalTitle(null);
+        }}
+        withCloseButton={false}
+        style={{ marginTop: "20px" }}
+      >
         {/* Modal content */}
+        <div className="text-title font-bold text-center text-2xl bg-slate-200 py-10 px-5 lg:px-10 space-x-2 flex w-full justify-between items-center rounded-3xl">
+          <div> {modalTitle && modalTitle} </div>
 
-        <div className="dark:bg-black">{modalData}</div>
+          <button
+            className="hover:bg-primary rounded-md p-2"
+            onClick={() => {
+              setModalOpened(false), setModalData(null), setModalTitle(null);
+            }}
+          >
+            <XMarkIcon className="w-7 h-7" />
+          </button>
+        </div>
+
+        <div className="dark:bg-black p-5 lg:p-10">{modalData && modalData}</div>
       </Modal>
     </>
   );
