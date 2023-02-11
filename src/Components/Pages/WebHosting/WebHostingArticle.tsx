@@ -57,7 +57,7 @@ const WebHostingArticle = () => {
         </div>
       </section>
 
-      <Modal centered opened={modalOpened} size="xl" onClose={() => setModalOpened(false)} withCloseButton={false}>
+      <Modal zIndex="99999" padding="md" lockScroll={true} opened={modalOpened} size="xl" onClose={() => setModalOpened(false)} >
         {/* Modal content */}
 
         <div className="dark:bg-black">{modalData}</div>
