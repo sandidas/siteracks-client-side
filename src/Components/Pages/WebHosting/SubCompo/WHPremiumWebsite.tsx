@@ -5,9 +5,9 @@ const WHPremiumWebsite = () => {
 
   return (
     <div className="space-y-8">
-      <div className="flex space-x-5">
+      <div className="flex space-x-5 xl:space-x-10">
         <div>
-          <WordPressIcon className="w-28 h-28" />
+          <WordPressIcon className="w-28 h-28 fill-text" />
         </div>
         <p className="text-text text-base lg:leading-7">
           Premium WordPress Website Builder is a sophisticated tool (plugins); it has a user-friendly interface. Businesses and individuals can quickly build professional-looking websites without coding or technical knowledge. This WordPress website page builder offers a range of customizable

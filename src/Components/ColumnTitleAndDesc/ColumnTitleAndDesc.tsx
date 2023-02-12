@@ -8,7 +8,7 @@ interface ITitleAndDescription {
 const ColumnTitleAndDesc = ({ title, subTitle, children, colorOnDark }: ITitleAndDescription) => {
   return (
     // If left alignment is not true then 'text-center' class will be not applied
-    <div className="space-y-7">
+    <div className="space-y-4">
       {/* Print without subtitle  */}
       {/* If color on dark background  */}
       {title && !subTitle && <h2 className={`text-3xl lg:text-4xl lg:leading-snug font-bold ${colorOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>}

@@ -1,7 +1,4 @@
 "use client"; // this is a client component
-
-import Header from "@/Components/Header/Header";
-// import Header from "@/Components/Header/Header";
 import { ThemeProvider } from "@/Context/ThemeProvider";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -13,10 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       */}
       {/* <head /> */}
       <body className="px-[4vw] dark:bg-background">
-        <ThemeProvider>
-          {/* <Header /> */}
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
