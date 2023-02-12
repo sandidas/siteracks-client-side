@@ -2,33 +2,23 @@
 import PlainButton from "@/Components/Buttons/PlainButton";
 import ColumnTitleAndDesc from "@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
+import { ModalContext, useModalContext } from "@/Context/ModalProvider";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import {  Modal } from "@mantine/core";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import DummyImage from "../../../../public/images/DummyArticle.svg";
 import WHDedicatedSupport from "./SubCompo/WHDedicatedSupport";
 import WHFreeDotComDomain from "./SubCompo/WHFreeDotComDomain";
 import WHFreeMigration from "./SubCompo/WHFreeMigration";
+import WHPremiumCloudServers from "./SubCompo/WHPremiumCloudServers";
 import WHPremiumWebsite from "./SubCompo/WHPremiumWebsite";
+import WHSolutionsForOnline from "./SubCompo/WHSolutionsForOnline";
 
 const WebHostingArticle = () => {
-  const [modalOpened, setModalOpened] = useState<boolean>(false);
-  const [modalData, setModalData] = useState<any | null>(null);
-  const [modalTitle, setModalTitle] = useState<string | null>(null);
 
 
-  // console.log(scrollLocked);
-
-  const requestModal = () => {
-  
-      // setModalTitle("Premium Website Builder");
-      // setModalData(<WHPremiumWebsite />);
-      setModalOpened(true);
-    
-
-    // <WHPremiumWebsite />
-  };
+  const { requestModal, setModalData, setModalTitle } = useModalContext();
 
   return (
     <>
@@ -50,7 +40,7 @@ const WebHostingArticle = () => {
             
             {/* Premium Website Builder*/}
             <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full bg-slate-200">
+              <div className="w-full">
                 <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
               </div>
 
@@ -72,7 +62,7 @@ const WebHostingArticle = () => {
 
             {/* Free Website Migration */}
             <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full bg-slate-200">
+              <div className="w-full">
                 <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
               </div>
 
@@ -90,10 +80,30 @@ const WebHostingArticle = () => {
               />
             </article>
 
-            {/* Dedicated Support
- */}
+            {/* Premium Cloud Servers */}
             <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full bg-slate-200">
+              <div className="w-full">
+                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
+              </div>
+
+              <ColumnTitleAndDesc title="Premium Cloud Servers">
+                <p className="text-text lg:text-xl lg:leading-9">Enjoy better latency and lesser downtime while keeping your account and data always secured. Our platform is built with Premium AWS Cloud and Digital Ocean Cloud servers.</p>
+              </ColumnTitleAndDesc>
+
+              <PlainButton
+                text="LEARN MORE"
+                handler={() => {
+                  setModalTitle("Premium Cloud Servers"),
+                  setModalData(<WHPremiumCloudServers />),
+                  requestModal()
+                }}
+              />
+            </article>
+
+
+            {/* Dedicated Support */}
+            <article className="flex flex-col space-y-8 group items-start">
+              <div className="w-full">
                 <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
               </div>
 
@@ -114,7 +124,7 @@ const WebHostingArticle = () => {
             
             {/* Free .com Domain with Annual Plan */}
             <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full bg-slate-200">
+              <div className="w-full">
                 <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
               </div>
 
@@ -132,40 +142,31 @@ const WebHostingArticle = () => {
               />
             </article>
 
+            
+            {/* Optimized for CMS Applications and Ecommerce */}
+            <article className="flex flex-col space-y-8 group items-start">
+              <div className="w-full">
+                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
+              </div>
+
+              <ColumnTitleAndDesc title="Optimized for CMS Applications and E-Commerce">
+                <p className="text-text lg:text-xl lg:leading-9">Maximize your online store or website with our optimized cloud servers designed specifically for CMS and e-commerce needs.</p>
+              </ColumnTitleAndDesc>
+
+              <PlainButton
+                text="LEARN MORE"
+                handler={() => {
+                  setModalTitle("Optimized for CMS Applications and Ecommerce"),
+                  setModalData(<WHSolutionsForOnline />),
+                  requestModal();
+                }}
+              />
+            </article>
+
 
           </div>
         </div>
-      </section>
-
-      <Modal
-        radius="xl"
-        zIndex="99999"
-        padding={0}
-        lockScroll={true}
-        opened={modalOpened}
-        size="xl"
-        onClose={() => {
-          setModalOpened(false), setModalData(null), setModalTitle(null);
-        }}
-        withCloseButton={false}
-        style={{ marginTop: "20px" }}
-      >
-        {/* Modal content */}
-        <div className="text-title font-bold text-center text-2xl  py-10 px-5 lg:px-10 space-x-2 flex w-full justify-between items-center rounded-3xl">
-          <div> {modalTitle && modalTitle} </div>
-
-          <button
-            className="hover:bg-primary rounded-md p-2"
-            onClick={() => {
-              setModalOpened(false), setModalData(null), setModalTitle(null);
-            }}
-          >
-            <XMarkIcon className="w-7 h-7" />
-          </button>
-        </div>
-
-        <div className="p-5 lg:p-10 bg-surface">{modalData && modalData}</div>
-      </Modal>
+      </section>       
     </>
   );
 };

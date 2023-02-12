@@ -1,3 +1,4 @@
+import PlainButton from "@/Components/Buttons/PlainButton";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import WebHostingArticle from "@/Components/Pages/WebHosting/WebHostingArticle";
 import WebHostingBanner from "@/Components/Pages/WebHosting/WebHostingBanner";
@@ -5,10 +6,16 @@ import WebHostingEssentials from "@/Components/Pages/WebHosting/WebHostingEssent
 import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
 import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
+
 import Head from "next/head";
 import React from "react";
 
-const webHosting = () => {
+const WebHosting = () => {
+
+ 
+
+
+
   return (
     <>  
       <Head>
@@ -16,6 +23,11 @@ const webHosting = () => {
         <meta name="description" content="SiteRacks" />
       </Head>
       <main> 
+
+ 
+
+
+
         <section className="bg-surface">
           <WebHostingBanner />
         </section>
@@ -36,4 +48,4 @@ const webHosting = () => {
   );
 };
 
-export default webHosting;
+export default WebHosting;

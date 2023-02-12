@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/Context/ThemeProvider";
 import React from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import { ModalProvider } from "@/Context/ModalProvider";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -14,9 +15,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <link rel="icon" href="/siteRacksFav.ico" />
       </Head>
       <ThemeProvider>
-        <Header />
-        {children}
-        <Footer />
+        <ModalProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ModalProvider>
       </ThemeProvider>
     </>
   );
