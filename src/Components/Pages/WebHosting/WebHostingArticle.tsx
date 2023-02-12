@@ -14,14 +14,16 @@ const WebHostingArticle = () => {
   const [modalOpened, setModalOpened] = useState<boolean>(false);
   const [modalData, setModalData] = useState<any | null>(null);
   const [modalTitle, setModalTitle] = useState<string | null>(null);
+
   const [scrollLocked, setScrollLocked] = useScrollLock();
 
-  console.log(scrollLocked);
+  // console.log(scrollLocked);
+
   const requestComponent = (itemName: String | null) => {
+    // setScrollLocked((c) => !c);
     if (itemName === "WHPremiumWebsite") {
       setModalTitle("Premium Website Builder");
       setModalData(<WHPremiumWebsite />);
-      setScrollLocked((c) => !c);
     }
 
     // <WHPremiumWebsite />
@@ -29,6 +31,10 @@ const WebHostingArticle = () => {
 
   return (
     <>
+      <Button onClick={() => setScrollLocked((c) => !c)} variant="outline">
+        {scrollLocked ? "Unlock scroll" : "Lock scroll"}
+      </Button>
+
       <section className="py-[10vh] bg-surface">
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
@@ -55,7 +61,7 @@ const WebHostingArticle = () => {
               <PlainButton
                 text="LEARN MORE"
                 handler={() => {
-                  setModalOpened(true), requestComponent("WHPremiumWebsite");
+                  setModalOpened(true), setScrollLocked((c) => !c), requestComponent("WHPremiumWebsite");
                 }}
               />
             </article>
