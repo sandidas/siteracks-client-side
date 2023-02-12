@@ -14,7 +14,7 @@ interface IModalProps {
   //Dispatch<SetStateAction<any | boolean>>
     setModalData?: any | null ;
     setModalTitle?: any | null ;
-    requestModal?:  () => void;
+    requestModal():  void;
   }
   export const ModalContext = createContext<IModalProps>({
     setModalData: null,
