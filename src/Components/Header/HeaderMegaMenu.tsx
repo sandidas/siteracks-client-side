@@ -244,7 +244,7 @@ export function HeaderMegaMenu() {
             <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
           </div>
 
-          <Text size="sm" weight={500}>
+          <Text size="xl" weight={600} className="dark:text-slate-200">
             {item.title}
           </Text>
           <Text size="xs" color="dimmed">
@@ -265,7 +265,7 @@ export function HeaderMegaMenu() {
             <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
           </div>
 
-          <Text size="sm" weight={500}>
+          <Text size="xl" weight={600} className="dark:text-slate-200">
             {item.title}
           </Text>
           <Text size="xs" color="dimmed">
@@ -287,7 +287,7 @@ export function HeaderMegaMenu() {
             <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
           </div>
 
-          <Text size="sm" weight={500}>
+          <Text size="xl" weight={600} className="dark:text-slate-200">
             {item.title}
           </Text>
           <Text size="xs" color="dimmed">
@@ -309,7 +309,7 @@ export function HeaderMegaMenu() {
             <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
           </div>
 
-          <Text size="sm" weight={600}>
+          <Text size="xl" weight={600} className="dark:text-slate-200">
             {item.title}
           </Text>
           <Text size="xs" color="dimmed">

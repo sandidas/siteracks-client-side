@@ -2,10 +2,9 @@
 import PlainButton from "@/Components/Buttons/PlainButton";
 import ColumnTitleAndDesc from "@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-import { ModalContext, useModalContext } from "@/Context/ModalProvider";
-import { XMarkIcon } from "@heroicons/react/24/solid";
-import {  Modal } from "@mantine/core";
-import React, { useContext, useState } from "react";
+import {  useModalContext } from "@/Context/ModalProvider";
+
+
 
 import DummyImage from "../../../../public/images/DummyArticle.svg";
 import WHDedicatedSupport from "./SubCompo/WHDedicatedSupport";

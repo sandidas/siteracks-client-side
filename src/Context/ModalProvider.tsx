@@ -59,7 +59,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
         style={{ marginTop: "20px" }}
       >
         {/* Modal content */}
-        <div className="text-title font-bold text-center text-2xl  py-10 px-5 lg:px-10 space-x-2 flex w-full justify-between items-center rounded-3xl">
+        <div className="text-title font-bold text-center text-2xl p-3 lg:p-10 space-x-2 flex w-full justify-between items-center rounded-3xl">
           <div> {modalTitle && modalTitle} </div>
 
           <button
@@ -72,7 +72,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
           </button>
         </div>
 
-        <div className="p-5 lg:p-10 bg-surface">{modalData && modalData}</div>
+        <div className="p-3 lg:p-10 bg-surface">{modalData && modalData}</div>
       </Modal>
     
     </>
