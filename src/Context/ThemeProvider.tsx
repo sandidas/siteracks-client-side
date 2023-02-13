@@ -81,7 +81,7 @@ export const ThemeProvider = ({ children }: any) => {
               colorScheme: colorScheme,
               colors: {
                 main: ["#72cb66", "#5bc24d", "#43b933", "#2cb11a", "#14a800", "#14a800", "#14A800", "#108600", "#0e7600", "#084300"],
-                dark: ["#9c9da4", "#83858d", "#6a6c76", "#51545f", "#393b49", "#202332", "#070a1b", "#040610", "#060816", "#040610"],
+                dark: ["#9c9da4", "#83858d", "#6a6c76", "#51545f", "#393b49", "#202332", "#070a1b", "#070A1B", "#060816", "#040610"],
               },
               primaryColor: "main",
               fontFamily: "Poppins, Mulish, Ubuntu, sans-serif",

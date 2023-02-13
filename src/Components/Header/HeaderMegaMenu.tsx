@@ -42,7 +42,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     ...theme.fn.hover({
-      backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[9] : theme.colors.gray[0],
     }),
   },
 
@@ -548,7 +548,7 @@ export function HeaderMegaMenu() {
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
           <Group position="center" grow pb="xl" px="md">
-            <Button>Log in</Button>
+            <Button size="xl">Log in</Button>
           </Group>
         </ScrollArea>
       </Drawer>

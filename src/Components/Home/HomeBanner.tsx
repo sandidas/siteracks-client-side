@@ -5,7 +5,7 @@ import HomeBannerImage from "../../../public/images/homeBanner.svg";
 
 const HomeBanner = () => {
   return (
-    <section className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[10vh] pb-[4vh] gap-3 md:5 xl:gap-16 2xl:gap-32">
+    <section className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[12vh] pb-[8vh] gap-3 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
       <div className="md:col-span-8 flex flex-col justify-center items-start space-y-8 group">
         <h1 className="text-4xl lg:text-6xl md:leading-tight text-title font-bold flex flex-col items-start lg:leading-">

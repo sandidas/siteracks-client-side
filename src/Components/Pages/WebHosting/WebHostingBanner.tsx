@@ -4,7 +4,7 @@ import PremiumWebsiteBuilder from "../../../../public/images/webHosting/premiumW
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 const WebHostingBanner = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[10vh] pb-[4vh]  gap-3 md:5 xl:gap-16 2xl:gap-32">
+    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[12vh] pb-[8vh]  gap-3 md:5 xl:gap-16 2xl:gap-32">
       <div className="flex flex-col items-start space-y-8 justify-center md:col-span-6 group">
         <h1 className="flex flex-col text-5xl lg:text-6xl md:leading-tight text-title font-bold">
           <span>Blazing Fast & Secure</span>
