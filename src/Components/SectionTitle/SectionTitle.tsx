@@ -4,15 +4,30 @@ interface ITitleAndDescription {
   title: string;
   subTitle?: string;
   description?: string;
-  leftAlign?: boolean;
+  leftAlignDesktop?: boolean;
+  leftAlignOnMobile?: boolean;
   bottomSpace?: boolean;
   children?: any;
   titleOnDark?: boolean;
 }
-const SectionTitle = ({ title, subTitle, description, leftAlign, bottomSpace, children, titleOnDark }: ITitleAndDescription) => {
+
+// const defValue = {
+//   title: '',
+//   subTitle: '',
+//   description: '',
+//   leftAlignDesktop: false,
+//   leftAlignOnMobile: false,
+//   bottomSpace: false,
+//   children : false,
+//   titleOnDark: false,
+// }
+
+const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSpace, children, titleOnDark, leftAlignOnMobile }: ITitleAndDescription) => {
+  // ${leftAlignDesktop && "lg:text-left"} ${leftAlignOnMobile && "sm:max-lg:text-left"} ${!leftAlignDesktop && !leftAlignOnMobile && "text-center"} ${bottomSpace && "pb-16"}
+
   return (
     // If left alignment is not true then 'text-center' class will be not applied
-    <div className={`flex flex-col space-y-8 max-w-5xl mx-auto w-full ${!leftAlign && "text-center"} ${bottomSpace && "pb-16"}`}>
+    <div className={`flex flex-col space-y-8 max-w-5xl mx-auto w-full ${leftAlignDesktop ? "lg:text-left" : ""} ${leftAlignOnMobile ? "sm:max-lg:text-left" : ""} ${!leftAlignDesktop && !leftAlignOnMobile ? "text-center" : ""} ${bottomSpace ? "pb-16" : ""}`}>
       {/* Print without subtitle  */}
       {title && !subTitle && <h2 className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>}
 

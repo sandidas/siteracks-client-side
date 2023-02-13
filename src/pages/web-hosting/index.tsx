@@ -11,23 +11,13 @@ import Head from "next/head";
 import React from "react";
 
 const WebHosting = () => {
-
- 
-
-
-
   return (
-    <>  
+    <>
       <Head>
         <title>Web Hosting | SiteRacks</title>
         <meta name="description" content="SiteRacks" />
       </Head>
-      <main> 
-
- 
-
-
-
+      <main>
         <section className="bg-surface">
           <WebHostingBanner />
         </section>

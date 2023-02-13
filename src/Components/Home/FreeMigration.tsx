@@ -20,7 +20,7 @@ const FreeMigration = () => {
 
           <div className="flex flex-col justify-center items-start space-y-8 group">
             {/* dynamic components */}
-            <SectionTitle title="Free Migration" subTitle="a hassle-free solution" leftAlign={true} />
+            <SectionTitle title="Free Migration" subTitle="a hassle-free solution" leftAlignDesktop />
 
             <p className="text-text lg:text-xl lg:leading-9">
               Our website migration service offers a hassle-free solution for transferring your website to our blazing-fast hosting service platform. Our team of experts will handle the entire process, including backup and restoring DNS updates, and website configuration.{" "}

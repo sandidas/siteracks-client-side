@@ -25,7 +25,7 @@ const LiveChat = () => {
             <SectionTitle title={`Get 24x7 support`}
             subTitle="Our expert support team is happy to help you."  
             bottomSpace={true} 
-            leftAlign={true} 
+            leftAlignDesktop={true} 
             titleOnDark={true} 
             description={`We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.`}
             />

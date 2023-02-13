@@ -34,13 +34,13 @@ const WebHostingArticle = () => {
 
           {/* article container  */}
 
-          <div className="grid grid-cols-2 gap-10 xl:gap-16 2xl:gap-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-16 2xl:gap-32">
 
             
             {/* Premium Website Builder*/}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
+                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Premium Website Builder">
@@ -62,7 +62,7 @@ const WebHostingArticle = () => {
             {/* Free Website Migration */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
+              <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Free Website Migration">
@@ -82,7 +82,7 @@ const WebHostingArticle = () => {
             {/* Premium Cloud Servers */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
+                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Premium Cloud Servers">
@@ -103,7 +103,7 @@ const WebHostingArticle = () => {
             {/* Dedicated Support */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
+                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Dedicated Support">
@@ -124,7 +124,7 @@ const WebHostingArticle = () => {
             {/* Free .com Domain with Annual Plan */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
+                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Free .com Domain">
@@ -145,7 +145,7 @@ const WebHostingArticle = () => {
             {/* Optimized for CMS Applications and Ecommerce */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[340px]" />{" "}
+                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Optimized for CMS Applications and E-Commerce">

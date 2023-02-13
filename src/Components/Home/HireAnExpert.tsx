@@ -15,7 +15,7 @@ const HireAnExpert = () => {
           {/* <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" /> */}
         </div>
         <div className="flex flex-col justify-center items-start space-y-8 group">
-          <SectionTitle title="Hire an Expert" subTitle="a hassle-free solution" leftAlign={true} />
+          <SectionTitle title="Hire an Expert" subTitle="a hassle-free solution" leftAlignDesktop />
 
           <p className="text-text lg:text-xl lg:leading-9">
             We have in-house experts in WordPress, Laravel, and React and have extensive experience in developing top-notch websites, web applications, and custom solutions. Our team is dedicated to delivering high-quality, reliable, and scalable solutions to meet our client's needs.{" "}

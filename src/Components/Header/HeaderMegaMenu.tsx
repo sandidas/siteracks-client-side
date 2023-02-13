@@ -43,6 +43,7 @@ const useStyles = createStyles((theme) => ({
 
     ...theme.fn.hover({
       backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[9] : theme.colors.gray[0],
+      borderRadius:"5px",
     }),
   },
 
@@ -52,7 +53,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.md,
 
     ...theme.fn.hover({
-      backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[9] : theme.colors.gray[0],
     }),
 
     "&:active": theme.activeStyles,

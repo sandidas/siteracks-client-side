@@ -9,7 +9,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 const HomeReview = () => {
   return (
     <section className="py-[10vh]">
-      <SectionTitle title="What Our Customers Are Saying" leftAlign={true} /> 
+      <SectionTitle title="What Our Customers Are Saying" leftAlignDesktop /> 
 
       <div className="grid grid-cols-1 md:grid-cols-12 md:gap-5 mx-auto max-w-7xl">
         <div className="md:col-span-4 xl:col-span-3"></div>
