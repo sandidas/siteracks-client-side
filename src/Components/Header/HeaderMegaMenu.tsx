@@ -216,19 +216,21 @@ export function HeaderMegaMenu() {
   const webHostingLinks = hostingMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
+        <Link className="p-1 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-300 dark:fill-slate-400" />
+            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
-          <Text size="xl" weight={600} className="dark:text-slate-200">
-            {item.title}
-          </Text>
-          <Text size="xs" color="dimmed">
-            {item.description}
-          </Text>
+          <div>
+            <Text size="xl" weight={600} className="dark:text-slate-200">
+              {item.title}
+            </Text>
+            <Text size="xs" color="dimmed">
+              {item.description}
+            </Text>
+          </div>
         </Link>
       </Group>
     </UnstyledButton>
@@ -473,13 +475,13 @@ export function HeaderMegaMenu() {
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
           <a href="#" className={classes.link}>
-            Home
+            HOME
           </a>
 
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
               <Box component="span" mr={5}>
-                Hosting
+                HOSTING
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
             </Center>
@@ -490,7 +492,7 @@ export function HeaderMegaMenu() {
           <UnstyledButton className={classes.link} onClick={toggleDomainLinks}>
             <Center inline>
               <Box component="span" mr={5}>
-                Domain
+                DOMAIN
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
             </Center>
@@ -501,7 +503,7 @@ export function HeaderMegaMenu() {
           <UnstyledButton className={classes.link} onClick={toggleWebsiteLinks}>
             <Center inline>
               <Box component="span" mr={5}>
-                Website
+                WEBSITE
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
             </Center>
@@ -512,7 +514,7 @@ export function HeaderMegaMenu() {
           <UnstyledButton className={classes.link} onClick={toggleSecurityLinks}>
             <Center inline>
               <Box component="span" mr={5}>
-                Security
+                SECURITY
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
             </Center>
@@ -522,8 +524,8 @@ export function HeaderMegaMenu() {
           {/* help items  */}
           <UnstyledButton className={classes.link} onClick={toggleHelpLinks}>
             <Center inline>
-              <Box component="span" mr={5}>
-                Help
+              <Box component="span" mr={5} fz="lg">
+                HELP
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
             </Center>
