@@ -334,13 +334,16 @@ export function HeaderMegaMenu() {
     <Box pb={0}>
       <Header fixed={true} height={60} px="md" className="border-none px-5 max-w-screen-2xl mx-auto">
         <Group position="apart" sx={{ height: "100%" }}>
+          {/* burger icon for mobile */}
+          <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+
           <Group>
             <Link href="/" className="flex">
               <Logo />
             </Link>
           </Group>
           <Group sx={{ height: "100%" }} spacing={0} className={classes.hiddenMobile}>
-            <a href="#" className={classes.link}></a>
+            {/* <a href="#" className={classes.link}></a> */}
 
             {/* hosting menu items  */}
 
@@ -387,7 +390,7 @@ export function HeaderMegaMenu() {
 
             {/* domain menu items  */}
 
-            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+            <HoverCard width={700} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -407,7 +410,7 @@ export function HeaderMegaMenu() {
 
             {/* Website menu items  */}
 
-            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+            <HoverCard width={700} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -427,7 +430,7 @@ export function HeaderMegaMenu() {
 
             {/* Security menu items  */}
 
-            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+            <HoverCard width={700} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -470,15 +473,16 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group className={classes.hiddenMobile}>
-            <Button>Account</Button>
             <SwitchDarkLight />
+            <Button>Account</Button>
           </Group>
-
-          <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+          <div>
+            <SwitchDarkLight />
+          </div>
         </Group>
       </Header>
 
-      <Drawer opened={drawerOpened} onClose={closeDrawer} size="100%" padding="md" title={<Logo />} className={classes.hiddenDesktop} zIndex={1000000}>
+      <Drawer opened={drawerOpened} position="top" onClose={closeDrawer} size="100%" padding="md" title={<Logo />} className={classes.hiddenDesktop} zIndex={1000000} transition="slide-up" transitionDuration={500} transitionTimingFunction="ease-in">
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
@@ -487,55 +491,56 @@ export function HeaderMegaMenu() {
           </a> */}
 
           <UnstyledButton className={classes.link} py={40} onClick={toggleLinks}>
-            <Center inline>
+            <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 HOSTING
               </Box>
-              <ChevronDownIcon className="h-4 w-4 text-blue-500" />
+
+              <ChevronDownIcon className={`h-4 w-4  text-primary ${linksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{webHostingLinks}</Collapse>
 
           {/* // domain items  */}
           <UnstyledButton className={classes.link} py={40} onClick={toggleDomainLinks}>
-            <Center inline>
+            <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 DOMAIN
               </Box>
-              <ChevronDownIcon className="h-4 w-4 text-blue-500" />
+              <ChevronDownIcon className={`h-4 w-4  text-primary ${domainLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={domainLinksOpened}>{domainLinks}</Collapse>
 
           {/* website items  */}
           <UnstyledButton className={classes.link} py={40} onClick={toggleWebsiteLinks}>
-            <Center inline>
+            <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 WEBSITE
               </Box>
-              <ChevronDownIcon className="h-4 w-4 text-blue-500" />
+              <ChevronDownIcon className={`h-4 w-4  text-primary ${websiteLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={websiteLinksOpened}>{websiteLinks}</Collapse>
 
           {/* security items  */}
           <UnstyledButton className={classes.link} py={40} onClick={toggleSecurityLinks}>
-            <Center inline>
+            <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 SECURITY
               </Box>
-              <ChevronDownIcon className="h-4 w-4 text-blue-500" />
+              <ChevronDownIcon className={`h-4 w-4  text-primary ${securityLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={securityLinksOpened}>{securityLinks}</Collapse>
 
           {/* help items  */}
           <UnstyledButton className={classes.link} py={40} onClick={toggleHelpLinks}>
-            <Center inline>
+            <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 HELP
               </Box>
-              <ChevronDownIcon className="h-4 w-4 text-blue-500" />
+              <ChevronDownIcon className={`h-4 w-4  text-primary ${helpLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={helpLinksOpened}>{helpLinks}</Collapse>
@@ -544,8 +549,6 @@ export function HeaderMegaMenu() {
 
           <Group position="center" grow pb="xl" px="md">
             <Button>Log in</Button>
-
-            <SwitchDarkLight />
           </Group>
         </ScrollArea>
       </Drawer>
