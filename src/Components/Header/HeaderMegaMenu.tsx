@@ -1,5 +1,5 @@
-import { createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, SimpleGrid, Anchor, Divider, Center, Box, Burger, Drawer, Collapse, ScrollArea, MantineProvider } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, SimpleGrid, Anchor, Divider, Center, Box, Burger, Drawer, Collapse, ScrollArea } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import SwitchDarkLight from "./SwitchDarkLight";
 import Image from "next/image";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
@@ -210,13 +210,13 @@ export function HeaderMegaMenu() {
   const [websiteLinksOpened, { toggle: toggleWebsiteLinks }] = useDisclosure(false);
   const [securityLinksOpened, { toggle: toggleSecurityLinks }] = useDisclosure(false);
   const [helpLinksOpened, { toggle: toggleHelpLinks }] = useDisclosure(false);
-
+  const largeScreen = useMediaQuery("(min-width: 900px)");
   const { classes, theme } = useStyles();
 
   const webHostingLinks = hostingMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link className="p-1 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
@@ -224,7 +224,7 @@ export function HeaderMegaMenu() {
           </div>
 
           <div>
-            <Text size="xl" weight={600} className="dark:text-slate-200">
+            <Text size={largeScreen ? "xl" : "md"} weight={600} className="dark:text-slate-200">
               {item.title}
             </Text>
             <Text size="xs" color="dimmed">
@@ -239,19 +239,21 @@ export function HeaderMegaMenu() {
   const domainLinks = domainMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
+            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
-          <Text size="xl" weight={600} className="dark:text-slate-200">
-            {item.title}
-          </Text>
-          <Text size="xs" color="dimmed">
-            {item.description}
-          </Text>
+          <div>
+            <Text size={largeScreen ? "xl" : "md"} weight={600} className="dark:text-slate-200">
+              {item.title}
+            </Text>
+            <Text size="xs" color="dimmed">
+              {item.description}
+            </Text>
+          </div>
         </Link>
       </Group>
     </UnstyledButton>
@@ -260,19 +262,21 @@ export function HeaderMegaMenu() {
   const websiteLinks = websiteMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
+            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
-          <Text size="xl" weight={600} className="dark:text-slate-200">
-            {item.title}
-          </Text>
-          <Text size="xs" color="dimmed">
-            {item.description}
-          </Text>
+          <div>
+            <Text size={largeScreen ? "xl" : "md"} weight={600} className="dark:text-slate-200">
+              {item.title}
+            </Text>
+            <Text size="xs" color="dimmed">
+              {item.description}
+            </Text>
+          </div>
         </Link>
       </Group>
     </UnstyledButton>
@@ -282,19 +286,21 @@ export function HeaderMegaMenu() {
   const securityLinks = securityMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
+            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
-          <Text size="xl" weight={600} className="dark:text-slate-200">
-            {item.title}
-          </Text>
-          <Text size="xs" color="dimmed">
-            {item.description}
-          </Text>
+          <div>
+            <Text size={largeScreen ? "xl" : "md"} weight={600} className="dark:text-slate-200">
+              {item.title}
+            </Text>
+            <Text size="xs" color="dimmed">
+              {item.description}
+            </Text>
+          </div>
         </Link>
       </Group>
     </UnstyledButton>
@@ -304,19 +310,21 @@ export function HeaderMegaMenu() {
   const helpLinks = helpMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link className="p-5 space-y-2 no-underline" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-1/4 h-14 fill-slate-400 dark:fill-slate-500" />
+            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
-          <Text size="xl" weight={600} className="dark:text-slate-200">
-            {item.title}
-          </Text>
-          <Text size="xs" color="dimmed">
-            {item.description}
-          </Text>
+          <div>
+            <Text size={largeScreen ? "xl" : "md"} weight={600} className="dark:text-slate-200">
+              {item.title}
+            </Text>
+            <Text size="xs" color="dimmed">
+              {item.description}
+            </Text>
+          </div>
         </Link>
       </Group>
     </UnstyledButton>
@@ -474,13 +482,13 @@ export function HeaderMegaMenu() {
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
-          <a href="#" className={classes.link}>
+          {/* <a href="#" className={classes.link}>
             HOME
-          </a>
+          </a> */}
 
-          <UnstyledButton className={classes.link} onClick={toggleLinks}>
+          <UnstyledButton className={classes.link} py={40} onClick={toggleLinks}>
             <Center inline>
-              <Box component="span" mr={5}>
+              <Box component="span" mr={5} fz="lg">
                 HOSTING
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
@@ -489,9 +497,9 @@ export function HeaderMegaMenu() {
           <Collapse in={linksOpened}>{webHostingLinks}</Collapse>
 
           {/* // domain items  */}
-          <UnstyledButton className={classes.link} onClick={toggleDomainLinks}>
+          <UnstyledButton className={classes.link} py={40} onClick={toggleDomainLinks}>
             <Center inline>
-              <Box component="span" mr={5}>
+              <Box component="span" mr={5} fz="lg">
                 DOMAIN
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
@@ -500,9 +508,9 @@ export function HeaderMegaMenu() {
           <Collapse in={domainLinksOpened}>{domainLinks}</Collapse>
 
           {/* website items  */}
-          <UnstyledButton className={classes.link} onClick={toggleWebsiteLinks}>
+          <UnstyledButton className={classes.link} py={40} onClick={toggleWebsiteLinks}>
             <Center inline>
-              <Box component="span" mr={5}>
+              <Box component="span" mr={5} fz="lg">
                 WEBSITE
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
@@ -511,9 +519,9 @@ export function HeaderMegaMenu() {
           <Collapse in={websiteLinksOpened}>{websiteLinks}</Collapse>
 
           {/* security items  */}
-          <UnstyledButton className={classes.link} onClick={toggleSecurityLinks}>
+          <UnstyledButton className={classes.link} py={40} onClick={toggleSecurityLinks}>
             <Center inline>
-              <Box component="span" mr={5}>
+              <Box component="span" mr={5} fz="lg">
                 SECURITY
               </Box>
               <ChevronDownIcon className="h-4 w-4 text-blue-500" />
@@ -522,7 +530,7 @@ export function HeaderMegaMenu() {
           <Collapse in={securityLinksOpened}>{securityLinks}</Collapse>
 
           {/* help items  */}
-          <UnstyledButton className={classes.link} onClick={toggleHelpLinks}>
+          <UnstyledButton className={classes.link} py={40} onClick={toggleHelpLinks}>
             <Center inline>
               <Box component="span" mr={5} fz="lg">
                 HELP
@@ -536,6 +544,8 @@ export function HeaderMegaMenu() {
 
           <Group position="center" grow pb="xl" px="md">
             <Button>Log in</Button>
+
+            <SwitchDarkLight />
           </Group>
         </ScrollArea>
       </Drawer>
