@@ -216,11 +216,11 @@ export function HeaderMegaMenu() {
   const webHostingLinks = hostingMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex xl:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
+            <item.icon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
           <div>
@@ -239,11 +239,11 @@ export function HeaderMegaMenu() {
   const domainLinks = domainMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex xl:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
+            <item.icon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
           <div>
@@ -262,11 +262,11 @@ export function HeaderMegaMenu() {
   const websiteLinks = websiteMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex xl:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
+            <item.icon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
           <div>
@@ -286,11 +286,11 @@ export function HeaderMegaMenu() {
   const securityLinks = securityMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex xl:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
+            <item.icon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
           <div>
@@ -310,11 +310,11 @@ export function HeaderMegaMenu() {
   const helpLinks = helpMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
-        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex lg:flex-col" href={item.linkUrl}>
+        <Link onClick={closeDrawer} className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex xl:flex-col" href={item.linkUrl}>
           {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
           <div>
             {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-            <item.icon className="w-10 h-10 mr-5 mt-3 lg:w-1/4 lg:h-14 fill-slate-300 dark:fill-slate-400" />
+            <item.icon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
           </div>
 
           <div>
@@ -476,9 +476,9 @@ export function HeaderMegaMenu() {
             <SwitchDarkLight />
             <Button>Account</Button>
           </Group>
-          <div>
+          <Group className={classes.hiddenDesktop}>
             <SwitchDarkLight />
-          </div>
+          </Group>
         </Group>
       </Header>
 
@@ -490,57 +490,57 @@ export function HeaderMegaMenu() {
             HOME
           </a> */}
 
-          <UnstyledButton className={classes.link} py={40} onClick={toggleLinks}>
+          <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 HOSTING
               </Box>
 
-              <ChevronDownIcon className={`h-4 w-4  text-primary ${linksOpened && "rotate-90"}`} />
+              <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${linksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{webHostingLinks}</Collapse>
 
           {/* // domain items  */}
-          <UnstyledButton className={classes.link} py={40} onClick={toggleDomainLinks}>
+          <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleDomainLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 DOMAIN
               </Box>
-              <ChevronDownIcon className={`h-4 w-4  text-primary ${domainLinksOpened && "rotate-90"}`} />
+              <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${domainLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={domainLinksOpened}>{domainLinks}</Collapse>
 
           {/* website items  */}
-          <UnstyledButton className={classes.link} py={40} onClick={toggleWebsiteLinks}>
+          <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleWebsiteLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 WEBSITE
               </Box>
-              <ChevronDownIcon className={`h-4 w-4  text-primary ${websiteLinksOpened && "rotate-90"}`} />
+              <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${websiteLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={websiteLinksOpened}>{websiteLinks}</Collapse>
 
           {/* security items  */}
-          <UnstyledButton className={classes.link} py={40} onClick={toggleSecurityLinks}>
+          <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleSecurityLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 SECURITY
               </Box>
-              <ChevronDownIcon className={`h-4 w-4  text-primary ${securityLinksOpened && "rotate-90"}`} />
+              <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${securityLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={securityLinksOpened}>{securityLinks}</Collapse>
 
           {/* help items  */}
-          <UnstyledButton className={classes.link} py={40} onClick={toggleHelpLinks}>
+          <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleHelpLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 HELP
               </Box>
-              <ChevronDownIcon className={`h-4 w-4  text-primary ${helpLinksOpened && "rotate-90"}`} />
+              <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${helpLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
           <Collapse in={helpLinksOpened}>{helpLinks}</Collapse>

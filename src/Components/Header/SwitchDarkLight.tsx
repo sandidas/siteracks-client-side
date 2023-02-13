@@ -10,7 +10,7 @@ const SwitchDarkLight = () => {
   const { colorScheme: isDarkMode, toggleColorScheme } = useMantineColorScheme();
   return (
     <>
-      <button className="bg-transparent border-none cursor-pointer mx-3" onClick={() => toggleColorScheme()}>
+      <button className="bg-transparent border-none cursor-pointer mx-3 hover:bg-surface active:bg-primary active:text-white" onClick={() => toggleColorScheme()}>
         {isDarkMode === "light" ? (
           <div className="p-1 rounded-full">
             {/* <Image alt="L" src={DarkIcon} width="24" height="24" /> */}
