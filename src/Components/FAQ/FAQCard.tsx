@@ -10,7 +10,7 @@ interface IFaqCard {
 const FAQCard = ({ title, children }: IFaqCard) => {
   const [show, setShow] = useState<boolean>(true);
   return (
-    <div className="border-b border-surface shadow shadow-surface mb-5 rounded-md">
+    <div className="border-b border-surface shadow shadow-surface rounded-md">
       {title && (
         <h3 onClick={()=>setShow(!show)} className={`flex items-center justify-between p-5 cursor-pointer  ${show ? "dark:bg-surface":""}`}>
           <span className="text-xl lg:text-2xl leading-normal max-w-[90%]">{title} </span>
@@ -20,7 +20,7 @@ const FAQCard = ({ title, children }: IFaqCard) => {
       )}
 
 {show && 
-       <div className="pl-3 lg:pl-5 py-5 text-text">{children}</div>
+       <div className="pl-3 lg:pl-5 py-5 mb-5 text-text">{children}</div>
 
 }
     </div>

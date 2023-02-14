@@ -34,8 +34,12 @@ export const ThemeProvider = ({ children }: any) => {
 
   useEffect(() => {
     let currentTheme = checkCurrentTheme() || "dark";
-
-    if (currentTheme == "light" || "dark") {
+    // if (currentTheme !== "dark" || "light") {
+    //   currentTheme = "dark";
+    // }
+    currentTheme = currentTheme !== "light" || "dark" ? "dark" : currentTheme;
+    console.log(currentTheme);
+    if (currentTheme) {
       // @ts-ignore
       setColorScheme(currentTheme);
     } else {
@@ -60,7 +64,11 @@ export const ThemeProvider = ({ children }: any) => {
   }, [colorScheme]);
 
   const toggleColorScheme = () => {
-    const currentTheme = checkCurrentTheme();
+    let currentTheme = checkCurrentTheme();
+    // currentTheme = currentTheme !== "light" || "dark" ? "dark" : currentTheme;
+
+    // console.log(currentTheme);
+
     if (currentTheme == "dark") {
       setColorScheme("light");
       setCurrentTheme("light");
