@@ -63,7 +63,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
           <div> {modalTitle && modalTitle} </div>
 
           <button
-            className="hover:bg-primary rounded-md p-2"
+            className="hover:bg-primary hover:text-light rounded-md p-2"
             onClick={() => {
               setModalOpened(false), setModalData(null), setModalTitle(null);
             }}

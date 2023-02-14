@@ -33,12 +33,13 @@ export const ThemeProvider = ({ children }: any) => {
   // ================
 
   useEffect(() => {
-    let currentTheme = checkCurrentTheme() || "dark";
+    let currentTheme = checkCurrentTheme();
     // if (currentTheme !== "dark" || "light") {
     //   currentTheme = "dark";
     // }
     // currentTheme = currentTheme !== "light" || "dark" ? "dark" : currentTheme;
-    console.log(currentTheme);
+    // console.log(currentTheme);
+
     if (currentTheme) {
       // @ts-ignore
       setColorScheme(currentTheme);

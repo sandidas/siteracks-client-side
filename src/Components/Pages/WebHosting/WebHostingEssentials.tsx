@@ -1,7 +1,6 @@
 import FeatureCard from "@/Components/Card/FeatureCard";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import React from "react";
-import LatestTechIcon from "@/Components/Images/web-hosting/latestTechIcon.svg";
 import PlainButton from "@/Components/Buttons/PlainButton";
 import { useModalContext } from "@/Context/ModalProvider";
 import WHBlazingFast from "./SubCompo/WHBlazingFast";
@@ -10,6 +9,22 @@ import WHEasyManagedWordPress from "./SubCompo/WHEasyManagedWordPress";
 import WHDomainManagement from "./SubCompo/WHDomainManagement";
 import WHBusinessEmail from "./SubCompo/WHBusinessEmail";
 import WHFreeSSL from "./SubCompo/WHFreeSSL";
+import WHGit from "./SubCompo/WHGit";
+
+
+import LatestTechIcon from "@/Components/Images/web-hosting/latestTechIcon.svg";
+
+import PaperPlaneIconFast from "../../../../public/images/icons/paperPlaneIconFast.svg";
+import DashboardIcon from "../../../../public/images/icons/dashboardIcon.svg";
+import WordPressIcon from "../../../../public/images/icons/wordPressSolutions.svg";
+import DomainIcon from "../../../../public/images/icons/domainIcon.svg";
+import EmailIcon from "../../../../public/images/icons/emailIcon.svg";
+import SslIcon from "../../../../public/images/icons/sslIcon.svg";
+import GithubIcon from "../../../../public/images/icons/githubIcon.svg";
+
+
+
+
 const WebHostingEssentials = () => {
   // use modal context
   const { requestModal, setModalData, setModalTitle } = useModalContext();
@@ -20,7 +35,7 @@ const WebHostingEssentials = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <FeatureCard>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <PaperPlaneIconFast className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Blazing fast websites</h3>
             <p className="text-text">Our servers are designed for optimal performance, utilizing the infrastructure of Digital Ocean and AWS, and incorporating several custom speed enhancements.</p>
           </div>
@@ -35,7 +50,7 @@ const WebHostingEssentials = () => {
 
         <FeatureCard>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <DashboardIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Easy and User-Friendly Client Interfaces</h3>
             <p className="text-text">Easily manage your domains, hosting, and website with our intuitive client interfaces and dashboard. Our user-friendly tools make it simple to maintain your online presence.</p>
           </div>
@@ -54,7 +69,7 @@ const WebHostingEssentials = () => {
 
         <FeatureCard>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <WordPressIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Easy Managed WordPress</h3>
             <p className="text-text">Our plans offer hassle-free One-click WordPress installation and our exclusive. Enjoy managed auto-updates and expert support, plus added benefits.</p>
           </div>
@@ -70,7 +85,7 @@ const WebHostingEssentials = () => {
 
         <FeatureCard>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <DomainIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Domain Management</h3>
             <p className="text-text">Our platform provides comprehensive domain services including registration, transfer, and DNS management, all accessible through our user-friendly dashboard. Stay in control of your domains and sites with ease.</p>
           </div>
@@ -86,7 +101,7 @@ const WebHostingEssentials = () => {
 
         <FeatureCard>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <EmailIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Business Email Service</h3>
             <p className="text-text">Enjoy unlimited email accounts under your own domain with free spam protection and webmail access. Get the control and flexibility you need to manage your communication effectively.</p>
           </div>
@@ -102,7 +117,7 @@ const WebHostingEssentials = () => {
 
         <FeatureCard>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <SslIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Free SSL Certificate</h3>
             <p className="text-text">An SSL certificate boosts trust for your website visitors. Our cheap shared hosting plans include a free Let's Encrypt SSL certificate, no extra cost required.</p>
           </div>
@@ -119,8 +134,8 @@ const WebHostingEssentials = () => {
 
         <FeatureCard>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
-            <h3 className="text-title font-bold text-3xl">Simple Integration with Git</h3>
+            <GithubIcon className="fill-primary w-14 h-14" />
+            <h3 className="text-title font-bold text-3xl">Integration with Git</h3>
             <p className="text-text">Our servers come pre-installed with Git to streamline your development process.</p>
           </div>
           <div className="grow"></div>
@@ -128,7 +143,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Simple Integration with Git"), setModalData(<WHBlazingFast />), requestModal();
+              setModalTitle("Simple Integration with Git"), setModalData(<WHGit />), requestModal();
             }}
           />
         </FeatureCard>

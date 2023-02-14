@@ -1,6 +1,6 @@
 import React from "react";
-import DomainIcon from "../../../../../public/images/domainIcon.svg";
-import DomainGlobeIcon from "../../../../../public/images/domainGlobeIcon.svg";
+import DomainIcon from "../../../../../public/images/icons/domainIcon.svg";
+import DomainGlobeIcon from "../../../../../public/images/icons/domainGlobeIcon.svg";
 
 const WHFreeDotComDomain = () => {
   return (

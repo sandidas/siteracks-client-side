@@ -2,12 +2,12 @@ import { Button } from "@mantine/core";
 import React from "react";
 import BusinessHosting from "../../../public/images/nav/businessHosting.svg";
 
-import HostingServicesIcon from "../../../public/images/website/hostingServices.svg";
-import DomainIcon from "../../../public/images/website/domainIcon.svg";
-import EmailIcon from "../../../public/images/website/emailIcon.svg";
-import SecurityServicesIcon from "../../../public/images/website/securityServicesIcon.svg";
-import WebAppSolutionsIcon from "../../../public/images/website/webAppSolutions.svg";
-import WordPressSolutionsIcon from "../../../public/images/website/wordPressSolutions.svg";
+import HostingServicesIcon from "../../../public/images/icons/hostingServices.svg";
+import DomainIcon from "../../../public/images/icons/domainIcon.svg";
+import EmailIcon from "../../../public/images/icons/emailIcon.svg";
+import SecurityServicesIcon from "../../../public/images/icons/securityServicesIcon.svg";
+import WebAppSolutionsIcon from "../../../public/images/icons/webAppSolutions.svg";
+import WordPressSolutionsIcon from "../../../public/images/icons/wordPressSolutions.svg";
 import FeatureCard from "../Card/FeatureCard";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
