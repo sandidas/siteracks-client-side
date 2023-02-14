@@ -35,26 +35,26 @@ const LiveChat = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
               <FeatureCard background={true}>
-                <div className="space-y-5 lg:min-h-[290px]">
+                <div className="space-y-5">
                   <EnvelopeOpenIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-title font-bold text-3xl">Support Ticket</h3>
                   <p className="text-text">If you are an existing client, please open a support ticket to get faster and more accurate assistance</p>
                 </div>
-
+                <div className="grow"></div>
                 <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
                   <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
                 </Button>
               </FeatureCard>
               <FeatureCard background={true}>
-                <div className="space-y-5 lg:min-h-[290px]">
+                <div className="space-y-5">
                   <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-title font-bold text-3xl">Live Chat</h3>
                   <p className="text-text">Connect with our knowledgeable sales team for answers to any questions or concerns.</p>
                 </div>
-
+                <div className="grow"></div>
                 <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
                   <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
@@ -62,7 +62,7 @@ const LiveChat = () => {
               </FeatureCard>
 
               <FeatureCard background={true}>
-                <div className="space-y-5 lg:min-h-[290px]">
+                <div className="space-y-5">
                   <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
                   <h3 className="text-title font-bold text-3xl flex flex-col">
@@ -85,7 +85,7 @@ const LiveChat = () => {
                     )}
                   </p>
                 </div>
-
+                <div className="grow"></div>
                 <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
                   <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />

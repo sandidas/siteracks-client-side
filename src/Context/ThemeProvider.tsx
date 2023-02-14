@@ -34,9 +34,7 @@ export const ThemeProvider = ({ children }: any) => {
 
   useEffect(() => {
     const currentTheme = checkCurrentTheme() || "dark";
-    if (currentTheme !== "light" || "dark") {
-      setCurrentTheme("light");
-    } else if (currentTheme) {
+    if (currentTheme) {
       //@ts-ignore
       setColorScheme(currentTheme);
     } else {

@@ -29,7 +29,12 @@ const WebHosting = () => {
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WebHostingEssentials />
         </section>
-        <WebHostingPremiumAdvantage />
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <WebHostingPremiumAdvantage />
+        </section>
+
+
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WebHostingFaq />
         </section>
