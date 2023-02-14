@@ -37,7 +37,7 @@ export const ThemeProvider = ({ children }: any) => {
     // if (currentTheme !== "dark" || "light") {
     //   currentTheme = "dark";
     // }
-    currentTheme = currentTheme !== "light" || "dark" ? "dark" : currentTheme;
+    // currentTheme = currentTheme !== "light" || "dark" ? "dark" : currentTheme;
     console.log(currentTheme);
     if (currentTheme) {
       // @ts-ignore

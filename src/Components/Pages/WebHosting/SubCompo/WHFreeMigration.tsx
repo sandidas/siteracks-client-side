@@ -15,14 +15,10 @@ const WHFreeMigration = () => {
         </p>
       </div>
 
-      <div className="flex space-x-5">
-        <div></div>
-
-        <p className="text-text text-base lg:leading-7">
-          Our free website migration services include transferring all your files, databases, and emails, ensuring that your website runs smoothly on our servers. We aim to make the transition as seamless as possible, so you can focus on running your business without worrying about technicalities.
-          Our team will also ensure that your website's design and functionality are preserved, so you won't have to worry about disruptions to your website's performance.
-        </p>
-      </div>
+      <p className="text-text text-base lg:leading-7">
+        Our free website migration services include transferring all your files, databases, and emails, ensuring that your website runs smoothly on our servers. We aim to make the transition as seamless as possible, so you can focus on running your business without worrying about technicalities. Our
+        team will also ensure that your website's design and functionality are preserved, so you won't have to worry about disruptions to your website's performance.
+      </p>
     </div>
   );
 };

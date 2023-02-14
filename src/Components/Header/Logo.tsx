@@ -9,7 +9,7 @@ import SiteRacksLogoLight from "../../../public/logo/siteRacksLogoLight.svg";
 interface ILogo {
   logoHeight?: string;
   logoWidth?: string;
-};
+}
 const Logo = (props: ILogo) => {
   let { logoHeight, logoWidth } = props;
   if (logoHeight) {
@@ -26,15 +26,9 @@ const Logo = (props: ILogo) => {
 
   const { colorScheme: isDarkMode } = useThemeContext();
 
-  // console.log(isDarkMode);
+  //  console.log(isDarkMode);
 
-  return <>{
-    isDarkMode === "light" ? 
-  <SiteRacksLogoLight alt="SiteRacks" width={logoWidth} height={logoHeight} className='max-w-full' /> : 
-  <SiteRacksLogoDark alt="SiteRacks" width={logoWidth} height={logoHeight} className='max-w-full' />
-  
-}
-</>;
+  return <>{isDarkMode === "light" ? <SiteRacksLogoLight alt="SiteRacks" width={logoWidth} height={logoHeight} className="max-w-full" /> : <SiteRacksLogoDark alt="SiteRacks" width={logoWidth} height={logoHeight} className="max-w-full" />}</>;
 };
 
 export default Logo;

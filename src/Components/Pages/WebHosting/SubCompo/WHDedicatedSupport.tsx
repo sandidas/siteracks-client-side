@@ -1,5 +1,6 @@
 import React from "react";
-import OpenSupportTicketIcon from "../../../../../public/images/nav/openSupportTicket.svg";
+import OpenSupportTicketIcon from "../../../../../public/images/supportIcon.svg";
+import ClockIcon from "../../../../../public/images/24HoursIcon.svg";
 
 const WHDedicatedSupport = () => {
   return (
@@ -20,7 +21,7 @@ const WHDedicatedSupport = () => {
       </p>
 
       <div className="flex space-x-5 xl:space-x-10">
-        <div><OpenSupportTicketIcon className="w-28 h-28 fill-text" /></div>
+        <div><ClockIcon className="w-28 h-28 fill-text" /></div>
         <p className="text-text text-base lg:leading-7">
           We believe in providing personalized support to every one of our customers. Our support team takes the time to understand your individual needs and provides customized solutions tailored specifically to your situation. With our dedicated support, you can be assured that you will receive
           the highest level of customer service and technical expertise.

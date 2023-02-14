@@ -6,7 +6,7 @@ const WebHostingFaq = () => {
   return (
     <>
       <SectionTitle bottomSpace title="Frequently Asked Questions" />
-      <div className="max-w-4xl mx-auto lg:text-xl lg:leading-9">
+      <div className="max-w-5xl mx-auto lg:text-xl lg:leading-9">
 
         
         <FAQCard title="What is cloud web hosting?">
