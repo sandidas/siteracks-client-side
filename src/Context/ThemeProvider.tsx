@@ -33,9 +33,10 @@ export const ThemeProvider = ({ children }: any) => {
   // ================
 
   useEffect(() => {
-    const currentTheme = checkCurrentTheme() || "dark";
-    if (currentTheme) {
-      //@ts-ignore
+    let currentTheme = checkCurrentTheme() || "dark";
+
+    if (currentTheme == "light" || "dark") {
+      // @ts-ignore
       setColorScheme(currentTheme);
     } else {
       if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
