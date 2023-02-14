@@ -4,8 +4,8 @@ import FreeMigrationIcon from "../../../../../public/images/nav/transferDomain.s
 const WHFreeMigration = () => {
   return (
     <div className="space-y-8">
-      <div className="flex space-x-5 xl:space-x-10">
-        <div>
+      <div className="lg:flex xl:space-x-10">
+        <div className="py-3">
           <FreeMigrationIcon className="w-28 h-28 fill-text" />
         </div>
 

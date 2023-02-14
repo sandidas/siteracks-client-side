@@ -54,8 +54,8 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
         className="group"
       >
         {/* Modal content */}
-        <div className="text-title font-bold text-center text-2xl p-3 lg:p-10 space-x-2 flex w-full justify-between items-center rounded-3xl">
-          <div> {modalTitle && modalTitle} </div>
+        <div className="text-title font-bold text-2xl p-5 lg:p-10 space-x-2 flex w-full justify-between items-center rounded-3xl">
+          <div className="max-w-[90%]"> {modalTitle && modalTitle} </div>
 
           <button
             className="hover:bg-primary hover:text-light rounded-md p-2"
@@ -67,7 +67,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
           </button>
         </div>
 
-        <div className="p-3 lg:p-10 bg-surface">{modalData && modalData}</div>
+        <div className="p-5 lg:p-10 bg-surface">{modalData && modalData}</div>
 
         <div className="flex flex-col py-5 items-center">
           <PlainButton

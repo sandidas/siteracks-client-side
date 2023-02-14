@@ -12,6 +12,7 @@ import DummyImage from "../../../../public/images/DummyArticle.svg";
 import WHDedicatedSupport from "./SubCompo/WHDedicatedSupport";
 import WHFreeDotComDomain from "./SubCompo/WHFreeDotComDomain";
 import WHFreeMigration from "./SubCompo/WHFreeMigration";
+import WHOptimizedForCms from "./SubCompo/WHOptimizedForCms";
 import WHPremiumCloudServers from "./SubCompo/WHPremiumCloudServers";
 import WHPremiumWebsite from "./SubCompo/WHPremiumWebsite";
 import WHSolutionsForOnline from "./SubCompo/WHSolutionsForOnline";
@@ -158,7 +159,7 @@ const WebHostingArticle = () => {
                 text="LEARN MORE"
                 handler={() => {
                   setModalTitle("Optimized for CMS Applications and Ecommerce"),
-                  setModalData(<WHSolutionsForOnline />),
+                  setModalData(<WHOptimizedForCms />),
                   requestModal();
                 }}
               />

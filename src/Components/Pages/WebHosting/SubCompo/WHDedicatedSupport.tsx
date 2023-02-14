@@ -5,8 +5,8 @@ import ClockIcon from "../../../../../public/images/icons/24HoursIcon.svg";
 const WHDedicatedSupport = () => {
   return (
     <div className="space-y-8">
-      <div className="flex space-x-5 xl:space-x-10">
-        <div>
+      <div className="lg:flex xl:space-x-10">
+        <div className="py-3">
           <OpenSupportTicketIcon className="w-28 h-28 fill-text" />
         </div>
         <p className="text-text text-base lg:leading-7">
@@ -20,8 +20,10 @@ const WHDedicatedSupport = () => {
         latest tools and resources to help you resolve any issues you may face, no matter how complex they may be.
       </p>
 
-      <div className="flex space-x-5 xl:space-x-10">
-        <div><ClockIcon className="w-28 h-28 fill-text" /></div>
+      <div className="lg:flex xl:space-x-10">
+        <div className="py-3">
+          <ClockIcon className="w-28 h-28 fill-text" />
+        </div>
         <p className="text-text text-base lg:leading-7">
           We believe in providing personalized support to every one of our customers. Our support team takes the time to understand your individual needs and provides customized solutions tailored specifically to your situation. With our dedicated support, you can be assured that you will receive
           the highest level of customer service and technical expertise.

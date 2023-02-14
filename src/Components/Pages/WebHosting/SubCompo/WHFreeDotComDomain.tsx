@@ -5,8 +5,8 @@ import DomainGlobeIcon from "../../../../../public/images/icons/domainGlobeIcon.
 const WHFreeDotComDomain = () => {
   return (
     <div className="space-y-8">
-      <div className="flex space-x-5 xl:space-x-10">
-        <div>
+      <div className="lg:flex xl:space-x-10">
+        <div className="py-3">
           <DomainGlobeIcon className="w-28 h-28 fill-text" />
         </div>
         <p className="text-text text-base lg:leading-7">
@@ -19,8 +19,8 @@ const WHFreeDotComDomain = () => {
         Our annual plan includes various features and benefits that will help you establish a robust online presence, including website hosting, email hosting, and technical support. These plans also allow you to choose from a wide range of templates and designs, allowing you to customize your
         website to meet your specific needs and preferences.
       </p>
-      <div className="flex space-x-5 xl:space-x-10">
-        <div>
+      <div className="lg:flex xl:space-x-10">
+        <div className="py-3">
           <DomainIcon className="w-28 h-28 fill-text" />
         </div>
         <p className="text-text text-base lg:leading-7">
