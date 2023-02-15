@@ -9,7 +9,7 @@ import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
 import Head from "next/head";
 import React from "react";
 
-const WebHosting = () => {
+const WordPressHosting = () => {
   return (
     <>
       <Head>
@@ -33,7 +33,6 @@ const WebHosting = () => {
           <WebHostingPremiumAdvantage />
         </section>
 
-
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WebHostingFaq />
         </section>
@@ -42,4 +41,4 @@ const WebHosting = () => {
   );
 };
 
-export default WebHosting;
+export default WordPressHosting;

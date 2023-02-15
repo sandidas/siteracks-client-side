@@ -1,7 +1,6 @@
 import PlainButton from "@/Components/Buttons/PlainButton";
 import FeatureCard from "@/Components/Card/FeatureCard";
 import React from "react";
-import LatestTechIcon from "@/Components/Images/web-hosting/latestTechIcon.svg";
 import { useModalContext } from "@/Context/ModalProvider";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import WHTopNorthSecurity from "./SubCompo/WHTopNorthSecurity";
@@ -10,6 +9,18 @@ import WHDataCenter from "./SubCompo/WHDataCenter";
 import WHMalwareScan from "./SubCompo/WHMalwareScan";
 import WHUnlimitedSites from "./SubCompo/WHUnlimitedSites";
 import WHPrioritySupport from "./SubCompo/WHPrioritySupport";
+
+import MultipleWebsiteIcon from "../../../../public/images/icons/multipleWebsiteIcon.svg";
+import PrioritySupportIcon from "../../../../public/images/icons/prioritySupportIcon.svg";
+import PhpIcon from "../../../../public/images/icons/phpIcon.svg";
+import TopNorthSecurityIcon from "../../../../public/images/icons/TopNorthSecurityIcon.svg";
+import DataCenterIcon2 from "../../../../public/images/icons/dataCenterIcon2.svg";
+import BugScanIcon from "../../../../public/images/icons/bugScanIcon.svg";
+
+
+
+
+
 
 const WebHostingPremiumAdvantage = () => {
   // use modal context
@@ -22,7 +33,7 @@ const WebHostingPremiumAdvantage = () => {
 
       <FeatureCard background>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <MultipleWebsiteIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Host Unlimited Sites</h3>
             <p className="text-text">Host unlimited sites and reduce hosting costs by grouping low resource-demand sites under one account. Optimize your resources for maximum savings.</p>
           </div>
@@ -38,7 +49,7 @@ const WebHostingPremiumAdvantage = () => {
 
         <FeatureCard background>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <PrioritySupportIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Priority support</h3>
             <p className="text-text">Premium Hosting package users receive priority support from our top-notch agents for exceptional technical support experience with speed and quality.</p>
           </div>
@@ -55,7 +66,7 @@ const WebHostingPremiumAdvantage = () => {
 
         <FeatureCard background>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <PhpIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Ultra-Fast Updated PHP & MySQL</h3>
             <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p>
           </div>
@@ -73,7 +84,7 @@ const WebHostingPremiumAdvantage = () => {
         
         <FeatureCard background>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <TopNorthSecurityIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Top-north Security</h3>
             <p className="text-text">We prioritize the security of your sites by managing it at both server and application level. Our services include free SSL and daily backups, ensuring your data is protected. Trust us for a worry-free experience.</p>
           </div>
@@ -88,7 +99,7 @@ const WebHostingPremiumAdvantage = () => {
 
         <FeatureCard background>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <DataCenterIcon2 className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Pre-Defined Data center based on your location</h3>
             <p className="text-text">Our AI tool optimizes website performance by pre-selecting the best data center based on your proximity. This ensures seamless website loading</p>
           </div>
@@ -104,7 +115,7 @@ const WebHostingPremiumAdvantage = () => {
 
         <FeatureCard background>
           <div className="space-y-5">
-            <LatestTechIcon className="fill-primary w-14 h-14" />
+            <BugScanIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Malware Scan and Removal</h3>
             <p className="text-text">Don't become a victim of a hacked site. Our malware removal tool protects your website from any threats and malware, ensuring you never have to experience the frustration of a hacked site. Keep your site safe with our solution.</p>
           </div>
