@@ -7,6 +7,12 @@ import {  useModalContext } from "@/Context/ModalProvider";
 
 
 import DummyImage from "../../../../public/images/DummyArticle.svg";
+import FreeMigrationImage from "../../../../public/images/article/freeMigrationImage.svg";
+import PremiumWebsiteBuilderImage from "../../../../public/images/article/premium-website-builder.svg";
+import PremiumCloudServerImage from "../../../../public/images/article/premium-cloud-server.svg";
+import DedicatedSupportImage from "../../../../public/images/article/dedicated-support.svg";
+import FreeDomainImage from "../../../../public/images/article/free-domain.svg";
+import OptimizedCMSApp from "../../../../public/images/article/optimized-cms-app.svg";
 
 
 import WHDedicatedSupport from "./SubCompo/WHDedicatedSupport";
@@ -15,7 +21,6 @@ import WHFreeMigration from "./SubCompo/WHFreeMigration";
 import WHOptimizedForCms from "./SubCompo/WHOptimizedForCms";
 import WHPremiumCloudServers from "./SubCompo/WHPremiumCloudServers";
 import WHPremiumWebsite from "./SubCompo/WHPremiumWebsite";
-import WHSolutionsForOnline from "./SubCompo/WHSolutionsForOnline";
 
 const WebHostingArticle = () => {
 
@@ -43,7 +48,7 @@ const WebHostingArticle = () => {
             {/* Premium Website Builder*/}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
+                <PremiumWebsiteBuilderImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Premium Website Builder">
@@ -65,7 +70,7 @@ const WebHostingArticle = () => {
             {/* Free Website Migration */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-              <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
+              <FreeMigrationImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Free Website Migration">
@@ -85,7 +90,7 @@ const WebHostingArticle = () => {
             {/* Premium Cloud Servers */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
+                <PremiumCloudServerImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Premium Cloud Servers">
@@ -106,7 +111,7 @@ const WebHostingArticle = () => {
             {/* Dedicated Support */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
+                <DedicatedSupportImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Dedicated Support">
@@ -127,7 +132,7 @@ const WebHostingArticle = () => {
             {/* Free .com Domain with Annual Plan */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
+                <FreeDomainImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Free .com Domain">
@@ -148,7 +153,7 @@ const WebHostingArticle = () => {
             {/* Optimized for CMS Applications and Ecommerce */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
-                <DummyImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
+                <OptimizedCMSApp className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
               </div>
 
               <ColumnTitleAndDesc title="Optimized for CMS Applications and E-Commerce">
