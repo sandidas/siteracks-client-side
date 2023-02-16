@@ -1,13 +1,13 @@
 import PlainButton from "@/Components/Buttons/PlainButton";
 import FeatureCard from "@/Components/Card/FeatureCard";
 import WHFreeSSL from "@/Components/ModalComponents/WHFreeSSL";
-import WHTopNorthSecurity from "@/Components/ModalComponents/WHTopNorthSecurity";
+
 import WHUltraFastPHP from "@/Components/ModalComponents/WHUltraFastPHP";
 import WHUnlimitedSites from "@/Components/ModalComponents/WHUnlimitedSites";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import { useModalContext } from "@/Context/ModalProvider";
 import React from "react";
-import TopNorthSecurityIcon from "../../../../public/images/icons/TopNorthSecurityIcon.svg";
+
 import PhpIcon from "../../../../public/images/icons/phpIcon.svg";
 import WordPressIcon from "../../../../public/images/icons/wordPressSolutions.svg";
 import SslIcon from "../../../../public/images/icons/sslIcon.svg";
@@ -15,6 +15,8 @@ import MultipleWebsiteIcon from "../../../../public/images/icons/multipleWebsite
 import WHEasyManagedWordPress from "@/Components/ModalComponents/WHEasyManagedWordPress";
 import WHDataCenter from "@/Components/ModalComponents/WHDataCenter";
 import DataCenterIcon2 from "../../../../public/images/icons/dataCenterIcon2.svg";
+import WHBusinessEmail from "@/Components/ModalComponents/WHBusinessEmail";
+import EmailIcon from "../../../../public/images/icons/emailIcon.svg";
 
 const WordPressHostingMoreBenefits = () => {
   const { requestModal, setModalData, setModalTitle } = useModalContext();
@@ -71,20 +73,6 @@ const WordPressHostingMoreBenefits = () => {
           />
         </FeatureCard>
 
-        <FeatureCard>
-          <div className="space-y-5">
-            <TopNorthSecurityIcon className="fill-primary w-14 h-14" />
-            <h3 className="text-title font-bold text-3xl">Top-north Security</h3>
-            <p className="text-text">We prioritize the security of your sites by managing it at both server and application level. Our services include free SSL and daily backups, ensuring your data is protected. Trust us for a worry-free experience.</p>
-          </div>
-          <div className="grow"></div>
-          <PlainButton
-            text="LEARN MORE"
-            handler={() => {
-              setModalTitle("Top-north Security"), setModalData(<WHTopNorthSecurity />), requestModal();
-            }}
-          />
-        </FeatureCard>
 
         <FeatureCard>
           <div className="space-y-5">
@@ -117,6 +105,26 @@ const WordPressHostingMoreBenefits = () => {
             }}
           />
         </FeatureCard>
+
+
+        <FeatureCard>
+          <div className="space-y-5">
+            <EmailIcon className="fill-primary w-14 h-14" />
+            <h3 className="text-title font-bold text-3xl">Business Email Service</h3>
+            <p className="text-text">Enjoy unlimited email accounts under your own domain with free spam protection and webmail access. Get the control and flexibility you need to manage your communication effectively.</p>
+          </div>
+          <div className="grow"></div>
+          {/* footer */}
+          <PlainButton
+            text="LEARN MORE"
+            handler={() => {
+              setModalTitle("Business Email Service"), setModalData(<WHBusinessEmail />), requestModal();
+            }}
+          />
+        </FeatureCard>
+
+
+
       </div>
     </>
   );
