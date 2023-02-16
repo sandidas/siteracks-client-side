@@ -1,7 +1,11 @@
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import React from "react";
+import FCDedicatedSupport from "../FeatureCard/FCDedicatedSupport";
+import FCFreeDomain from "../FeatureCard/FCFreeDomain";
+import FCFreeWebsiteMigration from "../FeatureCard/FCFreeWebsiteMigration";
 import FCManagedWordPressHosting from "../FeatureCard/FCManagedWordPressHosting";
+import FEDedicatedWordPressExpert from "../FeatureCard/FEDedicatedWordPressExpert";
 import WordPressHostingBanner from "./WordPressHostingBanner";
 
 const WordPressHostingArticle = () => {
@@ -21,21 +25,9 @@ const WordPressHostingArticle = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-16 2xl:gap-32">
             <FCManagedWordPressHosting />
-            {/* <FCPremiumCloudServers /> */}
-            {/* Premium Website Builder*/}
-            {/* <FCPremiumWebsiteBuilder /> */}
-
-            {/* Free Website Migration */}
-            {/* <FCFreeWebsiteMigration /> */}
-
-            {/* Dedicated Support */}
-
-            {/* <FCDedicatedSupport /> */}
-
-            {/* Free .com Domain with Annual Plan */}
-            {/* <FCFreeDomain /> */}
-
-            {/* Optimized for CMS Applications and Ecommerce */}
+            <FEDedicatedWordPressExpert />
+            <FCFreeWebsiteMigration />
+            <FCFreeDomain />
           </div>
         </div>
       </section>
