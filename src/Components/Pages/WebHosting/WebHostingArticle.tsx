@@ -2,34 +2,22 @@
 import PlainButton from "@/Components/Buttons/PlainButton";
 import ColumnTitleAndDesc from "@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-import {  useModalContext } from "@/Context/ModalProvider";
+import { useModalContext } from "@/Context/ModalProvider";
 
-
-
-import DummyImage from "../../../../public/images/DummyArticle.svg";
-import FreeMigrationImage from "../../../../public/images/article/freeMigrationImage.svg";
-import PremiumWebsiteBuilderImage from "../../../../public/images/article/premium-website-builder.svg";
-import PremiumCloudServerImage from "../../../../public/images/article/premium-cloud-server.svg";
-import DedicatedSupportImage from "../../../../public/images/article/dedicated-support.svg";
-import FreeDomainImage from "../../../../public/images/article/free-domain.svg";
 import OptimizedCMSApp from "../../../../public/images/article/optimized-cms-app.svg";
 
-
-import WHDedicatedSupport from "./SubCompo/WHDedicatedSupport";
-import WHFreeDotComDomain from "./SubCompo/WHFreeDotComDomain";
-import WHFreeMigration from "./SubCompo/WHFreeMigration";
 import WHOptimizedForCms from "./SubCompo/WHOptimizedForCms";
-import WHPremiumCloudServers from "./SubCompo/WHPremiumCloudServers";
-import WHPremiumWebsite from "./SubCompo/WHPremiumWebsite";
+import FCPremiumCloudServers from "../FeatureCard/FCPremiumCloudServers";
+import FCPremiumWebsiteBuilder from "../FeatureCard/FCPremiumWebsiteBuilder";
+import FCFreeWebsiteMigration from "../FeatureCard/FCFreeWebsiteMigration";
+import FCDedicatedSupport from "../FeatureCard/FCDedicatedSupport";
+import FCFreeDomain from "../FeatureCard/FCFreeDomain";
 
 const WebHostingArticle = () => {
-
-
   const { requestModal, setModalData, setModalTitle } = useModalContext();
 
   return (
     <>
-       
       <section className="py-[10vh] bg-surface">
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
@@ -43,113 +31,20 @@ const WebHostingArticle = () => {
           {/* article container  */}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-16 2xl:gap-32">
-
-            
+            <FCPremiumCloudServers />
             {/* Premium Website Builder*/}
-            <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full">
-                <PremiumWebsiteBuilderImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
-              </div>
-
-              <ColumnTitleAndDesc title="Premium Website Builder">
-                <p className="text-text lg:text-xl lg:leading-9">Premium Website Builder offers powerful tools, customization options, and professional design templates to create stunning websites easily.</p>
-              </ColumnTitleAndDesc>
-
-              <PlainButton
-                text="LEARN MORE"
-                handler={() => {
-                  setModalTitle("Premium Website Builder"),
-                  setModalData(<WHPremiumWebsite />),
-                  requestModal();
-                }}
-              />
-
-
-            </article>
+            <FCPremiumWebsiteBuilder />
 
             {/* Free Website Migration */}
-            <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full">
-              <FreeMigrationImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
-              </div>
-
-              <ColumnTitleAndDesc title="Free Website Migration">
-                <p className="text-text lg:text-xl lg:leading-9">Our specially trained technical experts perform the process and ensure that your website is moved smoothly, with minimum downtime.</p>
-              </ColumnTitleAndDesc>
-
-              <PlainButton
-                text="LEARN MORE"
-                handler={() => {
-                  setModalTitle("Free Website Migration"),
-                  setModalData(<WHFreeMigration />),
-                  requestModal();
-                }}
-              />
-            </article>
-
-            {/* Premium Cloud Servers */}
-            <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full">
-                <PremiumCloudServerImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
-              </div>
-
-              <ColumnTitleAndDesc title="Premium Cloud Servers">
-                <p className="text-text lg:text-xl lg:leading-9">Enjoy better latency and lesser downtime while keeping your account and data always secured. Our platform is built with Premium AWS Cloud and Digital Ocean Cloud servers.</p>
-              </ColumnTitleAndDesc>
-
-              <PlainButton
-                text="LEARN MORE"
-                handler={() => {
-                  setModalTitle("Premium Cloud Servers"),
-                  setModalData(<WHPremiumCloudServers />),
-                  requestModal()
-                }}
-              />
-            </article>
-
+            <FCFreeWebsiteMigration />
 
             {/* Dedicated Support */}
-            <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full">
-                <DedicatedSupportImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
-              </div>
 
-              <ColumnTitleAndDesc title="Dedicated Support">
-                <p className="text-text lg:text-xl lg:leading-9">Our support team takes the time to understand your individual needs and provides customized solutions that are tailored specifically to your situation. </p>
-              </ColumnTitleAndDesc>
+            <FCDedicatedSupport />
 
-              <PlainButton
-                text="LEARN MORE"
-                handler={() => {
-                  setModalTitle("Dedicated Support"),
-                  setModalData(<WHDedicatedSupport />),
-                  requestModal()
-                }}
-              />
-            </article>
-
-            
             {/* Free .com Domain with Annual Plan */}
-            <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full">
-                <FreeDomainImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
-              </div>
+            <FCFreeDomain />
 
-              <ColumnTitleAndDesc title="Free .com Domain">
-                <p className="text-text lg:text-xl lg:leading-9">Having a .com domain gives you credibility and a professional image, which is essential in today's digital age.</p>
-              </ColumnTitleAndDesc>
-
-              <PlainButton
-                text="LEARN MORE"
-                handler={() => {
-                  setModalTitle("Free .com Domain with Annual Plan"),
-                  setModalData(<WHFreeDotComDomain />),
-                  requestModal();
-                }}
-              />
-            </article>
-
-            
             {/* Optimized for CMS Applications and Ecommerce */}
             <article className="flex flex-col space-y-8 group items-start">
               <div className="w-full">
@@ -163,17 +58,13 @@ const WebHostingArticle = () => {
               <PlainButton
                 text="LEARN MORE"
                 handler={() => {
-                  setModalTitle("Optimized for CMS Applications and Ecommerce"),
-                  setModalData(<WHOptimizedForCms />),
-                  requestModal();
+                  setModalTitle("Optimized for CMS Applications and Ecommerce"), setModalData(<WHOptimizedForCms />), requestModal();
                 }}
               />
             </article>
-
-
           </div>
         </div>
-      </section>       
+      </section>
     </>
   );
 };

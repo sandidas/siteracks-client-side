@@ -1,10 +1,12 @@
 import LiveChat from "@/Components/LiveChat/LiveChat";
-import WebHostingArticle from "@/Components/Pages/WebHosting/WebHostingArticle";
-import WebHostingBanner from "@/Components/Pages/WebHosting/WebHostingBanner";
-import WebHostingEssentials from "@/Components/Pages/WebHosting/WebHostingEssentials";
-import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
-import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
-import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
+import WordPressHostingArticle from "@/Components/Pages/WordPressHosting/WordPressHostingArticle";
+import WordPressHostingBanner from "@/Components/Pages/WordPressHosting/WordPressHostingBanner";
+import WordPressHostingDedicatedSupport from "@/Components/Pages/WordPressHosting/WordPressHostingDedicatedSupport";
+import WordPressHostingFaq from "@/Components/Pages/WordPressHosting/WordPressHostingFaq";
+import WordPressHostingMoreBenefits from "@/Components/Pages/WordPressHosting/WordPressHostingMoreBenefits";
+import WordPressHostingPricing from "@/Components/Pages/WordPressHosting/WordPressHostingPricing";
+import WordPressHostingWhySR from "@/Components/Pages/WordPressHosting/WordPressHostingWhySR";
+ 
 
 import Head from "next/head";
 import React from "react";
@@ -13,28 +15,32 @@ const WordPressHosting = () => {
   return (
     <>
       <Head>
-        <title>Web Hosting | SiteRacks</title>
+        <title>WordPress Hosting | SiteRacks</title>
         <meta name="description" content="SiteRacks" />
       </Head>
       <main>
         <section className="bg-surface">
-          <WebHostingBanner />
+          <WordPressHostingBanner />
         </section>
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WebHostingPricing />
+          <WordPressHostingPricing />
         </section>
-        <WebHostingArticle />
+        <WordPressHostingArticle />
+    
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <WordPressHostingWhySR />
+        </section>
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <WordPressHostingMoreBenefits />
+        </section>
+
+        <WordPressHostingDedicatedSupport />
+
+
         <LiveChat />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WebHostingEssentials />
-        </section>
-
-        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WebHostingPremiumAdvantage />
-        </section>
-
-        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WebHostingFaq />
+          <WordPressHostingFaq />
         </section>
       </main>
     </>
