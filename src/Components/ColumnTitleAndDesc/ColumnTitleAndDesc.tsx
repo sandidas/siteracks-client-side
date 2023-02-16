@@ -12,9 +12,9 @@ const ColumnTitleAndDesc = ({ supTitle, title, subTitle, children, colorOnDark }
     <div className="space-y-4">
       {/* Print without subtitle  */}
       {/* If color on dark background  */}
-      {title && !subTitle && !supTitle && <h2 className={`text-3xl lg:text-4xl lg:leading-snug font-bold ${colorOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>}
+      {/* {title && !subTitle && !supTitle && <h2 className={`text-3xl lg:text-4xl lg:leading-snug font-bold ${colorOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>} */}
 
-      {/* Print with subtitle  */}
+      {/* Print with subtitle 
       {title && subTitle && !supTitle && (
         <h2 className="flex flex-col">
           {" "}
@@ -26,15 +26,15 @@ const ColumnTitleAndDesc = ({ supTitle, title, subTitle, children, colorOnDark }
             </>
           )}
         </h2>
-      )}
+      )} */}
 
       {/* Print with supTitle, title and subtitle  */}
-      {title && supTitle && (
+      {title && (
         <h2 className="flex flex-col">
           {" "}
           {title && (
             <>
-              <span className="text-text">{supTitle}s</span>
+              <span className="text-text"> {supTitle && supTitle} </span>
               <span className={`text-3xl lg:text-4xl lg:leading-snug font-bold ${colorOnDark ? "text-white" : "text-title"}`}>{title}</span>
 
               <span className="text-2xl text-slate-500 leading-snug font-light">{subTitle && subTitle}</span>

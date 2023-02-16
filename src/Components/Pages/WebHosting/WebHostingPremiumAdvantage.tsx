@@ -9,10 +9,10 @@ import WHDataCenter from "../../ModalComponents/WHDataCenter";
 import WHMalwareScan from "../../ModalComponents/WHMalwareScan";
 import WHUnlimitedSites from "../../ModalComponents/WHUnlimitedSites";
 import WHPrioritySupport from "../../ModalComponents/WHPrioritySupport";
-
+import PhpIcon from "../../../../public/images/icons/phpIcon.svg";
 import MultipleWebsiteIcon from "../../../../public/images/icons/multipleWebsiteIcon.svg";
 import PrioritySupportIcon from "../../../../public/images/icons/prioritySupportIcon.svg";
-import PhpIcon from "../../../../public/images/icons/phpIcon.svg";
+
 import TopNorthSecurityIcon from "../../../../public/images/icons/TopNorthSecurityIcon.svg";
 import DataCenterIcon2 from "../../../../public/images/icons/dataCenterIcon2.svg";
 import BugScanIcon from "../../../../public/images/icons/bugScanIcon.svg";

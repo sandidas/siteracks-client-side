@@ -2,7 +2,8 @@ import React from "react";
 
 interface ITitleAndDescription {
   title: string;
-  subTitle?: string;
+  supTitle?: string | undefined;
+  subTitle?: string | undefined;
   description?: string;
   leftAlignDesktop?: boolean;
   leftAlignOnMobile?: boolean;
@@ -22,24 +23,41 @@ interface ITitleAndDescription {
 //   titleOnDark: false,
 // }
 
-const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSpace, children, titleOnDark, leftAlignOnMobile }: ITitleAndDescription) => {
+const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSpace, children, titleOnDark, leftAlignOnMobile, supTitle }: ITitleAndDescription) => {
   // ${leftAlignDesktop && "lg:text-left"} ${leftAlignOnMobile && "sm:max-lg:text-left"} ${!leftAlignDesktop && !leftAlignOnMobile && "text-center"} ${bottomSpace && "pb-16"}
 
   return (
     // If left alignment is not true then 'text-center' class will be not applied
     <div className={`flex flex-col space-y-8 max-w-5xl mx-auto w-full ${leftAlignDesktop ? "lg:text-left" : ""} ${leftAlignOnMobile ? "sm:max-lg:text-left" : ""} ${!leftAlignDesktop && !leftAlignOnMobile ? "text-center" : ""} ${bottomSpace ? "pb-16" : ""}`}>
       {/* Print without subtitle  */}
-      {title && !subTitle && <h2 className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>}
+      {/* {title && !subTitle && <h2 className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>} */}
 
       {/* Print with subtitle  */}
+{/*       
       {title && subTitle && (
         <h2 className="flex flex-col">
           {" "}
+          <span className="text-text"> {supTitle && supTitle}</span>
           {title && (
             <>
               <span className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}>{title}</span>
 
               <span className="text-2xl text-slate-500 font-light">{subTitle}</span>
+            </>
+          )}
+        </h2>
+      )} */}
+
+      {/* Print with subtitle  */}
+      {title && (
+        <h2 className="flex flex-col">
+          {" "}
+          <span className="text-text text-2xl"> {supTitle && supTitle}</span>
+          {title && (
+            <>
+              <span className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}>{title}</span>
+
+              <span className="text-2xl text-slate-500 font-light">{subTitle && subTitle}</span>
             </>
           )}
         </h2>

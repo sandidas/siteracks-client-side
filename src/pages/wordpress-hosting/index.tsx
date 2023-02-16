@@ -1,15 +1,14 @@
+import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import WordPressHostingArticle from "@/Components/Pages/WordPressHosting/WordPressHostingArticle";
 import WordPressHostingBanner from "@/Components/Pages/WordPressHosting/WordPressHostingBanner";
-import WordPressHostingDedicatedSupport from "@/Components/Pages/WordPressHosting/WordPressHostingDedicatedSupport";
 import WordPressHostingFaq from "@/Components/Pages/WordPressHosting/WordPressHostingFaq";
 import WordPressHostingMoreBenefits from "@/Components/Pages/WordPressHosting/WordPressHostingMoreBenefits";
 import WordPressHostingPricing from "@/Components/Pages/WordPressHosting/WordPressHostingPricing";
-import WordPressHostingWhySR from "@/Components/Pages/WordPressHosting/WordPressHostingWhySR";
- 
 
 import Head from "next/head";
 import React from "react";
+import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
 
 const WordPressHosting = () => {
   return (
@@ -26,18 +25,14 @@ const WordPressHosting = () => {
           <WordPressHostingPricing />
         </section>
         <WordPressHostingArticle />
-    
-        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WordPressHostingWhySR />
-        </section>
 
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WordPressHostingMoreBenefits />
         </section>
-
-        <WordPressHostingDedicatedSupport />
-
-
+        <MoneyBackGuarantee />
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <WordPressBusinessTools />
+        </section>
         <LiveChat />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WordPressHostingFaq />

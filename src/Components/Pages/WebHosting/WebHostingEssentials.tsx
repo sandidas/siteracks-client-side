@@ -12,7 +12,6 @@ import WHFreeSSL from "../../ModalComponents/WHFreeSSL";
 import WHGit from "../../ModalComponents/WHGit";
 
 
-import LatestTechIcon from "@/Components/Images/web-hosting/latestTechIcon.svg";
 
 import PaperPlaneIconFast from "../../../../public/images/icons/paperPlaneIconFast.svg";
 import DashboardIcon from "../../../../public/images/icons/dashboardIcon.svg";

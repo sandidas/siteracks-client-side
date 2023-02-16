@@ -15,7 +15,7 @@ const FEDedicatedWordPressExpert = () => {
           <DedicatedWordpressExpert className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
         </div>
 
-        <ColumnTitleAndDesc supTitle="Take the premium Or ultimate plan and get a " title="Dedicated Wordpress Expert">
+        <ColumnTitleAndDesc supTitle="Take the premium Or ultimate plan and get a" title="Dedicated Wordpress Expert">
           <p className="text-text lg:text-xl lg:leading-9">With our premium package, you'll receive a specialized WordPress expert to assist with building and resolving any WordPress-related concerns for your site.</p>
         </ColumnTitleAndDesc>
 
