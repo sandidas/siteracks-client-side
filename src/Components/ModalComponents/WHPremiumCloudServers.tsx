@@ -1,6 +1,6 @@
 import React from "react";
-import AmazonIcon from "../../../../../public/images/icons/amazonIcon.svg";
-import DigitaloceanIcon from "../../../../../public/images/icons/digitaloceanIcon.svg";
+import AmazonIcon from "../../../public/images/icons/amazonIcon.svg";
+import DigitaloceanIcon from "../../../public/images/icons/digitaloceanIcon.svg";
 
 const WHPremiumCloudServers = () => {
   return (

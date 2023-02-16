@@ -3,12 +3,12 @@ import FeatureCard from "@/Components/Card/FeatureCard";
 import React from "react";
 import { useModalContext } from "@/Context/ModalProvider";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-import WHTopNorthSecurity from "./SubCompo/WHTopNorthSecurity";
-import WHUltraFastPHP from "./SubCompo/WHUltraFastPHP";
-import WHDataCenter from "./SubCompo/WHDataCenter";
-import WHMalwareScan from "./SubCompo/WHMalwareScan";
-import WHUnlimitedSites from "./SubCompo/WHUnlimitedSites";
-import WHPrioritySupport from "./SubCompo/WHPrioritySupport";
+import WHTopNorthSecurity from "../../ModalComponents/WHTopNorthSecurity";
+import WHUltraFastPHP from "../../ModalComponents/WHUltraFastPHP";
+import WHDataCenter from "../../ModalComponents/WHDataCenter";
+import WHMalwareScan from "../../ModalComponents/WHMalwareScan";
+import WHUnlimitedSites from "../../ModalComponents/WHUnlimitedSites";
+import WHPrioritySupport from "../../ModalComponents/WHPrioritySupport";
 
 import MultipleWebsiteIcon from "../../../../public/images/icons/multipleWebsiteIcon.svg";
 import PrioritySupportIcon from "../../../../public/images/icons/prioritySupportIcon.svg";

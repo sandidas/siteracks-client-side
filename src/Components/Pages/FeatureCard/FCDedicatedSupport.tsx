@@ -3,7 +3,7 @@ import PlainButton from '@/Components/Buttons/PlainButton';
 import ColumnTitleAndDesc from '@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc';
 import { useModalContext } from '@/Context/ModalProvider';
 import React from 'react';
-import WHDedicatedSupport from '../WebHosting/SubCompo/WHDedicatedSupport';
+import WHDedicatedSupport from '../../ModalComponents/WHDedicatedSupport';
 import DedicatedSupportImage from "../../../../public/images/article/dedicated-support.svg";
 
 const FCDedicatedSupport = () => {

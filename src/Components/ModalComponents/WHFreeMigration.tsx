@@ -1,5 +1,5 @@
 import React from "react";
-import FreeMigrationIcon from "../../../../../public/images/nav/transferDomain.svg";
+import FreeMigrationIcon from "../../../public/images/nav/transferDomain.svg";
 
 const WHFreeMigration = () => {
   return (

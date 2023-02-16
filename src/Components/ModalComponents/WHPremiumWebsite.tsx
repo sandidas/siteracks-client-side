@@ -1,5 +1,5 @@
 import React from "react";
-import WordPressIcon from "../../../../../public/images/nav/WordPress.svg";
+import WordPressIcon from "../../../public/images/nav/WordPress.svg";
 const WHPremiumWebsite = () => {
   return (
     <div className="space-y-8">

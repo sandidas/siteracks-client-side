@@ -3,7 +3,7 @@ import ColumnTitleAndDesc from '@/Components/ColumnTitleAndDesc/ColumnTitleAndDe
 import { useModalContext } from '@/Context/ModalProvider';
 import React from 'react';
 import FreeDomainImage from "../../../../public/images/article/free-domain.svg";
-import WHFreeDotComDomain from '../WebHosting/SubCompo/WHFreeDotComDomain';
+import WHFreeDotComDomain from '../../ModalComponents/WHFreeDotComDomain';
 
 const FCFreeDomain = () => {
     const { requestModal, setModalData, setModalTitle } = useModalContext();

@@ -4,7 +4,7 @@ import ColumnTitleAndDesc from "@/Components/ColumnTitleAndDesc/ColumnTitleAndDe
 import { useModalContext } from "@/Context/ModalProvider";
 import React from "react";
 import PremiumWebsiteBuilderImage from "../../../../public/images/article/premium-website-builder.svg";
-import WHPremiumWebsite from "../WebHosting/SubCompo/WHPremiumWebsite";
+import WHPremiumWebsite from "../../ModalComponents/WHPremiumWebsite";
 
 const FCPremiumWebsiteBuilder = () => {
     const { requestModal, setModalData, setModalTitle } = useModalContext();

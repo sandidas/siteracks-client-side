@@ -6,7 +6,7 @@ import { useModalContext } from "@/Context/ModalProvider";
 
 import OptimizedCMSApp from "../../../../public/images/article/optimized-cms-app.svg";
 
-import WHOptimizedForCms from "./SubCompo/WHOptimizedForCms";
+import WHOptimizedForCms from "../../ModalComponents/WHOptimizedForCms";
 import FCPremiumCloudServers from "../FeatureCard/FCPremiumCloudServers";
 import FCPremiumWebsiteBuilder from "../FeatureCard/FCPremiumWebsiteBuilder";
 import FCFreeWebsiteMigration from "../FeatureCard/FCFreeWebsiteMigration";

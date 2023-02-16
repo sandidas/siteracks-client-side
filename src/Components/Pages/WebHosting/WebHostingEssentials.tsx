@@ -3,13 +3,13 @@ import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import React from "react";
 import PlainButton from "@/Components/Buttons/PlainButton";
 import { useModalContext } from "@/Context/ModalProvider";
-import WHBlazingFast from "./SubCompo/WHBlazingFast";
-import WHEasyAndUserFriendly from "./SubCompo/WHEasyAndUserFriendly";
-import WHEasyManagedWordPress from "./SubCompo/WHEasyManagedWordPress";
-import WHDomainManagement from "./SubCompo/WHDomainManagement";
-import WHBusinessEmail from "./SubCompo/WHBusinessEmail";
-import WHFreeSSL from "./SubCompo/WHFreeSSL";
-import WHGit from "./SubCompo/WHGit";
+import WHBlazingFast from "../../ModalComponents/WHBlazingFast";
+import WHEasyAndUserFriendly from "../../ModalComponents/WHEasyAndUserFriendly";
+import WHEasyManagedWordPress from "../../ModalComponents/WHEasyManagedWordPress";
+import WHDomainManagement from "../../ModalComponents/WHDomainManagement";
+import WHBusinessEmail from "../../ModalComponents/WHBusinessEmail";
+import WHFreeSSL from "../../ModalComponents/WHFreeSSL";
+import WHGit from "../../ModalComponents/WHGit";
 
 
 import LatestTechIcon from "@/Components/Images/web-hosting/latestTechIcon.svg";

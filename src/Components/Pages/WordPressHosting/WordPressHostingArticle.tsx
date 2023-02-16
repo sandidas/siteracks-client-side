@@ -1,6 +1,7 @@
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import React from "react";
+import FCManagedWordPressHosting from "../FeatureCard/FCManagedWordPressHosting";
 import WordPressHostingBanner from "./WordPressHostingBanner";
 
 const WordPressHostingArticle = () => {
@@ -10,15 +11,16 @@ const WordPressHostingArticle = () => {
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
             <SectionTitle
-              title="Maximize Your Offline Business with the Power of the Internet"
+              title="Why SiteRacks for WordPress Hosting"
               bottomSpace={true}
-              description={`Maximize Your Offline Business by Utilizing the Power of Online Platforms. Get ahead of the competition and expand your reach to potential customers with the help of the internet.`}
+              description={`Our WordPress-optimized servers can provide significant benefits for website owners, including faster loading times, increased security, and improved scalability. Optimized servers are designed to handle the specific demands of WordPress, making it easier to manage and maintain websites while providing a better user experience for visitors.`}
             />
           </div>
 
           {/* article container  */}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-16 2xl:gap-32">
+            <FCManagedWordPressHosting />
             {/* <FCPremiumCloudServers /> */}
             {/* Premium Website Builder*/}
             {/* <FCPremiumWebsiteBuilder /> */}

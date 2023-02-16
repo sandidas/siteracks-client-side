@@ -33,7 +33,7 @@ const WordPressHostingBanner = () => {
         </Button>
       </div>
 
-      <div className="flex flex-col justify-start items-center w-full md:col-span-6">
+      <div className="flex flex-col justify-start items-center w-full md:col-span-6 bg-purple-900">
         <PremiumWebsiteBuilder className="w-full h-fit hidden md:block fill-primary" />
       </div>
     </div>

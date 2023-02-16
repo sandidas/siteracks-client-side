@@ -1,6 +1,7 @@
 import React from "react";
-import OpenSupportTicketIcon from "../../../../../public/images/icons/supportIcon.svg";
-import ClockIcon from "../../../../../public/images/icons/24HoursIcon.svg";
+
+import OpenSupportTicketIcon from "../../../public/images/icons/supportIcon.svg";
+import ClockIcon from "../../../public/images/icons/24HoursIcon.svg";
 
 const WHDedicatedSupport = () => {
   return (

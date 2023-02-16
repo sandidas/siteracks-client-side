@@ -4,7 +4,7 @@ import ColumnTitleAndDesc from "@/Components/ColumnTitleAndDesc/ColumnTitleAndDe
 import { useModalContext } from "@/Context/ModalProvider";
 import React from "react";
 import PremiumCloudServerImage from "../../../../public/images/article/premium-cloud-server.svg";
-import WHPremiumCloudServers from "../WebHosting/SubCompo/WHPremiumCloudServers";
+import WHPremiumCloudServers from "../../ModalComponents/WHPremiumCloudServers";
 
 const FCPremiumCloudServers = () => {
     const { requestModal, setModalData, setModalTitle } = useModalContext();
