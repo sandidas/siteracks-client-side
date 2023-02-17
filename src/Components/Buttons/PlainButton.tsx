@@ -9,7 +9,7 @@ interface IButton{
 const PlainButton = ({text, handler}:IButton) => {
     return (
         <button onClick={handler}
-        className="transition ease-in-out duration-500 flex h-10 items-center font-medium text-primary hover:animate-pulse "
+        className="transition ease-in-out duration-500 flex h-10 items-center font-medium text-primary hover:animate-pulse"
         >
             <span className='py-2 tracking-normal group-hover:tracking-wider duration-300 border-b-2 border-surface hover:border-primary dark:hover:border-primary'>
             {text && text}
