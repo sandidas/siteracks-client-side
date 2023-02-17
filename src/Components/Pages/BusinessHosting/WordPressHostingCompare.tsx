@@ -1,13 +1,129 @@
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import React from "react";
 
-
 const comparisonData = [
-    {
-        title:"",
-        status: true,
-    },
-]
+  {
+    title: "Premium Server and Resources",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Hosting for High-Traffic Websites",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+
+  {
+    title: "Free WordPress Website Design Tools",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+
+  {
+    title: "Unlimited Traffic",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Unlimited Space",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "24/7 VIP Support",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Maximum Performance",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Control Panel",
+    bizHostingStatus: true,
+    sharedHostingStatus: true,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "1-click CMS Installs",
+    bizHostingStatus: true,
+    sharedHostingStatus: true,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "24/7 Security Monitoring",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Free 100% Drag and Drop Page Builder",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Dedicated WordPress Expert",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Instantly Scalable",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Best for Custom CMS, eCommerce, WooCommerce  Business, Blog Websites",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Daily Backups",
+    bizHostingStatus: true,
+    sharedHostingStatus: true,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Free Email Accounts",
+    bizHostingStatus: true,
+    sharedHostingStatus: true,
+    popover: "",
+    detailsLink: "",
+  },
+  {
+    title: "Unlimited MySQL DB",
+    bizHostingStatus: true,
+    sharedHostingStatus: false,
+    popover: "",
+    detailsLink: "",
+  },
+];
 
 const WordPressHostingCompare = () => {
   return (
