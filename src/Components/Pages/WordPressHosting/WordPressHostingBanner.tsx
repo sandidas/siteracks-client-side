@@ -1,7 +1,7 @@
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import React from "react";
-import PremiumWebsiteBuilder from "../../../../public/images/webHosting/premiumWebsiteBuilder.svg";
+import WordPressWebsiteBanner from "../../../../public/images/webHosting/wordpress-hosting-banner.svg";
 
 const WordPressHostingBanner = () => {
   return (
@@ -33,8 +33,8 @@ const WordPressHostingBanner = () => {
         </Button>
       </div>
 
-      <div className="flex flex-col justify-start items-center w-full md:col-span-6 bg-purple-900">
-        <PremiumWebsiteBuilder className="w-full h-fit hidden md:block fill-primary" />
+      <div className="flex flex-col justify-start items-center w-full md:col-span-6">
+        <WordPressWebsiteBanner className="w-full h-fit hidden md:block fill-primary" />
       </div>
     </div>
   );
