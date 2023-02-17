@@ -1,14 +1,15 @@
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import LiveChat from "@/Components/LiveChat/LiveChat";
-import WordPressHostingArticle from "@/Components/Pages/WordPressHosting/WordPressHostingArticle";
-import WordPressHostingBanner from "@/Components/Pages/WordPressHosting/WordPressHostingBanner";
-import WordPressHostingFaq from "@/Components/Pages/WordPressHosting/WordPressHostingFaq";
-import WordPressHostingMoreBenefits from "@/Components/Pages/WordPressHosting/WordPressHostingMoreBenefits";
-import WordPressHostingPricing from "@/Components/Pages/WordPressHosting/WordPressHostingPricing";
-
 import Head from "next/head";
 import React from "react";
-import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
+
+import BusinessHostingBanner from "@/Components/Pages/BusinessHosting/BusinessHostingBanner";
+import BusinessHostingPricing from "@/Components/Pages/BusinessHosting/BusinessHostingPricing";
+import BusinessHostingArticle from "@/Components/Pages/BusinessHosting/BusinessHostingArticle";
+import BusinessHostingMoreBenefits from "@/Components/Pages/BusinessHosting/BusinessHostingMoreBenefits";
+import BusinessHostingBusinessTools from "@/Components/Pages/BusinessHosting/BusinessHostingBusinessTools";
+import BusinessHostingFaq from "@/Components/Pages/BusinessHosting/BusinessHostingFaq";
+import WordPressHostingCompare from "@/Components/Pages/BusinessHosting/WordPressHostingCompare";
 
 const BusinessHosting = () => {
   return (
@@ -19,23 +20,26 @@ const BusinessHosting = () => {
       </Head>
       <main>
         <section className="bg-surface">
-          <WordPressHostingBanner />
+          <BusinessHostingBanner />
         </section>
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WordPressHostingPricing />
+          <BusinessHostingPricing />
         </section>
-        <WordPressHostingArticle />
+        <WordPressHostingCompare />
+        
+        
+        <BusinessHostingArticle />
 
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WordPressHostingMoreBenefits />
+          <BusinessHostingMoreBenefits />
         </section>
         <MoneyBackGuarantee />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WordPressBusinessTools />
+          <BusinessHostingBusinessTools />
         </section>
         <LiveChat />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WordPressHostingFaq />
+          <BusinessHostingFaq />
         </section>
       </main>
     </>

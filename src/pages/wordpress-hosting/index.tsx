@@ -10,6 +10,7 @@ import Head from "next/head";
 import React from "react";
 import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
 
+
 const WordPressHosting = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const WordPressHosting = () => {
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WordPressHostingPricing />
         </section>
+    
         <WordPressHostingArticle />
 
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
