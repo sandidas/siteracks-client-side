@@ -8,8 +8,10 @@ interface ITitleAndDescription {
   leftAlignDesktop?: boolean;
   leftAlignOnMobile?: boolean;
   bottomSpace?: boolean;
+  aboveSpace?: boolean;
   children?: any;
   titleOnDark?: boolean;
+  smallTitleSize?:boolean;
 }
 
 // const defValue = {
@@ -23,12 +25,12 @@ interface ITitleAndDescription {
 //   titleOnDark: false,
 // }
 
-const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSpace, children, titleOnDark, leftAlignOnMobile, supTitle }: ITitleAndDescription) => {
+const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSpace, aboveSpace, children, titleOnDark, leftAlignOnMobile, supTitle, smallTitleSize }: ITitleAndDescription) => {
   // ${leftAlignDesktop && "lg:text-left"} ${leftAlignOnMobile && "sm:max-lg:text-left"} ${!leftAlignDesktop && !leftAlignOnMobile && "text-center"} ${bottomSpace && "pb-16"}
 
   return (
     // If left alignment is not true then 'text-center' class will be not applied
-    <div className={`flex flex-col space-y-8 max-w-5xl mx-auto w-full ${leftAlignDesktop ? "lg:text-left" : ""} ${leftAlignOnMobile ? "sm:max-lg:text-left" : ""} ${!leftAlignDesktop && !leftAlignOnMobile ? "text-center" : ""} ${bottomSpace ? "pb-16" : ""}`}>
+    <div className={`flex flex-col space-y-8 max-w-5xl mx-auto w-full ${leftAlignDesktop ? "lg:text-left" : ""} ${leftAlignOnMobile ? "sm:max-lg:text-left" : ""} ${!leftAlignDesktop && !leftAlignOnMobile ? "text-center" : ""} ${bottomSpace ? "pb-16" : ""} ${aboveSpace ? "pt-16" : ""}`}>
       {/* Print without subtitle  */}
       {/* {title && !subTitle && <h2 className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>} */}
 
@@ -55,7 +57,7 @@ const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSp
           <span className="text-text text-2xl"> {supTitle && supTitle}</span>
           {title && (
             <>
-              <span className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}>{title}</span>
+              <span className={`${smallTitleSize ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"} lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}>{title}</span>
 
               <span className="text-2xl text-slate-500 font-light">{subTitle && subTitle}</span>
             </>

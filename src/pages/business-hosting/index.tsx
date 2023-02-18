@@ -9,7 +9,8 @@ import BusinessHostingArticle from "@/Components/Pages/BusinessHosting/BusinessH
 import BusinessHostingMoreBenefits from "@/Components/Pages/BusinessHosting/BusinessHostingMoreBenefits";
 import BusinessHostingBusinessTools from "@/Components/Pages/BusinessHosting/BusinessHostingBusinessTools";
 import BusinessHostingFaq from "@/Components/Pages/BusinessHosting/BusinessHostingFaq";
-import WordPressHostingCompare from "@/Components/Pages/BusinessHosting/WordPressHostingCompare";
+import BusinessHostingCompare from "@/Components/Pages/BusinessHosting/BusinessHostingCompare";
+import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
 
 const BusinessHosting = () => {
   return (
@@ -25,9 +26,11 @@ const BusinessHosting = () => {
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <BusinessHostingPricing />
         </section>
-        <WordPressHostingCompare />
-        
-        
+        <BusinessHostingCompare />
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <BusinessHostingApp />
+        </section>
+
         <BusinessHostingArticle />
 
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">

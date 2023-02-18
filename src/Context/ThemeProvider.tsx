@@ -9,7 +9,7 @@ import { ColorSchemeProvider, MantineProvider, ColorScheme } from "@mantine/styl
 // ================
 interface iContextProps {
   toggleColorScheme: () => void;
-  colorScheme: string | null;
+  colorScheme: string | null | undefined;
 }
 export const ThemeContext = createContext<iContextProps>({
   toggleColorScheme: () => {}, // define a function
@@ -25,7 +25,8 @@ export const ThemeProvider = ({ children }: any) => {
   // State for color scheme settings
   // ================
 
-  const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");
+  const [colorScheme, setColorScheme] = useState("dark");
+  // const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");
   const myCache = createEmotionCache({ key: "mantine" });
 
   // ================
@@ -33,26 +34,18 @@ export const ThemeProvider = ({ children }: any) => {
   // ================
 
   useEffect(() => {
-    let currentTheme = checkCurrentTheme();
-    // if (currentTheme !== "dark" || "light") {
-    //   currentTheme = "dark";
-    // }
-    // currentTheme = currentTheme !== "light" || "dark" ? "dark" : currentTheme;
-    // console.log(currentTheme);
+    // check user selected color scheme
+    let currentTheme = localStorage.getItem("isDarkMode");
+    // check device color scheme [it's return boolean]
+    let systemColorScheme: boolean | string | undefined = window.matchMedia("(prefers-color-scheme:dark)").matches;
+    // convert boolean to string
+    systemColorScheme = systemColorScheme === true ? "dark" : "light";
+    // set color scheme to system color scheme
+    // if current theme is dark, set dark, if light set light or set system color scheme. If user manually set system color name from local storage this feature will prevent bug or user define custom error
+    setColorScheme(currentTheme === "dark" ? "dark" : currentTheme === "light" ? "light" : systemColorScheme);
 
-    if (currentTheme) {
-      // @ts-ignore
-      setColorScheme(currentTheme);
-    } else {
-      if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-        setColorScheme("dark");
-        setCurrentTheme("dark");
-      } else {
-        setColorScheme("light");
-        setCurrentTheme("light");
-      }
-    }
-  }, []);
+    //   // @ts-ignore
+  }, [colorScheme]);
   // ================
   //
   // ================

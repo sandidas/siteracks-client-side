@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="640px" height="300px" viewBox="0 170 640 300" style="enable-background:new 0 170 640 300;" xml:space="preserve">
+<title>React Logo</title>
+<circle style="fill:#61DAFB;" cx="308.5" cy="320.768" r="50.521"/>
+<g>
+	<ellipse style="fill:none;stroke:#61DAFB;" cx="308.5" cy="320.768" rx="162.675" ry="62.113"/>
+	
+		<ellipse transform="matrix(0.866 -0.5 0.5 0.866 -119.0535 197.2257)" style="fill:none;stroke:#61DAFB;" cx="308.5" cy="320.769" rx="62.113" ry="162.675"/>
+	
+		<ellipse transform="matrix(0.866 0.5 -0.5 0.866 201.7164 -111.2753)" style="fill:none;stroke:#61DAFB;" cx="308.5" cy="320.769" rx="62.113" ry="162.675"/>
+</g>
+</svg>
