@@ -24,7 +24,7 @@ const Logo = (props: ILogo) => {
     logoWidth = "220px";
   }
 
-  const { colorScheme: isDarkMode } = useThemeContext();
+  const { userColorScheme: isDarkMode } = useThemeContext();
 
   //  console.log(isDarkMode);
 

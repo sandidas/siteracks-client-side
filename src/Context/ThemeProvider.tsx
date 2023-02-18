@@ -9,11 +9,11 @@ import { ColorSchemeProvider, MantineProvider, ColorScheme } from "@mantine/styl
 // ================
 interface iContextProps {
   toggleColorScheme: () => void;
-  colorScheme: string | null | undefined;
+  userColorScheme: string | null | undefined;
 }
 export const ThemeContext = createContext<iContextProps>({
   toggleColorScheme: () => {}, // define a function
-  colorScheme: "",
+  userColorScheme: "",
 });
 
 // ================
@@ -25,8 +25,8 @@ export const ThemeProvider = ({ children }: any) => {
   // State for color scheme settings
   // ================
 
-  const [colorScheme, setColorScheme] = useState("dark");
-  // const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");
+  const [userColorScheme, setUserColorScheme] = useState<string>("dark");
+  // const [colorScheme, setColorScheme] = useState<ColorScheme | string>("dark");
   const myCache = createEmotionCache({ key: "mantine" });
 
   // ================
@@ -42,44 +42,41 @@ export const ThemeProvider = ({ children }: any) => {
     systemColorScheme = systemColorScheme === true ? "dark" : "light";
     // set color scheme to system color scheme
     // if current theme is dark, set dark, if light set light or set system color scheme. If user manually set system color name from local storage this feature will prevent bug or user define custom error
-    setColorScheme(currentTheme === "dark" ? "dark" : currentTheme === "light" ? "light" : systemColorScheme);
+    setUserColorScheme(currentTheme === "dark" ? "dark" : currentTheme === "light" ? "light" : systemColorScheme);
 
     //   // @ts-ignore
-  }, [colorScheme]);
+  }, []);
   // ================
   //
   // ================
   useEffect(() => {
-    if (colorScheme === "dark") {
+    if (userColorScheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [colorScheme]);
+  }, [userColorScheme]);
 
   const toggleColorScheme = () => {
     let currentTheme = checkCurrentTheme();
-    // currentTheme = currentTheme !== "light" || "dark" ? "dark" : currentTheme;
-
-    // console.log(currentTheme);
 
     if (currentTheme == "dark") {
-      setColorScheme("light");
-      setCurrentTheme("light");
+      setUserColorScheme("light");
+      setCurrentTheme("light"); // save to local storage
     } else {
-      setColorScheme("dark");
-      setCurrentTheme("dark");
+      setUserColorScheme("dark");
+      setCurrentTheme("dark"); // save to local storage
     }
   };
 
   return (
     <>
-      <ThemeContext.Provider value={{ toggleColorScheme, colorScheme }}>
-        <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+      <ThemeContext.Provider value={{ toggleColorScheme, userColorScheme }}>
+        <ColorSchemeProvider colorScheme={userColorScheme} toggleColorScheme={toggleColorScheme}>
           <MantineProvider
             emotionCache={myCache}
             theme={{
-              colorScheme: colorScheme,
+              colorScheme: userColorScheme,
               colors: {
                 main: ["#72cb66", "#5bc24d", "#43b933", "#2cb11a", "#14a800", "#14a800", "#14A800", "#108600", "#0e7600", "#084300"],
                 dark: ["#9c9da4", "#83858d", "#6a6c76", "#51545f", "#393b49", "#202332", "#070a1b", "#070A1B", "#060816", "#111424"],

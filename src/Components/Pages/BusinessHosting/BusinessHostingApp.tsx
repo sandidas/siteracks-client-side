@@ -12,43 +12,43 @@ import WordPressLogo from "../../../../public/images/logos/wordPressLogo.svg";
 const BusinessHostingApp = () => {
   return (
     <>
-      <div className="max-w-7xl mx-auto px-3 md:px-5">
+      <div className="max-w-6xl mx-auto px-3 md:px-5">
         <SectionTitle smallTitleSize bottomSpace title="Designed to power your favorite apps" />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-7">
 
             
           <div>
-            <DrupalLogo className="w-full h-40 px-10" />
+            <DrupalLogo className="w-full h-24 px-10" />
           </div>
 
           <div>
-            <JoomlaLogo className="w-full h-40 px-10" />
+            <JoomlaLogo className="w-full h-24 px-10" />
           </div>
 
           <div>
-            <LaravelLogo className="w-full h-40 px-10" />
+            <LaravelLogo className="w-full h-24 px-10" />
           </div>
 
           <div>
-            <MagentoLogo className="w-full h-40 px-10" />
+            <MagentoLogo className="w-full h-24 px-10" />
           </div>
 
           <div>
-            <NodejsLogo className="w-full h-40 px-10" />
+            <NodejsLogo className="w-full h-24 px-10" />
           </div>
 
           <div>
-            <ReactLogo className="w-full h-40 px-10" />
+            <ReactLogo className="w-full h-24 px-10" />
           </div>
 
           <div>
-            <WooCommerceLogo className="w-full h-40 px-10" />
+            <WooCommerceLogo className="w-full h-24 px-10" />
           </div>
  
 
           <div>
-            <WordPressLogo className="w-full h-40 px-10" />
+            <WordPressLogo className="w-full h-24 px-10" />
           </div>
  
 
