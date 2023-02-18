@@ -5,9 +5,9 @@ import React from "react";
 const WordPressHostingFaq = () => {
   return (
     <div>
-      <SectionTitle bottomSpace title="What is WordPress hosting?" />
+      <SectionTitle bottomSpace title="FAQ" />
       <div className="max-w-5xl mx-auto lg:text-xl lg:leading-9">
-        <FAQCard title="What is cloud web hosting?">
+        <FAQCard title="What is WordPress hosting?">
           <p>
             WordPress hosting is a type of web hosting specifically designed for websites that use the WordPress content management system. SiteRacks WordPress hosting is optimized for WordPress and typically includes features like one-click WordPress installation, automatic WordPress updates, and
             pre-installed WordPress plugins.
@@ -41,9 +41,6 @@ const WordPressHostingFaq = () => {
           <p>WordPress hosting can be just as secure as any other type of web hosting, as long as you take appropriate security measures. This includes using strong passwords, keeping WordPress and all plugins up-to-date, and using security plugins to protect your site from attacks. SiteRacks also offer additional security features like SSL certificates, firewalls, dedicated WordPress expert, etc.</p>
         </FAQCard>
 
-        <FAQCard title="">
-          <p></p>
-        </FAQCard>
       </div>
     </div>
   );

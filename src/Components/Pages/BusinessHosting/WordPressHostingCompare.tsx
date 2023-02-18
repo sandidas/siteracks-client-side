@@ -1,4 +1,5 @@
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
+import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 const comparisonData = [
@@ -26,49 +27,35 @@ const comparisonData = [
   },
 
   {
-    title: "Unlimited Traffic",
+    title: "Unlimited Traffic and Space",
     bizHostingStatus: true,
     sharedHostingStatus: false,
     popover: "",
     detailsLink: "",
   },
   {
-    title: "Unlimited Space",
+    title: "Dedicated WordPress Expert Support",
     bizHostingStatus: true,
     sharedHostingStatus: false,
     popover: "",
     detailsLink: "",
   },
   {
-    title: "24/7 VIP Support",
+    title: "Performance Optimized",
     bizHostingStatus: true,
     sharedHostingStatus: false,
     popover: "",
     detailsLink: "",
   },
   {
-    title: "Maximum Performance",
-    bizHostingStatus: true,
-    sharedHostingStatus: false,
-    popover: "",
-    detailsLink: "",
-  },
-  {
-    title: "Control Panel",
+    title: "Control Panel with 1-click CMS Installs",
     bizHostingStatus: true,
     sharedHostingStatus: true,
     popover: "",
     detailsLink: "",
   },
   {
-    title: "1-click CMS Installs",
-    bizHostingStatus: true,
-    sharedHostingStatus: true,
-    popover: "",
-    detailsLink: "",
-  },
-  {
-    title: "24/7 Security Monitoring",
+    title: "24/7 Security Expert Monitoring",
     bizHostingStatus: true,
     sharedHostingStatus: false,
     popover: "",
@@ -76,20 +63,6 @@ const comparisonData = [
   },
   {
     title: "Free 100% Drag and Drop Page Builder",
-    bizHostingStatus: true,
-    sharedHostingStatus: false,
-    popover: "",
-    detailsLink: "",
-  },
-  {
-    title: "Dedicated WordPress Expert",
-    bizHostingStatus: true,
-    sharedHostingStatus: false,
-    popover: "",
-    detailsLink: "",
-  },
-  {
-    title: "Instantly Scalable",
     bizHostingStatus: true,
     sharedHostingStatus: false,
     popover: "",
@@ -132,188 +105,25 @@ const WordPressHostingCompare = () => {
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <SectionTitle title="Comparison" subTitle="Business Hosting Vs Shared Web Hosting" bottomSpace description="" />
 
-          <div className="max-w-7xl">
-            <table className="w-full p-6 text-xs text-left whitespace-nowrap">
-              <thead>
-                <tr className="dark:bg-gray-700">
-                  <th className="p-3">A-Z</th>
-                  <th className="p-3">Name</th>
-                  <th className="p-3">Job title</th>
-                  <th className="p-3">Phone</th>
-                  <th className="p-3">Email</th>
-                  <th className="p-3">Address</th>
-                  <th className="p-3">
-                    <span className="sr-only">Edit</span>
-                  </th>
+          <div className="max-w-4xl mx-auto">
+            <table className="w-full p-6 text-title text-left">
+              <thead className="bg-surface">
+                <tr className="dark:bg-gray-700 bg-white">
+                  <th className="p-3 lg:px-5 text-2xl">Features</th>
+                  <th className="p-3">BH</th>
+                  <th className="p-3">TH</th>
                 </tr>
               </thead>
-              <tbody className="border-b dark:bg-gray-900 dark:border-gray-700">
-                <tr>
-                  <td className="px-3 text-2xl font-medium dark:text-gray-400">A</td>
-                  <td className="px-3 py-2">
-                    <p>Dwight Adams</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <span>UI Designer</span>
-                    <p className="dark:text-gray-400">Spirit Media</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>555-873-9812</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>dwight@adams.com</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>71 Cherry Court, SO</p>
-                    <p className="dark:text-gray-400">United Kingdom</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <button type="button" title="Open details" className="p-1 rounded-full dark:text-gray-600 hover:dark:bg-gray-700 focus:dark:bg-gray-700">
-                      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-                        <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-3 text-2xl font-medium dark:text-gray-400"></td>
-                  <td className="px-3 py-2">
-                    <p>Richie Allen</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <span>Geothermal Technician</span>
-                    <p className="dark:text-gray-400">Icecorps</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>555-129-0761</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>richie@allen.com</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>Knesebeckstrasse 32, Obersteinebach</p>
-                    <p className="dark:text-gray-400">Germany</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <button type="button" title="Open details" className="p-1 rounded-full dark:text-gray-600 hover:dark:bg-gray-700 focus:dark:bg-gray-700">
-                      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-                        <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-              <tbody className="border-b dark:bg-gray-900 dark:border-gray-700">
-                <tr>
-                  <td className="px-3 text-2xl font-medium dark:text-gray-400">B</td>
-                  <td className="px-3 py-2">
-                    <p>Alex Bridges</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <span>Administrative Services Manager</span>
-                    <p className="dark:text-gray-400">Smilectronics</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>555-238-9890</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>alex@bridges.com</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>Hooivelden 117, Kortrijk</p>
-                    <p className="dark:text-gray-400">Belgium</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <button type="button" title="Open details" className="p-1 rounded-full dark:text-gray-600 hover:dark:bg-gray-700 focus:dark:bg-gray-700">
-                      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-                        <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-3 text-2xl font-medium dark:text-gray-400"></td>
-                  <td className="px-3 py-2">
-                    <p>Lynette Brown</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <span>Camera Operator</span>
-                    <p className="dark:text-gray-400">Surge Enterprises</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>555-521-5712</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>lynette@brown.com</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>22 rue de la Boétie, Poitiers</p>
-                    <p className="dark:text-gray-400">France</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <button type="button" title="Open details" className="p-1 rounded-full dark:text-gray-600 hover:dark:bg-gray-700 focus:dark:bg-gray-700">
-                      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-                        <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-              <tbody className="border-b dark:bg-gray-900 dark:border-gray-700">
-                <tr>
-                  <td className="px-3 text-2xl font-medium dark:text-gray-400">C</td>
-                  <td className="px-3 py-2">
-                    <p>Mariah Claxton</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <span>Nuclear Technician</span>
-                    <p className="dark:text-gray-400">White Wolf Brews</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>555-654-9810</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>mariah@claxton.com</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>R Oliveirinhas 71, Maia</p>
-                    <p className="dark:text-gray-400">Portugal</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <button type="button" title="Open details" className="p-1 rounded-full dark:text-gray-600 hover:dark:bg-gray-700 focus:dark:bg-gray-700">
-                      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-                        <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-3 text-2xl font-medium dark:text-gray-400"></td>
-                  <td className="px-3 py-2">
-                    <p>Hermila Craig</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <span>Production Engineer</span>
-                    <p className="dark:text-gray-400">Cavernetworks Co.</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>555-091-8401</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>hermila@craig.com</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <p>Rua da Rapina 89, Espeja</p>
-                    <p className="dark:text-gray-400">Spain</p>
-                  </td>
-                  <td className="px-3 py-2">
-                    <button type="button" title="Open details" className="p-1 rounded-full dark:text-gray-600 hover:dark:bg-gray-700 focus:dark:bg-gray-700">
-                      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-                        <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
+              <tbody className="border-b text-base bg-gray-50 dark:bg-gray-900 dark:border-gray-700">
+                {comparisonData.map((feature) => (
+                  <>
+                    <tr className="text-text hover:bg-primary hover:text-white  border-b border-slate-300 dark:border-slate-700 w-full group">
+                      <td className="px-3 lg:px-5 py-3">{feature?.title}</td>
+                      <td className="px-3 py-2">{feature?.bizHostingStatus ? <CheckIcon className="fill-primary h-5 w-5 group-hover:fill-white" /> : <XMarkIcon className="fill-surfaceTwo h-5 w-5 group-hover:fill-white" />}</td>
+                      <td className="px-3 py-2">{feature?.sharedHostingStatus ? <CheckIcon className="fill-primary h-5 w-5 group-hover:fill-surface" /> : <XMarkIcon className="fill-surfaceTwo h-5 w-5 group-hover:fill-white" />}</td>
+                    </tr>
+                  </>
+                ))}
               </tbody>
             </table>
           </div>

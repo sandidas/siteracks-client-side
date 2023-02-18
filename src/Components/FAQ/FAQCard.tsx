@@ -10,9 +10,9 @@ interface IFaqCard {
 const FAQCard = ({ title, children }: IFaqCard) => {
   const [show, setShow] = useState<boolean>(true);
   return (
-    <div className="rounded-md mb-2">
+    <div className="mb-2 border-b border-slate-400 dark:border-slate-600">
       {title && (
-        <h3 onClick={()=>setShow(!show)} className={`flex items-center justify-between p-5 cursor-pointer bg-surface  ${show ? "dark:bg-surface":""}`}>
+        <h3 onClick={()=>setShow(!show)} className={`flex items-center justify-between p-5 cursor-pointer font-medium  ${show ? "":""}`}>
           <span className="text-xl lg:text-2xl leading-normal max-w-[90%]">{title} </span>
 
           <ArrowSmallRightIcon className={`h-7 w-7 min-w-7 duration-200 ${!show ? "text-primary" : "rotate-90 text-text"} `} />
