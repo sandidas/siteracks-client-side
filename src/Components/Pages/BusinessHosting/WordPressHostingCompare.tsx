@@ -106,7 +106,7 @@ const WordPressHostingCompare = () => {
           <SectionTitle title="Comparison" subTitle="Business Hosting Vs Shared Web Hosting" bottomSpace description="" />
 
           <div className="max-w-4xl mx-auto">
-            <table className="w-full p-6 text-title text-left">
+            <table className="w-full p-6 text-title text-left shadow-xl rounded-lg overflow-hidden">
               <thead className="bg-surface">
                 <tr className="dark:bg-gray-700 bg-white">
                   <th className="p-3 lg:px-5 text-2xl">Features</th>
