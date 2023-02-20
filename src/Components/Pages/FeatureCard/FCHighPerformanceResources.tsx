@@ -21,7 +21,7 @@ const FCHighPerformanceResources = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
-            setModalTitle("Premium Cloud Servers"), setModalData(<WhHighPerformanceAndResource />), requestModal();
+            setModalTitle("High-performance resources"), setModalData(<WhHighPerformanceAndResource />), requestModal();
           }}
         />
       </article>

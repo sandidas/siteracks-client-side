@@ -24,7 +24,7 @@ const WordPressHostingMoreBenefits = () => {
     <>
       <SectionTitle title="More Benefits" subTitle="of SiteRacks WordPress Hosting" bottomSpace />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <FeatureCard>
+        <FeatureCard backgroundSecond>
           <div className="space-y-5">
             <PhpIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Ultra-Fast Updated PHP & MySQL</h3>
@@ -41,7 +41,7 @@ const WordPressHostingMoreBenefits = () => {
           />
         </FeatureCard>
 
-        <FeatureCard>
+        <FeatureCard backgroundSecond>
           <div className="space-y-5">
             <MultipleWebsiteIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Host Unlimited Sites</h3>
@@ -57,7 +57,7 @@ const WordPressHostingMoreBenefits = () => {
           />
         </FeatureCard>
 
-        <FeatureCard>
+        <FeatureCard backgroundSecond>
           <div className="space-y-5">
             <WordPressIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Easy Managed WordPress</h3>
@@ -74,7 +74,7 @@ const WordPressHostingMoreBenefits = () => {
         </FeatureCard>
 
 
-        <FeatureCard>
+        <FeatureCard backgroundSecond>
           <div className="space-y-5">
             <SslIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Free SSL Certificate</h3>
@@ -90,7 +90,7 @@ const WordPressHostingMoreBenefits = () => {
           />
         </FeatureCard>
 
-        <FeatureCard>
+        <FeatureCard backgroundSecond>
           <div className="space-y-5">
             <DataCenterIcon2 className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Pre-Defined Data center based on your location</h3>
@@ -107,7 +107,7 @@ const WordPressHostingMoreBenefits = () => {
         </FeatureCard>
 
 
-        <FeatureCard>
+        <FeatureCard backgroundSecond>
           <div className="space-y-5">
             <EmailIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Business Email Service</h3>
