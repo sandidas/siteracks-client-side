@@ -10,11 +10,11 @@ const FCFeatureForAllPackage = () => {
   return (
     <div>
       <SectionTitle title="Get Extra Benefits" subTitle="By developer selected best wordpress hosting" bottomSpace />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
         <FeatureCard backgroundSecond>
-          <div className="space-y-5">
+          <div className="space-y-3">
             {/* <PhpIcon className="fill-primary w-14 h-14" /> */}
-            <h3 className="text-title font-bold text-3xl">Integrated Firewall</h3>
+            <h3 className="text-title font-bold text-xl">Integrated Firewall</h3>
             {/* <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p> */}
           </div>
           <div className="grow"></div>
@@ -30,9 +30,9 @@ const FCFeatureForAllPackage = () => {
         </FeatureCard>
 
         <FeatureCard backgroundSecond>
-          <div className="space-y-5">
+          <div className="space-y-3">
             {/* <PhpIcon className="fill-primary w-14 h-14" /> */}
-            <h3 className="text-title font-bold text-3xl">DDoS Attack Protection</h3>
+            <h3 className="text-title font-bold text-xl">DDoS Attack Protection</h3>
             {/* <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p> */}
           </div>
           <div className="grow"></div>
@@ -48,9 +48,9 @@ const FCFeatureForAllPackage = () => {
         </FeatureCard>
 
         <FeatureCard backgroundSecond>
-          <div className="space-y-5">
+          <div className="space-y-3">
             {/* <PhpIcon className="fill-primary w-14 h-14" /> */}
-            <h3 className="text-title font-bold text-3xl">CSF Firewall</h3>
+            <h3 className="text-title font-bold text-xl">CSF Firewall</h3>
             {/* <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p> */}
           </div>
           <div className="grow"></div>
@@ -66,9 +66,9 @@ const FCFeatureForAllPackage = () => {
         </FeatureCard>
 
         <FeatureCard backgroundSecond>
-          <div className="space-y-5">
+          <div className="space-y-3">
             {/* <PhpIcon className="fill-primary w-14 h-14" /> */}
-            <h3 className="text-title font-bold text-3xl">Advanced Server Security</h3>
+            <h3 className="text-title font-bold text-xl">Advanced Server Security</h3>
             {/* <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p> */}
           </div>
           <div className="grow"></div>
@@ -84,9 +84,9 @@ const FCFeatureForAllPackage = () => {
         </FeatureCard>
 
         <FeatureCard backgroundSecond>
-          <div className="space-y-5">
+          <div className="space-y-3">
             {/* <PhpIcon className="fill-primary w-14 h-14" /> */}
-            <h3 className="text-title font-bold text-3xl">Instantly Scalable</h3>
+            <h3 className="text-title font-bold text-xl">Instantly Scalable</h3>
             {/* <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p> */}
           </div>
           <div className="grow"></div>
@@ -102,9 +102,9 @@ const FCFeatureForAllPackage = () => {
         </FeatureCard>
 
         <FeatureCard backgroundSecond>
-          <div className="space-y-5">
+          <div className="space-y-3">
             {/* <PhpIcon className="fill-primary w-14 h-14" /> */}
-            <h3 className="text-title font-bold text-3xl">In house WordPress Expert</h3>
+            <h3 className="text-title font-bold text-xl">In house WordPress Expert</h3>
             {/* <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p> */}
           </div>
           <div className="grow"></div>
