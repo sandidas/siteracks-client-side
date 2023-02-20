@@ -1,4 +1,4 @@
-"use client"; // this is a client component
+
 import PlainButton from "@/Components/Buttons/PlainButton";
 import ColumnTitleAndDesc from "@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc";
 import WHDedicatedWordPressExpertModal from "@/Components/ModalComponents/WHDedicatedWordPressExpertModal";

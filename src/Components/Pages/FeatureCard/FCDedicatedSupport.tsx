@@ -1,4 +1,3 @@
-"use client";
 import PlainButton from '@/Components/Buttons/PlainButton';
 import ColumnTitleAndDesc from '@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc';
 import { useModalContext } from '@/Context/ModalProvider';

@@ -10,7 +10,7 @@ const BusinessHostingBanner = () => {
           <span className="uppercase text-xl font-bold tracking-wider">Greater Stability, Enhanced Performance</span>
           <span className="text-5xl lg:text-6xl text-title font-bold">Boost your business website, and pay less</span>
           <span className="uppercase text-xl">
-            by SiteRacks <span className="uppercase text-xl font-bold text-primary tracking-wider">Business Hosting</span>{" "}
+            by SiteRacks <span className="uppercase text-xl font-bold text-primary tracking-wider">High Performance Business Web Hosting</span>{" "}
           </span>
           {/*  */}
         </h1>
