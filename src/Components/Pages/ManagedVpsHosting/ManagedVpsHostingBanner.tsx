@@ -7,9 +7,9 @@ const ManagedVpsHostingBanner = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[12vh] pb-[8vh]  gap-3 md:5 xl:gap-16 2xl:gap-32">
       <div className="flex flex-col items-start space-y-8 justify-center md:col-span-6 group">
-        <h1 className="flex flex-col md:leading-normal xl:leading-loose space-y-3">
+        <h1 className="flex flex-col space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">No Complexity, No Hassle</span>
-          <span className="text-5xl lg:text-6xl text-title font-bold"> A 100% Fully Managed VPS Hosting.</span>
+          <span className="text-5xl lg:text-6xl text-title font-bold lg:leading-snug"> A 100% Fully Managed VPS Hosting.</span>
           <span className="uppercase text-xl">We manages all your server needs</span>
           <span className="uppercase text-xl font-bold text-primary tracking-wider"> so that you can focus on your business.</span> {/*  */}
         </h1>
