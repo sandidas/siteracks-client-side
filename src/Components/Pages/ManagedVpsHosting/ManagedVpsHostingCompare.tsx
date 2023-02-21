@@ -87,11 +87,10 @@ const comparisonData = [
 const ManagedVpsHostingCompare = () => {
   return (
     <>
-      <section className="py-[10vh]">
+      <section className="py-[10vh] bg-surface">
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
-          <SectionTitle title="Comparison" subTitle="Pre Managed VPS Light Vs Unmanaged VPS " bottomSpace description="" />
-
-          <div className="max-w-4xl mx-auto">
+          <div className="">
+            <SectionTitle leftAlignDesktop leftAlignOnMobile title="Comparison" subTitle="Pre Managed VPS Light Vs Unmanaged VPS " bottomSpace description="" />
             <table className="w-full p-6 text-title text-left shadow-xl rounded-xl md:overflow-hidden table-auto">
               <thead className="bg-surface">
                 <tr className="dark:bg-gray-700 bg-white">

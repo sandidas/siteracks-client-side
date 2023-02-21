@@ -30,7 +30,7 @@ const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSp
 
   return (
     // If left alignment is not true then 'text-center' class will be not applied
-    <div className={`flex flex-col space-y-8 max-w-5xl mx-auto w-full ${leftAlignDesktop ? "lg:text-left" : ""} ${leftAlignOnMobile ? "sm:max-lg:text-left" : ""} ${!leftAlignDesktop && !leftAlignOnMobile ? "text-center" : ""} ${bottomSpace ? "pb-16" : ""} ${aboveSpace ? "pt-16" : ""}`}>
+    <div className={`flex flex-col space-y-8 max-w-5xl  w-full ${leftAlignDesktop ? "lg:text-left" : "mx-auto"} ${leftAlignOnMobile ? "sm:max-lg:text-left" : ""} ${!leftAlignDesktop && !leftAlignOnMobile ? "text-center" : ""} ${bottomSpace ? "pb-16" : ""} ${aboveSpace ? "pt-16" : ""}`}>
       {/* Print without subtitle  */}
       {/* {title && !subTitle && <h2 className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>} */}
 
