@@ -9,7 +9,7 @@ const WordPressHostingBanner = () => {
       <div className="flex flex-col items-start space-y-8 justify-center md:col-span-6 group">
         <h1 className="flex flex-col md:leading-normal space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">No hidden cost, No hassle</span>
-          <span className="text-5xl lg:text-6xl text-title font-bold">Get a significant combo benefit</span>
+          <span className="text-5xl lg:text-6xl text-title font-bold lg:leading-tight">Get a significant combo benefit</span>
           <span className="uppercase text-xl">
             by SiteRacks <span className="uppercase text-xl font-bold text-primary tracking-wider">Managed WordPress Hosting</span>{" "}
           </span>
