@@ -91,9 +91,9 @@ const ManagedVpsHostingCompare = () => {
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <div className="">
             <SectionTitle leftAlignDesktop leftAlignOnMobile title="Comparison" subTitle="Pre Managed VPS Light Vs Unmanaged VPS " bottomSpace description="" />
-            <table className="w-full p-6 text-title text-left shadow-xl rounded-xl md:overflow-hidden table-auto">
+            <table className="w-full p-6  text-left shadow-xl rounded-xl md:overflow-hidden table-auto">
               <thead className="bg-surface">
-                <tr className="dark:bg-gray-700 bg-white">
+                <tr className="dark:bg-gray-700 text-title bg-white">
                   <th className="p-3 lg:px-5 py-5 text-2xl ">Features</th>
                   <th className="p-3">
                     <div className="flex flex-col text-xs">
