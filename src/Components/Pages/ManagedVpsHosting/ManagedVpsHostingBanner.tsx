@@ -7,13 +7,11 @@ const ManagedVpsHostingBanner = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[12vh] pb-[8vh]  gap-3 md:5 xl:gap-16 2xl:gap-32">
       <div className="flex flex-col items-start space-y-8 justify-center md:col-span-6 group">
-        <h1 className="flex flex-col md:leading-normal space-y-3">
+        <h1 className="flex flex-col md:leading-normal xl:leading-loose space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">No Complexity, No Hassle</span>
-          <span className="text-5xl lg:text-6xl text-title font-bold">We manages all your server needs</span>
-          <span className="uppercase text-xl">
-            <span className="uppercase text-xl font-bold text-primary tracking-wider"> so that you can focus on your business.</span>{" "}
-          </span>
-          {/*  */}
+          <span className="text-5xl lg:text-6xl text-title font-bold"> A 100% Fully Managed VPS Hosting.</span>
+          <span className="uppercase text-xl">We manages all your server needs</span>
+          <span className="uppercase text-xl font-bold text-primary tracking-wider"> so that you can focus on your business.</span> {/*  */}
         </h1>
         <p className="text-text lg:text-xl lg:leading-9">
           Our cost-effective and powerful managed VPS hosting plans are perfect for hosting websites on a secure and resilient infrastructure without the burden of managing the server. Don't wait any longer; pick the plan that suits your needs and start right away.
