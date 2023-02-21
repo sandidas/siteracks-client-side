@@ -1,3 +1,12 @@
+import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
+import LiveChat from "@/Components/LiveChat/LiveChat";
+import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
+import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
+import ManagedVpsHostingBanner from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingBanner";
+import ManagedVpsHostingCompare from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingCompare";
+import ManagedVpsHostingMoreBenefits from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingMoreBenefits";
+import ManagedVpsHostingPricing from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingPricing";
+import ManagedVpsHostingReadyApps from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingReadyApps";
 import Head from "next/head";
 import React from "react";
 
@@ -8,7 +17,36 @@ const VpsLight = () => {
         <title>Pre-Managed VPS Hosting Light | SiteRacks</title>
         <meta name="description" content="SiteRacks" />
       </Head>
-      <main>Goo</main>
+      <main>
+        <section className="bg-surface">
+          <ManagedVpsHostingBanner />{" "}
+        </section>
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <ManagedVpsHostingPricing />
+        </section>
+        <ManagedVpsHostingCompare />
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <ManagedVpsHostingMoreBenefits />
+        </section>
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <ManagedVpsHostingReadyApps />
+          {/* <BusinessHostingApp /> */}
+        </section>
+
+        {/* <ManagedVpsHostingArticle /> */}
+
+        <MoneyBackGuarantee />
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">{/* <ManagedVpsHostingManagedVpsTools /> */}</section>
+        <LiveChat />
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <FCFeatureForAllPackage />
+        </section>
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">{/* <ManagedVpsHostingFaq /> */}</section>
+      </main>
     </>
   );
 };

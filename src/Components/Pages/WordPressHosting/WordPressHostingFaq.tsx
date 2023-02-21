@@ -5,7 +5,7 @@ import React from "react";
 const WordPressHostingFaq = () => {
   return (
     <div>
-      <SectionTitle bottomSpace title="FAQ" />
+      <SectionTitle bottomSpace title="FAQ" subTitle="Frequently asked questions about WordPress Hosting" />
       <div className="max-w-5xl mx-auto lg:text-xl lg:leading-9">
         <FAQCard title="What is WordPress hosting?">
           <p>
