@@ -102,9 +102,9 @@ const hostingMenuItems = [
   },
   {
     icon: preManagedVpsHosting,
-    title: "pre-Managed VPS Hosting",
+    title: "pre-Managed VPS Hosting Light",
     description: "The shell’s rounded shape and the grooves on its.",
-    linkUrl: "pre-managed-hosting",
+    linkUrl: "pre-managed-vps-hosting-light",
   },
   {
     icon: ResellerHosting,

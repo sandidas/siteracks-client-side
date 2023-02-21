@@ -12,10 +12,10 @@ const PlainButton = ({text, handler, textSm}:IButton) => {
         <button onClick={handler}
         className="transition ease-in-out duration-500 flex h-10 items-center font-medium text-primary hover:animate-pulse"
         >
-            <span className={`py-2 tracking-normal group-hover:tracking-wider duration-300 border-b-2 border-surface hover:border-primary ${textSm ? "text-sm" : ""} ` }>
+            <span className={`py-2 tracking-normal group-hover:tracking-wider duration-300 border-b-2 border-surface hover:border-primary ${textSm ? "text-xs" : ""} ` }>
             {text && text}
             </span>
-            <ArrowSmallRightIcon className="h-8 w-8  pl-2 group-hover:translate-x-2 duration-300" />
+            <ArrowSmallRightIcon className={`group-hover:translate-x-2 duration-300 ${textSm ? "h-4 w-4 pl-1" : "h-8 w-8 pl-2"}`} />
         </button>
     );
 };

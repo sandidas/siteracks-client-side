@@ -17,9 +17,10 @@ const BusinessHostingArticle = () => {
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
             <SectionTitle
-              title="Maximize Your Offline Business with the Power of the Internet"
+              title="a High-Performance Hosting Platform"
+             subTitle='Dedicated to eCommerce Stores of Every Size'
               bottomSpace={true}
-              description={`Maximize Your Offline Business by Utilizing the Power of Online Platforms. Get ahead of the competition and expand your reach to potential customers with the help of the internet.`}
+             
             />
           </div>
           {/* article container  */}
