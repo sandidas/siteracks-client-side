@@ -170,6 +170,9 @@ const Footer = () => {
           </div>
           <div className="py-[2vh] border-t border-slate-300 dark:border-slate-600 text-text">
             <p>Copyright © 2023 SiteRacks, LLC. All Rights Reserved.</p>
+            <p className="text-xs">
+            All trademarks, logos, and brand names are the property of their respective owners.
+            </p>
             <ul className="flex text-sm gap-5 justify-end">
             <li> <Link href="/" className="hover:text-title"> Terms and Conditions </Link> </li>
             <li> <Link href="/" className="hover:text-title"> Privacy Policy </Link> </li>

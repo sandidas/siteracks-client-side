@@ -7,11 +7,13 @@ import CPanelLogo from "../../../../public/images/logos/cPanelLogo.svg";
 import Immunify360Logo from "../../../../public/images/logos/immunify360Logo.svg";
 import CloudLinuxLogo from "../../../../public/images/logos/cloudLinuxLogo.svg";
 import LightSpeedLogo from "../../../../public/images/logos/lightSpeedLogo.svg";
+import WordPressLogo from "../../../../public/images/logos/wordPressLogoTools.svg";
+
 import LogoCard from "@/Components/Card/LogoCard";
 
 const ManagedVpsHostingReadyApps = () => {
   return (
-    <>
+    <section className="py-[10vh]">
       <div className="max-w-6xl mx-auto px-3 md:px-5">
         <SectionTitle bottomSpace title="Ready To Use Apps" />
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-7">
@@ -22,14 +24,21 @@ const ManagedVpsHostingReadyApps = () => {
             <PleskLogo className="w-full h-24 px-10" />
           </LogoCard>
           <LogoCard>
+            <Immunify360Logo className="w-full h-24 px-10" />
+          </LogoCard>
+
+          <LogoCard>
+            <WordPressLogo className="w-full h-24 px-10" />
+          </LogoCard>
+
+          <LogoCard>
             <CentosLogo className="w-full h-24 px-10" />
           </LogoCard>
+
           <LogoCard>
             <CPanelLogo className="w-full h-24 px-10" />
           </LogoCard>
-          <LogoCard>
-            <Immunify360Logo className="w-full h-24 px-10" />
-          </LogoCard>
+
           <LogoCard>
             <CloudLinuxLogo className="w-full h-24 px-10" />
           </LogoCard>
@@ -38,7 +47,7 @@ const ManagedVpsHostingReadyApps = () => {
           </LogoCard>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

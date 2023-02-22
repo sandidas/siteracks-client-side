@@ -2,6 +2,7 @@ import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
+import ManagedVpsHostingArticle from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingArticle";
 import ManagedVpsHostingBanner from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingBanner";
 import ManagedVpsHostingCompare from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingCompare";
 import ManagedVpsHostingMoreBenefits from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingMoreBenefits";
@@ -25,17 +26,11 @@ const VpsLight = () => {
           <ManagedVpsHostingPricing />
         </section>
         <ManagedVpsHostingCompare />
-
+        <ManagedVpsHostingReadyApps />
+        <ManagedVpsHostingArticle />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <ManagedVpsHostingMoreBenefits />
-        </section>
-
-        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <ManagedVpsHostingReadyApps />
-          {/* <BusinessHostingApp /> */}
-        </section>
-
-        {/* <ManagedVpsHostingArticle /> */}
+        </section>       
 
         <MoneyBackGuarantee />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">{/* <ManagedVpsHostingManagedVpsTools /> */}</section>
