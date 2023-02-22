@@ -11,7 +11,7 @@ const ManagedVpsHostingArticle = () => {
     <section className="py-[10vh] bg-surface">
       <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
-          <SectionTitle title="a High-Performance Hosting Platform" subTitle="Dedicated to eCommerce Stores of Every Size" bottomSpace={true} />
+          <SectionTitle title="SiteRacks 100% Fully Managed VPS Hosting plans included"  bottomSpace={true} />
         </div>
         {/* article container  */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-16 2xl:gap-32">

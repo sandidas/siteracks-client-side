@@ -38,30 +38,11 @@ const WebHostingArticle = () => {
             {/* Free Website Migration */}
             <FCFreeWebsiteMigration />
 
-            {/* Dedicated Support */}
-
-            <FCDedicatedSupport />
 
             {/* Free .com Domain with Annual Plan */}
             <FCFreeDomain />
 
-            {/* Optimized for CMS Applications and Ecommerce */}
-            <article className="flex flex-col space-y-8 group items-start">
-              <div className="w-full">
-                <OptimizedCMSApp className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
-              </div>
-
-              <ColumnTitleAndDesc title="Optimized for CMS Applications and E-Commerce">
-                <p className="text-text lg:text-xl lg:leading-9">Maximize your online store or website with our optimized cloud servers designed specifically for CMS and e-commerce needs.</p>
-              </ColumnTitleAndDesc>
-
-              <PlainButton
-                text="LEARN MORE"
-                handler={() => {
-                  setModalTitle("Optimized for CMS Applications and Ecommerce"), setModalData(<WHOptimizedForCms />), requestModal();
-                }}
-              />
-            </article>
+           
           </div>
         </div>
       </section>

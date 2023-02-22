@@ -19,7 +19,6 @@ import AutoUpdateIcon from "../../../../public/images/icons/autoUpdateIcon.svg";
 import ReadyWebsiteIcon from "../../../../public/images/icons/readyWebsiteIcon.svg";
 import CollaborationIcon from "../../../../public/images/icons/collaborationIcon.svg";
 
-
 import WHCollaborationTools from "@/Components/ModalComponents/WHCollaborationTools";
 import WHDedicatedWordPressExpertModal from "@/Components/ModalComponents/WHDedicatedWordPressExpertModal";
 import WHWordpressUpdate from "@/Components/ModalComponents/WHWordpressUpdate";
@@ -59,22 +58,6 @@ const WordPressBusinessTools = () => {
             text="LEARN MORE"
             handler={() => {
               setModalTitle("Domain Management"), setModalData(<WHDomainManagement />), requestModal();
-            }}
-          />
-        </FeatureCard>
-
-        <FeatureCard>
-          <div className="space-y-5">
-            <EmailIcon className="fill-primary w-14 h-14" />
-            <h3 className="text-title font-bold text-3xl">Business Email Service</h3>
-            <p className="text-text">Enjoy unlimited email accounts under your own domain with free spam protection and webmail access. Get the control and flexibility you need to manage your communication effectively.</p>
-          </div>
-          <div className="grow"></div>
-          {/* footer */}
-          <PlainButton
-            text="LEARN MORE"
-            handler={() => {
-              setModalTitle("Business Email Service"), setModalData(<WHBusinessEmail />), requestModal();
             }}
           />
         </FeatureCard>
@@ -169,6 +152,20 @@ const WordPressBusinessTools = () => {
             text="LEARN MORE"
             handler={() => {
               setModalTitle("Automatic WordPress core, plugins and security updates"), setModalData(<WHWordpressUpdate />), requestModal();
+            }}
+          />
+        </FeatureCard>
+        <FeatureCard>
+          <div className="space-y-5">
+            <CollaborationIcon className="fill-primary w-14 h-14" />
+            <h3 className="text-title font-bold text-3xl">Collaboration Tools</h3>
+            <p className="text-text">It is simple to include developers who work on a particular website as collaborators. Additionally, once the website is prepared, you can deliver it to the client.</p>
+          </div>
+          <div className="grow"></div>
+          <PlainButton
+            text="LEARN MORE"
+            handler={() => {
+              setModalTitle("Collaboration Tools"), setModalData(<WHCollaborationTools />), requestModal();
             }}
           />
         </FeatureCard>

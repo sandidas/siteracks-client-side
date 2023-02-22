@@ -21,7 +21,7 @@ const BusinessHostingMoreBenefits = () => {
   const { requestModal, setModalData, setModalTitle } = useModalContext();
   return (
     <>
-      <SectionTitle title="More Benefits" subTitle="of SiteRacks WordPress Hosting" bottomSpace />
+      <SectionTitle title="More Benefits" subTitle="of SiteRacks Business Hosting" bottomSpace />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <FeatureCard backgroundSecond>
           <div className="space-y-5">

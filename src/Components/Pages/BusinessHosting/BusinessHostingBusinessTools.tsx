@@ -8,9 +8,7 @@ import React from "react";
 import PaperPlaneIconFast from "../../../../public/images/icons/paperPlaneIconFast.svg";
 import DashboardIcon from "../../../../public/images/icons/dashboardIcon.svg";
 import WHDomainManagement from "@/Components/ModalComponents/WHDomainManagement";
-import WHBusinessEmail from "@/Components/ModalComponents/WHBusinessEmail";
 import DomainIcon from "../../../../public/images/icons/domainIcon.svg";
-import EmailIcon from "../../../../public/images/icons/emailIcon.svg";
 import WHPrioritySupport from "@/Components/ModalComponents/WHPrioritySupport";
 import PrioritySupportIcon from "../../../../public/images/icons/prioritySupportIcon.svg";
 import WHTopNorthSecurity from "@/Components/ModalComponents/WHTopNorthSecurity";
@@ -18,11 +16,13 @@ import TopNorthSecurityIcon from "../../../../public/images/icons/TopNorthSecuri
 import AutoUpdateIcon from "../../../../public/images/icons/autoUpdateIcon.svg";
 import ReadyWebsiteIcon from "../../../../public/images/icons/readyWebsiteIcon.svg";
 import CollaborationIcon from "../../../../public/images/icons/collaborationIcon.svg";
+import GithubIcon from "../../../../public/images/icons/githubIcon.svg";
 
 
 import WHCollaborationTools from "@/Components/ModalComponents/WHCollaborationTools";
 import WHDedicatedWordPressExpertModal from "@/Components/ModalComponents/WHDedicatedWordPressExpertModal";
 import WHWordpressUpdate from "@/Components/ModalComponents/WHWordpressUpdate";
+import WHGit from "@/Components/ModalComponents/WHGit";
 
 const BusinessHostingBusinessTools = () => {
   const { requestModal, setModalData, setModalTitle } = useModalContext();
@@ -63,21 +63,6 @@ const BusinessHostingBusinessTools = () => {
           />
         </FeatureCard>
 
-        <FeatureCard background>
-          <div className="space-y-5">
-            <EmailIcon className="fill-primary w-14 h-14" />
-            <h3 className="text-title font-bold text-3xl">Business Email Service</h3>
-            <p className="text-text">Enjoy unlimited email accounts under your own domain with free spam protection and webmail access. Get the control and flexibility you need to manage your communication effectively.</p>
-          </div>
-          <div className="grow"></div>
-          {/* footer */}
-          <PlainButton
-            text="LEARN MORE"
-            handler={() => {
-              setModalTitle("Business Email Service"), setModalData(<WHBusinessEmail />), requestModal();
-            }}
-          />
-        </FeatureCard>
 
         <FeatureCard background>
           <div className="space-y-5">
@@ -94,6 +79,23 @@ const BusinessHostingBusinessTools = () => {
             }}
           />
         </FeatureCard>
+
+        <FeatureCard background>
+          <div className="space-y-5">
+            <GithubIcon className="fill-primary w-14 h-14" />
+            <h3 className="text-title font-bold text-3xl">Integration with Git</h3>
+            <p className="text-text">Our servers come pre-installed with Git to streamline your development process.</p>
+          </div>
+          <div className="grow"></div>
+          {/* footer */}
+          <PlainButton
+            text="LEARN MORE"
+            handler={() => {
+              setModalTitle("Simple Integration with Git"), setModalData(<WHGit />), requestModal();
+            }}
+          />
+        </FeatureCard>
+
 
         <FeatureCard background>
           <div className="space-y-5">

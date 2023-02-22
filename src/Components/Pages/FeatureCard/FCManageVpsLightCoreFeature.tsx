@@ -17,7 +17,7 @@ const FCManageVpsLightCoreFeature = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
-            setModalTitle("Dedicated Support"), setModalData(<WHManageVpsLightCoreFeature />), requestModal();
+            setModalTitle("Fully managed VPS light"), setModalData(<WHManageVpsLightCoreFeature />), requestModal();
           }}
         />
       </article>
