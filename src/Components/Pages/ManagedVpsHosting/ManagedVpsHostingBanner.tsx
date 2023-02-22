@@ -1,7 +1,7 @@
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import React from "react";
-import BusinessHostingBannerImage from "../../../../public/images/webHosting/business-hosting-banner.svg";
+import ManageVpsHostingBannerImage from "../../../../public/images/webHosting/manage-vps-hosting-banner.svg";
 
 const ManagedVpsHostingBanner = () => {
   return (
@@ -38,7 +38,7 @@ const ManagedVpsHostingBanner = () => {
       </div>
 
       <div className="flex flex-col justify-start items-center w-full md:col-span-6">
-        <BusinessHostingBannerImage className="w-full h-fit hidden md:block fill-primary" />
+        <ManageVpsHostingBannerImage className="w-full h-fit hidden md:block fill-primary" />
       </div>
     </div>
   );

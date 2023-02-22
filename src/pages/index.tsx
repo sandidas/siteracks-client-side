@@ -11,6 +11,7 @@ import HireAnExpert from "@/Components/Home/HireAnExpert";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import FreeMigration from "@/Components/Home/FreeMigration";
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
+import HomeArticle from "@/Components/Home/HomeArticle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,9 +31,11 @@ export default function Home() {
 
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <HomeCard />
-          <ArticleSection />
+          {/* <ArticleSection /> */}
+          <HomeArticle />
         </div>
-        <FreeMigration />
+        {/* <FreeMigration /> */}
+        <MoneyBackGuarantee />
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <WebsiteUpSection />
         </div>
@@ -41,7 +44,7 @@ export default function Home() {
           <SiteRacksParkSection />
         </div>
 
-        <MoneyBackGuarantee />
+       
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <HomeReview />
         </div>

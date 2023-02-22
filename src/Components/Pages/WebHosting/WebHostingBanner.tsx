@@ -1,6 +1,6 @@
 import { Button } from "@mantine/core";
 import React from "react";
-import PremiumWebsiteBuilder from "../../../../public/images/webHosting/premiumWebsiteBuilder.svg";
+import PremiumWebsiteBuilder from "../../../../public/images/webHosting/web-hosting-banner.svg";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 const WebHostingBanner = () => {
   return (
@@ -30,7 +30,7 @@ const WebHostingBanner = () => {
         </Button>
       </div>
 
-      <div className="flex flex-col justify-start items-center w-full md:col-span-6">
+      <div className="flex flex-col justify-start items-center w-full h-fit md:col-span-6">
         <PremiumWebsiteBuilder className="w-full h-fit hidden md:block fill-primary" />
       </div>
     </div>
