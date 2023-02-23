@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer base {
   :root {
-    --color-text: rgb(141,141,141); /*8d8d8d*/
+    --color-text: rgb(49, 49, 49); /*8d8d8d*/
     --color-light: rgb(245, 245, 245);
     --color-success: rgb(0, 200, 81);
     --color-info: rgb(51, 181, 229);
@@ -15,14 +15,14 @@
     --color-secondary: rgb(29, 67, 84);
     --color-title: rgb(54, 54, 54);
     --color-secondary-on: rgb(224, 224, 224);
-    --color-surface: rgb(247,245,235);
+    --color-surface: rgb(247, 245, 235);
     --color-surfaceDark: rgb(17, 20, 36);
     --color-surfaceTwo: rgb(245, 71, 73);
     --color-surfaceThree: rgb(87, 101, 251);
     --color-surfaceFour: rgb(242, 243, 249);
     --color-surfaceFive: rgb(2, 200, 240);
   }
-
+  /* --color-text: rgb(141,141,141); 8d8d8d */
   :root[class="dark"] {
     --color-text: rgb(144, 150, 156);
     --color-light: rgb(245, 245, 245);
@@ -101,8 +101,7 @@
     font-style: normal;
   }
 }
- 
- 
+
 p,
 button {
   /* font-size: 18px; */
@@ -131,7 +130,7 @@ h4,
 h5,
 h6,
 button {
-  font-family: "Poppins", Barlow, Mulish, sans-serif!important;
+  font-family: "Poppins", Barlow, Mulish, sans-serif !important;
 }
 
 html {

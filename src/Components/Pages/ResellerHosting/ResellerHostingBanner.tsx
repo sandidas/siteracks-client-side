@@ -1,11 +1,11 @@
-import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
-import { Button } from '@mantine/core';
-import React from 'react';
+import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
+import { Button } from "@mantine/core";
+import React from "react";
 import BusinessHostingBannerImage from "../../../../public/images/webHosting/business-hosting-banner.svg";
 
 const ResellerHostingBanner = () => {
-    return (
-        <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[12vh] pb-[8vh]  gap-3 md:5 xl:gap-16 2xl:gap-32">
+  return (
+    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[12vh] pb-[8vh]  gap-3 md:5 xl:gap-16 2xl:gap-32">
       <div className="flex flex-col items-start space-y-8 justify-center md:col-span-6 group">
         <h1 className="flex flex-col md:leading-normal space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">Effortlessly available and ready-to-run</span>
@@ -13,14 +13,14 @@ const ResellerHostingBanner = () => {
           <span className="text-5xl lg:text-6xl lg:leading-tight text-title font-bold">Industry leader reseller hosting</span>
 
           <span className="uppercase text-xl">Made for you to manage multiple sites easily</span>
-          <span className="uppercase text-xl font-bold text-primary tracking-wider">and allows you to earn money by hosting your clients</span>         
+          <span className="uppercase text-xl font-bold text-primary tracking-wider">and allows you to earn money by hosting your clients</span>
         </h1>
         <ul className="text-text lg:text-xl space-y-3 list-disc pl-8">
+          <li>Host Unlimited Websites with Free SSL Certificate</li>
+          <li>Built For Your Success</li>
           <li>Dedicated one-to-one support.</li>
-          <li>Latest technologies with advanced security.</li>
           <li>Scale your business when needed</li>
           <li>White Labeled</li>
-          <li>Built For Your Success</li>
         </ul>
         <div>
           <div className="text-text">Starting at</div>
@@ -39,7 +39,7 @@ const ResellerHostingBanner = () => {
         <BusinessHostingBannerImage className="w-full h-fit hidden md:block fill-primary" />
       </div>
     </div>
-    );
+  );
 };
 
 export default ResellerHostingBanner;
