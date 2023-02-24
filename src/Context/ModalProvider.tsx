@@ -71,7 +71,8 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
 
         <div className="flex flex-col py-5 items-center">
           <PlainButton
-            text="Close"
+            text="CLOSE"
+            closeButton
             handler={() => {
               setModalOpened(false), setModalData(null), setModalTitle(null);
             }}

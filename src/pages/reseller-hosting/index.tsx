@@ -23,7 +23,7 @@ const ResellerHosting = () => {
         <section className="bg-surface bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
           <ResellerHostingWhmcs />
         </section>
-        <section className="bg-surface bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
+        <section className="py-[10vh]">
           <ResellerHostingArticle />
         </section>
       </main>

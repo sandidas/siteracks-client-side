@@ -52,14 +52,14 @@ const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSp
 
       {/* Print with subtitle  */}
       {title && (
-        <h2 className="flex flex-col">
+        <h2 className="flex flex-col space-y-3">
           {" "}
           <span className="text-text text-2xl"> {supTitle && supTitle}</span>
           {title && (
             <>
               <span className={`${smallTitleSize ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"} lg:leading-snug font-bold ${titleOnDark ? "text-white" : "text-title"}`}>{title}</span>
 
-              <span className="text-2xl leading-normal text-slate-500 font-light">{subTitle && subTitle}</span>
+              <span className="text-2xl leading-normal text-text">{subTitle && subTitle}</span>
             </>
           )}
         </h2>

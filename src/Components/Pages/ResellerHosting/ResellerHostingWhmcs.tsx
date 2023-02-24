@@ -11,6 +11,9 @@ const ResellerHostingWhmcs = () => {
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <SectionTitle title="Simplify and streamline your reseller hosting business" subTitle="with the efficient automation provided by WHMCS software." bottomSpace />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-8">
+            <div className="flex justify-center items-center w-full h-fit bg-surface">
+              <Image alt="" src={WHMCSImage} />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
               <FeatureCard backgroundSecond>
                 <h4 className="text-title font-bold text-2xl">Efficient automation</h4>
@@ -30,9 +33,6 @@ const ResellerHostingWhmcs = () => {
                 <h4 className="text-title font-bold text-2xl">Domain registrars integration</h4>
                 <p>Domain registrar integration allows you to manage domains seamlessly from the same dashboard.</p>
               </FeatureCard>
-            </div>
-            <div className="flex justify-center items-center w-full h-fit bg-surface">
-              <Image alt="" src={WHMCSImage} />
             </div>
           </div>
         </div>
