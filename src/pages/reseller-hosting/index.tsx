@@ -1,3 +1,4 @@
+import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import ResellerHostingArticle from "@/Components/Pages/ResellerHosting/ResellerHostingArticle";
 import ResellerHostingBanner from "@/Components/Pages/ResellerHosting/ResellerHostingBanner";
 import ResellerHostingPricing from "@/Components/Pages/ResellerHosting/ResellerHostingPricing";
@@ -25,6 +26,9 @@ const ResellerHosting = () => {
         </section>
         <section className="py-[10vh]">
           <ResellerHostingArticle />
+        </section>
+        <section className="bg-surface py-[10vh]">
+          <FCFeatureForAllPackage />
         </section>
       </main>
     </>

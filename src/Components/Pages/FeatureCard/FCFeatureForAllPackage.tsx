@@ -1,6 +1,5 @@
 import PlainButton from "@/Components/Buttons/PlainButton";
 import FeatureCard from "@/Components/Card/FeatureCard";
-import WHUltraFastPHP from "@/Components/ModalComponents/WHUltraFastPHP";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import { useModalContext } from "@/Context/ModalProvider";
 import React from "react";
@@ -11,12 +10,18 @@ import CsfFirewallIcon from "../../../../public/images/icons/csfFirewallIcon.svg
 import DdosIcon from "../../../../public/images/icons/ddosIcon.svg";
 import FirewallIcon from "../../../../public/images/icons/firewallIcon.svg";
 import WordPressSolutions from "../../../../public/images/icons/wordPressSolutions.svg";
+import WHInstantlyScalable from "@/Components/ModalComponents/WHInstantlyScalable";
+import WHTopNorthSecurity from "@/Components/ModalComponents/WHTopNorthSecurity";
+import WHDDoS from "@/Components/ModalComponents/WHDDoS";
+import WHCsfFirewal from "@/Components/ModalComponents/WHCsfFirewal";
+import WHIntegratedFirewall from "@/Components/ModalComponents/WHIntegratedFirewall";
+import WHWordPressSupport from "@/Components/ModalComponents/WHWordPressSupport";
 
 const FCFeatureForAllPackage = () => {
   const { requestModal, setModalData, setModalTitle } = useModalContext();
   return (
-    <div>
-      <SectionTitle title="Get Extra Benefits" subTitle="By developer selected best wordpress hosting" bottomSpace />
+    <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
+      <SectionTitle title="Get Extra Benefits" subTitle="By developer selected best cloud wordpress hosting" bottomSpace />
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-5">
         <FeatureCard backgroundSecond>
           <div className="space-y-3">
@@ -31,7 +36,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
+              setModalTitle("Integrated Firewall"), setModalData(<WHIntegratedFirewall />), requestModal();
             }}
           />
         </FeatureCard>
@@ -49,7 +54,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
+              setModalTitle("DDoS Attack Protection"), setModalData(<WHDDoS />), requestModal();
             }}
           />
         </FeatureCard>
@@ -67,7 +72,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
+              setModalTitle("CSF Firewall"), setModalData(<WHCsfFirewal />), requestModal();
             }}
           />
         </FeatureCard>
@@ -85,7 +90,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
+              setModalTitle("Advanced Server Security"), setModalData(<WHTopNorthSecurity />), requestModal();
             }}
           />
         </FeatureCard>
@@ -103,7 +108,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
+              setModalTitle("Instantly Scalable"), setModalData(<WHInstantlyScalable />), requestModal();
             }}
           />
         </FeatureCard>
@@ -111,7 +116,7 @@ const FCFeatureForAllPackage = () => {
         <FeatureCard backgroundSecond>
           <div className="space-y-3">
             <WordPressSolutions className="fill-primary w-14 h-14" />
-            <h3 className="text-title font-bold text-xl">In house WordPress Expert</h3>
+            <h3 className="text-title font-bold text-xl">WordPress Expert Support</h3>
             {/* <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p> */}
           </div>
           <div className="grow"></div>
@@ -121,7 +126,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
+              setModalTitle("WordPress Expert Support"), setModalData(<WHWordPressSupport />), requestModal();
             }}
           />
         </FeatureCard>

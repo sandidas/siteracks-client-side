@@ -2,8 +2,10 @@ import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import React from "react";
 import FCDedicatedSupport from "../FeatureCard/FCDedicatedSupport";
 import FCFreeWebsiteMigration from "../FeatureCard/FCFreeWebsiteMigration";
+import FCPremiumCloudServers from "../FeatureCard/FCPremiumCloudServers";
 import FCResellerScaleBusiness from "../FeatureCard/FCResellerScaleBusiness";
 import FCResellerWhiteLabel from "../FeatureCard/FCResellerWhiteLabel";
+import FCResellerYourSuccess from "../FeatureCard/FCResellerYourSuccess";
 
 const ResellerHostingArticle = () => {
   return (
@@ -12,8 +14,10 @@ const ResellerHostingArticle = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-16 2xl:gap-32">
         <FCResellerWhiteLabel />
         <FCResellerScaleBusiness />
+        <FCResellerYourSuccess />
         <FCFreeWebsiteMigration />
         <FCDedicatedSupport />
+        <FCPremiumCloudServers />
       </div>
     </div>
   );

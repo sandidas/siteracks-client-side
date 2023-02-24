@@ -33,7 +33,7 @@ const ManagedVpsHostingMoreBenefits = () => {
 
         <FeatureCard backgroundSecond>
           <div className="space-y-5">
-            {/* <PhpIcon className="fill-primary w-14 h-14" /> */}
+            <PhpIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Ultra-Fast Updated PHP & MySQL</h3>
             <p className="text-text">Latest, Custom and Stable PHP setup for great overall site speed.</p>
           </div>
