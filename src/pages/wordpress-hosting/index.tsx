@@ -9,6 +9,7 @@ import WordPressHostingPricing from "@/Components/Pages/WordPressHosting/WordPre
 import Head from "next/head";
 import React from "react";
 import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
+import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 
 
 const WordPressHosting = () => {
@@ -36,6 +37,12 @@ const WordPressHosting = () => {
           <WordPressBusinessTools />
         </section>
         <LiveChat />
+
+
+        <section className="py-[10vh] bg-surface dark:bg-black">
+          <FCFeatureForAllPackage />
+        </section>
+
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WordPressHostingFaq />
         </section>

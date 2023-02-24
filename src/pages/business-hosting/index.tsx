@@ -43,7 +43,7 @@ const BusinessHosting = () => {
         </section>
         <LiveChat />
 
-        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+        <section className="py-[10vh]">
           <FCFeatureForAllPackage />
         </section>
         
