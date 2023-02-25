@@ -21,7 +21,7 @@ const BusinessHosting = () => {
         <meta name="description" content="SiteRacks" />
       </Head>
       <main>
-        <section className="bg-surface bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
+        <section className="bg-surface">
           <BusinessHostingBanner />
         </section>
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">

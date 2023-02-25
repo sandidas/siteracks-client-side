@@ -1,3 +1,4 @@
+import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import WebHostingArticle from "@/Components/Pages/WebHosting/WebHostingArticle";
 import WebHostingBanner from "@/Components/Pages/WebHosting/WebHostingBanner";
@@ -28,11 +29,10 @@ const WebHosting = () => {
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WebHostingEssentials />
         </section>
-
+        <MoneyBackGuarantee />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WebHostingPremiumAdvantage />
         </section>
-
 
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WebHostingFaq />

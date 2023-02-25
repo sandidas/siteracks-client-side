@@ -28,7 +28,7 @@ const ResellerHosting = () => {
         <section className="py-[10vh]">
           <ResellerHostingArticle />
         </section>
-        <section className="py-[10vh]">
+        <section className="py-[10vh] bg-surface">
           <FCFeatureForAllPackage />
         </section>
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
