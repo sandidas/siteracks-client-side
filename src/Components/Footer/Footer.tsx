@@ -1,10 +1,17 @@
+import { ArrowUpIcon } from "@heroicons/react/24/solid";
+import { useScrollIntoView } from "@mantine/hooks";
 import Link from "next/link";
 import React from "react";
 import Logo from "../Header/Logo";
 
 const Footer = () => {
+  const { scrollIntoView, targetRef, scrollableRef } = useScrollIntoView();
   return (
     <>
+      <button onClick={() => scrollIntoView()}>
+        {" "}
+        <ArrowUpIcon className="h-6 w-6 fixed right-5 bottom-5" />{" "}
+      </button>
       <section className="max-w-screen-2xl mx-auto pt-[10vh] px-5">
         <div className="flex justify-end">
           <Logo logoHeight="120px" logoWidth="900px" />
@@ -170,12 +177,22 @@ const Footer = () => {
           </div>
           <div className="py-[2vh] border-t border-slate-300 dark:border-slate-600 text-text">
             <p>Copyright © 2023 SiteRacks, LLC. All Rights Reserved.</p>
-            <p className="text-xs">
-            All trademarks, logos, and brand names are the property of their respective owners.
-            </p>
+            <p className="text-xs">All trademarks, logos, and brand names are the property of their respective owners.</p>
             <ul className="flex text-sm gap-5 justify-end">
-            <li> <Link href="/" className="hover:text-title"> Terms and Conditions </Link> </li>
-            <li> <Link href="/" className="hover:text-title"> Privacy Policy </Link> </li>
+              <li>
+                {" "}
+                <Link href="/" className="hover:text-title">
+                  {" "}
+                  Terms and Conditions{" "}
+                </Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href="/" className="hover:text-title">
+                  {" "}
+                  Privacy Policy{" "}
+                </Link>{" "}
+              </li>
             </ul>
           </div>
         </section>
