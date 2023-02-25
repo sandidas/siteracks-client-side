@@ -18,32 +18,32 @@ const ManagedVpsHostingReadyApps = () => {
         <SectionTitle bottomSpace title="Ready To Use Apps" />
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-7">
           <LogoCard>
-            <UbuntuLogo className="w-full h-24 px-10" />
+            <UbuntuLogo className="w-full h-24 md:px-10 px-2" />
           </LogoCard>
           <LogoCard>
-            <PleskLogo className="w-full h-24 px-10" />
+            <PleskLogo className="w-full h-24 md:px-10 px-2" />
           </LogoCard>
           <LogoCard>
-            <Immunify360Logo className="w-full h-24 px-10" />
-          </LogoCard>
-
-          <LogoCard>
-            <WordPressLogo className="w-full h-24 px-10" />
+            <Immunify360Logo className="w-full h-24 md:px-10 px-2" />
           </LogoCard>
 
           <LogoCard>
-            <CentosLogo className="w-full h-24 px-10" />
+            <WordPressLogo className="w-full h-24 md:px-10 px-2" />
           </LogoCard>
 
           <LogoCard>
-            <CPanelLogo className="w-full h-24 px-10" />
+            <CentosLogo className="w-full h-24 md:px-10 px-2" />
           </LogoCard>
 
           <LogoCard>
-            <CloudLinuxLogo className="w-full h-24 px-10" />
+            <CPanelLogo className="w-full h-24 md:px-10 px-2" />
+          </LogoCard>
+
+          <LogoCard>
+            <CloudLinuxLogo className="w-full h-24 md:px-10 px-2" />
           </LogoCard>
           <LogoCard>
-            <LightSpeedLogo className="w-full h-24 px-10" />
+            <LightSpeedLogo className="w-full h-24 md:px-10 px-2" />
           </LogoCard>
         </div>
       </div>

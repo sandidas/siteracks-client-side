@@ -4,7 +4,7 @@ import React from "react";
 
 const comparisonData = [
   {
-    title: "Ready to use with CentOs and CloudLinux",
+    title: "Ready to use with CentOs/Linux",
     vpsLightHostingStatus: true,
     traditionalVpsStatus: false,
     popover: "",

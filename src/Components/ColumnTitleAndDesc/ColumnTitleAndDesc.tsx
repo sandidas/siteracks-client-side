@@ -30,14 +30,14 @@ const ColumnTitleAndDesc = ({ supTitle, title, subTitle, children, colorOnDark }
 
       {/* Print with supTitle, title and subtitle  */}
       {title && (
-        <h2 className="flex flex-col">
+        <h2 className="flex flex-col space-y-2">
           {" "}
           {title && (
             <>
               <span className="text-text"> {supTitle && supTitle} </span>
               <span className={`text-3xl lg:text-4xl lg:leading-snug font-bold ${colorOnDark ? "text-white" : "text-title"}`}>{title}</span>
 
-              <span className="text-2xl text-slate-500 leading-snug font-light">{subTitle && subTitle}</span>
+              <span className="text-lg md:text-2xl text-slate-500 leading-snug font-light">{subTitle && subTitle}</span>
             </>
           )}
         </h2>

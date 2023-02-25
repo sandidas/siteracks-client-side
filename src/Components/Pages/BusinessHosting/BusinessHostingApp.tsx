@@ -19,36 +19,36 @@ const BusinessHostingApp = () => {
 
             
           <div>
-            <DrupalLogo className="w-full h-24 px-10" />
+            <DrupalLogo className="w-full h-24 md:px-10 px-2" />
           </div>
 
           <div>
-            <JoomlaLogo className="w-full h-24 px-10" />
+            <JoomlaLogo className="w-full h-24 md:px-10 px-2" />
           </div>
 
           <div>
-            <LaravelLogo className="w-full h-24 px-10" />
+            <LaravelLogo className="w-full h-24 md:px-10 px-2" />
           </div>
 
           <div>
-            <MagentoLogo className="w-full h-24 px-10" />
+            <MagentoLogo className="w-full h-24 md:px-10 px-2" />
           </div>
 
           <div>
-            <NodejsLogo className="w-full h-24 px-10" />
+            <NodejsLogo className="w-full h-24 md:px-10 px-2" />
           </div>
 
           <div>
-            <ReactLogo className="w-full h-24 px-10" />
+            <ReactLogo className="w-full h-24 md:px-10 px-2" />
           </div>
 
           <div>
-            <WooCommerceLogo className="w-full h-24 px-10" />
+            <WooCommerceLogo className="w-full h-24 md:px-10 px-2" />
           </div>
  
 
           <div>
-            <WordPressLogo className="w-full h-24 px-10" />
+            <WordPressLogo className="w-full h-24 md:px-10 px-2" />
           </div>
  
 

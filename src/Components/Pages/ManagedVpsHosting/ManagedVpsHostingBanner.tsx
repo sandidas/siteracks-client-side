@@ -5,8 +5,9 @@ import ManageVpsHostingBannerImage from "../../../../public/images/webHosting/ma
 
 const ManagedVpsHostingBanner = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-12 pt-[12vh] pb-[8vh]  gap-3 md:5 xl:gap-16 2xl:gap-32">
-      <div className="flex flex-col items-start space-y-8 justify-center md:col-span-6 group">
+    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
+      {/* left column  */}
+      <div className="flex flex-col justify-center items-start space-y-8 group order-2 md:order-1">
         <h1 className="flex flex-col space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">No Complexity, No Hassle</span>
           <span className="text-5xl lg:text-6xl text-title font-bold lg:leading-tight"> A 100% Fully Managed VPS Hosting.</span>
@@ -37,8 +38,9 @@ const ManagedVpsHostingBanner = () => {
         </p>
       </div>
 
-      <div className="flex flex-col justify-start items-center w-full md:col-span-6">
-        <ManageVpsHostingBannerImage className="w-full h-fit hidden md:block fill-primary" />
+      {/* right column  */}
+      <div className="flex flex-col justify-start items-center w-full order-1 md:order-2">
+        <ManageVpsHostingBannerImage className="w-full h-fit" />
       </div>
     </div>
   );
