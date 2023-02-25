@@ -14,7 +14,7 @@ const FCOptimizedForCMSApp = () => {
           <OptimizedCMSApp className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
         </div>
 
-        <ColumnTitleAndDesc title="Optimized for CMS Applications and E-Commerce">
+        <ColumnTitleAndDesc supTitle="Optimized for " title="CMS Applications and E-Commerce">
           <p className="text-text lg:text-xl lg:leading-9">Maximize your online store or website with our optimized cloud servers designed specifically for CMS and e-commerce needs.</p>
         </ColumnTitleAndDesc>
 
