@@ -11,7 +11,7 @@ interface ITitleAndDescription {
   aboveSpace?: boolean;
   children?: any;
   titleOnDark?: boolean;
-  smallTitleSize?:boolean;
+  smallTitleSize?: boolean;
 }
 
 // const defValue = {
@@ -35,7 +35,7 @@ const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSp
       {/* {title && !subTitle && <h2 className={`text-4xl lg:text-5xl lg:leading-tight font-bold ${titleOnDark ? "text-white" : "text-title"}`}> {title && title}</h2>} */}
 
       {/* Print with subtitle  */}
-{/*       
+      {/*       
       {title && subTitle && (
         <h2 className="flex flex-col">
           {" "}
@@ -59,7 +59,7 @@ const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSp
             <>
               <span className={`${smallTitleSize ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"} lg:leading-snug font-bold ${titleOnDark ? "text-white" : "text-title"}`}>{title}</span>
 
-              <span className={`text-2xl leading-normal ${titleOnDark ? "text-slate-300" :"text-text"}`}>{subTitle && subTitle}</span>
+              <span className={`text-2xl leading-normal ${titleOnDark ? "text-slate-300" : "text-text"}`}>{subTitle && subTitle}</span>
             </>
           )}
         </h2>
