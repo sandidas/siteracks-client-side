@@ -5,6 +5,7 @@ import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForA
 import ManagedVpsHostingArticle from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingArticle";
 import ManagedVpsHostingBanner from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingBanner";
 import ManagedVpsHostingCompare from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingCompare";
+import ManagedVpsHostingFaq from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingFaq";
 import ManagedVpsHostingMoreBenefits from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingMoreBenefits";
 import ManagedVpsHostingPricing from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingPricing";
 import ManagedVpsHostingReadyApps from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingReadyApps";
@@ -40,7 +41,8 @@ const VpsLight = () => {
           <FCFeatureForAllPackage />
         </section>
 
-        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">{/* <ManagedVpsHostingFaq /> */}</section>
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]"><ManagedVpsHostingFaq /> 
+        </section>
       </main>
     </>
   );
