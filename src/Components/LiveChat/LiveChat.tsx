@@ -19,19 +19,17 @@ const LiveChat = () => {
             <div className="w-full">{/* <ExpertIcon className="w-full h-fit fill-primary" /> */}</div>
             {/* <BackgroundSurfacePrimary className="w-5/12 h-72 fill-primary stroke-primary absolute left-0" /> */}
           </div>
-        
+
           {/* Right Column */}
           <div className="md:col-span-9 flex flex-col justify-center items-start space-y-12">
-            <SectionTitle title={`Get 24x7 support`}
-            subTitle="Our expert support team is happy to help you."  
-            bottomSpace={true} 
-            leftAlignDesktop={true} 
-            titleOnDark={true} 
-            description={`We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.`}
+            <SectionTitle
+              title={`Get 24x7 support`}
+              subTitle="Our expert support team is happy to help you."
+              bottomSpace
+              leftAlignDesktop
+              titleOnDark
+              description={`We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.`}
             />
-
-            
-            
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
               <FeatureCard background={true}>

@@ -2,7 +2,7 @@ import PlainButton from "@/Components/Buttons/PlainButton";
 import ColumnTitleAndDesc from "@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc";
 import WHResellerYourSuccess from "@/Components/ModalComponents/WHResellerYourSuccess";
 import { useModalContext } from "@/Context/ModalProvider";
-import PremiumWebsiteBuilderImage from "../../../../public/images/article/premium-website-builder.svg";
+import BannerImage from "../../../../public/images/article/reseller-success.svg";
 import React from "react";
 
 const FCResellerYourSuccess = () => {
@@ -10,7 +10,7 @@ const FCResellerYourSuccess = () => {
   return (
     <article className="flex flex-col space-y-8 group items-start">
       <div className="w-full">
-        <PremiumWebsiteBuilderImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
+        <BannerImage className="w-full h-fit max-h-[200px] lg:max-h-[240px]  xl:max-h-[340px]" />{" "}
       </div>
 
       <ColumnTitleAndDesc title="Designed to ensure your success.">

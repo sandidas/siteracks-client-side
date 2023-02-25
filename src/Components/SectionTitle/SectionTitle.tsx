@@ -59,13 +59,13 @@ const SectionTitle = ({ title, subTitle, description, leftAlignDesktop, bottomSp
             <>
               <span className={`${smallTitleSize ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"} lg:leading-snug font-bold ${titleOnDark ? "text-white" : "text-title"}`}>{title}</span>
 
-              <span className="text-2xl leading-normal text-text">{subTitle && subTitle}</span>
+              <span className={`text-2xl leading-normal ${titleOnDark ? "text-slate-300" :"text-text"}`}>{subTitle && subTitle}</span>
             </>
           )}
         </h2>
       )}
 
-      {description && <p className="text-text lg:text-xl lg:leading-9">{description}</p>}
+      {description && <p className={`lg:text-xl lg:leading-9 ${titleOnDark ? "text-slate-400" : "text-text"}`}>{description}</p>}
       {children && children}
     </div>
   );
