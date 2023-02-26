@@ -131,7 +131,7 @@ const domainMenuItems = [
     icon: SiteLockCertificate,
     title: "Privacy & Protection for Domains",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "site-lock-certificate",
+    linkUrl: "privacy-protection-for-domains",
   },
   {
     icon: RegisterDomain,
@@ -167,19 +167,19 @@ const securityMenuItems = [
     icon: SslCertificates,
     title: "SSL Certificates",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "ssl-certificate",
+    linkUrl: "ssl-certificates",
   },
   {
     icon: SiteLockCertificate,
     title: "SiteLock Certificates",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "site-lock-certificate",
+    linkUrl: "siteLock-certificates",
   },
   {
     icon: WildCardCertificate,
     title: "Wildcard SSL",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "wildcard-certificate",
+    linkUrl: "wildcard-certificates",
   },
 ];
 
@@ -200,7 +200,7 @@ const helpMenuItems = [
     icon: KnowledgeBase,
     title: "Knowledge Base",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "knowledge-base",
+    linkUrl: "knowldege-base",
   },
 ];
 
