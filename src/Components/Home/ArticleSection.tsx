@@ -26,9 +26,9 @@ const FeatureOne = () => {
 
           <p className="text-text lg:text-xl lg:leading-9">No matter your business’s stage, Our hosting is supported with high uptime, enterprise-grade security, performance, and 24/7 expert support.</p>
 
-          <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+          <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:fill-white group-hover:bg-secondary">
             Get Started
-            <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+            <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>
         </article>
       </div>
@@ -41,7 +41,7 @@ const FeatureOne = () => {
 
           <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
             Get Started
-            <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+            <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>
         </div>
 

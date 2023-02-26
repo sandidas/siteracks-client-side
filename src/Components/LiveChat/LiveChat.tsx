@@ -42,7 +42,7 @@ const LiveChat = () => {
                 <div className="grow"></div>
                 <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
-                  <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+                  <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
                 </Button>
               </FeatureCard>
               <FeatureCard background={true}>
@@ -55,7 +55,7 @@ const LiveChat = () => {
                 <div className="grow"></div>
                 <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
-                  <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+                  <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
                 </Button>
               </FeatureCard>
 
@@ -86,7 +86,7 @@ const LiveChat = () => {
                 <div className="grow"></div>
                 <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
-                  <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+                  <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
                 </Button>
               </FeatureCard>
             </div>

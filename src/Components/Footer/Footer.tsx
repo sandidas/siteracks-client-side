@@ -1,17 +1,25 @@
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
-import { useScrollIntoView } from "@mantine/hooks";
+import { Transition, UnstyledButton } from "@mantine/core";
+import { useWindowScroll } from "@mantine/hooks";
 import Link from "next/link";
 import React from "react";
 import Logo from "../Header/Logo";
 
 const Footer = () => {
-  const { scrollIntoView, targetRef, scrollableRef } = useScrollIntoView();
+  const [scroll, scrollTo] = useWindowScroll();
+
   return (
     <>
-      <button onClick={() => scrollIntoView()}>
-        {" "}
-        <ArrowUpIcon className="h-6 w-6 fixed right-5 bottom-5" />{" "}
-      </button>
+      <Transition transition="slide-up" mounted={scroll.y > 0}>
+        {(transitionStyles) => (
+          <UnstyledButton className="fixed right-5 bottom-5" style={transitionStyles} onClick={() => scrollTo({ y: 0 })}>
+            <ArrowUpIcon className="h-6 w-6" />
+          </UnstyledButton>
+        )}
+      </Transition>
+
+      <a href="#orderNow">Order Now Link</a>
+
       <section className="max-w-screen-2xl mx-auto pt-[10vh] px-5">
         <div className="flex justify-end">
           <Logo logoHeight="120px" logoWidth="900px" />

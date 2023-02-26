@@ -1,7 +1,10 @@
 @tailwind base;
+html {
+  scroll-behavior: smooth;
+}
 @tailwind components;
 @tailwind utilities;
-@layer base {
+@layer base { 
   :root {
     --color-text: rgb(49, 49, 49); /*8d8d8d*/
     --color-light: rgb(245, 245, 245);

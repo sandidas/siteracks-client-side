@@ -26,7 +26,7 @@ const HomeCard = () => {
         </div>
         <Button size="xl" className="bg-white shadow transition ease-in-out duration-500 text-gray-600 group-hover:text-white group-hover:bg-black">
           See Plans
-          <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>
       </div>
       {/*  */}
@@ -45,7 +45,7 @@ const HomeCard = () => {
         </div>
         <Button size="xl" className="bg-white shadow transition ease-in-out duration-500 text-gray-600 group-hover:text-white group-hover:bg-black">
           See Plans
-          <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>
         <div className="absolute top-0 right-0 bg-red-500 text-lime-50 px-3 font-medium rounded-l-md">Popular</div>
       </div>
@@ -65,7 +65,7 @@ const HomeCard = () => {
         </div>
         <Button size="xl" className="bg-white shadow transition ease-in-out duration-500 text-gray-600 group-hover:text-white group-hover:bg-black">
           See Plans
-          <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>
       </div>
       {/*  */}
@@ -88,7 +88,7 @@ const HomeCard = () => {
         </div>
         <Button size="xl" className="bg-white shadow transition ease-in-out duration-500 text-gray-600 group-hover:text-white group-hover:bg-black">
           See Plans
-          <ArrowLongRightIcon className="h-10 w-10 text-text pl-2 hidden group-hover:block" />
+          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>
       </div>
     </section>

@@ -77,6 +77,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
               setModalOpened(false), setModalData(null), setModalTitle(null);
             }}
           />
+          <a href="#orderNow" onClick={()=> {setModalOpened(false), setModalData(null), setModalTitle(null)}}>Order Now</a>
         </div>
       </Modal>
     </>

@@ -25,11 +25,11 @@ export default function Home() {
       <main>
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}
-        <div style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundAttachment: "fixed", backgroundPosition: "top center" }}>
+        <div style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundPosition: "top center" }}>
           <HomeBanner />
         </div>
 
-        <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
+        <div className="max-w-screen-2xl mx-auto px-3 md:px-5" id="orderNow">
           <HomeCard />
           {/* <ArticleSection /> */}
           <HomeArticle />
