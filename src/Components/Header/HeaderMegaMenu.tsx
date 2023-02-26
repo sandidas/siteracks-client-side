@@ -119,25 +119,25 @@ const domainMenuItems = [
     icon: RegisterDomain,
     title: "Register a New Domain",
     description: "This Pokémon’s cry is very loud and distracting",
-    linkUrl: "web-hosting",
+    linkUrl: "register-domain",
   },
   {
     icon: TransferDomain,
     title: "Transfer Domain To Us",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "wordpress-hosting",
+    linkUrl: "transfer-domain",
   },
   {
     icon: SiteLockCertificate,
     title: "Privacy & Protection for Domains",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "privacy-protection-for-domains",
+    linkUrl: "site-lock-certificate",
   },
   {
     icon: RegisterDomain,
     title: "WHOIS",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "privacy-protection-for-domains",
+    linkUrl: "domain-whois",
   },
 ];
 
@@ -146,13 +146,13 @@ const websiteMenuItems = [
     icon: WordPressHosting,
     title: "WordPress Website Design",
     description: "This Pokémon’s cry is very loud and distracting",
-    linkUrl: "web-design",
+    linkUrl: "wordpress-website-design",
   },
   {
     icon: CustomWebsiteDevelopment,
     title: "Custom Website Development",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "wordpress-hosting",
+    linkUrl: "custom-website-development",
   },
 ];
 
@@ -161,25 +161,25 @@ const securityMenuItems = [
     icon: WebsiteBackup,
     title: "Website Backups",
     description: "This Pokémon’s cry is very loud and distracting",
-    linkUrl: "web-hosting",
+    linkUrl: "website-backup",
   },
   {
     icon: SslCertificates,
     title: "SSL Certificates",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "wordpress-hosting",
+    linkUrl: "ssl-certificate",
   },
   {
     icon: SiteLockCertificate,
     title: "SiteLock Certificates",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "wordpress-hosting",
+    linkUrl: "site-lock-certificate",
   },
   {
     icon: WildCardCertificate,
     title: "Wildcard SSL",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "wordpress-hosting",
+    linkUrl: "wildcard-certificate",
   },
 ];
 
@@ -188,19 +188,19 @@ const helpMenuItems = [
     icon: BlogsIcon,
     title: "Blogs",
     description: "This Pokémon’s cry is very loud and distracting",
-    linkUrl: "web-hosting",
+    linkUrl: "blogs",
   },
   {
     icon: OpenSupportTicket,
     title: "Open Support Ticket",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "wordpress-hosting",
+    linkUrl: "open-support-ticket",
   },
   {
     icon: KnowledgeBase,
     title: "Knowledge Base",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "wordpress-hosting",
+    linkUrl: "knowledge-base",
   },
 ];
 
