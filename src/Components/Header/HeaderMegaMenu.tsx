@@ -85,31 +85,31 @@ const hostingMenuItems = [
   {
     icon: WebHosting,
     title: "Web Hosting",
-    description: "This Pokémon’s cry is very loud and distracting",
+    description: "Scalable, reliable and secure cloud hosting compared to traditional hosting.",
     linkUrl: "web-hosting",
   },
   {
     icon: WordPressHosting,
     title: "WordPress Hosting",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "Specialized features, tools, performance and security optimized for WordPress",
     linkUrl: "wordpress-hosting",
   },
   {
     icon: BusinessHosting,
     title: "Business Hosting",
-    description: "Yanma is capable of seeing 360 degrees without",
+    description: "Features and resources that needs of online businesses, such as high uptime.",
     linkUrl: "business-hosting",
   },
   {
     icon: preManagedVpsHosting,
     title: "pre-Managed VPS Hosting Light",
-    description: "The shell’s rounded shape and the grooves on its.",
+    description: "Offers dedicated resources and complete management services.",
     linkUrl: "pre-managed-vps-hosting-light",
   },
   {
     icon: ResellerHosting,
     title: "Reseller Hosting",
-    description: "This Pokémon uses its flying ability to quickly chase",
+    description: "Build your hosting business empire with SiteRacks reseller hosting.",
     linkUrl: "reseller-hosting",
   },
 ];

@@ -88,7 +88,7 @@ export const ThemeProvider = ({ children }: any) => {
               // lineHeight: "2.1rem",
 
               fontSizes: {
-                xs: 17,
+                xs: 12,
                 sm: 17,
                 md: 18,
                 lg: 20,

@@ -12,7 +12,7 @@ const LiveChat = () => {
 
   return (
     <>
-      <article className="py-[10vh] bg-surfaceDark">
+      <article className="py-[10vh] bg-surfaceDark" style={{ backgroundImage: `url('/images/background-live-chat.svg')`, backgroundSize: "contain", backgroundPosition: "left center", backgroundRepeat: "no-repeat" }}>
         <div className="grid grid-cols-1 md:grid-cols-12 max-w-screen-2xl mx-auto px-3 md:px-5 gap-3 md:5 xl:gap-16 2xl:gap-32">
           {/* Left Column */}
           <div className="md:col-span-3 flex flex-col justify-start items-center">
