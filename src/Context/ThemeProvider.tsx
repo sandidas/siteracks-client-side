@@ -41,6 +41,7 @@ export const ThemeProvider = ({ children }: any) => {
     let systemColorScheme: boolean | string | undefined = window.matchMedia("(prefers-color-scheme:dark)").matches;
     // convert boolean to string
     systemColorScheme = systemColorScheme === true ? "dark" : "light";
+    // localStorage.setItem("isDarkMode", systemColorScheme); // store to local storage current color scheme.
     // set color scheme to system color scheme
     // if current theme is dark, set dark, if light set light or set system color scheme. If user manually set system color name from local storage this feature will prevent bug or user define custom error
     // @ts-ignore
@@ -65,9 +66,18 @@ export const ThemeProvider = ({ children }: any) => {
     if (currentTheme == "dark") {
       setColorScheme("light");
       setCurrentTheme("light"); // save to local storage
-    } else {
+    } else if (currentTheme == "light") {
       setColorScheme("dark");
       setCurrentTheme("dark"); // save to local storage
+    } else {
+      // get the color scheme from computer
+      let systemColorScheme: boolean | string | undefined = window.matchMedia("(prefers-color-scheme:dark)").matches;
+      // convert boolean to dark/light
+      systemColorScheme = systemColorScheme === true ? "dark" : "light";
+      // set to theme color scheme
+      setColorScheme(systemColorScheme === "dark" ? "light" : "dark");
+      // set to local storage color scheme
+      setCurrentTheme(systemColorScheme === "dark" ? "light" : "dark");
     }
   };
 

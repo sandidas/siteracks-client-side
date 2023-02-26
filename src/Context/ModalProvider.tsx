@@ -52,6 +52,9 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
         onClose={() => {
           setModalOpened(false), setModalData(null), setOrderType(false), setModalTitle(null);
         }}
+        transition="pop"
+        transitionDuration={200}
+        exitTransitionDuration={500}
         withCloseButton={false}
         style={{ marginTop: "20px" }}
         className="group"
@@ -88,7 +91,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
                 setModalOpened(false), setModalData(null), setOrderType(false), setModalTitle(null);
               }}
             >
-              ORDER NOW
+              SEE PLANS
             </a>
           )}
         </div>
