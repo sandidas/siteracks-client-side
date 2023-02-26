@@ -15,11 +15,13 @@ interface IModalProps {
   //Dispatch<SetStateAction<any | boolean>>
   setModalData?: any | null;
   setModalTitle?: any | null;
+  setOrderType?: any | null;
   requestModal(): void;
 }
 export const ModalContext = createContext<IModalProps>({
   setModalData: null,
   setModalTitle: null,
+  setOrderType: false,
   requestModal: () => {}, // define a function
 });
 
@@ -27,6 +29,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
   const [modalOpened, setModalOpened] = useState<boolean>(false);
   const [modalData, setModalData] = useState<any | null>(null);
   const [modalTitle, setModalTitle] = useState<any | null>(null);
+  const [orderType, setOrderType] = useState<boolean>(false);
 
   const requestModal = () => {
     setModalOpened(true);
@@ -37,7 +40,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
 
   return (
     <>
-      <ModalContext.Provider value={{ setModalData, setModalTitle, requestModal }}>{children}</ModalContext.Provider>
+      <ModalContext.Provider value={{ setModalData, setModalTitle, setOrderType, requestModal }}>{children}</ModalContext.Provider>
 
       <Modal
         radius="xl"
@@ -47,7 +50,7 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
         opened={modalOpened}
         size="xl"
         onClose={() => {
-          setModalOpened(false), setModalData(null), setModalTitle(null);
+          setModalOpened(false), setModalData(null), setOrderType(false), setModalTitle(null);
         }}
         withCloseButton={false}
         style={{ marginTop: "20px" }}
@@ -69,15 +72,25 @@ export const ModalProvider: React.FC<MyProps> = ({ children }) => {
 
         <div className="p-5 lg:p-10 bg-surface">{modalData && modalData}</div>
 
-        <div className="flex flex-col py-5 items-center">
+        <div className={`grid p-5 items-center justify-items-center ${orderType ? "grid-cols-2" : ""}`}>
           <PlainButton
             text="CLOSE"
             closeButton
             handler={() => {
-              setModalOpened(false), setModalData(null), setModalTitle(null);
+              setModalOpened(false), setModalData(null), setOrderType(false), setModalTitle(null);
             }}
           />
-          <a href="#orderNow" onClick={()=> {setModalOpened(false), setModalData(null), setModalTitle(null)}}>Order Now</a>
+          {orderType && (
+            <a
+              href="#orderNow"
+              className="w-full text-center py-2 text-primary hover:text-text font-medium"
+              onClick={() => {
+                setModalOpened(false), setModalData(null), setOrderType(false), setModalTitle(null);
+              }}
+            >
+              ORDER NOW
+            </a>
+          )}
         </div>
       </Modal>
     </>

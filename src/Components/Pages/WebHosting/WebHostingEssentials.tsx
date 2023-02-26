@@ -27,7 +27,7 @@ import WHCollaborationTools from "@/Components/ModalComponents/WHCollaborationTo
 
 const WebHostingEssentials = () => {
   // use modal context
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
 
   return (
     <>
@@ -43,6 +43,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Blazing fast websites"), setModalData(<WHBlazingFast />), requestModal();
             }}
           />
@@ -60,6 +61,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Easy and User-Friendly Client Interfaces"), setModalData(<WHEasyAndUserFriendly />), requestModal();
             }}
           />
@@ -78,6 +80,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Easy Managed WordPress"), setModalData(<WHEasyManagedWordPress />), requestModal();
             }}
           />
@@ -94,6 +97,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Domain Management"), setModalData(<WHDomainManagement />), requestModal();
             }}
           />
@@ -110,6 +114,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Business Email Service"), setModalData(<WHBusinessEmail />), requestModal();
             }}
           />
@@ -126,6 +131,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Free SSL Certificate"), setModalData(<WHFreeSSL />), requestModal();
             }}
           />
@@ -143,6 +149,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Simple Integration with Git"), setModalData(<WHGit />), requestModal();
             }}
           />
@@ -158,6 +165,7 @@ const WebHostingEssentials = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Collaboration Tools"), setModalData(<WHCollaborationTools />), requestModal();
             }}
           />

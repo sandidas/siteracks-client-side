@@ -6,7 +6,7 @@ import BannerImage from "../../../../public/images/article/reseller-success.svg"
 import React from "react";
 
 const FCResellerYourSuccess = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <article className="flex flex-col space-y-8 group items-start">
       <div className="w-full">
@@ -23,6 +23,7 @@ const FCResellerYourSuccess = () => {
       <PlainButton
         text="LEARN MORE"
         handler={() => {
+          setOrderType(true),
           setModalTitle("Designed to ensure your success."), setModalData(<WHResellerYourSuccess />), requestModal();
         }}
       />

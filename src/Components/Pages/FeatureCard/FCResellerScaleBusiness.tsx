@@ -6,7 +6,7 @@ import React from "react";
 import BannerImage from "../../../../public/images/article/scale-business.svg";
 
 const FCResellerScaleBusiness = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <article className="flex flex-col space-y-8 group items-start">
       <div className="w-full">
@@ -20,6 +20,7 @@ const FCResellerScaleBusiness = () => {
       <PlainButton
         text="LEARN MORE"
         handler={() => {
+          setOrderType(true),
           setModalTitle("Scale your business at any time"), setModalData(<WHResellerScaleBusiness />), requestModal();
         }}
       />

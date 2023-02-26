@@ -6,7 +6,7 @@ import React from "react";
 import HighPerformanceResources from "../../../../public/images/article/high-performance-resources.svg";
 
 const FCHighPerformanceResources = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <article className="flex flex-col space-y-8 group items-start">
@@ -15,12 +15,13 @@ const FCHighPerformanceResources = () => {
         </div>
 
         <ColumnTitleAndDesc title="High-performance resources">
-          <p className="text-text lg:text-xl lg:leading-9">Drive your successful online business with high-performance business web hosting: unmetered traffic﻿, unlimited databases, unlimited SSL, unlimited email, and many more.</p>
+          <p className="text-text lg:text-xl lg:leading-9">Drive your successful online business with high-performance business web hosting: unmetered traffic, unlimited databases, unlimited SSL, unlimited email, and many more.</p>
         </ColumnTitleAndDesc>
 
         <PlainButton
           text="LEARN MORE"
           handler={() => {
+            setOrderType(true),
             setModalTitle("High-performance resources"), setModalData(<WhHighPerformanceAndResource />), requestModal();
           }}
         />

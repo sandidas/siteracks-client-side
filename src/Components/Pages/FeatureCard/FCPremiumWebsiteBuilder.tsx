@@ -6,7 +6,7 @@ import PremiumWebsiteBuilderImage from "../../../../public/images/article/premiu
 import WHPremiumWebsite from "../../ModalComponents/WHPremiumWebsite";
 
 const FCPremiumWebsiteBuilder = () => {
-    const { requestModal, setModalData, setModalTitle } = useModalContext();
+    const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <article className="flex flex-col space-y-8 group items-start">
@@ -21,6 +21,7 @@ const FCPremiumWebsiteBuilder = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
+            setOrderType(true),
             setModalTitle("Premium Website Builder"), setModalData(<WHPremiumWebsite />), requestModal();
           }}
         />

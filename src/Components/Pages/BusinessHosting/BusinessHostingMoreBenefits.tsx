@@ -18,7 +18,7 @@ import WHUnlimitedSites from "@/Components/ModalComponents/WHUnlimitedSites";
 import WHFreeSSL from "@/Components/ModalComponents/WHFreeSSL";
 
 const BusinessHostingMoreBenefits = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle } = useModalContext();
   return (
     <>
       <SectionTitle title="More Benefits" subTitle="of SiteRacks Business Hosting" bottomSpace />
@@ -35,7 +35,7 @@ const BusinessHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
+              setOrderType(true), setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
             }}
           />
         </FeatureCard>
@@ -51,7 +51,7 @@ const BusinessHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Host Unlimited Sites"), setModalData(<WHUnlimitedSites />), requestModal();
+              setOrderType(true), setModalTitle("Host Unlimited Sites"), setModalData(<WHUnlimitedSites />), requestModal();
             }}
           />
         </FeatureCard>
@@ -67,7 +67,7 @@ const BusinessHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Easy Managed WordPress"), setModalData(<WHEasyManagedWordPress />), requestModal();
+              setOrderType(true), setModalTitle("Easy Managed WordPress"), setModalData(<WHEasyManagedWordPress />), requestModal();
             }}
           />
         </FeatureCard>
@@ -83,7 +83,7 @@ const BusinessHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Free SSL Certificate"), setModalData(<WHFreeSSL />), requestModal();
+              setOrderType(true), setModalTitle("Free SSL Certificate"), setModalData(<WHFreeSSL />), requestModal();
             }}
           />
         </FeatureCard>
@@ -99,7 +99,7 @@ const BusinessHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Pre-Defined Data center based on your location"), setModalData(<WHDataCenter />), requestModal();
+              setOrderType(true), setModalTitle("Pre-Defined Data center based on your location"), setModalData(<WHDataCenter />), requestModal();
             }}
           />
         </FeatureCard>
@@ -115,7 +115,7 @@ const BusinessHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
-              setModalTitle("Business Email Service"), setModalData(<WHBusinessEmail />), requestModal();
+              setOrderType(true), setModalTitle("Business Email Service"), setModalData(<WHBusinessEmail />), requestModal();
             }}
           />
         </FeatureCard>

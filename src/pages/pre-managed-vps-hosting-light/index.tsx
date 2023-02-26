@@ -23,7 +23,7 @@ const VpsLight = () => {
         <section className="bg-surface">
           <ManagedVpsHostingBanner />{" "}
         </section>
-        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+        <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <ManagedVpsHostingPricing />
         </section>
         <ManagedVpsHostingCompare />

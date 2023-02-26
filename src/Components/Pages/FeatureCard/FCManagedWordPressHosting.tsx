@@ -6,7 +6,7 @@ import WordpressWebsite from "../../../../public/images/article/managed-wordpres
 import WHManagedWordpress from "@/Components/ModalComponents/WHManagedWordpress";
 
 const FCManagedWordPressHosting = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <article className="flex flex-col space-y-8 group items-start">
@@ -21,6 +21,7 @@ const FCManagedWordPressHosting = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
+            setOrderType(true),
             setModalTitle("Managed WordPress Hosting"), setModalData(<WHManagedWordpress />), requestModal();
           }}
         />

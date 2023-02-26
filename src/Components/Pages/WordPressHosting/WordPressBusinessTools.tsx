@@ -24,7 +24,7 @@ import WHDedicatedWordPressExpertModal from "@/Components/ModalComponents/WHDedi
 import WHWordpressUpdate from "@/Components/ModalComponents/WHWordpressUpdate";
 
 const WordPressBusinessTools = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <SectionTitle title="Powerful features for Your WordPress" subTitle="and Tools for your business and webmaster" bottomSpace />
@@ -41,6 +41,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Easy and User-Friendly Client Interfaces"), setModalData(<WHEasyAndUserFriendly />), requestModal();
             }}
           />
@@ -57,6 +58,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Domain Management"), setModalData(<WHDomainManagement />), requestModal();
             }}
           />
@@ -73,6 +75,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("With advanced priority support"), setModalData(<WHPrioritySupport />), requestModal();
             }}
           />
@@ -88,6 +91,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Top-north Security"), setModalData(<WHTopNorthSecurity />), requestModal();
             }}
           />
@@ -103,6 +107,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Collaboration Tools"), setModalData(<WHCollaborationTools />), requestModal();
             }}
           />
@@ -118,6 +123,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Blazing fast websites"), setModalData(<WHBlazingFast />), requestModal();
             }}
           />
@@ -133,6 +139,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("pre-built sites and startup support"), setModalData(<WHDedicatedWordPressExpertModal />), requestModal();
             }}
           />
@@ -151,6 +158,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Automatic WordPress core, plugins and security updates"), setModalData(<WHWordpressUpdate />), requestModal();
             }}
           />
@@ -165,6 +173,7 @@ const WordPressBusinessTools = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Collaboration Tools"), setModalData(<WHCollaborationTools />), requestModal();
             }}
           />

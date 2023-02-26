@@ -19,7 +19,7 @@ import WHBusinessEmail from "@/Components/ModalComponents/WHBusinessEmail";
 import EmailIcon from "../../../../public/images/icons/emailIcon.svg";
 
 const WordPressHostingMoreBenefits = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <SectionTitle title="More Benefits" subTitle="of SiteRacks WordPress Hosting" bottomSpace />
@@ -36,6 +36,7 @@ const WordPressHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
             }}
           />
@@ -52,6 +53,7 @@ const WordPressHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Host Unlimited Sites"), setModalData(<WHUnlimitedSites />), requestModal();
             }}
           />
@@ -68,6 +70,7 @@ const WordPressHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Easy Managed WordPress"), setModalData(<WHEasyManagedWordPress />), requestModal();
             }}
           />
@@ -85,6 +88,7 @@ const WordPressHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Free SSL Certificate"), setModalData(<WHFreeSSL />), requestModal();
             }}
           />
@@ -101,6 +105,7 @@ const WordPressHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Pre-Defined Data center based on your location"), setModalData(<WHDataCenter />), requestModal();
             }}
           />
@@ -118,6 +123,7 @@ const WordPressHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Business Email Service"), setModalData(<WHBusinessEmail />), requestModal();
             }}
           />

@@ -18,7 +18,7 @@ import WHIntegratedFirewall from "@/Components/ModalComponents/WHIntegratedFirew
 import WHWordPressSupport from "@/Components/ModalComponents/WHWordPressSupport";
 
 const FCFeatureForAllPackage = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
       <SectionTitle title="Get Extra Benefits" subTitle="By developer selected best cloud wordpress hosting" bottomSpace />
@@ -36,6 +36,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Integrated Firewall"), setModalData(<WHIntegratedFirewall />), requestModal();
             }}
           />
@@ -54,6 +55,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("DDoS Attack Protection"), setModalData(<WHDDoS />), requestModal();
             }}
           />
@@ -72,6 +74,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("CSF Firewall"), setModalData(<WHCsfFirewal />), requestModal();
             }}
           />
@@ -90,6 +93,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Advanced Server Security"), setModalData(<WHTopNorthSecurity />), requestModal();
             }}
           />
@@ -108,6 +112,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Instantly Scalable"), setModalData(<WHInstantlyScalable />), requestModal();
             }}
           />
@@ -126,6 +131,7 @@ const FCFeatureForAllPackage = () => {
             textSm
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("WordPress Expert Support"), setModalData(<WHWordPressSupport />), requestModal();
             }}
           />

@@ -6,7 +6,7 @@ import FreeDomainImage from "../../../../public/images/article/free-domain.svg";
 import WHFreeDotComDomain from '../../ModalComponents/WHFreeDotComDomain';
 
 const FCFreeDomain = () => {
-    const { requestModal, setModalData, setModalTitle } = useModalContext();
+    const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
     return (
         <>
             <article className="flex flex-col space-y-8 group items-start">
@@ -21,6 +21,7 @@ const FCFreeDomain = () => {
               <PlainButton
                 text="LEARN MORE"
                 handler={() => {
+                  setOrderType(true),
                   setModalTitle("Free .com Domain with Annual Plan"), setModalData(<WHFreeDotComDomain />), requestModal();
                 }}
               />

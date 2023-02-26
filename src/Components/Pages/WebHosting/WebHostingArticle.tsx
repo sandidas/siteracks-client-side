@@ -14,7 +14,7 @@ import FCDedicatedSupport from "../FeatureCard/FCDedicatedSupport";
 import FCFreeDomain from "../FeatureCard/FCFreeDomain";
 
 const WebHostingArticle = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
 
   return (
     <>

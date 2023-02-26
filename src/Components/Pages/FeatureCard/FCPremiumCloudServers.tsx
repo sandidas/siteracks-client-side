@@ -6,7 +6,7 @@ import PremiumCloudServerImage from "../../../../public/images/article/premium-c
 import WHPremiumCloudServers from "../../ModalComponents/WHPremiumCloudServers";
 
 const FCPremiumCloudServers = () => {
-    const { requestModal, setModalData, setModalTitle } = useModalContext();
+    const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
 
   return (
     <>
@@ -23,6 +23,7 @@ const FCPremiumCloudServers = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
+            setOrderType(true),
             setModalTitle("Premium Cloud Servers"), setModalData(<WHPremiumCloudServers />), requestModal();
           }}
         />

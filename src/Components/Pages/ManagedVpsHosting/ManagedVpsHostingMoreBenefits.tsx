@@ -24,7 +24,7 @@ import PhpIcon from "../../../../public/images/icons/phpIcon.svg";
 
 
 const ManagedVpsHostingMoreBenefits = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <SectionTitle title="More Benefits" subTitle="Of SiteRacks 100% Fully Managed VPS Hosting Plans" bottomSpace />
@@ -43,6 +43,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
             }}
           />
@@ -61,6 +62,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Business Email Service"), setModalData(<WHBusinessEmail />), requestModal();
             }}
           />
@@ -78,6 +80,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Free SSL Certificate"), setModalData(<WHFreeSSL />), requestModal();
             }}
           />
@@ -94,6 +97,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Domain Management"), setModalData(<WHDomainManagement />), requestModal();
             }}
           />
@@ -108,6 +112,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Collaboration Tools"), setModalData(<WHCollaborationTools />), requestModal();
             }}
           />
@@ -124,6 +129,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Simple Integration with Git"), setModalData(<WHGit />), requestModal();
             }}
           />
@@ -141,6 +147,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
             }}
           />
@@ -158,6 +165,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("With advanced priority support"), setModalData(<WHPrioritySupport />), requestModal();
             }}
           />
@@ -173,6 +181,7 @@ const ManagedVpsHostingMoreBenefits = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Top-north Security"), setModalData(<WHTopNorthSecurity />), requestModal();
             }}
           />

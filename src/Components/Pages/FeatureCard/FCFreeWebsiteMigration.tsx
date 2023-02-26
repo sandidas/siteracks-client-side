@@ -6,7 +6,7 @@ import FreeMigrationImage from "../../../../public/images/article/freeMigrationI
 import WHFreeMigration from "../../ModalComponents/WHFreeMigration";
 
 const FCFreeWebsiteMigration = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <article className="flex flex-col space-y-8 group items-start">
@@ -21,6 +21,7 @@ const FCFreeWebsiteMigration = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
+            setOrderType(true),
             setModalTitle("Free Website Migration"), setModalData(<WHFreeMigration />), requestModal();
           }}
         />

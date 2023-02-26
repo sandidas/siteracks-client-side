@@ -7,7 +7,7 @@ import React from "react";
 import DedicatedWordpressExpert from "../../../../public/images/article/dedicated-wordpress-expert.svg";
 
 const FEDedicatedWordPressExpert = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <article className="flex flex-col space-y-8 group items-start">
@@ -22,6 +22,7 @@ const FEDedicatedWordPressExpert = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
+            setOrderType(true),
             setModalTitle("Dedicated Wordpress Expert"), setModalData(<WHDedicatedWordPressExpertModal />), requestModal();
           }}
         />

@@ -19,7 +19,7 @@ const ResellerHosting = () => {
         <section className="bg-surface bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
           <ResellerHostingBanner />
         </section>
-        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+        <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <ResellerHostingPricing />
         </section>
         <section className="bg-surface bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">

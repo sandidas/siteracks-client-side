@@ -24,7 +24,7 @@ import BugScanIcon from "../../../../public/images/icons/bugScanIcon.svg";
 
 const WebHostingPremiumAdvantage = () => {
   // use modal context
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
 
   return (
     <>
@@ -42,6 +42,7 @@ const WebHostingPremiumAdvantage = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Host Unlimited Sites"), setModalData(<WHUnlimitedSites />), requestModal();
             }}
           />
@@ -58,6 +59,7 @@ const WebHostingPremiumAdvantage = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("With advanced priority support"), setModalData(<WHPrioritySupport />), requestModal();
             }}
           />
@@ -76,6 +78,7 @@ const WebHostingPremiumAdvantage = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Ultra-Fast Updated PHP & MySQL"), setModalData(<WHUltraFastPHP />), requestModal();
             }}
           />
@@ -92,6 +95,7 @@ const WebHostingPremiumAdvantage = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Top-north Security"), setModalData(<WHTopNorthSecurity />), requestModal();
             }}
           />
@@ -108,6 +112,7 @@ const WebHostingPremiumAdvantage = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Pre-Defined Data center based on your location"), setModalData(<WHDataCenter />), requestModal();
             }}
           />
@@ -124,6 +129,7 @@ const WebHostingPremiumAdvantage = () => {
           <PlainButton
             text="LEARN MORE"
             handler={() => {
+              setOrderType(true),
               setModalTitle("Malware Scan and Removal"), setModalData(<WHMalwareScan />), requestModal();
             }}
           />

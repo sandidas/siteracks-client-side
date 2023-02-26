@@ -6,7 +6,7 @@ import OptimizedCMSApp from "../../../../public/images/article/optimized-cms-app
 import React from "react";
 
 const FCOptimizedForCMSApp = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <article className="flex flex-col space-y-8 group items-start">
@@ -21,6 +21,7 @@ const FCOptimizedForCMSApp = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
+            setOrderType(true),
             setModalTitle("Optimized for CMS Applications and Ecommerce"), setModalData(<WHOptimizedForCms />), requestModal();
           }}
         />

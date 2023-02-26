@@ -4,7 +4,7 @@ import WHManageVpsLightCoreFeature from "@/Components/ModalComponents/WHManageVp
 import { useModalContext } from "@/Context/ModalProvider";
 import ManagedVpsImage from "../../../../public/images/article/managed-vps.svg";
 const FCManageVpsLightCoreFeature = () => {
-  const { requestModal, setModalData, setModalTitle } = useModalContext();
+  const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
   return (
     <>
       <article className="flex flex-col space-y-8 group items-start">
@@ -17,6 +17,7 @@ const FCManageVpsLightCoreFeature = () => {
         <PlainButton
           text="LEARN MORE"
           handler={() => {
+            setOrderType(true),
             setModalTitle("Fully managed VPS light"), setModalData(<WHManageVpsLightCoreFeature />), requestModal();
           }}
         />

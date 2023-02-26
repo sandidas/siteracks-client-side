@@ -6,7 +6,7 @@ import WHDedicatedSupport from '../../ModalComponents/WHDedicatedSupport';
 import DedicatedSupportImage from "../../../../public/images/article/dedicated-support.svg";
 
 const FCDedicatedSupport = () => {
-    const { requestModal, setModalData, setModalTitle } = useModalContext();
+    const { requestModal, setOrderType, setModalData, setModalTitle} = useModalContext();
     return (
         <>
             <article className="flex flex-col space-y-8 group items-start">
@@ -21,6 +21,7 @@ const FCDedicatedSupport = () => {
               <PlainButton
                 text="LEARN MORE"
                 handler={() => {
+                  setOrderType(true),
                   setModalTitle("Dedicated Support"),
                   setModalData(<WHDedicatedSupport />),
                   requestModal()
