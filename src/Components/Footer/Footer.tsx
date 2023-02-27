@@ -18,8 +18,6 @@ const Footer = () => {
         )}
       </Transition>
 
-      <a href="#orderNow">Order Now Link</a>
-
       <section className="max-w-screen-2xl mx-auto pt-[10vh] px-5">
         <div className="flex justify-end">
           <Logo logoHeight="120px" logoWidth="900px" />

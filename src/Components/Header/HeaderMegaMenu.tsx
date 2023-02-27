@@ -184,24 +184,24 @@ const securityMenuItems = [
 ];
 
 const helpMenuItems = [
-  {
-    icon: BlogsIcon,
-    title: "Blogs",
-    description: "This Pokémon’s cry is very loud and distracting",
-    linkUrl: "blogs",
-  },
+  // {
+  //   icon: BlogsIcon,
+  //   title: "Blogs",
+  //   description: "This Pokémon’s cry is very loud and distracting",
+  //   linkUrl: "blogs",
+  // },
   {
     icon: OpenSupportTicket,
     title: "Open Support Ticket",
     description: "The fluid of Smeargle’s tail secretions changes",
     linkUrl: "open-support-ticket",
   },
-  {
-    icon: KnowledgeBase,
-    title: "Knowledge Base",
-    description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "knowldege-base",
-  },
+  // {
+  //   icon: KnowledgeBase,
+  //   title: "Knowledge Base",
+  //   description: "The fluid of Smeargle’s tail secretions changes",
+  //   linkUrl: "knowldege-base",
+  // },
 ];
 
 export function HeaderMegaMenu() {
@@ -260,6 +260,7 @@ export function HeaderMegaMenu() {
     </UnstyledButton>
   ));
   // website menu Item for desktop
+
   const websiteLinks = websiteMenuItems.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
@@ -411,7 +412,7 @@ export function HeaderMegaMenu() {
 
             {/* Website menu items  */}
 
-            <HoverCard width={700} position="bottom" radius="md" shadow="md" withinPortal>
+            {/* <HoverCard width={700} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -427,7 +428,7 @@ export function HeaderMegaMenu() {
                   {websiteLinks}
                 </SimpleGrid>
               </HoverCard.Dropdown>
-            </HoverCard>
+            </HoverCard> */}
 
             {/* Security menu items  */}
 
@@ -451,7 +452,7 @@ export function HeaderMegaMenu() {
 
             {/* Help menu items  */}
 
-            <HoverCard width={900} position="bottom" radius="md" shadow="md" withinPortal>
+            <HoverCard width={300} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -463,7 +464,7 @@ export function HeaderMegaMenu() {
               </HoverCard.Target>
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
-                <SimpleGrid cols={3} spacing={0}>
+                <SimpleGrid cols={1} spacing={0}>
                   {helpLinks}
                 </SimpleGrid>
               </HoverCard.Dropdown>

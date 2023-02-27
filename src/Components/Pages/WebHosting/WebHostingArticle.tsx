@@ -20,13 +20,13 @@ const WebHostingArticle = () => {
     <>
       <section className="py-[10vh] bg-surface">
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
-          <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
+           
             <SectionTitle
               title="Maximize Your Offline Business with the Power of the Internet"
               bottomSpace={true}
               description={`Maximize Your Offline Business by Utilizing the Power of Online Platforms. Get ahead of the competition and expand your reach to potential customers with the help of the internet.`}
             />
-          </div>
+       
 
           {/* article container  */}
 

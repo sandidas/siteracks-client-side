@@ -2,7 +2,6 @@ import FeatureCard from "@/Components/Card/FeatureCard";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import Image from "next/image";
 import React from "react";
-import WHMCSImage from "../../../../public/images/article/whmcs-admin-home.jpg";
 
 const ResellerHostingWhmcs = () => {
   return (
@@ -12,7 +11,7 @@ const ResellerHostingWhmcs = () => {
           <SectionTitle title="Simplify and streamline your reseller hosting business" subTitle="with the efficient automation provided by WHMCS software." bottomSpace />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-8">
             <div className="flex justify-center items-center w-full h-fit bg-surface">
-              <Image alt="" src={WHMCSImage} />
+              <Image alt="" src="/images/article/whmcs-admin-home.jpg" width={900} height={600} />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
               <FeatureCard backgroundSecond>
