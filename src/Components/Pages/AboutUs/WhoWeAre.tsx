@@ -1,7 +1,11 @@
 import ColumnTitleAndDesc from '@/Components/ColumnTitleAndDesc/ColumnTitleAndDesc';
+import { useMenuContext } from '@/Context/MenuProvider';
 import React from 'react';
 
 const WhoWeAre = () => {
+
+ const { menuItems } = useMenuContext()
+ console.log(menuItems);
     return (
 <section className="py-[10vh] max-w-screen-2xl mx-auto px-3 md:px-5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-16 2xl:gap-32">

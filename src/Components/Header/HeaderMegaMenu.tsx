@@ -43,7 +43,7 @@ const useStyles = createStyles((theme) => ({
 
     ...theme.fn.hover({
       backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[9] : theme.colors.gray[0],
-      borderRadius:"5px",
+      borderRadius: "5px",
     }),
   },
 
@@ -80,6 +80,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
+
 
 const hostingMenuItems = [
   {
@@ -205,6 +206,9 @@ const helpMenuItems = [
 ];
 
 export function HeaderMegaMenu() {
+  
+  
+
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const [domainLinksOpened, { toggle: toggleDomainLinks }] = useDisclosure(false);
@@ -334,6 +338,9 @@ export function HeaderMegaMenu() {
 
   return (
     <Box pb={0}>
+      {/* {menuItems.map((item:any) =>(
+        "s"
+      ))      } */}
       <Header fixed={true} height={60} px="md" className="border-none px-5 max-w-screen-2xl mx-auto">
         <Group position="apart" sx={{ height: "100%" }}>
           {/* burger icon for mobile */}
@@ -557,3 +564,18 @@ export function HeaderMegaMenu() {
     </Box>
   );
 }
+
+// // This function runs only on the server side
+// export async function getStaticProps() {
+//   // Instead of fetching your `/api` route you can call the same
+//   // function directly in `getStaticProps`
+//   // const menuItems = await loadMegaMenuItems();
+
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+//   const menuItems = await res.json()
+
+//   // Props returned will be passed to the page component
+//   return { props: { menuItems } };
+// }
+
+export default HeaderMegaMenu;

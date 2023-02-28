@@ -1,7 +1,8 @@
-"use client"; // this is a client component
 import PlainButton from "@/Components/Buttons/PlainButton";
+import { loadMegaMenuItems } from "@/lib/loadMegaMenuItems";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { Modal } from "@mantine/core";
+import { GetServerSideProps, GetStaticPropsContext } from "next";
 import React, { Dispatch, SetStateAction, createContext, FC, useContext, useState } from "react";
 
 interface MyProps {

@@ -4,6 +4,7 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import { ModalProvider } from "@/Context/ModalProvider";
+import { MenuProvider } from "@/Context/MenuProvider";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -14,12 +15,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/siteRacksFav.ico" />
       </Head>
+
       <ThemeProvider>
-        <ModalProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ModalProvider>
+        <MenuProvider>
+          <ModalProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ModalProvider>
+        </MenuProvider>
       </ThemeProvider>
     </>
   );

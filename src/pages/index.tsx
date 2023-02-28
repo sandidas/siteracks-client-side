@@ -12,10 +12,15 @@ import LiveChat from "@/Components/LiveChat/LiveChat";
 import FreeMigration from "@/Components/Home/FreeMigration";
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
+import { loadMegaMenuItems } from "@/lib/loadMegaMenuItems";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export function Home({ menuItems }: any) {
+  // console.log(menuItems);
+  // const hostLink = process.env.API_HOST;
+  // console.log(process.env.API_HOST);
+  // console.log(`${hostLink}/json/navigation.json`);
   return (
     <>
       <Head>
@@ -44,7 +49,6 @@ export default function Home() {
           <SiteRacksParkSection />
         </div>
 
-       
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <HomeReview />
         </div>
@@ -57,6 +61,20 @@ export default function Home() {
   );
 }
 
+export async function getStaticProps() {
+  // Instead of fetching your `/api` route you can call the same
+  // function directly in `getStaticProps`
+  const menuItems = await loadMegaMenuItems();
+
+  // const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  // const menuItems = await res.json()
+
+  // Props returned will be passed to the page component
+  return { props: { menuItems } };
+}
+
 // Home.getLayout = function getLayout(page: ReactElement) {
 //   return <Layout>{page} </Layout>;
 // };
+
+export default Home;
