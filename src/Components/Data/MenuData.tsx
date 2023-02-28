@@ -190,8 +190,32 @@ export const tosMenuItems = [
   },
   {
     icon: BlogsIcon,
-    title: " Privacy Policy",
+    title: "Privacy Policy",
     description: "",
     linkUrl: "privacy-policy",
+  },
+];
+
+export const socialMenuItems = [
+  {
+    icon: BlogsIcon,
+    title: "Facebook",
+    description: "",
+    linkUrl: "terms-and-conditions",
+    target:"_blank"
+  },
+  {
+    icon: BlogsIcon,
+    title: "Twitter",
+    description: "",
+    linkUrl: "privacy-policy",
+    target:"_blank"
+  },
+  {
+    icon: BlogsIcon,
+    title: "Instagram",
+    description: "",
+    linkUrl: "privacy-policy",
+    target:"_blank"
   },
 ];

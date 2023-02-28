@@ -4,7 +4,7 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import { ModalProvider } from "@/Context/ModalProvider";
-import { MenuProvider } from "@/Context/MenuProvider";
+import { LoaderProvider } from "@/Context/LoaderProvider";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -17,13 +17,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </Head>
 
       <ThemeProvider>
-        <MenuProvider>
+        <LoaderProvider>
           <ModalProvider>
             <Header />
             {children}
             <Footer />
           </ModalProvider>
-        </MenuProvider>
+        </LoaderProvider>
       </ThemeProvider>
     </>
   );

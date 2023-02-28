@@ -1,5 +1,6 @@
 import AboutBanner from "@/Components/Pages/AboutUs/AboutBanner";
 import BehindOurLogo from "@/Components/Pages/AboutUs/BehindOurLogo";
+import BoostProductivity from "@/Components/Pages/AboutUs/BoostProductivity";
 import OurCoreValues from "@/Components/Pages/AboutUs/OurCoreValues";
 import WhoWeAre from "@/Components/Pages/AboutUs/WhoWeAre";
 import Head from "next/head";
@@ -19,6 +20,7 @@ const About = () => {
         <WhoWeAre />
         <OurCoreValues />
         <BehindOurLogo />
+        <BoostProductivity />
       </main>
     </>
   );

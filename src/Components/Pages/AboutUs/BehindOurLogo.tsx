@@ -5,7 +5,7 @@ import React from "react";
 
 const BehindOurLogo = () => {
   return (
-    <section className="py-[10vh] max-w-screen-2xl mx-auto px-3 md:px-5">
+    <section className="py-[10vh] max-w-screen-2xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-16 2xl:gap-32">
         <div className="w-full flex flex-col items-center">
           <div className="sticky top-36">

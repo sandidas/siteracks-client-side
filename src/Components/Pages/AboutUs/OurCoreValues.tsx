@@ -4,8 +4,8 @@ import React from 'react';
 
 const OurCoreValues = () => {
     return (
-        <section className="py-[10vh] bg-surface">
-          <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
+        <section className="py-[10vh] bg-surface px-3 md:px-5">
+          <div className="max-w-screen-2xl mx-auto">
             <SectionTitle title="Our Core Values" />
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 pt-[5vh]">
               {/* item  */}
