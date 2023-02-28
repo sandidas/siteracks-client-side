@@ -1,3 +1,4 @@
+import LiveChat from "@/Components/LiveChat/LiveChat";
 import AboutBanner from "@/Components/Pages/AboutUs/AboutBanner";
 import BehindOurLogo from "@/Components/Pages/AboutUs/BehindOurLogo";
 import BoostProductivity from "@/Components/Pages/AboutUs/BoostProductivity";
@@ -21,6 +22,7 @@ const About = () => {
         <OurCoreValues />
         <BehindOurLogo />
         <BoostProductivity />
+        <LiveChat />
       </main>
     </>
   );

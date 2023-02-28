@@ -3,6 +3,7 @@ import React from "react";
 import Logo from "../Header/Logo";
 import { websiteMenuItems, hostingMenuItems, domainMenuItems, securityMenuItems, helpMenuItems, aboutMenuItems, tosMenuItems } from "../Data/MenuData";
 import ScrollToTop from "./ScrollToTop";
+import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
 
@@ -84,11 +85,8 @@ const Footer = () => {
         <section className=" max-w-screen-2xl mx-auto ">
           <div className="py-5 flex items-center justify-between">
             <Logo logoWidth="250px" logoHeight="33px" />
-            <div className="flex">
-              <div>F</div>
-              <div>T</div>
-              <div>I</div>
-            </div>
+
+            <SocialIcons /> 
           </div>
           <div className="py-[2vh] border-t border-slate-300 dark:border-slate-600 text-text">
             <p>Copyright © 2023 SiteRacks, LLC. All Rights Reserved.</p>

@@ -16,6 +16,9 @@ import WebHosting from "../../../public/images/nav/webHosting.svg";
 import WebsiteBackup from "../../../public/images/nav/websiteBackup.svg";
 import WildCardCertificate from "../../../public/images/nav/wildCardCertificate.svg";
 import WordPressHosting from "../../../public/images/nav/wordPressHosting.svg";
+import FacebookIcon from "../../../public/images/nav/facebookIcon.svg";
+import Twitter from "../../../public/images/nav/twitterIcon.svg";
+import Instagram from "../../../public/images/nav/instagramIcon.svg";
 
 export const hostingMenuItems = [
   {
@@ -198,24 +201,24 @@ export const tosMenuItems = [
 
 export const socialMenuItems = [
   {
-    icon: BlogsIcon,
+    icon: FacebookIcon,
     title: "Facebook",
     description: "",
-    linkUrl: "terms-and-conditions",
-    target:"_blank"
+    linkUrl: "https://www.facebook.com/SiteRacks",
+    target: "_blank",
   },
   {
-    icon: BlogsIcon,
+    icon: Twitter,
     title: "Twitter",
     description: "",
-    linkUrl: "privacy-policy",
-    target:"_blank"
+    linkUrl: "https://twitter.com/siteracks",
+    target: "_blank",
   },
   {
-    icon: BlogsIcon,
+    icon: Instagram,
     title: "Instagram",
     description: "",
-    linkUrl: "privacy-policy",
-    target:"_blank"
+    linkUrl: "https://www.instagram.com/siteracks/",
+    target: "_blank",
   },
 ];
