@@ -440,7 +440,7 @@ export function HeaderMegaMenu() {
 
             {/* Help menu items  */}
 
-            <HoverCard width={300} position="bottom" radius="md" shadow="md" withinPortal>
+            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -452,7 +452,7 @@ export function HeaderMegaMenu() {
               </HoverCard.Target>
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
-                <SimpleGrid cols={1} spacing={0}>
+                <SimpleGrid cols={2} spacing={0}>
                   {helpLinks}
                 </SimpleGrid>
               </HoverCard.Dropdown>

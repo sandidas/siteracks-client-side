@@ -1,3 +1,4 @@
+import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid";
 import BlogsIcon from "../../../public/images/nav/blogs.svg";
 import BusinessHosting from "../../../public/images/nav/businessHosting.svg";
 import CustomWebsiteDevelopment from "../../../public/images/nav/customWebsiteDevelopment.svg";
@@ -130,6 +131,12 @@ export const helpMenuItems = [
     title: "Open Support Ticket",
     description: "The fluid of Smeargle’s tail secretions changes",
     linkUrl: "open-support-ticket",
+  },
+  {
+    icon: ChatBubbleLeftRightIcon,
+    title: "Live Chat",
+    description: "The fluid of Smeargle’s tail secretions changes",
+    linkUrl: "#liveChat",
   },
   // {
   //   icon: "KnowledgeBase",

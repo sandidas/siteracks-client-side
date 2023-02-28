@@ -15,11 +15,11 @@ const HomeBanner = () => {
         </h1>
         <p className="text-text lg:text-xl lg:leading-9">Whether you are just starting, growing fast, or running a high-traffic website, your <span className="text-primary font-bold">SITERACKS</span> secure and reliable web hosting services allow you to choose what works best for your brand.</p>
         <ul className="text-text text-base lg:text-xl space-y-3 flex flex-wrap flex-col items-start">
-          <li className="bg-green-50/50 text-black px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">Free & Easy Website Migration</li>
-          <li className="bg-green-100/50 text-black px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">24/7 priority support</li>
-          <li className="bg-violet-100/50 text-black px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">Free-.com domain, SSL, Email, CDN, and Backups</li>
-          <li className="bg-purple-100/50 text-black px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">Dedicated WordPress expert</li>
-          <li className="bg-blue-100/50 text-black px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">30-day of money back guarantee</li>
+          <li className="bg-green-50/50 dark:bg-green-50/5 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">Free & Easy Website Migration</li>
+          <li className="bg-green-100/50 dark:bg-green-100/10  px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">24/7 priority support</li>
+          <li className="bg-violet-100/50 dark:bg-violet-100/10 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">Free-.com domain, SSL, Email, CDN, and Backups</li>
+          <li className="bg-purple-100/50 dark:bg-purple-100/10 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">Dedicated WordPress expert</li>
+          <li className="bg-blue-100/50 dark:bg-blue-100/10 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">30-day of money back guarantee</li>
         </ul>
 
         <div>

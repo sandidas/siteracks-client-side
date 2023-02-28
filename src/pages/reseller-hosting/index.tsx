@@ -1,3 +1,4 @@
+import LiveChat from "@/Components/LiveChat/LiveChat";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import ResellerHostingArticle from "@/Components/Pages/ResellerHosting/ResellerHostingArticle";
 import ResellerHostingBanner from "@/Components/Pages/ResellerHosting/ResellerHostingBanner";
@@ -31,6 +32,7 @@ const ResellerHosting = () => {
         <section className="py-[10vh] bg-surface">
           <FCFeatureForAllPackage />
         </section>
+        <LiveChat />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <ResellerHostingFaq />
         </section>
