@@ -34,7 +34,9 @@ export default function Custom404() {
           <div className="flex flex-col justify-center items-start space-y-4">
             <h1 className="text-4xl lg:text-6xl md:leading-tight text-title font-bold flex flex-col items-start lg:leading-tight">404 - Page Not Found</h1>
             <p className="text-text lg:text-xl lg:leading-9">The page you are looking for does not exist.</p>
-            <p className="text-text lg:text-xl lg:leading-9 font-bold">You're redirecting within {timer}s</p>
+            <p className="text-text lg:text-xl lg:leading-9">You Are redirected to the home page within 
+            <span className="bg-primary text-white text-3xl p-2 rounded-md m-1">{timer}s</span>
+            </p>
             
             <PlainButton
               text="BACK TO HOME"
