@@ -1,5 +1,6 @@
 import AffiliateBanner from "@/Components/Pages/Affiliate/AffiliateBanner";
 import AffiliateNothingToLose from "@/Components/Pages/Affiliate/AffiliateNothingToLose";
+import AffiliateWhy from "@/Components/Pages/Affiliate/AffiliateWhy";
 import Head from "next/head";
 import React from "react";
 
@@ -23,7 +24,16 @@ const Affiliate = () => {
           </div>
         </section>
 
-        <section className="py-[8vh] bg-surface"></section>
+
+        <section className="py-[8vh] bg-surface">
+          <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
+            <AffiliateWhy />
+          </div>
+        </section>
+
+
+
+        <section className="py-[8vh]"></section>
       </main>
     </>
   );
