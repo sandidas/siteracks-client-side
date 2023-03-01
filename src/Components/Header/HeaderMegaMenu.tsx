@@ -457,9 +457,9 @@ export function HeaderMegaMenu() {
                 </SimpleGrid>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={`${classes.link} uppercase font-bold`}>
+            <Link href="/affiliate" className={`${classes.link} uppercase font-bold`}>
               Affiliate
-            </a>
+            </Link>
           </Group>
 
           <Group className={classes.hiddenMobile}>
@@ -534,6 +534,10 @@ export function HeaderMegaMenu() {
             </Center>
           </UnstyledButton>
           <Collapse in={helpLinksOpened}>{helpLinks}</Collapse>
+          
+          <Link onClick={closeDrawer} href="/affiliate" className={`${classes.link} uppercase font-medium w-full py-10 text-xl ml-2`}>
+            Affiliate
+          </Link>
 
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
