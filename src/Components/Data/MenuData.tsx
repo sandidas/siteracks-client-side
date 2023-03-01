@@ -218,7 +218,7 @@ export const socialMenuItems = [
     icon: Instagram,
     title: "Instagram",
     description: "",
-    linkUrl: "https://www.instagram.com/siteracks/",
+    linkUrl: "https://www.instagram.com/siterackshosting/",
     target: "_blank",
   },
 ];
