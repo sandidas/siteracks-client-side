@@ -24,8 +24,6 @@ const Careers = () => {
         <section className="py-[8vh] bg-surface">
           <CareerOpenPositions />
         </section>
-
-        <LiveChat />
       </main>
     </>
   );

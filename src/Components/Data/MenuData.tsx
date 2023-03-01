@@ -139,7 +139,7 @@ export const helpMenuItems = [
     icon: ChatBubbleLeftRightIcon,
     title: "Live Chat",
     description: "The fluid of Smeargle’s tail secretions changes",
-    linkUrl: "#liveChat",
+    linkUrl: "/#liveChat",
   },
   // {
   //   icon: "KnowledgeBase",

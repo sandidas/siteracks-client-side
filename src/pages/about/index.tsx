@@ -25,9 +25,7 @@ const About = () => {
         <BoostProductivity />
         <section className="py-[8vh] max-w-screen-2xl mx-auto">
           <SectionTitle supTitle="Your search for" title="lightning-fast hosting" subTitle="with excellent support ends here" />
-
         </section>
-        <LiveChat />
       </main>
     </>
   );

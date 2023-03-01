@@ -1,6 +1,7 @@
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import React from "react";
+import BannerImage from "../../../../public/images/webHosting/affiliate-banner.svg";
 
 const AffiliateBanner = () => {
   return (
@@ -22,7 +23,9 @@ const AffiliateBanner = () => {
           <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>
       </div>
-      <div className="flex flex-col justify-start items-center w-full order-1 md:order-2 bg-red-500">Image Here</div>
+      <div className="flex flex-col justify-start items-center w-full order-1 md:order-2">
+      <BannerImage className="w-full h-fit" />
+      </div>
     </div>
   );
 };
