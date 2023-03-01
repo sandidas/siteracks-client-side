@@ -6,7 +6,7 @@ import BannerImage from "../../public/images/webHosting/error-not-found.svg";
 export default function Custom404() {
   const router = useRouter();
   // Otp resend timer
-  const [timer, setTimer] = useState<number>(50);
+  const [timer, setTimer] = useState<number>(10);
 
   // timer counter
   useEffect(() => {
