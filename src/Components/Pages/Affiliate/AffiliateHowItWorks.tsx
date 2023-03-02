@@ -5,6 +5,7 @@ import AccountIcon from "../../../../public/images/icons/account.svg";
 import OptionsIcon from "../../../../public/images/icons/OptionsIcon.svg";
 import AdvertiseIcon from "../../../../public/images/icons/AddvertiseIcon.svg";
 import EarningIcon from "../../../../public/images/icons/EarningIcon.svg";
+import ArrowIcon from "../../../../public/images/icons/ArrowIcon.svg";
 
 const AffiliateHowItWorks = () => {
   return (
@@ -12,7 +13,7 @@ const AffiliateHowItWorks = () => {
       <SectionTitle title="How It Works" bottomSpace>
         Making money as a SiteRacks affiliate is a breeze.
       </SectionTitle>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <FeatureCard backgroundSecond>
           <div className="space-y-5">
             <AccountIcon className="fill-primary w-14 h-14" />
@@ -23,7 +24,10 @@ const AffiliateHowItWorks = () => {
           {/* footer */}
         </FeatureCard>
 
-        <FeatureCard backgroundSecond>
+        <FeatureCard backgroundSecond customClass="relative">
+          <div className="absolute -left-16 -top-5 invisible md:visible">
+            <ArrowIcon className="fill-primary w-24 h-5" />
+          </div>
           <div className="space-y-5">
             <OptionsIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Choose your options</h3>
@@ -33,7 +37,10 @@ const AffiliateHowItWorks = () => {
           {/* footer */}
         </FeatureCard>
 
-        <FeatureCard backgroundSecond>
+        <FeatureCard backgroundSecond customClass="relative">
+          <div className="absolute -left-16 -top-5 invisible lg:visible">
+            <ArrowIcon className="fill-primary w-24 h-5" />
+          </div>
           <div className="space-y-5">
             <AdvertiseIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Place your ad</h3>
@@ -43,7 +50,10 @@ const AffiliateHowItWorks = () => {
           {/* footer */}
         </FeatureCard>
 
-        <FeatureCard backgroundSecond>
+        <FeatureCard backgroundSecond customClass="relative">
+          <div className="absolute -left-16 -top-5 invisible md:visible">
+            <ArrowIcon className="fill-primary w-24 h-5" />
+          </div>
           <div className="space-y-5">
             <EarningIcon className="fill-primary w-14 h-14" />
             <h3 className="text-title font-bold text-3xl">Start earning</h3>

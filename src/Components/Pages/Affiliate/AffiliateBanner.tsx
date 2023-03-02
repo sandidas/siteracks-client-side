@@ -13,10 +13,13 @@ const AffiliateBanner = () => {
           {/*  */}
         </h1>
         <p className="text-text lg:text-xl lg:leading-9"> Partner with us and enjoy competitive affiliate earnings and fast payouts.</p>
-        <ul className="text-text lg:text-xl space-y-3 list-disc pl-8 bg-red-400">
-          <li>Latest technologies with advanced security.</li>
-          <li>Install Wordpress in 1-Click</li>
-          <li>User friendly dashboard</li>
+        <ul className="text-text text-base lg:text-xl space-y-3 flex flex-wrap flex-col items-start">
+          <li className="bg-green-50/50 dark:bg-green-50/5 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">1 Sales / 5% + $10 Bonus</li>
+
+          <li className="bg-green-100/50 dark:bg-green-100/10  px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">2-5 Sales /5% + $50 Bonus</li>
+          <li className="bg-violet-100/50 dark:bg-violet-100/10 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">6-10 Sales /5% + $80 Bonus</li>
+          <li className="bg-purple-100/50 dark:bg-purple-100/10 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">11-20 Sales /5% + $120 Bonus</li>
+          <li className="bg-blue-100/50 dark:bg-blue-100/10 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">20+ Sales /5% + Custom Bonus</li>
         </ul>
         <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
           Join Now for FREE
@@ -24,7 +27,7 @@ const AffiliateBanner = () => {
         </Button>
       </div>
       <div className="flex flex-col justify-start items-center w-full order-1 md:order-2">
-      <BannerImage className="w-full h-fit" />
+        <BannerImage className="w-full h-fit" />
       </div>
     </div>
   );
