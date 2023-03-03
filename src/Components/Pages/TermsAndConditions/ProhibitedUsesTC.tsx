@@ -7,7 +7,7 @@ const ProhibitedUsesTC = () => {
       <ColumnTitleAndDesc title="13. PROHIBITED USES" />
       <p className="text-text">You may not access or use the Site for any purpose other than that for which we make the available. The site may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.</p>
       <p className="text-text">As a user of the Site, you agree not to:</p>
-      <ul className="list-disc pl-10">
+      <ul className="list-disc pl-10 space-y-5">
         <li>Make any unauthorized use of the Site, including collecting usernames and/or email addresses of users by electronic or other means for the purpose of sending unsolicited email, or creating user accounts by automated means or under false pretences.</li>
         <li>Circumvent, disable, or otherwise interfere with security-related features of the Site, including features that prevent or restrict the use or copying of any Content or enforce limitations on the use of the Site and/or the Content contained therein.</li>
         <li>Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as (but not limited to) user passwords.</li>
