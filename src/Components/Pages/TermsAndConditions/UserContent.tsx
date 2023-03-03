@@ -29,25 +29,6 @@ const UserContent = () => {
         removed or deleted. The above licenses granted by you in your User Content are perpetual and irrevocable. Notwithstanding anything to the contrary contained herein, SiteRacks shall not use any User Content that has been designated “private” or “password protected” by you for the purpose of
         promoting this Site or SiteRacks’s (or SiteRacks’s affiliates’) business(es). If you have a website or other content hosted by SiteRacks, you shall retain all of your ownership or licensed rights in User Content.
       </p>
-
-      <ColumnTitleAndDesc title="7. INTELLECTUAL PROPERTY" />
-      <p className="text-text">
-        Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the “Content”) and the trademarks, service marks, and logos contained therein
-        (the “Marks”) are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws of the United States, foreign jurisdictions, and international conventions. The Content and the Marks
-        are provided on the Site “AS IS” for your information and personal use only. Except as expressly provided in these Terms of Use, no part of the Site and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated,
-        transmitted, distributed, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.
-      </p>
-      <p className="text-text">
-        Provided that you are eligible to use the Site, you are granted a limited license to access and use the Site and to download or print a copy of any portion of the Content to which you have properly gained access solely for your personal, non-commercial use. We reserve all rights not
-        expressly granted to you in and to the Site, the Content, and the Marks.
-      </p>
-      <ColumnTitleAndDesc title="8. YOUR REPRESENTATIONS" />
-      <p className="text-text">
-        By using the Site, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity
-        and you agree to comply with these Terms of Use (4) you are not under the age of 18; (5) you are not a minor in the jurisdiction of which you reside, or if a minor, you have received parental permission to use the Site; (6) you will not access the Site through automated or non-human means,
-        whether through a bot, script, or otherwise; (7) you will not use the Site for any illegal or unauthorized purpose and (8) your use of the Site will not violate any applicable law or regulation.
-      </p>
-      <p className="text-text">If you provide any information that is untrue, inaccurate, not current, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Site (or any portion thereof).</p>
     </div>
   );
 };
