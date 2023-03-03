@@ -550,17 +550,6 @@ export function HeaderMegaMenu() {
   );
 }
 
-// // This function runs only on the server side
-// export async function getStaticProps() {
-//   // Instead of fetching your `/api` route you can call the same
-//   // function directly in `getStaticProps`
-//   // const menuItems = await loadMegaMenuItems();
 
-//   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-//   const menuItems = await res.json()
-
-//   // Props returned will be passed to the page component
-//   return { props: { menuItems } };
-// }
 
 export default HeaderMegaMenu;
