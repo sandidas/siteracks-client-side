@@ -2,6 +2,7 @@ import { useThemeContext } from "@/Context/ThemeProvider";
 import React from "react";
 import SiteRacksLogoDark from "../../../public/favIcons/siteRacksFavDark.svg";
 import SiteRacksLogoLight from "../../../public/favIcons/siteRacksFavLight.svg";
+// import SiteRacksLogoLight from "../../../public/favIcons/siteRacksFavLightLoaderSecond.svg";
 interface IIcon {
   logoHeight?: string;
   logoWidth?: string;

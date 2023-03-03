@@ -15,9 +15,9 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function App({ Component, pageProps }: AppProps) {
+  // To show loader
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
   useEffect(() => {
     const handleStart = () => setLoading(true);
     const handleComplete = () => setLoading(false);
@@ -30,9 +30,10 @@ export default function App({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeComplete", handleComplete);
     };
   }, [router]);
-
+  //# To show loader
   return (
     <Layout>
+      {/* Loader  */}
       {loading && <Loader />}
       <Component {...pageProps} />
     </Layout>

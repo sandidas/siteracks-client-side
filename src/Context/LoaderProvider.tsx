@@ -17,7 +17,7 @@ export const LoaderContext = createContext<IMenuProps>({
 
 export const LoaderProvider: React.FC<MyProps> = ({ children }) => {
   // const [menuItems, setMenuItems] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [realTime, setRealTime] = useState(false);
   const [counter, setCounter] = useState(0);
 
