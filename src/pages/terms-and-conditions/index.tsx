@@ -27,7 +27,7 @@ const TOC = () => {
       <main>
         <section className="bg-surface pb-[8vh] md:pt-[12vh]">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5 space-y-5">
-            <SectionTitle title="SiteRacks LLC TERMS AND CONDITIONS" />
+            <SectionTitle title="SiteRacks TERMS AND CONDITIONS" />
             <p className="text-text">The following terms of service (these "Terms of Service"), govern your access to and use of SiteRacks LLC services, including any content, functionality, and services offered on or through SiteRacks.com (the "Site or website").</p>
             <p className="text-text">
               Please read the Terms of Service carefully before you start to use the Site. By accessing, browsing, registering to use the Site, or Services or by clicking to accept or agree to the Terms of Service & our privacy policy when this option is made available to you, you acknowledge that
