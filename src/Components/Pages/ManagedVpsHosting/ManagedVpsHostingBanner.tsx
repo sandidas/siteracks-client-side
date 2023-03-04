@@ -7,7 +7,7 @@ const ManagedVpsHostingBanner = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
-      <div className="flex flex-col justify-center items-start space-y-8 group order-2 md:order-1">
+      <div className="flex flex-col justify-center items-start space-y-8 group">
         <h1 className="flex flex-col space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">No Complexity, No Hassle</span>
           <span className="text-5xl lg:text-6xl text-title font-bold lg:leading-tight"> A 100% Fully Managed VPS Hosting.</span>
@@ -22,6 +22,11 @@ const ManagedVpsHostingBanner = () => {
           <li>Latest technologies with advanced security.</li>
           <li>Ready to Use Tools</li>
         </ul>
+
+        <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+          Get Started
+          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
+        </Button>
         <div>
           <div className="text-text">Starting at</div>
           <div className="flex">
@@ -29,17 +34,13 @@ const ManagedVpsHostingBanner = () => {
             <div className="text-text pt-3">/mo</div>
           </div>
         </div>
-        <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
-          Get Started
-          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
-        </Button>
         <p className="text-sm">
           Powered by <span className="text-primary font-medium">AWS and Digital Ocean</span> Premium servers
         </p>
       </div>
 
       {/* right column  */}
-      <div className="flex flex-col justify-start items-center w-full order-1 md:order-2">
+      <div className="flex flex-col justify-start items-center w-full">
         <ManageVpsHostingBannerImage className="w-full h-fit" />
       </div>
     </div>

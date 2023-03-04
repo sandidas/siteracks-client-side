@@ -15,12 +15,17 @@ const WordPressHostingBanner = () => {
             by SiteRacks <span className="uppercase text-xl font-bold text-primary tracking-wider">Managed WordPress Hosting</span>{" "}
           </span>
           {/*  */}
-        </h1> 
+        </h1>
         <ul className="text-text lg:text-xl space-y-3 list-disc pl-8">
-          <li>Blazing fast WordPress optimized server.</li>
+          <li>Blazing fast and Light speed WordPress optimized server.</li>
           <li>Latest technologies with advanced security.</li>
           <li>User friendly dashboard</li>
         </ul>
+        <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+          Get Started
+          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
+        </Button>
+
         <div>
           <div className="text-text">Starting at</div>
           <div className="flex">
@@ -28,10 +33,11 @@ const WordPressHostingBanner = () => {
             <div className="text-text pt-3">/mo</div>
           </div>
         </div>
-        <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
-          Get Started
-          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
-        </Button>
+        <p className="text-sm">
+         <span className="text-primary font-medium">Free Wordpress Website Migration
+
+</span> 
+        </p>
       </div>
 
       {/* right column  */}
