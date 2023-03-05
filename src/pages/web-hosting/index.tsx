@@ -7,10 +7,22 @@ import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
 import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
 
+import axios from "axios";
 import Head from "next/head";
-import React from "react";
+import React, { FC } from "react";
 
-const WebHosting = () => {
+interface IProduct {
+  id: string;
+  name: number;
+  webHosting: {};
+  child: [];
+}
+interface IProductProps {
+  products: IProduct[];
+}
+
+const WebHosting: FC<IProductProps> = ({ products }) => {
+  console.log(products);
   return (
     <>
       <Head>
@@ -41,5 +53,13 @@ const WebHosting = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const res = await axios.get<IProduct>("http://localhost:3000/json/products.json");
+  const products = res.data.webHosting.child;
+  return {
+    props: { products },
+  };
+}
 
 export default WebHosting;
