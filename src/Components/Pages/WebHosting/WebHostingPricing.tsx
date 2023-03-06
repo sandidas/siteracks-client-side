@@ -8,7 +8,7 @@ interface IProps {
 
 const WebHostingPricing: FC<IProps> = ({ products }) => {
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-4 gap-5">
       {products.map((product, key) => (
         <ProductCard className="" key={key} product={product}></ProductCard>
       ))}
