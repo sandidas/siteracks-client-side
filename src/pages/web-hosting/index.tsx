@@ -11,18 +11,14 @@ import axios from "axios";
 import Head from "next/head";
 import React, { FC } from "react";
 
-interface IProduct {
-  id: string;
-  name: number;
-  webHosting: {};
-  child: [];
+interface IProductFetch {
+  webHosting: { child: [{}] };
 }
-interface IProductProps {
-  products: IProduct[];
+export interface IProductProps {
+  products: [];
 }
 
 const WebHosting: FC<IProductProps> = ({ products }) => {
-  console.log(products);
   return (
     <>
       <Head>
@@ -34,7 +30,7 @@ const WebHosting: FC<IProductProps> = ({ products }) => {
           <WebHostingBanner />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WebHostingPricing />
+          <WebHostingPricing products={products} />
         </section>
         <WebHostingArticle />
         <LiveChat />
@@ -55,8 +51,8 @@ const WebHosting: FC<IProductProps> = ({ products }) => {
 };
 
 export async function getStaticProps() {
-  const res = await axios.get<IProduct>("http://localhost:3000/json/products.json");
-  const products = res.data.webHosting.child;
+  const res = await axios.get<IProductFetch>("http://localhost:3000/json/products.json");
+  const products = res.data?.webHosting?.child;
   return {
     props: { products },
   };

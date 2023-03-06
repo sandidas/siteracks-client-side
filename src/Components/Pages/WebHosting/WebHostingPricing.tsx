@@ -1,11 +1,19 @@
-import React from 'react';
+import ProductCard from "@/Components/Card/ProductCard";
+import { IProductProps } from "@/pages/web-hosting";
+import React, { FC } from "react";
 
-const WebHostingPricing = () => {
-    return (
-        <div>
-           This is pricing
-        </div>
-    );
+interface IProps {
+  products: [];
+}
+
+const WebHostingPricing: FC<IProps> = ({ products }) => {
+  return (
+    <div className="grid grid-cols-3">
+      {products.map((product, key) => (
+        <ProductCard className="" key={key} product={product}></ProductCard>
+      ))}
+    </div>
+  );
 };
 
 export default WebHostingPricing;

@@ -1,23 +1,23 @@
 {
   "webHosting": {
     "_id": 1,
-    "name": "webHosting",
+    "name": "Web Hosting",
     "child": [
       {
-        "id": 1,
+        "_id": 1,
         "title": "Standard",
         "shortDescription": "",
         "description": "",
 
-        "monthlyPrice": "9.9",
-        "annuallyPrice": "93.6",
-        "bienniallyPrice": "151.2",
-        "trienniallyPrice": "198",
+        "monthlyPrice": 9.9,
+        "annuallyPrice": 93.6,
+        "bienniallyPrice": 151.2,
+        "trienniallyPrice": 198,
 
-        "monthlyDiscountedPrice": "",
-        "annuallyDiscountedPrice": "",
-        "bienniallyDiscountedPrice": "",
-        "trienniallyDiscountedPrice": "",
+        "monthlyDiscountedPrice": 40,
+        "annuallyDiscountedPrice": 50,
+        "bienniallyDiscountedPrice": 80,
+        "trienniallyDiscountedPrice": 100,
 
         "monthlyOrderLink": "monthlyOrderLink",
         "annuallyOrderLink": "annuallyOrderLink",
@@ -25,28 +25,128 @@
         "trienniallyOrderLink": "trienniallyOrderLink",
 
         "numberOfWebsites": "2 Websites",
-        "storage": "10GB NVME PREMIUM Storage",
-        "monthlyVisits": "",
-        "bandwidth": "Unmetered bandwidth",
-        "freeWPInstallation": "Free 1-click WordPress install",
-        "wpAutoUpdates": "WordPress Auto Update",
-        "ssl": "Free SSL Certificate",
+        "storage": {
+          "icon": "ArrowLongUpIcon",
+          "bold": "10GB",
+          "regular": "NVME PREMIUM Storage",
+          "toolTip": "NVME PREMIUM Storage"
+        },
+        "monthlyVisits": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "bandwidth": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "freeWPInstallation": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "wpAutoUpdates": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "ssl": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
         "nightlyBackup": true,
-        "emailAccounts": "Free WebMail",
-        "domain": "Free .com Domain/yearly package",
-        "wordpressTransfer": "Free Automated WordPress Transfer",
-        "wordpressDedicatedExpert": "Free Automated WordPress Transfer",
+        "emailAccounts": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "domain": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "wordpressTransfer": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "wordpressDedicatedExpert": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
         "unlimitedDatabase": true,
         "multiplePhpVersions": true,
-        "moneyBack": "",
-        "addCollaborators": "",
-        "FtpUsers": "",
+        "moneyBack": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "addCollaborators": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "FtpUsers": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
         "dnsManagement": true,
-        "DDoSProtection": "DDoS Protection",
-        "subDomains": "5",
-        "inodesAllowed": "Inodes (Files) Allowed",
-        "cpuCores": "1",
-        "ram": "5",
+        "DDoSProtection": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "subDomains": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "cpuCores": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "ram": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
         "siteRacksExpertOptimized": true,
         "dedicatedIPAddress": false,
         "sshAccess": true,
@@ -62,49 +162,143 @@
         "webApplicationFirewall": true
       },
       {
-        "id": 2,
-        "title": "Premium",
+        "_id": 1,
+        "title": "Standard",
         "shortDescription": "",
         "description": "",
 
-        "monthlyPrice": "",
-        "annuallyPrice": "",
-        "bienniallyPrice": "",
-        "trienniallyPrice": "",
+        "monthlyPrice": 9.9,
+        "annuallyPrice": 93.6,
+        "bienniallyPrice": 151.2,
+        "trienniallyPrice": 198,
 
-        "monthlyDiscountedPrice": "",
-        "annuallyDiscountedPrice": "",
-        "bienniallyDiscountedPrice": "",
-        "trienniallyDiscountedPrice": "",
+        "monthlyDiscountedPrice": 40,
+        "annuallyDiscountedPrice": 50,
+        "bienniallyDiscountedPrice": 80,
+        "trienniallyDiscountedPrice": 100,
 
-        "monthlyOrderLink": "",
-        "annuallyOrderLink": "",
-        "bienniallyOrderLink": "",
-        "trienniallyOrderLink": "",
+        "monthlyOrderLink": "monthlyOrderLink",
+        "annuallyOrderLink": "annuallyOrderLink",
+        "bienniallyOrderLink": "bienniallyOrderLink",
+        "trienniallyOrderLink": "trienniallyOrderLink",
 
-        "numberOfWebsites": "",
-        "storage": "10GB NVME PREMIUM Storage",
-        "monthlyVisits": "",
-        "bandwidth": "Unmetered bandwidth",
-        "freeWPInstallation": "Free 1-click WordPress install",
-        "wpAutoUpdates": "WordPress Auto Update",
-        "ssl": "Free SSL Certificate",
+        "numberOfWebsites": "2 Websites",
+        "storage": {
+          "icon": "ArrowLongUpIcon",
+          "bold": "10GB",
+          "regular": "NVME PREMIUM Storage",
+          "toolTip": "NVME PREMIUM Storage"
+        },
+        "monthlyVisits": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "bandwidth": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "freeWPInstallation": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "wpAutoUpdates": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "ssl": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
         "nightlyBackup": true,
-        "emailAccounts": "Free WebMail",
-        "domain": "Free .com Domain/yearly package",
-        "wordpressTransfer": "Free Automated WordPress Transfer",
-        "wordpressDedicatedExpert": "Free Automated WordPress Transfer",
+        "emailAccounts": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "domain": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "wordpressTransfer": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "wordpressDedicatedExpert": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
         "unlimitedDatabase": true,
         "multiplePhpVersions": true,
-        "moneyBack": "",
-        "addCollaborators": "",
-        "FtpUsers": "",
+        "moneyBack": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "addCollaborators": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+
         "dnsManagement": true,
-        "DDoSProtection": "DDoS Protection",
-        "subDomains": "5",
-        "inodesAllowed": "Inodes (Files) Allowed",
-        "cpuCores": "1",
-        "ram": "5",
+        "DDoSProtection": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "subDomains": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "cpuCores": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
+        "ram": {
+          "icon": "",
+          "bold": "~",
+          "regular": "",
+          "toolTip": "",
+          "status": true
+        },
         "siteRacksExpertOptimized": true,
         "dedicatedIPAddress": false,
         "sshAccess": true,
@@ -122,16 +316,16 @@
     ]
   },
   "wordPressHosting": {
-    "_id": 1,
-    "name": "webHosting",
+    "_id": 2,
+    "name": "WordPress Hosting",
     "child": [
       {
-        "id": "1",
+        "_id": "1",
         "title": "Standard",
         "shortDescription": "",
         "description": "",
 
-        "monthlyPrice": "9.9",
+        "monthlyPrice": 9.9,
         "annuallyPrice": "93.6",
         "bienniallyPrice": "151.2",
         "trienniallyPrice": "198",
@@ -166,7 +360,7 @@
         "dnsManagement": true,
         "DDoSProtection": "DDoS Protection",
         "subDomains": "5",
-        "inodesAllowed": "Inodes (Files) Allowed",
+
         "cpuCores": "1",
         "ram": "5",
         "siteRacksExpertOptimized": true,
@@ -184,7 +378,7 @@
         "webApplicationFirewall": true
       },
       {
-        "id": "1",
+        "_id": "1",
         "title": "",
         "shortDescription": "",
         "description": "",
@@ -224,7 +418,7 @@
         "dnsManagement": true,
         "DDoSProtection": "DDoS Protection",
         "subDomains": "5",
-        "inodesAllowed": "Inodes (Files) Allowed",
+
         "cpuCores": "1",
         "ram": "5",
         "siteRacksExpertOptimized": true,
