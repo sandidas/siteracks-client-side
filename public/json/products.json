@@ -9,20 +9,30 @@
         "shortDescription": "Ideal solution for beginners",
         "description": "",
 
-        "monthlyPrice": 9.9,
-        "annuallyPrice": 93.6,
-        "bienniallyPrice": 151.2,
-        "trienniallyPrice": 198,
+        
+        "monthlyPackage": {
+          "regularPrice": 10,
+          "discountedPrice": 10,
+          "orderLink": "monthlyOrderLink"
+        },
 
-        "monthlyDiscountedPrice": 40,
-        "annuallyDiscountedPrice": 50,
-        "bienniallyDiscountedPrice": 80,
-        "trienniallyDiscountedPrice": 100,
+        "annuallyPackage": {
+          "regularPrice": 10,
+          "discountedPrice": 10,
+          "orderLink": "monthlyOrderLink"
+        },
 
-        "monthlyOrderLink": "monthlyOrderLink",
-        "annuallyOrderLink": "annuallyOrderLink",
-        "bienniallyOrderLink": "bienniallyOrderLink",
-        "trienniallyOrderLink": "trienniallyOrderLink",
+        "bienniallyPackage": {
+          "regularPrice": 10,
+          "discountedPrice": 10,
+          "orderLink": "monthlyOrderLink"
+        },
+
+        "trienniallyPackage": {
+          "regularPrice": 10,
+          "discountedPrice": 10,
+          "orderLink": "monthlyOrderLink"
+        },
 
         "numberOfWebsites": "2 Websites",
         "storage": {

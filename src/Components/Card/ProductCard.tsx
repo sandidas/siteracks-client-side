@@ -16,12 +16,18 @@ const buttonDataByMonth = [
 
 const ProductCard: FC<IProps> = ({ product, className }) => {
   const [currentPackage, setCurrentPackage] = useState<string>("36month");
+  const [price, setPrice] = useState<number>(product?.trienniallyPackage?.regularPrice);
+  const [orderLink, setOrderLink] = useState<string>(product?.trienniallyPackage?.orderLink);
 
   // filter and select only non selected month names to show into view
   const nonSelectedMonth = buttonDataByMonth.filter((pkj) => pkj.call !== currentPackage);
 
-  const switchPlan = (selectedPackage: string) => {
+  const switchPlanByMonth = (selectedPackage: string) => {
     setCurrentPackage(selectedPackage);
+    if(selectedPackage == "1month"){
+        setPrice(product?.monthlyPackage?.regularPrice);
+        setOrderLink(product?.monthlyPackage?.orderLink);
+    }
     console.log(currentPackage);
   };
 
@@ -32,15 +38,14 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
           <h2 className="text-title font-bold text-3xl">{product?.title}</h2>
           <p>{product?.shortDescription}</p>
         </div>
-        <div>
-            ${product}
-        </div>
-
-
+        <div></div>
+        {currentPackage} <br />
+        {price} <br />
+        {orderLink} <br />
         {/* Monthly Package button  */}
         <div className="grid grid-cols-3 divide-x-2 dark:divide-slate-700 border dark:border-slate-700">
           {nonSelectedMonth.map((btn, index) => (
-            <button className="py-2 hover:bg-primary hover:text-white" onClick={() => setCurrentPackage(btn?.call)} key={index}>
+            <button className="py-2 hover:bg-primary hover:text-white" onClick={() => switchPlanByMonth(btn?.call)} key={index}>
               {btn?.name}
             </button>
           ))}

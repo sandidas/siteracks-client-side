@@ -12,26 +12,21 @@ declare global {
         toolTip: string;
         status: boolean;
     }
+    interface IProductChildItemsPackages {
+        regularPrice: number;
+        discountedPrice: number;
+        orderLink: string;
+    }
     interface IProduct {
         _id: string;
         title: string;
         shortDescription: string;
         description: string;
+        monthlyPackage: IProductChildItemsPackages;
+        annuallyPackage: IProductChildItemsPackages;
+        bienniallyPackage: IProductChildItemsPackages;
+        trienniallyPackage: IProductChildItemsPackages;
 
-        monthlyPrice: number;
-        annuallyPrice: number;
-        bienniallyPrice: number;
-        trienniallyPrice: number;
-
-        monthlyDiscountedPrice: number;
-        annuallyDiscountedPrice: number;
-        bienniallyDiscountedPrice: number;
-        trienniallyDiscountedPrice: number;
-
-        monthlyOrderLink: string;
-        annuallyOrderLink: string;
-        bienniallyOrderLink: string;
-        trienniallyOrderLink: string;
 
         //  Top feature comparison 
         numberOfWebsites: string;
