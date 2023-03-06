@@ -46,7 +46,7 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
         <div className="grid grid-cols-3 divide-x-2 dark:divide-slate-700 border dark:border-slate-700">
           {nonSelectedMonth.map((btn, index) => (
             <button className="py-2 hover:bg-primary hover:text-white" onClick={() => switchPlanByMonth(btn?.call)} key={index}>
-              {btn?.name}
+              {btn?.name} <small>Mo.</small>
             </button>
           ))}
         </div>
