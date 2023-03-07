@@ -65,6 +65,7 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
       setPrice(product?.trienniallyPackage?.regularPrice / 36);
       setOrderLink(product?.trienniallyPackage?.orderLink);
       setSaving(product?.monthlyPackage?.regularPrice * 36 - product?.trienniallyPackage?.regularPrice);
+
       setSavingPercent(((product?.monthlyPackage?.regularPrice * 36 - product?.trienniallyPackage?.regularPrice) / (product?.monthlyPackage?.regularPrice * 36)) * 100);
     }
   };
@@ -88,20 +89,22 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
               {currentPackage !== 1 && <span>${product?.monthlyPackage?.regularPrice}</span>}
             </span>
             {/* if this is features then it will show in red */}
-            <div className={`${product?.featured ? "bg-red-400 dark:bg-red-700 text-white" : "bg-green-600/10 text-primary"} px-3 py-1 rounded-2xl font-medium`}>SAVE ${saving.toFixed(2)}</div>
+            <div className={`${product?.featured ? "bg-red-400 dark:bg-red-700 text-white" : "bg-green-600/10 text-primary"} px-3 py-1 rounded-2xl font-medium`}>SAVE {savingPercent.toFixed(0)}%</div>
           </div>
-
+          {/* Selected package price  */}
+          <div className="text-text text-sm">
+            You are getting an additional <br /> <strong>${saving.toFixed(2)}</strong> off for <strong>{currentPackage}</strong> {currentPackage == 1 ? "Month" : "Months"} period
+          </div>
           <div>
-            {/* Selected package price  */}
-            <div className="text-text text-sm">
-              {" "}
-              {currentPackage} {currentPackage == 1 ? "Month" : "Months"} period
-            </div>
             <div className="flex py-2 justify-center">
               <div className="text-title font-bold text-6xl">{price.toFixed(1)} </div>
               <div className="text-indigo-300 pt-6">/mo</div>
             </div>
-            <div className={`${product?.featured ? "text-red-400 dark:text-red-700" :"text-primary"} h-10 overflow-hidden font-medium`}>{product?.additionalMonth && product?.additionalMonth} </div>
+            <div className={`${product?.featured ? "text-red-400 dark:text-red-700" : "text-primary"} h-10 overflow-hidden font-medium`}>
+              
+              {currentPackage > 12 && product?.additionalMonth && product?.additionalMonth}
+              
+              </div>
           </div>
         </div>
 
@@ -119,7 +122,10 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
             Order Now
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>
-          <p className="text-slate-400 text-sm">The renewal price is the same.</p>
+          <p className="text-slate-400 text-sm">
+            No hidden cost, no extra charge <br />
+            The renewal price is the same.
+          </p>
         </div>
 
         {/* Monthly Package button  */}
@@ -133,11 +139,6 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
       </div>
       <hr className="py-5 border-t-2 dark:border-slate-900" />
       <div className="space-y-6" id={product?.slug}>
-        <div>
-          <p className="text-slate-400 text-sm text-center">
-            No hidden cost, no extra charge. <br /> You are getting an additional <strong>{savingPercent.toFixed(0)}%</strong> off for a lifetime.
-          </p>
-        </div>
         <div className="space-y-1">
           <div className="pb-5">
             <h3 className="font-bold text-text text-base pb-3">Top Features</h3>

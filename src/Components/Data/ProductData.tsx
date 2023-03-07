@@ -611,7 +611,7 @@ export const webHosting = [
     additionalMonth: "+3 months FREE",
 
     monthlyPackage: {
-      regularPrice: 9.1,
+      regularPrice: 90.1,
       discountedPrice: 10,
       orderLink: "monthlyOrderLink",
     },
@@ -629,7 +629,7 @@ export const webHosting = [
     },
 
     trienniallyPackage: {
-      regularPrice: 198,
+      regularPrice: 600,
       discountedPrice: 10,
       orderLink: "https://www.google.com/",
     },
