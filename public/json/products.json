@@ -9,32 +9,36 @@
         "shortDescription": "Ideal solution for beginners",
         "description": "",
 
-        
         "monthlyPackage": {
-          "regularPrice": 10,
+          "regularPrice": 9.1,
           "discountedPrice": 10,
           "orderLink": "monthlyOrderLink"
         },
 
         "annuallyPackage": {
-          "regularPrice": 10,
+          "regularPrice": 93.6,
           "discountedPrice": 10,
-          "orderLink": "monthlyOrderLink"
+          "orderLink": "Annual order"
         },
 
         "bienniallyPackage": {
-          "regularPrice": 10,
+          "regularPrice": 151.2,
           "discountedPrice": 10,
-          "orderLink": "monthlyOrderLink"
+          "orderLink": "binally order"
         },
 
         "trienniallyPackage": {
-          "regularPrice": 10,
+          "regularPrice": 198,
           "discountedPrice": 10,
-          "orderLink": "monthlyOrderLink"
+          "orderLink": "https://www.google.com/"
         },
 
-        "numberOfWebsites": "2 Websites",
+        "numberOfWebsites": {
+          "icon": "ArrowLongUpIcon",
+          "bold": "10GB",
+          "regular": "NVME PREMIUM Storage",
+          "toolTip": "NVME PREMIUM Storage"
+        },
         "storage": {
           "icon": "ArrowLongUpIcon",
           "bold": "10GB",
@@ -128,158 +132,6 @@
           "toolTip": "",
           "status": true
         },
-        "dnsManagement": true,
-        "DDoSProtection": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "subDomains": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "cpuCores": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "ram": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "siteRacksExpertOptimized": true,
-        "dedicatedIPAddress": false,
-        "sshAccess": true,
-        "ftpAccess": true,
-        "gitSupport": true,
-        "nodeJs": true,
-        "folderProtection": true,
-        "laravelTools": true,
-        "logs": true,
-        "apacheNginx": true,
-        "googleAuth": true,
-        "scheduleTask": true,
-        "webApplicationFirewall": true
-      },
-      {
-        "_id": 1,
-        "title": "Standard",
-        "shortDescription": "",
-        "description": "",
-
-        "monthlyPrice": 9.9,
-        "annuallyPrice": 93.6,
-        "bienniallyPrice": 151.2,
-        "trienniallyPrice": 198,
-
-        "monthlyDiscountedPrice": 40,
-        "annuallyDiscountedPrice": 50,
-        "bienniallyDiscountedPrice": 80,
-        "trienniallyDiscountedPrice": 100,
-
-        "monthlyOrderLink": "monthlyOrderLink",
-        "annuallyOrderLink": "annuallyOrderLink",
-        "bienniallyOrderLink": "bienniallyOrderLink",
-        "trienniallyOrderLink": "trienniallyOrderLink",
-
-        "numberOfWebsites": "2 Websites",
-        "storage": {
-          "icon": "ArrowLongUpIcon",
-          "bold": "10GB",
-          "regular": "NVME PREMIUM Storage",
-          "toolTip": "NVME PREMIUM Storage"
-        },
-        "monthlyVisits": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "bandwidth": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "freeWPInstallation": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "wpAutoUpdates": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "ssl": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "nightlyBackup": true,
-        "emailAccounts": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "domain": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "wordpressTransfer": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "wordpressDedicatedExpert": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "unlimitedDatabase": true,
-        "multiplePhpVersions": true,
-        "moneyBack": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "addCollaborators": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-
         "dnsManagement": true,
         "DDoSProtection": {
           "icon": "",

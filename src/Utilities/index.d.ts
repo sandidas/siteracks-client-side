@@ -6,7 +6,8 @@ declare global {
         confirmationResult: {};
     }
     interface IProductChildItems {
-        icon: string;
+        icon: any;
+        iconColor:string;
         bold: string;
         regular: string;
         toolTip: string;
@@ -18,10 +19,12 @@ declare global {
         orderLink: string;
     }
     interface IProduct {
-        _id: string;
+        _id: number;
         title: string;
         shortDescription: string;
         description: string;
+        featured:boolean;
+
         monthlyPackage: IProductChildItemsPackages;
         annuallyPackage: IProductChildItemsPackages;
         bienniallyPackage: IProductChildItemsPackages;
@@ -29,16 +32,17 @@ declare global {
 
 
         //  Top feature comparison 
-        numberOfWebsites: string;
+        numberOfWebsites: IProductChildItems;
         storage: IProductChildItems;
         monthlyVisits: IProductChildItems;
         bandwidth: IProductChildItems;
         freeWPInstallation: IProductChildItems;
         wpAutoUpdates: IProductChildItems;
         ssl: IProductChildItems;
-        nightlyBackup: IProductChildItems;
+        nightlyBackup: boolean;
         emailAccounts: IProductChildItems;
         domain: IProductChildItems;
+
         // additional Important features
         subDomains: IProductChildItems;
         cpuCores: IProductChildItems;
