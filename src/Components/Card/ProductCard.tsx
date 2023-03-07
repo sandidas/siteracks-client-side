@@ -1,6 +1,7 @@
 "use client";
 import { ArrowLongRightIcon, ArrowLongUpIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
+import Link from "next/link";
 import React, { FC, useState } from "react";
 import PlainButton from "../Buttons/PlainButton";
 import ProductCardFeatureItem from "./ProductCardFeatureItem";
@@ -69,7 +70,7 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
   };
 
   return (
-    <div className={`px-4 space-y-2 py-8 flex flex-col xl:p-8 rounded-lg group hover:scale-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
+    <div className={`px-4 space-y-2 py-8 flex flex-col xl:p-8 rounded-lg group hover:scale-x-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
       <div className="space-y-10 text-center">
         <div className="space-y-2">
           <h2 className="text-title font-bold text-2xl">{product?.title}</h2>
@@ -127,7 +128,7 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
         </div>
       </div>
       <hr className="py-5 border-t-2" />
-      <div className="space-y-6">
+      <div className="space-y-6" id={product?.slug}>
         <div>
           <p className="text-slate-400 text-sm text-center">
             No hidden cost, no extra charge. <br /> You are getting an additional <strong>{savingPercent.toFixed(0)}%</strong> off for a lifetime.
@@ -205,10 +206,10 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
           </div>
         </div>
         <div>
-          <button className="center w-full font-bold text-text text-base hover:text-primary" onClick={() => setShowAllFeature(!showAllFeature)}>
+          <Link href={`#${product?.slug}`} className="center w-full font-bold text-text text-base hover:text-primary" onClick={() => setShowAllFeature(!showAllFeature)}>
             {" "}
             {showAllFeature ? "See less features" : "See all features"}{" "}
-          </button>
+          </Link>
         </div>
       </div>
     </div>

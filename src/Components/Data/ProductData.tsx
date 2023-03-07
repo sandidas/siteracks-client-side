@@ -6,10 +6,27 @@ import LightCheckIcon from "../../../public/images/icons/LightCheckIcon.svg";
 const storageTooltip =
   "Our servers are equipped with high-performance Non-Volatile Memory Express (NVMe) for both files and databases, ensuring lightning-fast loading times for your sites. The storage is allocated per plan, meaning that if you have multiple sites, the storage will be shared among them.";
 
+const sslTooltip = "ssl";
+const monthlyVisitsTooltip = "ssl";
+const bandwidthTooltip = "ssl";
+const domainTooltip = "ssl";
+const nightlyBackupTooltip = "ssl";
+const wordpressTransferTooltip = "ssl";
+const multiplePhpVersionsTooltip = "ssl";
+const emailAccountsTooltip = "ssl";
+const wordpressDedicatedExpertTooltip = "ssl";
+const siteRacksExpertOptimizedTooltip = "ssl";
+const addCollaboratorsTooltip = "ssl";
+const dedicatedResourcesTooltip = "ssl";
+const wordPressMultisiteTooltip = "ssl";
+const WordPressNginxCachingTooltip = "ssl";
+const powerfulControlPanelTooltip = "ssl";
+
 export const webHosting = [
   {
     _id: 1,
     title: "WordPress Standard",
+    slug: "wordPressStandard",
     shortDescription: "Ideal solution for beginners",
     description: "A",
     featured: true,

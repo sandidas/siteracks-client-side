@@ -21,6 +21,7 @@ declare global {
     interface IProduct {
         _id: number;
         title: string;
+        slug: string;
         shortDescription: string;
         description: string;
         featured: boolean;
@@ -33,7 +34,7 @@ declare global {
 
         //  Top feature comparison 
         numberOfWebsites: IProductChildItems;
-        storage: IProductChildItems;        
+        storage: IProductChildItems;
         bandwidth: IProductChildItems;
         freeWPInstallation: IProductChildItems;
 
