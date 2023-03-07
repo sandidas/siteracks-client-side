@@ -11,7 +11,7 @@ interface IFeature {
 const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
   const Icon = feature?.icon;
   return (
-    <div className="flex justify-between border-b border-surface hover:border-slate-300 text-sm py-1">
+    <div className="flex justify-between border-b border-surface hover:border-slate-300 text-sm py-1 space-x-1">
       <div className="flex justify-start">
         <div>
           {
@@ -33,7 +33,8 @@ const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
           }
         </div>
         <div>
-          <strong>{feature?.bold}</strong> {feature?.regular}
+          {feature?.bold && <strong>{feature?.bold}&nbsp;</strong>}
+          {feature?.regular}
         </div>
       </div>
       {feature?.toolTip && (

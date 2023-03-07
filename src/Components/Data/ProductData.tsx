@@ -7,8 +7,8 @@ const storageTooltip =
   "Our servers are equipped with high-performance Non-Volatile Memory Express (NVMe) for both files and databases, ensuring lightning-fast loading times for your sites. The storage is allocated per plan, meaning that if you have multiple sites, the storage will be shared among them.";
 
 const sslTooltip = "ssl";
-const monthlyVisitsTooltip = "ssl";
-const bandwidthTooltip = "ssl";
+const monthlyVisitsTooltip = "The following is an estimated approximation of the maximum number of website visits that can be accommodated by the hosting plan, assuming all the sites you host are utilizing our out-of-the-box caching as intended.";
+const bandwidthTooltip = "As long as your plan adheres to our fair use guidelines, there are no restrictions on your data transfer. The site will not go down if the data transfer limit is over. You can switch higher plan easily.";
 const domainTooltip = "ssl";
 const nightlyBackupTooltip = "ssl";
 const wordpressTransferTooltip = "ssl";
@@ -63,71 +63,69 @@ export const webHosting = [
       status: true,
     },
     storage: {
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "10 GB",
       regular: "NVMe Premium Storage",
       toolTip: storageTooltip,
       status: true,
     },
     monthlyVisits: {
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~ 100,000",
       regular: "Visits Monthly",
-      toolTip: "The following is an estimated approximation of the maximum number of website visits that can be accommodated by the hosting plan, assuming all the sites you host are utilizing our out-of-the-box caching as intended.",
+      toolTip: monthlyVisitsTooltip,
       status: true,
     },
     bandwidth: {
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "100 GB ",
       regular: "Bandwidth",
-      toolTip: "As long as your plan adheres to our fair use guidelines, there are no restrictions on your data transfer. The site will not go down if the data transfer limit is over. You can switch higher plan easily.",
+      toolTip: bandwidthTooltip,
       status: true,
     },
     freeWPInstallation: {
       bold: "Free ",
-      regular: "WP Installation",
+      regular: "1-Click WP Installation",
       status: true,
     },
     wpAutoUpdates: {
-      bold: "WordPress",
-      regular: "Autoupdates",
+      bold: "Automatic",
+      regular: "WordPress Updates",
       status: true,
     },
     ssl: {
-      icon: LightCheckIcon,
-      iconColor: "fill-green-200",
-      bold: "~",
-      regular: "A",
-      toolTip: "A",
+      bold: "FREE",
+      regular: "SSL Certificate",
+      toolTip: sslTooltip,
       status: true,
     },
     nightlyBackup: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: nightlyBackupTooltip,
       status: true,
     },
     emailAccounts: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: emailAccountsTooltip,
       status: true,
     },
     domain: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: domainTooltip,
       status: true,
     },
     subDomains: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -135,7 +133,7 @@ export const webHosting = [
     },
     cpuCores: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -143,7 +141,7 @@ export const webHosting = [
     },
     ram: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -151,7 +149,7 @@ export const webHosting = [
     },
     unlimitedDatabase: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -159,15 +157,15 @@ export const webHosting = [
     },
     multiplePhpVersions: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: multiplePhpVersionsTooltip,
       status: true,
     },
     scheduleTask: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -175,23 +173,23 @@ export const webHosting = [
     },
     wordpressTransfer: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: wordpressTransferTooltip,
       status: true,
     },
     wordpressDedicatedExpert: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: wordpressDedicatedExpertTooltip,
       status: true,
     },
     googleAuth: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -199,7 +197,7 @@ export const webHosting = [
     },
     folderProtection: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -207,7 +205,7 @@ export const webHosting = [
     },
     DDoSProtection: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -215,7 +213,7 @@ export const webHosting = [
     },
     webApplicationFirewall: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -223,7 +221,7 @@ export const webHosting = [
     },
     moneyBack: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -231,15 +229,15 @@ export const webHosting = [
     },
     siteRacksExpertOptimized: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: siteRacksExpertOptimizedTooltip,
       status: true,
     },
     logs: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -247,15 +245,15 @@ export const webHosting = [
     },
     addCollaborators: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: addCollaboratorsTooltip,
       status: true,
     },
     dnsManagement: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -263,7 +261,7 @@ export const webHosting = [
     },
     sshAccess: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -271,7 +269,7 @@ export const webHosting = [
     },
     ftpAccess: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -279,7 +277,7 @@ export const webHosting = [
     },
     gitSupport: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -287,7 +285,7 @@ export const webHosting = [
     },
     nodeJs: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -295,7 +293,7 @@ export const webHosting = [
     },
     laravelTools: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -303,7 +301,7 @@ export const webHosting = [
     },
     apacheNginx: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -312,7 +310,7 @@ export const webHosting = [
 
     dedicatedIPAddress: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -321,25 +319,25 @@ export const webHosting = [
 
     dedicatedResources: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: dedicatedResourcesTooltip,
       status: true,
     },
 
     wordPressMultisite: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: wordPressMultisiteTooltip,
       status: true,
     },
 
     WordPressStagingTool: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -348,7 +346,7 @@ export const webHosting = [
 
     WordPressDebugging: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -357,16 +355,16 @@ export const webHosting = [
 
     WordPressNginxCaching: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: WordPressNginxCachingTooltip,
       status: true,
     },
 
     WordPressLogs: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -375,7 +373,7 @@ export const webHosting = [
 
     malwareScanner: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
       toolTip: "A",
@@ -384,10 +382,10 @@ export const webHosting = [
 
     powerfulControlPanel: {
       icon: LightCheckIcon,
-      iconColor: "fill-green-200",
+      iconColor: "fill-red-200",
       bold: "~",
       regular: "A",
-      toolTip: "A",
+      toolTip: powerfulControlPanelTooltip,
       status: true,
     },
   },
