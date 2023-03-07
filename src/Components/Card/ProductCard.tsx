@@ -70,7 +70,9 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
   };
 
   return (
-    <div className={`px-4 space-y-2 py-8 flex flex-col xl:p-8 rounded-lg group hover:scale-x-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
+    <div className={`px-4 relative py-8 flex flex-col xl:p-8 rounded-lg group hover:scale-x-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
+      {product?.featured && <div className="absolute text-center w-2/4 left-1/4 -top-5 text-white font-medium rounded-md py-1 bg-red-400 dark:bg-red-700">Most popular</div>}
+
       <div className="space-y-10 text-center">
         <div className="space-y-2">
           <h2 className="text-title font-bold text-2xl">{product?.title}</h2>
@@ -85,7 +87,8 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
               {/* if selected price not monthly it will show monthly price in line through  */}
               {currentPackage !== 1 && <span>${product?.monthlyPackage?.regularPrice}</span>}
             </span>
-            <div className="bg-green-600/10 px-3 py-1 rounded-2xl font-medium text-primary">SAVE ${saving.toFixed(2)}</div>
+            {/* if this is features then it will show in red */}
+            <div className={`${product?.featured ? "bg-red-400 dark:bg-red-700 text-white" : "bg-green-600/10 text-primary"} px-3 py-1 rounded-2xl font-medium`}>SAVE ${saving.toFixed(2)}</div>
           </div>
 
           <div>
@@ -98,6 +101,7 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
               <div className="text-title font-bold text-6xl">{price.toFixed(1)} </div>
               <div className="text-indigo-300 pt-6">/mo</div>
             </div>
+            <div className={`${product?.featured ? "text-red-400 dark:text-red-700" :"text-primary"} h-10 overflow-hidden font-medium`}>{product?.additionalMonth && product?.additionalMonth} </div>
           </div>
         </div>
 
@@ -110,7 +114,7 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
             href={orderLink}
             fullWidth
             size="lg"
-            className="shadow-lg transition ease-in-out duration-500 group-hover:text-white group-hover:bg-black"
+            className={`shadow-lg transition ease-in-out duration-500 group-hover:text-white group-hover:bg-black dark:group-hover:bg-slate-700 ${product?.featured ? "bg-red-400 dark:bg-red-700" : ""}`}
           >
             Order Now
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
@@ -127,7 +131,7 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
           ))}
         </div>
       </div>
-      <hr className="py-5 border-t-2" />
+      <hr className="py-5 border-t-2 dark:border-slate-900" />
       <div className="space-y-6" id={product?.slug}>
         <div>
           <p className="text-slate-400 text-sm text-center">
@@ -141,15 +145,16 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
             <ProductCardFeatureItem feature={product?.storage} />
             <ProductCardFeatureItem feature={product?.bandwidth} />
             <ProductCardFeatureItem feature={product?.freeWPInstallation} />
-            <ProductCardFeatureItem feature={product?.wordpressDedicatedExpert} />
             <ProductCardFeatureItem feature={product?.ssl} />
             <ProductCardFeatureItem feature={product?.nightlyBackup} />
             <ProductCardFeatureItem feature={product?.emailAccounts} />
             <ProductCardFeatureItem feature={product?.domain} />
             <ProductCardFeatureItem feature={product?.DDoSProtection} />
             <ProductCardFeatureItem feature={product?.wordpressTransfer} />
+            <ProductCardFeatureItem feature={product?.wordpressDedicatedExpert} />
+            <ProductCardFeatureItem feature={product?.wordpressOptimized} />
           </div>
-          <div className={`space-y-5 ${showAllFeature ? "" : "hidden"}`}>
+          <div className={`space-y-5 transition-all ease-in-out duration-700 delay-700 ${showAllFeature ? "opacity-100" : "hidden opacity-0"}`}>
             <div>
               <h3 className="font-bold text-text text-base pb-3">Performance</h3>
               <ProductCardFeatureItem feature={product?.cpuCores} />
@@ -205,8 +210,8 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
             </div>
           </div>
         </div>
-        <div>
-          <Link href={`#${product?.slug}`} className="center w-full font-bold text-text text-base hover:text-primary" onClick={() => setShowAllFeature(!showAllFeature)}>
+        <div className="text-center">
+          <Link href={`#${product?.slug}`} className="center w-full px-2 py-2  font-bold text-text text-base hover:text-primary" onClick={() => setShowAllFeature(!showAllFeature)}>
             {" "}
             {showAllFeature ? "See less features" : "See all features"}{" "}
           </Link>

@@ -25,6 +25,7 @@ declare global {
         shortDescription: string;
         description: string;
         featured: boolean;
+        additionalMonth?: string | boolean;
 
         monthlyPackage: IProductChildItemsPackages;
         annuallyPackage: IProductChildItemsPackages;
@@ -37,6 +38,7 @@ declare global {
         storage: IProductChildItems;
         bandwidth: IProductChildItems;
         freeWPInstallation: IProductChildItems;
+        wordpressOptimized: IProductChildItems;
 
         wpAutoUpdates: IProductChildItems;
         ssl: IProductChildItems;
