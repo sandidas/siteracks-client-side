@@ -6,12 +6,12 @@ declare global {
         confirmationResult: {};
     }
     interface IProductChildItems {
-        icon: any;
-        iconColor:string;
-        bold: string;
-        regular: string;
-        toolTip: string;
-        status: boolean;
+        icon?: any;
+        iconColor?: string;
+        bold?: string;
+        regular?: string;
+        toolTip?: string | boolean;
+        status?: boolean;
     }
     interface IProductChildItemsPackages {
         regularPrice: number;
@@ -23,7 +23,7 @@ declare global {
         title: string;
         shortDescription: string;
         description: string;
-        featured:boolean;
+        featured: boolean;
 
         monthlyPackage: IProductChildItemsPackages;
         annuallyPackage: IProductChildItemsPackages;
@@ -33,46 +33,55 @@ declare global {
 
         //  Top feature comparison 
         numberOfWebsites: IProductChildItems;
-        storage: IProductChildItems;
-        monthlyVisits: IProductChildItems;
+        storage: IProductChildItems;        
         bandwidth: IProductChildItems;
         freeWPInstallation: IProductChildItems;
+
         wpAutoUpdates: IProductChildItems;
         ssl: IProductChildItems;
-        nightlyBackup: boolean;
+        nightlyBackup: IProductChildItems;
         emailAccounts: IProductChildItems;
         domain: IProductChildItems;
 
         // additional Important features
         subDomains: IProductChildItems;
         cpuCores: IProductChildItems;
+        dedicatedResources: IProductChildItems;
         ram: IProductChildItems;
-        unlimitedDatabase: boolean;
-        multiplePhpVersions: boolean;
-        scheduleTask: boolean;
+        unlimitedDatabase: IProductChildItems;
+        multiplePhpVersions: IProductChildItems;
+        scheduleTask: IProductChildItems;
 
         // More WordPress Options 
         wordpressTransfer: IProductChildItems;
         wordpressDedicatedExpert: IProductChildItems;
+        wordPressMultisite: IProductChildItems;
+        WordPressStagingTool: IProductChildItems;
+        WordPressDebugging: IProductChildItems;
+        WordPressNginxCaching: IProductChildItems;
+        WordPressLogs: IProductChildItems;
         // additional Security features
-        googleAuth: boolean;
-        folderProtection: boolean;
+        malwareScanner: IProductChildItems;
+        googleAuth: IProductChildItems;
+        folderProtection: IProductChildItems;
         DDoSProtection: IProductChildItems;
-        webApplicationFirewall: boolean;
+        webApplicationFirewall: IProductChildItems;
 
         //  Service and Support 
         moneyBack: IProductChildItems;
-        siteRacksExpertOptimized: boolean;
-        logs: boolean;
+        siteRacksExpertOptimized: IProductChildItems;
+        logs: IProductChildItems;
         addCollaborators: IProductChildItems;
-        dnsManagement: boolean;
+        dnsManagement: IProductChildItems;
         // More  Technical Features
-        sshAccess: boolean;
-        ftpAccess: boolean;
-        gitSupport: boolean;
-        nodeJs: boolean;
-        laravelTools: boolean;
-        apacheNginx: boolean;
-        dedicatedIPAddress: boolean;
+        sshAccess: IProductChildItems;
+        ftpAccess: IProductChildItems;
+        gitSupport: IProductChildItems;
+        nodeJs: IProductChildItems;
+        laravelTools: IProductChildItems;
+        apacheNginx: IProductChildItems;
+        dedicatedIPAddress: IProductChildItems;
+        monthlyVisits: IProductChildItems;
+        powerfulControlPanel: IProductChildItems;
     }
 }

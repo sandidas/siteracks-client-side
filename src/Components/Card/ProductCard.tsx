@@ -2,6 +2,7 @@
 import { ArrowLongRightIcon, ArrowLongUpIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import React, { FC, useState } from "react";
+import PlainButton from "../Buttons/PlainButton";
 import ProductCardFeatureItem from "./ProductCardFeatureItem";
 import ProductCardIcon from "./ProductCardIcon";
 
@@ -29,6 +30,8 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
   const [orderLink, setOrderLink] = useState<string>(product?.trienniallyPackage?.orderLink);
   const [saving, setSaving] = useState<number>(preSaving);
   const [savingPercent, setSavingPercent] = useState<number>(preSavingPercent);
+
+  const [showAllFeature, setShowAllFeature] = useState(false);
 
   // filter and select only non selected month names to show into view
   const nonSelectedMonth = buttonDataByMonth.filter((pkj) => pkj.call !== currentPackage);
@@ -65,13 +68,11 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
     }
   };
 
-  //   const Icon = product?.numberOfWebsites?.icon;
-  // console.log(Icon);
   return (
-    <div className={`px-5 space-y-2 py-10 flex flex-col xl:p-10 shadow-sm rounded-lg group hover:scale-105 duration-500 hover:border-primary border-b-4 border-transparent bg-surface`}>
+    <div className={`px-4 space-y-2 py-8 flex flex-col xl:p-8 rounded-lg group hover:scale-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
       <div className="space-y-10 text-center">
         <div className="space-y-2">
-          <h2 className="text-title font-bold text-3xl">{product?.title}</h2>
+          <h2 className="text-title font-bold text-2xl">{product?.title}</h2>
           <p className="text-text text-sm">{product?.shortDescription}</p>
         </div>
 
@@ -119,7 +120,7 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
         {/* Monthly Package button  */}
         <div className="grid grid-cols-4 divide-x-2 dark:divide-slate-700 border-2 dark:border-slate-700 border-slate-100">
           {buttonDataByMonth.map((btn, index) => (
-            <button className={`py-2 hover:bg-primary hover:text-white ${currentPackage == btn.call ? "text-text bg-surface" : "text-slate-400"}`} onClick={() => switchPlanByMonth(btn?.call)} key={index}>
+            <button className={`py-2 text-xs md:text-sm 2xl:text-base hover:bg-primary hover:text-white ${currentPackage == btn.call ? "text-text bg-surface" : "text-slate-400"}`} onClick={() => switchPlanByMonth(btn?.call)} key={index}>
               {btn?.call} <small>Mo.</small>
             </button>
           ))}
@@ -133,12 +134,81 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
           </p>
         </div>
         <div className="space-y-1">
-          <div>
+          <div className="pb-5">
+            <h3 className="font-bold text-text text-base pb-3">Top Features</h3>
             <ProductCardFeatureItem feature={product?.numberOfWebsites} />
             <ProductCardFeatureItem feature={product?.storage} />
-            <ProductCardFeatureItem feature={product?.monthlyVisits} />
             <ProductCardFeatureItem feature={product?.bandwidth} />
+            <ProductCardFeatureItem feature={product?.freeWPInstallation} />
+            <ProductCardFeatureItem feature={product?.wordpressDedicatedExpert} />
+            <ProductCardFeatureItem feature={product?.ssl} />
+            <ProductCardFeatureItem feature={product?.nightlyBackup} />
+            <ProductCardFeatureItem feature={product?.emailAccounts} />
+            <ProductCardFeatureItem feature={product?.domain} />
+            <ProductCardFeatureItem feature={product?.DDoSProtection} />
+            <ProductCardFeatureItem feature={product?.wordpressTransfer} />
           </div>
+          <div className={`space-y-5 ${showAllFeature ? "" : "hidden"}`}>
+            <div>
+              <h3 className="font-bold text-text text-base pb-3">Performance</h3>
+              <ProductCardFeatureItem feature={product?.cpuCores} />
+              <ProductCardFeatureItem feature={product?.ram} />
+              <ProductCardFeatureItem feature={product?.dedicatedResources} />
+              <ProductCardFeatureItem feature={product?.siteRacksExpertOptimized} />
+            </div>
+
+            <div>
+              <h3 className="font-bold text-text text-base pb-3">More WordPress Features </h3>
+
+              <ProductCardFeatureItem feature={product?.wpAutoUpdates} />
+              <ProductCardFeatureItem feature={product?.wordPressMultisite} />
+              <ProductCardFeatureItem feature={product?.WordPressStagingTool} />
+              <ProductCardFeatureItem feature={product?.WordPressDebugging} />
+              <ProductCardFeatureItem feature={product?.WordPressNginxCaching} />
+              <ProductCardFeatureItem feature={product?.WordPressLogs} />
+            </div>
+
+            <div>
+              <h3 className="font-bold text-text text-base pb-3">More Security Features </h3>
+              <ProductCardFeatureItem feature={product?.malwareScanner} />
+              <ProductCardFeatureItem feature={product?.googleAuth} />
+              <ProductCardFeatureItem feature={product?.folderProtection} />
+              <ProductCardFeatureItem feature={product?.webApplicationFirewall} />
+            </div>
+
+            <div>
+              <h3 className="font-bold text-text text-base pb-3">Additional Important Features </h3>
+              <ProductCardFeatureItem feature={product?.multiplePhpVersions} />
+              <ProductCardFeatureItem feature={product?.subDomains} />
+              <ProductCardFeatureItem feature={product?.unlimitedDatabase} />
+              <ProductCardFeatureItem feature={product?.scheduleTask} />
+            </div>
+
+            <div>
+              <h3 className="font-bold text-text text-base pb-3">More Technical Features </h3>
+              <ProductCardFeatureItem feature={product?.sshAccess} />
+              <ProductCardFeatureItem feature={product?.ftpAccess} />
+              <ProductCardFeatureItem feature={product?.gitSupport} />
+              <ProductCardFeatureItem feature={product?.nodeJs} />
+              <ProductCardFeatureItem feature={product?.laravelTools} />
+              <ProductCardFeatureItem feature={product?.apacheNginx} />
+              <ProductCardFeatureItem feature={product?.dedicatedIPAddress} />
+            </div>
+
+            <div>
+              <h3 className="font-bold text-text text-base pb-3">Additional </h3>
+              <ProductCardFeatureItem feature={product?.moneyBack} />
+              <ProductCardFeatureItem feature={product?.addCollaborators} />
+              <ProductCardFeatureItem feature={product?.dnsManagement} />
+              <ProductCardFeatureItem feature={product?.powerfulControlPanel} />
+            </div>
+          </div>
+        </div>
+        <div>
+          <button className="center w-full font-bold text-text text-base hover:text-primary" onClick={() => setShowAllFeature(!showAllFeature)}>
+            {" "}
+            {showAllFeature ? "See less features" : "See all features"}{" "}
+          </button>
         </div>
       </div>
     </div>
