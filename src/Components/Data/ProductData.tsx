@@ -91,7 +91,7 @@ export const webHosting = [
     wpAutoUpdates: {
       bold: "Automatic",
       regular: "WordPress Updates",
-      status: true,
+      status: false,
     },
     ssl: {
       bold: "FREE",
