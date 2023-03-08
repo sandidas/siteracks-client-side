@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
         toastOptions={{
           className: 'flex shadow shadow-purple-400 gap-6 rounded-lg overflow-hidden max-w-3xl dark:bg-gray-700 dark:text-white divide-gray-700 text-sm max-w-xs',
           duration: 5000,
-          position: 'bottom-left',
+          position: 'top-right',
         }}
       />
 
