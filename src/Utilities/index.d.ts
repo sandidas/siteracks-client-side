@@ -20,11 +20,11 @@ declare global {
     }
     interface IProduct {
         _id: number;
-        title: string;
-        slug: string;
-        shortDescription: string;
-        description: string;
-        featured: boolean;
+        title?: string;
+        slug?: string;
+        shortDescription?: string;
+        description?: string;
+        featured?: boolean;
         additionalMonth?: string | boolean;
 
         monthlyPackage: IProductChildItemsPackages;

@@ -1,63 +1,39 @@
 import CompleteCheckIcon from "../../../public/images/icons/CompleteCheckIcon.svg";
 import NegativeCloseIcon from "../../../public/images/icons/NegativeCloseIcon.svg";
 import LightCheckIcon from "../../../public/images/icons/LightCheckIcon.svg";
+
+import {
+  addCollaboratorsTooltip,
+  bandwidthTooltip,
+  dedicatedResourcesTooltip,
+  domainTooltip,
+  emailAccountsTooltip,
+  monthlyVisitsTooltip,
+  multiplePhpVersionsTooltip,
+  nightlyBackupTooltip,
+  powerfulControlPanelTooltip,
+  siteRacksExpertOptimizedTooltip,
+  sslTooltip,
+  storageTooltip,
+  wordpressDedicatedExpertTooltip,
+  wordPressMultisiteTooltip,
+  WordPressNginxCachingTooltip,
+  wordpressOptimizedTooltip,
+  wordpressTransferTooltip,
+} from "./ProductData";
 import { productPricingData } from "./ProductPricing";
 
-// tool tips
-export const storageTooltip =
-  "Our servers are equipped with high-performance Non-Volatile Memory Express (NVMe) for both files and databases, ensuring lightning-fast loading times for your sites. The storage is allocated per plan, meaning that if you have multiple sites, the storage will be shared among them.";
-
-export const sslTooltip = "ssl";
-export const monthlyVisitsTooltip = "The following is an estimated approximation of the maximum number of website visits that can be accommodated by the hosting plan, assuming all the sites you host are utilizing our out-of-the-box caching as intended.";
-export const bandwidthTooltip = "As long as your plan adheres to our fair use guidelines, there are no restrictions on your data transfer. The site will not go down if the data transfer limit is over. You can switch higher plan easily.";
-export const domainTooltip = "ssl";
-export const nightlyBackupTooltip = "ssl";
-export const wordpressTransferTooltip = "ssl";
-export const multiplePhpVersionsTooltip = "ssl";
-export const emailAccountsTooltip = "ssl";
-export const wordpressDedicatedExpertTooltip = "ssl";
-export const siteRacksExpertOptimizedTooltip = "ssl";
-export const addCollaboratorsTooltip = "ssl";
-export const dedicatedResourcesTooltip = "ssl";
-export const wordPressMultisiteTooltip = "ssl";
-export const WordPressNginxCachingTooltip = "ssl";
-export const powerfulControlPanelTooltip = "ssl";
-export const wordpressOptimizedTooltip = "ssl";
-
-export const webHosting = [
+export const wordpressHostingData = [
   {
     _id: 1,
-    title: "Standard Web Hosting",
-    slug: "standardWebHosting",
-    shortDescription: "Ideal solution for beginners",
+    title: "Standard WordPress Hosting",
+    slug: "wordpressHosting",
+    shortDescription: "WordPress eco-friendly, cost-effective, easy to use WordPress hosting.",
     description: "A",
     featured: false,
     additionalMonth: "+2 months FREE ",
 
-    ...productPricingData[0].sharedWebHosting?.child?.standardWebhosting,
-    // monthlyPackage: {
-    //   regularPrice: 9.9,
-    //   additionalDiscount: 0,
-    //   orderLink: "monthlyOrderLink",
-    // },
-
-    // annuallyPackage: {
-    //   regularPrice: 93.6,
-    //   additionalDiscount: 0,
-    //   orderLink: "Annual order",
-    // },
-
-    // bienniallyPackage: {
-    //   regularPrice: 151.2,
-    //   additionalDiscount: 0,
-    //   orderLink: "binally order",
-    // },
-
-    // trienniallyPackage: {
-    //   regularPrice: 198,
-    //   additionalDiscount: 0,
-    //   orderLink: "https://www.google.com/",
-    // },
+    ...productPricingData[1].wordPressHosting?.child?.standardWPhosting,
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -330,13 +306,14 @@ export const webHosting = [
   },
   {
     _id: 2,
-    title: "Premium Web Hosting",
-    slug: "premiumWebHosting",
+    title: "Premium WordPress Hosting",
+    slug: "premiumWordPressHosting",
     shortDescription: "Ideal solution for beginners",
     description: "A",
     featured: true,
     additionalMonth: "+3 months FREE ",
-    ...productPricingData[0].sharedWebHosting?.child?.premiumWebHosting,
+
+    ...productPricingData[1].wordPressHosting?.child?.premiumWPhosting,
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -600,17 +577,16 @@ export const webHosting = [
       status: true,
     },
   },
-
   {
     _id: 3,
-    title: "Ultimate Web Hosting",
-    slug: "ultimateWebHosting",
+    title: "Ultimate WordPress Hosting",
+    slug: "ultimateWordPressHosting",
     shortDescription: "Ideal solution for beginners",
     description: "A",
     featured: false,
     additionalMonth: "+3 months FREE ",
 
-    ...productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting,
+    ...productPricingData[1].wordPressHosting?.child?.ultimateWPhosting,
 
     numberOfWebsites: {
       iconColor: "fill-primary",
