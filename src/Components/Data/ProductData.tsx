@@ -1,6 +1,7 @@
 import CompleteCheckIcon from "../../../public/images/icons/CompleteCheckIcon.svg";
 import NegativeCloseIcon from "../../../public/images/icons/NegativeCloseIcon.svg";
 import LightCheckIcon from "../../../public/images/icons/LightCheckIcon.svg";
+import { productPricingData } from "./ProductPricing";
 
 // tool tips
 export const storageTooltip =
@@ -34,27 +35,27 @@ export const webHosting = [
     additionalMonth: "+2 months FREE ",
 
     monthlyPackage: {
-      regularPrice: 9.9,
-      discountedPrice: 10,
-      orderLink: "monthlyOrderLink",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.monthlyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.monthlyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.monthlyPackage.orderLink,
     },
 
     annuallyPackage: {
-      regularPrice: 93.6,
-      discountedPrice: 10,
-      orderLink: "Annual order",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.annuallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.annuallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.annuallyPackage.orderLink,
     },
 
     bienniallyPackage: {
-      regularPrice: 151.2,
-      discountedPrice: 10,
-      orderLink: "binally order",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.bienniallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.bienniallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.bienniallyPackage.orderLink,
     },
 
     trienniallyPackage: {
-      regularPrice: 198,
-      discountedPrice: 10,
-      orderLink: "https://www.google.com/",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.trienniallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.trienniallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.standardWebhosting.trienniallyPackage.orderLink,
     },
 
     numberOfWebsites: {
@@ -336,27 +337,27 @@ export const webHosting = [
     additionalMonth: "+3 months FREE ",
 
     monthlyPackage: {
-      regularPrice: 14.9,
-      discountedPrice: 10,
-      orderLink: "monthlyOrderLink",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.monthlyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.monthlyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.monthlyPackage.orderLink,
     },
 
     annuallyPackage: {
-      regularPrice: 141.6,
-      discountedPrice: 10,
-      orderLink: "Annual order",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.annuallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.annuallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.annuallyPackage.orderLink,
     },
 
     bienniallyPackage: {
-      regularPrice: 237.6,
-      discountedPrice: 10,
-      orderLink: "binally order",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.bienniallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.bienniallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.bienniallyPackage.orderLink,
     },
 
     trienniallyPackage: {
-      regularPrice: 284.4,
-      discountedPrice: 10,
-      orderLink: "https://www.google.com/",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.trienniallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.trienniallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.premiumWebHosting.trienniallyPackage.orderLink,
     },
 
     numberOfWebsites: {
@@ -621,9 +622,8 @@ export const webHosting = [
       status: true,
     },
   },
-
   {
-    _id: 2,
+    _id: 3,
     title: "Ultimate Web Hosting",
     slug: "ultimateWebHosting",
     shortDescription: "Ideal solution for beginners",
@@ -632,27 +632,27 @@ export const webHosting = [
     additionalMonth: "+3 months FREE ",
 
     monthlyPackage: {
-      regularPrice: 19.9,
-      discountedPrice: 10,
-      orderLink: "monthlyOrderLink",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.monthlyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.monthlyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.monthlyPackage.orderLink,
     },
 
     annuallyPackage: {
-      regularPrice: 201.6,
-      discountedPrice: 10,
-      orderLink: "Annual order",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.annuallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.annuallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.annuallyPackage.orderLink,
     },
 
     bienniallyPackage: {
-      regularPrice: 333.6,
-      discountedPrice: 10,
-      orderLink: "binally order",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.bienniallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.bienniallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.bienniallyPackage.orderLink,
     },
 
     trienniallyPackage: {
-      regularPrice: 392.4,
-      discountedPrice: 10,
-      orderLink: "https://www.google.com/",
+      regularPrice: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.trienniallyPackage.regularPrice,
+      additionalDiscount: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.trienniallyPackage.additionalDiscount,
+      orderLink: productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting.trienniallyPackage.orderLink,
     },
 
     numberOfWebsites: {
@@ -917,3 +917,5 @@ export const webHosting = [
     },
   },
 ];
+
+

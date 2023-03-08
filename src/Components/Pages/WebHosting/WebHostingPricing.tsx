@@ -3,13 +3,20 @@ import { IProductProps } from "@/pages/web-hosting";
 import React, { FC } from "react";
 import { webHosting } from "@/Components/Data/ProductData";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
+import { productPricingData } from "@/Components/Data/ProductPricing";
 interface IProps {
   products: [];
 }
 
 const WebHostingPricing = () => {
+
+const datatat = productPricingData[0].sharedWebHosting?.child?.standardWebhosting.monthlyPackage.regularPrice;
+ console.log(datatat);
+
   return (
     <div>
+
+
       <SectionTitle bottomSpace title="Choose Your Web Hosting Plan" />
       <div id="pricingPlan" className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
         {webHosting.map((product, key) => (

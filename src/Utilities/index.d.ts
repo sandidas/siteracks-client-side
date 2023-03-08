@@ -15,7 +15,7 @@ declare global {
     }
     interface IProductChildItemsPackages {
         regularPrice: number;
-        discountedPrice: number;
+        additionalDiscount: number;
         orderLink: string;
     }
     interface IProduct {

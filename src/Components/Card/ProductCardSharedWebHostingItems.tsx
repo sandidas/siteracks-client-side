@@ -8,8 +8,6 @@ interface IProps {
 }
 
 const ProductCardSharedWebHostingItems: FC<IProps> = ({ product, showAllFeature }) => {
-  
-
   return (
     <>
       {/* items */}
@@ -30,7 +28,7 @@ const ProductCardSharedWebHostingItems: FC<IProps> = ({ product, showAllFeature 
             <ProductCardFeatureItem feature={product?.wordpressDedicatedExpert} />
             <ProductCardFeatureItem feature={product?.wordpressOptimized} />
           </div>
-          <div className={`space-y-3 xl:space-y-5 transition-all ease-in-out duration-700 delay-700 ${showAllFeature ? "opacity-100" : "hidden opacity-0"}`}>
+          <div className={`space-y-3 xl:space-y-5 transition ${showAllFeature ? "opacity-100" : "hidden opacity-0"}`}>
             <div>
               <h3 className="font-bold text-text text-base pb-3">Performance</h3>
               <ProductCardFeatureItem feature={product?.cpuCores} />
@@ -88,7 +86,6 @@ const ProductCardSharedWebHostingItems: FC<IProps> = ({ product, showAllFeature 
             </div>
           </div>
         </div>
-
       </div>
       {/* # items */}
     </>
