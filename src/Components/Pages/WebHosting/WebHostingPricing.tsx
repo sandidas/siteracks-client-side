@@ -2,16 +2,21 @@ import ProductCard from "@/Components/Card/ProductCard";
 import { IProductProps } from "@/pages/web-hosting";
 import React, { FC } from "react";
 import { webHosting } from "@/Components/Data/ProductData";
+import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 interface IProps {
   products: [];
 }
 
 const WebHostingPricing = () => {
   return (
-    <div id="pricingPlan" className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-      {webHosting.map((product, key) => (
-        <ProductCard className="" key={key} product={product}></ProductCard>
-      ))}
+    <div>
+      <SectionTitle bottomSpace title="Choose Your Web Hosting Plan" />
+      <div id="pricingPlan" className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
+        {webHosting.map((product, key) => (
+          // type for show items component by filter
+          <ProductCard className="" key={key} type="sharedWebHosting" product={product}></ProductCard>
+        ))}
+      </div>
     </div>
   );
 };

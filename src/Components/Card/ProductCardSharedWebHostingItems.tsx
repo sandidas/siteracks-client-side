@@ -7,7 +7,7 @@ interface IProps {
   showAllFeature?: boolean;
 }
 
-const ProductCardWebHostingItems: FC<IProps> = ({ product, showAllFeature }) => {
+const ProductCardSharedWebHostingItems: FC<IProps> = ({ product, showAllFeature }) => {
   
 
   return (
@@ -95,4 +95,4 @@ const ProductCardWebHostingItems: FC<IProps> = ({ product, showAllFeature }) => 
   );
 };
 
-export default ProductCardWebHostingItems;
+export default ProductCardSharedWebHostingItems;

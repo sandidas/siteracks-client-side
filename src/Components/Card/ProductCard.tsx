@@ -1,13 +1,14 @@
 "use client";
-import { ArrowLongRightIcon, ArrowLongUpIcon } from "@heroicons/react/24/solid";
+import { ArrowLongDownIcon, ArrowLongRightIcon, ArrowLongUpIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import Link from "next/link";
 import React, { FC, useState } from "react";
-import ProductCardWebHostingItems from "./ProductCardWebHostingItems";
+import ProductCardSharedWebHostingItems from "./ProductCardSharedWebHostingItems";
 
 interface IProps {
   product: IProduct;
   className?: string;
+  type?: string;
 }
 
 const buttonDataByMonth = [
@@ -17,7 +18,7 @@ const buttonDataByMonth = [
   { name: "36 Months", call: 36 },
 ];
 
-const ProductCard: FC<IProps> = ({ product, className }) => {
+const ProductCard: FC<IProps> = ({ product, className, type }) => {
   // get how much saving for 36 month package. to show new visitors.
   const preSaving = product?.monthlyPackage?.regularPrice * 36 - product?.trienniallyPackage?.regularPrice;
   const preSavingPercent = ((product?.monthlyPackage?.regularPrice * 36 - product?.trienniallyPackage?.regularPrice) / (product?.monthlyPackage?.regularPrice * 36)) * 100;
@@ -162,10 +163,12 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
 
       {/* 
       
-      for the features we are calling another child component. to show different order list for different service pages.    
+      // for the features we are calling another child component. to show different order list for different service pages.   
+      
+      // we get type from parent component.
       
       */}
-      {product?.slug == "standardWebHosting" && <ProductCardWebHostingItems className="" showAllFeature={showAllFeature} product={product} />}
+      {type == "sharedWebHosting" && <ProductCardSharedWebHostingItems className="" showAllFeature={showAllFeature} product={product} />}
 
       {/*
       
@@ -173,9 +176,17 @@ const ProductCard: FC<IProps> = ({ product, className }) => {
       
       */}
       <div className="text-center">
-        <Link href={`#${product?.slug}`} className="center w-full px-2 py-2  font-bold text-text text-base hover:text-primary" onClick={() => setShowAllFeature(!showAllFeature)}>
+        <Link href={`#${product?.slug}`} className="center w-full px-2 py-2  font-bold text-text text-base hover:text-primary flex justify-center items-start space-x-2" onClick={() => setShowAllFeature(!showAllFeature)}>
           {" "}
-          {showAllFeature ? "See less features" : "See all features"}{" "}
+          {showAllFeature ? 
+          <>
+            <span>See less features</span>
+            <ArrowLongUpIcon className="w-5 h-5" />
+          </> : <>
+          
+          <span>See all features</span>
+          <ArrowLongDownIcon className="w-5 h-5" />
+          </> }{" "}
         </Link>
       </div>
     </div>
