@@ -63,6 +63,8 @@ declare global {
         WordPressDebugging: IProductChildItems;
         WordPressNginxCaching: IProductChildItems;
         WordPressLogs: IProductChildItems;
+        wordPressAcceleration: IProductChildItems;
+        objectCacheforWordPress: IProductChildItems;
         // additional Security features
         malwareScanner: IProductChildItems;
         googleAuth: IProductChildItems;
