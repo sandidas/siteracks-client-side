@@ -6,7 +6,7 @@ import { Button, Tooltip, UnstyledButton } from "@mantine/core";
 import React, { FC } from "react";
 
 interface IFeature {
-  feature: IProductChildItems;
+  feature?: IProductChildItems;
 }
 const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
   const Icon = feature?.icon;

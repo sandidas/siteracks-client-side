@@ -21,6 +21,18 @@ const ProductCardManagedVpsHostingItems: FC<IProps> = ({ product, showAllFeature
             <ProductCardFeatureItem feature={product?.cpuCores} />
             <ProductCardFeatureItem feature={product?.ram} />
 
+            <ProductCardFeatureItem feature={product?.preInstalledOS} />
+            <ProductCardFeatureItem feature={product?.preInstalledCP} />
+            <ProductCardFeatureItem feature={product?.integratedFirewall} />
+            <ProductCardFeatureItem feature={product?.rootAccess} />
+            <ProductCardFeatureItem feature={product?.fullyManaged} />
+
+
+
+
+
+
+
             <ProductCardFeatureItem feature={product?.freeWPInstallation} />
             <ProductCardFeatureItem feature={product?.ssl} />
             <ProductCardFeatureItem feature={product?.nightlyBackup} />

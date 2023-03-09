@@ -292,6 +292,31 @@ export const productPricingData = [
       icon: "",
       seePlansLink: "",
       child: {
+        startUpManagedVPSHosting: {
+          monthlyPackage: {
+            regularPrice: 30.95,
+            additionalDiscount: 0,
+            orderLink: "monthlyOrderLink",
+          },
+
+          annuallyPackage: {
+            regularPrice: 299.4,
+            additionalDiscount: 0,
+            orderLink: "Annual order",
+          },
+
+          bienniallyPackage: {
+            regularPrice: 478.8,
+            additionalDiscount: 0,
+            orderLink: "binally order",
+          },
+
+          trienniallyPackage: {
+            regularPrice: 610.2,
+            additionalDiscount: 0,
+            orderLink: "https://www.google.com/",
+          },
+        },
         enhanceManagedVPSHosting: {
           monthlyPackage: {
             regularPrice: 160,

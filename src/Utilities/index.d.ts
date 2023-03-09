@@ -53,6 +53,15 @@ declare global {
         emailAccounts: IProductChildItems;
         domain: IProductChildItems;
 
+        // managed vps features
+        preInstalledOS?: IProductChildItems;
+        preInstalledCP?: IProductChildItems;
+        integratedFirewall?: IProductChildItems;
+        rootAccess?: IProductChildItems;
+        fullyManaged?: IProductChildItems;
+
+
+
         // additional Important features
         subDomains: IProductChildItems;
         cpuCores: IProductChildItems;
