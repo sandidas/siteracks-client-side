@@ -51,6 +51,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
   const [orderLink, setOrderLink] = useState<string>(product?.trienniallyPackage?.orderLink);
   const [saving, setSaving] = useState<number>(preSaving);
   const [savingPercent, setSavingPercent] = useState<number>(preSavingPercent);
+  const [payToday, setPayToday] = useState<number>(product?.trienniallyPackage?.regularPrice - product?.trienniallyPackage?.additionalDiscount);
+
   // this for show and hide more features items
   const [showAllFeature, setShowAllFeature] = useState(false);
 
@@ -69,6 +71,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       // Use case. My original product price is $504, and going to offer it for $198. Now I have to calculate how much percentage we are going to offer.
       // ((totalPrice - discountedPrice) / totalPrice) * 100
       setSavingPercent(0);
+      setPayToday(product?.monthlyPackage?.regularPrice - product?.monthlyPackage?.additionalDiscount);
     }
     if (selectedPackage == 12) {
       setPrice((product?.annuallyPackage?.regularPrice - product?.annuallyPackage?.additionalDiscount) / 12);
@@ -78,6 +81,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       const totalSavings = calculateSavingAmount(12, product?.annuallyPackage?.regularPrice, product?.annuallyPackage?.additionalDiscount);
       setSaving(totalSavings);
       setSavingPercent(calculateSavingPercent(12, product?.annuallyPackage?.regularPrice, product?.annuallyPackage?.additionalDiscount));
+
+      setPayToday(product?.annuallyPackage?.regularPrice - product?.annuallyPackage?.additionalDiscount);
       const notification = `You are getting $${totalSavings.toFixed(0)} discount for 12 months package.`;
       toast.success(notification);
     }
@@ -87,6 +92,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       const totalSavings = calculateSavingAmount(24, product?.bienniallyPackage?.regularPrice, product?.bienniallyPackage?.additionalDiscount);
       setSaving(totalSavings);
       setSavingPercent(calculateSavingPercent(24, product?.bienniallyPackage?.regularPrice, product?.bienniallyPackage?.additionalDiscount));
+      setPayToday(product?.bienniallyPackage?.regularPrice - product?.bienniallyPackage?.additionalDiscount);
 
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 24 months package.`;
       toast.success(notification);
@@ -98,6 +104,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setSaving(totalSavings);
       setSavingPercent(calculateSavingPercent(36, product?.trienniallyPackage?.regularPrice, product?.trienniallyPackage?.additionalDiscount));
 
+      setPayToday(product?.trienniallyPackage?.regularPrice - product?.trienniallyPackage?.additionalDiscount);
+
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 36 months package.`;
       toast.success(notification);
     }
@@ -105,9 +113,10 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
   return (
     <div className={`px-4 relative py-8 flex flex-col xl:px-8 xl:py-12 rounded-lg group hover:scale-x-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
+      {/* Absolute section for featured item */}
       {product?.featured && <div className="absolute text-center w-2/4 left-1/4 -top-5 text-white font-medium rounded-md py-1 bg-red-400 dark:bg-red-700">Most popular</div>}
 
-      <div className="space-y-5 xl:space-y-10 text-center">
+      <div className="space-y-5 xl:space-y-10 text-center flex flex-col">
         <div className="space-y-2">
           <h2 className="text-title font-bold text-2xl">{product?.title}</h2>
           <p className="text-text text-sm">{product?.shortDescription}</p>
@@ -146,7 +155,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           </div>
           <div>
             <div className="flex py-2 justify-center">
-              <div className="text-title font-bold text-6xl">{price.toFixed(1)} </div>
+              <div className="text-title font-bold text-5xl">${price.toFixed(2)} </div>
               <div className="text-indigo-300 pt-6">/mo</div>
             </div>
             <div className={`${product?.featured ? "text-red-400 dark:text-red-700" : "text-primary"} h-10 overflow-hidden font-medium`}>{currentPackage > 12 && product?.additionalMonth && product?.additionalMonth}</div>
@@ -173,9 +182,9 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
             Order Now
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-400 text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
-            The renewal price is the same.
+            You pay ${payToday.toFixed(2)} today for {currentPackage}{currentPackage == 1 ? " Month" : " Months"} period. <br /> The renewal price is the same.
           </p>
         </div>
 
@@ -207,12 +216,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       {/* WordPress Hosting Child Compo */}
       {type == "wordpressHosting" && <ProductCardWordPressHostingItems className="" showAllFeature={showAllFeature} product={product} />}
 
-
       {/* Business Hosting Child Compo */}
       {type == "businessHosting" && <ProductCardBusinessHostingItems className="" showAllFeature={showAllFeature} product={product} />}
-
-
-
 
       {/*
       
