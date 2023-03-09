@@ -20,21 +20,23 @@ import {
   WordPressNginxCachingTooltip,
   wordpressOptimizedTooltip,
   wordpressTransferTooltip,
-} from "./ProductData";
+} from "./ProductDataWebHosting";
 import { productPricingData } from "./ProductPricing";
+
+const standardWPhosting: IPackages | any = productPricingData[1].wordPressHosting?.child?.standardWPhosting;
+const premiumWPhosting: IPackages | any = productPricingData[1].wordPressHosting?.child?.premiumWPhosting;
+const ultimateWPhosting: IPackages | any = productPricingData[1].wordPressHosting?.child?.ultimateWPhosting;
 
 export const wordpressHostingData = [
   {
+    ...standardWPhosting,
     _id: 1,
     title: "Standard WordPress Hosting",
-    slug: "wordpressHosting",
+    slug: "standardWPhosting",
     shortDescription: "WordPress eco-friendly, cost-effective, easy to use WordPress hosting.",
     description: "A",
     featured: false,
     additionalMonth: "+2 months FREE ",
-
-    ...productPricingData[1].wordPressHosting?.child?.standardWPhosting,
-
     numberOfWebsites: {
       iconColor: "fill-primary",
       bold: "2",
@@ -151,11 +153,9 @@ export const wordpressHostingData = [
     },
 
     WordPressStagingTool: {
-      icon: LightCheckIcon,
-      iconColor: "fill-red-200",
       bold: "WordPress",
       regular: "Staging Tool",
-      status: false,
+      status: true,
     },
 
     WordPressDebugging: {
@@ -180,13 +180,13 @@ export const wordpressHostingData = [
       bold: "WordPress",
       regular: "Optimized Server",
       toolTip: wordpressOptimizedTooltip,
-      status: false,
+      status: true,
     },
     objectCacheforWordPress: {
       bold: "Object Cache",
       regular: "for WordPress",
       toolTip: wordpressTransferTooltip,
-      status: false,
+      status: true,
     },
     googleAuth: {
       bold: "Built-in",
@@ -307,13 +307,13 @@ export const wordpressHostingData = [
   {
     _id: 2,
     title: "Premium WordPress Hosting",
-    slug: "premiumWordPressHosting",
+    slug: "premiumWPhosting",
     shortDescription: "Ideal solution for beginners",
     description: "A",
     featured: true,
     additionalMonth: "+3 months FREE ",
 
-    ...productPricingData[1].wordPressHosting?.child?.premiumWPhosting,
+    ...premiumWPhosting,
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -353,7 +353,7 @@ export const wordpressHostingData = [
     ram: {
       icon: LightCheckIcon,
       iconColor: "fill-green-200",
-      bold: "2 GB",
+      bold: "3 GB",
       regular: "RAM",
       status: true,
     },
@@ -361,7 +361,7 @@ export const wordpressHostingData = [
       bold: "Dedicated",
       regular: "WordPress Expert",
       toolTip: wordpressDedicatedExpertTooltip,
-      status: false,
+      status: true,
     },
     wordPressAcceleration: {
       bold: "WordPress",
@@ -372,13 +372,13 @@ export const wordpressHostingData = [
       bold: "WordPress",
       regular: "Optimized Server",
       toolTip: wordpressOptimizedTooltip,
-      status: false,
+      status: true,
     },
     objectCacheforWordPress: {
       bold: "Object Cache",
       regular: "for WordPress",
       toolTip: wordpressTransferTooltip,
-      status: false,
+      status: true,
     },
     siteRacksExpertOptimized: {
       bold: "Expert Optimization",
@@ -580,13 +580,13 @@ export const wordpressHostingData = [
   {
     _id: 3,
     title: "Ultimate WordPress Hosting",
-    slug: "ultimateWordPressHosting",
+    slug: "ultimateWPhosting",
     shortDescription: "Ideal solution for beginners",
     description: "A",
     featured: false,
     additionalMonth: "+3 months FREE ",
 
-    ...productPricingData[1].wordPressHosting?.child?.ultimateWPhosting,
+    ...ultimateWPhosting,
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -625,7 +625,7 @@ export const wordpressHostingData = [
     ram: {
       icon: LightCheckIcon,
       iconColor: "fill-green-200",
-      bold: "2 GB",
+      bold: "3 GB",
       regular: "RAM",
       status: true,
     },
@@ -644,7 +644,7 @@ export const wordpressHostingData = [
       bold: "WordPress",
       regular: "Optimized Server",
       toolTip: wordpressOptimizedTooltip,
-      status: false,
+      status: true,
     },
     objectCacheforWordPress: {
       bold: "Object Cache",

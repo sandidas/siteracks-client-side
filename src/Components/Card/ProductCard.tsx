@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { FC, useState } from "react";
 import ProductCardSharedWebHostingItems from "./ProductCardSharedWebHostingItems";
 import toast from "react-hot-toast";
+import ProductCardWordPressHostingItems from "./ProductCardWordPressHostingItems";
 
 interface IProps {
   product: IProduct;
@@ -199,7 +200,11 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       // we get type from parent component.
       
       */}
+      {/* Shared Web Hosting Child Compo */}
       {type == "sharedWebHosting" && <ProductCardSharedWebHostingItems className="" showAllFeature={showAllFeature} product={product} />}
+
+      {/* WordPress Hosting Child Compo */}
+      {type == "wordpressHosting" && <ProductCardWordPressHostingItems className="" showAllFeature={showAllFeature} product={product} />}
 
       {/*
       

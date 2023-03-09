@@ -18,6 +18,13 @@ declare global {
         additionalDiscount: number;
         orderLink: string;
     }
+    interface IPackages {
+        monthlyPackage: IProductChildItemsPackages;
+        annuallyPackage: IProductChildItemsPackages;
+        bienniallyPackage: IProductChildItemsPackages;
+        trienniallyPackage: IProductChildItemsPackages;
+    }
+
     interface IProduct {
         _id: number;
         title?: string;

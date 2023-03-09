@@ -24,7 +24,11 @@ export const WordPressNginxCachingTooltip = "ssl";
 export const powerfulControlPanelTooltip = "ssl";
 export const wordpressOptimizedTooltip = "ssl";
 
-export const webHosting = [
+const standardWebhosting:IPackages | any = productPricingData[0].sharedWebHosting?.child?.standardWebhosting;
+const premiumWebHosting:IPackages | any = productPricingData[0].sharedWebHosting?.child?.premiumWebHosting;
+const ultimateWebHosting:IPackages | any = productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting;
+
+export const webHostingData = [
   {
     _id: 1,
     title: "Standard Web Hosting",
@@ -34,30 +38,7 @@ export const webHosting = [
     featured: false,
     additionalMonth: "+2 months FREE ",
 
-    ...productPricingData[0].sharedWebHosting?.child?.standardWebhosting,
-    // monthlyPackage: {
-    //   regularPrice: 9.9,
-    //   additionalDiscount: 0,
-    //   orderLink: "monthlyOrderLink",
-    // },
-
-    // annuallyPackage: {
-    //   regularPrice: 93.6,
-    //   additionalDiscount: 0,
-    //   orderLink: "Annual order",
-    // },
-
-    // bienniallyPackage: {
-    //   regularPrice: 151.2,
-    //   additionalDiscount: 0,
-    //   orderLink: "binally order",
-    // },
-
-    // trienniallyPackage: {
-    //   regularPrice: 198,
-    //   additionalDiscount: 0,
-    //   orderLink: "https://www.google.com/",
-    // },
+    ...standardWebhosting,
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -336,7 +317,8 @@ export const webHosting = [
     description: "A",
     featured: true,
     additionalMonth: "+3 months FREE ",
-    ...productPricingData[0].sharedWebHosting?.child?.premiumWebHosting,
+    // ...productPricingData[0].sharedWebHosting?.child?.premiumWebHosting,
+    ...premiumWebHosting,
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -610,7 +592,7 @@ export const webHosting = [
     featured: false,
     additionalMonth: "+3 months FREE ",
 
-    ...productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting,
+    ...ultimateWebHosting,
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -873,4 +855,5 @@ export const webHosting = [
       status: true,
     },
   },
+
 ];
