@@ -6,6 +6,7 @@ import React, { FC, useState } from "react";
 import ProductCardSharedWebHostingItems from "./ProductCardSharedWebHostingItems";
 import toast from "react-hot-toast";
 import ProductCardWordPressHostingItems from "./ProductCardWordPressHostingItems";
+import ProductCardBusinessHostingItems from "./ProductCardBusinessHostingItems";
 
 interface IProps {
   product: IProduct;
@@ -205,6 +206,13 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
       {/* WordPress Hosting Child Compo */}
       {type == "wordpressHosting" && <ProductCardWordPressHostingItems className="" showAllFeature={showAllFeature} product={product} />}
+
+
+      {/* Business Hosting Child Compo */}
+      {type == "businessHosting" && <ProductCardBusinessHostingItems className="" showAllFeature={showAllFeature} product={product} />}
+
+
+
 
       {/*
       
