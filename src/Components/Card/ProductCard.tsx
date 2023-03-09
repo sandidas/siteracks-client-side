@@ -7,6 +7,7 @@ import ProductCardSharedWebHostingItems from "./ProductCardSharedWebHostingItems
 import toast from "react-hot-toast";
 import ProductCardWordPressHostingItems from "./ProductCardWordPressHostingItems";
 import ProductCardBusinessHostingItems from "./ProductCardBusinessHostingItems";
+import ProductCardManagedVpsHostingItems from "./ProductCardManagedVpsHostingItems";
 
 interface IProps {
   product: IProduct;
@@ -218,6 +219,9 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
       {/* Business Hosting Child Compo */}
       {type == "businessHosting" && <ProductCardBusinessHostingItems className="" showAllFeature={showAllFeature} product={product} />}
+
+      {/* Managed VPS Hosting Child Compo */}
+      {type == "managedVpsHosting" && <ProductCardManagedVpsHostingItems className="" showAllFeature={showAllFeature} product={product} />}
 
       {/*
       

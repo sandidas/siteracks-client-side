@@ -7,7 +7,7 @@ interface IProps {
   showAllFeature?: boolean;
 }
 
-const ProductCardBusinessHostingItems: FC<IProps> = ({ product, showAllFeature }) => {
+const ProductCardManagedVpsHostingItems: FC<IProps> = ({ product, showAllFeature }) => {
   return (
     <>
       {/* items */}
@@ -75,7 +75,7 @@ const ProductCardBusinessHostingItems: FC<IProps> = ({ product, showAllFeature }
               <ProductCardFeatureItem feature={product?.nodeJs} />
               <ProductCardFeatureItem feature={product?.laravelTools} />
               <ProductCardFeatureItem feature={product?.apacheNginx} />
-              <ProductCardFeatureItem feature={product?.dedicatedIPAddress} />
+              
             </div>
 
             <div>
@@ -93,4 +93,4 @@ const ProductCardBusinessHostingItems: FC<IProps> = ({ product, showAllFeature }
   );
 };
 
-export default ProductCardBusinessHostingItems;
+export default ProductCardManagedVpsHostingItems;

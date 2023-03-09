@@ -40,14 +40,14 @@ export const businessHostingData = [
     additionalMonth: "+2 months FREE ",
     numberOfWebsites: {
       iconColor: "fill-primary",
-      bold: "2",
+      bold: "Unlimited",
       regular: "Websites",
       toolTip: false,
       status: true,
     },
     storage: {
-      iconColor: "fill-red-200",
-      bold: "10 GB",
+      iconColor: "fill-green-200",
+      bold: "50 GB",
       regular: "NVMe Premium Storage",
       toolTip: storageTooltip,
       status: true,
@@ -60,8 +60,7 @@ export const businessHostingData = [
       status: true,
     },
     bandwidth: {
-      iconColor: "fill-red-200",
-      bold: "100 GB",
+      bold: "Unlimited",
       regular: "Bandwidth",
       toolTip: bandwidthTooltip,
       status: true,
@@ -89,8 +88,7 @@ export const businessHostingData = [
       status: true,
     },
     emailAccounts: {
-      iconColor: "fill-red-200",
-      bold: "50",
+      bold: "Unlimited",
       regular: "Email Accounts",
       toolTip: emailAccountsTooltip,
       status: true,
@@ -99,7 +97,7 @@ export const businessHostingData = [
       bold: "Free",
       regular: ".com Domain",
       toolTip: domainTooltip,
-      status: false,
+      status: true,
     },
     subDomains: {
       iconColor: "fill-red-200",
@@ -110,14 +108,14 @@ export const businessHostingData = [
     cpuCores: {
       icon: LightCheckIcon,
       iconColor: "fill-red-200",
-      bold: "1 CPU",
+      bold: "2 CPU",
       regular: "Cores",
       status: true,
     },
     ram: {
       icon: LightCheckIcon,
       iconColor: "fill-red-200",
-      bold: "1 GB",
+      bold: "3 GB",
       regular: "RAM",
       status: true,
     },
@@ -138,7 +136,7 @@ export const businessHostingData = [
       bold: "Dedicated",
       regular: "WordPress Expert",
       toolTip: wordpressDedicatedExpertTooltip,
-      status: false,
+      status: true,
     },
     wordPressAcceleration: {
       bold: "WordPress",
@@ -325,7 +323,7 @@ export const businessHostingData = [
     },
     storage: {
       iconColor: "fill-green-100",
-      bold: "40 GB",
+      bold: "80 GB",
       regular: "NVMe Premium Storage",
       toolTip: storageTooltip,
       status: true,
@@ -347,7 +345,7 @@ export const businessHostingData = [
     cpuCores: {
       icon: LightCheckIcon,
       iconColor: "fill-red-200",
-      bold: "1 CPU",
+      bold: "2 CPU",
       regular: "Cores",
       status: true,
     },
@@ -597,7 +595,7 @@ export const businessHostingData = [
       status: true,
     },
     storage: {
-      bold: "80 GB",
+      bold: "100 GB",
       regular: "NVMe Premium Storage",
       toolTip: storageTooltip,
       status: true,
@@ -619,14 +617,13 @@ export const businessHostingData = [
     cpuCores: {
       icon: LightCheckIcon,
       iconColor: "fill-red-200",
-      bold: "1 CPU",
+      bold: "2 CPU",
       regular: "Cores",
       status: true,
     },
     ram: {
-      icon: LightCheckIcon,
-      iconColor: "fill-green-200",
-      bold: "3 GB",
+        
+      bold: "4 GB",
       regular: "RAM",
       status: true,
     },
@@ -663,7 +660,7 @@ export const businessHostingData = [
       bold: "Dedicated",
       regular: "Resources",
       toolTip: dedicatedResourcesTooltip,
-      status: false,
+      status: true,
     },
     wordPressMultisite: {
       bold: "WordPress",
@@ -869,7 +866,7 @@ export const businessHostingData = [
       status: true,
     },
     storage: {
-      bold: "80 GB",
+      bold: "160 GB",
       regular: "NVMe Premium Storage",
       toolTip: storageTooltip,
       status: true,
@@ -891,14 +888,12 @@ export const businessHostingData = [
     cpuCores: {
       icon: LightCheckIcon,
       iconColor: "fill-red-200",
-      bold: "1 CPU",
+      bold: "2 CPU",
       regular: "Cores",
       status: true,
     },
     ram: {
-      icon: LightCheckIcon,
-      iconColor: "fill-green-200",
-      bold: "3 GB",
+      bold: "6 GB",
       regular: "RAM",
       status: true,
     },
@@ -935,7 +930,7 @@ export const businessHostingData = [
       bold: "Dedicated",
       regular: "Resources",
       toolTip: dedicatedResourcesTooltip,
-      status: false,
+      status: true,
     },
     wordPressMultisite: {
       bold: "WordPress",
