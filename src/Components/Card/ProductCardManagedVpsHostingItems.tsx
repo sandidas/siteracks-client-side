@@ -15,7 +15,7 @@ const ProductCardManagedVpsHostingItems: FC<IProps> = ({ product, showAllFeature
         <div className="space-y-1">
           <div className="pb-5">
             <h3 className="font-bold text-text text-base pb-3">Top Features</h3>
-            <ProductCardFeatureItem feature={product?.numberOfWebsites} />
+
             <ProductCardFeatureItem feature={product?.storage} />
             <ProductCardFeatureItem feature={product?.bandwidth} />
             <ProductCardFeatureItem feature={product?.cpuCores} />
@@ -27,21 +27,13 @@ const ProductCardManagedVpsHostingItems: FC<IProps> = ({ product, showAllFeature
             <ProductCardFeatureItem feature={product?.rootAccess} />
             <ProductCardFeatureItem feature={product?.fullyManaged} />
 
-
-
-
-
-
-
-            <ProductCardFeatureItem feature={product?.freeWPInstallation} />
             <ProductCardFeatureItem feature={product?.ssl} />
             <ProductCardFeatureItem feature={product?.nightlyBackup} />
             <ProductCardFeatureItem feature={product?.emailAccounts} />
             <ProductCardFeatureItem feature={product?.domain} />
             <ProductCardFeatureItem feature={product?.DDoSProtection} />
-            <ProductCardFeatureItem feature={product?.wordpressTransfer} />
+
             <ProductCardFeatureItem feature={product?.wordpressDedicatedExpert} />
-            <ProductCardFeatureItem feature={product?.wordpressOptimized} />
           </div>
           <div className={`space-y-3 xl:space-y-5 transition ${showAllFeature ? "opacity-100" : "hidden opacity-0"}`}>
             <div>
@@ -52,7 +44,9 @@ const ProductCardManagedVpsHostingItems: FC<IProps> = ({ product, showAllFeature
 
             <div>
               <h3 className="font-bold text-text text-base pb-3">More WordPress Features </h3>
-
+              <ProductCardFeatureItem feature={product?.freeWPInstallation} />
+              <ProductCardFeatureItem feature={product?.wordpressOptimized} />
+              <ProductCardFeatureItem feature={product?.wordpressTransfer} />
               <ProductCardFeatureItem feature={product?.wpAutoUpdates} />
               <ProductCardFeatureItem feature={product?.wordPressMultisite} />
               <ProductCardFeatureItem feature={product?.WordPressStagingTool} />
@@ -77,6 +71,7 @@ const ProductCardManagedVpsHostingItems: FC<IProps> = ({ product, showAllFeature
               <ProductCardFeatureItem feature={product?.subDomains} />
               <ProductCardFeatureItem feature={product?.unlimitedDatabase} />
               <ProductCardFeatureItem feature={product?.scheduleTask} />
+              <ProductCardFeatureItem feature={product?.numberOfWebsites} />
             </div>
 
             <div>
@@ -87,7 +82,6 @@ const ProductCardManagedVpsHostingItems: FC<IProps> = ({ product, showAllFeature
               <ProductCardFeatureItem feature={product?.nodeJs} />
               <ProductCardFeatureItem feature={product?.laravelTools} />
               <ProductCardFeatureItem feature={product?.apacheNginx} />
-              
             </div>
 
             <div>

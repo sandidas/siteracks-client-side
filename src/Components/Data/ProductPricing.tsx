@@ -397,4 +397,117 @@ export const productPricingData = [
       },
     },
   },
+  {
+    resellerHosting: {
+      preTitle: "PreManaged",
+      title: "Reseller Hosting",
+      shortDescription: "Dedicated support with easy-to-use and worry-free pre-managed VPS light hosting.",
+      icon: "",
+      seePlansLink: "",
+      child: {
+        startUpResellerHosting: {
+          monthlyPackage: {
+            regularPrice: 30.95,
+            additionalDiscount: 0,
+            orderLink: "monthlyOrderLink",
+          },
+
+          annuallyPackage: {
+            regularPrice: 299.4,
+            additionalDiscount: 0,
+            orderLink: "Annual order",
+          },
+
+          bienniallyPackage: {
+            regularPrice: 478.8,
+            additionalDiscount: 0,
+            orderLink: "binally order",
+          },
+
+          trienniallyPackage: {
+            regularPrice: 610.2,
+            additionalDiscount: 0,
+            orderLink: "https://www.google.com/",
+          },
+        },
+        enhanceResellerHosting: {
+          monthlyPackage: {
+            regularPrice: 160,
+            additionalDiscount: 0,
+            orderLink: "monthlyOrderLink",
+          },
+
+          annuallyPackage: {
+            regularPrice: 1680,
+            additionalDiscount: 0,
+            orderLink: "Annual order",
+          },
+
+          bienniallyPackage: {
+            regularPrice: 2640,
+            additionalDiscount: 0,
+            orderLink: "binally order",
+          },
+
+          trienniallyPackage: {
+            regularPrice: 3564,
+            additionalDiscount: 0,
+            orderLink: "https://www.google.com/",
+          },
+        },
+
+        growBigResellerHosting: {
+          monthlyPackage: {
+            regularPrice: 220,
+            additionalDiscount: 0,
+            orderLink: "monthlyOrderLink",
+          },
+
+          annuallyPackage: {
+            regularPrice: 2340,
+            additionalDiscount: 0,
+            orderLink: "Annual order",
+          },
+
+          bienniallyPackage: {
+            regularPrice: 3840,
+            additionalDiscount: 0,
+            orderLink: "binally order",
+          },
+
+          trienniallyPackage: {
+            regularPrice: 3960,
+            additionalDiscount: 0,
+            orderLink: "https://www.google.com/",
+          },
+        },
+
+        expandResellerHosting: {
+          monthlyPackage: {
+            regularPrice: 260,
+            additionalDiscount: 0,
+            orderLink: "monthlyOrderLink",
+          },
+
+          annuallyPackage: {
+            regularPrice: 2700,
+            additionalDiscount: 0,
+            orderLink: "Annual order",
+          },
+
+          bienniallyPackage: {
+            regularPrice: 4560,
+            additionalDiscount: 0,
+            orderLink: "binally order",
+          },
+
+          trienniallyPackage: {
+            regularPrice: 5364,
+            additionalDiscount: 0,
+            orderLink: "https://www.google.com/",
+          },
+        },
+      },
+    },
+  },
 ];

@@ -163,12 +163,9 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           </div>
         </div>
 
-        {/* 
-        
-        Order Button
-        
+        {/*        
+       // Order Button        
         */}
-
         <div className="space-y-2 xl:space-y-4">
           <Button
             sx={(theme) => ({
@@ -185,14 +182,13 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           </Button>
           <p className="text-slate-400 text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
-            You pay ${payToday.toFixed(2)} today for {currentPackage}{currentPackage == 1 ? " Month" : " Months"} period. <br /> The renewal price is the same.
+            You pay ${payToday.toFixed(2)} today for {currentPackage}
+            {currentPackage == 1 ? " Month" : " Months"} period. <br /> The renewal price is the same.
           </p>
         </div>
 
-        {/* 
-        
-        Monthly Package buttons: User can select which monthly package they want to purchase
-        
+        {/*         
+        Monthly Package buttons: User can select which monthly package they want to purchase        
         */}
         <div className="grid grid-cols-4 divide-x-2 dark:divide-slate-700 border-2 dark:border-slate-700 border-slate-100">
           {buttonDataByMonth.map((btn, index) => (
@@ -204,12 +200,9 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       </div>
       <hr className="py-5 border-t-2 dark:border-slate-900" />
 
-      {/* 
-      
-      // for the features we are calling another child component. to show different order list for different service pages.   
-      
-      // we get type from parent component.
-      
+      {/*       
+      // for the features we are calling another child component. to show different order list for different service pages.      
+      // we get type from parent component.      
       */}
       {/* Shared Web Hosting Child Compo */}
       {type == "sharedWebHosting" && <ProductCardSharedWebHostingItems className="" showAllFeature={showAllFeature} product={product} />}
@@ -229,17 +222,17 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       
       */}
       <div className="text-center pt-2">
-        <Link href={`#${product?.slug}`} className="center w-full px-2 py-2  font-bold text-text text-base hover:text-primary flex justify-center items-start space-x-2" onClick={() => setShowAllFeature(!showAllFeature)}>
+        <Link href={`#${product?.slug}`} className="center w-full px-2 py-2  font-bold text-text text-base group-hover:text-primary flex justify-center items-start space-x-2" onClick={() => setShowAllFeature(!showAllFeature)}>
           {" "}
           {showAllFeature ? (
             <>
               <span>See less features</span>
-              <ArrowLongUpIcon className="w-5 h-5" />
+              <ArrowLongUpIcon className="w-5 h-5 group-hover:animate-bounce" />
             </>
           ) : (
             <>
               <span>See all features</span>
-              <ArrowLongDownIcon className="w-5 h-5" />
+              <ArrowLongDownIcon className="w-5 h-5 group-hover:animate-bounce" />
             </>
           )}{" "}
         </Link>
