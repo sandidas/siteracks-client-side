@@ -93,17 +93,12 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
   //   return result;
   // };
 
-  // get how much saving for 36 month package. to show new visitors.
-  const preSaving = calculateSavingAmount(36, product?.trienniallyPackage?.regularPrice, product?.trienniallyPackage?.additionalDiscount);
-  const preSavingPercent = calculateSavingPercent(36, product?.trienniallyPackage?.regularPrice, product?.trienniallyPackage?.additionalDiscount);
-  //   const preSavingPercent = (78 / 100) * 100;
-
   // default 36 months selected
   const [currentPackage, setCurrentPackage] = useState<number>(36);
-  const [price, setPrice] = useState<number>((product?.trienniallyPackage?.regularPrice - product?.trienniallyPackage?.additionalDiscount) / 36);
+  const [price, setPrice] = useState<number>(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
   const [orderLink, setOrderLink] = useState<string>(product?.trienniallyPackage?.orderLink);
-  const [saving, setSaving] = useState<number>(preSaving);
-  const [savingPercent, setSavingPercent] = useState<number>(preSavingPercent);
+  const [saving, setSaving] = useState<number>(calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+  const [savingPercent, setSavingPercent] = useState<number>(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
   const [payToday, setPayToday] = useState<number>(product?.trienniallyPackage?.regularPrice - product?.trienniallyPackage?.additionalDiscount);
 
   // this for show and hide more features items
