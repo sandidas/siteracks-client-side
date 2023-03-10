@@ -9,6 +9,7 @@ import ProductCardWordPressHostingItems from "./ProductCardWordPressHostingItems
 import ProductCardBusinessHostingItems from "./ProductCardBusinessHostingItems";
 import ProductCardManagedVpsHostingItems from "./ProductCardManagedVpsHostingItems";
 import ProductCardResellerHostingItems from "./ProductCardResellerHostingItems";
+import { calculateSavingAmount, calculateSavingPercent, calculateDiscountFromPercentage, calculateMonthlyPriceAfterDiscount } from "../Hooks/MathLogics";
 
 interface IProps {
   product: IProduct;
@@ -31,76 +32,15 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
   const twoYearPackage = product?.bienniallyPackage;
   const oneYearPackage = product?.annuallyPackage;
 
-  const calculateSavingAmount = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
-    // when discounting in percentage
-    // calculate regular price after discounting.
-    // discounted_price = original_price - (original_price * discount / 100)
-    const regularPriceAfterDiscountInPercent = currentRegularPrice - (currentRegularPrice * additionalDiscount) / 100;
-    const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
-    // After Discount Current Price Is
-    return totalMonthlyPrice - regularPriceAfterDiscountInPercent;
-  };
 
-  const calculateSavingPercent = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
-    // when discount in percentage
-    // step 1: calculate regular price after additional Discount %
-    // rules/logic: original_price - ((original_price / 100) * discountPercent))
-    // will get Regular Price after Discount
-    const RPAfterDiscountInPercent = currentRegularPrice - (currentRegularPrice / 100) * additionalDiscount;
 
-    // get total % of discount
-    // math: total_price - ((total_price - discounted_price) / total_price) * 100
-    // math rules ((totalPrice  / totalPrice) * 100) + discountedPrice;
-    const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
-    const totalDiscountInPercentFromMonthlyPrice = ((totalMonthlyPrice - RPAfterDiscountInPercent) / totalMonthlyPrice) * 100;
-    const result = totalDiscountInPercentFromMonthlyPrice;
-    return result;
-  };
-
-  const calculateDiscountFromPercentage = (currentRegularPrice: number, additionalDiscount: number) => {
-    // calculate regular price after additional Discount %
-    // rules/logic: original_price - ((original_price / 100) * discountPercent))
-    // will get Regular Price after Discount
-    return currentRegularPrice - (currentRegularPrice / 100) * additionalDiscount;
-  };
-
-  const calculateMonthlyPriceAfterDiscount = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
-    // get how much discount we get from the monthly price and discounted percentage
-    const afterDiscountCurrentPriceIs = calculateSavingAmount(totalMonths, currentRegularPrice, additionalDiscount);
-    // calculate total monthly price. ex monhtly * 12 or 24 or 36
-    const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
-    const getCurrentTotalPriceAfterDiscount = totalMonthlyPrice - afterDiscountCurrentPriceIs;
-    // console.log(getCurrentTotalPriceAfterDiscount);
-    // now return per monthly price
-    return getCurrentTotalPriceAfterDiscount / totalMonths;
-  };
-
-  // const calculateSavingAmount = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
-  // when discount in number
-  //   // math rules: (monthlyRegularPrice * totalMonths) - (currentRegularPrice - additionalDiscount)
-  //   const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
-  //   const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
-  //   const afterDiscountCurrentPriceIs = currentRegularPrice - additionalDiscount;
-  //   const result = totalMonthlyPrice - afterDiscountCurrentPriceIs;
-  //   return result;
-  // };
-
-  // const calculateSavingPercent = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
-  //   // when discount in number
-  //   // math rules ((totalPrice - discountedPrice) / totalPrice) * 100
-  //   const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
-  //   const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
-  //   const afterDiscountCurrentPriceIs = currentRegularPrice - additionalDiscount;
-  //   const result = ((totalMonthlyPrice - afterDiscountCurrentPriceIs) / totalMonthlyPrice) * 100;
-  //   return result;
-  // };
 
   // default 36 months selected
   const [currentPackage, setCurrentPackage] = useState<number>(36);
-  const [price, setPrice] = useState<number>(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+  const [price, setPrice] = useState<number>(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
   const [orderLink, setOrderLink] = useState<string>(product?.trienniallyPackage?.orderLink);
-  const [saving, setSaving] = useState<number>(calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
-  const [savingPercent, setSavingPercent] = useState<number>(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+  const [saving, setSaving] = useState<number>(calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
+  const [savingPercent, setSavingPercent] = useState<number>(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
   const [payToday, setPayToday] = useState<number>(calculateDiscountFromPercentage(threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
 
   const [additionalDiscount, setAdditionalDiscount] = useState<number>(threeYearPackage?.additionalDiscount);
@@ -120,26 +60,24 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
     if (selectedPackage == 1) {
       // monthlyPackage
       setOrderLink(monthlyPackage?.orderLink);
-      setPrice(calculateMonthlyPriceAfterDiscount(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount));
+      setPrice(calculateMonthlyPriceAfterDiscount(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount, monthlyRegularPrice));
       // saving
-      const totalSavings = calculateSavingAmount(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount);
+      const totalSavings = calculateSavingAmount(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount, monthlyRegularPrice);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount));
+      setSavingPercent(calculateSavingPercent(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount, monthlyRegularPrice));
 
       // pay today
       setPayToday(calculateDiscountFromPercentage(monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount));
       setAdditionalDiscount(monthlyPackage?.additionalDiscount);
       setRegularPrice(monthlyPackage?.regularPrice);
-
-
     }
     if (selectedPackage == 12) {
       setOrderLink(oneYearPackage?.orderLink);
-      setPrice(calculateMonthlyPriceAfterDiscount(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
+      setPrice(calculateMonthlyPriceAfterDiscount(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount, monthlyRegularPrice));
       // saving
-      const totalSavings = calculateSavingAmount(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount);
+      const totalSavings = calculateSavingAmount(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount, monthlyRegularPrice);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
+      setSavingPercent(calculateSavingPercent(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount, monthlyRegularPrice));
       // pay today
       setPayToday(calculateDiscountFromPercentage(oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
       setAdditionalDiscount(oneYearPackage?.additionalDiscount);
@@ -150,11 +88,11 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
     }
     if (selectedPackage == 24) {
       setOrderLink(twoYearPackage?.orderLink);
-      setPrice(calculateMonthlyPriceAfterDiscount(24, twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount));
+      setPrice(calculateMonthlyPriceAfterDiscount(24, twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount, monthlyRegularPrice));
       // saving
-      const totalSavings = calculateSavingAmount(24, twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount);
+      const totalSavings = calculateSavingAmount(24, twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount, monthlyRegularPrice);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(24, twoYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+      setSavingPercent(calculateSavingPercent(24, twoYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
       // pay today
       setPayToday(calculateDiscountFromPercentage(twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount));
       setAdditionalDiscount(twoYearPackage?.additionalDiscount);
@@ -165,11 +103,11 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
     }
     if (selectedPackage == 36) {
       setOrderLink(threeYearPackage?.orderLink);
-      setPrice(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+      setPrice(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
       // saving
-      const totalSavings = calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount);
+      const totalSavings = calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+      setSavingPercent(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
       // pay today
       setPayToday(calculateDiscountFromPercentage(threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
       setAdditionalDiscount(threeYearPackage?.additionalDiscount);
@@ -182,7 +120,6 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
   return (
     <div className={`px-4 relative py-8 flex flex-col xl:px-8 xl:py-12 rounded-lg group hover:scale-x-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
-      
       {/* Absolute section for featured item */}
       {product?.featured && <div className="absolute text-center w-2/4 left-1/4 -top-5 text-white font-medium rounded-md py-1 bg-red-400 dark:bg-red-700">Most popular</div>}
 
@@ -190,9 +127,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
         <div className="space-y-2">
           <h2 className="text-title font-bold text-2xl">{product?.title}</h2>
           <p className="text-text text-sm">{product?.shortDescription}</p>
-            
         </div>
-        
+
         <div className="space-y-3 xl:space-y-7">
           {/* 
           
@@ -252,14 +188,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           </Button>
           <p className="text-text text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
-            You pay $ {payToday.toFixed(2)} today  for {
-            currentPackage == 1 ? currentPackage :            
-              (
-                currentPackage == 12 ? <>1</> : 
-                (currentPackage == 24 ? <>2</>  : <>3</> )
-              )
-            }
-            {currentPackage == 1 ? " Month" : "-Year"} service term{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1"> (bonus {additionalDiscount}% off coupon included)</span>}. The renewal price ${regularPrice}.
+            You pay $ {payToday.toFixed(2)} today for {currentPackage == 1 ? currentPackage : currentPackage == 12 ? <>1</> : currentPackage == 24 ? <>2</> : <>3</>}
+            {currentPackage == 1 ? " Month" : "-Year"} service term{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1"> (bonus {additionalDiscount}% off coupon included)</span>}. <br /> The renewal price ${regularPrice}.
           </p>
         </div>
 
@@ -291,7 +221,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
       {/* Managed VPS Hosting Child Compo */}
       {type == "managedVpsHosting" && <ProductCardManagedVpsHostingItems className="" showAllFeature={showAllFeature} product={product} />}
-      
+
       {type == "resellerHosting" && <ProductCardResellerHostingItems className="" showAllFeature={showAllFeature} product={product} />}
 
       {/*
