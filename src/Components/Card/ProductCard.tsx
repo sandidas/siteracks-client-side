@@ -250,10 +250,16 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
             Order Now
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>
-          <p className="text-slate-400 text-xs leading-relaxed">
+          <p className="text-text text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
-            You pay $ {payToday.toFixed(2)} today  for {currentPackage}
-            {currentPackage == 1 ? " Month" : " Months"}{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1">(with a bonus {additionalDiscount}% off coupon)</span>}. The renewal price ${regularPrice}.
+            You pay $ {payToday.toFixed(2)} today  for {
+            currentPackage == 1 ? currentPackage :            
+              (
+                currentPackage == 12 ? <>1</> : 
+                (currentPackage == 24 ? <>2</>  : <>3</> )
+              )
+            }
+            {currentPackage == 1 ? " Month" : "-Year"} service term{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1"> (bonus {additionalDiscount}% off coupon included)</span>}. The renewal price ${regularPrice}.
           </p>
         </div>
 

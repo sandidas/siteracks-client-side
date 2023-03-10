@@ -37,7 +37,7 @@ export const resellerHostingData = [
     shortDescription: "A great package to launch your hosting business by hosting your client websites.",
     description: "A",
     featured: false,
-    additionalMonth: "+2 months FREE ",
+    additionalMonth: "",
 
     clientAccount: {
       iconColor: "fill-red-200",
@@ -324,7 +324,7 @@ export const resellerHostingData = [
     slug: "enhanceResellerHosting",
     shortDescription: "Get the power to create and manage websites with Free WHMCS",
     description: "A",
-    featured: true,
+    featured: false,
     additionalMonth: "+3 months FREE ",
 
     ...enhanceResellerHosting,
@@ -611,7 +611,7 @@ export const resellerHostingData = [
     slug: "growBigResellerHosting",
     shortDescription: "Unlock unlimited earning potential by upgrading your hosting resource.",
     description: "A",
-    featured: false,
+    featured: true,
     additionalMonth: "+3 months FREE ",
 
     ...growBigResellerHosting,
