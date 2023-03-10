@@ -21,11 +21,12 @@ import {
   wordpressOptimizedTooltip,
   wordpressTransferTooltip,
 } from "./ProductDataWebHosting";
-import { productPricingData } from "./ProductPricing";
 
-const standardWPhosting: IPackages | any = productPricingData[1].wordPressHosting?.child?.standardWPhosting;
-const premiumWPhosting: IPackages | any = productPricingData[1].wordPressHosting?.child?.premiumWPhosting;
-const ultimateWPhosting: IPackages | any = productPricingData[1].wordPressHosting?.child?.ultimateWPhosting;
+import { findServiceByNameAndType } from "../Hooks/ApiCall";
+
+const standardWPhosting: IPackages | any = findServiceByNameAndType("wordPressHosting", "standardWPhosting");
+const premiumWPhosting: IPackages | any = findServiceByNameAndType("wordPressHosting", "premiumWPhosting");
+const ultimateWPhosting: IPackages | any = findServiceByNameAndType("wordPressHosting", "ultimateWPhosting");
 
 export const wordpressHostingData = [
   {

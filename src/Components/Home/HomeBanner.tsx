@@ -4,20 +4,24 @@ import React from "react";
 import HomeBannerImage from "../../../public/images/webHosting/home-page-banner.svg";
 import { productPricingData } from "../Data/ProductPricing";
 
-const HomeBanner = () => {
+import { getPriceForBanner } from "../Hooks/ApiCall";
+import { findServiceByName } from "../Hooks/FindData";
 
-  const calculateMonthlyPriceAfterDiscount = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
-    // get how much discount we get from the monthly price and discounted percentage
-    const afterDiscountCurrentPriceIs = calculateSavingAmount(totalMonths, currentRegularPrice, additionalDiscount);
-    // calculate total monthly price. ex monhtly * 12 or 24 or 36
-    const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
-    const getCurrentTotalPriceAfterDiscount = totalMonthlyPrice - afterDiscountCurrentPriceIs;
-    // console.log(getCurrentTotalPriceAfterDiscount);
-    // now return per monthly price
-    return getCurrentTotalPriceAfterDiscount / totalMonths;
-  };
-  
-  const wpPrice = productPricingData[1]?.wordPressHosting?.child?.standardWPhosting?.trienniallyPackage
+const HomeBanner = () => {
+  // calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice)
+
+  //   const go = getPriceForBanner("sharedWebHosting")
+
+  //   // console.log(go);
+
+  //   const productPricing = productPricingData.find((p) => p?.name.includes("sharedWebHosting"));
+
+  // const deep =productPricing?.child?.find((p) => p?.typeSlug.includes("standardWebhosting"))
+
+  //   console.log(deep);
+
+  // const thePrice = getPriceForBanner("sharedWebHosting");
+  console.log(findServiceByName("sharedWebHosting"));
 
   return (
     <section className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">

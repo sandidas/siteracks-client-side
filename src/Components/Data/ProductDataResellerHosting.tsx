@@ -21,12 +21,13 @@ import {
   wordpressOptimizedTooltip,
   wordpressTransferTooltip,
 } from "./ProductDataWebHosting";
-import { productPricingData } from "./ProductPricing";
 
-const startUpResellerHosting: IPackages | any = productPricingData[4].resellerHosting?.child?.startUpResellerHosting;
-const enhanceResellerHosting: IPackages | any = productPricingData[4].resellerHosting?.child?.enhanceResellerHosting;
-const growBigResellerHosting: IPackages | any = productPricingData[4].resellerHosting?.child?.growBigResellerHosting;
-const expandResellerHosting: IPackages | any = productPricingData[4].resellerHosting?.child?.expandResellerHosting;
+import { findServiceByNameAndType } from "../Hooks/ApiCall";
+
+const startUpResellerHosting: IPackages | any = findServiceByNameAndType("resellerHosting", "startUpResellerHosting");
+const enhanceResellerHosting: IPackages | any = findServiceByNameAndType("resellerHosting", "enhanceResellerHosting");
+const growBigResellerHosting: IPackages | any = findServiceByNameAndType("resellerHosting", "growBigResellerHosting");
+const expandResellerHosting: IPackages | any = findServiceByNameAndType("resellerHosting", "expandResellerHosting");
 
 export const resellerHostingData = [
   {
@@ -637,7 +638,7 @@ export const resellerHostingData = [
       status: true,
     },
     storage: {
-        iconColor: "fill-green-300",
+      iconColor: "fill-green-300",
       bold: "150 GB",
       regular: "NVMe Premium Storage",
       toolTip: storageTooltip,

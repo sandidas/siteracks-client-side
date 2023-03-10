@@ -189,7 +189,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           <p className="text-text text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
             You pay $ {payToday.toFixed(2)} today for {currentPackage == 1 ? currentPackage : currentPackage == 12 ? <>1</> : currentPackage == 24 ? <>2</> : <>3</>}
-            {currentPackage == 1 ? " Month" : "-Year"} service term{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1"> (bonus {additionalDiscount}% off coupon included)</span>}. <br /> The renewal price ${regularPrice}.
+            {currentPackage == 1 ? " Month" : "-Year"} service term{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1"> <br /> (bonus {additionalDiscount}% off coupon included)</span>}. <br /> The renewal price ${regularPrice}.
           </p>
         </div>
 

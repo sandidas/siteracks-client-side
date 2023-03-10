@@ -21,12 +21,12 @@ import {
   wordpressOptimizedTooltip,
   wordpressTransferTooltip,
 } from "./ProductDataWebHosting";
-import { productPricingData } from "./ProductPricing";
+import { findServiceByNameAndType } from "../Hooks/ApiCall";
 
-const startUpManagedVPSHosting: IPackages | any = productPricingData[3].managedVpsHosting?.child?.startUpManagedVPSHosting;
-const enhanceManagedVPSHosting: IPackages | any = productPricingData[3].managedVpsHosting?.child?.enhanceManagedVPSHosting;
-const growBigManagedVPSHosting: IPackages | any = productPricingData[3].managedVpsHosting?.child?.growBigManagedVPSHosting;
-const expandManagedVPSHosting: IPackages | any = productPricingData[3].managedVpsHosting?.child?.expandManagedVPSHosting;
+const startUpManagedVPSHosting: IPackages | any = findServiceByNameAndType("managedVpsHosting", "startUpManagedVPSHosting");
+const enhanceManagedVPSHosting: IPackages | any = findServiceByNameAndType("managedVpsHosting", "enhanceManagedVPSHosting");
+const growBigManagedVPSHosting: IPackages | any = findServiceByNameAndType("managedVpsHosting", "growBigManagedVPSHosting");
+const expandManagedVPSHosting: IPackages | any = findServiceByNameAndType("managedVpsHosting", "expandManagedVPSHosting");
 
 export const managedVPSHostingData = [
   {

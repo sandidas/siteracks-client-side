@@ -1,7 +1,7 @@
 import CompleteCheckIcon from "../../../public/images/icons/CompleteCheckIcon.svg";
 import NegativeCloseIcon from "../../../public/images/icons/NegativeCloseIcon.svg";
 import LightCheckIcon from "../../../public/images/icons/LightCheckIcon.svg";
-import { productPricingData } from "./ProductPricing";
+import { findServiceByNameAndType } from "../Hooks/ApiCall";
 
 // tool tips
 export const storageTooltip =
@@ -24,9 +24,9 @@ export const WordPressNginxCachingTooltip = "ssl";
 export const powerfulControlPanelTooltip = "ssl";
 export const wordpressOptimizedTooltip = "ssl";
 
-const standardWebhosting:IPackages | any = productPricingData[0].sharedWebHosting?.child?.standardWebhosting;
-const premiumWebHosting:IPackages | any = productPricingData[0].sharedWebHosting?.child?.premiumWebHosting;
-const ultimateWebHosting:IPackages | any = productPricingData[0].sharedWebHosting?.child?.ultimateWebHosting;
+const standardWebhosting: IPackages | any = findServiceByNameAndType("sharedWebHosting", "standardWebhosting");
+const premiumWebHosting: IPackages | any = findServiceByNameAndType("sharedWebHosting", "premiumWebHosting");
+const ultimateWebHosting: IPackages | any = findServiceByNameAndType("sharedWebHosting", "ultimateWebHosting");
 
 export const webHostingData = [
   {
@@ -317,7 +317,7 @@ export const webHostingData = [
     description: "A",
     featured: true,
     additionalMonth: "+3 months FREE ",
-    // ...productPricingData[0].sharedWebHosting?.child?.premiumWebHosting,
+    // ...productPricing?.sharedWebHosting?.child?.premiumWebHosting,
     ...premiumWebHosting,
 
     numberOfWebsites: {
@@ -855,5 +855,4 @@ export const webHostingData = [
       status: true,
     },
   },
-
 ];

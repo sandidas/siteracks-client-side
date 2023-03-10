@@ -21,12 +21,12 @@ import {
   wordpressOptimizedTooltip,
   wordpressTransferTooltip,
 } from "./ProductDataWebHosting";
-import { productPricingData } from "./ProductPricing";
+import { findServiceByNameAndType } from "../Hooks/ApiCall";
 
-const startUpBusinessHosting: IPackages | any = productPricingData[2].businessHosting?.child?.startUpBusinessHosting;
-const enhanceBusinessHosting: IPackages | any = productPricingData[2].businessHosting?.child?.enhanceBusinessHosting;
-const growBigBusinessHosting: IPackages | any = productPricingData[2].businessHosting?.child?.growBigBusinessHosting;
-const expandBusinessHosting: IPackages | any = productPricingData[2].businessHosting?.child?.expandBusinessHosting;
+const startUpBusinessHosting: IPackages | any = findServiceByNameAndType("businessHosting", "startUpBusinessHosting");
+const enhanceBusinessHosting: IPackages | any = findServiceByNameAndType("businessHosting", "enhanceBusinessHosting");
+const growBigBusinessHosting: IPackages | any = findServiceByNameAndType("businessHosting", "growBigBusinessHosting");
+const expandBusinessHosting: IPackages | any = findServiceByNameAndType("businessHosting", "expandBusinessHosting");
 
 export const businessHostingData = [
   {
@@ -622,7 +622,6 @@ export const businessHostingData = [
       status: true,
     },
     ram: {
-        
       bold: "4 GB",
       regular: "RAM",
       status: true,
