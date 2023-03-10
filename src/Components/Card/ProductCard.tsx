@@ -23,23 +23,75 @@ const buttonDataByMonth = [
 ];
 
 const ProductCard: FC<IProps> = ({ product, className, type }) => {
+  // common variables needs bellow functionality
+  const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
+  const threeYearPackage = product?.trienniallyPackage;
+  const twoYearPackage = product?.bienniallyPackage;
+  const oneYearPackage = product?.annuallyPackage;
+
   const calculateSavingAmount = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
-    // math rules: (monthlyRegularPrice * totalMonths) - (currentRegularPrice - additionalDiscount)
-    const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
+    // when discounting in percentage
+    // calculate regular price after discounting.
+    // discounted_price = original_price - (original_price * discount / 100)
+    const regularPriceAfterDiscountInPercent = currentRegularPrice - (currentRegularPrice * additionalDiscount) / 100;
     const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
-    const afterDiscountCurrentPriceIs = currentRegularPrice - additionalDiscount;
-    const result = totalMonthlyPrice - afterDiscountCurrentPriceIs;
-    return result;
+    // After Discount Current Price Is
+    return totalMonthlyPrice - regularPriceAfterDiscountInPercent;
   };
 
   const calculateSavingPercent = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
-    // math rules ((totalPrice - discountedPrice) / totalPrice) * 100
-    const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
+    // when discount in percentage
+    // step 1: calculate regular price after additional Discount %
+    // rules/logic: original_price - ((original_price / 100) * discountPercent))
+    // will get Regular Price after Discount
+    const RPAfterDiscountInPercent = currentRegularPrice - (currentRegularPrice / 100) * additionalDiscount;
+
+    // get total % of discount
+    // math: total_price - ((total_price - discounted_price) / total_price) * 100
+    // math rules ((totalPrice  / totalPrice) * 100) + discountedPrice;
     const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
-    const afterDiscountCurrentPriceIs = currentRegularPrice - additionalDiscount;
-    const result = ((totalMonthlyPrice - afterDiscountCurrentPriceIs) / totalMonthlyPrice) * 100;
+    const totalDiscountInPercentFromMonthlyPrice = ((totalMonthlyPrice - RPAfterDiscountInPercent) / totalMonthlyPrice) * 100;
+    const result = totalDiscountInPercentFromMonthlyPrice;
     return result;
   };
+
+  const calculateDiscountFromPercentage = (currentRegularPrice: number, additionalDiscount: number) => {
+    // calculate regular price after additional Discount %
+    // rules/logic: original_price - ((original_price / 100) * discountPercent))
+    // will get Regular Price after Discount
+    return currentRegularPrice - (currentRegularPrice / 100) * additionalDiscount;
+  };
+
+  const calculateMonthlyPriceAfterDiscount = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
+    // get how much discount we get from the monthly price and discounted percentage
+    const afterDiscountCurrentPriceIs = calculateSavingAmount(totalMonths, currentRegularPrice, additionalDiscount);
+    // calculate total monthly price. ex monhtly * 12 or 24 or 36
+    const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
+    const getCurrentTotalPriceAfterDiscount = totalMonthlyPrice - afterDiscountCurrentPriceIs;
+    // console.log(getCurrentTotalPriceAfterDiscount);
+    // now return per monthly price
+    return getCurrentTotalPriceAfterDiscount / totalMonths;
+  };
+
+  // const calculateSavingAmount = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
+  // when discount in number
+  //   // math rules: (monthlyRegularPrice * totalMonths) - (currentRegularPrice - additionalDiscount)
+  //   const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
+  //   const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
+  //   const afterDiscountCurrentPriceIs = currentRegularPrice - additionalDiscount;
+  //   const result = totalMonthlyPrice - afterDiscountCurrentPriceIs;
+  //   return result;
+  // };
+
+  // const calculateSavingPercent = (totalMonths: number, currentRegularPrice: number, additionalDiscount: number) => {
+  //   // when discount in number
+  //   // math rules ((totalPrice - discountedPrice) / totalPrice) * 100
+  //   const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
+  //   const totalMonthlyPrice = monthlyRegularPrice * totalMonths;
+  //   const afterDiscountCurrentPriceIs = currentRegularPrice - additionalDiscount;
+  //   const result = ((totalMonthlyPrice - afterDiscountCurrentPriceIs) / totalMonthlyPrice) * 100;
+  //   return result;
+  // };
 
   // get how much saving for 36 month package. to show new visitors.
   const preSaving = calculateSavingAmount(36, product?.trienniallyPackage?.regularPrice, product?.trienniallyPackage?.additionalDiscount);
@@ -75,38 +127,41 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setPayToday(product?.monthlyPackage?.regularPrice - product?.monthlyPackage?.additionalDiscount);
     }
     if (selectedPackage == 12) {
-      setPrice((product?.annuallyPackage?.regularPrice - product?.annuallyPackage?.additionalDiscount) / 12);
-      setOrderLink(product?.annuallyPackage?.orderLink);
-      // setSaving(product?.monthlyPackage?.regularPrice * 12 - product?.annuallyPackage?.regularPrice);
-      // setSavingPercent(((product?.monthlyPackage?.regularPrice * 12 - product?.annuallyPackage?.regularPrice) / (product?.monthlyPackage?.regularPrice * 12)) * 100);
-      const totalSavings = calculateSavingAmount(12, product?.annuallyPackage?.regularPrice, product?.annuallyPackage?.additionalDiscount);
+      setOrderLink(oneYearPackage?.orderLink);
+      setPrice(calculateMonthlyPriceAfterDiscount(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
+      // saving
+      const totalSavings = calculateSavingAmount(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(12, product?.annuallyPackage?.regularPrice, product?.annuallyPackage?.additionalDiscount));
-
-      setPayToday(product?.annuallyPackage?.regularPrice - product?.annuallyPackage?.additionalDiscount);
+      setSavingPercent(calculateSavingPercent(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
+      // pay today
+      setPayToday(calculateDiscountFromPercentage(oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
+      // notifications
       const notification = `You are getting $${totalSavings.toFixed(0)} discount for 12 months package.`;
       toast.success(notification);
     }
     if (selectedPackage == 24) {
-      setPrice((product?.bienniallyPackage?.regularPrice - product?.bienniallyPackage?.additionalDiscount) / 24);
-      setOrderLink(product?.bienniallyPackage?.orderLink);
-      const totalSavings = calculateSavingAmount(24, product?.bienniallyPackage?.regularPrice, product?.bienniallyPackage?.additionalDiscount);
+      setOrderLink(twoYearPackage?.orderLink);
+      setPrice(calculateMonthlyPriceAfterDiscount(24, twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount));
+      // saving
+      const totalSavings = calculateSavingAmount(24, twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(24, product?.bienniallyPackage?.regularPrice, product?.bienniallyPackage?.additionalDiscount));
-      setPayToday(product?.bienniallyPackage?.regularPrice - product?.bienniallyPackage?.additionalDiscount);
-
+      setSavingPercent(calculateSavingPercent(24, twoYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+      // pay today
+      setPayToday(calculateDiscountFromPercentage(twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount));
+      // notifications
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 24 months package.`;
       toast.success(notification);
     }
     if (selectedPackage == 36) {
-      setPrice((product?.trienniallyPackage?.regularPrice - product?.trienniallyPackage?.additionalDiscount) / 36);
-      setOrderLink(product?.trienniallyPackage?.orderLink);
-      const totalSavings = calculateSavingAmount(36, product?.trienniallyPackage?.regularPrice, product?.trienniallyPackage?.additionalDiscount);
+      setOrderLink(threeYearPackage?.orderLink);
+      setPrice(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+      // saving
+      const totalSavings = calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(36, product?.trienniallyPackage?.regularPrice, product?.trienniallyPackage?.additionalDiscount));
-
-      setPayToday(product?.trienniallyPackage?.regularPrice - product?.trienniallyPackage?.additionalDiscount);
-
+      setSavingPercent(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+      // pay today
+      setPayToday(calculateDiscountFromPercentage(threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+      // notifications
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 36 months package.`;
       toast.success(notification);
     }
