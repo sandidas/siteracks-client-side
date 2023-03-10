@@ -99,7 +99,10 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
   const [orderLink, setOrderLink] = useState<string>(product?.trienniallyPackage?.orderLink);
   const [saving, setSaving] = useState<number>(calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
   const [savingPercent, setSavingPercent] = useState<number>(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
-  const [payToday, setPayToday] = useState<number>(product?.trienniallyPackage?.regularPrice - product?.trienniallyPackage?.additionalDiscount);
+  const [payToday, setPayToday] = useState<number>(calculateDiscountFromPercentage(threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+
+  const [additionalDiscount, setAdditionalDiscount] = useState<number>(threeYearPackage?.additionalDiscount);
+  const [regularPrice, setRegularPrice] = useState<number>(threeYearPackage?.regularPrice);
 
   // this for show and hide more features items
   const [showAllFeature, setShowAllFeature] = useState(false);
@@ -130,6 +133,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setSavingPercent(calculateSavingPercent(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
       // pay today
       setPayToday(calculateDiscountFromPercentage(oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
+      setAdditionalDiscount(oneYearPackage?.additionalDiscount);
+      setRegularPrice(oneYearPackage?.regularPrice);
       // notifications
       const notification = `You are getting $${totalSavings.toFixed(0)} discount for 12 months package.`;
       toast.success(notification);
@@ -143,6 +148,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setSavingPercent(calculateSavingPercent(24, twoYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
       // pay today
       setPayToday(calculateDiscountFromPercentage(twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount));
+      setAdditionalDiscount(twoYearPackage?.additionalDiscount);
+      setRegularPrice(twoYearPackage?.regularPrice);
       // notifications
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 24 months package.`;
       toast.success(notification);
@@ -156,6 +163,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setSavingPercent(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
       // pay today
       setPayToday(calculateDiscountFromPercentage(threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+      setAdditionalDiscount(threeYearPackage?.additionalDiscount);
+      setRegularPrice(threeYearPackage?.regularPrice);
       // notifications
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 36 months package.`;
       toast.success(notification);
@@ -232,8 +241,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           </Button>
           <p className="text-slate-400 text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
-            You pay ${payToday.toFixed(2)} today for {currentPackage}
-            {currentPackage == 1 ? " Month" : " Months"} period. <br /> The renewal price is the same.
+            You pay ${payToday.toFixed(2)} today  for {currentPackage}
+            {currentPackage == 1 ? " Month" : " Months"}{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1">(with a bonus {additionalDiscount}% off coupon)</span>}. The renewal price is ${regularPrice}.
           </p>
         </div>
 

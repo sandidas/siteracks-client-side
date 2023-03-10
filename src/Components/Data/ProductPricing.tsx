@@ -313,7 +313,7 @@ export const productPricingData = [
 
           trienniallyPackage: {
             regularPrice: 610,
-            additionalDiscount: 5,
+            additionalDiscount: 50,
             orderLink: "https://www.google.com/",
           },
         },
