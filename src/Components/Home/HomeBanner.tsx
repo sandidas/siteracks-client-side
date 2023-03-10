@@ -2,27 +2,10 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import React from "react";
 import HomeBannerImage from "../../../public/images/webHosting/home-page-banner.svg";
-import { productPricingData } from "../Data/ProductPricing";
-
 import { getPriceForBanner } from "../Hooks/ApiCall";
-import { findServiceByName } from "../Hooks/FindData";
 
 const HomeBanner = () => {
-  // calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice)
-
-  //   const go = getPriceForBanner("sharedWebHosting")
-
-  //   // console.log(go);
-
-  //   const productPricing = productPricingData.find((p) => p?.name.includes("sharedWebHosting"));
-
-  // const deep =productPricing?.child?.find((p) => p?.typeSlug.includes("standardWebhosting"))
-
-  //   console.log(deep);
-
-  // const thePrice = getPriceForBanner("sharedWebHosting");
-  console.log(findServiceByName("sharedWebHosting"));
-
+  const packagePrice = getPriceForBanner("wordPressHosting", "standardWPhosting");
   return (
     <section className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
@@ -46,14 +29,14 @@ const HomeBanner = () => {
           <li className="bg-blue-500/10 dark:bg-blue-500/10 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">30-day of money back guarantee</li>
         </ul>
 
-        <Button size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+        <Button component="a" href="wordpress-hosting" size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
           View Plans
           <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>
         <div className="pt-5">
           <div className="flex space-x-1">
             <div className="text-text pt-3">Starting at </div>
-            <div className="text-primary font-bold text-4xl group-hover:text-text"> $4.95 </div>
+            <div className="text-primary font-bold text-4xl group-hover:text-text"> ${packagePrice.toFixed(2)} </div>
             <div className="text-text pt-3">/mo*</div>
           </div>
         </div>
