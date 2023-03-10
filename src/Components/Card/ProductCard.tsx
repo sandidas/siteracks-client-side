@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import ProductCardWordPressHostingItems from "./ProductCardWordPressHostingItems";
 import ProductCardBusinessHostingItems from "./ProductCardBusinessHostingItems";
 import ProductCardManagedVpsHostingItems from "./ProductCardManagedVpsHostingItems";
+import ProductCardResellerHostingItems from "./ProductCardResellerHostingItems";
 
 interface IProps {
   product: IProduct;
@@ -25,6 +26,7 @@ const buttonDataByMonth = [
 const ProductCard: FC<IProps> = ({ product, className, type }) => {
   // common variables needs bellow functionality
   const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
+  const monthlyPackage = product?.monthlyPackage;
   const threeYearPackage = product?.trienniallyPackage;
   const twoYearPackage = product?.bienniallyPackage;
   const oneYearPackage = product?.annuallyPackage;
@@ -116,13 +118,20 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
     setCurrentPackage(selectedPackage);
 
     if (selectedPackage == 1) {
-      setPrice(product?.monthlyPackage?.regularPrice - product?.monthlyPackage?.additionalDiscount);
-      setOrderLink(product?.monthlyPackage?.orderLink);
-      setSaving(0);
-      // Use case. My original product price is $504, and going to offer it for $198. Now I have to calculate how much percentage we are going to offer.
-      // ((totalPrice - discountedPrice) / totalPrice) * 100
-      setSavingPercent(0);
-      setPayToday(product?.monthlyPackage?.regularPrice - product?.monthlyPackage?.additionalDiscount);
+      // monthlyPackage
+      setOrderLink(monthlyPackage?.orderLink);
+      setPrice(calculateMonthlyPriceAfterDiscount(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount));
+      // saving
+      const totalSavings = calculateSavingAmount(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount);
+      setSaving(totalSavings);
+      setSavingPercent(calculateSavingPercent(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount));
+
+      // pay today
+      setPayToday(calculateDiscountFromPercentage(monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount));
+      setAdditionalDiscount(monthlyPackage?.additionalDiscount);
+      setRegularPrice(monthlyPackage?.regularPrice);
+
+
     }
     if (selectedPackage == 12) {
       setOrderLink(oneYearPackage?.orderLink);
@@ -173,6 +182,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
   return (
     <div className={`px-4 relative py-8 flex flex-col xl:px-8 xl:py-12 rounded-lg group hover:scale-x-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
+      
       {/* Absolute section for featured item */}
       {product?.featured && <div className="absolute text-center w-2/4 left-1/4 -top-5 text-white font-medium rounded-md py-1 bg-red-400 dark:bg-red-700">Most popular</div>}
 
@@ -180,8 +190,9 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
         <div className="space-y-2">
           <h2 className="text-title font-bold text-2xl">{product?.title}</h2>
           <p className="text-text text-sm">{product?.shortDescription}</p>
+            
         </div>
-
+        
         <div className="space-y-3 xl:space-y-7">
           {/* 
           
@@ -241,8 +252,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           </Button>
           <p className="text-slate-400 text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
-            You pay ${payToday.toFixed(2)} today  for {currentPackage}
-            {currentPackage == 1 ? " Month" : " Months"}{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1">(with a bonus {additionalDiscount}% off coupon)</span>}. The renewal price is ${regularPrice}.
+            You pay $ {payToday.toFixed(2)} today  for {currentPackage}
+            {currentPackage == 1 ? " Month" : " Months"}{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1">(with a bonus {additionalDiscount}% off coupon)</span>}. The renewal price ${regularPrice}.
           </p>
         </div>
 
@@ -274,6 +285,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
       {/* Managed VPS Hosting Child Compo */}
       {type == "managedVpsHosting" && <ProductCardManagedVpsHostingItems className="" showAllFeature={showAllFeature} product={product} />}
+      
+      {type == "resellerHosting" && <ProductCardResellerHostingItems className="" showAllFeature={showAllFeature} product={product} />}
 
       {/*
       

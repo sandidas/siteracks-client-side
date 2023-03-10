@@ -60,6 +60,11 @@ declare global {
         rootAccess?: IProductChildItems;
         fullyManaged?: IProductChildItems;
 
+        // reseller hosting features
+        
+        clientAccount?: IProductChildItems;
+        freeWhmcs?: IProductChildItems;
+
 
 
         // additional Important features

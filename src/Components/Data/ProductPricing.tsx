@@ -313,7 +313,7 @@ export const productPricingData = [
 
           trienniallyPackage: {
             regularPrice: 610,
-            additionalDiscount: 50,
+            additionalDiscount: 0,
             orderLink: "https://www.google.com/",
           },
         },
@@ -407,50 +407,50 @@ export const productPricingData = [
       child: {
         startUpResellerHosting: {
           monthlyPackage: {
-            regularPrice: 30.95,
+            regularPrice: 56.98,
             additionalDiscount: 0,
             orderLink: "monthlyOrderLink",
           },
 
           annuallyPackage: {
-            regularPrice: 299.4,
+            regularPrice: 599.88,
             additionalDiscount: 0,
             orderLink: "Annual order",
           },
 
           bienniallyPackage: {
-            regularPrice: 478.8,
+            regularPrice: 1079.52,
             additionalDiscount: 0,
             orderLink: "binally order",
           },
 
           trienniallyPackage: {
-            regularPrice: 610.2,
+            regularPrice: 1547.64,
             additionalDiscount: 0,
             orderLink: "https://www.google.com/",
           },
         },
         enhanceResellerHosting: {
           monthlyPackage: {
-            regularPrice: 160,
+            regularPrice: 79.99,
             additionalDiscount: 0,
             orderLink: "monthlyOrderLink",
           },
 
           annuallyPackage: {
-            regularPrice: 1680,
+            regularPrice: 899.88,
             additionalDiscount: 0,
             orderLink: "Annual order",
           },
 
           bienniallyPackage: {
-            regularPrice: 2640,
+            regularPrice: 1679.76,
             additionalDiscount: 0,
             orderLink: "binally order",
           },
 
           trienniallyPackage: {
-            regularPrice: 3564,
+            regularPrice: 2447.28,
             additionalDiscount: 0,
             orderLink: "https://www.google.com/",
           },
@@ -458,25 +458,25 @@ export const productPricingData = [
 
         growBigResellerHosting: {
           monthlyPackage: {
-            regularPrice: 220,
+            regularPrice: 96.99,
             additionalDiscount: 0,
             orderLink: "monthlyOrderLink",
           },
 
           annuallyPackage: {
-            regularPrice: 2340,
+            regularPrice: 1079.88,
             additionalDiscount: 0,
             orderLink: "Annual order",
           },
 
           bienniallyPackage: {
-            regularPrice: 3840,
+            regularPrice: 2111.52,
             additionalDiscount: 0,
             orderLink: "binally order",
           },
 
           trienniallyPackage: {
-            regularPrice: 3960,
+            regularPrice: 3095.28,
             additionalDiscount: 0,
             orderLink: "https://www.google.com/",
           },
@@ -484,25 +484,25 @@ export const productPricingData = [
 
         expandResellerHosting: {
           monthlyPackage: {
-            regularPrice: 260,
+            regularPrice: 129.99,
             additionalDiscount: 0,
             orderLink: "monthlyOrderLink",
           },
 
           annuallyPackage: {
-            regularPrice: 2700,
+            regularPrice: 1439.76,
             additionalDiscount: 0,
             orderLink: "Annual order",
           },
 
           bienniallyPackage: {
-            regularPrice: 4560,
+            regularPrice: 2783.52,
             additionalDiscount: 0,
             orderLink: "binally order",
           },
 
           trienniallyPackage: {
-            regularPrice: 5364,
+            regularPrice: 4031.28,
             additionalDiscount: 0,
             orderLink: "https://www.google.com/",
           },
