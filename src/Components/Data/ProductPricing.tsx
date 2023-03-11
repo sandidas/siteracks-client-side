@@ -1,9 +1,11 @@
 export const productPricingData = [
   {
     nameSlug: "sharedWebHosting",
+    preTitle: false,
     title: "Cloud Hosting",
     shortDescription: "Cost-effective, flexible cloud hosting for small businesses or startups.",
-    icon: "",
+    customClassName:"bg-surfaceFive",
+    icon: "WebHosting",
     seePlansLink: "",
     child: [
       {
@@ -88,9 +90,12 @@ export const productPricingData = [
   },
   {
     nameSlug: "wordPressHosting",
+    preTitle: false,
     title: "WordPress Hosting",
     shortDescription: "WordPress eco-friendly, cost-effective, easy to use WordPress hosting.",
-    icon: "",
+    customClassName:"bg-secondaryOn",
+    icon: "WordPress",
+    featured: true,
     seePlansLink: "",
     child: [
       {
@@ -149,6 +154,7 @@ export const productPricingData = [
 
       {
         typeSlug: "ultimateWPhosting",
+        preTitle: false,
         monthlyPackage: {
           regularPrice: 22.9,
           additionalDiscount: 0,
@@ -177,9 +183,11 @@ export const productPricingData = [
   },
   {
     nameSlug: "businessHosting",
+    preTitle: false,
     title: "Business Hosting",
     shortDescription: "Faster performance, better security, and expert-recommended hosting for your business websites.",
-    icon: "",
+    customClassName:"bg-surfaceThree",
+    icon: "BusinessHosting",
     seePlansLink: "",
     child: [
       {
@@ -296,7 +304,8 @@ export const productPricingData = [
     preTitle: "PreManaged",
     title: "VPS Hosting",
     shortDescription: "Dedicated support with easy-to-use and worry-free pre-managed VPS light hosting.",
-    icon: "",
+    customClassName:"bg-surfaceTwo",
+    icon: "PreManagedVpsHosting",
     seePlansLink: "",
     child: [
       {
@@ -412,7 +421,8 @@ export const productPricingData = [
     preTitle: "PreManaged",
     title: "Reseller Hosting",
     shortDescription: "Dedicated support with easy-to-use and worry-free pre-managed VPS light hosting.",
-    icon: "",
+    customClassName:"bg-surfaceFive",
+    icon: "PreManagedVpsHosting",
     seePlansLink: "",
     child: [
       {

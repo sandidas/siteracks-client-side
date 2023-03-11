@@ -10,12 +10,13 @@ import HireAnExpert from "@/Components/Home/HireAnExpert";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
-
+import { productPricingData } from "@/Components/Data/ProductPricing";
+import ProductCardHome from "@/Components/Card/ProductCardHome";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export function Home({ menuItems }: any) {
-
+  const services = productPricingData.filter((p, index) => p.nameSlug !== "resellerHosting");
   return (
     <>
       <Head>
@@ -30,6 +31,11 @@ export function Home({ menuItems }: any) {
         </div>
 
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5" id="orderNow">
+          <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 py-[10vh]">
+            {services.map((product, index) => (
+              <ProductCardHome key={index} product={product} />
+            ))}
+          </div>
           <HomeCard />
           {/* <ArticleSection /> */}
           <HomeArticle />
@@ -55,8 +61,6 @@ export function Home({ menuItems }: any) {
     </>
   );
 }
-
-
 
 // Home.getLayout = function getLayout(page: ReactElement) {
 //   return <Layout>{page} </Layout>;

@@ -61,7 +61,7 @@ declare global {
         fullyManaged?: IProductChildItems;
 
         // reseller hosting features
-        
+
         clientAccount?: IProductChildItems;
         freeWhmcs?: IProductChildItems;
 
@@ -109,5 +109,31 @@ declare global {
         dedicatedIPAddress: IProductChildItems;
         monthlyVisits: IProductChildItems;
         powerfulControlPanel: IProductChildItems;
+    }
+
+    // Product Pricing Options
+    interface IProductPricingChildItems {
+        typeSlug: string;
+        monthlyPackage: IProductChildItemsPackages;
+        annuallyPackage: IProductChildItemsPackages;
+        bienniallyPackage: IProductChildItemsPackages;
+        trienniallyPackage: IProductChildItemsPackages;
+    }
+    interface IProductPricing {
+        nameSlug?: string;
+        preTitle?: string | undefined | boolean;
+        title?: string;
+        shortDescription?: string;
+        customClassName?:string;
+        icon?: string;
+        featured?: boolean;
+        seePlansLink?: string;
+        child: IProductPricingChildItems[];
+    }
+
+    // getPriceForBanner API Call
+    interface IGetPriceForBanner {
+        serviceName: string;
+        serviceType: string;
     }
 }
