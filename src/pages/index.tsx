@@ -36,7 +36,7 @@ export function Home({ menuItems }: any) {
               <ProductCardHome key={index} product={product} />
             ))}
           </div>
-          <HomeCard />
+          {/* <HomeCard /> */}
           {/* <ArticleSection /> */}
           <HomeArticle />
         </div>

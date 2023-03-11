@@ -1,3 +1,4 @@
+
 export const productPricingData = [
   {
     nameSlug: "sharedWebHosting",
@@ -8,9 +9,9 @@ export const productPricingData = [
     customIconClassName: "fill-white w-20 h-20",
     customTitleClassName: "text-white",
     customTextClassName: "text-slate-100",
-    customPriceCLassName: "text-sky-600",
+    customPriceCLassName: "text-sky-600 group-hover:text-white",
     icon: "WebHosting",
-    seePlansLink: "",
+    seePlansLink: "web-hosting",
     child: [
       {
         typeSlug: "standardWebhosting",
@@ -101,10 +102,10 @@ export const productPricingData = [
     customIconClassName: "fill-green-700 w-20 h-20",
     customTitleClassName: "text-slate-600",
     customTextClassName: "text-slate-600",
-    customPriceCLassName: "group-hover:text-black",
+    customPriceCLassName: "text-slate-600 group-hover:text-black",
     icon: "WordPress",
     featured: true,
-    seePlansLink: "",
+    seePlansLink: "wordpress-hosting",
     child: [
       {
         typeSlug: "standardWPhosting",
@@ -200,7 +201,7 @@ export const productPricingData = [
     customTextClassName: "text-slate-100",
     customPriceCLassName: "text-indigo-300 group-hover:text-white",
     icon: "BusinessHosting",
-    seePlansLink: "",
+    seePlansLink: "business-hosting",
     child: [
       {
         typeSlug: "startUpBusinessHosting",
@@ -322,7 +323,7 @@ export const productPricingData = [
     customTextClassName: "text-slate-50",
     customPriceCLassName: "text-red-700 group-hover:text-white",
     icon: "PreManagedVpsHosting",
-    seePlansLink: "",
+    seePlansLink: "pre-managed-vps-hosting-light",
     child: [
       {
         typeSlug: "startUpManagedVPSHosting",
@@ -443,7 +444,7 @@ export const productPricingData = [
     customTextClassName: "",
     customPriceCLassName: "",
     icon: "PreManagedVpsHosting",
-    seePlansLink: "",
+    seePlansLink: "reseller-hosting",
     child: [
       {
         typeSlug: "startUpResellerHosting",
