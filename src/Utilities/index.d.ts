@@ -124,7 +124,11 @@ declare global {
         preTitle?: string | undefined | boolean;
         title?: string;
         shortDescription?: string;
-        customClassName?:string;
+        customBGClassName?: string;
+        customIconClassName?: string;
+        customTitleClassName?: string;
+        customTextClassName?: string;
+        customPriceCLassName?: string;
         icon?: string;
         featured?: boolean;
         seePlansLink?: string;

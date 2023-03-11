@@ -17,17 +17,17 @@ const ProductCardHome: FC<IProps> = ({ product }) => {
   //   console.log(product);
   return (
     <>
-      <div className="space-y-5 shadow-md rounded-md bg-surfaceFive p-10 hover:-translate-y-3 duration-200 group">
+      <div className={`space-y-5 shadow-md rounded-md p-10 hover:-translate-y-3 duration-200 group ${product?.customBGClassName}`}>
         <div className="space-y-4 md:min-h-[280px]">
           {/* <WebHosting className="fill-white w-20 h-20" /> */}
-          <h2 className="text-white font-bold text-3xl"> {product?.title}</h2>
-          <p className="text-secondaryOn text-slate-100">{product?.shortDescription}</p>
+          <h2 className={`font-bold text-3xl ${product?.customTitleClassName}`}> {product?.title}</h2>
+          <p className={`${product?.customTextClassName}`}>{product?.shortDescription}</p>
         </div>
         <div>
-          <div className="text-sky-600">Starting at</div>
+          <div className={`${product?.customPriceCLassName}`}>Starting at</div>
           <div className="flex">
-            <div className="text-sky-600 font-bold text-5xl group-hover:text-white">${packagePrice && packagePrice?.toFixed(2)} </div>
-            <div className="text-sky-600 pt-3">/mo</div>
+            <div className={`${product?.customPriceCLassName} font-bold text-5xl`}>${packagePrice && packagePrice?.toFixed(2)} </div>
+            <div className={`${product?.customPriceCLassName} pt-3`}>/mo</div>
           </div>
         </div>
         <Button size="xl" className="bg-white shadow transition ease-in-out duration-500 text-gray-600 group-hover:text-white group-hover:bg-black">
