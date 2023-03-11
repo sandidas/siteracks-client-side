@@ -53,7 +53,7 @@ const LiveChat = () => {
                   <p className="text-text">Connect with our knowledgeable sales team for answers to any questions or concerns.</p>
                 </div>
                 <div className="grow"></div>
-                <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+                <Button component="a" href="javascript:void(Tawk_API.toggle())" size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
                   <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
                 </Button>

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import Logo from "../Header/Logo";
-import { websiteMenuItems, hostingMenuItems, domainMenuItems, securityMenuItems, helpMenuItems, aboutMenuItems, tosMenuItems } from "../Data/MenuData";
+import { hostingMenuItems, domainMenuItems, securityMenuItems, helpMenuItems, aboutMenuItems, tosMenuItems } from "../Data/MenuData";
 import ScrollToTop from "./ScrollToTop";
 import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
+ 
 
   return (
     <>
@@ -86,7 +87,7 @@ const Footer = () => {
           <div className="py-5 flex items-center justify-between">
             <Logo logoWidth="250px" logoHeight="33px" />
 
-            <SocialIcons /> 
+            <SocialIcons />
           </div>
           <div className="py-[2vh] border-t border-slate-300 dark:border-slate-600 text-text">
             <p>Copyright © 2023 SiteRacks, LLC. All Rights Reserved.</p>

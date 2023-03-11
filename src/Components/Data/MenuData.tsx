@@ -139,7 +139,7 @@ export const helpMenuItems = [
     icon: ChatBubbleLeftRightIcon,
     title: "Live Chat",
     description: "Customer support service that allows our website users to chat in real-time with a customer support agent to receive assistance or support.",
-    linkUrl: "/#liveChat",
+    linkUrl: "javascript:void(Tawk_API.toggle())",
   },
   // {
   //   icon: "KnowledgeBase",

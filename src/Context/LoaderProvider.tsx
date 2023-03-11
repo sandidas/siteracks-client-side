@@ -1,5 +1,6 @@
 "use client"; // this is a client component
 import Loader from "@/Components/Loader/Loader";
+import TawkTo from "@/lib/tawkto";
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 interface MyProps {
@@ -20,6 +21,10 @@ export const LoaderProvider: React.FC<MyProps> = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [realTime, setRealTime] = useState(false);
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    TawkTo.initialize();
+  }, []);
 
   useEffect(() => {
     let interval: any;
