@@ -57,25 +57,25 @@ export const domainMenuItems = [
   {
     icon: RegisterDomain,
     title: "Register a New Domain",
-    description: "This Pokémon’s cry is very loud and distracting",
+    description: "The process of purchasing and acquiring a new domain (website) address on the internet.",
     linkUrl: "register-domain",
   },
   {
     icon: TransferDomain,
     title: "Transfer Domain To Us",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "Transferring a domain involves moving the registration of a domain from old registrar to SiteRacks.",
     linkUrl: "transfer-domain",
   },
   {
     icon: SiteLockCertificate,
     title: "Privacy & Protection for Domains",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "The service of hiding personal contact information associated with a domain registration to prevent it from being publicly accessible",
     linkUrl: "privacy-protection-for-domains",
   },
   {
     icon: RegisterDomain,
     title: "WHOIS",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "A public database that stores information about the owner and registration details of a domain name",
     linkUrl: "domain-whois",
   },
 ];
@@ -84,13 +84,13 @@ export const websiteMenuItems = [
   {
     icon: WordPressHosting,
     title: "WordPress Website Design",
-    description: "This Pokémon’s cry is very loud and distracting",
+    description: "The process of creating a website using the WordPress platform as the content management system",
     linkUrl: "wordpress-website-design",
   },
   {
     icon: CustomWebsiteDevelopment,
     title: "Custom Website Development",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "The process of creating a unique, tailored website from scratch, often involving coding and programming to meet specific business or individual needs",
     linkUrl: "custom-website-development",
   },
 ];
@@ -99,25 +99,25 @@ export const securityMenuItems = [
   {
     icon: WebsiteBackup,
     title: "Website Backups",
-    description: "This Pokémon’s cry is very loud and distracting",
+    description: "The process of creating copies of website files, databases, and content to prevent data loss in case of a website crash or other unforeseen events.",
     linkUrl: "website-backup",
   },
   {
     icon: SslCertificates,
     title: "SSL Certificates",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "Digital certificates that encrypt and authenticate data transmitted between a web server and a browser, ensuring secure online communication.",
     linkUrl: "ssl-certificates",
   },
   {
     icon: SiteLockCertificate,
     title: "SiteLock Certificates",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "Security certifications that scan websites for vulnerabilities, malware, and other threats and provide protection against them.",
     linkUrl: "siteLock-certificates",
   },
   {
     icon: WildCardCertificate,
     title: "Wildcard SSL",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "A type of SSL certificate that secures a domain and its subdomains with a single certificate.",
     linkUrl: "wildcard-certificates",
   },
 ];
@@ -132,13 +132,13 @@ export const helpMenuItems = [
   {
     icon: OpenSupportTicket,
     title: "Open Support Ticket",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "A request for assistance or support from SiteRacks, often submitted through our support portal",
     linkUrl: "open-support-ticket",
   },
   {
     icon: ChatBubbleLeftRightIcon,
     title: "Live Chat",
-    description: "The fluid of Smeargle’s tail secretions changes",
+    description: "Customer support service that allows our website users to chat in real-time with a customer support agent to receive assistance or support.",
     linkUrl: "/#liveChat",
   },
   // {
