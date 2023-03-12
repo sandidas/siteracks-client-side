@@ -5,7 +5,7 @@ import React from "react";
 const WebHostingFaq = () => {
   return (
     <>
-      <SectionTitle bottomSpace title="Frequently Asked Questions" />
+      <SectionTitle bottomSpace title="FAQ" subTitle="Frequently asked questions about Web Hosting" />
       <div className="max-w-5xl mx-auto lg:text-xl lg:leading-9">
 
         

@@ -1,8 +1,8 @@
 [
   {
-    "_id": "",
-    "pageSlug": "",
-    "pageTitle": "",    
+    "_id": "one",
+    "pageSlug": "webHosting",
+    "pageTitle": "Web Hosting - Best Wordpress Hosting",
     "metaDescription": "",
     "metaKeywords": "",
     "metaAuthor": "",
@@ -10,7 +10,6 @@
     "metaOgImage": "",
     "metaOgTitle": "",
     "metaOgUrl": "",
-    "shareTitle": "",
-
+    "shareTitle": ""
   }
 ]

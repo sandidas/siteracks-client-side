@@ -1,4 +1,5 @@
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import WebHostingArticle from "@/Components/Pages/WebHosting/WebHostingArticle";
 import WebHostingBanner from "@/Components/Pages/WebHosting/WebHostingBanner";
@@ -9,7 +10,7 @@ import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
 
 import axios from "axios";
 import Head from "next/head";
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
 
 interface IProductFetch {
   webHosting: { child: [{}] };
@@ -21,10 +22,8 @@ export interface IProductProps {
 const WebHosting: FC<IProductProps> = ({ products }) => {
   return (
     <>
-      <Head>
-        <title>Web Hosting | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "webHosting" })}
+
       <main>
         <section className="bg-surface">
           <WebHostingBanner />
