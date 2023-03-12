@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <title>SiteRacks</title>
         <meta name="description" content="SiteRacks" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/siteRacksFav.ico" />
+        <link rel="icon" href="/SiteRacksFavIcon.ico" />
       </Head>
 
       <ThemeProvider>
