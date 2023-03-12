@@ -4,12 +4,13 @@ import { Button } from "@mantine/core";
 import Link from "next/link";
 import React, { FC, useState } from "react";
 import ProductCardSharedWebHostingItems from "./ProductCardSharedWebHostingItems";
-import toast from "react-hot-toast";
+
 import ProductCardWordPressHostingItems from "./ProductCardWordPressHostingItems";
 import ProductCardBusinessHostingItems from "./ProductCardBusinessHostingItems";
 import ProductCardManagedVpsHostingItems from "./ProductCardManagedVpsHostingItems";
 import ProductCardResellerHostingItems from "./ProductCardResellerHostingItems";
 import { calculateSavingAmount, calculateSavingPercent, calculateDiscountFromPercentage, calculateMonthlyPriceAfterDiscount } from "../Hooks/MathLogics";
+import { toast } from "react-hot-toast";
 
 interface IProps {
   product: IProduct;

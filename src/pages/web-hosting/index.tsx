@@ -8,18 +8,18 @@ import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
 import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
 
-import axios from "axios";
-import Head from "next/head";
-import React, { FC, useState, useEffect } from "react";
+// import axios from "axios";
+// import Head from "next/head";
+import React, { FC } from "react";
 
-interface IProductFetch {
-  webHosting: { child: [{}] };
-}
-export interface IProductProps {
-  products: [];
-}
+// interface IProductFetch {
+//   webHosting: { child: [{}] };
+// }
+// export interface IProductProps {
+//   products: [];
+// }
 
-const WebHosting: FC<IProductProps> = ({ products }) => {
+const WebHosting = () => {
   return (
     <>
       {useDynamicHead({ slug: "webHosting" })}
@@ -49,12 +49,12 @@ const WebHosting: FC<IProductProps> = ({ products }) => {
   );
 };
 
-export async function getStaticProps() {
-  const res = await axios.get<IProductFetch>("http://localhost:3000/json/products.json");
-  const products = res.data?.webHosting?.child;
-  return {
-    props: { products },
-  };
-}
+// export async function getStaticProps() {
+//   const res = await axios.get<IProductFetch>("http://localhost:3000/json/products.json");
+//   const products = res.data?.webHosting?.child;
+//   return {
+//     props: { products },
+//   };
+// }
 
 export default WebHosting;

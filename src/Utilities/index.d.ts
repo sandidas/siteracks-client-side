@@ -3,6 +3,9 @@ export { };
 declare global {
     declare const Tawk_API: any; // this is for Tawk_API 
     interface Window {
+        Tawk_API: any;
+    }
+    interface Window {
         recaptchaVerifier: {};
         confirmationResult: {};
     }
