@@ -1,6 +1,7 @@
 export { };
 
 declare global {
+    declare const Tawk_API: any; // this is for Tawk_API 
     interface Window {
         recaptchaVerifier: {};
         confirmationResult: {};
@@ -140,4 +141,5 @@ declare global {
         serviceName: string;
         serviceType: string;
     }
+
 }
