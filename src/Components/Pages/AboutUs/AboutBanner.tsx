@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutBanner = () => {
   return (
-    <div className="max-w-3xl mx-auto px-3 md:px-5 pb-[8vh] md:pt-[12vh]">
+    <div className="max-w-3xl mx-auto px-3 md:px-5 pb-[8vh] pt-[12vh]">
       {/* left column  */}
       <div className="text-center flex flex-col items-center space-y-7">
         <div>

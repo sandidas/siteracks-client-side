@@ -1,6 +1,5 @@
 import ProductCard from "@/Components/Card/ProductCard";
-import { IProductProps } from "@/pages/web-hosting";
-import React, { FC } from "react";
+import React from "react";
 import { webHostingData } from "@/Components/Data/ProductDataWebHosting";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 

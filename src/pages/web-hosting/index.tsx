@@ -30,7 +30,7 @@ const WebHosting: FC<IProductProps> = ({ products }) => {
           <WebHostingBanner />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WebHostingPricing products={products} />
+          <WebHostingPricing />
         </section>
         <WebHostingArticle />
         <LiveChat />
