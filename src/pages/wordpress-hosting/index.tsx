@@ -10,15 +10,13 @@ import Head from "next/head";
 import React from "react";
 import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 
 
 const WordPressHosting = () => {
   return (
     <>
-      <Head>
-        <title>WordPress Hosting | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "wordPressHosting" })}
       <main>
         <section className="bg-surface">
           <WordPressHostingBanner />

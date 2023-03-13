@@ -1,3 +1,4 @@
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import AboutSiteracksServicesTC from "@/Components/Pages/TermsAndConditions/AboutSiteracksServicesTC";
 import AcceptanceOfTermsTC from "@/Components/Pages/TermsAndConditions/AcceptanceOfTermsTC";
 import AccuracyCompletenessAndTC from "@/Components/Pages/TermsAndConditions/AccuracyCompletenessAndTC";
@@ -20,10 +21,7 @@ import React from "react";
 const TOC = () => {
   return (
     <>
-      <Head>
-        <title>About us | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "toc" })}
       <main>
         <section className="bg-surface pb-[8vh] md:pt-[12vh]">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5 space-y-5">

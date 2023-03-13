@@ -1,3 +1,4 @@
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import AffiliateBanner from "@/Components/Pages/Affiliate/AffiliateBanner";
 import AffiliateFaq from "@/Components/Pages/Affiliate/AffiliateFaq";
 import AffiliateHowItWorks from "@/Components/Pages/Affiliate/AffiliateHowItWorks";
@@ -10,10 +11,7 @@ import React from "react";
 const Affiliate = () => {
   return (
     <>
-      <Head>
-        <title>About us | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "Affiliate" })}
       <main>
         <section className="bg-surface pb-[8vh] md:pt-[12vh]">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5">

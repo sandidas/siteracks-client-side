@@ -13,10 +13,15 @@ const WhoWeAre = () => {
 
           <ColumnTitleAndDesc title="Who We Are">
             <p className="text-text lg:text-lg lg:leading-8">
-              At SiteRacks, we are a reliable hosting provider that empowers businesses to launch their online presence – no hassles, no headaches. Our team offers robust, blazing-fast hosting services in the US for developing and established businesses.{" "}
+              At <strong className="text-primary">SiteRacks</strong> , we are a reliable hosting provider that empowers businesses to launch their online presence – no hassles, no headaches. Our team offers robust, blazing-fast hosting services in the US for developing and established businesses.{" "}
             </p>
             <p className="text-text lg:text-lg lg:leading-8">Whether you have a WordPress site or an e-commerce store, we ensure your business remains online 24/7. Our experts have always stayed in step with the ever-changing landscape of technology, making us the best hosting provider near you.</p>
             <p className="text-text lg:text-lg lg:leading-8">Our commitment to quality and security sets us apart from our competitors, and our zeal to keep growing enables us to deliver innovative solutions backed by the latest tech.</p>
+
+            <p className="text-text lg:text-lg lg:leading-8">
+            <strong className="text-primary">SiteRacks</strong> isn't just any ordinary company - it's a movement towards a better future. As we look towards tomorrow's world, every member of the world's youth population, local business, and the business person must have a solid online presence. That's why we're on a mission to
+              revolutionize and make the digital landscape a reality. Our goal is to ensure that at least 50% of the world's youth have a powerful and impactful online identity that can help shape their future for the better. Join us in this transformative journey and participate in the <strong className="text-primary">SiteRacks</strong>    revolution today!
+            </p>
           </ColumnTitleAndDesc>
         </article>
 

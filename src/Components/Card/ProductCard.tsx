@@ -35,7 +35,6 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
 
 
-
   // default 36 months selected
   const [currentPackage, setCurrentPackage] = useState<number>(36);
   const [price, setPrice] = useState<number>(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
@@ -84,7 +83,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setAdditionalDiscount(oneYearPackage?.additionalDiscount);
       setRegularPrice(oneYearPackage?.regularPrice);
       // notifications
-      const notification = `You are getting $${totalSavings.toFixed(0)} discount for 12 months package.`;
+      const notification = `You are getting $${totalSavings.toFixed(0)} discount for 1-Year service term of the ${product?.title}.`;
       toast.success(notification);
     }
     if (selectedPackage == 24) {
@@ -99,7 +98,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setAdditionalDiscount(twoYearPackage?.additionalDiscount);
       setRegularPrice(twoYearPackage?.regularPrice);
       // notifications
-      const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 24 months package.`;
+      const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 2-Year service term of the ${product?.title}.`;
       toast.success(notification);
     }
     if (selectedPackage == 36) {
@@ -114,7 +113,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setAdditionalDiscount(threeYearPackage?.additionalDiscount);
       setRegularPrice(threeYearPackage?.regularPrice);
       // notifications
-      const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 36 months package.`;
+      const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 3-Year service term of the ${product?.title}.`;
       toast.success(notification);
     }
   };

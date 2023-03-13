@@ -1,3 +1,4 @@
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import AboutBanner from "@/Components/Pages/AboutUs/AboutBanner";
 import BehindOurLogo from "@/Components/Pages/AboutUs/BehindOurLogo";
@@ -11,10 +12,7 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <Head>
-        <title>About us | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "about" })}
       <main>
         <section className="bg-surface">
           <AboutBanner />

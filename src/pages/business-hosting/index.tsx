@@ -12,14 +12,12 @@ import BusinessHostingFaq from "@/Components/Pages/BusinessHosting/BusinessHosti
 import BusinessHostingCompare from "@/Components/Pages/BusinessHosting/BusinessHostingCompare";
 import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 
 const BusinessHosting = () => {
   return (
     <>
-      <Head>
-        <title>Business Hosting | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "businessHosting" })}
       <main>
         <section className="bg-surface">
           <BusinessHostingBanner />

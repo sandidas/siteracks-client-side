@@ -1,4 +1,5 @@
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
@@ -15,10 +16,7 @@ import React from "react";
 const VpsLight = () => {
   return (
     <>
-      <Head>
-        <title>Pre-Managed VPS Hosting Light | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "managedVPS" })}
       <main>
         <section className="bg-surface">
           <ManagedVpsHostingBanner />{" "}

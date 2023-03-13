@@ -1,3 +1,4 @@
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import ResellerHostingArticle from "@/Components/Pages/ResellerHosting/ResellerHostingArticle";
@@ -12,10 +13,7 @@ import React from "react";
 const ResellerHosting = () => {
   return (
     <>
-      <Head>
-        <title>Reseller Hosting | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "resellerHosting" })}
       <main>
         <section className="bg-surface bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
           <ResellerHostingBanner />

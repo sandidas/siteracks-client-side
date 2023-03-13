@@ -12,6 +12,7 @@ import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
 import { productPricingData } from "@/Components/Data/ProductPricing";
 import ProductCardHome from "@/Components/Card/ProductCardHome";
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,8 @@ export function Home({ menuItems }: any) {
         <title>SiteRacks</title>
         <meta name="description" content="SiteRacks" />
       </Head>
+
+      {useDynamicHead({ slug: "home" })}
       <main>
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}

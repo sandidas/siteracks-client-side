@@ -1,19 +1,16 @@
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import BehindOurLogo from "@/Components/Pages/AboutUs/BehindOurLogo";
 import BrandAssetsBanner from "@/Components/Pages/BrandAssets/BrandAssetsBanner";
 import BrandAssetsColor from "@/Components/Pages/BrandAssets/BrandAssetsColor";
 import BrandAssetsDoDont from "@/Components/Pages/BrandAssets/BrandAssetsDoDont";
 import BrandAssetsGuideLine from "@/Components/Pages/BrandAssets/BrandAssetsGuideLine";
 import BrandAssetsLogo from "@/Components/Pages/BrandAssets/BrandAssetsLogo";
-import Head from "next/head";
 import React from "react";
 
-const index = () => {
+const BrandAssets = () => {
   return (
     <>
-      <Head>
-        <title>Brand Assets | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "brandAssets" })}
       <main>
         <BrandAssetsBanner />
 
@@ -47,4 +44,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default BrandAssets;

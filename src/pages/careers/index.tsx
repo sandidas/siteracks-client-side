@@ -1,3 +1,4 @@
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import CareerBanner from "@/Components/Pages/Careers/CareerBanner";
 import CareerOpenPositions from "@/Components/Pages/Careers/CareerOpenPositions";
@@ -8,10 +9,7 @@ import React from "react";
 const Careers = () => {
   return (
     <>
-      <Head>
-        <title>About us | SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
+      {useDynamicHead({ slug: "career" })}
       <main>
         <section className="bg-surface pb-[8vh] md:pt-[12vh]">
           <CareerBanner />

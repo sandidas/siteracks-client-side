@@ -5,7 +5,8 @@ import { ReactElement, ReactNode, useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Loader from "@/Components/Loader/Loader";
-import { Toaster } from "react-hot-toast";
+import { toast, ToastBar, Toaster } from "react-hot-toast";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -32,6 +33,9 @@ export default function App({ Component, pageProps }: AppProps) {
     };
   }, [router]);
   //# To show loader
+
+
+
   return (
     <Layout>
       {/* Loader  */}
@@ -39,15 +43,30 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
 
       <Toaster
+        reverseOrder={false}
+        position="top-right"
         toastOptions={{
-          className: 'flex shadow shadow-purple-400 gap-6 rounded-lg overflow-hidden max-w-3xl dark:bg-gray-700 dark:text-white divide-gray-700 text-sm max-w-xs',
+          className: "flex shadow shadow-primary gap-6 rounded-lg overflow-hidden max-w-sm dark:bg-gray-700 dark:text-white divide-gray-700 text-sm p-0 pl-2",
           duration: 5000,
-          position: 'top-right',
+          style: {},
         }}
-      />
-
-
-
+      >
+        {(t) => (
+          <ToastBar toast={t}>
+            {({ icon, message }) => (
+              <>
+                {icon}
+                {message}
+                {t.type !== "loading" && (
+                  <button className="bg-surface dark:hover:bg-red-600 hover:bg-primary group h-full w-2/6 max-w-[40px] flex justify-center items-center" onClick={() => toast.dismiss(t.id)}>
+                    <XMarkIcon className="w-5 h-5 dark:fill-white fill-primary group-hover:fill-white" />
+                  </button>
+                )}
+              </>
+            )}
+          </ToastBar>
+        )}
+      </Toaster>
     </Layout>
   );
 }

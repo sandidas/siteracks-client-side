@@ -1,11 +1,13 @@
-import React from 'react';
+import useDynamicHead from "@/Components/Hooks/useDynamicHead";
+import React from "react";
 
-const index = () => {
-    return (
-        <div>
-            privacy-protection-for-domains
-        </div>
-    );
+const PPDomain = () => {
+  return (
+    <>
+      {useDynamicHead({ slug: "ppDomain" })}
+      <main>dd</main>
+    </>
+  );
 };
 
-export default index;
+export default PPDomain;
