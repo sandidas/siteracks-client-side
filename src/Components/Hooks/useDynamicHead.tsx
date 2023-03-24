@@ -52,14 +52,17 @@ const useDynamicHead = ({ slug }: Props) => {
   return isLoading ? (
     <Head>
       <title>Loading...</title>
+      <link rel="icon" href="/SiteRacksFavIcon.ico" />
     </Head>
   ) : (
     <Head>
       <title>{headData.pageTitle}</title>
       <meta name="description" content={headData.metaDescription} />
+      <link rel="icon" href="/SiteRacksFavIcon.ico" />
       {/* add more meta tags as needed */}
     </Head>
   );
 };
 
+ 
 export default useDynamicHead;
