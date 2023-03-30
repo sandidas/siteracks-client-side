@@ -6,7 +6,8 @@ import ScrollToTop from "./ScrollToTop";
 import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
- 
+  const currentYear = new Date().getFullYear().toString();
+
 
   return (
     <>
@@ -90,7 +91,7 @@ const Footer = () => {
             <SocialIcons />
           </div>
           <div className="py-[2vh] border-t border-slate-300 dark:border-slate-600 text-text">
-            <p>Copyright © 2023 SiteRacks, LLC. All Rights Reserved.</p>
+            <p>Copyright © {currentYear} SiteRacks, LLC. All Rights Reserved.</p>
             <p className="text-xs">All trademarks, logos, and brand names are the property of their respective owners.</p>
             <ul className="flex text-sm gap-5 justify-end">
               {tosMenuItems.map((item, key) => (
