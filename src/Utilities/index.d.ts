@@ -23,10 +23,10 @@ declare global {
         orderLink: string;
     }
     interface IPackages {
-        monthlyPackage: IProductChildItemsPackages;
-        annuallyPackage: IProductChildItemsPackages;
-        bienniallyPackage: IProductChildItemsPackages;
-        trienniallyPackage: IProductChildItemsPackages;
+        monthlyPrice: number;
+        annuallyPrice: number;
+        bienniallyPrice: number;
+        trienniallyPrice: number;
     }
 
     interface IProduct {
@@ -38,10 +38,12 @@ declare global {
         featured?: boolean;
         additionalMonth?: string | boolean;
 
-        monthlyPackage: IProductChildItemsPackages;
-        annuallyPackage: IProductChildItemsPackages;
-        bienniallyPackage: IProductChildItemsPackages;
-        trienniallyPackage: IProductChildItemsPackages;
+        productId?: number;
+        additionalDiscount?: number;
+        monthlyPrice: number;
+        annuallyPrice: number;
+        bienniallyPrice: number;
+        trienniallyPrice: number;
 
 
         //  Top feature comparison 
@@ -115,17 +117,22 @@ declare global {
         powerfulControlPanel: IProductChildItems;
     }
 
-    // Product Pricing Options
+    // THIS IS THE PACKAGE / PRODUCT'S CHILD INTERFACE
     interface IProductPricingChildItems {
         typeSlug: string;
-        monthlyPackage: IProductChildItemsPackages;
-        annuallyPackage: IProductChildItemsPackages;
-        bienniallyPackage: IProductChildItemsPackages;
-        trienniallyPackage: IProductChildItemsPackages;
+        productTitle: string;
+        productDescription: string;
+        productId: number;
+        additionalDiscount?: number;
+        monthlyPrice: number;
+        annuallyPrice: number;
+        bienniallyPrice: number;
+        trienniallyPrice: number;
     }
+    // THIS IS THE PACKAGE / PRODUCT MAIN INTERFACE
     interface IProductPricing {
         nameSlug?: string;
-        preTitle?: string | undefined | boolean;
+        preTitle?: string;
         title?: string;
         shortDescription?: string;
         customBGClassName?: string;

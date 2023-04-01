@@ -1,4 +1,3 @@
-
 export const productPricingData = [
   {
     nameSlug: "sharedWebHosting",
@@ -15,81 +14,42 @@ export const productPricingData = [
     child: [
       {
         typeSlug: "standardWebhosting",
-        monthlyPackage: {
-          regularPrice: 9.9,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
-
-        annuallyPackage: {
-          regularPrice: 93.6,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
-
-        bienniallyPackage: {
-          regularPrice: 151.2,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
-
-        trienniallyPackage: {
-          regularPrice: 198,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        productTitle: "Product Title",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
+        annuallyPrice: 20,
+        bienniallyPrice: 30,
+        trienniallyPrice: 50,
       },
       {
         typeSlug: "premiumWebHosting",
-        monthlyPackage: {
-          regularPrice: 14.9,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 141.6,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 237.6,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 284.4,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
       {
         typeSlug: "ultimateWebHosting",
-        monthlyPackage: {
-          regularPrice: 19.9,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 201.6,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 333.6,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 392.4,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
     ],
   },
@@ -109,84 +69,48 @@ export const productPricingData = [
     child: [
       {
         typeSlug: "standardWPhosting",
-        monthlyPackage: {
-          regularPrice: 11.9,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 117.6,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 189.6,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 226.8,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "premiumWPhosting",
-        monthlyPackage: {
-          regularPrice: 16.9,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 154.8,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 261.6,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 320.4,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "ultimateWPhosting",
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
         preTitle: false,
-        monthlyPackage: {
-          regularPrice: 22.9,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 238.8,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 405.6,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 464.4,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
     ],
   },
@@ -205,110 +129,62 @@ export const productPricingData = [
     child: [
       {
         typeSlug: "startUpBusinessHosting",
-        monthlyPackage: {
-          regularPrice: 25.25,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 263.4,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 454.8,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 538.2,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "enhanceBusinessHosting",
-        monthlyPackage: {
-          regularPrice: 30.95,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 299.4,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 478.8,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 610.2,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "growBigBusinessHosting",
-        monthlyPackage: {
-          regularPrice: 39.95,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 407.4,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 694.8,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 934.2,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "expandBusinessHosting",
-        monthlyPackage: {
-          regularPrice: 45.95,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 467.4,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 862.8,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 1078.2,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
     ],
   },
@@ -327,109 +203,61 @@ export const productPricingData = [
     child: [
       {
         typeSlug: "startUpManagedVPSHosting",
-        monthlyPackage: {
-          regularPrice: 30.95,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 299.4,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 478.8,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 610,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
       {
         typeSlug: "enhanceManagedVPSHosting",
-        monthlyPackage: {
-          regularPrice: 160,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 1680,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 2640,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 3564,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "growBigManagedVPSHosting",
-        monthlyPackage: {
-          regularPrice: 220,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 2340,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 3840,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 3960,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "expandManagedVPSHosting",
-        monthlyPackage: {
-          regularPrice: 260,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 2700,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 4560,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 5364,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
     ],
   },
@@ -448,109 +276,61 @@ export const productPricingData = [
     child: [
       {
         typeSlug: "startUpResellerHosting",
-        monthlyPackage: {
-          regularPrice: 56.98,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 599.88,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 1079.52,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 1547.64,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
       {
         typeSlug: "enhanceResellerHosting",
-        monthlyPackage: {
-          regularPrice: 79.99,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 899.88,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 1679.76,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 2447.28,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "growBigResellerHosting",
-        monthlyPackage: {
-          regularPrice: 96.99,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 1079.88,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 2111.52,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 3095.28,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
 
       {
         typeSlug: "expandResellerHosting",
-        monthlyPackage: {
-          regularPrice: 129.99,
-          additionalDiscount: 0,
-          orderLink: "monthlyOrderLink",
-        },
+        productTitle: "Product",
+        productDescription: "Product Descriptions",
+        productId: 10,
+        additionalDiscount: 10,
+        monthlyPrice: 20,
 
-        annuallyPackage: {
-          regularPrice: 1439.76,
-          additionalDiscount: 0,
-          orderLink: "Annual order",
-        },
+        annuallyPrice: 20,
 
-        bienniallyPackage: {
-          regularPrice: 2783.52,
-          additionalDiscount: 0,
-          orderLink: "binally order",
-        },
+        bienniallyPrice: 30,
 
-        trienniallyPackage: {
-          regularPrice: 4031.28,
-          additionalDiscount: 0,
-          orderLink: "https://www.google.com/",
-        },
+        trienniallyPrice: 50,
       },
     ],
   },

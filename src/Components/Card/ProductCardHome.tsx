@@ -10,7 +10,11 @@ interface IProps {
 const ProductCardHome: FC<IProps> = ({ product }) => {
   const pNameSlug = product?.nameSlug ? product?.nameSlug : "";
 
+  // To get package price, here I am sending 2 props by "getPriceBanner" props 1) product prices name slug, ex. wordPressHosting
+  // props 2: child[0], that means 1st item of child, ex. "typeSlug": "standardWpHosting"
   const packagePrice = getPriceForBanner(product?.nameSlug, product?.child[0]?.typeSlug);
+
+  console.log();
 
   //   console.log(product?.nameSlug);
   //   console.log(product?.child[0]?.typeSlug);

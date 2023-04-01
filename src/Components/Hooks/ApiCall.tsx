@@ -17,7 +17,7 @@ export const findServiceByNameAndType = (serviceName: string, serviceType: strin
 export const getPriceForBanner = (serviceName: string = "wordPressHosting", serviceType: string = "standardWPhosting") => {
   const beginnerPackage = findServiceByNameAndType(serviceName, serviceType);
   //@ts-ignore
-  const getPrice = calculateMonthlyPriceAfterDiscount(36, beginnerPackage?.trienniallyPackage.regularPrice, beginnerPackage?.trienniallyPackage?.additionalDiscount, beginnerPackage?.monthlyPackage?.regularPrice);
+  const getPrice = calculateMonthlyPriceAfterDiscount(36, beginnerPackage?.trienniallyPrice, beginnerPackage?.additionalDiscount, beginnerPackage?.monthlyPrice);
 
   return getPrice;
 };
