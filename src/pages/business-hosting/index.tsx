@@ -1,7 +1,7 @@
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import Head from "next/head";
-import React from "react";
+import React, { FC } from "react";
 
 import BusinessHostingBanner from "@/Components/Pages/BusinessHosting/BusinessHostingBanner";
 import BusinessHostingPricing from "@/Components/Pages/BusinessHosting/BusinessHostingPricing";
@@ -13,8 +13,17 @@ import BusinessHostingCompare from "@/Components/Pages/BusinessHosting/BusinessH
 import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import useDynamicHead from "@/Components/Hooks/useDynamicHead";
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import axios from "axios";
+import { GetServerSidePropsContext } from "next";
 
-const BusinessHosting = () => {
+interface IProps {
+  data: any;
+  error?: string;
+}
+
+const BusinessHosting: FC<IProps> = ({ data, error }) => {
+
   return (
     <>
       {useDynamicHead({ slug: "businessHosting" })}
@@ -23,7 +32,7 @@ const BusinessHosting = () => {
           <BusinessHostingBanner />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <BusinessHostingPricing />
+          <BusinessHostingPricing data={data} />
         </section>
         <BusinessHostingCompare />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
@@ -44,7 +53,7 @@ const BusinessHosting = () => {
         <section className="py-[10vh]">
           <FCFeatureForAllPackage />
         </section>
-        
+
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <BusinessHostingFaq />
         </section>
@@ -54,3 +63,61 @@ const BusinessHosting = () => {
 };
 
 export default BusinessHosting;
+
+export const getServerSideProps = async (context: GetServerSidePropsContext) => {
+  // SEND COOKIES TO API SERVER
+  // ===========================
+  // since we are using "getServerSideProps", we need to send cookies manually to the server side. getServerSideProps runs on the server-side so it won't have access to the browser's cookies, we need to retrieve and send them explicitly.
+  // to do this, 1: we have to call "context"
+  // 2: we need to request cookies
+  // 3: we need to send cookies by using axios headers.
+
+  // step 1:
+  const { req } = context;
+  // step 2:
+  // const sessionCookie = req.cookies['at_sr']; // we can define which cookies we want to send
+  // "req.headers.cookie," // we can get all cookies
+  // console.log(sessionCookie);
+
+  // SEND ACCESS TOKEN TO API SERVER
+  // ================================
+  // step 1: getSession hook from context
+  // step 2: get AccessToken from getSession hook
+  // step 3: send it to by "axios" headers {Authorization}
+
+  let data;
+  let error;
+  try {
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: "/api/package/getpackage/6429d35f12b10d679eddde95",
+      header: {
+        // headers: {
+        //   Authorization: `Bearer ${sAccessToken}`,
+        //   Cookie: allCookies,
+        // },
+      },
+      // requestConfig: {},
+    });
+    // const response = await axios.get('https://example.com/api/data');
+    // console.log("response index", response);
+
+    if (response && response?.data && response?.data?.data) {
+      data = response?.data?.data;
+      // console.log("Index Response", data);
+      return {
+        props: {
+          data,
+        },
+      };
+    } else {
+      error = response?.error ? response?.error : "Failed to load data";
+      return { props: { error: error } };
+    }
+  } catch (error) {
+    // console.error(error);
+    error = error ? error : "Failed to load data";
+    return { props: { error: error } };
+  }
+};

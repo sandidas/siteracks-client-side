@@ -9,19 +9,17 @@ declare global {
         recaptchaVerifier: {};
         confirmationResult: {};
     }
-    interface IProductChildItems {
-        icon?: any;
-        iconColor?: string;
-        bold?: string;
-        regular?: string;
-        toolTip?: string | boolean;
-        status?: boolean;
+    interface IPackageFeatures {
+        displayOrder?: number,
+        topFeatured?: any,
+        iconColor?: string | null,
+        toolTip?: null | string,
+        status?: boolean, bold?: string,
+        regular?: string,
+        lineBreak?: boolean,
+        lineBreakTitle?: string | null
     }
-    interface IProductChildItemsPackages {
-        regularPrice: number;
-        additionalDiscount: number;
-        orderLink: string;
-    }
+
     interface IPackages {
         monthlyPrice: number;
         annuallyPrice: number;
@@ -47,75 +45,6 @@ declare global {
         trienniallyPrice: number;
 
 
-        //  Top feature comparison 
-        numberOfWebsites: IProductChildItems;
-        storage: IProductChildItems;
-        bandwidth: IProductChildItems;
-        freeWPInstallation: IProductChildItems;
-        wordpressOptimized: IProductChildItems;
-
-        wpAutoUpdates: IProductChildItems;
-        ssl: IProductChildItems;
-        nightlyBackup: IProductChildItems;
-        emailAccounts: IProductChildItems;
-        domain: IProductChildItems;
-
-        // managed vps features
-        preInstalledOS?: IProductChildItems;
-        preInstalledCP?: IProductChildItems;
-        integratedFirewall?: IProductChildItems;
-        rootAccess?: IProductChildItems;
-        fullyManaged?: IProductChildItems;
-
-        // reseller hosting features
-
-        clientAccount?: IProductChildItems;
-        freeWhmcs?: IProductChildItems;
-
-
-
-        // additional Important features
-        subDomains: IProductChildItems;
-        cpuCores: IProductChildItems;
-        dedicatedResources: IProductChildItems;
-        ram: IProductChildItems;
-        unlimitedDatabase: IProductChildItems;
-        multiplePhpVersions: IProductChildItems;
-        scheduleTask: IProductChildItems;
-
-        // More WordPress Options 
-        wordpressTransfer: IProductChildItems;
-        wordpressDedicatedExpert: IProductChildItems;
-        wordPressMultisite: IProductChildItems;
-        WordPressStagingTool: IProductChildItems;
-        WordPressDebugging: IProductChildItems;
-        WordPressNginxCaching: IProductChildItems;
-        WordPressLogs: IProductChildItems;
-        wordPressAcceleration: IProductChildItems;
-        objectCacheforWordPress: IProductChildItems;
-        // additional Security features
-        malwareScanner: IProductChildItems;
-        googleAuth: IProductChildItems;
-        folderProtection: IProductChildItems;
-        DDoSProtection: IProductChildItems;
-        webApplicationFirewall: IProductChildItems;
-
-        //  Service and Support 
-        moneyBack: IProductChildItems;
-        siteRacksExpertOptimized: IProductChildItems;
-        logs: IProductChildItems;
-        addCollaborators: IProductChildItems;
-        dnsManagement: IProductChildItems;
-        // More  Technical Features
-        sshAccess: IProductChildItems;
-        ftpAccess: IProductChildItems;
-        gitSupport: IProductChildItems;
-        nodeJs: IProductChildItems;
-        laravelTools: IProductChildItems;
-        apacheNginx: IProductChildItems;
-        dedicatedIPAddress: IProductChildItems;
-        monthlyVisits: IProductChildItems;
-        powerfulControlPanel: IProductChildItems;
     }
 
     // THIS IS THE PACKAGE / PRODUCT'S CHILD INTERFACE

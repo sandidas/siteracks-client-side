@@ -6,11 +6,22 @@ import { Button, Tooltip, UnstyledButton } from "@mantine/core";
 import React, { FC } from "react";
 
 interface IFeature {
-  feature?: IProductChildItems;
+  feature?: IPackageFeatures;
 }
 const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
-  const Icon = feature?.icon;
-  return (
+
+   
+
+  return feature?.lineBreak === true ? (
+    <>
+     {
+      feature?.lineBreakTitle && 
+      <h3 className="font-bold text-text text-base pb-3"> {feature?.lineBreakTitle} </h3>
+     }
+     
+    
+    </>
+  ) : (
     <div className="flex justify-between border-b border-surface hover:border-slate-300 dark:hover:border-slate-700 text-sm xl:py-1 space-x-1">
       <div className="flex justify-start space-x-1">
         <div>
@@ -18,14 +29,7 @@ const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
             // condition one
             // if status false then will show CROSS icon
             feature?.status ? (
-              // condition two
-              // if icon not found then will show green tick icon
-
-              !feature?.icon ? (
-                <CompleteCheckIcon className={`w-5 h-5 ${feature?.iconColor ? feature?.iconColor : "fill-primary"}`} />
-              ) : (
-                <Icon className={`${feature?.iconColor} w-5 h-5`} />
-              )
+              <CompleteCheckIcon className={`w-5 h-5 ${feature?.iconColor ? feature?.iconColor : "fill-primary"}`} />
             ) : (
               // condition one alternative render
               <NegativeCloseIcon className="w-5 h-5 fill-red-500" />

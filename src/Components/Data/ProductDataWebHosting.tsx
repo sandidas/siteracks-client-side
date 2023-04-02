@@ -41,31 +41,31 @@ export const webHostingData = [
     ...standardWebhosting,
 
     numberOfWebsites: {
-      iconColor: "fill-primary",
+      iconColor: "fill-red-200",
       bold: "2",
       regular: "Websites",
-      toolTip: false,
+      toolTip: null,
       status: true,
     },
     storage: {
       iconColor: "fill-red-200",
       bold: "10 GB",
       regular: "NVMe Premium Storage",
-      toolTip: storageTooltip,
+      toolTip: null,
       status: true,
     },
     monthlyVisits: {
       iconColor: "fill-red-200",
       bold: "~ 100,000",
       regular: "Visits Monthly",
-      toolTip: monthlyVisitsTooltip,
+      toolTip: null,
       status: true,
     },
     bandwidth: {
       iconColor: "fill-red-200",
       bold: "100 GB",
       regular: "Bandwidth",
-      toolTip: bandwidthTooltip,
+      toolTip: null,
       status: true,
     },
     freeWPInstallation: {
@@ -81,26 +81,26 @@ export const webHostingData = [
     ssl: {
       bold: "Free",
       regular: "SSL Certificate",
-      toolTip: sslTooltip,
+      toolTip: null,
       status: true,
     },
     nightlyBackup: {
       bold: "Free",
       regular: "Nightly Backups",
-      toolTip: nightlyBackupTooltip,
+      toolTip: null,
       status: true,
     },
     emailAccounts: {
       iconColor: "fill-red-200",
       bold: "50",
       regular: "Email Accounts",
-      toolTip: emailAccountsTooltip,
+      toolTip: null,
       status: true,
     },
     domain: {
       bold: "Free",
       regular: ".com Domain",
-      toolTip: domainTooltip,
+      toolTip: null,
       status: false,
     },
     subDomains: {
@@ -133,13 +133,13 @@ export const webHostingData = [
     wordpressTransfer: {
       bold: "Free",
       regular: "Migration",
-      toolTip: wordpressTransferTooltip,
+      toolTip: null,
       status: true,
     },
     wordpressDedicatedExpert: {
       bold: "Dedicated",
       regular: "WordPress Expert",
-      toolTip: wordpressDedicatedExpertTooltip,
+      toolTip: null,
       status: false,
     },
     wordPressAcceleration: {
@@ -151,7 +151,7 @@ export const webHostingData = [
     wordPressMultisite: {
       bold: "WordPress",
       regular: "Multisite",
-      toolTip: wordPressMultisiteTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -172,7 +172,7 @@ export const webHostingData = [
     WordPressNginxCaching: {
       bold: "Nginx",
       regular: "Cache",
-      toolTip: WordPressNginxCachingTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -184,13 +184,13 @@ export const webHostingData = [
     wordpressOptimized: {
       bold: "WordPress",
       regular: "Optimized Server",
-      toolTip: wordpressOptimizedTooltip,
+      toolTip: null,
       status: false,
     },
     objectCacheforWordPress: {
       bold: "Object Cache",
       regular: "for WordPress",
-      toolTip: wordpressTransferTooltip,
+      toolTip: null,
       status: false,
     },
     googleAuth: {
@@ -222,7 +222,7 @@ export const webHostingData = [
     multiplePhpVersions: {
       bold: "Multiple",
       regular: "PHP Versions",
-      toolTip: multiplePhpVersionsTooltip,
+      toolTip: null,
       status: true,
     },
     moneyBack: {
@@ -233,7 +233,7 @@ export const webHostingData = [
     siteRacksExpertOptimized: {
       bold: "Expert Optimization",
       regular: "by SiteRacks",
-      toolTip: siteRacksExpertOptimizedTooltip,
+      toolTip: null,
       status: false,
     },
     logs: {
@@ -244,7 +244,7 @@ export const webHostingData = [
     addCollaborators: {
       bold: "Collaborators",
       regular: "Tools",
-      toolTip: addCollaboratorsTooltip,
+      toolTip: null,
       status: true,
     },
     dnsManagement: {
@@ -265,7 +265,7 @@ export const webHostingData = [
     gitSupport: {
       bold: "GIT",
       regular: "Access",
-      toolTip: "A",
+      toolTip: null,
       status: true,
     },
     nodeJs: {
@@ -293,7 +293,7 @@ export const webHostingData = [
     dedicatedResources: {
       bold: "Dedicated",
       regular: "Resources",
-      toolTip: dedicatedResourcesTooltip,
+      toolTip: null,
       status: false,
     },
     malwareScanner: {
@@ -305,7 +305,7 @@ export const webHostingData = [
     powerfulControlPanel: {
       bold: "Powerful",
       regular: "ControlPanel",
-      toolTip: powerfulControlPanelTooltip,
+      toolTip: null,
       status: true,
     },
   },
@@ -324,27 +324,27 @@ export const webHostingData = [
       iconColor: "fill-primary",
       bold: "Unlimited",
       regular: "Websites",
-      toolTip: false,
+      toolTip: null,
       status: true,
     },
     storage: {
       iconColor: "fill-green-100",
       bold: "40 GB",
       regular: "NVMe Premium Storage",
-      toolTip: storageTooltip,
+      toolTip: null,
       status: true,
     },
     monthlyVisits: {
       iconColor: "fill-red-200",
       bold: "~ 100,000",
       regular: "Visits Monthly",
-      toolTip: monthlyVisitsTooltip,
+      toolTip: null,
       status: true,
     },
     bandwidth: {
       bold: "Unlimited",
       regular: "Bandwidth",
-      toolTip: bandwidthTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -365,7 +365,7 @@ export const webHostingData = [
     wordpressDedicatedExpert: {
       bold: "Dedicated",
       regular: "WordPress Expert",
-      toolTip: wordpressDedicatedExpertTooltip,
+      toolTip: null,
       status: false,
     },
     wordPressAcceleration: {
@@ -376,31 +376,31 @@ export const webHostingData = [
     wordpressOptimized: {
       bold: "WordPress",
       regular: "Optimized Server",
-      toolTip: wordpressOptimizedTooltip,
+      toolTip: null,
       status: false,
     },
     objectCacheforWordPress: {
       bold: "Object Cache",
       regular: "for WordPress",
-      toolTip: wordpressTransferTooltip,
+      toolTip: null,
       status: false,
     },
     siteRacksExpertOptimized: {
       bold: "Expert Optimization",
       regular: "by SiteRacks",
-      toolTip: siteRacksExpertOptimizedTooltip,
+      toolTip: null,
       status: true,
     },
     dedicatedResources: {
       bold: "Dedicated",
       regular: "Resources",
-      toolTip: dedicatedResourcesTooltip,
+      toolTip: null,
       status: false,
     },
     wordPressMultisite: {
       bold: "WordPress",
       regular: "Multisite",
-      toolTip: wordPressMultisiteTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -412,13 +412,13 @@ export const webHostingData = [
     emailAccounts: {
       bold: "Unlimited",
       regular: "Email Accounts",
-      toolTip: emailAccountsTooltip,
+      toolTip: null,
       status: true,
     },
     domain: {
       bold: "Free",
       regular: ".com Domain",
-      toolTip: domainTooltip,
+      toolTip: null,
       status: true,
     },
     scheduleTask: {
@@ -439,13 +439,13 @@ export const webHostingData = [
     multiplePhpVersions: {
       bold: "Multiple",
       regular: "PHP Versions",
-      toolTip: multiplePhpVersionsTooltip,
+      toolTip: null,
       status: true,
     },
     wordpressTransfer: {
       bold: "Free",
       regular: "Migration",
-      toolTip: wordpressTransferTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -458,7 +458,7 @@ export const webHostingData = [
     WordPressNginxCaching: {
       bold: "Nginx",
       regular: "Cache",
-      toolTip: WordPressNginxCachingTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -501,7 +501,7 @@ export const webHostingData = [
     addCollaborators: {
       bold: "Collaborators",
       regular: "Tools",
-      toolTip: addCollaboratorsTooltip,
+      toolTip: null,
       status: true,
     },
     dnsManagement: {
@@ -522,7 +522,7 @@ export const webHostingData = [
     gitSupport: {
       bold: "GIT",
       regular: "Access",
-      toolTip: "A",
+      toolTip: null,
       status: true,
     },
     nodeJs: {
@@ -556,7 +556,7 @@ export const webHostingData = [
     powerfulControlPanel: {
       bold: "Powerful",
       regular: "ControlPanel",
-      toolTip: powerfulControlPanelTooltip,
+      toolTip: null,
       status: true,
     },
     freeWPInstallation: {
@@ -572,13 +572,13 @@ export const webHostingData = [
     ssl: {
       bold: "Free",
       regular: "SSL Certificate",
-      toolTip: sslTooltip,
+      toolTip: null,
       status: true,
     },
     nightlyBackup: {
       bold: "Free",
       regular: "Nightly Backups",
-      toolTip: nightlyBackupTooltip,
+      toolTip: null,
       status: true,
     },
   },
@@ -598,26 +598,26 @@ export const webHostingData = [
       iconColor: "fill-primary",
       bold: "Unlimited",
       regular: "Websites",
-      toolTip: false,
+      toolTip: null,
       status: true,
     },
     storage: {
       bold: "80 GB",
       regular: "NVMe Premium Storage",
-      toolTip: storageTooltip,
+      toolTip: null,
       status: true,
     },
     monthlyVisits: {
       iconColor: "fill-red-200",
       bold: "~ 100,000",
       regular: "Visits Monthly",
-      toolTip: monthlyVisitsTooltip,
+      toolTip: null,
       status: true,
     },
     bandwidth: {
       bold: "Unlimited",
       regular: "Bandwidth",
-      toolTip: bandwidthTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -638,7 +638,7 @@ export const webHostingData = [
     wordpressDedicatedExpert: {
       bold: "Dedicated",
       regular: "WordPress Expert",
-      toolTip: wordpressDedicatedExpertTooltip,
+      toolTip: null,
       status: true,
     },
     wordPressAcceleration: {
@@ -649,31 +649,31 @@ export const webHostingData = [
     wordpressOptimized: {
       bold: "WordPress",
       regular: "Optimized Server",
-      toolTip: wordpressOptimizedTooltip,
+      toolTip: null,
       status: false,
     },
     objectCacheforWordPress: {
       bold: "Object Cache",
       regular: "for WordPress",
-      toolTip: wordpressTransferTooltip,
+      toolTip: null,
       status: true,
     },
     siteRacksExpertOptimized: {
       bold: "Expert Optimization",
       regular: "by SiteRacks",
-      toolTip: siteRacksExpertOptimizedTooltip,
+      toolTip: null,
       status: true,
     },
     dedicatedResources: {
       bold: "Dedicated",
       regular: "Resources",
-      toolTip: dedicatedResourcesTooltip,
+      toolTip: null,
       status: false,
     },
     wordPressMultisite: {
       bold: "WordPress",
       regular: "Multisite",
-      toolTip: wordPressMultisiteTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -685,13 +685,13 @@ export const webHostingData = [
     emailAccounts: {
       bold: "Unlimited",
       regular: "Email Accounts",
-      toolTip: emailAccountsTooltip,
+      toolTip: null,
       status: true,
     },
     domain: {
       bold: "Free",
       regular: ".com Domain",
-      toolTip: domainTooltip,
+      toolTip: null,
       status: true,
     },
     scheduleTask: {
@@ -712,13 +712,13 @@ export const webHostingData = [
     multiplePhpVersions: {
       bold: "Multiple",
       regular: "PHP Versions",
-      toolTip: multiplePhpVersionsTooltip,
+      toolTip: null,
       status: true,
     },
     wordpressTransfer: {
       bold: "Free",
       regular: "Migration",
-      toolTip: wordpressTransferTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -731,7 +731,7 @@ export const webHostingData = [
     WordPressNginxCaching: {
       bold: "Nginx",
       regular: "Cache",
-      toolTip: WordPressNginxCachingTooltip,
+      toolTip: null,
       status: true,
     },
 
@@ -774,7 +774,7 @@ export const webHostingData = [
     addCollaborators: {
       bold: "Collaborators",
       regular: "Tools",
-      toolTip: addCollaboratorsTooltip,
+      toolTip: null,
       status: true,
     },
     dnsManagement: {
@@ -795,7 +795,7 @@ export const webHostingData = [
     gitSupport: {
       bold: "GIT",
       regular: "Access",
-      toolTip: "A",
+      toolTip: null,
       status: true,
     },
     nodeJs: {
@@ -829,7 +829,7 @@ export const webHostingData = [
     powerfulControlPanel: {
       bold: "Powerful",
       regular: "ControlPanel",
-      toolTip: powerfulControlPanelTooltip,
+      toolTip: null,
       status: true,
     },
     freeWPInstallation: {
@@ -845,13 +845,13 @@ export const webHostingData = [
     ssl: {
       bold: "Free",
       regular: "SSL Certificate",
-      toolTip: sslTooltip,
+      toolTip: null,
       status: true,
     },
     nightlyBackup: {
       bold: "Free",
       regular: "Nightly Backups",
-      toolTip: nightlyBackupTooltip,
+      toolTip: null,
       status: true,
     },
   },

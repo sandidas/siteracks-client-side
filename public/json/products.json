@@ -1,302 +1,1092 @@
-{
-  "webHosting": {
-    "_id": 1,
-    "name": "Web Hosting",
-    "child": [
-      {
-        "_id": 1,
-        "title": "Standard",
-        "shortDescription": "Ideal solution for beginners",
-        "description": "",
+[{ "packageName": "businessHosting",
+"children": [
+  {
 
-        "monthlyPackage": {
-          "regularPrice": 9.1,
-          "discountedPrice": 10,
-          "orderLink": "monthlyOrderLink"
-        },
+    _id: 1,
+    title: "StartUp Business Hosting",
+    slug: "startUpBusinessHosting",
+    shortDescription: "A perfect way to launch Web App, WordPress, Custom CMS, and other sites.",
+    description: "A",
+    featured: false,
+    additionalMonth: "+2 months FREE ",
+    numberOfWebsites: {
+      iconColor: "fill-primary",
+      bold: "Unlimited",
+      regular: "Websites",
+      toolTip: false,
+      status: true,
+    },
+    storage: {
+      iconColor: "fill-green-200",
+      bold: "50 GB",
+      regular: "NVMe Premium Storage",
+      toolTip: storageTooltip,
+      status: true,
+    },
+    monthlyVisits: {
+      iconColor: "fill-red-200",
+      bold: "~ 100,000",
+      regular: "Visits Monthly",
+      toolTip: monthlyVisitsTooltip,
+      status: true,
+    },
+    bandwidth: {
+      bold: "Unlimited",
+      regular: "Bandwidth",
+      toolTip: bandwidthTooltip,
+      status: true,
+    },
+    freeWPInstallation: {
+      bold: "Free ",
+      regular: "1-Click WP Installation",
+      status: true,
+    },
+    wpAutoUpdates: {
+      bold: "Automatic",
+      regular: "WordPress Updates",
+      status: true,
+    },
+    ssl: {
+      bold: "Free",
+      regular: "SSL Certificate",
+      toolTip: sslTooltip,
+      status: true,
+    },
+    nightlyBackup: {
+      bold: "Free",
+      regular: "Nightly Backups",
+      toolTip: nightlyBackupTooltip,
+      status: true,
+    },
+    emailAccounts: {
+      bold: "Unlimited",
+      regular: "Email Accounts",
+      toolTip: emailAccountsTooltip,
+      status: true,
+    },
+    domain: {
+      bold: "Free",
+      regular: ".com Domain",
+      toolTip: domainTooltip,
+      status: true,
+    },
+    subDomains: {
+      iconColor: "fill-red-200",
+      bold: "2",
+      regular: "Subdomains",
+      status: true,
+    },
+    cpuCores: {
+      icon: LightCheckIcon,
+      iconColor: "fill-red-200",
+      bold: "2 CPU",
+      regular: "Cores",
+      status: true,
+    },
+    ram: {
+      icon: LightCheckIcon,
+      iconColor: "fill-red-200",
+      bold: "3 GB",
+      regular: "RAM",
+      status: true,
+    },
 
-        "annuallyPackage": {
-          "regularPrice": 93.6,
-          "discountedPrice": 10,
-          "orderLink": "Annual order"
-        },
+    scheduleTask: {
+      iconColor: "fill-red-200",
+      bold: "2",
+      regular: "CronJobs",
+      status: true,
+    },
+    wordpressTransfer: {
+      bold: "Free",
+      regular: "Migration",
+      toolTip: wordpressTransferTooltip,
+      status: true,
+    },
+    wordpressDedicatedExpert: {
+      bold: "Dedicated",
+      regular: "WordPress Expert",
+      toolTip: wordpressDedicatedExpertTooltip,
+      status: true,
+    },
+    wordPressAcceleration: {
+      bold: "WordPress",
+      regular: "Acceleration",
+      status: true,
+    },
 
-        "bienniallyPackage": {
-          "regularPrice": 151.2,
-          "discountedPrice": 10,
-          "orderLink": "binally order"
-        },
+    wordPressMultisite: {
+      bold: "WordPress",
+      regular: "Multisite",
+      toolTip: wordPressMultisiteTooltip,
+      status: true,
+    },
 
-        "trienniallyPackage": {
-          "regularPrice": 198,
-          "discountedPrice": 10,
-          "orderLink": "https://www.google.com/"
-        },
+    WordPressStagingTool: {
+      bold: "WordPress",
+      regular: "Staging Tool",
+      status: true,
+    },
 
-        "numberOfWebsites": {
-          "icon": "ArrowLongUpIcon",
-          "bold": "10GB",
-          "regular": "NVME PREMIUM Storage",
-          "toolTip": "NVME PREMIUM Storage"
-        },
-        "storage": {
-          "icon": "ArrowLongUpIcon",
-          "bold": "10GB",
-          "regular": "NVME PREMIUM Storage",
-          "toolTip": "NVME PREMIUM Storage"
-        },
-        "monthlyVisits": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "bandwidth": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "freeWPInstallation": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "wpAutoUpdates": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "ssl": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "nightlyBackup": true,
-        "emailAccounts": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "domain": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "wordpressTransfer": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "wordpressDedicatedExpert": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "unlimitedDatabase": true,
-        "multiplePhpVersions": true,
-        "moneyBack": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "addCollaborators": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "FtpUsers": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "dnsManagement": true,
-        "DDoSProtection": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "subDomains": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "cpuCores": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "ram": {
-          "icon": "",
-          "bold": "~",
-          "regular": "",
-          "toolTip": "",
-          "status": true
-        },
-        "siteRacksExpertOptimized": true,
-        "dedicatedIPAddress": false,
-        "sshAccess": true,
-        "ftpAccess": true,
-        "gitSupport": true,
-        "nodeJs": true,
-        "folderProtection": true,
-        "laravelTools": true,
-        "logs": true,
-        "apacheNginx": true,
-        "googleAuth": true,
-        "scheduleTask": true,
-        "webApplicationFirewall": true
-      }
-    ]
+    WordPressDebugging: {
+      bold: "WordPress",
+      regular: "Debugger",
+      status: true,
+    },
+
+    WordPressNginxCaching: {
+      bold: "Nginx",
+      regular: "Cache",
+      toolTip: WordPressNginxCachingTooltip,
+      status: true,
+    },
+
+    WordPressLogs: {
+      bold: "WordPress",
+      regular: "Logs",
+      status: true,
+    },
+    wordpressOptimized: {
+      bold: "WordPress",
+      regular: "Optimized Server",
+      toolTip: wordpressOptimizedTooltip,
+      status: true,
+    },
+    objectCacheforWordPress: {
+      bold: "Object Cache",
+      regular: "for WordPress",
+      toolTip: wordpressTransferTooltip,
+      status: true,
+    },
+    googleAuth: {
+      bold: "Built-in",
+      regular: "Google Authentication",
+      status: true,
+    },
+    folderProtection: {
+      bold: "Folder",
+      regular: "Protection",
+      status: true,
+    },
+    DDoSProtection: {
+      bold: "DDoS",
+      regular: "Protection",
+      status: true,
+    },
+    webApplicationFirewall: {
+      bold: "Web Application",
+      regular: "Firewall",
+      status: true,
+    },
+    unlimitedDatabase: {
+      iconColor: "fill-red-200",
+      bold: "4",
+      regular: "Databases",
+      status: true,
+    },
+    multiplePhpVersions: {
+      bold: "Multiple",
+      regular: "PHP Versions",
+      toolTip: multiplePhpVersionsTooltip,
+      status: true,
+    },
+    moneyBack: {
+      bold: "30 Days",
+      regular: "Money Back Guarantee",
+      status: true,
+    },
+    siteRacksExpertOptimized: {
+      bold: "Expert Optimization",
+      regular: "by SiteRacks",
+      toolTip: siteRacksExpertOptimizedTooltip,
+      status: false,
+    },
+    logs: {
+      bold: "Server",
+      regular: "Logs",
+      status: true,
+    },
+    addCollaborators: {
+      bold: "Collaborators",
+      regular: "Tools",
+      toolTip: addCollaboratorsTooltip,
+      status: true,
+    },
+    dnsManagement: {
+      bold: "DNS",
+      regular: "Management",
+      status: true,
+    },
+    sshAccess: {
+      bold: "SSH",
+      regular: "Access",
+      status: true,
+    },
+    ftpAccess: {
+      bold: "FTP",
+      regular: "Access",
+      status: true,
+    },
+    gitSupport: {
+      bold: "GIT",
+      regular: "Access",
+      toolTip: "A",
+      status: true,
+    },
+    nodeJs: {
+      bold: "NodeJS",
+      regular: "Ready",
+      status: true,
+    },
+    laravelTools: {
+      bold: "Laravel",
+      regular: "Toolkit",
+      status: true,
+    },
+    apacheNginx: {
+      bold: "Apache/Nginx",
+      regular: "Support",
+      status: true,
+    },
+
+    dedicatedIPAddress: {
+      bold: "Dedicated",
+      regular: "IP Address",
+      status: false,
+    },
+
+    dedicatedResources: {
+      bold: "Dedicated",
+      regular: "Resources",
+      toolTip: dedicatedResourcesTooltip,
+      status: false,
+    },
+    malwareScanner: {
+      bold: "Malware",
+      regular: "Scanner",
+      status: true,
+    },
+
+    powerfulControlPanel: {
+      bold: "Powerful",
+      regular: "ControlPanel",
+      toolTip: powerfulControlPanelTooltip,
+      status: true,
+    },
   },
-  "wordPressHosting": {
-    "_id": 2,
-    "name": "WordPress Hosting",
-    "child": [
-      {
-        "_id": "1",
-        "title": "Standard",
-        "shortDescription": "",
-        "description": "",
+  {
+    _id: 2,
+    title: "Enhance Business Hosting",
+    slug: "enhanceBusinessHosting",
+    shortDescription: "Enhance your server resources to increase visitors' experience.",
+    description: "A",
+    featured: true,
+    additionalMonth: "+3 months FREE ",
 
-        "monthlyPrice": 9.9,
-        "annuallyPrice": "93.6",
-        "bienniallyPrice": "151.2",
-        "trienniallyPrice": "198",
 
-        "monthlyDiscountedPrice": "",
-        "annuallyDiscountedPrice": "",
-        "bienniallyDiscountedPrice": "",
-        "trienniallyDiscountedPrice": "",
 
-        "monthlyOrderLink": "monthlyOrderLink",
-        "annuallyOrderLink": "annuallyOrderLink",
-        "bienniallyOrderLink": "bienniallyOrderLink",
-        "trienniallyOrderLink": "trienniallyOrderLink",
+    numberOfWebsites: {
+      iconColor: "fill-primary",
+      bold: "Unlimited",
+      regular: "Websites",
+      toolTip: false,
+      status: true,
+    },
+    storage: {
+      iconColor: "fill-green-100",
+      bold: "80 GB",
+      regular: "NVMe Premium Storage",
+      toolTip: storageTooltip,
+      status: true,
+    },
+    monthlyVisits: {
+      iconColor: "fill-red-200",
+      bold: "~ 100,000",
+      regular: "Visits Monthly",
+      toolTip: monthlyVisitsTooltip,
+      status: true,
+    },
+    bandwidth: {
+      bold: "Unlimited",
+      regular: "Bandwidth",
+      toolTip: bandwidthTooltip,
+      status: true,
+    },
 
-        "numberOfWebsites": "2 Websites",
-        "storage": "10GB NVME PREMIUM Storage",
-        "monthlyVisits": "",
-        "bandwidth": "Unmetered bandwidth",
-        "freeWPInstallation": "Free 1-click WordPress install",
-        "wpAutoUpdates": "WordPress Auto Update",
-        "ssl": "Free SSL Certificate",
-        "nightlyBackup": true,
-        "emailAccounts": "Free WebMail",
-        "domain": "Free .com Domain/yearly package",
-        "wordpressTransfer": "Free Automated WordPress Transfer",
-        "wordpressDedicatedExpert": "Free Automated WordPress Transfer",
-        "unlimitedDatabase": true,
-        "multiplePhpVersions": true,
-        "moneyBack": "",
-        "addCollaborators": "",
-        "FtpUsers": "",
-        "dnsManagement": true,
-        "DDoSProtection": "DDoS Protection",
-        "subDomains": "5",
+    cpuCores: {
+      icon: LightCheckIcon,
+      iconColor: "fill-red-200",
+      bold: "2 CPU",
+      regular: "Cores",
+      status: true,
+    },
+    ram: {
+      icon: LightCheckIcon,
+      iconColor: "fill-green-200",
+      bold: "3 GB",
+      regular: "RAM",
+      status: true,
+    },
+    wordpressDedicatedExpert: {
+      bold: "Dedicated",
+      regular: "WordPress Expert",
+      toolTip: wordpressDedicatedExpertTooltip,
+      status: true,
+    },
+    wordPressAcceleration: {
+      bold: "WordPress",
+      regular: "Acceleration",
+      status: true,
+    },
+    wordpressOptimized: {
+      bold: "WordPress",
+      regular: "Optimized Server",
+      toolTip: wordpressOptimizedTooltip,
+      status: true,
+    },
+    objectCacheforWordPress: {
+      bold: "Object Cache",
+      regular: "for WordPress",
+      toolTip: wordpressTransferTooltip,
+      status: true,
+    },
+    siteRacksExpertOptimized: {
+      bold: "Expert Optimization",
+      regular: "by SiteRacks",
+      toolTip: siteRacksExpertOptimizedTooltip,
+      status: true,
+    },
+    dedicatedResources: {
+      bold: "Dedicated",
+      regular: "Resources",
+      toolTip: dedicatedResourcesTooltip,
+      status: false,
+    },
+    wordPressMultisite: {
+      bold: "WordPress",
+      regular: "Multisite",
+      toolTip: wordPressMultisiteTooltip,
+      status: true,
+    },
 
-        "cpuCores": "1",
-        "ram": "5",
-        "siteRacksExpertOptimized": true,
-        "dedicatedIPAddress": false,
-        "sshAccess": true,
-        "ftpAccess": true,
-        "gitSupport": true,
-        "nodeJs": true,
-        "folderProtection": true,
-        "laravelTools": true,
-        "logs": true,
-        "apacheNginx": true,
-        "googleAuth": true,
-        "scheduleTask": true,
-        "webApplicationFirewall": true
-      },
-      {
-        "_id": "1",
-        "title": "",
-        "shortDescription": "",
-        "description": "",
+    WordPressStagingTool: {
+      bold: "WordPress",
+      regular: "Staging Tool",
+      status: true,
+    },
+    emailAccounts: {
+      bold: "Unlimited",
+      regular: "Email Accounts",
+      toolTip: emailAccountsTooltip,
+      status: true,
+    },
+    domain: {
+      bold: "Free",
+      regular: ".com Domain",
+      toolTip: domainTooltip,
+      status: true,
+    },
+    scheduleTask: {
+      bold: "Unlimited",
+      regular: "CronJobs",
+      status: true,
+    },
+    subDomains: {
+      bold: "Unlimited",
+      regular: "Subdomains",
+      status: true,
+    },
+    unlimitedDatabase: {
+      bold: "Unlimited",
+      regular: "Database",
+      status: true,
+    },
+    multiplePhpVersions: {
+      bold: "Multiple",
+      regular: "PHP Versions",
+      toolTip: multiplePhpVersionsTooltip,
+      status: true,
+    },
+    wordpressTransfer: {
+      bold: "Free",
+      regular: "Migration",
+      toolTip: wordpressTransferTooltip,
+      status: true,
+    },
 
-        "monthlyPrice": "",
-        "annuallyPrice": "",
-        "bienniallyPrice": "",
-        "trienniallyPrice": "",
+    WordPressDebugging: {
+      bold: "WordPress",
+      regular: "Debugger",
+      status: true,
+    },
 
-        "monthlyDiscountedPrice": "",
-        "annuallyDiscountedPrice": "",
-        "bienniallyDiscountedPrice": "",
-        "trienniallyDiscountedPrice": "",
+    WordPressNginxCaching: {
+      bold: "Nginx",
+      regular: "Cache",
+      toolTip: WordPressNginxCachingTooltip,
+      status: true,
+    },
 
-        "monthlyOrderLink": "",
-        "annuallyOrderLink": "",
-        "bienniallyOrderLink": "",
-        "trienniallyOrderLink": "",
+    WordPressLogs: {
+      bold: "WordPress",
+      regular: "Logs",
+      status: true,
+    },
 
-        "numberOfWebsites": "",
-        "storage": "10GB NVME PREMIUM Storage",
-        "monthlyVisits": "",
-        "bandwidth": "Unmetered bandwidth",
-        "freeWPInstallation": "Free 1-click WordPress install",
-        "wpAutoUpdates": "WordPress Auto Update",
-        "ssl": "Free SSL Certificate",
-        "nightlyBackup": true,
-        "emailAccounts": "Free WebMail",
-        "domain": "Free .com Domain/yearly package",
-        "wordpressTransfer": "Free Automated WordPress Transfer",
-        "wordpressDedicatedExpert": "Free Automated WordPress Transfer",
-        "unlimitedDatabase": true,
-        "multiplePhpVersions": true,
-        "moneyBack": "",
-        "addCollaborators": "",
-        "FtpUsers": "",
-        "dnsManagement": true,
-        "DDoSProtection": "DDoS Protection",
-        "subDomains": "5",
+    googleAuth: {
+      bold: "Built-in",
+      regular: "Google Authentication",
+      status: true,
+    },
+    folderProtection: {
+      bold: "Folder",
+      regular: "Protection",
+      status: true,
+    },
+    DDoSProtection: {
+      bold: "DDoS",
+      regular: "Protection",
+      status: true,
+    },
+    webApplicationFirewall: {
+      bold: "Web Application",
+      regular: "Firewall",
+      status: true,
+    },
+    moneyBack: {
+      bold: "30 Days",
+      regular: "Money Back Guarantee",
+      status: true,
+    },
+    logs: {
+      bold: "Server",
+      regular: "Logs",
+      status: true,
+    },
+    addCollaborators: {
+      bold: "Collaborators",
+      regular: "Tools",
+      toolTip: addCollaboratorsTooltip,
+      status: true,
+    },
+    dnsManagement: {
+      bold: "DNS",
+      regular: "Management",
+      status: true,
+    },
+    sshAccess: {
+      bold: "SSH",
+      regular: "Access",
+      status: true,
+    },
+    ftpAccess: {
+      bold: "FTP",
+      regular: "Access",
+      status: true,
+    },
+    gitSupport: {
+      bold: "GIT",
+      regular: "Access",
+      toolTip: "A",
+      status: true,
+    },
+    nodeJs: {
+      bold: "NodeJS",
+      regular: "Ready",
+      status: true,
+    },
+    laravelTools: {
+      bold: "Laravel",
+      regular: "Toolkit",
+      status: true,
+    },
+    apacheNginx: {
+      bold: "Apache/Nginx",
+      regular: "Support",
+      status: true,
+    },
 
-        "cpuCores": "1",
-        "ram": "5",
-        "siteRacksExpertOptimized": true,
-        "dedicatedIPAddress": false,
-        "sshAccess": true,
-        "ftpAccess": true,
-        "gitSupport": true,
-        "nodeJs": true,
-        "folderProtection": true,
-        "laravelTools": true,
-        "logs": true,
-        "apacheNginx": true,
-        "googleAuth": true,
-        "scheduleTask": true,
-        "webApplicationFirewall": true
-      }
-    ]
-  }
-}
+    dedicatedIPAddress: {
+      bold: "Dedicated",
+      regular: "IP Address",
+      status: false,
+    },
+
+    malwareScanner: {
+      bold: "Malware",
+      regular: "Scanner",
+      status: true,
+    },
+
+    powerfulControlPanel: {
+      bold: "Powerful",
+      regular: "ControlPanel",
+      toolTip: powerfulControlPanelTooltip,
+      status: true,
+    },
+    freeWPInstallation: {
+      bold: "Free ",
+      regular: "1-Click WP Installation",
+      status: true,
+    },
+    wpAutoUpdates: {
+      bold: "Automatic",
+      regular: "WordPress Updates",
+      status: true,
+    },
+    ssl: {
+      bold: "Free",
+      regular: "SSL Certificate",
+      toolTip: sslTooltip,
+      status: true,
+    },
+    nightlyBackup: {
+      bold: "Free",
+      regular: "Nightly Backups",
+      toolTip: nightlyBackupTooltip,
+      status: true,
+    },
+  },
+  {
+    _id: 3,
+    title: "GrowBig Business Hosting",
+    slug: "growBigBusinessHosting",
+    shortDescription: "GrowBig your site with limitless visitors, traffic, and bandwidth.",
+    description: "A",
+    featured: false,
+    additionalMonth: "+3 months FREE ",
+    numberOfWebsites: {
+      iconColor: "fill-primary",
+      bold: "Unlimited",
+      regular: "Websites",
+      toolTip: false,
+      status: true,
+    },
+    storage: {
+      bold: "100 GB",
+      regular: "NVMe Premium Storage",
+      toolTip: storageTooltip,
+      status: true,
+    },
+    monthlyVisits: {
+      iconColor: "fill-red-200",
+      bold: "~ 100,000",
+      regular: "Visits Monthly",
+      toolTip: monthlyVisitsTooltip,
+      status: true,
+    },
+    bandwidth: {
+      bold: "Unlimited",
+      regular: "Bandwidth",
+      toolTip: bandwidthTooltip,
+      status: true,
+    },
+
+    cpuCores: {
+      icon: LightCheckIcon,
+      iconColor: "fill-red-200",
+      bold: "2 CPU",
+      regular: "Cores",
+      status: true,
+    },
+    ram: {
+      bold: "4 GB",
+      regular: "RAM",
+      status: true,
+    },
+    wordpressDedicatedExpert: {
+      bold: "Dedicated",
+      regular: "WordPress Expert",
+      toolTip: wordpressDedicatedExpertTooltip,
+      status: true,
+    },
+    wordPressAcceleration: {
+      bold: "WordPress",
+      regular: "Acceleration",
+      status: true,
+    },
+    wordpressOptimized: {
+      bold: "WordPress",
+      regular: "Optimized Server",
+      toolTip: wordpressOptimizedTooltip,
+      status: true,
+    },
+    objectCacheforWordPress: {
+      bold: "Object Cache",
+      regular: "for WordPress",
+      toolTip: wordpressTransferTooltip,
+      status: true,
+    },
+    siteRacksExpertOptimized: {
+      bold: "Expert Optimization",
+      regular: "by SiteRacks",
+      toolTip: siteRacksExpertOptimizedTooltip,
+      status: true,
+    },
+    dedicatedResources: {
+      bold: "Dedicated",
+      regular: "Resources",
+      toolTip: dedicatedResourcesTooltip,
+      status: true,
+    },
+    wordPressMultisite: {
+      bold: "WordPress",
+      regular: "Multisite",
+      toolTip: wordPressMultisiteTooltip,
+      status: true,
+    },
+
+    WordPressStagingTool: {
+      bold: "WordPress",
+      regular: "Staging Tool",
+      status: true,
+    },
+    emailAccounts: {
+      bold: "Unlimited",
+      regular: "Email Accounts",
+      toolTip: emailAccountsTooltip,
+      status: true,
+    },
+    domain: {
+      bold: "Free",
+      regular: ".com Domain",
+      toolTip: domainTooltip,
+      status: true,
+    },
+    scheduleTask: {
+      bold: "Unlimited",
+      regular: "CronJobs",
+      status: true,
+    },
+    subDomains: {
+      bold: "Unlimited",
+      regular: "Subdomains",
+      status: true,
+    },
+    unlimitedDatabase: {
+      bold: "Unlimited",
+      regular: "Database",
+      status: true,
+    },
+    multiplePhpVersions: {
+      bold: "Multiple",
+      regular: "PHP Versions",
+      toolTip: multiplePhpVersionsTooltip,
+      status: true,
+    },
+    wordpressTransfer: {
+      bold: "Free",
+      regular: "Migration",
+      toolTip: wordpressTransferTooltip,
+      status: true,
+    },
+
+    WordPressDebugging: {
+      bold: "WordPress",
+      regular: "Debugger",
+      status: true,
+    },
+
+    WordPressNginxCaching: {
+      bold: "Nginx",
+      regular: "Cache",
+      toolTip: WordPressNginxCachingTooltip,
+      status: true,
+    },
+
+    WordPressLogs: {
+      bold: "WordPress",
+      regular: "Logs",
+      status: true,
+    },
+
+    googleAuth: {
+      bold: "Built-in",
+      regular: "Google Authentication",
+      status: true,
+    },
+    folderProtection: {
+      bold: "Folder",
+      regular: "Protection",
+      status: true,
+    },
+    DDoSProtection: {
+      bold: "DDoS",
+      regular: "Protection",
+      status: true,
+    },
+    webApplicationFirewall: {
+      bold: "Web Application",
+      regular: "Firewall",
+      status: true,
+    },
+    moneyBack: {
+      bold: "30 Days",
+      regular: "Money Back Guarantee",
+      status: true,
+    },
+    logs: {
+      bold: "Server",
+      regular: "Logs",
+      status: true,
+    },
+    addCollaborators: {
+      bold: "Collaborators",
+      regular: "Tools",
+      toolTip: addCollaboratorsTooltip,
+      status: true,
+    },
+    dnsManagement: {
+      bold: "DNS",
+      regular: "Management",
+      status: true,
+    },
+    sshAccess: {
+      bold: "SSH",
+      regular: "Access",
+      status: true,
+    },
+    ftpAccess: {
+      bold: "FTP",
+      regular: "Access",
+      status: true,
+    },
+    gitSupport: {
+      bold: "GIT",
+      regular: "Access",
+      toolTip: "A",
+      status: true,
+    },
+    nodeJs: {
+      bold: "NodeJS",
+      regular: "Ready",
+      status: true,
+    },
+    laravelTools: {
+      bold: "Laravel",
+      regular: "Toolkit",
+      status: true,
+    },
+    apacheNginx: {
+      bold: "Apache/Nginx",
+      regular: "Support",
+      status: true,
+    },
+
+    dedicatedIPAddress: {
+      bold: "Dedicated",
+      regular: "IP Address",
+      status: false,
+    },
+
+    malwareScanner: {
+      bold: "Malware",
+      regular: "Scanner",
+      status: true,
+    },
+
+    powerfulControlPanel: {
+      bold: "Powerful",
+      regular: "ControlPanel",
+      toolTip: powerfulControlPanelTooltip,
+      status: true,
+    },
+    freeWPInstallation: {
+      bold: "Free ",
+      regular: "1-Click WP Installation",
+      status: true,
+    },
+    wpAutoUpdates: {
+      bold: "Automatic",
+      regular: "WordPress Updates",
+      status: true,
+    },
+    ssl: {
+      bold: "Free",
+      regular: "SSL Certificate",
+      toolTip: sslTooltip,
+      status: true,
+    },
+    nightlyBackup: {
+      bold: "Free",
+      regular: "Nightly Backups",
+      toolTip: nightlyBackupTooltip,
+      status: true,
+    },
+  },
+  {
+    _id: 4,
+    title: "Expand Business Hosting",
+    slug: "expandBusinessHosting",
+    shortDescription: "Enhance your website's capacity with boosting server resources",
+    description: "A",
+    featured: false,
+    additionalMonth: "+3 months FREE ",
+
+    
+
+    numberOfWebsites: {
+      iconColor: "fill-primary",
+      bold: "Unlimited",
+      regular: "Websites",
+      toolTip: false,
+      status: true,
+    },
+    storage: {
+      bold: "160 GB",
+      regular: "NVMe Premium Storage",
+      toolTip: storageTooltip,
+      status: true,
+    },
+    monthlyVisits: {
+      iconColor: "fill-red-200",
+      bold: "~ 100,000",
+      regular: "Visits Monthly",
+      toolTip: monthlyVisitsTooltip,
+      status: true,
+    },
+    bandwidth: {
+      bold: "Unlimited",
+      regular: "Bandwidth",
+      toolTip: bandwidthTooltip,
+      status: true,
+    },
+
+    cpuCores: {
+      icon: LightCheckIcon,
+      iconColor: "fill-red-200",
+      bold: "2 CPU",
+      regular: "Cores",
+      status: true,
+    },
+    ram: {
+      bold: "6 GB",
+      regular: "RAM",
+      status: true,
+    },
+    wordpressDedicatedExpert: {
+      bold: "Dedicated",
+      regular: "WordPress Expert",
+      toolTip: wordpressDedicatedExpertTooltip,
+      status: true,
+    },
+    wordPressAcceleration: {
+      bold: "WordPress",
+      regular: "Acceleration",
+      status: true,
+    },
+    wordpressOptimized: {
+      bold: "WordPress",
+      regular: "Optimized Server",
+      toolTip: wordpressOptimizedTooltip,
+      status: true,
+    },
+    objectCacheforWordPress: {
+      bold: "Object Cache",
+      regular: "for WordPress",
+      toolTip: wordpressTransferTooltip,
+      status: true,
+    },
+    siteRacksExpertOptimized: {
+      bold: "Expert Optimization",
+      regular: "by SiteRacks",
+      toolTip: siteRacksExpertOptimizedTooltip,
+      status: true,
+    },
+    dedicatedResources: {
+      bold: "Dedicated",
+      regular: "Resources",
+      toolTip: dedicatedResourcesTooltip,
+      status: true,
+    },
+    wordPressMultisite: {
+      bold: "WordPress",
+      regular: "Multisite",
+      toolTip: wordPressMultisiteTooltip,
+      status: true,
+    },
+
+    WordPressStagingTool: {
+      bold: "WordPress",
+      regular: "Staging Tool",
+      status: true,
+    },
+    emailAccounts: {
+      bold: "Unlimited",
+      regular: "Email Accounts",
+      toolTip: emailAccountsTooltip,
+      status: true,
+    },
+    domain: {
+      bold: "Free",
+      regular: ".com Domain",
+      toolTip: domainTooltip,
+      status: true,
+    },
+    scheduleTask: {
+      bold: "Unlimited",
+      regular: "CronJobs",
+      status: true,
+    },
+    subDomains: {
+      bold: "Unlimited",
+      regular: "Subdomains",
+      status: true,
+    },
+    unlimitedDatabase: {
+      bold: "Unlimited",
+      regular: "Database",
+      status: true,
+    },
+    multiplePhpVersions: {
+      bold: "Multiple",
+      regular: "PHP Versions",
+      toolTip: multiplePhpVersionsTooltip,
+      status: true,
+    },
+    wordpressTransfer: {
+      bold: "Free",
+      regular: "Migration",
+      toolTip: wordpressTransferTooltip,
+      status: true,
+    },
+
+    WordPressDebugging: {
+      bold: "WordPress",
+      regular: "Debugger",
+      status: true,
+    },
+
+    WordPressNginxCaching: {
+      bold: "Nginx",
+      regular: "Cache",
+      toolTip: WordPressNginxCachingTooltip,
+      status: true,
+    },
+
+    WordPressLogs: {
+      bold: "WordPress",
+      regular: "Logs",
+      status: true,
+    },
+
+    googleAuth: {
+      bold: "Built-in",
+      regular: "Google Authentication",
+      status: true,
+    },
+    folderProtection: {
+      bold: "Folder",
+      regular: "Protection",
+      status: true,
+    },
+    DDoSProtection: {
+      bold: "DDoS",
+      regular: "Protection",
+      status: true,
+    },
+    webApplicationFirewall: {
+      bold: "Web Application",
+      regular: "Firewall",
+      status: true,
+    },
+    moneyBack: {
+      bold: "30 Days",
+      regular: "Money Back Guarantee",
+      status: true,
+    },
+    logs: {
+      bold: "Server",
+      regular: "Logs",
+      status: true,
+    },
+    addCollaborators: {
+      bold: "Collaborators",
+      regular: "Tools",
+      toolTip: addCollaboratorsTooltip,
+      status: true,
+    },
+    dnsManagement: {
+      bold: "DNS",
+      regular: "Management",
+      status: true,
+    },
+    sshAccess: {
+      bold: "SSH",
+      regular: "Access",
+      status: true,
+    },
+    ftpAccess: {
+      bold: "FTP",
+      regular: "Access",
+      status: true,
+    },
+    gitSupport: {
+      bold: "GIT",
+      regular: "Access",
+      toolTip: "A",
+      status: true,
+    },
+    nodeJs: {
+      bold: "NodeJS",
+      regular: "Ready",
+      status: true,
+    },
+    laravelTools: {
+      bold: "Laravel",
+      regular: "Toolkit",
+      status: true,
+    },
+    apacheNginx: {
+      bold: "Apache/Nginx",
+      regular: "Support",
+      status: true,
+    },
+
+    dedicatedIPAddress: {
+      bold: "Dedicated",
+      regular: "IP Address",
+      status: false,
+    },
+
+    malwareScanner: {
+      bold: "Malware",
+      regular: "Scanner",
+      status: true,
+    },
+
+    powerfulControlPanel: {
+      bold: "Powerful",
+      regular: "ControlPanel",
+      toolTip: powerfulControlPanelTooltip,
+      status: true,
+    },
+    freeWPInstallation: {
+      bold: "Free ",
+      regular: "1-Click WP Installation",
+      status: true,
+    },
+    wpAutoUpdates: {
+      bold: "Automatic",
+      regular: "WordPress Updates",
+      status: true,
+    },
+    ssl: {
+      bold: "Free",
+      regular: "SSL Certificate",
+      toolTip: sslTooltip,
+      status: true,
+    },
+    nightlyBackup: {
+      bold: "Free",
+      regular: "Nightly Backups",
+      toolTip: nightlyBackupTooltip,
+      status: true,
+    },
+  },
+]
+
+
+
+
+}]

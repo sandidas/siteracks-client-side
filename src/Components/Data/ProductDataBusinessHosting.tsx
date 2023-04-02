@@ -30,7 +30,7 @@ const expandBusinessHosting: IPackages | any = findServiceByNameAndType("busines
 
 export const businessHostingData = [
   {
-    ...startUpBusinessHosting,
+    
     _id: 1,
     title: "StartUp Business Hosting",
     slug: "startUpBusinessHosting",
@@ -312,7 +312,7 @@ export const businessHostingData = [
     featured: true,
     additionalMonth: "+3 months FREE ",
 
-    ...enhanceBusinessHosting,
+    
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -585,7 +585,7 @@ export const businessHostingData = [
     featured: false,
     additionalMonth: "+3 months FREE ",
 
-    ...growBigBusinessHosting,
+    
 
     numberOfWebsites: {
       iconColor: "fill-primary",
@@ -855,7 +855,7 @@ export const businessHostingData = [
     featured: false,
     additionalMonth: "+3 months FREE ",
 
-    ...expandBusinessHosting,
+    
 
     numberOfWebsites: {
       iconColor: "fill-primary",

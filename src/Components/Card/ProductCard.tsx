@@ -11,9 +11,10 @@ import ProductCardManagedVpsHostingItems from "./ProductCardManagedVpsHostingIte
 import ProductCardResellerHostingItems from "./ProductCardResellerHostingItems";
 import { calculateSavingAmount, calculateSavingPercent, calculateDiscountFromPercentage, calculateMonthlyPriceAfterDiscount } from "../Hooks/MathLogics";
 import { toast } from "react-hot-toast";
+import ProductCardFirstChild from "./ProductCardFirstChild";
 
 interface IProps {
-  product: IProduct;
+  product: any;
   className?: string;
   type?: string;
 }
@@ -26,6 +27,8 @@ const buttonDataByMonth = [
 ];
 
 const ProductCard: FC<IProps> = ({ product, className, type }) => {
+
+  // console.log(product);
   // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=annually
   // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=biennially
   // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=triennially
@@ -137,8 +140,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
 
       <div className="space-y-5 xl:space-y-10 text-center flex flex-col">
         <div className="space-y-2">
-          <h2 className="text-title font-bold text-2xl">{product?.title}</h2>
-          <p className="text-text text-sm">{product?.shortDescription}</p>
+          <h2 className="text-title font-bold text-2xl">{product?.productTitle}</h2>
+          <p className="text-text text-sm">{product?.productDescription}</p>
         </div>
 
         <div className="space-y-3 xl:space-y-7">
@@ -230,19 +233,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       // we get type from parent component.      
       */}
       {/* Shared Web Hosting Child Compo */}
-      {type == "sharedWebHosting" && <ProductCardSharedWebHostingItems className="" showAllFeature={showAllFeature} product={product} />}
-
-      {/* WordPress Hosting Child Compo */}
-      {type == "wordpressHosting" && <ProductCardWordPressHostingItems className="" showAllFeature={showAllFeature} product={product} />}
-
-      {/* Business Hosting Child Compo */}
-      {type == "businessHosting" && <ProductCardBusinessHostingItems className="" showAllFeature={showAllFeature} product={product} />}
-
-      {/* Managed VPS Hosting Child Compo */}
-      {type == "managedVpsHosting" && <ProductCardManagedVpsHostingItems className="" showAllFeature={showAllFeature} product={product} />}
-
-      {type == "resellerHosting" && <ProductCardResellerHostingItems className="" showAllFeature={showAllFeature} product={product} />}
-
+      <ProductCardFirstChild showAllFeature={showAllFeature} features={product.features} />
+ 
       {/*
       
       Show hide more features items
