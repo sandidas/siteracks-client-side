@@ -16,18 +16,20 @@ export const productPricingData = [
         typeSlug: "standardWebhosting",
         productTitle: "Product Title",
         productDescription: "Product Descriptions",
-        productId: 10,
-        additionalDiscount: 10,
-        monthlyPrice: 20,
-        annuallyPrice: 20,
-        bienniallyPrice: 30,
-        trienniallyPrice: 50,
+        productId: 20,
+        promoCode: "DAS-SANDI",
+        additionalDiscount: 50,
+        monthlyPrice: 10,
+        annuallyPrice: 12,
+        bienniallyPrice: 24,
+        trienniallyPrice: 36,
       },
       {
         typeSlug: "premiumWebHosting",
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -42,6 +44,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -72,6 +75,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -87,6 +91,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -102,6 +107,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         preTitle: false,
         monthlyPrice: 20,
@@ -132,6 +138,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -147,6 +154,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -162,6 +170,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -177,6 +186,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -206,6 +216,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -220,6 +231,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -235,6 +247,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -250,6 +263,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -279,6 +293,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -293,6 +308,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -308,6 +324,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 
@@ -323,6 +340,7 @@ export const productPricingData = [
         productTitle: "Product",
         productDescription: "Product Descriptions",
         productId: 10,
+        promoCode: "",
         additionalDiscount: 10,
         monthlyPrice: 20,
 

@@ -14,9 +14,12 @@ import { productPricingData } from "@/Components/Data/ProductPricing";
 import ProductCardHome from "@/Components/Card/ProductCardHome";
 import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export function Home({ menuItems }: any) {
+
+
   const services = productPricingData.filter((p, index) => p.nameSlug !== "resellerHosting");
   return (
     <>

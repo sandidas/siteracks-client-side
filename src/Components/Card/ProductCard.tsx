@@ -26,26 +26,33 @@ const buttonDataByMonth = [
 ];
 
 const ProductCard: FC<IProps> = ({ product, className, type }) => {
+  // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=annually
+  // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=biennially
+  // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=triennially
+
   // common variables needs bellow functionality
-  const monthlyRegularPrice = product?.monthlyPackage?.regularPrice;
-  const monthlyPackage = product?.monthlyPackage;
-  const threeYearPackage = product?.trienniallyPackage;
-  const twoYearPackage = product?.bienniallyPackage;
-  const oneYearPackage = product?.annuallyPackage;
+  const monthlyRegularPrice = product?.monthlyPrice;
+  const monthlyPackage = product?.monthlyPrice;
+  const threeYearPackage = product?.trienniallyPrice;
+  const twoYearPackage = product?.bienniallyPrice;
+  const oneYearPackage = product?.annuallyPrice;
+  const additionalDiscountForAll = product?.additionalDiscount as number;
+  const productThisId = product?.productId;
+  const productThisPromo = product?.promoCode;
+  let defaultOrderLink = `https://www.siteracks.com/cart.php?a=add&pid=${productThisId}&billingcycle=triennially${productThisPromo && `&promocode=${productThisPromo}`}`;
 
-
+  // console.log("defaultOrderLink", defaultOrderLink);
 
   // default 36 months selected
   const [currentPackage, setCurrentPackage] = useState<number>(36);
-  const [price, setPrice] = useState<number>(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
-  const [orderLink, setOrderLink] = useState<string>(product?.trienniallyPackage?.orderLink);
-  const [saving, setSaving] = useState<number>(calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
-  const [savingPercent, setSavingPercent] = useState<number>(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
-  const [payToday, setPayToday] = useState<number>(calculateDiscountFromPercentage(threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
+  const [price, setPrice] = useState<number>(calculateMonthlyPriceAfterDiscount(36, threeYearPackage, additionalDiscountForAll, monthlyRegularPrice));
+  const [orderLink, setOrderLink] = useState<string>(defaultOrderLink);
+  const [saving, setSaving] = useState<number>(calculateSavingAmount(36, threeYearPackage, additionalDiscountForAll, monthlyRegularPrice));
+  const [savingPercent, setSavingPercent] = useState<number>(calculateSavingPercent(36, threeYearPackage, additionalDiscountForAll, monthlyRegularPrice));
+  const [payToday, setPayToday] = useState<number>(calculateDiscountFromPercentage(threeYearPackage, additionalDiscountForAll));
 
-  const [additionalDiscount, setAdditionalDiscount] = useState<number>(threeYearPackage?.additionalDiscount);
-  const [regularPrice, setRegularPrice] = useState<number>(threeYearPackage?.regularPrice);
-
+  const [additionalDiscount, setAdditionalDiscount] = useState<number>(additionalDiscountForAll);
+  const [regularPrice, setRegularPrice] = useState<number>(threeYearPackage);
   // this for show and hide more features items
   const [showAllFeature, setShowAllFeature] = useState(false);
 
@@ -57,61 +64,66 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
   const switchPlanByMonth = (selectedPackage: number) => {
     setCurrentPackage(selectedPackage);
 
+    const orderLinkSwitcher = (months: string) => {
+      let currentOrderLink = `https://www.siteracks.com/cart.php?a=add&pid=${productThisId}&billingcycle=${months}${productThisPromo && `&promocode=${productThisPromo}`}`;
+      setOrderLink(currentOrderLink);
+    };
+
     if (selectedPackage == 1) {
       // monthlyPackage
-      setOrderLink(monthlyPackage?.orderLink);
-      setPrice(calculateMonthlyPriceAfterDiscount(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount, monthlyRegularPrice));
+      orderLinkSwitcher("monthly");
+      setPrice(calculateMonthlyPriceAfterDiscount(1, monthlyPackage, additionalDiscountForAll, monthlyRegularPrice));
       // saving
-      const totalSavings = calculateSavingAmount(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount, monthlyRegularPrice);
+      const totalSavings = calculateSavingAmount(1, monthlyPackage, additionalDiscountForAll, monthlyRegularPrice);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(1, monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount, monthlyRegularPrice));
+      setSavingPercent(calculateSavingPercent(1, monthlyPackage, additionalDiscountForAll, monthlyRegularPrice));
 
       // pay today
-      setPayToday(calculateDiscountFromPercentage(monthlyPackage?.regularPrice, monthlyPackage?.additionalDiscount));
-      setAdditionalDiscount(monthlyPackage?.additionalDiscount);
-      setRegularPrice(monthlyPackage?.regularPrice);
+      setPayToday(calculateDiscountFromPercentage(monthlyPackage, additionalDiscountForAll));
+      setAdditionalDiscount(additionalDiscountForAll);
+      setRegularPrice(monthlyPackage);
     }
     if (selectedPackage == 12) {
-      setOrderLink(oneYearPackage?.orderLink);
-      setPrice(calculateMonthlyPriceAfterDiscount(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount, monthlyRegularPrice));
+      orderLinkSwitcher("annually");
+      setPrice(calculateMonthlyPriceAfterDiscount(12, oneYearPackage, additionalDiscountForAll, monthlyRegularPrice));
       // saving
-      const totalSavings = calculateSavingAmount(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount, monthlyRegularPrice);
+      const totalSavings = calculateSavingAmount(12, oneYearPackage, additionalDiscountForAll, monthlyRegularPrice);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(12, oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount, monthlyRegularPrice));
+      setSavingPercent(calculateSavingPercent(12, oneYearPackage, additionalDiscountForAll, monthlyRegularPrice));
       // pay today
-      setPayToday(calculateDiscountFromPercentage(oneYearPackage?.regularPrice, oneYearPackage?.additionalDiscount));
-      setAdditionalDiscount(oneYearPackage?.additionalDiscount);
-      setRegularPrice(oneYearPackage?.regularPrice);
+      setPayToday(calculateDiscountFromPercentage(oneYearPackage, additionalDiscountForAll));
+      setAdditionalDiscount(additionalDiscountForAll);
+      setRegularPrice(oneYearPackage);
       // notifications
       const notification = `You are getting $${totalSavings.toFixed(0)} discount for 1-Year service term of the ${product?.title}.`;
       toast.success(notification);
     }
     if (selectedPackage == 24) {
-      setOrderLink(twoYearPackage?.orderLink);
-      setPrice(calculateMonthlyPriceAfterDiscount(24, twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount, monthlyRegularPrice));
+      orderLinkSwitcher("biennially");
+      setPrice(calculateMonthlyPriceAfterDiscount(24, twoYearPackage, additionalDiscountForAll, monthlyRegularPrice));
       // saving
-      const totalSavings = calculateSavingAmount(24, twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount, monthlyRegularPrice);
+      const totalSavings = calculateSavingAmount(24, twoYearPackage, additionalDiscountForAll, monthlyRegularPrice);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(24, twoYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
+      setSavingPercent(calculateSavingPercent(24, twoYearPackage, additionalDiscountForAll, monthlyRegularPrice));
       // pay today
-      setPayToday(calculateDiscountFromPercentage(twoYearPackage?.regularPrice, twoYearPackage?.additionalDiscount));
-      setAdditionalDiscount(twoYearPackage?.additionalDiscount);
-      setRegularPrice(twoYearPackage?.regularPrice);
+      setPayToday(calculateDiscountFromPercentage(twoYearPackage, additionalDiscountForAll));
+      setAdditionalDiscount(additionalDiscountForAll);
+      setRegularPrice(twoYearPackage);
       // notifications
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 2-Year service term of the ${product?.title}.`;
       toast.success(notification);
     }
     if (selectedPackage == 36) {
-      setOrderLink(threeYearPackage?.orderLink);
-      setPrice(calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
+      orderLinkSwitcher("triennially");
+      setPrice(calculateMonthlyPriceAfterDiscount(36, threeYearPackage, additionalDiscountForAll, monthlyRegularPrice));
       // saving
-      const totalSavings = calculateSavingAmount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice);
+      const totalSavings = calculateSavingAmount(36, threeYearPackage, additionalDiscountForAll, monthlyRegularPrice);
       setSaving(totalSavings);
-      setSavingPercent(calculateSavingPercent(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice));
+      setSavingPercent(calculateSavingPercent(36, threeYearPackage, additionalDiscountForAll, monthlyRegularPrice));
       // pay today
-      setPayToday(calculateDiscountFromPercentage(threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount));
-      setAdditionalDiscount(threeYearPackage?.additionalDiscount);
-      setRegularPrice(threeYearPackage?.regularPrice);
+      setPayToday(calculateDiscountFromPercentage(threeYearPackage, additionalDiscountForAll));
+      setAdditionalDiscount(additionalDiscountForAll);
+      setRegularPrice(threeYearPackage);
       // notifications
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 3-Year service term of the ${product?.title}.`;
       toast.success(notification);
@@ -189,7 +201,14 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           <p className="text-text text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
             You pay $ {payToday.toFixed(2)} today for {currentPackage == 1 ? currentPackage : currentPackage == 12 ? <>1</> : currentPackage == 24 ? <>2</> : <>3</>}
-            {currentPackage == 1 ? " Month" : "-Year"} service term{additionalDiscount != 0 && <span className="bg-yellow-100 pl-1"> <br /> (bonus {additionalDiscount}% off coupon included)</span>}. <br /> The renewal price ${regularPrice}.
+            {currentPackage == 1 ? " Month" : "-Year"} service term
+            {additionalDiscount != 0 && (
+              <span className="bg-yellow-100 pl-1">
+                {" "}
+                <br /> (bonus {additionalDiscount}% off coupon included)
+              </span>
+            )}
+            . <br /> The renewal price ${regularPrice}.
           </p>
         </div>
 

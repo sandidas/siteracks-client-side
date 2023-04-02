@@ -39,6 +39,7 @@ declare global {
         additionalMonth?: string | boolean;
 
         productId?: number;
+        promoCode?: string;
         additionalDiscount?: number;
         monthlyPrice: number;
         annuallyPrice: number;
@@ -123,6 +124,7 @@ declare global {
         productTitle: string;
         productDescription: string;
         productId: number;
+        promoCode?: string;
         additionalDiscount?: number;
         monthlyPrice: number;
         annuallyPrice: number;
