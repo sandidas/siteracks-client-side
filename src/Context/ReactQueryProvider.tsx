@@ -1,7 +1,6 @@
-import React, { useContext, useState, useEffect, createContext, FC } from "react";
-import type { AppProps } from "next/app";
+import React, { useContext, createContext } from "react";
 import axios from "axios";
-import { useQuery, QueryClient, QueryClientProvider, dehydrate } from "@tanstack/react-query";
+import { QueryClient, dehydrate } from "@tanstack/react-query";
 
 interface ReactQueryProviderProps {
   children?: React.ReactNode;
