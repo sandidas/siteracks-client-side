@@ -13,14 +13,23 @@ import HomeArticle from "@/Components/Home/HomeArticle";
 import { productPricingData } from "@/Components/Data/ProductPricing";
 import ProductCardHome from "@/Components/Card/ProductCardHome";
 import useDynamicHead from "@/Components/Hooks/useDynamicHead";
-
+import { fetchProducts, useReactQueryContext } from "@/Context/ReactQueryProvider";
+import { useQuery } from "@tanstack/react-query";
+import { Loader } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export function Home({ menuItems }: any) {
+  const { queryClient } = useReactQueryContext();
 
+  const { data: products, isLoading } = useQuery(["products"], fetchProducts, {
+    initialData: queryClient.getQueryData(["products"]),
+  });
+
+  console.log("QC.Products", products);
 
   const services = productPricingData.filter((p, index) => p.nameSlug !== "resellerHosting");
+
   return (
     <>
       <Head>
@@ -30,6 +39,8 @@ export function Home({ menuItems }: any) {
 
       {useDynamicHead({ slug: "home" })}
       <main>
+   
+
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}
         <div style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundPosition: "top center" }}>
@@ -38,7 +49,9 @@ export function Home({ menuItems }: any) {
 
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5" id="orderNow">
           <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 py-[10vh]">
-            {services.map((product, index) => (
+            {
+            isLoading ? <Loader /> :
+            services.map((product, index) => (
               <ProductCardHome key={index} product={product} />
             ))}
           </div>

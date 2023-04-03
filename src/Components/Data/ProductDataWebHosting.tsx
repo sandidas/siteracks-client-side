@@ -5,11 +5,17 @@ import { findServiceByNameAndType } from "../Hooks/ApiCall";
 
 // tool tips
 export const storageTooltip =
-  "Our servers are equipped with high-performance Non-Volatile Memory Express (NVMe) for both files and databases, ensuring lightning-fast loading times for your sites. The storage is allocated per plan, meaning that if you have multiple sites, the storage will be shared among them.";
+  "Our servers are equipped with high-performance, Non-Volatile Memory Express (NVMe) for both files and databases, ensuring lightning-fast loading times for your sites. The storage is allocated per plan, meaning that if you have multiple sites, it will be shared among them.";
 
 export const sslTooltip = "ssl";
+
 export const monthlyVisitsTooltip = "The following is an estimated approximation of the maximum number of website visits that can be accommodated by the hosting plan, assuming all the sites you host are utilizing our out-of-the-box caching as intended.";
+
 export const bandwidthTooltip = "As long as your plan adheres to our fair use guidelines, there are no restrictions on your data transfer. The site will not go down if the data transfer limit is over. You can switch higher plan easily.";
+
+
+
+
 export const domainTooltip = "ssl";
 export const nightlyBackupTooltip = "ssl";
 export const wordpressTransferTooltip = "ssl";

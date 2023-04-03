@@ -18,12 +18,12 @@ import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 
 interface IProps {
-  data: any;
+  data: IProduct;
   error?: string;
 }
 
 const BusinessHosting: FC<IProps> = ({ data, error }) => {
-
+  console.log(data);
   return (
     <>
       {useDynamicHead({ slug: "businessHosting" })}
@@ -91,7 +91,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
-      url: "/api/package/getpackage/6429d35f12b10d679eddde95",
+      url: "/api/package/getpackage/642b0e993d6a86e2cd4c2235",
       header: {
         // headers: {
         //   Authorization: `Bearer ${sAccessToken}`,

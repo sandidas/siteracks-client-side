@@ -1,28 +1,17 @@
 import QuestionIcon from "../../../public/images/icons/QuestionIcon.svg";
 import CompleteCheckIcon from "../../../public/images/icons/CompleteCheckIcon.svg";
 import NegativeCloseIcon from "../../../public/images/icons/NegativeCloseIcon.svg";
-
-import { Button, Tooltip, UnstyledButton } from "@mantine/core";
+import { Tooltip } from "@mantine/core";
 import React, { FC } from "react";
 
 interface IFeature {
-  feature?: IPackageFeatures;
+  feature?: IProductPackageFeatures;
 }
 const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
-
-   
-
   return feature?.lineBreak === true ? (
-    <>
-     {
-      feature?.lineBreakTitle && 
-      <h3 className="font-bold text-text text-base pb-3"> {feature?.lineBreakTitle} </h3>
-     }
-     
-    
-    </>
+    <>{feature?.lineBreakTitle && <h3 className="font-bold text-base text-text pt-4 pb-2"> {feature?.lineBreakTitle} </h3>}</>
   ) : (
-    <div className="flex justify-between border-b border-surface hover:border-slate-300 dark:hover:border-slate-700 text-sm xl:py-1 space-x-1">
+    <div className="flex justify-between border-b border-surface hover:border-slate-300 dark:hover:border-slate-700 space-x-1 py-1">
       <div className="flex justify-start space-x-1">
         <div>
           {
@@ -36,7 +25,7 @@ const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
             )
           }
         </div>
-        <div>
+        <div className="text-sm">
           {feature?.bold && <strong>{feature?.bold}&nbsp;</strong>}
           {feature?.regular}
         </div>
@@ -54,9 +43,9 @@ const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
             label={feature?.toolTip}
             offset={5}
           >
-            <UnstyledButton>
+            <div>
               <QuestionIcon className="w-5 h-5 fill-slate-500" />
-            </UnstyledButton>
+            </div>
           </Tooltip>
         </div>
       )}

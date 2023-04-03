@@ -3,11 +3,11 @@ import { businessHostingData } from "@/Components/Data/ProductDataBusinessHostin
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import React, { FC } from "react";
 interface IProps {
-  data: any;
+  data: IProduct;
 }
 
 const BusinessHostingPricing: FC<IProps> = ({ data }) => {
-  const packagesPricing = data?.child;
+  const packagesPricing = data?.packages;
   // console.log("Data from Server: ", data);
   // console.log("Data from Local: ", businessHostingData);
 

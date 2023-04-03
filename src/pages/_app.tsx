@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import Loader from "@/Components/Loader/Loader";
 import { toast, ToastBar, Toaster } from "react-hot-toast";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -34,13 +35,15 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router]);
   //# To show loader
 
-
+  const queryClient = new QueryClient();
 
   return (
     <Layout>
       {/* Loader  */}
       {loading && <Loader />}
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
 
       <Toaster
         reverseOrder={false}

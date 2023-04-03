@@ -9,59 +9,40 @@ declare global {
         recaptchaVerifier: {};
         confirmationResult: {};
     }
-    interface IPackageFeatures {
+
+    // THIS IS FEATURES FOR EVERY PACKAGE. EX. MONTHLY, YEARLY, etc.
+    interface IProductPackageFeatures {
         displayOrder?: number,
-        topFeatured?: any,
+        topFeatured?: boolean,
         iconColor?: string | null,
         toolTip?: null | string,
-        status?: boolean, bold?: string,
+        status?: boolean,
+        bold?: string,
         regular?: string,
         lineBreak?: boolean,
         lineBreakTitle?: string | null
+        tableTitle?: string | null
+        tableDescription?: string | null
     }
-
-    interface IPackages {
-        monthlyPrice: number;
-        annuallyPrice: number;
-        bienniallyPrice: number;
-        trienniallyPrice: number;
-    }
-
-    interface IProduct {
-        _id: number;
-        title?: string;
-        slug?: string;
-        shortDescription?: string;
-        description?: string;
-        featured?: boolean;
-        additionalMonth?: string | boolean;
-
-        productId?: number;
-        promoCode?: string;
-        additionalDiscount?: number;
-        monthlyPrice: number;
-        annuallyPrice: number;
-        bienniallyPrice: number;
-        trienniallyPrice: number;
-
-
-    }
-
     // THIS IS THE PACKAGE / PRODUCT'S CHILD INTERFACE
-    interface IProductPricingChildItems {
-        typeSlug: string;
-        productTitle: string;
-        productDescription: string;
+    interface IProductPackage {
+        typeSlug?: string;
+        productTitle?: string;
+        productDescription?: string;
         productId: number;
+        featured?: boolean;
+        additionalMonths?: string;
         promoCode?: string;
         additionalDiscount?: number;
         monthlyPrice: number;
         annuallyPrice: number;
         bienniallyPrice: number;
         trienniallyPrice: number;
+        features: [IProductPackageFeatures]
     }
     // THIS IS THE PACKAGE / PRODUCT MAIN INTERFACE
-    interface IProductPricing {
+    interface IProduct {
+        _id?: string;
         nameSlug?: string;
         preTitle?: string;
         title?: string;
@@ -72,15 +53,13 @@ declare global {
         customTextClassName?: string;
         customPriceCLassName?: string;
         icon?: string;
-        featured?: boolean;
         seePlansLink?: string;
-        child: IProductPricingChildItems[];
-    }
+        packages: [IProductPackage];
 
+    }
     // getPriceForBanner API Call
     interface IGetPriceForBanner {
         serviceName: string;
         serviceType: string;
     }
-
 }

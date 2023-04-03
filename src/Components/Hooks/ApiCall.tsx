@@ -2,7 +2,6 @@ import { productPricingData } from "../Data/ProductPricing";
 import { calculateMonthlyPriceAfterDiscount } from "./MathLogics";
 
 export const findServiceByName = (serviceName: string) => {
-
   return productPricingData.find((p) => p?.nameSlug.includes(serviceName));
 };
 // this using on every single service pages

@@ -14,7 +14,7 @@ import { toast } from "react-hot-toast";
 import ProductCardFirstChild from "./ProductCardFirstChild";
 
 interface IProps {
-  product: any;
+  product: IProductPackage;
   className?: string;
   type?: string;
 }
@@ -27,7 +27,6 @@ const buttonDataByMonth = [
 ];
 
 const ProductCard: FC<IProps> = ({ product, className, type }) => {
-
   // console.log(product);
   // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=annually
   // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=biennially
@@ -98,7 +97,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setAdditionalDiscount(additionalDiscountForAll);
       setRegularPrice(oneYearPackage);
       // notifications
-      const notification = `You are getting $${totalSavings.toFixed(0)} discount for 1-Year service term of the ${product?.title}.`;
+      const notification = `You are getting $${totalSavings.toFixed(0)} discount for 1-Year service term of the ${product?.productTitle}.`;
       toast.success(notification);
     }
     if (selectedPackage == 24) {
@@ -113,7 +112,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setAdditionalDiscount(additionalDiscountForAll);
       setRegularPrice(twoYearPackage);
       // notifications
-      const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 2-Year service term of the ${product?.title}.`;
+      const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 2-Year service term of the ${product?.productTitle}.`;
       toast.success(notification);
     }
     if (selectedPackage == 36) {
@@ -128,23 +127,24 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setAdditionalDiscount(additionalDiscountForAll);
       setRegularPrice(threeYearPackage);
       // notifications
-      const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 3-Year service term of the ${product?.title}.`;
+      const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 3-Year service term of the ${product?.productTitle}.`;
       toast.success(notification);
     }
   };
+  // console.log("Individual Product Details", product);
 
   return (
     <div className={`px-4 relative py-8 flex flex-col xl:px-8 xl:py-12 rounded-lg group hover:scale-x-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
       {/* Absolute section for featured item */}
       {product?.featured && <div className="absolute text-center w-2/4 left-1/4 -top-5 text-white font-medium rounded-md py-1 bg-red-400 dark:bg-red-700">Most popular</div>}
 
-      <div className="space-y-5 xl:space-y-10 text-center flex flex-col">
+      <div className="space-y-5 xl:space-y-6 text-center flex flex-col">
         <div className="space-y-2">
           <h2 className="text-title font-bold text-2xl">{product?.productTitle}</h2>
           <p className="text-text text-sm">{product?.productDescription}</p>
         </div>
 
-        <div className="space-y-3 xl:space-y-7">
+        <div className="space-y-3 xl:space-y-5">
           {/* 
           
           How much saving the money 
@@ -158,14 +158,14 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
               if selected price not monthly it will show monthly price in line through 
               
               */}
-              {currentPackage !== 1 && <span>${product?.monthlyPackage?.regularPrice}</span>}
+              {currentPackage !== 1 && <span>${product?.monthlyPrice}</span>}
             </span>
             {/* 
 
             if this is features then it will show in red 
             
             */}
-            <div className={`${product?.featured ? "bg-red-400 dark:bg-red-700 text-white" : "bg-green-600/10 text-primary"} px-3 py-1 rounded-2xl font-bold`}>SAVE {savingPercent.toFixed(0)}%</div>
+            <div className={`${product?.featured ? "bg-red-400 dark:bg-red-700 text-white" : "bg-green-600/10 text-primary"} px-3 py-1 rounded-2xl font-bold group-hover:bg-secondary dark:group-hover:bg-secondary group-hover:text-white`}>SAVE {savingPercent.toFixed(0)}%</div>
           </div>
           {/* 
 
@@ -180,7 +180,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
               <div className="text-title font-bold text-5xl">${price.toFixed(2)} </div>
               <div className="text-indigo-300 pt-6">/mo</div>
             </div>
-            <div className={`${product?.featured ? "text-red-400 dark:text-red-700" : "text-primary"} h-10 overflow-hidden font-medium`}>{currentPackage > 12 && product?.additionalMonth && product?.additionalMonth}</div>
+            <div className={`${product?.featured ? "text-red-400 dark:text-red-700" : "text-primary"} h-10 overflow-hidden font-medium`}>{currentPackage > 12 && product?.additionalMonths && product?.additionalMonths}</div>
           </div>
         </div>
 
@@ -196,7 +196,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
             href={orderLink}
             fullWidth
             size="lg"
-            className={`shadow-lg transition ease-in-out duration-500 group-hover:text-white group-hover:bg-black dark:group-hover:bg-slate-700 ${product?.featured ? "bg-red-400 dark:bg-red-700" : ""}`}
+            className={`shadow-lg transition ease-in-out duration-500 group-hover:text-white group-hover:bg-secondary dark:group-hover:bg-secondary ${product?.featured ? "bg-red-400 dark:bg-red-700" : ""}`}
           >
             Order Now
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
@@ -233,15 +233,15 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       // we get type from parent component.      
       */}
       {/* Shared Web Hosting Child Compo */}
-      <ProductCardFirstChild showAllFeature={showAllFeature} features={product.features} />
- 
+      <ProductCardFirstChild idForScrollEvent={product?.typeSlug} showAllFeature={showAllFeature} features={product.features} />
+
       {/*
       
       Show hide more features items
       
       */}
       <div className="text-center pt-2">
-        <Link href={`#${product?.slug}`} className="center w-full px-2 py-2  font-bold text-text text-base group-hover:text-primary flex justify-center items-start space-x-2" onClick={() => setShowAllFeature(!showAllFeature)}>
+        <Link href={`#${product?.typeSlug}`} className="center w-full px-2 py-2  font-bold text-text text-base group-hover:text-primary flex justify-center items-start space-x-2" onClick={() => setShowAllFeature(!showAllFeature)}>
           {" "}
           {showAllFeature ? (
             <>

@@ -1,48 +1,57 @@
+import React, { useContext, useState, useEffect, createContext, FC } from "react";
+import type { AppProps } from "next/app";
+import axios from "axios";
+import { useQuery, QueryClient, QueryClientProvider, dehydrate } from "@tanstack/react-query";
 
-import React, { useContext, createContext, FC } from 'react';
-import type { AppProps } from 'next/app';
-import axios from 'axios';
-import { useQuery,  QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
-interface MyProps {
-    children?: React.ReactNode;
-  }
-interface IContextProps {
-    data?: any;
+interface ReactQueryProviderProps {
+  children?: React.ReactNode;
+  dehydratedState?: unknown;
+}
+interface ReactQueryContextProps {
+  queryClient: QueryClient;
 }
 
-export const ReactQueryContext = createContext<IContextProps>({
-    data:null
+export const ReactQueryContext = createContext<ReactQueryContextProps>({
+  queryClient: new QueryClient(),
 });
 
-// Define a custom hook to use the data context
-export function useData() {
-    const context = useContext(ReactQueryContext);
-    if (!context) {
-      throw new Error('useData must be used within a DataProvider');
-    }
-    return context;
+export const fetchProducts = async () => {
+  const response = await axios.get("http://localhost:5000/api/package/getpackages");
+  return response.data;
+};
+
+const ReactQueryProvider = ({ children, dehydratedState }: ReactQueryProviderProps) => {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: 3,
+      },
+    },
+  });
+
+  if (dehydratedState) {
+    queryClient.resetQueries(dehydratedState);
   }
 
-  function useMyData() {
-    return useQuery<MyData, Error>('myData', fetchMyData);
-  }
-  async function fetchMyData(): Promise<MyData> {
-    const response = await axios.get<MyDataApiResponse>('/api/myData');
-    return response.data.data;
-  }
+  return (
+    <>
+      <ReactQueryContext.Provider value={{ queryClient }}>{children}</ReactQueryContext.Provider>
+    </>
+  );
+};
 
+export const getServerSideProps = async () => {
+  const queryClient = new QueryClient();
 
+  await queryClient.prefetchQuery(["products"], fetchProducts, {
+    staleTime: Infinity,
+  });
 
-const ReactQueryProvider:FC<MyProps> = ({children}) => {
-    return (
-        <>
-        <ReactQueryContext.Provider value={data}>
-            {children}
-        </ReactQueryContext.Provider>
-            
-        </>
-    );
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
 };
 
 export const useReactQueryContext = () => useContext(ReactQueryContext);
