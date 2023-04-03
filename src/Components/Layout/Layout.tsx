@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import { ModalProvider } from "@/Context/ModalProvider";
 import { LoaderProvider } from "@/Context/LoaderProvider";
+import { ReactQueryProvider } from "@/Context/ReactQueryProvider";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -20,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <LoaderProvider>
           <ModalProvider>
             <Header />
-            {children}
+            <ReactQueryProvider>{children}</ReactQueryProvider>
             <Footer />
           </ModalProvider>
         </LoaderProvider>

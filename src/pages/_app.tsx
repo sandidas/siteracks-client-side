@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import Loader from "@/Components/Loader/Loader";
 import { toast, ToastBar, Toaster } from "react-hot-toast";
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Hydrate, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -35,14 +35,18 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router]);
   //# To show loader
 
+  // Creating a new instance of the QueryClient class and passing it as a prop to the QueryClientProvider ensures that all child components have access to the same instance of the queryClient. This is important because it allows the child components to share the same cache, which improves performance by preventing unnecessary network requests when the same data is requested multiple times.
   const queryClient = new QueryClient();
 
   return (
     <Layout>
       {/* Loader  */}
       {loading && <Loader />}
+      {/* by wrapping the component tree with the QueryClientProvider, you're setting up the queryClient object, which provides a centralized data management system and caching mechanism for all the child components that use the react-query library. */}
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <Hydrate state={pageProps.dehydratedState}>
+          <Component {...pageProps} />
+        </Hydrate>
       </QueryClientProvider>
 
       <Toaster
