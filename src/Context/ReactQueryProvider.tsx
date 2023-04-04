@@ -1,6 +1,6 @@
-import React, { useContext, createContext } from "react";
+import React, { useContext, createContext, useState } from "react";
 import axios from "axios";
-import { QueryClient, dehydrate } from "@tanstack/react-query";
+import { QueryClient, dehydrate, QueryClientProvider, useQuery } from "@tanstack/react-query";
 
 interface ReactQueryProviderProps {
   children?: React.ReactNode;
@@ -13,6 +13,7 @@ interface ReactQueryContextProps {
 export const ReactQueryContext = createContext<ReactQueryContextProps>({
   queryClient: new QueryClient(),
 });
+const twentyFourHoursInMs = 1000 * 60 * 60 * 24;
 
 // fetchProducts is an asynchronous function that uses Axios to fetch data from a REST API endpoint. It returns the data from the response.
 export const fetchProducts = async () => {
@@ -41,10 +42,20 @@ export const ReactQueryProvider = ({ children, dehydratedState }: ReactQueryProv
 };
 // getServerSideProps is a function that is used with Next.js to prefetch data on the server-side before rendering the page. It creates a new QueryClient instance, prefetches data for the "products" key using the fetchProducts function, and returns the dehydrated state of the query client.
 export const getServerSideProps = async () => {
-  const queryClient = new QueryClient();
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        keepPreviousData: true,
+        refetchOnWindowFocus: false,
+        retry: false,
+        staleTime: twentyFourHoursInMs,
+        cacheTime: 5000000,
+      },
+    },
+  });
 
   await queryClient.prefetchQuery(["products"], fetchProducts, {
-    staleTime: Infinity,
+    staleTime: twentyFourHoursInMs,
   });
 
   return {
@@ -55,3 +66,20 @@ export const getServerSideProps = async () => {
 };
 // useReactQueryContext is a custom hook that uses the useContext hook from React to access the ReactQueryContext context object and returns the query client instance.
 export const useReactQueryContext = () => useContext(ReactQueryContext);
+
+export const useProducts = () => {
+  const { queryClient } = useReactQueryContext();
+  const {
+    data: products,
+    isLoading,
+    isError,
+  } = useQuery(["products"], fetchProducts, {
+    staleTime: twentyFourHoursInMs,
+  });
+
+  return {
+    products,
+    isLoading,
+    isError,
+  };
+};

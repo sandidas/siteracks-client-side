@@ -13,7 +13,7 @@ import HomeArticle from "@/Components/Home/HomeArticle";
 import { productPricingData } from "@/Components/Data/ProductPricing";
 import ProductCardHome from "@/Components/Card/ProductCardHome";
 import useDynamicHead from "@/Components/Hooks/useDynamicHead";
-import { fetchProducts, useReactQueryContext } from "@/Context/ReactQueryProvider";
+import { fetchProducts, useProducts, useReactQueryContext } from "@/Context/ReactQueryProvider";
 import { useQuery } from "@tanstack/react-query";
 import { Loader } from "@mantine/core";
 
@@ -22,14 +22,14 @@ const inter = Inter({ subsets: ["latin"] });
 export function Home({ menuItems }: any) {
 
 
-  // useQuery hook: This is a hook provided by react-query library that is used to fetch data using a QueryClient. It takes three arguments:
-  const { queryClient } = useReactQueryContext();
-  //     { data: products, isLoading }: This is object destructuring that extracts two properties from the useQuery hook's result:
-  const { data: products, isLoading } = useQuery(["products"], fetchProducts, {
-    initialData: queryClient.getQueryData(["products"]),
-  });
+  // // useQuery hook: This is a hook provided by react-query library that is used to fetch data using a QueryClient. It takes three arguments:
+  // const { queryClient } = useReactQueryContext();
+  // //     { data: products, isLoading }: This is object destructuring that extracts two properties from the useQuery hook's result:
+  // const { data: products, isLoading } = useQuery(["products"], fetchProducts, {
+  //   initialData: queryClient.getQueryData(["products"]),
+  // });
 
-
+  const { products, isLoading, isError } = useProducts()
   
   console.log("QC.Products", products);
 

@@ -8,6 +8,7 @@ import Loader from "@/Components/Loader/Loader";
 import { toast, ToastBar, Toaster } from "react-hot-toast";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { Hydrate, QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryProvider } from "@/Context/ReactQueryProvider";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -45,7 +46,9 @@ export default function App({ Component, pageProps }: AppProps) {
       {/* by wrapping the component tree with the QueryClientProvider, you're setting up the queryClient object, which provides a centralized data management system and caching mechanism for all the child components that use the react-query library. */}
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps.dehydratedState}>
-          <Component {...pageProps} />
+          <ReactQueryProvider>
+            <Component {...pageProps} />
+          </ReactQueryProvider>
         </Hydrate>
       </QueryClientProvider>
 
