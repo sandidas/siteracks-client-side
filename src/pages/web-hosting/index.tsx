@@ -7,29 +7,29 @@ import WebHostingEssentials from "@/Components/Pages/WebHosting/WebHostingEssent
 import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
 import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
+import { useProducts } from "@/Context/ReactQueryProvider";
 
 // import axios from "axios";
 // import Head from "next/head";
-import React, { FC } from "react";
-
-// interface IProductFetch {
-//   webHosting: { child: [{}] };
-// }
-// export interface IProductProps {
-//   products: [];
-// }
+import React from "react";
 
 const WebHosting = () => {
+  const { products, isLoading, isError } = useProducts();
+
+
+  console.log("Web Hosting", products);
+
+
   return (
     <>
       {useDynamicHead({ slug: "webHosting" })}
 
       <main>
         <section className="bg-surface">
-          <WebHostingBanner />
+          <WebHostingBanner products={products} isLoading={isLoading} isError={isError} />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WebHostingPricing />
+          <WebHostingPricing products={products} isLoading={isLoading} isError={isError} />
         </section>
         <WebHostingArticle />
         <LiveChat />

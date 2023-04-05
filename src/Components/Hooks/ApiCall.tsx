@@ -13,11 +13,10 @@ export const findServiceByNameAndType = (serviceName: string, serviceType: strin
 };
 
 // calculateMonthlyPriceAfterDiscount(36, threeYearPackage?.regularPrice, threeYearPackage?.additionalDiscount, monthlyRegularPrice)
+// @ts-ignore
 
-export const getPriceForBanner = (serviceName: string = "wordPressHosting", serviceType: string = "standardWPhosting") => {
-  const beginnerPackage = findServiceByNameAndType(serviceName, serviceType);
-  //@ts-ignore
-  const getPrice = calculateMonthlyPriceAfterDiscount(36, beginnerPackage?.trienniallyPrice, beginnerPackage?.additionalDiscount, beginnerPackage?.monthlyPrice);
+export const getPriceForBanner = (getPackage: IProductPackage) => {
+  const getPrice = calculateMonthlyPriceAfterDiscount(36, getPackage?.trienniallyPrice, getPackage?.additionalDiscount, getPackage?.monthlyPrice);
 
   return getPrice;
 };

@@ -26,14 +26,14 @@ declare global {
     }
     // THIS IS THE PACKAGE / PRODUCT'S CHILD INTERFACE
     interface IProductPackage {
-        typeSlug?: string;
+        typeSlug: string;
         productTitle?: string;
         productDescription?: string;
         productId: number;
         featured?: boolean;
         additionalMonths?: string;
         promoCode?: string;
-        additionalDiscount?: number;
+        additionalDiscount: number;
         monthlyPrice: number;
         annuallyPrice: number;
         bienniallyPrice: number;
@@ -43,7 +43,7 @@ declare global {
     // THIS IS THE PACKAGE / PRODUCT MAIN INTERFACE
     interface IProduct {
         _id?: string;
-        nameSlug?: string;
+        nameSlug: string;
         preTitle?: string;
         title?: string;
         shortDescription?: string;

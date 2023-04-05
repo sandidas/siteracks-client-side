@@ -1,10 +1,19 @@
 import { Button } from "@mantine/core";
-import React from "react";
+import React, { FC } from "react";
 import PremiumWebsiteBuilder from "../../../../public/images/webHosting/web-hosting-banner.svg";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { getPriceForBanner } from "@/Components/Hooks/ApiCall";
-const WebHostingBanner = () => {
-  const packagePrice = getPriceForBanner("sharedWebHosting", "standardWebhosting");
+import WebHostingBannerPrice from "./WebHostingBannerPrice";
+
+interface IProps {
+  products: { data: IProduct[] };
+  isLoading: boolean;
+  isError: boolean;
+}
+
+const WebHostingBanner: FC<IProps> = ({ products, isLoading, isError }) => {
+  
+  
   return (
     <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
@@ -29,7 +38,12 @@ const WebHostingBanner = () => {
         <div className="pt-5">
           <div className="text-text">Starting at</div>
           <div className="flex">
-            <div className="text-primary font-bold text-5xl group-hover:text-text">${packagePrice.toFixed(2)}</div>
+            <div className="text-primary font-bold text-5xl group-hover:text-text">
+            
+            
+            <WebHostingBannerPrice products={products} isLoading={isLoading} isError={isError} />
+            
+            </div>
             <div className="text-text pt-3">/mo</div>
           </div>
         </div>

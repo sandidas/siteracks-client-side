@@ -1,11 +1,19 @@
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
-import { Button } from "@mantine/core";
-import React from "react";
+import { Button, Loader } from "@mantine/core";
+import React, { FC } from "react";
 import HomeBannerImage from "../../../public/images/webHosting/home-page-banner.svg";
 import { getPriceForBanner } from "../Hooks/ApiCall";
+import HomeBannerPrice from "./HomeBannerPrice";
 
-const HomeBanner = () => {
-  const packagePrice = getPriceForBanner("wordPressHosting", "standardWPhosting");
+interface IProps {
+  products: { data: IProduct[] };
+  isLoading: boolean;
+  isError: boolean;
+}
+
+const HomeBanner: FC<IProps> = ({ products, isLoading, isError }) => {
+
+
   return (
     <section className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
@@ -36,7 +44,11 @@ const HomeBanner = () => {
         <div className="pt-5">
           <div className="flex space-x-1">
             <div className="text-text pt-3">Starting at </div>
-            <div className="text-primary font-bold text-4xl group-hover:text-text"> ${packagePrice.toFixed(2)} </div>
+
+            <div className="text-primary font-bold text-4xl group-hover:text-text">
+              <HomeBannerPrice products={products} isLoading={isLoading} isError={isError} />
+            </div>
+
             <div className="text-text pt-3">/mo*</div>
           </div>
         </div>
