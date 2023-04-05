@@ -1,7 +1,6 @@
 import ProductCard from "@/Components/Card/ProductCard";
 import React, { FC } from "react";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-import { useProducts } from "@/Context/ReactQueryProvider";
 import { Loader } from "@mantine/core";
 
 interface IProps {

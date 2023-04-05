@@ -1,12 +1,16 @@
 import ProductCard from "@/Components/Card/ProductCard";
-import { resellerHostingData } from "@/Components/Data/ProductDataResellerHosting";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-import { useProducts } from "@/Context/ReactQueryProvider";
 import { Loader } from "@mantine/core";
-import React from "react";
+import React, { FC } from "react";
+interface IProps {
+  products: {
+    data: IProduct[];
+  };
+  isLoading: boolean;
+  isError: boolean;
+}
 
-const ResellerHostingPricing = () => {
-  const { products, isLoading, isError } = useProducts();
+const ResellerHostingPricing: FC<IProps> = ({ products, isLoading, isError }) => {
   if (isLoading) {
     // return a loading indicator or skeleton
     return <Loader color="green" />;
@@ -17,8 +21,10 @@ const ResellerHostingPricing = () => {
     return <p>Sorry, something went wrong. Please refresh the page.</p>;
   }
 
-  const getPackages = products?.data;
-  const { packages } = getPackages.find((p: IProduct) => p?.nameSlug.includes("resellerHosting"));
+  // const getPackage = products?.data;
+  // To avoid a possible runtime error when trying to access the packages property of an undefined value, the || {} operator is used to provide a fallback value in case find() returns undefined. In this case, the fallback value is an empty object.
+  const { packages = [] } = products?.data.find((p: IProduct) => p?.nameSlug.includes("resellerHosting")) || {};
+  // const { packages } = products?.data.find((p: IProduct) => p?.nameSlug.includes("sharedWebHosting")) || { packages: [] };
 
   return (
     <div>
