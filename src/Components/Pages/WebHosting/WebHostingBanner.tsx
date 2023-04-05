@@ -2,7 +2,6 @@ import { Button } from "@mantine/core";
 import React, { FC } from "react";
 import PremiumWebsiteBuilder from "../../../../public/images/webHosting/web-hosting-banner.svg";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
-import { getPriceForBanner } from "@/Components/Hooks/ApiCall";
 import WebHostingBannerPrice from "./WebHostingBannerPrice";
 
 interface IProps {

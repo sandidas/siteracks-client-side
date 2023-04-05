@@ -11,18 +11,22 @@ import React from "react";
 import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import useDynamicHead from "@/Components/Hooks/useDynamicHead";
+import { useProducts } from "@/Context/ReactQueryProvider";
 
 
 const WordPressHosting = () => {
+  const { products, isLoading, isError } = useProducts();
+
+
   return (
     <>
       {useDynamicHead({ slug: "wordPressHosting" })}
       <main>
         <section className="bg-surface">
-          <WordPressHostingBanner />
+          <WordPressHostingBanner products={products} isLoading={isLoading} isError={isError} />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WordPressHostingPricing />
+          <WordPressHostingPricing products={products} isLoading={isLoading} isError={isError} />
         </section>
     
         <WordPressHostingArticle />

@@ -13,11 +13,8 @@ import BusinessHostingCompare from "@/Components/Pages/BusinessHosting/BusinessH
 import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import useDynamicHead from "@/Components/Hooks/useDynamicHead";
-import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
-import axios from "axios";
-import { GetServerSidePropsContext } from "next";
-import { fetchProducts, useReactQueryContext } from "@/Context/ReactQueryProvider";
-import { useQuery } from "@tanstack/react-query";
+import { useProducts } from "@/Context/ReactQueryProvider";
+
 
 // interface IProps {
 //   data: IProduct;
@@ -25,19 +22,19 @@ import { useQuery } from "@tanstack/react-query";
 // }
 
 const BusinessHosting = () => {
-  // const businessHosting = products?.data;
+  const { products, isLoading, isError } = useProducts();
 
-  // console.log(data);
+  
   return (
     <>
       {useDynamicHead({ slug: "businessHosting" })}
       <main>
         <section className="bg-surface">
-          <BusinessHostingBanner />
+          <BusinessHostingBanner products={products} isLoading={isLoading} isError={isError} />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           {}
-          <BusinessHostingPricing />
+          <BusinessHostingPricing products={products} isLoading={isLoading} isError={isError} />
         </section>
         <BusinessHostingCompare />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">

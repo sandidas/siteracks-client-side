@@ -15,11 +15,6 @@ import React from "react";
 
 const WebHosting = () => {
   const { products, isLoading, isError } = useProducts();
-
-
-  console.log("Web Hosting", products);
-
-
   return (
     <>
       {useDynamicHead({ slug: "webHosting" })}

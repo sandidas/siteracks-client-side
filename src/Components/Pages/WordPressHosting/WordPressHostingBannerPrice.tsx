@@ -7,7 +7,7 @@ interface IProps {
   isError: boolean;
 }
 
-const WebHostingBannerPrice: FC<IProps> = ({ products, isLoading, isError }) => {
+const WordPressHostingBannerPrice: FC<IProps> = ({ products, isLoading, isError }) => {
   if (isLoading) {
     // return a loading indicator or skeleton
     return <Loader color="green" />;
@@ -15,13 +15,14 @@ const WebHostingBannerPrice: FC<IProps> = ({ products, isLoading, isError }) => 
   // select all services
   const services = products?.data;
   // select single service
-  const getService = services.find((p: IProduct) => p?.nameSlug?.includes("sharedWebHosting"));
+  const getService = services.find((p: IProduct) => p?.nameSlug?.includes("wordPressHosting"));
   // select single package from service
-  const getPackage = getService?.packages?.find((p) => p?.typeSlug?.includes("standardWebHosting"));
+  const getPackage = getService?.packages?.find((p) => p?.typeSlug?.includes("standardWpHosting"));
   // get calculated price
   const getCalculatedPackagePrice = getPriceForBanner(getPackage as IProductPackage);
 
+  
   return <>${getCalculatedPackagePrice.toFixed(2)}</>;
 };
 
-export default WebHostingBannerPrice;
+export default WordPressHostingBannerPrice;
