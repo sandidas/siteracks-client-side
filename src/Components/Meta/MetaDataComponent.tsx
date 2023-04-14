@@ -1,67 +1,12 @@
-import { useEffect, useState } from "react";
 import Head from "next/head";
-import axios, { AxiosResponse } from "axios";
+import React, { FC } from "react";
 
-type Props = {
-  slug: string;
-};
+interface IProps {
+  metaData: IHeadData;
+}
 
-
-
-const useDynamicHead = ({ slug }: Props) => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [headData, setHeadData] = useState<IHeadData>({
-    _id: "",
-    siteName: "",
-    pageSlug: "",
-    pageTitle: "",
-    metaDescription: "",
-    metaKeywords: "",
-    metaAuthor: "",
-    metaOgDescription: "",
-    metaOgImage: "",
-    metaOgTitle: "",
-    metaOgUrl: "",
-    shareTitle: "",
-  });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const API_URL = `${process.env.API_URL}/api/package/getseodata`;
-        const response = await axios.get(API_URL);
-        const results = response?.data?.data;
-        const result = results?.find((service: IHeadData) => service.pageSlug === slug);
-
-        if (result) {
-          setHeadData(result);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-
-      setIsLoading(false);
-    };
-
-    fetchData();
-  }, [slug]);
-
-  return isLoading ? (
-    // when its loading
-    <Head>
-      <title>Loading...</title>
-      <link rel="icon" href="/SiteRacksFavIcon.ico" />
-    </Head>
-  ) : headData.pageTitle ? (
-    // dynamic data from database
-    <Head>
-      <title>{headData.pageTitle}</title>
-      <meta name="description" content={headData.metaDescription} />
-      <link rel="icon" href="/SiteRacksFavIcon.ico" />
-      {/* add more meta tags as needed */}
-    </Head>
-  ) : (
-    // This is common data for all pages, if data not available in database
+const MetaDataComponent = ({ metaData }: IProps) => {
+  return !metaData?.pageTitle ? (
     <Head>
       {/* ==== DEFAULT META ====  */}
       <link rel="icon" href="/SiteRacksFavIcon.ico" />
@@ -94,7 +39,31 @@ const useDynamicHead = ({ slug }: Props) => {
       <meta name="twitter:creator" content="@siteracks" />
       {/* add more meta tags as needed */}
     </Head>
+  ) : (
+    <Head>
+      <link rel="icon" href="/SiteRacksFavIcon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="author" content={`${metaData?.metaAuthor}`} />
+
+      {/* <title dangerouslySetInnerHTML={{ __html: metaData?.pageTitle }} /> */}
+      <title>{Array.isArray(metaData?.pageTitle) ? metaData?.pageTitle.join(' ') : metaData?.pageTitle}</title>
+      
+      <meta name="description" content={`${metaData?.metaDescription}`} />
+      <meta name="keywords" content={`${metaData?.metaKeywords}`} />
+      <link rel="canonical" href="https://siteracks.com/" />
+
+      <meta property="og:title" content={`${metaData?.metaOgTitle}`} />
+      <meta property="og:description" content={`${metaData?.metaOgDescription}`} />
+      <meta property="og:site_name" content="SITE RACKS" />
+      <meta property="og:url" content={`${metaData?.metaOgUrl}`} />
+      <meta property="og:image" content={`${metaData?.metaOgImage}`} />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@siteracks" />
+      <meta name="twitter:creator" content="@siteracks" />
+      {/* add more meta tags as needed */}
+    </Head>
   );
 };
 
-export default useDynamicHead;
+export default MetaDataComponent;

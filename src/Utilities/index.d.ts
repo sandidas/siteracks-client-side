@@ -62,4 +62,21 @@ declare global {
         serviceName: string;
         serviceType: string;
     }
+    // SEO DATA
+    interface IHeadData {
+        _id?: string;
+        siteName?: string;
+        pageSlug?: string;
+        pageTitle?: string;
+        metaDescription: string;
+        metaKeywords: string;
+        metaAuthor: string;
+        metaOgDescription: string;
+        metaOgImage?: string;
+        metaOgTitle?: string;
+        metaOgUrl?: string;
+        shareTitle?: string;
+        // add more properties as needed
+      };
+
 }

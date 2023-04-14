@@ -1,5 +1,4 @@
 import Head from "next/head";
-import HomeCard from "@/Components/Home/HomeCard";
 import HomeFaq from "@/Components/Home/HomeFaq";
 import HomeReview from "@/Components/Home/HomeReview";
 import SiteRacksParkSection from "@/Components/Home/SiteRacksParkSection";
@@ -14,7 +13,7 @@ const Home = () => {
 
       <main>
         <div className="mx-auto max-w-screen-2xl px-5">
-          <HomeCard />
+
           <WebsiteUpSection />
           <SiteRacksParkSection />
           <HomeReview />

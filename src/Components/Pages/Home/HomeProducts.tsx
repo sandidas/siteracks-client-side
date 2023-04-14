@@ -21,6 +21,7 @@ const HomeProducts = () => {
   return <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 py-[10vh]">
     
     {isLoading ? <Loader /> : packages.map((product:IProduct, index:number) => 
+
     <ProductCardHome key={index} product={product} />)}
   
   </div>;

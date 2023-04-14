@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Inter } from "@next/font/google";
 import HomeBanner from "@/Components/Home/HomeBanner";
 import WebsiteUpSection from "@/Components/Home/WebsiteUpSection";
@@ -9,21 +8,26 @@ import HireAnExpert from "@/Components/Home/HireAnExpert";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
-import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import { useProducts } from "@/Context/ReactQueryProvider";
+import React, { FC } from "react";
+import { GetServerSidePropsContext, GetStaticPropsContext } from "next";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
+import { getMetaData } from "@/Helpers/AxiosMetaData";
+import HomeProducts from "@/Components/Pages/Home/HomeProducts";
 
 const inter = Inter({ subsets: ["latin"] });
+interface IProps {
+  menuItems: any;
+  metaData: IHeadData;
+}
 
-export function Home({ menuItems }: any) {
+export const Home:FC<IProps> = ({ menuItems, metaData }) => {
   const { products, isLoading, isError } = useProducts();
-
-
-
+  // console.log("Index", metaData);
   return (
     <>
-      {useDynamicHead({ slug: "home" })}
+      <MetaDataComponent metaData={metaData} />
       <main>
-
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}
         <div style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundPosition: "top center" }}>
@@ -31,8 +35,7 @@ export function Home({ menuItems }: any) {
         </div>
 
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5" id="orderNow">
-          {/* <HomeProducts /> */}
-          {/* <HomeCard /> */}
+          <HomeProducts />
           {/* <ArticleSection /> */}
           <HomeArticle />
         </div>
@@ -64,14 +67,24 @@ export function Home({ menuItems }: any) {
 
 export default Home;
 
-// export async function getServerSideProps(context:GetServerSidePropsContext) {
-//   // const { slug } = context.params;
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const slug = "home";
+  const metaData = await getMetaData(slug);
+
+  return {
+    props: {
+      metaData,
+    },
+    revalidate: 3600, // Cache the page for 1 hour
+  };
+}
+// export async function getServerSideProps(context: GetServerSidePropsContext) {
 //   const slug = "home";
-//   const isSEO = usePageMetadata(slug);
+//   const metaData = await getMetaData(slug);
 
 //   return {
 //     props: {
-//       isSEO,
+//       metaData,
 //     },
 //   };
 // }

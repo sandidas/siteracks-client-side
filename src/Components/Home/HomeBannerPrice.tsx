@@ -18,6 +18,8 @@ const HomeBannerPrice: FC<IProps> = ({ products, isLoading, isError }) => {
     const getService = services && services.find((p: IProduct) => p?.nameSlug?.includes("wordPressHosting"));
     // select single package from service
     const getPackage = getService && getService?.packages?.find((p) => p?.typeSlug?.includes("standardWpHosting"));
+
+
     // get calculated price
     const getCalculatedPackagePrice = getPriceForBanner(getPackage as IProductPackage);
     return <>${getCalculatedPackagePrice.toFixed(2)}</>;

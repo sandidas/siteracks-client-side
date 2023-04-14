@@ -2,7 +2,6 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button, Loader } from "@mantine/core";
 import React, { FC } from "react";
 import HomeBannerImage from "../../../public/images/webHosting/home-page-banner.svg";
-import { getPriceForBanner } from "../Hooks/ApiCall";
 import HomeBannerPrice from "./HomeBannerPrice";
 
 interface IProps {

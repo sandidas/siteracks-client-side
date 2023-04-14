@@ -4,17 +4,15 @@ import React, { FC } from "react";
 import { getPriceForBanner } from "../Hooks/ApiCall";
 import Icon from "../Hooks/Icon";
 interface IProps {
-  product: IProductPricing;
+  product: IProduct;
 }
 
 const ProductCardHome: FC<IProps> = ({ product }) => {
-  const pNameSlug = product?.nameSlug ? product?.nameSlug : "";
+  // console.log("product", product);
 
   // To get package price, here I am sending 2 props by "getPriceBanner" props 1) product prices name slug, ex. wordPressHosting
   // props 2: child[0], that means 1st item of child, ex. "typeSlug": "standardWpHosting"
-  const packagePrice = getPriceForBanner(product?.nameSlug, product?.child[0]?.typeSlug);
-
-  console.log();
+  const packagePrice = getPriceForBanner(product?.packages[0]);
 
   //   console.log(product?.nameSlug);
   //   console.log(product?.child[0]?.typeSlug);

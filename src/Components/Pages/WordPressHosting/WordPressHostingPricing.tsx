@@ -1,5 +1,4 @@
 import ProductCard from "@/Components/Card/ProductCard";
-import { wordpressHostingData } from "@/Components/Data/ProductDataWordPressHosting";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import { useProducts } from "@/Context/ReactQueryProvider";
 import { Loader } from "@mantine/core";
