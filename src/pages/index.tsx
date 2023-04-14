@@ -21,7 +21,7 @@ interface IProps {
   metaData: IHeadData;
 }
 
-export const Home:FC<IProps> = ({ menuItems, metaData }) => {
+export const Home: FC<IProps> = ({ menuItems, metaData }) => {
   const { products, isLoading, isError } = useProducts();
   // console.log("Index", metaData);
   return (
@@ -59,7 +59,7 @@ export const Home:FC<IProps> = ({ menuItems, metaData }) => {
       </main>
     </>
   );
-}
+};
 
 // Home.getLayout = function getLayout(page: ReactElement) {
 //   return <Layout>{page} </Layout>;
@@ -71,11 +71,25 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = "home";
   const metaData = await getMetaData(slug);
 
+  if (!metaData) {
+    // Return a default value if metaData is undefined
+    return {
+      props: {
+        metaData: {
+          // title: "Default Title",
+          // description: "Default description",
+          // // ...other default values
+        },
+      },
+      revalidate: 3600,
+    };
+  }
+
   return {
     props: {
       metaData,
     },
-    revalidate: 3600, // Cache the page for 1 hour
+    revalidate: 3600,
   };
 }
 // export async function getServerSideProps(context: GetServerSidePropsContext) {
