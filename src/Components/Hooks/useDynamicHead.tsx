@@ -42,7 +42,8 @@ const useDynamicHead = ({ slug }: Props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/package/getseodata");
+        const API_URL = `${process.env.API_URL}/api/package/getseodata`;
+        const response = await axios.get(API_URL);
         const results = response?.data?.data;
         const result = results?.find((service: HeadData) => service.pageSlug === slug);
 
