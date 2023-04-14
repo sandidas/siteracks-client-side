@@ -16,9 +16,9 @@ const ResellerHostingBannerPrice: FC<IProps> = ({ products, isLoading, isError }
       // select all services
       const services = products?.data;
       // select single service
-      const getService = services.find((p: IProduct) => p?.nameSlug?.includes("sharedWebHosting"));
+      const getService = services && services.find((p: IProduct) => p?.nameSlug?.includes("sharedWebHosting"));
       // select single package from service
-      const getPackage = getService?.packages?.find((p) => p?.typeSlug?.includes("standardWebHosting"));
+      const getPackage = getService && getService?.packages?.find((p) => p?.typeSlug?.includes("standardWebHosting"));
       // get calculated price
       const getCalculatedPackagePrice = getPriceForBanner(getPackage as IProductPackage);
     

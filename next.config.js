@@ -4,6 +4,7 @@ const nextConfig = {
   
   env: {
     API_KEY: process.env.API_HOST,
+    API_URL: process.env.API_URL,
   },
   // experimental: {
   //   appDir: false,

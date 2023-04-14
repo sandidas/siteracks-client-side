@@ -1,5 +1,5 @@
 "use client"; // this is a client component
-import Loader from "@/Components/Loader/Loader";
+import Loader from "@/Components/Loader/LoaderComponent";
 import TawkTo from "@/lib/tawkto";
 import React, { createContext, useContext, useState, useEffect } from "react";
 

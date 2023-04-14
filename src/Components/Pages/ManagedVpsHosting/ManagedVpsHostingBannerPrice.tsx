@@ -15,9 +15,9 @@ const ManagedVpsHostingBannerPrice: FC<IProps> = ({ products, isLoading, isError
     // select all services
     const services = products?.data;
     // select single service
-    const getService = services.find((p: IProduct) => p?.nameSlug?.includes("managedVpsHosting"));
+    const getService = services && services.find((p: IProduct) => p?.nameSlug?.includes("managedVpsHosting"));
     // select single package from service
-    const getPackage = getService?.packages?.find((p) => p?.typeSlug?.includes("startUpManagedVPSHosting"));
+    const getPackage = getService && getService?.packages?.find((p) => p?.typeSlug?.includes("startUpManagedVPSHosting"));
     // get calculated price
     const getCalculatedPackagePrice = getPriceForBanner(getPackage as IProductPackage);
   

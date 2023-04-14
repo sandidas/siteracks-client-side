@@ -1,6 +1,6 @@
 import React, { useContext, createContext, useState } from "react";
 import axios from "axios";
-import { QueryClient, dehydrate, QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { QueryClient, dehydrate, useQuery } from "@tanstack/react-query";
 
 interface ReactQueryProviderProps {
   children?: React.ReactNode;
@@ -17,7 +17,8 @@ const twentyFourHoursInMs = 1000 * 60 * 60 * 24;
 
 // fetchProducts is an asynchronous function that uses Axios to fetch data from a REST API endpoint. It returns the data from the response.
 export const fetchProducts = async () => {
-  const response = await axios.get("http://localhost:5000/api/package/getpackages");
+  const API_URL = `${process.env.API_URL}/api/package/getpackages`;
+  const response = await axios.get(API_URL);
   return response.data;
 };
 // ReactQueryProvider is a component that wraps the children components with a QueryClient provider. It initializes a new QueryClient instance and passes it down through the context. If dehydratedState is passed in as a prop, it resets the queries of the QueryClient with that data.

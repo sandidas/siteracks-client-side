@@ -46,7 +46,7 @@ const UseAxiosAdmin = async (props: IHandleSubmitProps): Promise<ApiResponse> =>
   // console.log(data);
   
   const API_URL = `${process.env.API_URL}${url}`;
-  console.log(API_URL);
+  // console.log(API_URL);
   // const options = {
   //   headers: { "content-type": "application/json; charset=UTF-8" },
   //   withCredentials: true, // this is to send the credentials

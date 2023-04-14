@@ -3,12 +3,6 @@ import { ArrowLongDownIcon, ArrowLongRightIcon, ArrowLongUpIcon } from "@heroico
 import { Button } from "@mantine/core";
 import Link from "next/link";
 import React, { FC, useState } from "react";
-import ProductCardSharedWebHostingItems from "./ProductCardSharedWebHostingItems";
-
-import ProductCardWordPressHostingItems from "./ProductCardWordPressHostingItems";
-import ProductCardBusinessHostingItems from "./ProductCardBusinessHostingItems";
-import ProductCardManagedVpsHostingItems from "./ProductCardManagedVpsHostingItems";
-import ProductCardResellerHostingItems from "./ProductCardResellerHostingItems";
 import { calculateSavingAmount, calculateSavingPercent, calculateDiscountFromPercentage, calculateMonthlyPriceAfterDiscount } from "../Hooks/MathLogics";
 import { toast } from "react-hot-toast";
 import ProductCardFirstChild from "./ProductCardFirstChild";
@@ -190,13 +184,13 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
         <div className="space-y-2 xl:space-y-4">
           <Button
             sx={(theme) => ({
-              backgroundColor: theme.colorScheme === "dark" ? theme.colors.main[8] : theme.colors.main[7],
+              backgroundColor: theme.colorScheme === "dark" ? theme.colors.main[9] : theme.colors.main[7],
             })}
             component="a"
             href={orderLink}
             fullWidth
             size="lg"
-            className={`shadow-lg transition ease-in-out duration-500 group-hover:text-white group-hover:bg-secondary dark:group-hover:bg-secondary ${product?.featured ? "bg-red-400 dark:bg-red-700" : ""}`}
+            className={`shadow-lg transition ease-in-out duration-500 group-hover:text-white group-hover:bg-primary dark:group-hover:bg-primary ${product?.featured ? "bg-red-400 dark:bg-red-700" : ""}`}
           >
             Order Now
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
@@ -206,7 +200,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
             You pay $ {payToday.toFixed(2)} today for {currentPackage == 1 ? currentPackage : currentPackage == 12 ? <>1</> : currentPackage == 24 ? <>2</> : <>3</>}
             {currentPackage == 1 ? " Month" : "-Year"} service term
             {additionalDiscount != 0 && (
-              <span className="bg-yellow-100 pl-1">
+              <span className="bg-yellow-100 dark:bg-surface pl-1">
                 {" "}
                 <br /> (bonus {additionalDiscount}% off coupon included)
               </span>
@@ -241,7 +235,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       
       */}
       <div className="text-center pt-2">
-        <Link href={`#${product?.typeSlug}`} className="center w-full px-2 py-2  font-bold text-text text-base group-hover:text-primary flex justify-center items-start space-x-2" onClick={() => setShowAllFeature(!showAllFeature)}>
+        <Link href={`#${product?.typeSlug}`} className="center w-full px-2 py-2 font-bold text-text text-base group-hover:text-primary flex justify-center items-start space-x-2" onClick={() => setShowAllFeature(!showAllFeature)}>
           {" "}
           {showAllFeature ? (
             <>

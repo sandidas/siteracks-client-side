@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import HomeBanner from "@/Components/Home/HomeBanner";
-import HomeCard from "@/Components/Home/HomeCard";
 import WebsiteUpSection from "@/Components/Home/WebsiteUpSection";
 import SiteRacksParkSection from "@/Components/Home/SiteRacksParkSection";
 import HomeReview from "@/Components/Home/HomeReview";
@@ -10,30 +9,21 @@ import HireAnExpert from "@/Components/Home/HireAnExpert";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
-import { productPricingData } from "@/Components/Data/ProductPricing";
-import ProductCardHome from "@/Components/Card/ProductCardHome";
 import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import { useProducts } from "@/Context/ReactQueryProvider";
-import { useQuery } from "@tanstack/react-query";
-import { Loader } from "@mantine/core";
-import HomeProducts from "@/Components/Pages/Home/HomeProducts";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export function Home({ menuItems }: any) {
-
   const { products, isLoading, isError } = useProducts();
+
 
 
   return (
     <>
-      <Head>
-        <title>SiteRacks</title>
-        <meta name="description" content="SiteRacks" />
-      </Head>
-
       {useDynamicHead({ slug: "home" })}
       <main>
+
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}
         <div style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundPosition: "top center" }}>
@@ -73,3 +63,15 @@ export function Home({ menuItems }: any) {
 // };
 
 export default Home;
+
+// export async function getServerSideProps(context:GetServerSidePropsContext) {
+//   // const { slug } = context.params;
+//   const slug = "home";
+//   const isSEO = usePageMetadata(slug);
+
+//   return {
+//     props: {
+//       isSEO,
+//     },
+//   };
+// }
