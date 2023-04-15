@@ -1,4 +1,4 @@
-import useDynamicHead from "@/Components/Hooks/useDynamicHead";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import AboutSiteracksServicesTC from "@/Components/Pages/TermsAndConditions/AboutSiteracksServicesTC";
 import AcceptanceOfTermsTC from "@/Components/Pages/TermsAndConditions/AcceptanceOfTermsTC";
 import AccuracyCompletenessAndTC from "@/Components/Pages/TermsAndConditions/AccuracyCompletenessAndTC";
@@ -15,13 +15,18 @@ import UserContentTC from "@/Components/Pages/TermsAndConditions/UserContentTC";
 import YourAccountTC from "@/Components/Pages/TermsAndConditions/YourAccountTC";
 import YourRepresentationsTC from "@/Components/Pages/TermsAndConditions/YourRepresentationsTC";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-import Head from "next/head";
-import React from "react";
+import { getMetaData } from "@/Helpers/AxiosMetaData";
+import { GetStaticPropsContext } from "next";
 
-const TOC = () => {
+import React, { FC } from "react";
+interface IProps {
+  metaData: IHeadData;
+}
+
+const TOC: FC<IProps> = ({ metaData }) => {
   return (
     <>
-      {useDynamicHead({ slug: "toc" })}
+      <MetaDataComponent metaData={metaData} />
       <main>
         <section className="bg-surface pb-[8vh] md:pt-[12vh]">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5 space-y-5">
@@ -55,14 +60,35 @@ const TOC = () => {
             <ProhibitedUsesTC />
             <ChangesTC />
             <GoverningLawAndJurisdictionTC />
-
-
-
           </div>
         </section>
       </main>
     </>
   );
 };
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const slug = "termsAndConditions"; // CHANGE THIS SLUG
+  const metaData = await getMetaData(slug);
+  if (!metaData) {
+    // Return a default value if metaData is undefined
+    return {
+      props: {
+        metaData: {
+          // title: "Default Title",
+          // description: "Default description",
+          // // ...other default values
+        },
+      },
+      revalidate: 86400, // 3600 = 1 hour
+    };
+  }
+  return {
+    props: {
+      metaData,
+    },
+    revalidate: 86400, // 3600 = 1 hour
+  };
+}
 
 export default TOC;

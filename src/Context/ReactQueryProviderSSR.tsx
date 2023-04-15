@@ -1,7 +1,6 @@
-import React, { useContext, createContext } from "react";
+import React, { useContext, createContext, useState } from "react";
 import axios from "axios";
 import { QueryClient, dehydrate, useQuery } from "@tanstack/react-query";
-import { GetStaticProps } from "next";
 
 interface ReactQueryProviderProps {
   children?: React.ReactNode;
@@ -43,7 +42,7 @@ export const ReactQueryProvider = ({ children, dehydratedState }: ReactQueryProv
   );
 };
 // getServerSideProps is a function that is used with Next.js to prefetch data on the server-side before rendering the page. It creates a new QueryClient instance, prefetches data for the "products" key using the fetchProducts function, and returns the dehydrated state of the query client.
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps = async () => {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -64,7 +63,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: 86400, // 3600 = 1 hour
   };
 };
 // useReactQueryContext is a custom hook that uses the useContext hook from React to access the ReactQueryContext context object and returns the query client instance.

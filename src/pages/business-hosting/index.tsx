@@ -1,8 +1,6 @@
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import LiveChat from "@/Components/LiveChat/LiveChat";
-import Head from "next/head";
 import React, { FC } from "react";
-
 import BusinessHostingBanner from "@/Components/Pages/BusinessHosting/BusinessHostingBanner";
 import BusinessHostingPricing from "@/Components/Pages/BusinessHosting/BusinessHostingPricing";
 import BusinessHostingArticle from "@/Components/Pages/BusinessHosting/BusinessHostingArticle";
@@ -12,22 +10,20 @@ import BusinessHostingFaq from "@/Components/Pages/BusinessHosting/BusinessHosti
 import BusinessHostingCompare from "@/Components/Pages/BusinessHosting/BusinessHostingCompare";
 import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
-import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import { useProducts } from "@/Context/ReactQueryProvider";
+import { getMetaData } from "@/Helpers/AxiosMetaData";
+import { GetStaticPropsContext } from "next";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
+interface IProps {
+  metaData: IHeadData;
+}
 
-
-// interface IProps {
-//   data: IProduct;
-//   error?: string;
-// }
-
-const BusinessHosting = () => {
+const BusinessHosting: FC<IProps> = ({ metaData }) => {
   const { products, isLoading, isError } = useProducts();
 
-  
   return (
     <>
-      {useDynamicHead({ slug: "businessHosting" })}
+      <MetaDataComponent metaData={metaData} />
       <main>
         <section className="bg-surface">
           <BusinessHostingBanner products={products} isLoading={isLoading} isError={isError} />
@@ -65,6 +61,30 @@ const BusinessHosting = () => {
 };
 
 export default BusinessHosting;
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const slug = "businessHosting"; // CHANGE THIS SLUG
+  const metaData = await getMetaData(slug);
+  if (!metaData) {
+    // Return a default value if metaData is undefined
+    return {
+      props: {
+        metaData: {
+          // title: "Default Title",
+          // description: "Default description",
+          // // ...other default values
+        },
+      },
+      revalidate: 86400, // 3600 = 1 hour
+    };
+  }
+  return {
+    props: {
+      metaData,
+    },
+    revalidate: 86400, // 3600 = 1 hour
+  };
+}
 
 // export const getServerSideProps = async (context: GetServerSidePropsContext) => {
 //   // SEND COOKIES TO API SERVER

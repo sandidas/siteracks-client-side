@@ -25,7 +25,7 @@ const ProductCardHome: FC<IProps> = ({ product }) => {
           <Icon iconName={product?.icon} customClass={product?.customIconClassName} />
 
           <h2 className={`font-bold text-3xl flex flex-col pt-1 ${product?.customTitleClassName}`}>
-            {product?.preTitle && <small className="text-xs w-full">{product?.preTitle} </small>}
+            {product?.preTitle !== "false" && <small className="text-xs w-full">{product?.preTitle} </small>}
 
             <span className="-mt-2">{product?.title}</span>
           </h2>

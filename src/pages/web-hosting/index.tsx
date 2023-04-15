@@ -63,7 +63,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
           // // ...other default values
         },
       },
-      revalidate: 3600,
+      revalidate: 86400, // 3600 = 1 hour
     };
   }
 
@@ -71,7 +71,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     props: {
       metaData,
     },
-    revalidate: 3600,
+    revalidate: 86400, // 3600 = 1 hour
   };
 }
 

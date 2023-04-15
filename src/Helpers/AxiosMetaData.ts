@@ -6,7 +6,7 @@ interface IMetaDataCache {
     };
 }
 
-const CACHE_TTL = 60 * 60 * 1000; // 1 hour in milliseconds
+const CACHE_TTL = 60 * 60 * 24000; // 24 hours in milliseconds
 const metaDataCache: IMetaDataCache = {};
 
 export const getMetaData = async (slug: string) => {

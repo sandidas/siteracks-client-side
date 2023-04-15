@@ -1,6 +1,6 @@
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
-import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import LiveChat from "@/Components/LiveChat/LiveChat";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import ManagedVpsHostingArticle from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingArticle";
 import ManagedVpsHostingBanner from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingBanner";
@@ -10,14 +10,18 @@ import ManagedVpsHostingMoreBenefits from "@/Components/Pages/ManagedVpsHosting/
 import ManagedVpsHostingPricing from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingPricing";
 import ManagedVpsHostingReadyApps from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingReadyApps";
 import { useProducts } from "@/Context/ReactQueryProvider";
-import Head from "next/head";
-import React from "react";
+import { getMetaData } from "@/Helpers/AxiosMetaData";
+import { GetStaticPropsContext } from "next";
+import React, { FC } from "react";
+interface IProps {
+  metaData: IHeadData;
+}
 
-const VpsLight = () => {
+const VpsLight: FC<IProps> = ({ metaData }) => {
   const { products, isLoading, isError } = useProducts();
   return (
     <>
-      {useDynamicHead({ slug: "managedVPS" })}
+      <MetaDataComponent metaData={metaData} />
       <main>
         <section className="bg-surface">
           <ManagedVpsHostingBanner products={products} isLoading={isLoading} isError={isError} />
@@ -49,3 +53,27 @@ const VpsLight = () => {
 };
 
 export default VpsLight;
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const slug = "preManagedVpsHostingLight"; // CHANGE THIS SLUG
+  const metaData = await getMetaData(slug);
+  if (!metaData) {
+    // Return a default value if metaData is undefined
+    return {
+      props: {
+        metaData: {
+          // title: "Default Title",
+          // description: "Default description",
+          // // ...other default values
+        },
+      },
+      revalidate: 86400, // 3600 = 1 hour
+    };
+  }
+  return {
+    props: {
+      metaData,
+    },
+    revalidate: 86400, // 3600 = 1 hour
+  };
+}

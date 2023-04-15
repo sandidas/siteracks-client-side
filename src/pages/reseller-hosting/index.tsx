@@ -1,5 +1,5 @@
-import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import LiveChat from "@/Components/LiveChat/LiveChat";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import ResellerHostingArticle from "@/Components/Pages/ResellerHosting/ResellerHostingArticle";
 import ResellerHostingBanner from "@/Components/Pages/ResellerHosting/ResellerHostingBanner";
@@ -7,15 +7,18 @@ import ResellerHostingFaq from "@/Components/Pages/ResellerHosting/ResellerHosti
 import ResellerHostingPricing from "@/Components/Pages/ResellerHosting/ResellerHostingPricing";
 import ResellerHostingWhmcs from "@/Components/Pages/ResellerHosting/ResellerHostingWhmcs";
 import { useProducts } from "@/Context/ReactQueryProvider";
-import Head from "next/head";
+import { getMetaData } from "@/Helpers/AxiosMetaData";
+import { GetStaticPropsContext } from "next";
+import React, { FC } from "react";
+interface IProps {
+  metaData: IHeadData;
+}
 
-import React from "react";
-
-const ResellerHosting = () => {
+const ResellerHosting: FC<IProps> = ({ metaData }) => {
   const { products, isLoading, isError } = useProducts();
   return (
     <>
-      {useDynamicHead({ slug: "resellerHosting" })}
+      <MetaDataComponent metaData={metaData} />
       <main>
         <section className="bg-surface bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
           <ResellerHostingBanner products={products} isLoading={isLoading} isError={isError} />
@@ -42,3 +45,27 @@ const ResellerHosting = () => {
 };
 
 export default ResellerHosting;
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const slug = "resellerHosting"; // CHANGE THIS SLUG
+  const metaData = await getMetaData(slug);
+  if (!metaData) {
+    // Return a default value if metaData is undefined
+    return {
+      props: {
+        metaData: {
+          // title: "Default Title",
+          // description: "Default description",
+          // // ...other default values
+        },
+      },
+      revalidate: 86400, // 3600 = 1 hour
+    };
+  }
+  return {
+    props: {
+      metaData,
+    },
+    revalidate: 86400, // 3600 = 1 hour
+  };
+}

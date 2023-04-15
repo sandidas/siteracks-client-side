@@ -5,22 +5,24 @@ import WordPressHostingBanner from "@/Components/Pages/WordPressHosting/WordPres
 import WordPressHostingFaq from "@/Components/Pages/WordPressHosting/WordPressHostingFaq";
 import WordPressHostingMoreBenefits from "@/Components/Pages/WordPressHosting/WordPressHostingMoreBenefits";
 import WordPressHostingPricing from "@/Components/Pages/WordPressHosting/WordPressHostingPricing";
-
-import Head from "next/head";
-import React from "react";
 import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
-import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import { useProducts } from "@/Context/ReactQueryProvider";
+import { getMetaData } from "@/Helpers/AxiosMetaData";
+import { GetStaticPropsContext } from "next";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 
+import React, { FC } from "react";
+interface IProps {
+  metaData: IHeadData;
+}
 
-const WordPressHosting = () => {
+const WordPressHosting: FC<IProps> = ({ metaData }) => {
   const { products, isLoading, isError } = useProducts();
-
 
   return (
     <>
-      {useDynamicHead({ slug: "wordPressHosting" })}
+      <MetaDataComponent metaData={metaData} />
       <main>
         <section className="bg-surface">
           <WordPressHostingBanner products={products} isLoading={isLoading} isError={isError} />
@@ -28,7 +30,7 @@ const WordPressHosting = () => {
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WordPressHostingPricing products={products} isLoading={isLoading} isError={isError} />
         </section>
-    
+
         <WordPressHostingArticle />
 
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
@@ -39,7 +41,6 @@ const WordPressHosting = () => {
           <WordPressBusinessTools />
         </section>
         <LiveChat />
-
 
         <section className="py-[10vh] bg-surface dark:bg-black">
           <FCFeatureForAllPackage />
@@ -52,5 +53,29 @@ const WordPressHosting = () => {
     </>
   );
 };
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const slug = "wordpressHosting"; // CHANGE THIS SLUG
+  const metaData = await getMetaData(slug);
+  if (!metaData) {
+    // Return a default value if metaData is undefined
+    return {
+      props: {
+        metaData: {
+          // title: "Default Title",
+          // description: "Default description",
+          // // ...other default values
+        },
+      },
+      revalidate: 86400, // 3600 = 1 hour
+    };
+  }
+  return {
+    props: {
+      metaData,
+    },
+    revalidate: 86400, // 3600 = 1 hour
+  };
+}
 
 export default WordPressHosting;
