@@ -104,6 +104,12 @@ html {
     font-style: normal;
   }
 }
+.fill-green-200 {
+  fill: #bbf7d0 !important;
+}
+.fill-red-200 {
+  fill: #fecaca !important;
+}
 
 p,
 button {
