@@ -9,7 +9,7 @@ interface IWhatsApp {}
 
 const LiveChat = () => {
   const [textShow, setTextShow] = useState(false);
-
+  const LOGIN_LINK = `${process.env.BILLING_URL}index.php?rp=/login`
   return (
     <>
       <article id="liveChat" className="py-[10vh] bg-surfaceDark" style={{ backgroundImage: `url('/images/background-live-chat.svg')`, backgroundSize: "contain", backgroundPosition: "left center", backgroundRepeat: "no-repeat" }}>
@@ -31,7 +31,7 @@ const LiveChat = () => {
               description={`We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.`}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <FeatureCard background={true}>
                 <div className="space-y-5">
                   <EnvelopeOpenIcon className="fill-primary w-14 h-14" />
@@ -40,7 +40,10 @@ const LiveChat = () => {
                   <p className="text-text">If you are an existing client, please open a support ticket to get faster and more accurate assistance</p>
                 </div>
                 <div className="grow"></div>
-                <Button size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+                <Button
+                component="a"
+                href={LOGIN_LINK}
+                size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
                   <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
                 </Button>
@@ -59,7 +62,7 @@ const LiveChat = () => {
                 </Button>
               </FeatureCard>
 
-              <FeatureCard background={true}>
+              {/* <FeatureCard background={true}>
                 <div className="space-y-5">
                   <ChatBubbleLeftRightIcon className="fill-primary w-14 h-14" />
 
@@ -88,7 +91,7 @@ const LiveChat = () => {
                   Get Started
                   <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
                 </Button>
-              </FeatureCard>
+              </FeatureCard> */}
             </div>
           </div>
         </div>

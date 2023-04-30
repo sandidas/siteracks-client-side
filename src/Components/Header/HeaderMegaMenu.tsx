@@ -2,7 +2,7 @@ import { createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, S
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import SwitchDarkLight from "./SwitchDarkLight";
 
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { ChatBubbleLeftRightIcon, ChevronDownIcon, UserIcon } from "@heroicons/react/24/solid";
 import Logo from "./Logo";
 
 import Link from "next/link";
@@ -420,7 +420,7 @@ export function HeaderMegaMenu() {
 
             {/* Security menu items  */}
 
-            <HoverCard width={700} position="bottom" radius="md" shadow="md" withinPortal>
+            {/* <HoverCard width={700} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -436,7 +436,7 @@ export function HeaderMegaMenu() {
                   {securityLinks}
                 </SimpleGrid>
               </HoverCard.Dropdown>
-            </HoverCard>
+            </HoverCard> */}
 
             {/* Help menu items  */}
 
@@ -454,6 +454,29 @@ export function HeaderMegaMenu() {
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
                 <SimpleGrid cols={2} spacing={0}>
                   {helpLinks}
+                  {/* Custom Live Chat */}
+                  <UnstyledButton
+                    onClick={() => {
+                      Tawk_API.toggle();
+                      closeDrawer;
+                    }}
+                    className="px-3 py-0 xl:p-5 space-y-0 xl:space-y-2 no-underline flex xl:flex-col hover:dark:bg-gray-900 hover:bg-gray-100"
+                  >
+                    {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
+                    <div>
+                      {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
+                      <ChatBubbleLeftRightIcon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
+                    </div>
+
+                    <div>
+                      <Text size={largeScreen ? "xl" : "md"} weight={600} className="dark:text-slate-200">
+                        Live Chat
+                      </Text>
+                      <Text size="xs" color="dimmed">
+                        Customer support service that allows our website users to chat in real-time with a customer support agent to receive assistance or support.
+                      </Text>
+                    </div>
+                  </UnstyledButton>
                 </SimpleGrid>
               </HoverCard.Dropdown>
             </HoverCard>
@@ -464,7 +487,9 @@ export function HeaderMegaMenu() {
 
           <Group className={classes.hiddenMobile}>
             <SwitchDarkLight />
-            <Button>Account</Button>
+            <Button size="md" variant="outline" leftIcon={<UserIcon className="h-5 w-5 fill-primary" />} component="a" href={`${process.env.BILLING_URL}index.php?rp=/login`}>
+              Account
+            </Button>
           </Group>
           <Group className={classes.hiddenDesktop}>
             <SwitchDarkLight />
@@ -503,7 +528,7 @@ export function HeaderMegaMenu() {
           <Collapse in={domainLinksOpened}>{domainLinks}</Collapse>
 
           {/* website items  */}
-          <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleWebsiteLinks}>
+          {/* <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleWebsiteLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 WEBSITE
@@ -511,10 +536,10 @@ export function HeaderMegaMenu() {
               <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${websiteLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
-          <Collapse in={websiteLinksOpened}>{websiteLinks}</Collapse>
+          <Collapse in={websiteLinksOpened}>{websiteLinks}</Collapse> */}
 
           {/* security items  */}
-          <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleSecurityLinks}>
+          {/* <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleSecurityLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 SECURITY
@@ -522,7 +547,7 @@ export function HeaderMegaMenu() {
               <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${securityLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
-          <Collapse in={securityLinksOpened}>{securityLinks}</Collapse>
+          <Collapse in={securityLinksOpened}>{securityLinks}</Collapse> */}
 
           {/* help items  */}
           <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleHelpLinks}>
@@ -533,8 +558,33 @@ export function HeaderMegaMenu() {
               <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${helpLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
-          <Collapse in={helpLinksOpened}>{helpLinks}</Collapse>
-          
+          <Collapse in={helpLinksOpened}>
+            {helpLinks}
+
+            <UnstyledButton
+              onClick={() => {
+                Tawk_API.toggle();
+                closeDrawer;
+              }}
+              className="px-10 py-5 xl:p-5 space-y-0 xl:space-y-2 no-underline flex xl:flex-col hover:dark:bg-gray-900 hover:bg-gray-100"
+            >
+              {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
+              <div>
+                {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
+                <ChatBubbleLeftRightIcon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
+              </div>
+
+              <div>
+                <Text size={largeScreen ? "xl" : "md"} weight={600} className="dark:text-slate-200">
+                  Live Chat
+                </Text>
+                <Text size="xs" color="dimmed">
+                  Customer support service that allows our website users to chat in real-time with a customer support agent to receive assistance or support.
+                </Text>
+              </div>
+            </UnstyledButton>
+          </Collapse>
+
           <Link onClick={closeDrawer} href="/affiliate" className={`${classes.link} uppercase font-medium w-full py-10 text-xl ml-2`}>
             Affiliate
           </Link>
@@ -549,7 +599,5 @@ export function HeaderMegaMenu() {
     </Box>
   );
 }
-
-
 
 export default HeaderMegaMenu;

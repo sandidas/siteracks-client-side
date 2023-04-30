@@ -135,12 +135,12 @@ export const helpMenuItems = [
     description: "A request for assistance or support from SiteRacks, often submitted through our support portal",
     linkUrl: "open-support-ticket",
   },
-  {
-    icon: ChatBubbleLeftRightIcon,
-    title: "Live Chat",
-    description: "Customer support service that allows our website users to chat in real-time with a customer support agent to receive assistance or support.",
-    linkUrl: "/#liveChat", 
-  },
+  // {
+  //   icon: ChatBubbleLeftRightIcon,
+  //   title: "Live Chat",
+  //   description: "Customer support service that allows our website users to chat in real-time with a customer support agent to receive assistance or support.",
+  //   linkUrl: "/#liveChat", 
+  // },
   // {
   //   icon: "KnowledgeBase",
   //   title: "Knowledge Base",
