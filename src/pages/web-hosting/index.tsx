@@ -50,7 +50,7 @@ export const WebHosting: FC<IProps> = ({ metaData }) => {
 };
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "webHosting";
+  const slug = "web-hosting";
   const metaData = await getMetaData(slug);
 
   if (!metaData) {

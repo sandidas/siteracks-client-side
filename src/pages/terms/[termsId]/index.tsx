@@ -49,7 +49,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
       // requestConfig: {},
     });
     const slug = termsId as string;
-    const metaData = await getMetaData(slug);
+    const metaData = await getMetaData(slug) ?? "";
     // console.log("metaData", metaData);
     if (response && response?.data && response?.data?.data) {
       ssrData = response?.data?.data;

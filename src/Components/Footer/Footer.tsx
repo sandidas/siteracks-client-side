@@ -8,7 +8,6 @@ import SocialIcons from "./SocialIcons";
 const Footer = () => {
   const currentYear = new Date().getFullYear().toString();
 
-
   return (
     <>
       <section className="max-w-screen-2xl mx-auto pt-[10vh] px-5">
@@ -94,13 +93,20 @@ const Footer = () => {
             <p>Copyright © {currentYear} SiteRacks, LLC. All Rights Reserved.</p>
             <p className="text-xs">All trademarks, logos, and brand names are the property of their respective owners.</p>
             <ul className="flex text-sm gap-5 justify-end">
-              {tosMenuItems.map((item, key) => (
+              <Link href="/terms" className="hover:text-title">
+                Terms and Conditions
+              </Link>
+              <Link href="/terms" className="hover:text-title">
+                Privacy Policy
+              </Link>
+
+              {/* {tosMenuItems.map((item, key) => (
                 <li key={key}>
                   <Link href={item.linkUrl} className="hover:text-title">
                     {item.title}
                   </Link>
                 </li>
-              ))}
+              ))} */}
             </ul>
           </div>
         </section>

@@ -17,11 +17,10 @@ import HomeProducts from "@/Components/Pages/Home/HomeProducts";
 
 const inter = Inter({ subsets: ["latin"] });
 interface IProps {
-  menuItems: any;
   metaData: IHeadData;
 }
 
-export const Home: FC<IProps> = ({ menuItems, metaData }) => {
+export const Home: FC<IProps> = ({ metaData }) => {
   const { products, isLoading, isError } = useProducts();
   // console.log("Index", metaData);
   return (
@@ -67,7 +66,7 @@ export const Home: FC<IProps> = ({ menuItems, metaData }) => {
 
 export default Home;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
   const slug = "home";
   const metaData = await getMetaData(slug);
 
@@ -81,7 +80,6 @@ export async function getStaticProps(context: GetStaticPropsContext) {
           // // ...other default values
         },
       },
-      revalidate: 3600,
     };
   }
 
@@ -89,7 +87,6 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     props: {
       metaData,
     },
-    revalidate: 3600,
   };
 }
 // export async function getServerSideProps(context: GetServerSidePropsContext) {
