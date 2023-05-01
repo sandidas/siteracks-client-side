@@ -66,18 +66,18 @@ export const domainMenuItems = [
     description: "Transferring a domain involves moving the registration of a domain from old registrar to SiteRacks.",
     linkUrl: "transfer-domain",
   },
-  {
-    icon: SiteLockCertificate,
-    title: "Privacy & Protection for Domains",
-    description: "The service of hiding personal contact information associated with a domain registration to prevent it from being publicly accessible",
-    linkUrl: "privacy-protection-for-domains",
-  },
-  {
-    icon: RegisterDomain,
-    title: "WHOIS",
-    description: "A public database that stores information about the owner and registration details of a domain name",
-    linkUrl: "domain-whois",
-  },
+  // {
+  //   icon: SiteLockCertificate,
+  //   title: "Privacy & Protection for Domains",
+  //   description: "The service of hiding personal contact information associated with a domain registration to prevent it from being publicly accessible",
+  //   linkUrl: "privacy-protection-for-domains",
+  // },
+  // {
+  //   icon: RegisterDomain,
+  //   title: "WHOIS",
+  //   description: "A public database that stores information about the owner and registration details of a domain name",
+  //   linkUrl: "domain-whois",
+  // },
 ];
 
 export const websiteMenuItems = [

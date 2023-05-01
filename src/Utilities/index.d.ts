@@ -79,4 +79,23 @@ declare global {
         // add more properties as needed
       };
 
+        // =================== 
+    //  PAGE INTERFACE GLOBAL
+    // =================== 
+
+    interface IPage {
+        _id?: string;
+        pageTitle: string | null | undefined;
+        pageSlug?: string;
+        featuredImage?: string;
+        pageContent?: string;
+        status?: boolean;
+        lastUpdateBy?: {
+            userName: string,
+            userEmail: string,
+            userId: string,
+        };
+    }
+
+
 }
