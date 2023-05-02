@@ -1,4 +1,4 @@
-import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid";
+import { ChatBubbleLeftRightIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
 import BlogsIcon from "../../../public/images/nav/blogs.svg";
 import BusinessHosting from "../../../public/images/nav/businessHosting.svg";
 import CustomWebsiteDevelopment from "../../../public/images/nav/customWebsiteDevelopment.svg";
@@ -141,12 +141,12 @@ export const helpMenuItems = [
   //   description: "Customer support service that allows our website users to chat in real-time with a customer support agent to receive assistance or support.",
   //   linkUrl: "/#liveChat", 
   // },
-  // {
-  //   icon: "KnowledgeBase",
-  //   title: "Knowledge Base",
-  //   description: "The fluid of Smeargle’s tail secretions changes",
-  //   linkUrl: "knowldege-base",
-  // },
+  {
+    icon: OpenSupportTicket,
+    title: "Ask Me",
+    description: "is your go-to support platform! Whether you're an existing or new client, you can ask us anything about website related",
+    linkUrl: "https://siteracks.com/askme",
+  },
 ];
 
 export const aboutMenuItems = [

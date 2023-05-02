@@ -4,6 +4,7 @@ import Logo from "../Header/Logo";
 import { hostingMenuItems, domainMenuItems, securityMenuItems, helpMenuItems, aboutMenuItems, tosMenuItems } from "../Data/MenuData";
 import ScrollToTop from "./ScrollToTop";
 import SocialIcons from "./SocialIcons";
+import { UnstyledButton } from "@mantine/core";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear().toString();
@@ -66,6 +67,13 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li className="cursor-pointer"
+                onClick={() => {
+                  Tawk_API.toggle();
+                }}
+              >
+                Live Chat
+              </li>
             </ul>
           </div>
 
