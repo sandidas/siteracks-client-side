@@ -52,7 +52,7 @@ const BrandAssets: FC<IProps> = ({ metaData }) => {
 export default BrandAssets;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "brandAssets"; // CHANGE THIS SLUG
+  const slug = "brand-assets"; // CHANGE THIS SLUG
   const metaData = await getMetaData(slug);
   if (!metaData) {
     // Return a default value if metaData is undefined

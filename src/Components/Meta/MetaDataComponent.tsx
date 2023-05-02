@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const MetaDataComponent = ({ metaData }: IProps) => {
-  console.log("metaData C", metaData?.pageTitle);
+  // console.log("metaData C", metaData?.pageTitle);
   return !metaData?.pageTitle ? (
     <Head>
       {/* ==== DEFAULT META ====  */}

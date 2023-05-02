@@ -10,7 +10,7 @@ import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
 import { useProducts } from "@/Context/ReactQueryProvider";
 import React, { FC } from "react";
-import { GetServerSidePropsContext, GetStaticPropsContext } from "next";
+import { GetStaticPropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import { getMetaData } from "@/Helpers/AxiosMetaData";
 import HomeProducts from "@/Components/Pages/Home/HomeProducts";
@@ -66,7 +66,7 @@ export const Home: FC<IProps> = ({ metaData }) => {
 
 export default Home;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = "home";
   const metaData = await getMetaData(slug);
 
@@ -80,6 +80,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
           // // ...other default values
         },
       },
+      revalidate: 86400, // 3600 = 1 hour
     };
   }
 
@@ -87,6 +88,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     props: {
       metaData,
     },
+    revalidate: 86400, // 3600 = 1 hour
   };
 }
 // export async function getServerSideProps(context: GetServerSidePropsContext) {

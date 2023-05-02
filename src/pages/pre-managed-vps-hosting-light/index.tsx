@@ -55,7 +55,7 @@ const VpsLight: FC<IProps> = ({ metaData }) => {
 export default VpsLight;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "preManagedVpsHostingLight"; // CHANGE THIS SLUG
+  const slug = "pre-managed-vps-hosting-light"; // CHANGE THIS SLUG
   const metaData = await getMetaData(slug);
   if (!metaData) {
     // Return a default value if metaData is undefined

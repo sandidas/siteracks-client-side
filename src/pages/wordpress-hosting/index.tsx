@@ -55,7 +55,7 @@ const WordPressHosting: FC<IProps> = ({ metaData }) => {
 };
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "wordpressHosting"; // CHANGE THIS SLUG
+  const slug = "wordpress-hosting"; // CHANGE THIS SLUG
   const metaData = await getMetaData(slug);
   if (!metaData) {
     // Return a default value if metaData is undefined

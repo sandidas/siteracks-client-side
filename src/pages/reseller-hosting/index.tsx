@@ -47,7 +47,7 @@ const ResellerHosting: FC<IProps> = ({ metaData }) => {
 export default ResellerHosting;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "resellerHosting"; // CHANGE THIS SLUG
+  const slug = "reseller-hosting"; // CHANGE THIS SLUG
   const metaData = await getMetaData(slug);
   if (!metaData) {
     // Return a default value if metaData is undefined

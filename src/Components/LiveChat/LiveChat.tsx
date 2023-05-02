@@ -1,4 +1,3 @@
-"use client"; // this is a client component
 import { ArrowLongRightIcon, ChatBubbleLeftRightIcon, EnvelopeOpenIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import React, { useState } from "react";
