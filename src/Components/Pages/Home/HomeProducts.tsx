@@ -16,7 +16,7 @@ const HomeProducts = () => {
   }
 
   const getPackages = products?.data;
-  const packages = getPackages.filter((p:IProduct) => p.nameSlug !== "resellerHosting");
+  const packages = getPackages && getPackages.filter((p:IProduct) => p.nameSlug !== "resellerHosting");
 
   return <div className="grid gap-4 md:gap-6 xl:gap-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 py-[10vh]">
     
