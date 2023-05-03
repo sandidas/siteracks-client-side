@@ -1,5 +1,6 @@
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import BannerBackup from "@/Components/Pages/Backup/BannerBackup";
+import FaqBackup from "@/Components/Pages/Backup/FaqBackup";
 import FeaturesOfCodeGuardBackup from "@/Components/Pages/Backup/FeaturesOfCodeGuardBackup";
 import { getMetaData } from "@/Helpers/AxiosMetaData";
 import { GetStaticPropsContext } from "next";
@@ -10,12 +11,12 @@ interface IProps {
 const BackupPage: FC<IProps> = ({ metaData }) => {
   return (
     <>
-    <MetaDataComponent metaData={metaData} />
-        <main>
-             <BannerBackup />
-             <FeaturesOfCodeGuardBackup />
-
-        </main>
+      <MetaDataComponent metaData={metaData} />
+      <main>
+        <BannerBackup />
+        <FeaturesOfCodeGuardBackup />
+        <FaqBackup />
+      </main>
     </>
   );
 };
