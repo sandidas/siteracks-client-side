@@ -420,7 +420,7 @@ export function HeaderMegaMenu() {
 
             {/* Security menu items  */}
 
-            {/* <HoverCard width={700} position="bottom" radius="md" shadow="md" withinPortal>
+            <HoverCard width={900} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -432,11 +432,11 @@ export function HeaderMegaMenu() {
               </HoverCard.Target>
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
-                <SimpleGrid cols={2} spacing={0}>
+                <SimpleGrid cols={3} spacing={0}>
                   {securityLinks}
                 </SimpleGrid>
               </HoverCard.Dropdown>
-            </HoverCard> */}
+            </HoverCard>
 
             {/* Help menu items  */}
 
@@ -539,7 +539,7 @@ export function HeaderMegaMenu() {
           <Collapse in={websiteLinksOpened}>{websiteLinks}</Collapse> */}
 
           {/* security items  */}
-          {/* <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleSecurityLinks}>
+         <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleSecurityLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 SECURITY
@@ -547,7 +547,7 @@ export function HeaderMegaMenu() {
               <ChevronDownIcon className={`h-5 w-5 lg:h-7 lg:w-7 text-primary ${securityLinksOpened && "rotate-90"}`} />
             </Center>
           </UnstyledButton>
-          <Collapse in={securityLinksOpened}>{securityLinks}</Collapse> */}
+          <Collapse in={securityLinksOpened}>{securityLinks}</Collapse>
 
           {/* help items  */}
           <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleHelpLinks}>

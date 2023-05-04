@@ -5,10 +5,10 @@ import React from "react";
 import fullAutomation from "../../../../public/images/codeguard/api-feature.png";
 import clickrestorefeature from "../../../../public/images/codeguard/click-restore-feature.png";
 import codeGuardLogo from "../../../../public/images/codeguard/codeGuardLogo.png";
-import dailyBackupsFeature from "../../../../public/images/codeguard/daily-backups-feature.png";
+
 import emailFeature from "../../../../public/images/codeguard/email-feature.png";
 import fileMonitoringFeature from "../../../../public/images/codeguard/file-monitoring-feature.png";
-import heroImage from "../../../../public/images/codeguard/hero-image-a.png";
+
 import malwareFeature from "../../../../public/images/codeguard/malware-feature.png";
 import pickBackup from "../../../../public/images/codeguard/pick-backup.png";
 import serversFeature from "../../../../public/images/codeguard/servers-feature.png";

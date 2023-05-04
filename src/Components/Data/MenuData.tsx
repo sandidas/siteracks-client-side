@@ -1,4 +1,4 @@
-import { ChatBubbleLeftRightIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
+import { ChatBubbleBottomCenterIcon, ChatBubbleLeftRightIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
 import BlogsIcon from "../../../public/images/nav/blogs.svg";
 import BusinessHosting from "../../../public/images/nav/businessHosting.svg";
 import CustomWebsiteDevelopment from "../../../public/images/nav/customWebsiteDevelopment.svg";
@@ -91,7 +91,7 @@ export const websiteMenuItems = [
     icon: CustomWebsiteDevelopment,
     title: "Custom Website Development",
     description: "The process of creating a unique, tailored website from scratch, often involving coding and programming to meet specific business or individual needs",
-    linkUrl: "custom-website-development",
+    linkUrl: "/custom-website-development",
   },
 ];
 
@@ -100,7 +100,7 @@ export const securityMenuItems = [
     icon: WebsiteBackup,
     title: "Website Backups",
     description: "The process of creating copies of website files, databases, and content to prevent data loss in case of a website crash or other unforeseen events.",
-    linkUrl: "website-backup",
+    linkUrl: "/backup",
   },
   {
     icon: SslCertificates,
@@ -110,16 +110,16 @@ export const securityMenuItems = [
   },
   {
     icon: SiteLockCertificate,
-    title: "SiteLock Certificates",
+    title: "Website Security",
     description: "Security certifications that scan websites for vulnerabilities, malware, and other threats and provide protection against them.",
-    linkUrl: "siteLock-certificates",
+    linkUrl: "/website-security",
   },
-  {
-    icon: WildCardCertificate,
-    title: "Wildcard SSL",
-    description: "A type of SSL certificate that secures a domain and its subdomains with a single certificate.",
-    linkUrl: "wildcard-certificates",
-  },
+  // {
+  //   icon: WildCardCertificate,
+  //   title: "Wildcard SSL",
+  //   description: "A type of SSL certificate that secures a domain and its subdomains with a single certificate.",
+  //   linkUrl: "wildcard-certificates",
+  // },
 ];
 
 export const helpMenuItems = [
@@ -142,10 +142,10 @@ export const helpMenuItems = [
   //   linkUrl: "/#liveChat", 
   // },
   {
-    icon: OpenSupportTicket,
+    icon: ChatBubbleBottomCenterIcon,
     title: "Ask Me",
     description: "is your go-to support platform! Whether you're an existing or new client, you can ask us anything about website related",
-    linkUrl: "https://siteracks.com/askme",
+    linkUrl: "https://askme.siteracks.com",
   },
 ];
 

@@ -1,5 +1,7 @@
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import BannerSiteLock from "@/Components/Pages/SiteLock/BannerSiteLock";
+import FaqSiteLock from "@/Components/Pages/SiteLock/FaqSiteLock";
+import FeaturesSiteLock from "@/Components/Pages/SiteLock/FeaturesSiteLock";
 import { getMetaData } from "@/Helpers/AxiosMetaData";
 import { GetStaticPropsContext } from "next";
 import React, { FC } from "react";
@@ -12,6 +14,8 @@ const SiteLockPage: FC<IProps> = ({ metaData }) => {
       <MetaDataComponent metaData={metaData} />
       <main>
         <BannerSiteLock />
+        <FeaturesSiteLock />
+        <FaqSiteLock />
       </main>
     </>
   );
