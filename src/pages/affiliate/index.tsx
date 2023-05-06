@@ -43,7 +43,7 @@ const Affiliate: FC<IProps> = ({ metaData }) => {
         </section>
 
         <section className="py-[8vh] bg-surface">
-          <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
+          <div className="max-w-5xl mx-auto px-3 md:px-5">
             <AffiliateLucrative />
           </div>
         </section>

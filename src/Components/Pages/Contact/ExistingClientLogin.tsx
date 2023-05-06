@@ -14,7 +14,7 @@ const ExistingClientLogin = () => {
           <SectionTitle title={`Existing client?`} subTitle="You can contact our team anytime, 24/7." description={`"To ensure prompt and precise assistance, we kindly request clients to log in to their Client Area before contacting support.`} />
 
           <div className="w-full text-center">
-            <Button component="a" leftIcon={<ArrowRightIcon className="h-10 w-10 hover:fill-white pl-2" />} href={`${process.env.BILLING_URL}`} size="xl">
+            <Button component="a" leftIcon={<ArrowRightIcon className="h-10 w-10 hover:fill-white pl-2" />} href={`${process.env.BILLING_URL}index.php?rp=/login`} size="xl">
               Login Now
             </Button>
           </div>

@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       {/* Loader  */}
-      {/* {loading && <LoaderComponent />} */}
+      {loading && <LoaderComponent />}
       {/* by wrapping the component tree with the QueryClientProvider, you're setting up the queryClient object, which provides a centralized data management system and caching mechanism for all the child components that use the react-query library. */}
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps.dehydratedState}>

@@ -133,7 +133,7 @@ export const helpMenuItems = [
     icon: OpenSupportTicket,
     title: "Open Support Ticket",
     description: "A request for assistance or support from SiteRacks, often submitted through our support portal",
-    linkUrl: "open-support-ticket",
+    linkUrl: "https://my.siteracks.com/index.php?rp=/login",
   },
   // {
   //   icon: ChatBubbleLeftRightIcon,
