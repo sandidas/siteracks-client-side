@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { ArrowLongDownIcon, ArrowLongRightIcon, ArrowLongUpIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import Link from "next/link";
