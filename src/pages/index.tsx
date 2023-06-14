@@ -31,6 +31,7 @@ interface IProps {
 
 export const Home: FC<IProps> = ({ productAndHomeSeo, error }) => {
   const { metaData, products } = productAndHomeSeo;
+
   const loadingStatus = products && products.length > 0;
   const [isLoading, setIsLoading] = useState(loadingStatus);
 
@@ -52,7 +53,7 @@ export const Home: FC<IProps> = ({ productAndHomeSeo, error }) => {
 
   return (
     <>
-      {/* <MetaDataComponent metaData={metaData} /> */}
+      <MetaDataComponent metaData={metaData} />
       <main>
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}

@@ -10,11 +10,11 @@ const FeatureSchema = new Schema({
     default: false,
   },
   iconColor: {
-    type: String,
+    type: String || null,
     default: null,
   },
   toolTip: {
-    type: String,
+    type: String || null,
     default: null,
   },
   status: {
@@ -34,71 +34,114 @@ const FeatureSchema = new Schema({
     default: false,
   },
   lineBreakTitle: {
-    type: String,
+    type: String || null,
     default: null,
   },
   tableTitle: {
-    type: String,
+    type: String || null,
     default: null,
   },
   tableDescription: {
-    type: String,
+    type: String || null,
     default: null,
-  },
-  _id: {
-    type: Schema.Types.ObjectId,
-    unique: true,
-  },
+  }
+
+
 });
 
+
 const ChildSchema = new Schema({
-  typeSlug: String,
-  productTitle: String,
-  productDescription: String,
-  productId: Number,
-  featured: Boolean,
-  additionalMonths: {
+  typeSlug: {
     type: String,
-    default: null,
+    required: true,
+  },
+  productTitle: {
+    type: String,
+    required: true,
+  },
+  productDescription: {
+    type: String,
+    required: true,
+  },
+  productId: {
+    type: Number,
+    required: true,
+  },
+  featured: {
+    type: Boolean,
+  },
+  additionalMonths: {
+    type: String || null,
+    defaultValue: null,
   },
   promoCode: {
     type: String,
-    default: "",
+    defaultValue: "",
   },
-  additionalDiscount: Number,
-  monthlyPrice: Number,
-  annuallyPrice: Number,
-  bienniallyPrice: Number,
-  trienniallyPrice: Number,
-  features: FeatureSchema,
-  _id: {
-    type: Schema.Types.ObjectId,
-    unique: true,
+  additionalDiscount: {
+    type: Number,
   },
+  monthlyPrice: {
+    type: Number,
+    required: true,
+  },
+  annuallyPrice: {
+    type: Number,
+    required: true,
+  },
+  bienniallyPrice: {
+    type: Number,
+    required: true,
+  },
+  trienniallyPrice: {
+    type: Number,
+    required: true,
+  },
+  features: [FeatureSchema],
 });
 
-
-
 const PackageSchema = new Schema({
-  nameSlug: String,
+  nameSlug: {
+    type: String,
+    required: true,
+  },
   preTitle: {
     type: String,
     default: "",
   },
-  title: String,
-  shortDescription: String,
-  customBGClassName: String,
-  customIconClassName: String,
-  customTitleClassName: String,
-  customTextClassName: String,
-  customPriceCLassName: String,
-  icon: String,
-  seePlansLink: String,
-  packages: [ChildSchema],
-  _id: {
-    type: Schema.Types.ObjectId,
-    unique: true,
+  title: {
+    type: String,
+    required: true,
   },
+  shortDescription: {
+    type: String,
+    required: true,
+  },
+  customBGClassName: {
+    type: String,
+    required: true,
+  },
+  customIconClassName: {
+    type: String,
+  },
+  customTitleClassName: {
+    type: String,
+  },
+  customTextClassName: {
+    type: String,
+  },
+  customPriceCLassName: {
+    type: String,
+  },
+  icon: {
+    type: String,
+    required: true,
+  },
+  seePlansLink: {
+    type: String,
+    required: true,
+  },
+  packages: [ChildSchema],
 });
 
 const Package = models.Package || model('Package', PackageSchema);
