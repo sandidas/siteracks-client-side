@@ -23,8 +23,8 @@ async function init() {
 const getPackages = async () => {
   try {
     const result = await Package.find({}, {
-      _id: 0,
-      __v: 0,
+      // _id: 0,
+      // __v: 0,
       "packages._id": 0,
       "packages.features": 0,
       "packages.productTitle": 0,
