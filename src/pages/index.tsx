@@ -8,33 +8,60 @@ import HireAnExpert from "@/Components/Home/HireAnExpert";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
-import { useProducts } from "@/Context/ReactQueryProvider";
-import React, { FC } from "react";
-import { GetStaticPropsContext } from "next";
+import React, { FC, useEffect, useState } from "react";
+import { GetServerSidePropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-import { getMetaData } from "@/Helpers/AxiosMetaData";
+
 import HomeProducts from "@/Components/Pages/Home/HomeProducts";
+import getPackages from "@/lib/mongo/getPackages";
+
+import Package from "@/models/Package";
+import axios from "axios";
+import getMetaDataByPage from "@/lib/mongo/getMetaDataByPage";
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 
 const inter = Inter({ subsets: ["latin"] });
 interface IProps {
-  metaData: IHeadData;
+  productAndHomeSeo: {
+    metaData: IHeadData;
+    products: IProduct[];
+  };
+  error: any;
 }
 
-export const Home: FC<IProps> = ({ metaData }) => {
-  const { products, isLoading, isError } = useProducts();
-  // console.log("Index", metaData);
+export const Home: FC<IProps> = ({ productAndHomeSeo, error }) => {
+  const { metaData, products } = productAndHomeSeo;
+  const loadingStatus = products && products.length > 0;
+  const [isLoading, setIsLoading] = useState(loadingStatus);
+
+  // const [products, setProducts] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get("/api/packages");
+  //       console.log("response", response);
+  //       setProducts(response?.data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+
   return (
     <>
-      <MetaDataComponent metaData={metaData} />
+      {/* <MetaDataComponent metaData={metaData} /> */}
       <main>
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}
         <div style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundPosition: "top center" }}>
-          <HomeBanner products={products} isLoading={isLoading} isError={isError} />
+          <HomeBanner products={products} isLoading={isLoading} />
         </div>
 
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5" id="orderNow">
-          <HomeProducts />
+          <HomeProducts products={products} isLoading={isLoading} />
           {/* <ArticleSection /> */}
           <HomeArticle />
         </div>
@@ -60,44 +87,32 @@ export const Home: FC<IProps> = ({ metaData }) => {
   );
 };
 
-// Home.getLayout = function getLayout(page: ReactElement) {
-//   return <Layout>{page} </Layout>;
-// };
-
 export default Home;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "home";
-  const metaData = await getMetaData(slug);
+export const getServerSideProps = async (context: GetServerSidePropsContext) => {
+  let error;
+  try {
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/sr`,
+      // requestConfig: {},
+    });
 
-  if (!metaData) {
-    // Return a default value if metaData is undefined
-    return {
-      props: {
-        metaData: {
-          // title: "Default Title",
-          // description: "Default description",
-          // // ...other default values
+    if (response) {
+      const productAndHomeSeo = response; // seo data found
+      return {
+        props: {
+          productAndHomeSeo,
         },
-      },
-      revalidate: 86400, // 3600 = 1 hour
-    };
+      };
+    }
+
+    error = error ? error : "Failed to load data";
+    return { props: { error: error } };
+  } catch (error) {
+    // console.error(error);
+    error = error ? error : "Failed to load data";
+    return { props: { error: error } };
   }
-
-  return {
-    props: {
-      metaData,
-    },
-    revalidate: 86400, // 3600 = 1 hour
-  };
-}
-// export async function getServerSideProps(context: GetServerSidePropsContext) {
-//   const slug = "home";
-//   const metaData = await getMetaData(slug);
-
-//   return {
-//     props: {
-//       metaData,
-//     },
-//   };
-// }
+};

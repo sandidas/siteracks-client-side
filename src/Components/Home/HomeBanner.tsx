@@ -5,12 +5,13 @@ import HomeBannerImage from "../../../public/images/webHosting/home-page-banner.
 import HomeBannerPrice from "./HomeBannerPrice";
 
 interface IProps {
-  products: { data: IProduct[] };
-  isLoading: boolean;
-  isError: boolean;
+  products: IProduct[] ;
+  isLoading?: boolean;
+  isError?: boolean;
 }
 
-const HomeBanner: FC<IProps> = ({ products, isLoading, isError }) => {
+const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
+
 
 
   return (
@@ -45,7 +46,7 @@ const HomeBanner: FC<IProps> = ({ products, isLoading, isError }) => {
             <div className="text-text pt-3">Starting at </div>
 
             <div className="text-primary font-bold text-4xl group-hover:text-text">
-              <HomeBannerPrice products={products} isLoading={isLoading} isError={isError} />
+              <HomeBannerPrice products={products} />
             </div>
 
             <div className="text-text pt-3">/mo*</div>

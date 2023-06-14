@@ -18,7 +18,7 @@ export const getMetaData = async (slug: string) => {
         }
 
         // If the metadata is not in the cache or has expired, fetch it from the database
-        const API_URL = `${process.env.API_URL}/api/seo/fetch-all`;
+        const API_URL = `${process.env.API_URL}/api/seo/fetch`;
         const response = await axios.get(API_URL);
         const results = response?.data?.data;
         const metaData = results?.find((service: IHeadData) => service.pageSlug === slug && service.siteName === "siteRacksMainSite");

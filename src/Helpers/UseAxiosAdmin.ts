@@ -1,20 +1,20 @@
 import React from "react";
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
 
 interface AxiosRequestMethod {
-  get: (...args: any[]) => Promise<any>;
-  post: (...args: any[]) => Promise<any>;
-  put: (...args: any[]) => Promise<any>;
-  patch: (...args: any[]) => Promise<any>;
-  delete: (...args: any[]) => Promise<any>;
+  get: (...args: any[]) => Promise<AxiosResponse>;
+  post: (...args: any[]) => Promise<AxiosResponse>;
+  put: (...args: any[]) => Promise<AxiosResponse>;
+  patch: (...args: any[]) => Promise<AxiosResponse>;
+  delete: (...args: any[]) => Promise<AxiosResponse>;
 }
 
 interface IHandleSubmitProps {
   axiosInstance: AxiosInstance | any;
   method: keyof AxiosRequestMethod;
   url: string;
-  data?: any;
+  body?: any;
   requestConfig?: AxiosRequestConfig;
   header?: any;
 }
@@ -39,60 +39,41 @@ const UseAxiosAdmin = async (props: IHandleSubmitProps): Promise<ApiResponse> =>
     axiosInstance, // axios instance
     method, //(required): The HTTP method to be used for the request, which can be one of 'get', 'post', 'put', or 'delete'.     
     url, //  (required): The URL to send the request to.
-    data, //  (optional): An object containing the data to be sent as the request body.
+  //  body, //  (optional): An object containing the data to be sent as the request body.
     requestConfig, // // (optional): An object containing additional Axios request configuration options.
     header
   } = props;
   // console.log(data);
-  
-  const API_URL = `${process.env.API_URL}${url}`;
-  // console.log(API_URL);
-  // const options = {
-  //   headers: { "content-type": "application/json; charset=UTF-8" },
-  //   withCredentials: true, // this is to send the credentials
-  // };
-  const headers = {
-    // Authorization: `Bearer ${process.env.ACCESS_TOKEN_SECRET}`,
-    // "content-type": "application/json; charset=UTF-8"
-    ...header,
-    'content-type': 'application/json',
-  }
+  const API_URL = `${process.env.API_HOST}${url}`;
   const config = {
-    ...requestConfig,
     withCredentials: true, // this is to send the credentials
+    // credentials: "include",
+    headers: {
+      // Authorization: `Bearer ${process.env.ACCESS_TOKEN_SECRET}`,
+      // "content-type": "application/json; charset=UTF-8"
+      ...header,
+      'content-type': 'application/json',
+    },
+    ...requestConfig,
   }
+
 
 
   try {
     const ctrl = new AbortController();
     const res = await axiosInstance[method.toLowerCase()](
-      API_URL,
-      {
-        ...data,
-        ...headers,
-        ...config,
-        signal: ctrl.signal,
-      },
+      API_URL, config, {
+      signal: ctrl.signal,
+    },
       // options
     );
-    
-    // if failed, return error
-    // console.log("AXIOS RES", res);
+
     if (!res?.data?.success) {
-      // return {
-      //     status: 400,
-      //     success: false,
-      //     message: res?.data?.error
-      // }
       return res?.data
-      // throw new Error(res?.data);
     }
-    // console.log("res", res.data);
-    // if success return response
     return res;
 
   } catch (error: AxiosError | any) {
-    // console.log("errr", error);
     if (axios.isAxiosError(error)) {
       return {
         status: error.response?.status || 400,
@@ -127,7 +108,7 @@ export const getServerSideProps = async () => {
 
     if (response && response.data) {
       data = response.data;
-      console.log("Index Response", data);
+     // console.log("Index Response", data);
       return {
         props: {
           data,

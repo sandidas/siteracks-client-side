@@ -18,7 +18,7 @@ const twentyFourHoursInMs = 1000 * 60 * 60 * 24;
 
 // fetchProducts is an asynchronous function that uses Axios to fetch data from a REST API endpoint. It returns the data from the response.
 export const fetchProducts = async () => {
-  const API_URL = `${process.env.API_URL}/api/package/getpackages`;
+  const API_URL = `${process.env.API_URL}/api/package/packages`;
   const response = await axios.get(API_URL);
   return response.data;
 };

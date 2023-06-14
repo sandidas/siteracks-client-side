@@ -7,6 +7,7 @@ const nextConfig = {
     API_URL: process.env.API_URL,
     BILLING_URL: process.env.BILLING_URL,
     ASK_ME: process.env.ASK_ME,
+    MONGODB_URI: process.env.MONGODB_URI,
   },
   // experimental: {
   //   appDir: false,
