@@ -8,14 +8,14 @@ import React, { FC } from "react";
 import jwt from "jsonwebtoken";
 
 interface IProps {
-  data: {
-    pages: IPage[];
+  response: {
+    data: IPage[];
   };
   error?: string;
 }
 
-const TosIndexPage: FC<IProps> = ({ data, error }) => {
-  const { pages } = data;
+const TosIndexPage: FC<IProps> = ({ response, error }) => {
+  const { data: pages } = response;
 
   return (
     <>
@@ -43,8 +43,6 @@ const TosIndexPage: FC<IProps> = ({ data, error }) => {
 export default TosIndexPage;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  let data;
-
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 
@@ -60,11 +58,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     });
 
     if (response) {
-      data = response;
       // console.log("Index Response", data);
       return {
         props: {
-          data,
+          response,
         },
         revalidate: 86400, // 3600 = 1 hour
       };

@@ -6,7 +6,7 @@ import BannerImage from "../../../../public/images/webHosting/affiliate-banner.s
 const AffiliateBanner = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:5 xl:gap-16 2xl:gap-32">
-      <div className="flex flex-col justify-center items-start space-y-8 group order-2 md:order-1">
+      <div className="flex flex-col justify-center items-start space-y-8 order-2 md:order-1">
         <h1 className="flex flex-col text-5xl lg:text-6xl md:leading-tight lg:leading-tight text-title font-bold">
           <span>SiteRacks</span>
           <span className="text-primary">Affiliate Program</span>
@@ -23,13 +23,14 @@ const AffiliateBanner = () => {
         </ul>
 
         <div className="flex gap-5">
-          <Button size="xl" component="a" href={`${process.env.BILLING_URL}`} className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+          <Button size="xl" component="a" href={`${process.env.BILLING_URL}`} className="bg-primary shadow-md transition ease-in-out duration-500  hover:text-white hover:bg-secondary group">
             Join Now for FREE
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>
 
-          <Button size="xl" component="a" href={`${process.env.BILLING_URL}`} className="">
+          <Button size="xl" component="a" href={`${process.env.BILLING_URL}`} className="group">
             Login
+            <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Document, Schema, model } from 'mongoose';
+import { Schema, model, models, Document } from "mongoose";
 
 interface IReaction {
     author: Schema.Types.ObjectId;
@@ -217,7 +217,5 @@ const BlogSchema = new Schema<IBlog>({
 
 }, { timestamps: true });
 
-const Blog = model<IBlog>('Blog', BlogSchema);
-
-export {  Blog };
-// export { IBlog, IBlogAnswer, ICategory, Blog };
+const Blog = models.Blog || model('Blog', BlogSchema);
+export default Blog;
