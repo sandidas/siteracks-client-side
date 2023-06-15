@@ -21,10 +21,17 @@ const AffiliateBanner = () => {
           <li className="bg-purple-100/50 dark:bg-purple-100/10 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">11-20 Sales /5% + $120 Bonus</li>
           <li className="bg-blue-100/50 dark:bg-blue-100/10 px-3 py-1 lg:px-5 font-bold rounded shadow hover:translate-x-2 duration-200">20+ Sales /5% + Custom Bonus</li>
         </ul>
-        <Button size="xl" component="a" href={`${process.env.BILLING_URL}`} className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
-          Join Now for FREE
-          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
-        </Button>
+
+        <div className="flex gap-5">
+          <Button size="xl" component="a" href={`${process.env.BILLING_URL}`} className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+            Join Now for FREE
+            <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
+          </Button>
+
+          <Button size="xl" component="a" href={`${process.env.BILLING_URL}`} className="">
+            Login
+          </Button>
+        </div>
       </div>
       <div className="flex flex-col justify-start items-center w-full order-1 md:order-2">
         <BannerImage className="w-full h-fit" />

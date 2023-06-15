@@ -16,15 +16,15 @@ import axios from "axios";
 import { GetStaticPropsContext } from "next";
 import React, { FC, useState } from "react";
 interface IProps {
-  productAndHomeSeo: {
+  response: {
     metaData: IHeadData;
-    product: IProduct;
+    data: IProduct;
   };
   isError: boolean;
 }
 
-const VpsLight: FC<IProps> = ({ productAndHomeSeo, isError }) => {
-  const { metaData, product } = productAndHomeSeo;
+const VpsLight: FC<IProps> = ({ response, isError }) => {
+  const { metaData, data: product } = response;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
 
   return (
@@ -78,11 +78,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       },
     });
 
-    if (response) {
-      const productAndHomeSeo = response; // seo data found
+    if (response?.data) {
       return {
         props: {
-          productAndHomeSeo,
+          response,
         },
         revalidate: 86400, // 3600 = 1 hour
       };

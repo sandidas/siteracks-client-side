@@ -18,33 +18,17 @@ import jwt from "jsonwebtoken";
 
 const inter = Inter({ subsets: ["latin"] });
 interface IProps {
-  productAndHomeSeo: {
+  response: {
     metaData: IHeadData;
-    products: IProduct[];
+    data: IProduct[];
   };
   error: any;
 }
 
-export const Home: FC<IProps> = ({ productAndHomeSeo, error }) => {
-  const { metaData, products } = productAndHomeSeo;
+export const Home: FC<IProps> = ({ response, error }) => {
+  const { metaData, data: products } = response;
   const loadingStatus = Array.isArray(products) ? (products.length === 0 ? true : false) : true;
   const [isLoading, setIsLoading] = useState(loadingStatus);
-
-  // const [products, setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get("/api/packages");
-  //       console.log("response", response);
-  //       setProducts(response?.data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   return (
     <>
@@ -100,11 +84,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       },
     });
 
-    if (response) {
-      const productAndHomeSeo = response; // seo data found
+    if (response?.data) {
       return {
         props: {
-          productAndHomeSeo,
+          response,
         },
         revalidate: 86400, // 3600 = 1 hour
       };

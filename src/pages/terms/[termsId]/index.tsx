@@ -1,4 +1,3 @@
-import LoaderComponent from "@/Components/Loader/LoaderComponent";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import { getMetaData } from "@/Helpers/AxiosMetaData";
@@ -6,27 +5,27 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC } from "react";
-
+import jwt from "jsonwebtoken";
 interface IProps {
-  ssrData: IPage;
-  error?: string;
-  metaData: IHeadData;
+  response: {
+    data: IPage;
+    metaData: IHeadData;
+  };
 }
 
-const TermsPageIndividualItem: FC<IProps> = ({ ssrData, error, metaData }) => {
-  if (error) {
-    return <LoaderComponent />;
-  }
+const TermsPageIndividualItem: FC<IProps> = ({ response }) => {
+  const { metaData, data: page } = response;
+
   return (
     <>
-      {metaData && <MetaDataComponent metaData={metaData} />}
+      <MetaDataComponent metaData={metaData} />
 
       <div className="max-w-screen-2xl mx-auto px-3 md:px-5 pt-[8vh] md:pt-[12vh] pb-[8vh]">
-        <SectionTitle bottomSpace title={ssrData?.pageTitle ? ssrData?.pageTitle : ""} />
+        <SectionTitle bottomSpace title={page?.pageTitle ? page?.pageTitle : ""} />
 
         {/* Print rich text editor data here  */}
 
-        <div dangerouslySetInnerHTML={{ __html: ssrData?.pageContent ?? "" }}></div>
+        <div dangerouslySetInnerHTML={{ __html: page?.pageContent ?? "" }}></div>
       </div>
     </>
   );
@@ -35,34 +34,27 @@ const TermsPageIndividualItem: FC<IProps> = ({ ssrData, error, metaData }) => {
 export default TermsPageIndividualItem;
 
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-  // GET PAGE ID FROM REACT QUERY
-  // ================================
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
   const { termsId } = context.query;
-  //   console.log("context.query", context.query);
-  let ssrData;
-  let error;
+  const seoPageSlug: string = typeof termsId === "string" ? termsId.replace(/-([a-z])/g, (match: string, letter: string) => letter.toUpperCase()) : "";
+
   try {
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
-      url: `/api/page/get-page/${termsId}`,
-      // requestConfig: {},
+      url: `/api/pages/page?pageSlug=${termsId}&seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
-    const slug = termsId as string;
-    const metaData = await getMetaData(slug) ?? "";
-    // console.log("metaData", metaData);
-    if (response && response?.data && response?.data?.data) {
-      ssrData = response?.data?.data;
-      // console.log("Index Response", data);
+    if (response?.data) {
       return {
         props: {
-          ssrData,
-          metaData,
+          response,
         },
       };
     } else {
-      error = response?.error ? response?.error : "Failed to load data";
-
       return {
         redirect: {
           destination: "/",

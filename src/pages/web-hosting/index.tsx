@@ -14,15 +14,15 @@ import React, { FC, useState } from "react";
 import jwt from "jsonwebtoken";
 
 interface IProps {
-  productAndHomeSeo: {
+  response: {
     metaData: IHeadData;
-    product: IProduct;
+    data: IProduct;
   };
   isError: boolean;
 }
 
-export const WebHosting: FC<IProps> = ({ productAndHomeSeo, isError }) => {
-  const { metaData, product } = productAndHomeSeo;
+export const WebHosting: FC<IProps> = ({ response, isError }) => {
+  const { metaData, data: product } = response;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
   // console.log("metaData", metaData);
   // console.log("product", product);
@@ -78,11 +78,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       },
     });
 
-    if (response) {
-      const productAndHomeSeo = response; // seo data found
+    if (response?.data) {
       return {
         props: {
-          productAndHomeSeo,
+          response,
         },
         revalidate: 86400, // 3600 = 1 hour
       };

@@ -5,10 +5,9 @@ import Seo from '@/models/Seo';
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-    data?: any;
-    product?: any;
-    metaData?: any;
-
+    data?: IProduct;
+    metaData?: IHeadData;
+    error?: string | null;
 }
 // http://localhost:3000/api/pages/package?nameSlug=managedVpsHosting&seoPageSlug=preManagedVpsHostingLight
 
@@ -26,7 +25,7 @@ export default async function handler(
         const token = authHeader && authHeader.split(' ')[1];
         const verification = token && await apiJwtGuard(token);
         if (!verification) {
-            res.status(401).json({ data: 'Nothing!' });
+            res.status(401).json({ error: 'Nothing!' });
         } else {
             // SECURITY PASSED
 
@@ -34,7 +33,7 @@ export default async function handler(
             // console.log("nameSlug", nameSlug);
 
             if (!nameSlug || !seoPageSlug) {
-                res.status(500).json({ data: 'Query data not found' });
+                res.status(500).json({ error: 'Query data not found' });
             }
 
 
@@ -50,16 +49,16 @@ export default async function handler(
             }
 
             if (result) {
-                res.status(200).json({ product: result, metaData });
+                res.status(200).json({ data: result, metaData });
             } else {
-                res.status(500).json({ data: 'Data not found' });
+                res.status(500).json({ error: 'Data not found' });
             }
 
         }
 
     } catch (error) {
         console.error("Error fetching packages:", error);
-        res.status(500).json({ data: 'Internal Error' });
+        res.status(500).json({ error: 'Internal Error' });
     }
 };
 

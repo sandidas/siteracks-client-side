@@ -14,15 +14,15 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import jwt from "jsonwebtoken";
 interface IProps {
-  productAndHomeSeo: {
+  response: {
     metaData: IHeadData;
-    product: IProduct;
+    data: IProduct;
   };
   isError?: boolean;
 }
 
-const WordPressHosting: FC<IProps> = ({ productAndHomeSeo, isError }) => {
-  const { metaData, product } = productAndHomeSeo;
+const WordPressHosting: FC<IProps> = ({ response, isError }) => {
+  const { metaData, data: product } = response;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
 
   return (
@@ -80,11 +80,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     // check response
     // console.log("response: ", JSON.stringify(response));
 
-    if (response) {
-      const productAndHomeSeo = response; // seo data found
+    if (response?.data) {
       return {
         props: {
-          productAndHomeSeo,
+          response,
         },
         revalidate: 86400, // 3600 = 1 hour
       };
