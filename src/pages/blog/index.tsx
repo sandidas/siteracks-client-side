@@ -2,52 +2,48 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import { Loader } from "@mantine/core";
 import axios from "axios";
 import React, { FC, useEffect, useRef, useState } from "react";
-import { useInfiniteQuery } from "react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 
+interface ICResponse {
+  blogs: IBlog[];
+  nextCursor: string;
+}
 const BlogIndex = () => {
   // = = = = = =  = = =
   // CONFIGURATION LOADERS
   // = = = = = =  = = =
 
   const [postLimit, setPostLimit] = useState(10);
-  // console.log("session", session?.user?.roles);
 
   // = = = = = =  = = =
   // SEARCH KEYWORD CONTEXT. THE VALUES COMES FROM HEADER
   // = = = = = =  = = =
   // WE ARE GETTING SEARCH KEYWORD FROM CONTEXT
   // Bellow I am using a useEffect hook, when we have text in search Keywords the useEffect hook will apply to call refetching.
-  const { searchKeyword, setSearchKeyword } = useState();
-
-  // = = = = = =  = = =
-  // AVATAR CONFIG
-  // = = = = = =  = = =
-  let userAvatar;
-  let userName;
-  let firstName;
+  const [searchKeyword, setSearchKeyword] = useState<string | undefined>("search");
 
   // = = = = = =  = = = =
-  // QUERY WITH INFINITE LOADER : REACT QUERY
+  // QUERY WITH INFINITE LOADER : TENSTACK REACT QUERY
   // = = = = = =  = = = =
 
   // STEP 1: FETCHING DATA FOR REACT QUERY
   //
-  const fetchData = async ({ pageParam = 0, keyword, limit }: { pageParam?: number; keyword?: string; limit: number }) => {
-    let response;
-
-    response = await UseAxiosAdmin({
+  const fetchUsersData = async ({ pageParam = 0, keyword, limit }: { pageParam?: number; keyword?: string; limit: number }) => {
+    //@ts-ignore
+    const response: ICResponse = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
-      url: `/api/blog/blogs?cursor=${pageParam}&limit=${limit}&keyword=${keyword}`,
+      url: `/api/pages/blogs?cursor=${pageParam}&limit=${limit}&keyword=${keyword}`,
     });
 
-    // console.log("response?.data", response?.data?.blogs);
-    return response.data;
+    return response;
+
+    // ICResponse
   };
   // STEP 2: Call the useInfiniteQuery hook to fetch the items
   const { data, fetchNextPage, refetch, hasNextPage, isFetching, isFetchingNextPage, status } = useInfiniteQuery({
     queryKey: ["blogs"], // A key to identify this query
-    queryFn: ({ pageParam = 0 }) => fetchData({ pageParam, keyword: searchKeyword, limit: postLimit }), // A function that returns the data
+    queryFn: ({ pageParam = 0 }) => fetchUsersData({ pageParam, keyword: searchKeyword, limit: postLimit }), // A function that returns the data
     // initialData: {
     //   pages: [{ blogs: initialDataSSR?.blogs, nextCursor: initialDataSSR?.nextCursor }],
     //   pageParams: [initialDataSSR?.nextCursor],
@@ -157,7 +153,7 @@ const BlogIndex = () => {
             <React.Fragment key={pageIndex}>
               {page?.blogs?.map((blog: IBlog, index: number) => (
                 // <BlogIndividual key={index} blog={blog} />
-                <div key={index}> dddd</div>
+                <div className="py-28" key={index}>{blog?.subject} <br /> </div>
               ))}
             </React.Fragment>
           ))}
