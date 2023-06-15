@@ -97,5 +97,72 @@ declare global {
         };
     }
 
+    // = = = = = = = = = = 
+    // BLOG INTERFACE
+    // = = = = = = = = = = 
+    interface ICategory {
+        title: string;
+        slug: string;
+    }
+
+    interface IBlogAnswer {
+        _id: string;
+        text: string;
+        author: string; // Schema.Types.ObjectId;
+        authorName: string;
+        authorImage: string;
+        authorRoles: number[];
+        votes: number;
+        reactions: {
+            likes: IReaction[];
+            dislikes: IReaction[];
+        };
+        createdAt: Date;
+    }
+
+
+
+    interface IBlog {
+        _id: string;
+        subject: string;
+        slug: string;
+        text: string;
+        categories: string[];
+        status: boolean; // close or active
+        softDelete: boolean;
+        author: Schema.Types.ObjectId;
+        authorName: string;
+        authorImage: string;
+        authorRoles: number[];
+        tags: string[];
+        allowedAnswers: boolean;
+        isAuthorAllowedToEdit: boolean;
+        lastUpdateBy: {
+            author: Schema.Types.ObjectId;
+            authorName: string;
+            authorImage: string;
+            authorRoles: number[];
+        };
+        answers: IBlogAnswer[];
+        views: number;
+        is_public: boolean;
+        is_featured: boolean;
+        request_for_public: boolean;
+        reactions: {
+            likes: IReaction[];
+            dislikes: IReaction[];
+            saves: IReaction[];
+        };
+        seoTitle: string;
+        metaDescription: string;
+        metaKeywords: string;
+        metaOgTitle: string;
+        metaOgDescription: string;
+        metaOgImage: string;
+        featuredImage: string;
+        createdAt: Date;
+        updatedAt: Date;
+    }
+
 
 }
