@@ -26,6 +26,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
   // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=biennially
   // https://www.my.dronahost.com/cart.php?a=add&pid=179&billingcycle=triennially
 
+  const BILLING_URL = process.env.BILLING_URL as string;
+
   // common variables needs bellow functionality
   const monthlyRegularPrice = product?.monthlyPrice;
   const monthlyPackage = product?.monthlyPrice;
@@ -35,7 +37,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
   const additionalDiscountForAll = product?.additionalDiscount as number;
   const productThisId = product?.productId;
   const productThisPromo = product?.promoCode;
-  let defaultOrderLink = `https://www.siteracks.com/cart.php?a=add&pid=${productThisId}&billingcycle=triennially${productThisPromo && `&promocode=${productThisPromo}`}`;
+  let defaultOrderLink = `${BILLING_URL}/cart.php?a=add&pid=${productThisId}&billingcycle=triennially${productThisPromo && `&promocode=${productThisPromo}`}`;
 
   // console.log("defaultOrderLink", defaultOrderLink);
 
@@ -61,7 +63,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
     setCurrentPackage(selectedPackage);
 
     const orderLinkSwitcher = (months: string) => {
-      let currentOrderLink = `https://www.siteracks.com/cart.php?a=add&pid=${productThisId}&billingcycle=${months}${productThisPromo && `&promocode=${productThisPromo}`}`;
+      let currentOrderLink = `${BILLING_URL}/cart.php?a=add&pid=${productThisId}&billingcycle=${months}${productThisPromo && `&promocode=${productThisPromo}`}`;
       setOrderLink(currentOrderLink);
     };
 

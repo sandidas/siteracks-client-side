@@ -11,6 +11,7 @@ interface IProps {
 
 const HomeProducts: FC<IProps> = ({ products, isLoading }) => {
   // const { products, isLoading, isError } = useProducts();
+  // console.log("isLoading", isLoading);
   if (isLoading) {
     // return a loading indicator or skeleton
     return <Loader color="green" />;

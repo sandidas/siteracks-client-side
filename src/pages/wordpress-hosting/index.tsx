@@ -7,28 +7,33 @@ import WordPressHostingMoreBenefits from "@/Components/Pages/WordPressHosting/Wo
 import WordPressHostingPricing from "@/Components/Pages/WordPressHosting/WordPressHostingPricing";
 import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
-import { useProducts } from "@/Context/ReactQueryProvider";
-import { getMetaData } from "@/Helpers/AxiosMetaData";
 import { GetStaticPropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import axios from "axios";
+import jwt from "jsonwebtoken";
 interface IProps {
-  metaData: IHeadData;
+  productAndHomeSeo: {
+    metaData: IHeadData;
+    product: IProduct;
+  };
+  isError?: boolean;
 }
 
-const WordPressHosting: FC<IProps> = ({ metaData }) => {
-  const { products, isLoading, isError } = useProducts();
+const WordPressHosting: FC<IProps> = ({ productAndHomeSeo, isError }) => {
+  const { metaData, product } = productAndHomeSeo;
+  const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
 
   return (
     <>
       <MetaDataComponent metaData={metaData} />
       <main>
         <section className="bg-surface">
-          <WordPressHostingBanner products={products} isLoading={isLoading} isError={isError} />
+          <WordPressHostingBanner product={product} isLoading={isLoading} isError={isError} />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WordPressHostingPricing products={products} isLoading={isLoading} isError={isError} />
+          <WordPressHostingPricing product={product} isLoading={isLoading} isError={isError} />
         </section>
 
         <WordPressHostingArticle />
@@ -53,6 +58,49 @@ const WordPressHosting: FC<IProps> = ({ metaData }) => {
     </>
   );
 };
+export default WordPressHosting;
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
+
+  try {
+    const nameSlug = "wordPressHosting";
+    const seoPageSlug = "wordpressHosting";
+
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
+      // requestConfig: {},
+    });
+    // check response
+    // console.log("response: ", JSON.stringify(response));
+
+    if (response) {
+      const productAndHomeSeo = response; // seo data found
+      return {
+        props: {
+          productAndHomeSeo,
+        },
+        revalidate: 86400, // 3600 = 1 hour
+      };
+    }
+
+    return { props: { isError: true } };
+  } catch (error) {
+    // console.error(error);
+    return { props: { isError: true } };
+  }
+}
+
+/*
+
+ * OLD VERSION OF REQUEST
+
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = "wordpress-hosting"; // CHANGE THIS SLUG
@@ -78,4 +126,5 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   };
 }
 
-export default WordPressHosting;
+
+*/

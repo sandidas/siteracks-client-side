@@ -1,6 +1,6 @@
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import LiveChat from "@/Components/LiveChat/LiveChat";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import BusinessHostingBanner from "@/Components/Pages/BusinessHosting/BusinessHostingBanner";
 import BusinessHostingPricing from "@/Components/Pages/BusinessHosting/BusinessHostingPricing";
 import BusinessHostingArticle from "@/Components/Pages/BusinessHosting/BusinessHostingArticle";
@@ -10,27 +10,34 @@ import BusinessHostingFaq from "@/Components/Pages/BusinessHosting/BusinessHosti
 import BusinessHostingCompare from "@/Components/Pages/BusinessHosting/BusinessHostingCompare";
 import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
 import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
-import { useProducts } from "@/Context/ReactQueryProvider";
-import { getMetaData } from "@/Helpers/AxiosMetaData";
 import { GetStaticPropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import axios from "axios";
+import jwt from "jsonwebtoken";
+
 interface IProps {
-  metaData: IHeadData;
+  productAndHomeSeo: {
+    metaData: IHeadData;
+    product: IProduct;
+  };
+  isError: boolean;
 }
 
-const BusinessHosting: FC<IProps> = ({ metaData }) => {
-  const { products, isLoading, isError } = useProducts();
+const BusinessHosting: FC<IProps> = ({ productAndHomeSeo, isError }) => {
+  const { metaData, product } = productAndHomeSeo;
+  const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
 
   return (
     <>
       <MetaDataComponent metaData={metaData} />
       <main>
         <section className="bg-surface">
-          <BusinessHostingBanner products={products} isLoading={isLoading} isError={isError} />
+          <BusinessHostingBanner product={product} isLoading={isLoading} isError={isError} />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           {}
-          <BusinessHostingPricing products={products} isLoading={isLoading} isError={isError} />
+          <BusinessHostingPricing product={product} isLoading={isLoading} isError={isError} />
         </section>
         <BusinessHostingCompare />
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
@@ -63,28 +70,61 @@ const BusinessHosting: FC<IProps> = ({ metaData }) => {
 export default BusinessHosting;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "business-hosting"; // CHANGE THIS SLUG
-  const metaData = await getMetaData(slug);
-  if (!metaData) {
-    // Return a default value if metaData is undefined
-    return {
-      props: {
-        metaData: {
-          // title: "Default Title",
-          // description: "Default description",
-          // // ...other default values
-        },
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
+
+  try {
+    const nameSlug = "businessHosting";
+    const seoPageSlug = "businessHosting";
+
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
       },
-      revalidate: 86400, // 3600 = 1 hour
-    };
+    });
+
+    if (response) {
+      const productAndHomeSeo = response; // seo data found
+      return {
+        props: {
+          productAndHomeSeo,
+        },
+        revalidate: 86400, // 3600 = 1 hour
+      };
+    }
+    return { props: { isError: true } };
+  } catch (error) {
+    // console.error(error);
+    return { props: { isError: true } };
   }
-  return {
-    props: {
-      metaData,
-    },
-    revalidate: 86400, // 3600 = 1 hour
-  };
 }
+
+// export async function getStaticProps(context: GetStaticPropsContext) {
+//   const slug = "business-hosting"; // CHANGE THIS SLUG
+//   const metaData = await getMetaData(slug);
+//   if (!metaData) {
+//     // Return a default value if metaData is undefined
+//     return {
+//       props: {
+//         metaData: {
+//           // title: "Default Title",
+//           // description: "Default description",
+//           // // ...other default values
+//         },
+//       },
+//       revalidate: 86400, // 3600 = 1 hour
+//     };
+//   }
+//   return {
+//     props: {
+//       metaData,
+//     },
+//     revalidate: 86400, // 3600 = 1 hour
+//   };
+// }
 
 // export const getServerSideProps = async (context: GetServerSidePropsContext) => {
 //   // SEND COOKIES TO API SERVER

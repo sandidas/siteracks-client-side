@@ -9,25 +9,33 @@ import ManagedVpsHostingFaq from "@/Components/Pages/ManagedVpsHosting/ManagedVp
 import ManagedVpsHostingMoreBenefits from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingMoreBenefits";
 import ManagedVpsHostingPricing from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingPricing";
 import ManagedVpsHostingReadyApps from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingReadyApps";
-import { useProducts } from "@/Context/ReactQueryProvider";
-import { getMetaData } from "@/Helpers/AxiosMetaData";
+import jwt from "jsonwebtoken";
+
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import axios from "axios";
 import { GetStaticPropsContext } from "next";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 interface IProps {
-  metaData: IHeadData;
+  productAndHomeSeo: {
+    metaData: IHeadData;
+    product: IProduct;
+  };
+  isError: boolean;
 }
 
-const VpsLight: FC<IProps> = ({ metaData }) => {
-  const { products, isLoading, isError } = useProducts();
+const VpsLight: FC<IProps> = ({ productAndHomeSeo, isError }) => {
+  const { metaData, product } = productAndHomeSeo;
+  const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
+
   return (
     <>
       <MetaDataComponent metaData={metaData} />
       <main>
         <section className="bg-surface">
-          <ManagedVpsHostingBanner products={products} isLoading={isLoading} isError={isError} />
+          <ManagedVpsHostingBanner product={product} isLoading={isLoading} isError={isError} />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <ManagedVpsHostingPricing products={products} isLoading={isLoading} isError={isError} />
+          <ManagedVpsHostingPricing product={product} isLoading={isLoading} isError={isError} />
         </section>
         <ManagedVpsHostingCompare />
         <ManagedVpsHostingReadyApps />
@@ -55,25 +63,57 @@ const VpsLight: FC<IProps> = ({ metaData }) => {
 export default VpsLight;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "pre-managed-vps-hosting-light"; // CHANGE THIS SLUG
-  const metaData = await getMetaData(slug);
-  if (!metaData) {
-    // Return a default value if metaData is undefined
-    return {
-      props: {
-        metaData: {
-          // title: "Default Title",
-          // description: "Default description",
-          // // ...other default values
-        },
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
+  const nameSlug = "managedVpsHosting";
+  const seoPageSlug = "preManagedVpsHostingLight";
+
+  try {
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
       },
-      revalidate: 86400, // 3600 = 1 hour
-    };
+    });
+
+    if (response) {
+      const productAndHomeSeo = response; // seo data found
+      return {
+        props: {
+          productAndHomeSeo,
+        },
+        revalidate: 86400, // 3600 = 1 hour
+      };
+    }
+    return { props: { isError: true } };
+  } catch (error) {
+    // console.error(error);
+    return { props: { isError: true } };
   }
-  return {
-    props: {
-      metaData,
-    },
-    revalidate: 86400, // 3600 = 1 hour
-  };
 }
+
+// export async function getStaticProps(context: GetStaticPropsContext) {
+//   const slug = "pre-managed-vps-hosting-light"; // CHANGE THIS SLUG
+//   const metaData = await getMetaData(slug);
+//   if (!metaData) {
+//     // Return a default value if metaData is undefined
+//     return {
+//       props: {
+//         metaData: {
+//           // title: "Default Title",
+//           // description: "Default description",
+//           // // ...other default values
+//         },
+//       },
+//       revalidate: 86400, // 3600 = 1 hour
+//     };
+//   }
+//   return {
+//     props: {
+//       metaData,
+//     },
+//     revalidate: 86400, // 3600 = 1 hour
+//   };
+// }

@@ -1,5 +1,4 @@
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
-import useDynamicHead from "@/Components/Hooks/useDynamicHead";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import WebHostingArticle from "@/Components/Pages/WebHosting/WebHostingArticle";
@@ -8,16 +7,27 @@ import WebHostingEssentials from "@/Components/Pages/WebHosting/WebHostingEssent
 import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
 import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
-import { useProducts } from "@/Context/ReactQueryProvider";
-import { getMetaData } from "@/Helpers/AxiosMetaData";
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import axios from "axios";
 import { GetStaticPropsContext } from "next";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+import jwt from "jsonwebtoken";
+
 interface IProps {
-  metaData: IHeadData;
+  productAndHomeSeo: {
+    metaData: IHeadData;
+    product: IProduct;
+  };
+  isError: boolean;
 }
 
-export const WebHosting: FC<IProps> = ({ metaData }) => {
-  const { products, isLoading, isError } = useProducts();
+export const WebHosting: FC<IProps> = ({ productAndHomeSeo, isError }) => {
+  const { metaData, product } = productAndHomeSeo;
+  const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
+  // console.log("metaData", metaData);
+  // console.log("product", product);
+
+  // const { products, isLoading, isError } = useProducts();
   return (
     <>
       {/* {useDynamicHead({ slug: "webHosting" })} */}
@@ -26,10 +36,10 @@ export const WebHosting: FC<IProps> = ({ metaData }) => {
 
       <main>
         <section className="bg-surface">
-          <WebHostingBanner products={products} isLoading={isLoading} isError={isError} />
+          <WebHostingBanner product={product} isLoading={isLoading} />
         </section>
         <section id="orderNow" className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
-          <WebHostingPricing products={products} isLoading={isLoading} isError={isError} />
+          <WebHostingPricing product={product} isLoading={isLoading} isError={isError} />
         </section>
         <WebHostingArticle />
         <LiveChat />
@@ -49,7 +59,45 @@ export const WebHosting: FC<IProps> = ({ metaData }) => {
   );
 };
 
+export default WebHosting;
+
 export async function getStaticProps(context: GetStaticPropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
+
+  try {
+    const nameSlug = "sharedWebHosting";
+    const seoPageSlug = "webHosting";
+
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
+    });
+
+    if (response) {
+      const productAndHomeSeo = response; // seo data found
+      return {
+        props: {
+          productAndHomeSeo,
+        },
+        revalidate: 86400, // 3600 = 1 hour
+      };
+    }
+    return { props: { isError: true } };
+  } catch (error) {
+    // console.error(error);
+    return { props: { isError: true } };
+  }
+}
+
+/**
+ * OLD VERSION OF REQUEST
+ * 
+ export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = "web-hosting";
   const metaData = await getMetaData(slug);
 
@@ -74,5 +122,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     revalidate: 86400, // 3600 = 1 hour
   };
 }
-
-export default WebHosting;
+ * 
+ * 
+ * 
+ */

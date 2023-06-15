@@ -8,6 +8,7 @@ const nextConfig = {
     BILLING_URL: process.env.BILLING_URL,
     ASK_ME: process.env.ASK_ME,
     MONGODB_URI: process.env.MONGODB_URI,
+    ACCESS_TOKEN_SECRET: process.env.ACCESS_TOKEN_SECRET,
   },
   // experimental: {
   //   appDir: false,
@@ -43,7 +44,7 @@ const nextConfig = {
     // loader can be 'default', 'imgix', 'cloudinary', 'akamai', or 'custom'
     loader: "default",
     // file with `export default function loader({src, width, quality})`
-    loaderFile: "",
+    loaderFile: "./public/logo/siteRacksFav.png",
     // disable static imports for image files
     disableStaticImages: false,
     // minimumCacheTTL is in seconds, must be integer 0 or more

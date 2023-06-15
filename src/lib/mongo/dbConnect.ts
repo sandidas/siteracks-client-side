@@ -1,14 +1,4 @@
-/** 
-Source : 
-https://github.com/vercel/next.js/blob/canary/examples/with-mongodb-mongoose/utils/dbConnect.js 
-**/
-
 import mongoose from 'mongoose';
-
-if (!process.env.MONGODB_URI) {
-  // throw new Error("");
-  console.log("Please add your MONGODB_URI to .env.local");
-}
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
@@ -34,8 +24,8 @@ async function dbConnect() {
   if (!cached.promise) {
     const opts = {
       // bufferCommands: false,
-    //  useNewUrlParser: true,
-    //  useUnifiedTopology: true,
+      //  useNewUrlParser: true,
+      //  useUnifiedTopology: true,
     };
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
@@ -47,3 +37,10 @@ async function dbConnect() {
 }
 
 export default dbConnect;
+
+
+/** 
+Source : 
+https://github.com/vercel/next.js/blob/canary/examples/with-mongodb-mongoose/utils/dbConnect.js 
+**/
+

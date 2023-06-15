@@ -3,19 +3,16 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import React, { FC } from "react";
 import BannerImage from "../../../../public/images/webHosting/reseller-hosting-banner.svg";
+import BannerPrice from "../CommonComponents/BannerPrice";
 import ResellerHostingBannerPrice from "./ResellerHostingBannerPrice";
 
 interface IProps {
-  products: { data: IProduct[] };
+  product?: IProduct;
   isLoading: boolean;
-  isError: boolean;
+  isError?: boolean;
 }
 
-const ResellerHostingBanner: FC<IProps> = ({ products, isLoading, isError }) => {
-
-
-
-
+const ResellerHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
   // const packagePrice = getPriceForBanner("resellerHosting", "startUpResellerHosting");
   return (
     <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
@@ -44,11 +41,8 @@ const ResellerHostingBanner: FC<IProps> = ({ products, isLoading, isError }) => 
           <div className="text-text">Starting at</div>
           <div className="flex">
             <div className="text-primary font-bold text-5xl group-hover:text-text">
-             
-
-              <ResellerHostingBannerPrice  products={products} isLoading={isLoading} isError={isError} />
-              
-              </div>
+              <BannerPrice product={product} isLoading={isLoading} typeSlugName="startUpResellerHosting" />
+            </div>
             <div className="text-text pt-3">/mo</div>
           </div>
         </div>

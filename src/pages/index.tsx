@@ -8,17 +8,13 @@ import HireAnExpert from "@/Components/Home/HireAnExpert";
 import LiveChat from "@/Components/LiveChat/LiveChat";
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
-import React, { FC, useEffect, useState } from "react";
-import { GetServerSidePropsContext } from "next";
+import React, { FC, useState } from "react";
+import { GetStaticPropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-
 import HomeProducts from "@/Components/Pages/Home/HomeProducts";
-import getPackages from "@/lib/mongo/getPackages";
-
-import Package from "@/models/Package";
 import axios from "axios";
-import getMetaDataByPage from "@/lib/mongo/getMetaDataByPage";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import jwt from "jsonwebtoken";
 
 const inter = Inter({ subsets: ["latin"] });
 interface IProps {
@@ -31,8 +27,7 @@ interface IProps {
 
 export const Home: FC<IProps> = ({ productAndHomeSeo, error }) => {
   const { metaData, products } = productAndHomeSeo;
-
-  const loadingStatus = products && products.length > 0;
+  const loadingStatus = Array.isArray(products) ? (products.length === 0 ? true : false) : true;
   const [isLoading, setIsLoading] = useState(loadingStatus);
 
   // const [products, setProducts] = useState([]);
@@ -90,14 +85,19 @@ export const Home: FC<IProps> = ({ productAndHomeSeo, error }) => {
 
 export default Home;
 
-export const getServerSideProps = async (context: GetServerSidePropsContext) => {
+export async function getStaticProps(context: GetStaticPropsContext) {
   let error;
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
+
   try {
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
-      url: `/api/sr`,
-      // requestConfig: {},
+      url: `/api/pages/sr`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
 
     if (response) {
@@ -106,6 +106,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
         props: {
           productAndHomeSeo,
         },
+        revalidate: 86400, // 3600 = 1 hour
       };
     }
 
@@ -116,4 +117,4 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
     error = error ? error : "Failed to load data";
     return { props: { error: error } };
   }
-};
+}

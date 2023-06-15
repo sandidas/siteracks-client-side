@@ -4,23 +4,20 @@ import React, { FC } from "react";
 interface IProps {
   product?: IProduct;
   isLoading: boolean;
+  typeSlugName: string;
 }
 
-const WebHostingBannerPrice: FC<IProps> = ({ product, isLoading }) => {
+const BannerPrice: FC<IProps> = ({ product, isLoading, typeSlugName }) => {
   if (isLoading || !product) {
     // return a loading indicator or skeleton
     return <Loader color="green" />;
   }
-  // select all services
-  const services = product;
-  // select single service
-  // const getService = services && services.find((p: IProduct) => p?.nameSlug?.includes("sharedWebHosting"));
   // select single package from service
-  const getPackage = services?.packages?.find((p) => p?.typeSlug?.includes("standardWebHosting"));
+  const getPackage = product && product?.packages?.find((p) => p?.typeSlug?.includes(typeSlugName));
   // get calculated price
   const getCalculatedPackagePrice = getPriceForBanner(getPackage as IProductPackage);
 
   return <>${getCalculatedPackagePrice.toFixed(2)}</>;
 };
 
-export default WebHostingBannerPrice;
+export default BannerPrice;
