@@ -68,7 +68,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   try {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
-
+    
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
