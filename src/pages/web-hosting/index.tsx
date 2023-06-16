@@ -83,8 +83,7 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
 export default WebHosting;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
+
   try {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
@@ -93,9 +92,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+
     });
 
     if (response?.data) {
