@@ -1,37 +1,35 @@
-import LiveChat from '@/Components/LiveChat/LiveChat';
-import MetaDataComponent from '@/Components/Meta/MetaDataComponent';
-import AskMeContactPage from '@/Components/Pages/Contact/AskMeContactPage'; 
-import ContactBanner from '@/Components/Pages/Contact/ContactBanner';
-import ExistingClientLogin from '@/Components/Pages/Contact/ExistingClientLogin';
-import UseAxiosAdmin from '@/Helpers/UseAxiosAdmin';
-import axios from 'axios';
-import { GetStaticPropsContext } from 'next';
+import LiveChat from "@/Components/LiveChat/LiveChat";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
+import AskMeContactPage from "@/Components/Pages/Contact/AskMeContactPage";
+import ContactBanner from "@/Components/Pages/Contact/ContactBanner";
+import ExistingClientLogin from "@/Components/Pages/Contact/ExistingClientLogin";
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import axios from "axios";
+import { GetServerSidePropsContext } from "next";
 import React, { FC } from "react";
-
+import jwt from "jsonwebtoken";
 interface IProps {
-    metaData: IHeadData;
-  }
+  metaData: IHeadData;
+}
 
 const ContactPage: FC<IProps> = ({ metaData }) => {
-    return (
-        <>
-        {metaData && <MetaDataComponent metaData={metaData} />}
-        <main>
-            <ContactBanner />
-            <ExistingClientLogin />
-            <LiveChat />
-            <AskMeContactPage />
-            </main>
-        </>
-    );
+  return (
+    <>
+      {metaData && <MetaDataComponent metaData={metaData} />}
+      <main>
+        <ContactBanner />
+        <ExistingClientLogin />
+        <LiveChat />
+        <AskMeContactPage />
+      </main>
+    </>
+  );
 };
 export default ContactPage;
 
-
-
-
-export async function getStaticProps(context: GetStaticPropsContext) {
-
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
   try {
     const seoPageSlug = "contact";
@@ -40,7 +38,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
     // console.log("metaData", response);
     if (response?.data) {
@@ -59,11 +59,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   }
 }
 
-
 // export async function getStaticProps(context: GetStaticPropsContext) {
 //     const slug = "contact";
 //     const metaData = await getMetaData(slug);
-  
+
 //     if (!metaData) {
 //       // Return a default value if metaData is undefined
 //       return {
@@ -77,7 +76,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 //         revalidate: 86400, // 3600 = 1 hour
 //       };
 //     }
-  
+
 //     return {
 //       props: {
 //         metaData,
@@ -85,5 +84,3 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 //       revalidate: 86400, // 3600 = 1 hour
 //     };
 //   }
-  
-

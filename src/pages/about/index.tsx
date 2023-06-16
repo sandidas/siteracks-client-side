@@ -5,10 +5,10 @@ import BoostProductivity from "@/Components/Pages/AboutUs/BoostProductivity";
 import OurCoreValues from "@/Components/Pages/AboutUs/OurCoreValues";
 import WhoWeAre from "@/Components/Pages/AboutUs/WhoWeAre";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-
+import jwt from "jsonwebtoken";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext, GetStaticPropsContext } from "next";
 import React, { FC } from "react";
 interface IProps {
   metaData: IHeadData;
@@ -35,8 +35,10 @@ const About: FC<IProps> = ({ metaData }) => {
 };
 export default About;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
 
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
   try {
     const seoPageSlug = "about";
@@ -45,7 +47,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
     // console.log("metaData", response);
     if (response?.data) {
@@ -90,4 +94,4 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 //   };
 // }
 
-//
+// 

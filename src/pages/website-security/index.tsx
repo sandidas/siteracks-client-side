@@ -2,10 +2,10 @@ import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import BannerSiteLock from "@/Components/Pages/SiteLock/BannerSiteLock";
 import FaqSiteLock from "@/Components/Pages/SiteLock/FaqSiteLock";
 import FeaturesSiteLock from "@/Components/Pages/SiteLock/FeaturesSiteLock";
-
+import jwt from "jsonwebtoken";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext } from "next";
 import React, { FC } from "react";
 interface IProps {
   metaData: IHeadData;
@@ -26,8 +26,9 @@ const SiteLockPage: FC<IProps> = ({ metaData }) => {
 
 export default SiteLockPage;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
   try {
     const seoPageSlug = "websiteSecurity";
@@ -36,7 +37,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
     // console.log("metaData", response);
     if (response?.data) {

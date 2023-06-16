@@ -5,11 +5,10 @@ import AffiliateHowItWorks from "@/Components/Pages/Affiliate/AffiliateHowItWork
 import AffiliateLucrative from "@/Components/Pages/Affiliate/AffiliateLucrative";
 import AffiliateNothingToLose from "@/Components/Pages/Affiliate/AffiliateNothingToLose";
 import AffiliateWhy from "@/Components/Pages/Affiliate/AffiliateWhy";
-import { getMetaData } from "@/Helpers/AxiosMetaData";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetStaticPropsContext } from "next";
-
+import { GetServerSidePropsContext } from "next";
+import jwt from "jsonwebtoken";
 import React, { FC } from "react";
 interface IProps {
   metaData: IHeadData;
@@ -61,8 +60,9 @@ const Affiliate: FC<IProps> = ({ metaData }) => {
 };
 export default Affiliate;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
   try {
     const seoPageSlug = "affiliate";
@@ -70,7 +70,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
     // console.log("metaData", response);
     if (response?.data) {

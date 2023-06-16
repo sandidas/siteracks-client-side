@@ -9,12 +9,12 @@ import LiveChat from "@/Components/LiveChat/LiveChat";
 import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 import HomeArticle from "@/Components/Home/HomeArticle";
 import React, { FC, useState } from "react";
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import HomeProducts from "@/Components/Pages/Home/HomeProducts";
 import axios from "axios";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
-
+import jwt from "jsonwebtoken";
 
 const inter = Inter({ subsets: ["latin"] });
 interface IProps {
@@ -73,15 +73,19 @@ export const Home: FC<IProps> = ({ response, error }) => {
 
 export default Home;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
   let error;
-
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
   try {
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/sr`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
 
     if (response?.data) {

@@ -9,9 +9,9 @@ import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHosting
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext } from "next";
 import React, { FC, useState } from "react";
-
+import jwt from "jsonwebtoken";
 
 interface IProps {
   response: {
@@ -62,18 +62,21 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
 
 export default WebHosting;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
   try {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
-    
+
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
 
     if (response?.data) {

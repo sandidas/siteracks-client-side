@@ -5,7 +5,7 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC } from "react";
-
+import jwt from "jsonwebtoken";
 interface IProps {
   response: {
     data: IPage;
@@ -35,7 +35,8 @@ const TermsPageIndividualItem: FC<IProps> = ({ response }) => {
 export default TermsPageIndividualItem;
 
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
   const { termsId } = context.query;
   const seoPageSlug: string = typeof termsId === "string" ? termsId.replace(/-([a-z])/g, (match: string, letter: string) => letter.toUpperCase()) : "";
 
@@ -44,7 +45,9 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/page?pageSlug=${termsId}&seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
     if (response?.data) {
       return {

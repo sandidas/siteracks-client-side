@@ -9,11 +9,11 @@ import ManagedVpsHostingFaq from "@/Components/Pages/ManagedVpsHosting/ManagedVp
 import ManagedVpsHostingMoreBenefits from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingMoreBenefits";
 import ManagedVpsHostingPricing from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingPricing";
 import ManagedVpsHostingReadyApps from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingReadyApps";
-
+import jwt from "jsonwebtoken";
 
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext } from "next";
 import React, { FC, useState } from "react";
 interface IProps {
   response: {
@@ -63,8 +63,9 @@ const VpsLight: FC<IProps> = ({ response, isError }) => {
 
 export default VpsLight;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
   const nameSlug = "managedVpsHosting";
   const seoPageSlug = "preManagedVpsHostingLight";
 
@@ -73,7 +74,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
 
     if (response?.data) {

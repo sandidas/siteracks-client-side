@@ -3,9 +3,9 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
 import axios from "axios";
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext } from "next";
 import React, { FC } from "react";
-
+import jwt from "jsonwebtoken";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 
 interface IProps {
@@ -17,7 +17,8 @@ interface IProps {
 }
 
 const TosIndexPage: FC<IProps> = ({ response, error }) => {
-  const { data: pages, metaData } = response;
+  const pages = response?.data;
+  const metaData = response?.metaData;
 
   return (
     <>
@@ -46,15 +47,18 @@ const TosIndexPage: FC<IProps> = ({ response, error }) => {
 
 export default TosIndexPage;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
   const seoPageSlug = "terms";
   try {
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/pages?seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
       // requestConfig: {},
     });
 

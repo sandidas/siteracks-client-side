@@ -7,8 +7,8 @@ import IndividualBlog from "@/Components/Pages/Blog/IndividualBlog";
 import BlogBanner from "@/Components/Pages/Blog/BlogBanner";
 import { ArrowDownIcon, ArrowLongRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-
-import { GetStaticPropsContext } from "next";
+import jwt from "jsonwebtoken";
+import { GetServerSidePropsContext } from "next";
 interface ICResponse {
   blogs: IBlog[];
   nextCursor: string;
@@ -22,6 +22,8 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
   // = = = = = =  = = =
   // CONFIGURATION LOADERS
   // = = = = = =  = = =
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
   const [postLimit, setPostLimit] = useState(6);
 
@@ -45,6 +47,9 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/blogs?cursor=${pageParam}&limit=${limit}&keyword=${keyword}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
 
     return response;
@@ -234,8 +239,9 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
 
 export default BlogIndex;
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
   try {
     const seoPageSlug = "blog";
@@ -244,7 +250,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
-      
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
     });
     // console.log("metaData", response);
     if (response?.data) {

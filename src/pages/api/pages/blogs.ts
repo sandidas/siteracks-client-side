@@ -1,7 +1,8 @@
 import dbConnect from '@/lib/mongo/dbConnect';
+import apiJwtGuard from '@/middleware/apiJwtGuard';
 import Blog from '@/models/Blog';
 import type { NextApiRequest, NextApiResponse } from 'next'
-
+import mongoose from 'mongoose';
 
 type Data = {
     skip?: number;
