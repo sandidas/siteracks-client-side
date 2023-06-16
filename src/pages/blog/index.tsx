@@ -1,17 +1,24 @@
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import { Button, Group, Loader, TextInput, UnstyledButton } from "@mantine/core";
 import axios from "axios";
-import React, { ChangeEvent, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, useEffect, useRef, useState, FC } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import IndividualBlog from "@/Components/Pages/Blog/IndividualBlog";
 import BlogBanner from "@/Components/Pages/Blog/BlogBanner";
 import { ArrowDownIcon, ArrowLongRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
-
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
+import jwt from "jsonwebtoken";
+import { GetStaticPropsContext } from "next";
 interface ICResponse {
   blogs: IBlog[];
   nextCursor: string;
 }
-const BlogIndex = () => {
+
+interface IProps {
+  metaData: IHeadData;
+}
+
+const BlogIndex: FC<IProps> = ({ metaData }) => {
   // = = = = = =  = = =
   // CONFIGURATION LOADERS
   // = = = = = =  = = =
@@ -158,7 +165,7 @@ const BlogIndex = () => {
   }
   return (
     <>
-      {/* <MetaDataComponent metaData={metaData} /> */}
+      {metaData && <MetaDataComponent metaData={metaData} />}
       <main className="max-w-screen-2xl mx-auto space-y-10 flex flex-col min-h-screen">
         <BlogBanner />
 
@@ -213,16 +220,11 @@ const BlogIndex = () => {
           </div>
         </div>
 
-
         <div className="flex justify-center pt-7 gap-5">
           <Button rightIcon={<ArrowDownIcon className="h-5 w-5" />} variant="outline" radius="sm" size="xl" onClick={() => fetchNextPage()} disabled={!hasNextPage || isFetchingNextPage}>
             Load More
           </Button>
         </div>
-
-
-
-
 
         <p className="text-text lg:text-xl lg:leading-9 max-w-5xl mx-auto text-center">SiteRacks Blog equips you with essential knowledge and tools, ensuring your website&#39;s reliability, security, and optimization in today&#39;s competitive online landscape.</p>
       </main>
@@ -231,3 +233,35 @@ const BlogIndex = () => {
 };
 
 export default BlogIndex;
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
+
+  try {
+    const seoPageSlug = "blog";
+
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
+    });
+    // console.log("metaData", response);
+    if (response?.data) {
+      const metaData = response?.data;
+      return {
+        props: {
+          metaData,
+        },
+        revalidate: 86400, // 3600 = 1 hour
+      };
+    }
+    return { props: { isError: true } };
+  } catch (error) {
+    // console.error(error);
+    return { props: { isError: true } };
+  }
+}

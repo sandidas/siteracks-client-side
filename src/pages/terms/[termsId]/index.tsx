@@ -14,11 +14,12 @@ interface IProps {
 }
 
 const TermsPageIndividualItem: FC<IProps> = ({ response }) => {
+  // console.log("response", response);
   const { metaData, data: page } = response;
 
   return (
     <>
-      <MetaDataComponent metaData={metaData} />
+      {metaData && <MetaDataComponent metaData={metaData} />}
 
       <div className="max-w-screen-2xl mx-auto px-3 md:px-5 pt-[8vh] md:pt-[12vh] pb-[8vh]">
         <SectionTitle bottomSpace title={page?.pageTitle ? page?.pageTitle : ""} />

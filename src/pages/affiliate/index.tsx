@@ -6,8 +6,10 @@ import AffiliateLucrative from "@/Components/Pages/Affiliate/AffiliateLucrative"
 import AffiliateNothingToLose from "@/Components/Pages/Affiliate/AffiliateNothingToLose";
 import AffiliateWhy from "@/Components/Pages/Affiliate/AffiliateWhy";
 import { getMetaData } from "@/Helpers/AxiosMetaData";
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import axios from "axios";
 import { GetStaticPropsContext } from "next";
-
+import jwt from "jsonwebtoken";
 import React, { FC } from "react";
 interface IProps {
   metaData: IHeadData;
@@ -16,7 +18,7 @@ interface IProps {
 const Affiliate: FC<IProps> = ({ metaData }) => {
   return (
     <>
-      <MetaDataComponent metaData={metaData} />
+      {metaData && <MetaDataComponent metaData={metaData} />}
       <main>
         <section className="bg-surface pb-[8vh] md:pt-[12vh]">
           <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
@@ -60,27 +62,58 @@ const Affiliate: FC<IProps> = ({ metaData }) => {
 export default Affiliate;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "affiliate";
-  const metaData = await getMetaData(slug);
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
-  if (!metaData) {
-    // Return a default value if metaData is undefined
-    return {
-      props: {
-        metaData: {
-          // title: "Default Title",
-          // description: "Default description",
-          // // ...other default values
-        },
+  try {
+    const seoPageSlug = "affiliate";
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
       },
-      revalidate: 86400, // 3600 = 1 hour
-    };
+    });
+    // console.log("metaData", response);
+    if (response?.data) {
+      const metaData = response?.data;
+      return {
+        props: {
+          metaData,
+        },
+        revalidate: 86400, // 3600 = 1 hour
+      };
+    }
+    return { props: { isError: true } };
+  } catch (error) {
+    // console.error(error);
+    return { props: { isError: true } };
   }
-
-  return {
-    props: {
-      metaData,
-    },
-    revalidate: 86400, // 3600 = 1 hour
-  };
 }
+
+// export async function getStaticProps(context: GetStaticPropsContext) {
+//   const slug = "affiliate";
+//   const metaData = await getMetaData(slug);
+
+//   if (!metaData) {
+//     // Return a default value if metaData is undefined
+//     return {
+//       props: {
+//         metaData: {
+//           // title: "Default Title",
+//           // description: "Default description",
+//           // // ...other default values
+//         },
+//       },
+//       revalidate: 86400, // 3600 = 1 hour
+//     };
+//   }
+
+//   return {
+//     props: {
+//       metaData,
+//     },
+//     revalidate: 86400, // 3600 = 1 hour
+//   };
+// }

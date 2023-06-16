@@ -5,7 +5,9 @@ import BoostProductivity from "@/Components/Pages/AboutUs/BoostProductivity";
 import OurCoreValues from "@/Components/Pages/AboutUs/OurCoreValues";
 import WhoWeAre from "@/Components/Pages/AboutUs/WhoWeAre";
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
-import { getMetaData } from "@/Helpers/AxiosMetaData";
+import jwt from "jsonwebtoken";
+import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
+import axios from "axios";
 import { GetStaticPropsContext } from "next";
 import React, { FC } from "react";
 interface IProps {
@@ -15,7 +17,7 @@ interface IProps {
 const About: FC<IProps> = ({ metaData }) => {
   return (
     <>
-      <MetaDataComponent metaData={metaData} />
+      {metaData && <MetaDataComponent metaData={metaData} />}
       <main>
         <section className="bg-surface">
           <AboutBanner />
@@ -31,31 +33,64 @@ const About: FC<IProps> = ({ metaData }) => {
     </>
   );
 };
+export default About;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "about";
-  const metaData = await getMetaData(slug);
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
 
-  if (!metaData) {
-    // Return a default value if metaData is undefined
-    return {
-      props: {
-        metaData: {
-          // title: "Default Title",
-          // description: "Default description",
-          // // ...other default values
-        },
+  try {
+    const seoPageSlug = "about";
+
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
       },
-      revalidate: 86400, // 3600 = 1 hour
-    };
+    });
+    // console.log("metaData", response);
+    if (response?.data) {
+      const metaData = response?.data;
+      return {
+        props: {
+          metaData,
+        },
+        revalidate: 86400, // 3600 = 1 hour
+      };
+    }
+    return { props: { isError: true } };
+  } catch (error) {
+    // console.error(error);
+    return { props: { isError: true } };
   }
-
-  return {
-    props: {
-      metaData,
-    },
-    revalidate: 86400, // 3600 = 1 hour
-  };
 }
 
-export default About;
+// export async function getStaticProps(context: GetStaticPropsContext) {
+//   const slug = "about";
+//   const metaData = await getMetaData(slug);
+
+//   if (!metaData) {
+//     // Return a default value if metaData is undefined
+//     return {
+//       props: {
+//         metaData: {
+//           // title: "Default Title",
+//           // description: "Default description",
+//           // // ...other default values
+//         },
+//       },
+//       revalidate: 86400, // 3600 = 1 hour
+//     };
+//   }
+
+//   return {
+//     props: {
+//       metaData,
+//     },
+//     revalidate: 86400, // 3600 = 1 hour
+//   };
+// }
+
+//

@@ -24,12 +24,13 @@ interface IProps {
 }
 
 const VpsLight: FC<IProps> = ({ response, isError }) => {
-  const { metaData, data: product } = response;
+  const metaData = response?.metaData;
+  const product = response?.data;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
 
   return (
     <>
-      <MetaDataComponent metaData={metaData} />
+      {metaData && <MetaDataComponent metaData={metaData} />}
       <main>
         <section className="bg-surface">
           <ManagedVpsHostingBanner product={product} isLoading={isLoading} isError={isError} />

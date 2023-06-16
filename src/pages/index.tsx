@@ -26,13 +26,17 @@ interface IProps {
 }
 
 export const Home: FC<IProps> = ({ response, error }) => {
-  const { metaData, data: products } = response;
+  // const { metaData, data: products } = response;
+
+  const metaData = response?.metaData;
+  const products = response?.data;
+
   const loadingStatus = Array.isArray(products) ? (products.length === 0 ? true : false) : true;
   const [isLoading, setIsLoading] = useState(loadingStatus);
 
   return (
     <>
-      <MetaDataComponent metaData={metaData} />
+      {metaData && <MetaDataComponent metaData={metaData} />}
       <main>
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}

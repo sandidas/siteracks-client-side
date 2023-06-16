@@ -22,12 +22,13 @@ interface IProps {
 }
 
 const WordPressHosting: FC<IProps> = ({ response, isError }) => {
-  const { metaData, data: product } = response;
+  const metaData = response?.metaData;
+  const product = response?.data;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
 
   return (
     <>
-      <MetaDataComponent metaData={metaData} />
+      {metaData && <MetaDataComponent metaData={metaData} />}
       <main>
         <section className="bg-surface">
           <WordPressHostingBanner product={product} isLoading={isLoading} isError={isError} />
@@ -103,7 +104,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = "wordpress-hosting"; // CHANGE THIS SLUG
-  const metaData = await getMetaData(slug);
+  // const metaData = await getMetaData(slug);
   if (!metaData) {
     // Return a default value if metaData is undefined
     return {

@@ -369,10 +369,10 @@ export function HeaderMegaMenu() {
                         Get started
                       </Text>
                       <Text size="xs" color="dimmed">
-                        Their food sources have decreased, and their numbers
+                        Confused? You can ask an expert to help.
                       </Text>
                     </div>
-                    <Button variant="default">Get started</Button>
+                    <Button onClick={() => { Tawk_API.toggle() }}  variant="default">Get started</Button>
                   </Group>
                 </div>
               </HoverCard.Dropdown>

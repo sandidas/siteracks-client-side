@@ -6,19 +6,23 @@ import axios from "axios";
 import { GetStaticPropsContext } from "next";
 import React, { FC } from "react";
 import jwt from "jsonwebtoken";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 
 interface IProps {
   response: {
     data: IPage[];
+    metaData: IHeadData;
   };
   error?: string;
 }
 
 const TosIndexPage: FC<IProps> = ({ response, error }) => {
-  const { data: pages } = response;
+  const { data: pages, metaData } = response;
 
   return (
     <>
+      {metaData && <MetaDataComponent metaData={metaData} />}
+
       <div className="max-w-screen-2xl mx-auto px-3 md:px-5 pt-[8vh] md:pt-[12vh] pb-[8vh]">
         {/* left column  */}
         <div className="flex flex-col justify-center items-start space-y-8 group">
@@ -45,12 +49,12 @@ export default TosIndexPage;
 export async function getStaticProps(context: GetStaticPropsContext) {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
-
+  const seoPageSlug = "terms";
   try {
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
-      url: "/api/pages/pages",
+      url: `/api/pages/pages?seoPageSlug=${seoPageSlug}`,
       header: {
         Authorization: `Bearer ${apiKey}`,
       },

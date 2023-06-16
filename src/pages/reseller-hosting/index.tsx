@@ -21,12 +21,13 @@ interface IProps {
 }
 
 const ResellerHosting: FC<IProps> = ({ response, isError }) => {
-  const { metaData, data: product } = response;
+  const metaData = response?.metaData;
+  const product = response?.data;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
 
   return (
     <>
-      <MetaDataComponent metaData={metaData} />
+      {metaData && <MetaDataComponent metaData={metaData} />}
       <main>
         <section className="bg-surface bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
           <ResellerHostingBanner product={product} isLoading={isLoading} isError={isError} />

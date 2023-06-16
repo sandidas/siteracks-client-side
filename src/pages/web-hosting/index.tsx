@@ -22,7 +22,8 @@ interface IProps {
 }
 
 export const WebHosting: FC<IProps> = ({ response, isError }) => {
-  const { metaData, data: product } = response;
+  const metaData = response?.metaData;
+  const product = response?.data;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
   // console.log("metaData", metaData);
   // console.log("product", product);
@@ -32,7 +33,7 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
     <>
       {/* {useDynamicHead({ slug: "webHosting" })} */}
 
-      <MetaDataComponent metaData={metaData} />
+      {metaData && <MetaDataComponent metaData={metaData} />}
 
       <main>
         <section className="bg-surface">
@@ -93,35 +94,35 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   }
 }
 
-/**
- * OLD VERSION OF REQUEST
- * 
- export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "web-hosting";
-  const metaData = await getMetaData(slug);
+// /**
+//  * OLD VERSION OF REQUEST
+//  *
+//  export async function getStaticProps(context: GetStaticPropsContext) {
+//   const slug = "web-hosting";
+//   const metaData = await getMetaData(slug);
 
-  if (!metaData) {
-    // Return a default value if metaData is undefined
-    return {
-      props: {
-        metaData: {
-          // title: "Default Title",
-          // description: "Default description",
-          // // ...other default values
-        },
-      },
-      revalidate: 86400, // 3600 = 1 hour
-    };
-  }
+//   if (!metaData) {
+//     // Return a default value if metaData is undefined
+//     return {
+//       props: {
+//         metaData: {
+//           // title: "Default Title",
+//           // description: "Default description",
+//           // // ...other default values
+//         },
+//       },
+//       revalidate: 86400, // 3600 = 1 hour
+//     };
+//   }
 
-  return {
-    props: {
-      metaData,
-    },
-    revalidate: 86400, // 3600 = 1 hour
-  };
-}
- * 
- * 
- * 
- */
+//   return {
+//     props: {
+//       metaData,
+//     },
+//     revalidate: 86400, // 3600 = 1 hour
+//   };
+// }
+//  *
+//  *
+//  *
+//  */

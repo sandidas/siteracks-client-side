@@ -1,21 +1,24 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import dbConnect from '@/lib/mongo/dbConnect';
 import apiJwtGuard from '@/middleware/apiJwtGuard';
-import Package from '@/models/Package';
 import Seo from '@/models/Seo';
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-    data?: IProduct[];
+    data?: IProduct;
     metaData?: IHeadData;
     error?: string | null;
 }
+
+// /api/pages/package?seoPageSlug=${career}
+
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
     try {
+        let metaData
+
 
         // SECURITY WALL
         const authHeader = req.headers['authorization'];
@@ -24,28 +27,26 @@ export default async function handler(
         if (!verification) {
             res.status(401).json({ error: 'Nothing!' });
         } else {
+
             // SECURITY PASSED
+            const { seoPageSlug } = req.query;
+            // console.log("nameSlug", nameSlug);
 
+            if (!seoPageSlug) {
+                res.status(500).json({ error: 'Query data not found' });
+            }
+
+
+            // DB CONNECTION
             await dbConnect();
-            const result = await Package.find({}, {
-                _id: 0,
-                __v: 0,
-                "packages._id": 0,
-                "packages.features": 0,
-                "packages.productTitle": 0,
-                "packages.productDescription": 0,
-                "packages.productId": 0,
-                "packages.featured": 0,
-                "packages.additionalMonths": 0,
-                "packages.promoCode": 0,
-            }).lean();
 
-            let metaData = await Seo.findOne({
-                pageSlug: "home"
+            // = = = = = = = = = = 
+            // META DATA QUERY
+            // = = = = = = = = = = 
+            metaData = await Seo.findOne({
+                pageSlug: seoPageSlug
             });
-
             if (!metaData) {
-
                 metaData = await Seo.findOne({
                     pageSlug: "default"
                 });
@@ -62,17 +63,21 @@ export default async function handler(
                 }
             }
 
-            //  console.log("GOD HELP ME: ", result);
-            if (result.length > 0) {
-                res.status(200).json({ data: result, metaData });
+            // = = = = = = = = = = 
+            // # RESPONSE
+            // = = = = = = = = = = 
+
+            if (metaData) {
+                res.status(200).json({ data: metaData });
             } else {
-                res.status(500).json({ error: 'SiteRacks Hosting' });
+                res.status(500).json({ error: 'Data not found' });
             }
+
         }
 
     } catch (error) {
         console.error("Error fetching packages:", error);
-        res.status(500).json({ error: 'SiteRacks Hosting' });
+        res.status(500).json({ error: 'Internal Error' });
     }
 };
 
