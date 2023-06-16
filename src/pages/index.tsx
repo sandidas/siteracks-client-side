@@ -28,7 +28,7 @@ interface IProps {
 
 export const Home: FC<IProps> = ({ response, error }) => {
   // const { metaData, data: products } = response;
-console.log("response", response);
+  console.log("response", response);
   const metaData = response?.metaData;
   const products = response?.data;
 
@@ -79,7 +79,6 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
   const response = await GetSrData();
 
   try {
-     
     const serializedMetaData = JSON.stringify(response.metaData);
 
     return {
@@ -96,4 +95,3 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
     return { props: { error: error } };
   }
 };
-

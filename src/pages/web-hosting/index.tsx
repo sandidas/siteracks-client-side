@@ -10,7 +10,7 @@ import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import jwt from "jsonwebtoken";
 
 interface IProps {
@@ -22,6 +22,26 @@ interface IProps {
 }
 
 export const WebHosting: FC<IProps> = ({ response, isError }) => {
+  useEffect(() => {
+    const nameSlug = "sharedWebHosting";
+    const seoPageSlug = "webHosting";
+
+    const fetchData = async () => {
+      try {
+        const response = await UseAxiosAdmin({
+          axiosInstance: axios,
+          method: "get",
+          url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+        });
+        console.log("Response", response);
+      } catch (error) {
+        console.error("Error", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const metaData = response?.metaData;
   const product = response?.data;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
@@ -83,7 +103,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           response,
         },
-       
       };
     }
     return { props: { isError: true } };
@@ -110,7 +129,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //           // // ...other default values
 //         },
 //       },
-//      
+//
 //     };
 //   }
 
@@ -118,7 +137,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //     props: {
 //       metaData,
 //     },
-//    
+//
 //   };
 // }
 //  *
