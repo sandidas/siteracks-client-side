@@ -64,7 +64,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: 86400, // 3600 = 1 hour
+   
   };
 };
 // useReactQueryContext is a custom hook that uses the useContext hook from React to access the ReactQueryContext context object and returns the query client instance.

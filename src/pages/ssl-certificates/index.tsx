@@ -50,7 +50,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           metaData,
         },
-        revalidate: 86400, // 3600 = 1 hour
+       
       };
     }
     return { props: { isError: true } };
@@ -74,7 +74,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //           // // ...other default values
 //         },
 //       },
-//       revalidate: 86400, // 3600 = 1 hour
+//      
 //     };
 //   }
 
@@ -82,6 +82,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //     props: {
 //       metaData,
 //     },
-//     revalidate: 86400, // 3600 = 1 hour
+//    
 //   };
 // }

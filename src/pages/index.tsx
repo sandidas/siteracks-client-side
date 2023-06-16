@@ -73,7 +73,7 @@ export const Home: FC<IProps> = ({ response, error }) => {
 
 export default Home;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getServerSideProps = async (context: GetServerSidePropsContext) => {
   let error;
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
@@ -91,9 +91,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     if (response?.data) {
       return {
         props: {
-          response,
+          response: response,
         },
-        revalidate: 86400, // 3600 = 1 hour
       };
     }
 

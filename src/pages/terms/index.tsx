@@ -68,7 +68,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           response,
         },
-        revalidate: 86400, // 3600 = 1 hour
+       
       };
     } else {
       return { props: { error: true } };
