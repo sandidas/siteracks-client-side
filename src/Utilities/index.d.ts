@@ -77,9 +77,9 @@ declare global {
         metaOgUrl?: string;
         shareTitle?: string;
         // add more properties as needed
-      };
+    };
 
-        // =================== 
+    // =================== 
     //  PAGE INTERFACE GLOBAL
     // =================== 
 
@@ -103,6 +103,11 @@ declare global {
     interface ICategory {
         title: string;
         slug: string;
+    }
+
+    interface IReaction {
+        author: string;
+        authorName?: string;
     }
 
     interface IBlogAnswer {

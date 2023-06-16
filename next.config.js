@@ -9,6 +9,8 @@ const nextConfig = {
     ASK_ME: process.env.ASK_ME,
     MONGODB_URI: process.env.MONGODB_URI,
     ACCESS_TOKEN_SECRET: process.env.ACCESS_TOKEN_SECRET,
+    REGION_AWS: process.env.REGION_AWS,
+    BUCKET_NAME_AWS: process.env.BUCKET_NAME_AWS,
   },
   // experimental: {
   //   appDir: false,

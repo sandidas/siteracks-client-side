@@ -3,6 +3,8 @@ import { Loader } from "@mantine/core";
 import axios from "axios";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
+import IndividualBlog from "@/Components/Pages/Blog/IndividualBlog";
+import BlogBanner from "@/Components/Pages/Blog/BlogBanner";
 
 interface ICResponse {
   blogs: IBlog[];
@@ -142,18 +144,19 @@ const BlogIndex = () => {
     <>
       {/* <MetaDataComponent metaData={metaData} /> */}
       <main className="max-w-screen-2xl mx-auto space-y-10 flex flex-col min-h-screen">
+        <BlogBanner />
+
         {/* 
   // = = = = = = = = =
   // BLOGS
   // = = = = = = = = =
         */}
 
-        <div className="gap-10 grid grid-cols-1 2xl:grid-cols-2 2xl:gap-10">
+        <div className="gap-5 grid grid-cols-1 lg:grid-cols-2 lg:gap-10 2xl:grid-cols-3">
           {data?.pages?.map((page, pageIndex) => (
             <React.Fragment key={pageIndex}>
               {page?.blogs?.map((blog: IBlog, index: number) => (
-                // <BlogIndividual key={index} blog={blog} />
-                <div className="py-28" key={index}>{blog?.subject} <br /> </div>
+                <IndividualBlog key={index} blog={blog} />
               ))}
             </React.Fragment>
           ))}
@@ -170,6 +173,7 @@ const BlogIndex = () => {
             ) : null}
           </div>
         </div>
+        <p className="text-text lg:text-xl lg:leading-9 max-w-5xl mx-auto text-center">SiteRacks Blog equips you with essential knowledge and tools, ensuring your website&#39;s reliability, security, and optimization in today&#39;s competitive online landscape.</p>
       </main>
     </>
   );

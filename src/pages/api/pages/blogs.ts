@@ -41,7 +41,7 @@ export default async function handler(
 
         const { keyword } = req.query as { keyword?: string }; // Keyword for search query
 
-        console.log("One blog");
+        // console.log("One blog");
         // const cursor = req.query.cursor ? new mongoose.Types.ObjectId(req.query.cursor as string) : null;
 
         let cursor = existCursor !== "0" ? existCursor : null;
