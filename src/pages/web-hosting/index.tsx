@@ -65,7 +65,6 @@ export default WebHosting;
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
-
   try {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";

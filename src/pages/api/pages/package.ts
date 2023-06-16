@@ -30,6 +30,7 @@ export default async function handler(
         const authHeader = req.headers['authorization'];
         const token = authHeader && authHeader.split(' ')[1];
         const verification = token && await apiJwtGuard(token);
+        console.log("verification", verification);
         if (!verification) {
             res.status(401).json({ error: 'Nothing!' });
         } else {

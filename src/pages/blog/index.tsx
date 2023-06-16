@@ -22,8 +22,6 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
   // = = = = = =  = = =
   // CONFIGURATION LOADERS
   // = = = = = =  = = =
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
 
   const [postLimit, setPostLimit] = useState(6);
 
@@ -42,14 +40,17 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
   // STEP 1: FETCHING DATA FOR REACT QUERY
   //
   const fetchUsersData = async ({ pageParam = 0, keyword, limit }: { pageParam?: number; keyword?: string; limit: number }) => {
+    // const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+    // const apiKey = await jwt.sign({}, tokenSecret);
+
     //@ts-ignore
     const response: ICResponse = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/blogs?cursor=${pageParam}&limit=${limit}&keyword=${keyword}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+      // header: {
+      //   Authorization: `Bearer ${apiKey}`,
+      // },
     });
 
     return response;
@@ -163,8 +164,11 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
   if (status === "loading" && !data) {
     // Show loading state while fetching initial data
     return (
-      <div className="flex justify-center">
-        <Loader size="xl" />
+      <div>
+        <BlogBanner />
+        <div className="flex justify-center">
+          <Loader size="xl" />
+        </div>
       </div>
     );
   }
@@ -261,7 +265,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           metaData,
         },
-       
       };
     }
     return { props: { isError: true } };
