@@ -5,7 +5,7 @@ import { Button } from "@mantine/core";
 import axios from "axios";
 import { GetStaticPropsContext } from "next";
 import React, { FC } from "react";
-import jwt from "jsonwebtoken";
+
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 
 interface IProps {
@@ -47,17 +47,14 @@ const TosIndexPage: FC<IProps> = ({ response, error }) => {
 export default TosIndexPage;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
+
   const seoPageSlug = "terms";
   try {
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/pages?seoPageSlug=${seoPageSlug}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+      
       // requestConfig: {},
     });
 

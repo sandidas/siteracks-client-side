@@ -10,7 +10,7 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetStaticPropsContext } from "next";
 import React, { FC, useState } from "react";
-import jwt from "jsonwebtoken";
+
 
 interface IProps {
   response: {
@@ -56,8 +56,7 @@ const ResellerHosting: FC<IProps> = ({ response, isError }) => {
 export default ResellerHosting;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
+
   const nameSlug = "resellerHosting";
   const seoPageSlug = "resellerHosting";
 
@@ -66,9 +65,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+      
     });
 
     if (response?.data) {

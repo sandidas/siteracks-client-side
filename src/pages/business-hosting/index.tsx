@@ -14,7 +14,7 @@ import { GetStaticPropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import jwt from "jsonwebtoken";
+
 
 interface IProps {
   response: {
@@ -72,8 +72,7 @@ const BusinessHosting: FC<IProps> = ({ response, isError }) => {
 export default BusinessHosting;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
+
 
   try {
     const nameSlug = "businessHosting";
@@ -83,9 +82,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+      
     });
 
     if (response?.data) {

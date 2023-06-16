@@ -1,5 +1,6 @@
 import PlainButton from "@/Components/Buttons/PlainButton";
 import FeatureCard from "@/Components/Card/FeatureCard";
+import { RemoveTags } from "@/Helpers/RemoveTags";
 import { timeSince } from "@/Helpers/timeSince";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Avatar, Button, UnstyledButton } from "@mantine/core";
@@ -32,6 +33,13 @@ const IndividualBlog: FC<IProps> = ({ blog }) => {
   }
 
   // = = = = = =  = = =
+  // BODY TEXT
+  // = = = = = =  = = =
+  const removeTagsText = RemoveTags(blog?.text);
+  const words = removeTagsText.split(" ");
+  const blogLimitedWord = words.slice(0, 20).join(" ");
+
+  // = = = = = =  = = =
   // Conversation date to time since
   // = = = = = =  = = =
   const createdAt = new Date(blog?.createdAt);
@@ -47,9 +55,9 @@ const IndividualBlog: FC<IProps> = ({ blog }) => {
             {blog?.featuredImage && <Image className="w-full max-h-96" src={`https://${process.env.BUCKET_NAME_AWS}.s3.${process.env.REGION_AWS}.amazonaws.com/${blog?.featuredImage}`} alt={blog?.subject} width={600} height={200} />}
           </Link>
           <Link href={`${ASKME_URL}/blog/${blog?.slug}`} className="flex">
-            <h3 className="text-title font-bold text-3xl group-hover:text-primary">Premium Cloud </h3>
+            <h3 className="text-title font-bold text-3xl group-hover:text-primary">{blog?.subject}</h3>
           </Link>
-          <p className="text-text">Enjoy better latency and lesser downtime while keeping your account and data always secured. Our platform is built with Premium AWS Cloud and Digital Ocean Cloud servers.</p>
+          <div className="text-text leading-8">{blogLimitedWord}.....</div>
         </div>
         <div className="grow"></div>
 

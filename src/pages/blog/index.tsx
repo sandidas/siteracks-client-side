@@ -7,7 +7,7 @@ import IndividualBlog from "@/Components/Pages/Blog/IndividualBlog";
 import BlogBanner from "@/Components/Pages/Blog/BlogBanner";
 import { ArrowDownIcon, ArrowLongRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-import jwt from "jsonwebtoken";
+
 import { GetStaticPropsContext } from "next";
 interface ICResponse {
   blogs: IBlog[];
@@ -235,8 +235,7 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
 export default BlogIndex;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
+
 
   try {
     const seoPageSlug = "blog";
@@ -245,9 +244,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+      
     });
     // console.log("metaData", response);
     if (response?.data) {

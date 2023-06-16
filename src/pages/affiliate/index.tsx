@@ -9,7 +9,7 @@ import { getMetaData } from "@/Helpers/AxiosMetaData";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetStaticPropsContext } from "next";
-import jwt from "jsonwebtoken";
+
 import React, { FC } from "react";
 interface IProps {
   metaData: IHeadData;
@@ -62,8 +62,7 @@ const Affiliate: FC<IProps> = ({ metaData }) => {
 export default Affiliate;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
+
 
   try {
     const seoPageSlug = "affiliate";
@@ -71,9 +70,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+      
     });
     // console.log("metaData", response);
     if (response?.data) {
