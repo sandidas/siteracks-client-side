@@ -1,21 +1,10 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import dbConnect from '@/lib/mongo/dbConnect';
-import apiJwtGuard from '@/middleware/apiJwtGuard';
-import Package from '@/models/Package';
-import Seo from '@/models/Seo';
-import type { NextApiRequest, NextApiResponse } from 'next'
+import dbConnect from "@/lib/mongo/dbConnect";
+import Package from "../Package";
+import Seo from "../Seo";
 
-type Data = {
-    data?: IProduct[];
-    metaData?: IHeadData;
-    error?: string | null;
-}
 
-export default async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse<Data>
-) {
-    try { 
+const GetSrData = async () => {
+    try {
 
         // SECURITY WALL
         // const authHeader = req.headers['authorization'];
@@ -65,16 +54,16 @@ export default async function handler(
 
         //  console.log("GOD HELP ME: ", result);
         if (result.length > 0) {
-            res.status(200).json({ data: result, metaData });
+            return { data: result, metaData };
         } else {
-            res.status(500).json({ error: 'SiteRacks Hosting' });
+            return { error: 'SiteRacks Hosting' };
         }
 
 
     } catch (error) {
         console.error("Error fetching packages:", error);
-        res.status(500).json({ error: 'SiteRacks Hosting' });
+        return { error: 'SiteRacks Hosting' };
     }
-};
+}
 
-
+export default GetSrData;

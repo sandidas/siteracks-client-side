@@ -15,6 +15,7 @@ import HomeProducts from "@/Components/Pages/Home/HomeProducts";
 import axios from "axios";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import jwt from "jsonwebtoken";
+import GetSrData from "@/models/getData/GetSrData";
 
 const inter = Inter({ subsets: ["latin"] });
 interface IProps {
@@ -27,7 +28,7 @@ interface IProps {
 
 export const Home: FC<IProps> = ({ response, error }) => {
   // const { metaData, data: products } = response;
-
+console.log("response", response);
   const metaData = response?.metaData;
   const products = response?.data;
 
@@ -75,32 +76,24 @@ export default Home;
 
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
   let error;
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
+  const response = await GetSrData();
 
   try {
-    const response = await UseAxiosAdmin({
-      axiosInstance: axios,
-      method: "get",
-      url: `/api/pages/sr`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
-    });
+     
+    const serializedMetaData = JSON.stringify(response.metaData);
 
-    if (response?.data) {
-      return {
-        props: {
-          response: response,
+    return {
+      props: {
+        response: {
+          data: response?.data,
+          metaData: serializedMetaData,
         },
-      };
-    }
-
-    error = error ? error : "Failed to load data";
-    return { props: { error: error } };
+      },
+    };
   } catch (error) {
     // console.error(error);
     error = error ? error : "Failed to load data";
     return { props: { error: error } };
   }
-}
+};
+
