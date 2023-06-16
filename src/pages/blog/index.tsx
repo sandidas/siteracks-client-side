@@ -1,10 +1,11 @@
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
-import { Loader } from "@mantine/core";
+import { Button, Group, Loader, TextInput, UnstyledButton } from "@mantine/core";
 import axios from "axios";
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, useEffect, useRef, useState } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import IndividualBlog from "@/Components/Pages/Blog/IndividualBlog";
 import BlogBanner from "@/Components/Pages/Blog/BlogBanner";
+import { ArrowDownIcon, ArrowLongRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
 interface ICResponse {
   blogs: IBlog[];
@@ -15,14 +16,15 @@ const BlogIndex = () => {
   // CONFIGURATION LOADERS
   // = = = = = =  = = =
 
-  const [postLimit, setPostLimit] = useState(10);
+  const [postLimit, setPostLimit] = useState(6);
 
   // = = = = = =  = = =
   // SEARCH KEYWORD CONTEXT. THE VALUES COMES FROM HEADER
   // = = = = = =  = = =
   // WE ARE GETTING SEARCH KEYWORD FROM CONTEXT
   // Bellow I am using a useEffect hook, when we have text in search Keywords the useEffect hook will apply to call refetching.
-  const [searchKeyword, setSearchKeyword] = useState<string | undefined>("search");
+  const [searchKeyword, setSearchKeyword] = useState("");
+  const [inputText, setInputText] = useState("");
 
   // = = = = = =  = = = =
   // QUERY WITH INFINITE LOADER : TENSTACK REACT QUERY
@@ -84,28 +86,28 @@ const BlogIndex = () => {
   // NOTE: the Intersection Observer is an API that allows you to efficiently detect when an element enters or exits the viewport (the visible area of a web page). It is commonly used for implementing lazy loading of images, infinite scrolling, or triggering animations based on the visibility of elements.
 
   // STEP 3.3: Use the useEffect hook to set up the IntersectionObserver
-  useEffect(() => {
-    if (lastItemRef.current) {
-      observer.current = new IntersectionObserver(
-        (entries) => {
-          const target = entries[0];
-          // STEP 3.3: If the target is intersecting with the viewport and we have a next page and we're not currently fetching data, fetch the next page
-          if (target.isIntersecting && hasNextPage && !isFetchingNextPage) {
-            fetchNextPage();
-          }
-        },
-        { threshold: 1 } // STEP 3.3: Only fire when the target is completely visible
-      );
-      // STEP 3.4: Observe the last item
-      observer.current.observe(lastItemRef.current);
-    }
-    //  STEP 3.5: Clean up the observer when the component is unmounted
-    return () => {
-      if (observer.current) {
-        observer.current.disconnect();
-      }
-    };
-  }, [lastItemRef, hasNextPage, isFetchingNextPage, fetchNextPage]);
+  // useEffect(() => {
+  //   if (lastItemRef.current) {
+  //     observer.current = new IntersectionObserver(
+  //       (entries) => {
+  //         const target = entries[0];
+  //         // STEP 3.3: If the target is intersecting with the viewport and we have a next page and we're not currently fetching data, fetch the next page
+  //         if (target.isIntersecting && hasNextPage && !isFetchingNextPage) {
+  //           fetchNextPage();
+  //         }
+  //       },
+  //       { threshold: 1 } // STEP 3.3: Only fire when the target is completely visible
+  //     );
+  //     // STEP 3.4: Observe the last item
+  //     observer.current.observe(lastItemRef.current);
+  //   }
+  //   //  STEP 3.5: Clean up the observer when the component is unmounted
+  //   return () => {
+  //     if (observer.current) {
+  //       observer.current.disconnect();
+  //     }
+  //   };
+  // }, [lastItemRef, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   // # LOAD WHILE PAGE SCROLLING DOWN
   //
@@ -128,6 +130,20 @@ const BlogIndex = () => {
   }, [searchKeyword, refetch]);
   //
   //
+  // = = = = = =  = = =
+  // SEARCH
+  // = = = = = =  = = =
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInputText(e.target.value);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.keyCode === 13) {
+      // Enter key is pressed
+      // Perform the desired action here, such as setting the search keyword
+      setSearchKeyword(inputText);
+    }
+  };
 
   // = = = = = =  = = =
   // RETURN
@@ -145,6 +161,29 @@ const BlogIndex = () => {
       {/* <MetaDataComponent metaData={metaData} /> */}
       <main className="max-w-screen-2xl mx-auto space-y-10 flex flex-col min-h-screen">
         <BlogBanner />
+
+        <Group>
+          <div className="flex w-full items-center border dark:border-gray-800  py-3 dark:bg-slate-800 bg-slate-50">
+            <TextInput variant="unstyled" className="px-5 w-11/12 text-lg font-bold" placeholder="Search Here" onKeyDown={handleKeyDown} value={inputText} onChange={handleInputChange} />
+            {searchKeyword ? (
+              <UnstyledButton
+                onClick={() => {
+                  setSearchKeyword("");
+                }}
+              >
+                <XMarkIcon className="w-4 h-4 xl:w-6 xl:h-6 fill-slate-400 dark:fill-slate-400 hover:fill-primary dark:hover:fill-primary" />
+              </UnstyledButton>
+            ) : (
+              <UnstyledButton
+                onClick={() => {
+                  setSearchKeyword(inputText);
+                }}
+              >
+                <ArrowLongRightIcon className="w-4 h-4 xl:w-6 xl:h-6 fill-slate-400 dark:fill-slate-400 hover:fill-primary dark:hover:fill-primary" />
+              </UnstyledButton>
+            )}
+          </div>
+        </Group>
 
         {/* 
   // = = = = = = = = =
@@ -173,6 +212,18 @@ const BlogIndex = () => {
             ) : null}
           </div>
         </div>
+
+
+        <div className="flex justify-center pt-7 gap-5">
+          <Button rightIcon={<ArrowDownIcon className="h-5 w-5" />} variant="outline" radius="sm" size="xl" onClick={() => fetchNextPage()} disabled={!hasNextPage || isFetchingNextPage}>
+            Load More
+          </Button>
+        </div>
+
+
+
+
+
         <p className="text-text lg:text-xl lg:leading-9 max-w-5xl mx-auto text-center">SiteRacks Blog equips you with essential knowledge and tools, ensuring your website&#39;s reliability, security, and optimization in today&#39;s competitive online landscape.</p>
       </main>
     </>

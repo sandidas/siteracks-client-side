@@ -51,33 +51,33 @@ export default async function handler(
             ? Blog.find({
                 $and: [
                     { _id: { $lt: cursor } },
-                    // { is_public: true, softDelete: false },
+                    { is_public: true, softDelete: false },
                 ],
             })
                 .sort({ _id: -1 })
                 .limit(parseInt(limit))
             : Blog.find({
-                // is_public: true,
-                // softDelete: false,
+                is_public: true,
+                softDelete: false,
             })
                 .sort({ _id: -1 })
                 .limit(parseInt(limit));
 
         // SEARCH CONDITION
-        // if (keyword !== undefined && keyword !== null && keyword !== '') {
-        //     const regex = new RegExp(keyword, 'i');
-        //     query = query.find({
-        //         $or: [
-        //             { subject: { $regex: regex } },
-        //             { text: { $regex: regex } },
-        //             { authorName: { $regex: regex } },
-        //             { tags: { $regex: regex } },
-        //             { categories: { $regex: regex } },
-        //         ],
-        //         is_public: true,
-        //         softDelete: false,
-        //     });
-        // }
+        if (keyword !== undefined && keyword !== null && keyword !== '') {
+            const regex = new RegExp(keyword, 'i');
+            query = query.find({
+                $or: [
+                    { subject: { $regex: regex } },
+                    { text: { $regex: regex } },
+                    { authorName: { $regex: regex } },
+                    { tags: { $regex: regex } },
+                    { categories: { $regex: regex } },
+                ],
+                is_public: true,
+                softDelete: false,
+            });
+        }
         // # SEARCH CONDITION
 
         const results = await query.exec();

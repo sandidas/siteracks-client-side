@@ -30,7 +30,7 @@ const AffiliateLucrative = () => {
             <h3 className="text-title font-bold text-2xl flex flex-col">
               Fresh Users Apply Here
             </h3>
-            <Button size="xl" component="a" href={`${process.env.ASK_ME}apply-new-affiliate`} className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+            <Button size="xl" component="a" href={`${process.env.ASK_ME}/join-siteracks`} className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
               Become an Affiliate <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
             </Button>
           </div>

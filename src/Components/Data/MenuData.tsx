@@ -123,12 +123,6 @@ export const securityMenuItems = [
 ];
 
 export const helpMenuItems = [
-  // {
-  //   icon:  BlogsIcon,
-  //   title: "Blogs",
-  //   description: "This Pokémon’s cry is very loud and distracting",
-  //   linkUrl: "blogs",
-  // },
   {
     icon: OpenSupportTicket,
     title: "Open Support Ticket",
@@ -139,13 +133,19 @@ export const helpMenuItems = [
   //   icon: ChatBubbleLeftRightIcon,
   //   title: "Live Chat",
   //   description: "Customer support service that allows our website users to chat in real-time with a customer support agent to receive assistance or support.",
-  //   linkUrl: "/#liveChat", 
+  //   linkUrl: "/#liveChat",
   // },
   {
     icon: ChatBubbleBottomCenterIcon,
     title: "Ask Me",
     description: "is your go-to support platform! Whether you're an existing or new client, you can ask us anything about website related",
     linkUrl: "https://askme.siteracks.com",
+  },
+  {
+    icon: BlogsIcon,
+    title: "Blogs",
+    description: "Your ultimate resource for web hosting and trends to empower your digital journey.",
+    linkUrl: "/blog",
   },
 ];
 

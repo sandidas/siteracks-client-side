@@ -323,7 +323,7 @@ export function HeaderMegaMenu() {
         "s"
       ))      } */}
       <Header fixed={true} height={60} px="md" className="border-none px-5 max-w-screen-2xl mx-auto">
-        <Group position="apart" sx={{ height: "100%" }}>
+        <Group position="apart" spacing={"xs"} sx={{ height: "100%" }}>
           {/* burger icon for mobile */}
           <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
 
