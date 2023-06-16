@@ -10,6 +10,14 @@
       "StackName": "amplify-siteracks-dev-92724",
       "StackId": "arn:aws:cloudformation:us-west-2:348333603021:stack/amplify-siteracks-dev-92724/95939350-0a67-11ee-9853-02c287b1d993",
       "AmplifyAppId": "dpxz7aguirzop"
+    },
+    "categories": {
+      "function": {
+        "siteRacksMainSite": {}
+      },
+      "auth": {
+        "siteracks": {}
+      }
     }
   }
 }
