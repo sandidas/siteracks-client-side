@@ -13,16 +13,22 @@ import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC, useState, useEffect } from "react";
 const jwt = require("jsonwebtoken");
+import { Amplify, withSSRContext } from "aws-amplify";
+import awsconfig from "../../aws-exports";
+Amplify.configure({ ...awsconfig, ssr: true });
 
 interface IProps {
   response: {
     metaData: IHeadData;
     data: IProduct;
+    
   };
+  fetchData: any;
   isError: boolean;
 }
 
-export const WebHosting: FC<IProps> = ({ response, isError }) => {
+export const WebHosting: FC<IProps> = ({ response, fetchData, isError }) => {
+  console.log("fetchData", fetchData);
   useEffect(() => {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
@@ -34,7 +40,7 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
           method: "get",
           url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
         });
-        console.log("Response", response);
+        // console.log("Response", response);
       } catch (error) {
         console.error("Error", error);
       }
@@ -97,20 +103,30 @@ const getApiData = async () => {
 };
 
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export async function getServerSideProps() {
   try {
+
+
+    
+
     const response = await getApiData();
+    
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
-    const data = await axios.get(`https://siteracks.com/api/pages/package?nameSlug=managedVpsHosting&seoPageSlug=preManagedVpsHostingLight`)
+    // const data = await axios.get(`https://siteracks.com/api/pages/package?nameSlug=managedVpsHosting&seoPageSlug=preManagedVpsHostingLight`)
 
-    console.log("data", data);
+    const res = await fetch("https://siteracks.com/api/pages/package?nameSlug=managedVpsHosting&seoPageSlug=preManagedVpsHostingLight")
+    const fetchData = await res.json();
+
+// 
+
+ 
 
 
     if (response) {
       return {
         props: {
-          response,
+          response, fetchData
         },
       };
     }
