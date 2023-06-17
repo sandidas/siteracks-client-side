@@ -3,6 +3,9 @@ import apiJwtGuard from '@/middleware/apiJwtGuard';
 import Package from '@/models/Package';
 import Seo from '@/models/Seo';
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { Amplify, withSSRContext } from "aws-amplify";
+import awsconfig from "../../../aws-exports";
+
 
 type Data = {
     data?: IProduct;
@@ -22,6 +25,9 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
+    Amplify.configure({ ...awsconfig, ssr: true });
+
+
     try {
         let metaData
 

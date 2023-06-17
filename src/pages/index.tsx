@@ -28,7 +28,7 @@ interface IProps {
 
 export const Home: FC<IProps> = ({ response, error }) => {
   // const { metaData, data: products } = response;
-  console.log("response", response);
+  // console.log("response", response);
   const metaData = response?.metaData;
   const products = response?.data;
 
