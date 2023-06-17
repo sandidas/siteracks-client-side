@@ -8,7 +8,10 @@ import LoaderComponent from "@/Components/Loader/LoaderComponent";
 import { toast, ToastBar, Toaster } from "react-hot-toast";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
+import { Amplify } from "aws-amplify";
+import awsconfig from "../aws-exports";
+Amplify.configure({ ...awsconfig, ssr: true });
+// https://www.youtube.com/watch?v=0ofxWRzBLWY
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;

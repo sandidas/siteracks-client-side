@@ -96,9 +96,16 @@ const getApiData = async () => {
   return response;
 };
 
+
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   try {
     const response = await getApiData();
+    const nameSlug = "sharedWebHosting";
+    const seoPageSlug = "webHosting";
+    const data = await axios.get(`https://siteracks.com/api/pages/package?nameSlug=managedVpsHosting&seoPageSlug=preManagedVpsHostingLight`)
+
+    console.log("data", data);
+
 
     if (response) {
       return {

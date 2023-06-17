@@ -47,5 +47,23 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "parameters": {
+    "AMPLIFY_function_siteRacksMainSite_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "siteRacksMainSite"
+        }
+      ]
+    },
+    "AMPLIFY_function_siteRacksMainSite_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "siteRacksMainSite"
+        }
+      ]
+    }
   }
 }
