@@ -8,7 +8,7 @@ import SectionTitle from "@/Components/SectionTitle/SectionTitle";
 import jwt from "jsonwebtoken";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext, GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext } from "next";
 import React, { FC } from "react";
 interface IProps {
   metaData: IHeadData;
@@ -42,7 +42,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
   try {
     const seoPageSlug = "about";
-
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",

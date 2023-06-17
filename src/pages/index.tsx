@@ -15,7 +15,7 @@ import HomeProducts from "@/Components/Pages/Home/HomeProducts";
 import axios from "axios";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import jwt from "jsonwebtoken";
-import GetSrData from "@/models/getData/GetSrData";
+// import GetSrData from "@/models/getData/GetSrData";
 
 const inter = Inter({ subsets: ["latin"] });
 interface IProps {
