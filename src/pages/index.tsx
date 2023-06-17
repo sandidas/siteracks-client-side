@@ -94,7 +94,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
       },
     });
 
-    console.log("response", response);
+    // console.log("response", response);
 
     if (response?.data) {
       return {

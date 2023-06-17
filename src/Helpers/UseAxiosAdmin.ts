@@ -44,7 +44,7 @@ const UseAxiosAdmin = async (props: IHandleSubmitProps): Promise<ApiResponse> =>
     header
   } = props;
   // console.log(data);
-  const API_URL = `https://www.siteracks.com${url}`;
+  const API_URL = `${process.env.API_HOST}${url}`;
   const config = {
     withCredentials: true, // this is to send the credentials
     // credentials: "include",

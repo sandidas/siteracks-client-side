@@ -325,13 +325,25 @@ export function HeaderMegaMenu() {
       <Header fixed={true} height={60} px="md" className="border-none px-5 max-w-screen-2xl mx-auto">
         <Group position="apart" spacing={"xs"} sx={{ height: "100%" }}>
           {/* burger icon for mobile */}
-          <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
 
-          <Group>
+          {/* MOBILE  */}
+          <Group spacing="xs" className={`${classes.hiddenDesktop} w-full flex justify-between`}>
+            <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+
+            <Link href="/" className="flex">
+              <Logo />
+            </Link>
+
+            <SwitchDarkLight />
+          </Group>
+
+          {/* DESKTOP  */}
+          <Group sx={{ height: "100%" }} spacing={0} className={classes.hiddenMobile}>
             <Link href="/" className="flex">
               <Logo />
             </Link>
           </Group>
+
           <Group sx={{ height: "100%" }} spacing={0} className={classes.hiddenMobile}>
             {/* <a href="#" className={classes.link}></a> */}
 
@@ -372,7 +384,14 @@ export function HeaderMegaMenu() {
                         Confused? You can ask an expert to help.
                       </Text>
                     </div>
-                    <Button onClick={() => { Tawk_API.toggle() }}  variant="default">Get started</Button>
+                    <Button
+                      onClick={() => {
+                        Tawk_API.toggle();
+                      }}
+                      variant="default"
+                    >
+                      Get started
+                    </Button>
                   </Group>
                 </div>
               </HoverCard.Dropdown>
@@ -491,9 +510,6 @@ export function HeaderMegaMenu() {
               Account
             </Button>
           </Group>
-          <Group className={classes.hiddenDesktop}>
-            <SwitchDarkLight />
-          </Group>
         </Group>
       </Header>
 
@@ -539,7 +555,7 @@ export function HeaderMegaMenu() {
           <Collapse in={websiteLinksOpened}>{websiteLinks}</Collapse> */}
 
           {/* security items  */}
-         <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleSecurityLinks}>
+          <UnstyledButton className={`${classes.link} w-full`} py={40} onClick={toggleSecurityLinks}>
             <Center className="w-full justify-between group px-2">
               <Box component="span" mr={5} fz="lg">
                 SECURITY
@@ -592,7 +608,9 @@ export function HeaderMegaMenu() {
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
           <Group position="center" grow pb="xl" px="md">
-            <Button size="xl">Log in</Button>
+            <Button component="a" href={`${process.env.BILLING_URL}`} size="xl">
+              Log in
+            </Button>
           </Group>
         </ScrollArea>
       </Drawer>
