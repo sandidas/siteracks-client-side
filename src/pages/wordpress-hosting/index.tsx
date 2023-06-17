@@ -12,7 +12,7 @@ import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import React, { FC, useState } from "react";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
 interface IProps {
   response: {
     metaData: IHeadData;
@@ -62,8 +62,8 @@ const WordPressHosting: FC<IProps> = ({ response, isError }) => {
 export default WordPressHosting;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
+  // const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  // const apiKey = jwt.sign({}, tokenSecret);
 
   try {
     const nameSlug = "wordPressHosting";
@@ -73,9 +73,9 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
+      // header: {
+      //   Authorization: `Bearer ${apiKey}`,
+      // },
       // requestConfig: {},
     });
     // check response

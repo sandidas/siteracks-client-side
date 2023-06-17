@@ -12,20 +12,17 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC, useState, useEffect } from "react";
-
+const jwt = require("jsonwebtoken");
 
 interface IProps {
   response: {
     metaData: IHeadData;
     data: IProduct;
-    
   };
-  fetchData: any;
   isError: boolean;
 }
 
-export const WebHosting: FC<IProps> = ({ response, fetchData, isError }) => {
-  console.log("fetchData", fetchData);
+export const WebHosting: FC<IProps> = ({ response, isError }) => {
   useEffect(() => {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
@@ -37,7 +34,7 @@ export const WebHosting: FC<IProps> = ({ response, fetchData, isError }) => {
           method: "get",
           url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
         });
-        // console.log("Response", response);
+        console.log("Response", response);
       } catch (error) {
         console.error("Error", error);
       }
@@ -86,44 +83,34 @@ export const WebHosting: FC<IProps> = ({ response, fetchData, isError }) => {
 
 export default WebHosting;
 
-const getApiData = async () => {
-  const nameSlug = "sharedWebHosting";
-  const seoPageSlug = "webHosting";
+// const getApiData = async () => {
+//   const nameSlug = "sharedWebHosting";
+//   const seoPageSlug = "webHosting";
 
-  const response = await UseAxiosAdmin({
-    axiosInstance: axios,
-    method: "get",
-    url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-  });
+//   const response = await UseAxiosAdmin({
+//     axiosInstance: axios,
+//     method: "get",
+//     url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+//   });
 
-  return response;
-};
+//   return response;
+// };
 
-
-export async function getServerSideProps() {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
   try {
-
-
-    
-
-    const response = await getApiData();
-    
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
-    // const data = await axios.get(`https://siteracks.com/api/pages/package?nameSlug=managedVpsHosting&seoPageSlug=preManagedVpsHostingLight`)
 
-    const res = await fetch("https://siteracks.com/api/pages/package?nameSlug=managedVpsHosting&seoPageSlug=preManagedVpsHostingLight")
-    const fetchData = await res.json();
-
-// 
-
- 
-
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+    });
 
     if (response) {
       return {
         props: {
-          response, fetchData
+          response,
         },
       };
     }

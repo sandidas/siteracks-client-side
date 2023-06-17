@@ -15,7 +15,8 @@ type Data = {
 // http://localhost:3000/api/pages/package?nameSlug=sharedWebHosting&seoPageSlug=home
 
 // = = = = = = = = = = 
-// QUERY FOR PACKAGES. EX. WEB-HOSTING, WORDPRESS HOSTING, ETC.
+// QUERY FOR PACKAGES. 
+// EX. WEB-HOSTING, WORDPRESS HOSTING, ETC.
 // = = = = = = = = = = 
 
 
@@ -26,25 +27,12 @@ export default async function handler(
 
     try {
         let metaData
-
-
-        // SECURITY WALL
-        // const authHeader = req.headers['authorization'];
-        // const token = authHeader && authHeader.split(' ')[1];
-        // const verification = token && await apiJwtGuard(token);
-        // console.log("verification", verification);
-        // if (!verification) {
-        //     res.status(401).json({ error: 'Nothing!' });
-        // } else {       }
-        // SECURITY PASSED
-
         const { nameSlug, seoPageSlug } = req.query;
         // console.log("nameSlug", nameSlug);
 
         if (!nameSlug || !seoPageSlug) {
-            res.status(500).json({ error: 'Query data not found' });
+            res.status(400).json({ error: 'Query data not found' });
         }
-
 
         // DB CONNECTION
         await dbConnect();
@@ -79,9 +67,6 @@ export default async function handler(
             }
         }
 
-
-
-
         // = = = = = = = = = = 
         // # RESPONSE
         // = = = = = = = = = = 
@@ -101,3 +86,13 @@ export default async function handler(
 };
 
 
+
+        // SECURITY WALL
+        // const authHeader = req.headers['authorization'];
+        // const token = authHeader && authHeader.split(' ')[1];
+        // const verification = token && await apiJwtGuard(token);
+        // console.log("verification", verification);
+        // if (!verification) {
+        //     res.status(401).json({ error: 'Nothing!' });
+        // } else {       }
+        // SECURITY PASSED
