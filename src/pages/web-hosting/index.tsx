@@ -12,10 +12,7 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC, useState, useEffect } from "react";
-const jwt = require("jsonwebtoken");
-import { Amplify, withSSRContext } from "aws-amplify";
-import awsconfig from "../../aws-exports";
-Amplify.configure({ ...awsconfig, ssr: true });
+
 
 interface IProps {
   response: {

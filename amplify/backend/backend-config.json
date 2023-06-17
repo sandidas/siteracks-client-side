@@ -13,6 +13,20 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "API Gateway"
+    },
+    "siteracksmainsite": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "siteracksmainsite"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
     }
   },
   "auth": {
@@ -43,6 +57,11 @@
   },
   "function": {
     "siteRacksMainSite": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "siteracksmainsite": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"

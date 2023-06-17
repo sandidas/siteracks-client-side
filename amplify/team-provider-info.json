@@ -20,7 +20,8 @@
         "siteRacksMainSite": {
           "deploymentBucketName": "amplify-siteracks-dev-92724-deployment",
           "s3Key": "amplify-builds/siteRacksMainSite-72476467516744766239-build.zip"
-        }
+        },
+        "siteracksmainsite": {}
       }
     }
   }
