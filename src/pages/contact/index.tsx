@@ -9,13 +9,15 @@ import { GetServerSidePropsContext } from "next";
 import React, { FC } from "react";
 import jwt from "jsonwebtoken";
 interface IProps {
-  metaData: IHeadData;
+  formattedDate?: any;
+  metaData?: IHeadData;
 }
 
-const ContactPage: FC<IProps> = ({ metaData }) => {
+const ContactPage: FC<IProps> = ({ formattedDate }) => {
+  console.log("formattedDate ", formattedDate);
   return (
     <>
-      {metaData && <MetaDataComponent metaData={metaData} />}
+      {/* {metaData && <MetaDataComponent metaData={metaData} />} */}
       <main>
         <ContactBanner />
         <ExistingClientLogin />
@@ -27,37 +29,47 @@ const ContactPage: FC<IProps> = ({ metaData }) => {
 };
 export default ContactPage;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  const apiKey = jwt.sign({}, tokenSecret);
-
-  try {
-    const seoPageSlug = "contact";
-
-    const response = await UseAxiosAdmin({
-      axiosInstance: axios,
-      method: "get",
-      url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
-      header: {
-        Authorization: `Bearer ${apiKey}`,
-      },
-    });
-    // console.log("metaData", response);
-    if (response?.data) {
-      const metaData = response?.data;
-      return {
-        props: {
-          metaData,
-        },
-       
-      };
-    }
-    return { props: { isError: true } };
-  } catch (error) {
-    // console.error(error);
-    return { props: { isError: true } };
-  }
+export async function getServerSideProps() {
+  const renderDate = Date.now();
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "long",
+    timeStyle: "long",
+  }).format(renderDate);
+  console.log(`SSR ran on ${formattedDate}. This will be logged in CloudWatch.`);
+  return { props: { formattedDate } };
 }
+
+// export async function getServerSideProps(context: GetServerSidePropsContext) {
+//   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+//   const apiKey = jwt.sign({}, tokenSecret);
+
+//   try {
+//     const seoPageSlug = "contact";
+
+//     const response = await UseAxiosAdmin({
+//       axiosInstance: axios,
+//       method: "get",
+//       url: `/api/pages/seo?seoPageSlug=${seoPageSlug}`,
+//       header: {
+//         Authorization: `Bearer ${apiKey}`,
+//       },
+//     });
+//     // console.log("metaData", response);
+//     if (response?.data) {
+//       const metaData = response?.data;
+//       return {
+//         props: {
+//           metaData,
+//         },
+
+//       };
+//     }
+//     return { props: { isError: true } };
+//   } catch (error) {
+//     // console.error(error);
+//     return { props: { isError: true } };
+//   }
+// }
 
 // export async function getStaticProps(context: GetStaticPropsContext) {
 //     const slug = "contact";
@@ -73,7 +85,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //             // // ...other default values
 //           },
 //         },
-//        
+//
 //       };
 //     }
 
@@ -81,6 +93,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //       props: {
 //         metaData,
 //       },
-//      
+//
 //     };
 //   }
