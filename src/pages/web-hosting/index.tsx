@@ -7,11 +7,13 @@ import WebHostingEssentials from "@/Components/Pages/WebHosting/WebHostingEssent
 import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
 import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
+import generateToken from "@/Helpers/generateToken";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC, useState, useEffect } from "react";
-import jwt from "jsonwebtoken";
+const jwt = require('jsonwebtoken');
+
 
 interface IProps {
   response: {
@@ -22,6 +24,9 @@ interface IProps {
 }
 
 export const WebHosting: FC<IProps> = ({ response, isError }) => {
+  // const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  // const token = generateToken();
+
   useEffect(() => {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
@@ -32,6 +37,9 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
           axiosInstance: axios,
           method: "get",
           url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+          // header: {
+          //   Authorization: `Bearer ${token}`,
+          // },
         });
         console.log("Response", response);
       } catch (error) {
@@ -83,7 +91,8 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
 export default WebHosting;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-
+  // const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  // const apiKey = jwt.sign({}, tokenSecret);
   try {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
@@ -92,7 +101,9 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-
+      // header: {
+      //   Authorization: `Bearer ${apiKey}`,
+      // },
     });
 
     if (response?.data) {
