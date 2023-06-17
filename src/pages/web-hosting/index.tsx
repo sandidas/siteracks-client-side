@@ -12,8 +12,7 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC, useState, useEffect } from "react";
-const jwt = require('jsonwebtoken');
-
+const jwt = require("jsonwebtoken");
 
 interface IProps {
   response: {
@@ -24,9 +23,6 @@ interface IProps {
 }
 
 export const WebHosting: FC<IProps> = ({ response, isError }) => {
-  // const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  // const token = generateToken();
-
   useEffect(() => {
     const nameSlug = "sharedWebHosting";
     const seoPageSlug = "webHosting";
@@ -37,9 +33,6 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
           axiosInstance: axios,
           method: "get",
           url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-          // header: {
-          //   Authorization: `Bearer ${token}`,
-          // },
         });
         console.log("Response", response);
       } catch (error) {
@@ -90,23 +83,24 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
 
 export default WebHosting;
 
+const getApiData = async () => {
+  const nameSlug = "sharedWebHosting";
+  const seoPageSlug = "webHosting";
+
+  const response = await UseAxiosAdmin({
+    axiosInstance: axios,
+    method: "get",
+    url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+  });
+
+  return response;
+};
+
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  // const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
-  // const apiKey = jwt.sign({}, tokenSecret);
   try {
-    const nameSlug = "sharedWebHosting";
-    const seoPageSlug = "webHosting";
+    const response = await getApiData();
 
-    const response = await UseAxiosAdmin({
-      axiosInstance: axios,
-      method: "get",
-      url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-      // header: {
-      //   Authorization: `Bearer ${apiKey}`,
-      // },
-    });
-
-    if (response?.data) {
+    if (response) {
       return {
         props: {
           response,
