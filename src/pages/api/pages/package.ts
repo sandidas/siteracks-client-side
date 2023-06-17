@@ -25,6 +25,25 @@ export default async function handler(
     res: NextApiResponse<Data>
 ) {
 
+
+    // SECURITY WALL
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+    const verification = token && await apiJwtGuard(token);
+    console.log("verification", verification);
+    if (!verification) {
+        res.status(401).json({ error: 'Nothing!' });
+    }
+    // SECURITY PASSED
+
+
+
+
+
+
+
+
+
     try {
         let metaData
         const { nameSlug, seoPageSlug } = req.query;

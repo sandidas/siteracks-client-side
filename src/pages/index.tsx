@@ -75,20 +75,38 @@ export const Home: FC<IProps> = ({ response, error }) => {
 export default Home;
 
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-  let error;
-  const response = await GetSrData();
+  // let error;
+  // const response = await GetSrData();
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
+  const nameSlug = "resellerHosting";
+  const seoPageSlug = "resellerHosting";
 
   try {
-    const serializedMetaData = JSON.stringify(response.metaData);
+    // const serializedMetaData = JSON.stringify(response.metaData);
 
-    return {
-      props: {
-        response: {
-          data: response?.data,
-          metaData: serializedMetaData,
-        },
+    const response = await UseAxiosAdmin({
+      axiosInstance: axios,
+      method: "get",
+      url: `/api/pages/sr`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
       },
-    };
+    });
+
+    if (response?.data) {
+      return {
+        props: {
+          response: {
+            data: response?.data,
+            //@ts-ignore
+            metaData: response?.metaData,
+          },
+        },
+      };
+    }
+
+    return { props: { error: true } };
   } catch (error) {
     // console.error(error);
     error = error ? error : "Failed to load data";
