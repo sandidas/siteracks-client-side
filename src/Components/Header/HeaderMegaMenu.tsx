@@ -329,13 +329,13 @@ export function HeaderMegaMenu() {
 
           {/* MOBILE  */}
           <Group spacing="xs" className={`w-full flex justify-between xl:hidden`}>
-            <div className="flex items-center gap-1">
-              <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+       
+              <Burger size={"sm"} opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
 
               <Link href="/" className="flex">
                 <Logo />
               </Link>
-            </div>
+           
 
             <SwitchDarkLight />
           </Group>

@@ -110,7 +110,7 @@ html {
 .fill-red-200 {
   fill: #fecaca !important;
 }
-
+.max-w-screen-2xl{max-width: 90%!important;}
 p,
 button {
   /* font-size: 18px; */
