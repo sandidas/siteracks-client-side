@@ -1,9 +1,9 @@
-import { ChatBubbleBottomCenterIcon, ChatBubbleLeftRightIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
+// import { ChatBubbleBottomCenterIcon, ChatBubbleLeftRightIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
 import BlogsIcon from "../../../public/images/nav/blogs.svg";
 import BusinessHosting from "../../../public/images/nav/businessHosting.svg";
 import CustomWebsiteDevelopment from "../../../public/images/nav/customWebsiteDevelopment.svg";
-import ForgetPassword from "../../../public/images/nav/forgetPassword.svg";
-import KnowledgeBase from "../../../public/images/nav/knowledgeBase.svg";
+// import ForgetPassword from "../../../public/images/nav/forgetPassword.svg";
+// import KnowledgeBase from "../../../public/images/nav/knowledgeBase.svg";
 import Login from "../../../public/images/nav/login.svg";
 import OpenSupportTicket from "../../../public/images/nav/openSupportTicket.svg";
 import PreManagedVpsHosting from "../../../public/images/nav/preManagedVpsHosting.svg";
@@ -14,11 +14,12 @@ import SslCertificates from "../../../public/images/nav/sslCertificates.svg";
 import TransferDomain from "../../../public/images/nav/transferDomain.svg";
 import WebHosting from "../../../public/images/nav/webHosting.svg";
 import WebsiteBackup from "../../../public/images/nav/websiteBackup.svg";
-import WildCardCertificate from "../../../public/images/nav/wildCardCertificate.svg";
+// import WildCardCertificate from "../../../public/images/nav/wildCardCertificate.svg";
 import WordPressHosting from "../../../public/images/nav/wordPressHosting.svg";
 import FacebookIcon from "../../../public/images/nav/facebookIcon.svg";
 import Twitter from "../../../public/images/nav/twitterIcon.svg";
 import Instagram from "../../../public/images/nav/instagramIcon.svg";
+import AskMeIcon from "../../../public/images/nav/AskMeIcon.svg";
 
 export const hostingMenuItems = [
   {
@@ -136,7 +137,7 @@ export const helpMenuItems = [
   //   linkUrl: "/#liveChat",
   // },
   {
-    icon: ChatBubbleBottomCenterIcon,
+    icon: AskMeIcon,
     title: "Ask Me",
     description: "is your go-to support platform! Whether you're an existing or new client, you can ask us anything about website related",
     linkUrl: "https://askme.siteracks.com",

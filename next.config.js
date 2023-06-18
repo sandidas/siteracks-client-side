@@ -73,6 +73,7 @@ const nextConfig = {
 
     return config;
   },
+  webpack5: false, // to avoid warnings: TypeError: Cannot read properties of undefined (reading 'forEach')
 };
 
 module.exports = nextConfig;

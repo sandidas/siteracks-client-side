@@ -97,14 +97,20 @@ export default WebHosting;
 // };
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  try {
-    const nameSlug = "sharedWebHosting";
-    const seoPageSlug = "webHosting";
+  const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
+  const apiKey = jwt.sign({}, tokenSecret);
+  const nameSlug = "sharedWebHosting";
+  const seoPageSlug = "webHosting";
 
+  try {
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",
       url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+      header: {
+        Authorization: `Bearer ${apiKey}`,
+      },
+      // requestConfig: {},
     });
 
     if (response) {

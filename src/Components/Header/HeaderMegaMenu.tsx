@@ -4,6 +4,7 @@ import SwitchDarkLight from "./SwitchDarkLight";
 
 import { ChatBubbleLeftRightIcon, ChevronDownIcon, UserIcon } from "@heroicons/react/24/solid";
 import Logo from "./Logo";
+import LiveChatIcon from "../../../public/images/nav/LiveChatIcon.svg";
 
 import Link from "next/link";
 
@@ -327,12 +328,14 @@ export function HeaderMegaMenu() {
           {/* burger icon for mobile */}
 
           {/* MOBILE  */}
-          <Group spacing="xs" className={`${classes.hiddenDesktop} w-full flex justify-between`}>
-            <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+          <Group spacing="xs" className={`w-full flex justify-between xl:hidden`}>
+            <div className="flex items-center gap-1">
+              <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
 
-            <Link href="/" className="flex">
-              <Logo />
-            </Link>
+              <Link href="/" className="flex">
+                <Logo />
+              </Link>
+            </div>
 
             <SwitchDarkLight />
           </Group>
@@ -484,7 +487,7 @@ export function HeaderMegaMenu() {
                     {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
                     <div>
                       {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-                      <ChatBubbleLeftRightIcon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
+                      <LiveChatIcon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
                     </div>
 
                     <div>
