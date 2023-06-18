@@ -1,18 +1,21 @@
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button, Loader } from "@mantine/core";
+import { useRouter } from "next/router";
 import React, { FC } from "react";
 import HomeBannerImage from "../../../public/images/webHosting/home-page-banner.svg";
 import HomeBannerPrice from "./HomeBannerPrice";
 
 interface IProps {
-  products: IProduct[] ;
+  products: IProduct[];
   isLoading?: boolean;
   isError?: boolean;
 }
 
 const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
-
-
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/wordpress-hosting");
+  };
 
   return (
     <section className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
@@ -37,7 +40,7 @@ const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
           <li className="bg-blue-500/10 dark:bg-blue-500/10 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">30-day of money back guarantee</li>
         </ul>
 
-        <Button component="a" href="wordpress-hosting" size="xl" className="bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+        <Button component="button" onClick={handleClick} size="xl" className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
           View Plans
           <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>

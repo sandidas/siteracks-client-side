@@ -59,13 +59,13 @@ export const domainMenuItems = [
     icon: RegisterDomain,
     title: "Register a New Domain",
     description: "The process of purchasing and acquiring a new domain (website) address on the internet.",
-    linkUrl: "register-domain",
+    linkUrl: "https://my.siteracks.com/cart.php?a=add&domain=register",
   },
   {
     icon: TransferDomain,
     title: "Transfer Domain To Us",
     description: "Transferring a domain involves moving the registration of a domain from old registrar to SiteRacks.",
-    linkUrl: "transfer-domain",
+    linkUrl: "https://my.siteracks.com/cart.php?a=add&domain=transfer",
   },
   // {
   //   icon: SiteLockCertificate,

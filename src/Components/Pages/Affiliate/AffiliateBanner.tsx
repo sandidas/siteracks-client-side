@@ -23,7 +23,7 @@ const AffiliateBanner = () => {
         </ul>
 
         <div className="flex gap-5">
-          <Button size="xl" component="a" href={`${process.env.ASK_ME}/join-siteracks`} className="bg-primary shadow-md transition ease-in-out duration-500  hover:text-white hover:bg-secondary group">
+          <Button size="xl" component="a" target={"_blank"} href={`${process.env.ASK_ME}/join-siteracks`} className="bg-primary shadow-md transition ease-in-out duration-500  hover:text-white hover:bg-secondary group">
             Join Now for FREE
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>

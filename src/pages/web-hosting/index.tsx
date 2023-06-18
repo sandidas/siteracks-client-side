@@ -97,6 +97,9 @@ export default WebHosting;
 // };
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const { res } = context;
+  res.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=600");
+
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
   const nameSlug = "sharedWebHosting";

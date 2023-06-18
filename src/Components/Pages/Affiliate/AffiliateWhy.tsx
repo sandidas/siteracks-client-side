@@ -83,7 +83,7 @@ const AffiliateWhy = () => {
         </FeatureCard>
       </div>
       <div className="flex justify-center items-center pt-10 group">
-        <Button component="a" href={`${process.env.ASK_ME}/join-siteracks`} size="xl" className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+        <Button component="a" target={"_blank"} href={`${process.env.ASK_ME}/join-siteracks`} size="xl" className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
           Sign up and start referring today! <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>
       </div>

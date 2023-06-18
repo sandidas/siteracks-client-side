@@ -75,6 +75,8 @@ export const Home: FC<IProps> = ({ response, error }) => {
 export default Home;
 
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
+  const { res } = context;
+  res.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=600");
   // let error;
   // const response = await GetSrData();
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;

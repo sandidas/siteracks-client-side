@@ -1,5 +1,6 @@
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Button } from "@mantine/core";
+import { useRouter } from "next/router";
 import React, { FC } from "react";
 import { getPriceForBanner } from "../Hooks/ApiCall";
 import Icon from "../Hooks/Icon";
@@ -16,6 +17,11 @@ const ProductCardHome: FC<IProps> = ({ product }) => {
 
   //   console.log(product?.nameSlug);
   //   console.log(product?.child[0]?.typeSlug);
+
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(product?.seePlansLink as string);
+  };
 
   return (
     <>
@@ -38,7 +44,7 @@ const ProductCardHome: FC<IProps> = ({ product }) => {
             <div className={`${product?.customPriceCLassName} pt-3`}>/mo</div>
           </div>
         </div>
-        <Button component="a" href={product?.seePlansLink} size="xl" className="bg-white shadow transition ease-in-out duration-500 text-gray-600 group-hover:text-white group-hover:bg-black">
+        <Button component="button" onClick={handleClick} size="xl" className="bg-white shadow transition ease-in-out duration-500 text-gray-600 group-hover:text-white group-hover:bg-black">
           See Plans
           <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>

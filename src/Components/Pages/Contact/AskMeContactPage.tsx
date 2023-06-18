@@ -30,7 +30,7 @@ const AskMeContactPage = () => {
               <FeatureCard noStyle customClass="shadow-xl">
                 <div className="space-y-5">{isDarkMode === "light" ? <Image src={askmeLight} height={600} width={1200} alt="Ask Me" /> : <Image src={askMeDark} height={600} width={1200} alt="Ask Me" />}</div>
                 <div className="grow"></div>
-                <Button component="a" href={ASK_ME} size="xl" className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
+                <Button component="a" href={ASK_ME} size="xl" target={"_blank"} className="mt-5 bg-primary shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
                   Get Started
                   <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
                 </Button>
