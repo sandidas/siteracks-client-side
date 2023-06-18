@@ -590,7 +590,7 @@ export function HeaderMegaMenu() {
               {/* <ThemeIcon size={34} variant="default" radius="md"></ThemeIcon> */}
               <div>
                 {/* <Image src={item.icon} alt="me" width="50" height="50" /> */}
-                <ChatBubbleLeftRightIcon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
+                <LiveChatIcon className="w-10 h-10 mr-5 mt-2 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-slate-300 dark:fill-slate-400" />
               </div>
 
               <div>
