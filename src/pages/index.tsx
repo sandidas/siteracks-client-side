@@ -1,14 +1,26 @@
 import { Inter } from "@next/font/google";
+import dynamic from "next/dynamic";
+import React, { FC, useState } from "react";
 import HomeBanner from "@/Components/Home/HomeBanner";
 import WebsiteUpSection from "@/Components/Home/WebsiteUpSection";
 import SiteRacksParkSection from "@/Components/Home/SiteRacksParkSection";
-import HomeReview from "@/Components/Home/HomeReview";
 import HomeFaq from "@/Components/Home/HomeFaq";
-import HireAnExpert from "@/Components/Home/HireAnExpert";
-import LiveChat from "@/Components/LiveChat/LiveChat";
-import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
+
+const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
+const MoneyBackGuarantee = dynamic(() => import("@/Components/Home/MoneyBackGuarantee"));
+const HireAnExpert = dynamic(() => import("@/Components/Home/HireAnExpert"));
+const HomeReview = dynamic(() => import("@/Components/Home/HomeReview"));
+
+// import HomeReview from "@/Components/Home/HomeReview";
+
+// import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
+// import HireAnExpert from "@/Components/Home/HireAnExpert";
+// import HomeReview from "@/Components/Home/HomeReview";
+
+// import LiveChat from "@/Components/LiveChat/LiveChat";
+
 import HomeArticle from "@/Components/Home/HomeArticle";
-import React, { FC, useState } from "react";
+
 import { GetServerSidePropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import HomeProducts from "@/Components/Pages/Home/HomeProducts";

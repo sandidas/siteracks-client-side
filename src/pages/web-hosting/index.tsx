@@ -1,17 +1,24 @@
-import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
-import LiveChat from "@/Components/LiveChat/LiveChat";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import WebHostingArticle from "@/Components/Pages/WebHosting/WebHostingArticle";
 import WebHostingBanner from "@/Components/Pages/WebHosting/WebHostingBanner";
-import WebHostingEssentials from "@/Components/Pages/WebHosting/WebHostingEssentials";
-import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
-import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
-import generateToken from "@/Helpers/generateToken";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC, useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+const MoneyBackGuarantee = dynamic(() => import("@/Components/Home/MoneyBackGuarantee"));
+const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
+const WebHostingFaq = dynamic(() => import("@/Components/Pages/WebHosting/WebHostingFaq"));
+const WebHostingEssentials = dynamic(() => import("@/Components/Pages/WebHosting/WebHostingEssentials"));
+const WebHostingPremiumAdvantage = dynamic(() => import("@/Components/Pages/WebHosting/WebHostingPremiumAdvantage"));
+
+// import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
+// import LiveChat from "@/Components/LiveChat/LiveChat";
+// import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
+// import WebHostingEssentials from "@/Components/Pages/WebHosting/WebHostingEssentials";
+// import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
+
 const jwt = require("jsonwebtoken");
 
 interface IProps {
