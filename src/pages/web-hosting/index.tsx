@@ -30,25 +30,25 @@ interface IProps {
 }
 
 export const WebHosting: FC<IProps> = ({ response, isError }) => {
-  useEffect(() => {
-    const nameSlug = "sharedWebHosting";
-    const seoPageSlug = "webHosting";
+  // useEffect(() => {
+  //   const nameSlug = "sharedWebHosting";
+  //   const seoPageSlug = "webHosting";
 
-    const fetchData = async () => {
-      try {
-        const response = await UseAxiosAdmin({
-          axiosInstance: axios,
-          method: "get",
-          url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-        });
-        console.log("Response", response);
-      } catch (error) {
-        console.error("Error", error);
-      }
-    };
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await UseAxiosAdmin({
+  //         axiosInstance: axios,
+  //         method: "get",
+  //         url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
+  //       });
+  //       // console.log("Response", response);
+  //     } catch (error) {
+  //       console.error("Error", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const metaData = response?.metaData;
   const product = response?.data;
