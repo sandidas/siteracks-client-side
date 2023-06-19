@@ -14,7 +14,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 
 const SiteRacksParkSection = () => {
   return (
-    <section className="py-[10vh]">
+    <>
       <SectionTitle bottomSpace={true} title="SiteRacks Perks" description={`Get more than what you pay for—no technical jargon, unanticipated costs, or fancy add-ons that bring no value to your business. Enjoy user-friendly, superfast, extraordinary, and reliable hosting solutions all year.`} />
  
 
@@ -94,7 +94,7 @@ const SiteRacksParkSection = () => {
           </div>
         </FeatureCard>
       </div>
-    </section>
+    </>
   );
 };
 

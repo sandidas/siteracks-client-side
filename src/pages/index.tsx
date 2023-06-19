@@ -53,28 +53,40 @@ export const Home: FC<IProps> = ({ response, error }) => {
       <main>
         {/* {{backgroundImage:`url('../../public/images/Sandipan_das.jgeg')`, backgroundSize:'cover', backgroundPosition:'center center'}} */}
         {/* // it's using on css. and css by defult catch public folder path. */}
-        <div style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundPosition: "top center" }}>
+        <section style={{ backgroundImage: `url('/images/homeBannerBgSurface.svg')`, backgroundSize: "contain", backgroundPosition: "top center" }}>
           <HomeBanner products={products} isLoading={isLoading} />
-        </div>
+        </section>
 
-        <div className="max-w-screen-2xl mx-auto px-3 md:px-5" id="orderNow">
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5" id="orderNow">
           <HomeProducts products={products} isLoading={isLoading} />
           {/* <ArticleSection /> */}
           <HomeArticle />
-        </div>
+        </section>
         {/* <FreeMigration /> */}
-        <MoneyBackGuarantee />
-        <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
-          <WebsiteUpSection />
-        </div>
-        <HireAnExpert />
-        <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
-          <SiteRacksParkSection />
-        </div>
 
-        <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
+        <section className="bg-surface">
+          <div className="py-[10vh] mx-auto px-5 max-w-screen-2xl">
+            <MoneyBackGuarantee />
+          </div>
+        </section>
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <WebsiteUpSection />
+        </section>
+
+        <article className="bg-surface">
+          <div className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+            <HireAnExpert />
+          </div>
+        </article>
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
+          <SiteRacksParkSection />
+        </section>
+
+        <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <HomeReview />
-        </div>
+        </section>
         <LiveChat />
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <HomeFaq />

@@ -6,8 +6,8 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 
 const HireAnExpert = () => {
   return (
-    <article className="py-[10vh] bg-surface">
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-3 md:5 xl:gap-16 2xl:gap-32 max-w-screen-2xl mx-auto px-3 md:px-5">
+
+      <div className="grid grid-cols-1 md:grid-cols-2  md:gap-5 xl:gap-16 2xl:gap-32">
         <div className="flex flex-col justify-start items-center ">
           <div className="w-full">
             <ExpertIcon className="w-full h-fit fill-primary" />
@@ -33,7 +33,7 @@ const HireAnExpert = () => {
           </Button>
         </div>
       </div>
-    </article>
+
   );
 };
 

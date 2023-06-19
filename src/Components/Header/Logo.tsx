@@ -20,7 +20,7 @@ const Logo = (props: ILogo) => {
   if (logoWidth) {
     logoWidth = logoWidth;
   } else {
-    logoWidth = "220px";
+    logoWidth = "200px";
   }
 
   const { colorScheme: isDarkMode } = useThemeContext();

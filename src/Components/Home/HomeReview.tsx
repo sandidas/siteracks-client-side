@@ -8,7 +8,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 
 const HomeReview = () => {
   return (
-    <section className="py-[10vh]">
+    <>
       <SectionTitle bottomSpace title="What Our Customers Are Saying" leftAlignDesktop /> 
 
       <div className="grid grid-cols-1 md:grid-cols-12 md:gap-5 mx-auto max-w-7xl">
@@ -35,7 +35,7 @@ const HomeReview = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
