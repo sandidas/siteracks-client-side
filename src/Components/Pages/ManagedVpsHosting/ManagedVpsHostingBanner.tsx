@@ -17,12 +17,12 @@ const ManagedVpsHostingBanner: FC<IProps> = ({ product, isLoading, isError }) =>
       <div className="flex flex-col justify-center items-start space-y-8 group">
         <h1 className="flex flex-col space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">No Complexity, No Hassle</span>
-          <span className="text-5xl text-title font-bold lg:leading-tight"> A 100% Fully Managed VPS Hosting.</span>
+          <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight"> A 100% Fully Managed VPS Hosting.</span>
           <span className="uppercase text-xl">We manages all your server needs</span>
           <span className="uppercase text-xl font-bold text-primary tracking-wider"> so that you can focus on your business.</span> {/*  */}
         </h1>
         <p className="text-text lg:text-xl lg:leading-9">
-          Our cost-effective and powerful managed VPS hosting plans are perfect for hosting websites on a secure and resilient infrastructure without the burden of managing the server. Don't wait any longer; pick the plan that suits your needs and start right away.
+          Our cost-effective and powerful managed VPS hosting plans are perfect for hosting websites on a secure and resilient infrastructure without the burden of managing the server. Don&#39;t wait any longer; pick the plan that suits your needs and start right away.
         </p>
         <ul className="text-text lg:text-xl space-y-3 list-disc pl-8">
           <li>Dedicated one-to-one support.</li>

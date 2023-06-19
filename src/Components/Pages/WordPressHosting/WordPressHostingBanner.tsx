@@ -17,8 +17,8 @@ const WordPressHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => 
       <div className="flex flex-col justify-center items-start space-y-8 group order-2 md:order-1">
         <h1 className="flex flex-col md:leading-normal space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">No hidden cost, No hassle</span>
-          <span className="text-5xl text-title font-bold lg:leading-tight">Get a significant combo benefit</span>
-          <span className="uppercase text-xl">
+          <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight">Get a significant combo benefit</span>
+          <span className="uppercase text-lg">
             by SiteRacks <span className="uppercase text-xl font-bold text-primary tracking-wider">Managed WordPress Hosting</span>{" "}
           </span>
           {/*  */}

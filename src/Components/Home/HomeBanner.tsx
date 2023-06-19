@@ -23,7 +23,7 @@ const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
       <div className="flex flex-col justify-center items-start space-y-8 group">
         <h1 className="flex flex-col md:leading-normal space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">Easy To Use, WordPress Optimized</span>
-          <span className="text-4xl text-title font-bold lg:leading-tight">Blazing Fast Web Hosting</span>
+          <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight">Blazing Fast Web Hosting</span>
           <span className="uppercase text-xl">
             With <span className="uppercase text-xl font-bold text-primary tracking-wider">Dedicated WordPress Expert</span>{" "}
           </span>

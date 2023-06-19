@@ -18,7 +18,7 @@ const BusinessHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
       <div className="flex flex-col justify-center items-start space-y-8 group">
         <h1 className="flex flex-col md:leading-normal space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">Greater Stability, Enhanced Performance</span>
-          <span className="text-5xl lg:leading-tight text-title font-bold">Boost your business website, and pay less</span>
+          <span className="text-4xl lg:text-6xl lg:leading-tight text-title font-bold">Boost your business website, and pay less</span>
           <span className="uppercase text-xl">
             by SiteRacks <span className="uppercase text-xl font-bold text-primary tracking-wider">High Performance Business Web Hosting</span>{" "}
           </span>
