@@ -1,20 +1,23 @@
-import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
-import LiveChat from "@/Components/LiveChat/LiveChat";
-import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
-import ManagedVpsHostingArticle from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingArticle";
-import ManagedVpsHostingBanner from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingBanner";
-import ManagedVpsHostingCompare from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingCompare";
-import ManagedVpsHostingFaq from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingFaq";
-import ManagedVpsHostingMoreBenefits from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingMoreBenefits";
-import ManagedVpsHostingPricing from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingPricing";
-import ManagedVpsHostingReadyApps from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingReadyApps";
 import jwt from "jsonwebtoken";
-
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC, useState } from "react";
+import dynamic from "next/dynamic";
+import ManagedVpsHostingBanner from "@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingBanner";
+
+const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
+const MoneyBackGuarantee = dynamic(() => import("@/Components/Home/MoneyBackGuarantee"));
+const MetaDataComponent = dynamic(() => import("@/Components/Meta/MetaDataComponent"));
+const FCFeatureForAllPackage = dynamic(() => import("@/Components/Pages/FeatureCard/FCFeatureForAllPackage"));
+
+const ManagedVpsHostingArticle = dynamic(() => import("@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingArticle"));
+const ManagedVpsHostingCompare = dynamic(() => import("@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingCompare"));
+const ManagedVpsHostingFaq = dynamic(() => import("@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingFaq"));
+const ManagedVpsHostingMoreBenefits = dynamic(() => import("@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingMoreBenefits"));
+const ManagedVpsHostingPricing = dynamic(() => import("@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingPricing"));
+const ManagedVpsHostingReadyApps = dynamic(() => import("@/Components/Pages/ManagedVpsHosting/ManagedVpsHostingReadyApps"));
+
 interface IProps {
   response: {
     metaData: IHeadData;
@@ -45,7 +48,14 @@ const VpsLight: FC<IProps> = ({ response, isError }) => {
           <ManagedVpsHostingMoreBenefits />
         </section>
 
-        <MoneyBackGuarantee />
+        
+        <section className="bg-surface">
+          <div className="py-[10vh] mx-auto px-5 max-w-screen-2xl">
+            <MoneyBackGuarantee />
+          </div>
+        </section>
+
+        
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">{/* <ManagedVpsHostingManagedVpsTools /> */}</section>
         <LiveChat />
 

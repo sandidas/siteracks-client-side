@@ -33,11 +33,11 @@ const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
           Whether you are just starting, growing fast, or running a high-traffic website, your <span className="text-primary font-bold">SITERACKS</span> web hosting services allow you to choose what works best for your brand.
         </p>
         <ul className="text-text space-y-3 flex flex-wrap flex-col items-start">
-          <li className="bg-lime-500/10 dark:bg-lime-500/10 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Free & Easy Website Migration</li>
-          <li className="bg-green-500/10 dark:bg-green-500/10 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">24/7 priority support</li>
-          <li className="bg-violet-500/10 dark:bg-violet-500/10 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Free-.com domain, SSL, Email, and Backups</li>
+          <li className="bg-lime-500/10 dark:bg-lime-500/20 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Free & Easy Website Migration</li>
+          <li className="bg-green-500/10 dark:bg-green-500/20 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">24/7 priority support</li>
+          <li className="bg-violet-500/10 dark:bg-violet-500/20 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Free-.com domain, SSL, Email, and Backups</li>
           {/* <li className="bg-purple-500/10 dark:bg-purple-500/10 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Dedicated WordPress expert</li> */}
-          <li className="bg-blue-500/10 dark:bg-blue-500/10 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">30-day of money back guarantee</li>
+          <li className="bg-blue-500/10 dark:bg-blue-500/20 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">30-day of money back guarantee</li>
         </ul>
 
         <Button component="button" onClick={handleClick} size="xl" className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">

@@ -1,18 +1,32 @@
-import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
-import LiveChat from "@/Components/LiveChat/LiveChat";
-import WordPressHostingArticle from "@/Components/Pages/WordPressHosting/WordPressHostingArticle";
-import WordPressHostingBanner from "@/Components/Pages/WordPressHosting/WordPressHostingBanner";
-import WordPressHostingFaq from "@/Components/Pages/WordPressHosting/WordPressHostingFaq";
-import WordPressHostingMoreBenefits from "@/Components/Pages/WordPressHosting/WordPressHostingMoreBenefits";
-import WordPressHostingPricing from "@/Components/Pages/WordPressHosting/WordPressHostingPricing";
-import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
-import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import { GetServerSidePropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import React, { FC, useState } from "react";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+import dynamic from "next/dynamic";
+import WordPressHostingBanner from "@/Components/Pages/WordPressHosting/WordPressHostingBanner";
+
+const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
+const MoneyBackGuarantee = dynamic(() => import("@/Components/Home/MoneyBackGuarantee"));
+const WordPressHostingArticle = dynamic(() => import("@/Components/Pages/WordPressHosting/WordPressHostingArticle"));
+const WordPressHostingFaq = dynamic(() => import("@/Components/Pages/WordPressHosting/WordPressHostingFaq"));
+const WordPressHostingMoreBenefits = dynamic(() => import("@/Components/Pages/WordPressHosting/WordPressHostingMoreBenefits"));
+const WordPressHostingPricing = dynamic(() => import("@/Components/Pages/WordPressHosting/WordPressHostingPricing"));
+const WordPressBusinessTools = dynamic(() => import("@/Components/Pages/WordPressHosting/WordPressBusinessTools"));
+const FCFeatureForAllPackage = dynamic(() => import("@/Components/Pages/FeatureCard/FCFeatureForAllPackage"));
+
+
+
+// import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
+// import LiveChat from "@/Components/LiveChat/LiveChat";
+// import WordPressHostingArticle from "@/Components/Pages/WordPressHosting/WordPressHostingArticle";
+// import WordPressHostingFaq from "@/Components/Pages/WordPressHosting/WordPressHostingFaq";
+// import WordPressHostingMoreBenefits from "@/Components/Pages/WordPressHosting/WordPressHostingMoreBenefits";
+// import WordPressHostingPricing from "@/Components/Pages/WordPressHosting/WordPressHostingPricing";
+// import WordPressBusinessTools from "@/Components/Pages/WordPressHosting/WordPressBusinessTools";
+// import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
+
 interface IProps {
   response: {
     metaData: IHeadData;
@@ -42,7 +56,13 @@ const WordPressHosting: FC<IProps> = ({ response, isError }) => {
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WordPressHostingMoreBenefits />
         </section>
-        <MoneyBackGuarantee />
+
+        <section className="bg-surface">
+          <div className="py-[10vh] mx-auto px-5 max-w-screen-2xl">
+            <MoneyBackGuarantee />
+          </div>
+        </section>
+
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WordPressBusinessTools />
         </section>

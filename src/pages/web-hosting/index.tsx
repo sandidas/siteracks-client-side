@@ -75,7 +75,13 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WebHostingEssentials />
         </section>
-        <MoneyBackGuarantee />
+
+        <section className="bg-surface">
+          <div className="py-[10vh] mx-auto px-5 max-w-screen-2xl">
+            <MoneyBackGuarantee />
+          </div>
+        </section>
+
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <WebHostingPremiumAdvantage />
         </section>

@@ -1,16 +1,31 @@
-import LiveChat from "@/Components/LiveChat/LiveChat";
-import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
-import ResellerHostingArticle from "@/Components/Pages/ResellerHosting/ResellerHostingArticle";
 import ResellerHostingBanner from "@/Components/Pages/ResellerHosting/ResellerHostingBanner";
-import ResellerHostingFaq from "@/Components/Pages/ResellerHosting/ResellerHostingFaq";
-import ResellerHostingPricing from "@/Components/Pages/ResellerHosting/ResellerHostingPricing";
-import ResellerHostingWhmcs from "@/Components/Pages/ResellerHosting/ResellerHostingWhmcs";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import React, { FC, useState } from "react";
 import jwt from "jsonwebtoken";
+import dynamic from "next/dynamic";
+import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
+
+const FCFeatureForAllPackage = dynamic(() => import("@/Components/Pages/FeatureCard/FCFeatureForAllPackage"));
+const ResellerHostingArticle = dynamic(() => import("@/Components/Pages/ResellerHosting/ResellerHostingArticle"));
+const ResellerHostingFaq = dynamic(() => import("@/Components/Pages/ResellerHosting/ResellerHostingFaq"));
+const ResellerHostingPricing = dynamic(() => import("@/Components/Pages/ResellerHosting/ResellerHostingPricing"));
+const ResellerHostingWhmcs = dynamic(() => import("@/Components/Pages/ResellerHosting/ResellerHostingWhmcs"));
+const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
+
+
+
+
+
+// import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
+// import ResellerHostingArticle from "@/Components/Pages/ResellerHosting/ResellerHostingArticle";
+// import ResellerHostingFaq from "@/Components/Pages/ResellerHosting/ResellerHostingFaq";
+// import ResellerHostingPricing from "@/Components/Pages/ResellerHosting/ResellerHostingPricing";
+// import ResellerHostingWhmcs from "@/Components/Pages/ResellerHosting/ResellerHostingWhmcs";
+// import LiveChat from "@/Components/LiveChat/LiveChat";
+
+
 
 interface IProps {
   response: {

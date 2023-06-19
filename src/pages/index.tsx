@@ -10,17 +10,12 @@ const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
 const MoneyBackGuarantee = dynamic(() => import("@/Components/Home/MoneyBackGuarantee"));
 const HireAnExpert = dynamic(() => import("@/Components/Home/HireAnExpert"));
 const HomeReview = dynamic(() => import("@/Components/Home/HomeReview"));
-
 // import HomeReview from "@/Components/Home/HomeReview";
-
 // import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 // import HireAnExpert from "@/Components/Home/HireAnExpert";
 // import HomeReview from "@/Components/Home/HomeReview";
-
 // import LiveChat from "@/Components/LiveChat/LiveChat";
-
 import HomeArticle from "@/Components/Home/HomeArticle";
-
 import { GetServerSidePropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import HomeProducts from "@/Components/Pages/Home/HomeProducts";
@@ -87,7 +82,12 @@ export const Home: FC<IProps> = ({ response, error }) => {
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <HomeReview />
         </section>
+
+
         <LiveChat />
+
+
+        
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <HomeFaq />
         </div>

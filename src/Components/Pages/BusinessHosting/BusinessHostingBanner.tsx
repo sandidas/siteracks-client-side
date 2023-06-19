@@ -40,12 +40,12 @@ const BusinessHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
           <div className="text-text">Starting at</div>
           <div className="flex">
             <div className="text-primary font-bold text-5xl group-hover:text-text">
-            <BannerPrice product={product} isLoading={isLoading} typeSlugName="startUpBusinessHosting" />
+              <BannerPrice product={product} isLoading={isLoading} typeSlugName="startUpBusinessHosting" />
             </div>
             <div className="text-text pt-3">/mo</div>
           </div>
+          <p className="text-sm text-primary font-medium">Free Wordpress Website Migration</p>
         </div>
-        <p className="text-sm text-primary font-medium">Free Wordpress Website Migration</p>
       </div>
 
       {/* right column  */}

@@ -1,20 +1,24 @@
-import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
-import LiveChat from "@/Components/LiveChat/LiveChat";
-import React, { FC, useState } from "react";
-import BusinessHostingBanner from "@/Components/Pages/BusinessHosting/BusinessHostingBanner";
-import BusinessHostingPricing from "@/Components/Pages/BusinessHosting/BusinessHostingPricing";
-import BusinessHostingArticle from "@/Components/Pages/BusinessHosting/BusinessHostingArticle";
-import BusinessHostingMoreBenefits from "@/Components/Pages/BusinessHosting/BusinessHostingMoreBenefits";
-import BusinessHostingBusinessTools from "@/Components/Pages/BusinessHosting/BusinessHostingBusinessTools";
-import BusinessHostingFaq from "@/Components/Pages/BusinessHosting/BusinessHostingFaq";
-import BusinessHostingCompare from "@/Components/Pages/BusinessHosting/BusinessHostingCompare";
-import BusinessHostingApp from "@/Components/Pages/BusinessHosting/BusinessHostingApp";
-import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
 import { GetServerSidePropsContext } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
+import dynamic from "next/dynamic";
 import jwt from "jsonwebtoken";
+import React, { FC, useState } from "react";
+import BusinessHostingBanner from "@/Components/Pages/BusinessHosting/BusinessHostingBanner";
+const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
+
+
+const MoneyBackGuarantee = dynamic(() => import("@/Components/Home/MoneyBackGuarantee"));
+const BusinessHostingPricing = dynamic(() => import("@/Components/Pages/BusinessHosting/BusinessHostingPricing"));
+const BusinessHostingArticle = dynamic(() => import("@/Components/Pages/BusinessHosting/BusinessHostingArticle"));
+const BusinessHostingMoreBenefits = dynamic(() => import("@/Components/Pages/BusinessHosting/BusinessHostingMoreBenefits"));
+const BusinessHostingBusinessTools = dynamic(() => import("@/Components/Pages/BusinessHosting/BusinessHostingBusinessTools"));
+const BusinessHostingFaq = dynamic(() => import("@/Components/Pages/BusinessHosting/BusinessHostingFaq"));
+const BusinessHostingCompare = dynamic(() => import("@/Components/Pages/BusinessHosting/BusinessHostingCompare"));
+const BusinessHostingApp = dynamic(() => import("@/Components/Pages/BusinessHosting/BusinessHostingApp"));
+const FCFeatureForAllPackage = dynamic(() => import("@/Components/Pages/FeatureCard/FCFeatureForAllPackage"));
+
 
 interface IProps {
   response: {
@@ -51,7 +55,13 @@ const BusinessHosting: FC<IProps> = ({ response, isError }) => {
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <BusinessHostingMoreBenefits />
         </section>
-        <MoneyBackGuarantee />
+
+        <section className="bg-surface">
+          <div className="py-[10vh] mx-auto px-5 max-w-screen-2xl">
+            <MoneyBackGuarantee />
+          </div>
+        </section>
+
         <section className="max-w-screen-2xl mx-auto px-3 md:px-5 py-[10vh]">
           <BusinessHostingBusinessTools />
         </section>
@@ -93,7 +103,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           response,
         },
-       
       };
     }
     return { props: { isError: true } };
@@ -116,14 +125,14 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //           // // ...other default values
 //         },
 //       },
-//      
+//
 //     };
 //   }
 //   return {
 //     props: {
 //       metaData,
 //     },
-//    
+//
 //   };
 // }
 

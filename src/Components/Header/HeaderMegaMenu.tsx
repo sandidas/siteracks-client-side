@@ -323,8 +323,8 @@ export function HeaderMegaMenu() {
       {/* {menuItems.map((item:any) =>(
         "s"
       ))      } */}
-      <Header fixed={true} height={60} px="md" className="border-none max-w-screen-2xl mx-auto">
-        <Group position="apart" spacing={"xs"} sx={{ height: "100%" }}>
+      <Header fixed={true} height={60} px="md" className="border-none w-full">
+        <Group className="max-w-screen-2xl mx-auto" position="apart" spacing={"xs"} sx={{ height: "100%" }}>
           {/* burger icon for mobile */}
 
           {/* MOBILE  */}

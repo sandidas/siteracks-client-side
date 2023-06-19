@@ -42,10 +42,10 @@ const ManagedVpsHostingBanner: FC<IProps> = ({ product, isLoading, isError }) =>
             </div>
             <div className="text-text pt-3">/mo</div>
           </div>
+          <p className="text-sm">
+            Powered by <span className="text-primary font-medium">AWS and Digital Ocean</span> Premium servers
+          </p>
         </div>
-        <p className="text-sm">
-          Powered by <span className="text-primary font-medium">AWS and Digital Ocean</span> Premium servers
-        </p>
       </div>
 
       {/* right column  */}

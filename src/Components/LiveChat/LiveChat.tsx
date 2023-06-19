@@ -36,8 +36,8 @@ const LiveChat = () => {
               description={`We are not just another web hosting company. We differentiate ourselves from other web hosting companies by offering exceptional, fast, and reliable hosting services supported by our team of technical experts, available 24/7.`}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
-              <FeatureCard background={true}>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+              <FeatureCard background>
                 <div className="space-y-5">
                   <OpenSupportTicket className="fill-primary w-14 h-14" />
 
@@ -48,7 +48,7 @@ const LiveChat = () => {
 
                 <PlainButtonWithLink href={`${LOGIN_LINK}`} text="Get Support"></PlainButtonWithLink>
               </FeatureCard>
-              <FeatureCard background={true}>
+              <FeatureCard background>
                 <div className="space-y-5">
                   <LiveChatIcon className="fill-primary w-14 h-14" />
 
@@ -64,7 +64,7 @@ const LiveChat = () => {
                 />
               </FeatureCard>
 
-              <FeatureCard background={true}>
+              <FeatureCard background>
                 <div className="space-y-5">
                   <WhatsAppIcon className="fill-primary w-14 h-14" />
 
@@ -97,7 +97,7 @@ const LiveChat = () => {
                 <PlainButtonWithLink target href="https://wa.me/919641239131?text=Hello, I have a question about your service. Can you please help me?" text="WhatsApp Now"></PlainButtonWithLink>
               </FeatureCard>
 
-              <FeatureCard background={true}>
+              <FeatureCard background>
                 <div className="space-y-5">
                   <AskMeIcon className="fill-primary w-14 h-14" />
 

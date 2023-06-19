@@ -41,10 +41,8 @@ const WordPressHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => 
             </div>
             <div className="text-text pt-3">/mo</div>
           </div>
+          <p className="text-primary font-medium">Free Wordpress Website Migration</p>
         </div>
-        <p className="text-sm">
-          <span className="text-primary font-medium">Free Wordpress Website Migration</span>
-        </p>
       </div>
 
       {/* right column  */}
