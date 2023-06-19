@@ -8,7 +8,7 @@ const BannerSiteLock = () => {
       <div className="flex flex-col justify-center items-start space-y-4 group">
         <h1 className="flex flex-col md:leading-tight lg:leading-tight text-title font-bold">
           <span className="text-xl lg:text-2xl">Website Security</span>
-          <span className="text-5xl lg:text-6xl">Protect your website and enjoy peace of mind.</span>
+          <span className="text-5xl">Protect your website and enjoy peace of mind.</span>
           {/*  */}
         </h1>
         {/* <p className="text-text lg:text-xl lg:leading-9">Most of our packages include a FREE backup; if you prefer a more advanced offsite backup, you can upgrade anytime.</p> */}

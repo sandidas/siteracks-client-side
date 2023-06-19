@@ -21,7 +21,7 @@ const ResellerHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
         <h1 className="flex flex-col md:leading-normal space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">Effortlessly available and ready-to-run</span>
 
-          <span className="text-5xl lg:text-6xl lg:leading-tight text-title font-bold">Industry leader reseller hosting</span>
+          <span className="text-5xl lg:leading-tight text-title font-bold">Industry leader reseller hosting</span>
 
           <span className="uppercase text-xl">Made for you to manage multiple sites easily</span>
           <span className="uppercase text-xl font-bold text-primary tracking-wider">and allows you to earn money by hosting your clients</span>

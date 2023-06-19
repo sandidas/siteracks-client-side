@@ -9,7 +9,7 @@ const ResellerHostingWhmcs = () => {
       <section className="py-[10vh] bg-surface">
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <SectionTitle title="Simplify and streamline your reseller hosting business" subTitle="with the efficient automation provided by WHMCS software." bottomSpace />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-8">
             <div className="flex justify-center items-center w-full h-fit bg-surface">
               <Image alt="" src="/images/article/whmcs-admin-home.jpg" width={900} height={600} />
             </div>

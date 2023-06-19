@@ -17,7 +17,7 @@ const ManagedVpsHostingBanner: FC<IProps> = ({ product, isLoading, isError }) =>
       <div className="flex flex-col justify-center items-start space-y-8 group">
         <h1 className="flex flex-col space-y-3">
           <span className="uppercase text-xl font-bold tracking-wider">No Complexity, No Hassle</span>
-          <span className="text-5xl lg:text-6xl text-title font-bold lg:leading-tight"> A 100% Fully Managed VPS Hosting.</span>
+          <span className="text-5xl text-title font-bold lg:leading-tight"> A 100% Fully Managed VPS Hosting.</span>
           <span className="uppercase text-xl">We manages all your server needs</span>
           <span className="uppercase text-xl font-bold text-primary tracking-wider"> so that you can focus on your business.</span> {/*  */}
         </h1>

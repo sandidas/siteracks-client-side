@@ -6,7 +6,7 @@ const BlogBanner = () => {
       {/* left column  */}
       <div className="text-center flex flex-col items-center space-y-7">
         <div>
-          <h1 className="text-5xl lg:text-6xl md:leading-tight lg:leading-tight text-title font-bold">BLOG</h1>
+          <h1 className="text-5xl md:leading-tight lg:leading-tight text-title font-bold">BLOG</h1>
         </div>
         <p className="text-text lg:text-xl lg:leading-9">Your ultimate resource for web hosting and online presence, providing expert insights and trends to empower your digital journey.</p>
       </div>

@@ -8,7 +8,7 @@ const BannerBackup = () => {
       <div className="flex flex-col justify-center items-start space-y-4 group">
         <h1 className="flex flex-col md:leading-tight lg:leading-tight text-title font-bold">
           <span className="text-xl lg:text-2xl">Website Backup</span>
-          <span className="text-5xl lg:text-6xl">Backup as you want daily, weekly, and monthly.</span>
+          <span className="text-5xl">Backup as you want daily, weekly, and monthly.</span>
           {/*  */}
         </h1>
         <p className="text-text lg:text-xl lg:leading-9">

@@ -16,7 +16,7 @@ const WebHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
     <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
       <div className="flex flex-col justify-center items-start space-y-8 group">
-        <h1 className="flex flex-col text-5xl lg:text-6xl md:leading-tight lg:leading-tight text-title font-bold">
+        <h1 className="flex flex-col text-5xl md:leading-tight lg:leading-tight text-title font-bold">
           <span>Blazing Fast & Secure</span>
           <span className="text-primary"> Cloud Web Hosting</span>
           {/*  */}

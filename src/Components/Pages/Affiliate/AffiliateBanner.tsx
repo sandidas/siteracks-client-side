@@ -7,7 +7,7 @@ const AffiliateBanner = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:5 xl:gap-16 2xl:gap-32">
       <div className="flex flex-col justify-center items-start space-y-8 order-2 md:order-1">
-        <h1 className="flex flex-col text-5xl lg:text-6xl md:leading-tight lg:leading-tight text-title font-bold">
+        <h1 className="flex flex-col text-5xl md:leading-tight lg:leading-tight text-title font-bold">
           <span>SiteRacks</span>
           <span className="text-primary">Affiliate Program</span>
           {/*  */}
