@@ -1,9 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // it's for aws cold start issues
+  headers: async () => {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, s-maxage=86400",
+          },
+        ],
+      },
+    ];
+  },
+  webpack5: false, // to avoid warnings: TypeError: Cannot read properties of undefined (reading 'forEach')
 
-  pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
-  reactStrictMode: true, 
-  
+  pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
+  reactStrictMode: true,
+
   env: {
     API_HOST: process.env.API_HOST,
     API_URL: process.env.API_URL,
@@ -73,7 +88,6 @@ const nextConfig = {
 
     return config;
   },
-  webpack5: false, // to avoid warnings: TypeError: Cannot read properties of undefined (reading 'forEach')
 };
 
 module.exports = nextConfig;
