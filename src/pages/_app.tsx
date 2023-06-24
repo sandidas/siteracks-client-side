@@ -63,7 +63,7 @@ export default function App({ Component, pageProps }: AppProps) {
       handleStart();
       progressIntervalRef.current = setInterval(() => {
         setProgressValue((prevValue) => (prevValue + 10) % 100);
-      }, 100) as unknown as number;
+      }, 500) as unknown as number;
     };
 
     const completeLoading = () => {
