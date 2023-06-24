@@ -363,13 +363,16 @@ export function HeaderMegaMenu() {
                 </a>
               </HoverCard.Target>
 
+
+              
+
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
-                <Group position="apart" px="md">
+                {/* <Group position="apart" px="md">
                   <Text weight={500}>Features</Text>
                   <Anchor href="#" size="xs">
                     View all
                   </Anchor>
-                </Group>
+                </Group> */}
 
                 <Divider my="sm" mx="-md" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
@@ -462,7 +465,7 @@ export function HeaderMegaMenu() {
 
             {/* Help menu items  */}
 
-            <HoverCard width={1000} position="bottom" radius="md" shadow="md" withinPortal>
+            <HoverCard width={1200} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -474,7 +477,7 @@ export function HeaderMegaMenu() {
               </HoverCard.Target>
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
-                <SimpleGrid cols={3} spacing={0}>
+                <SimpleGrid cols={4} spacing={0}>
                   {helpLinks}
                   {/* Custom Live Chat */}
                   <UnstyledButton
@@ -509,7 +512,7 @@ export function HeaderMegaMenu() {
 
           <Group className={classes.hiddenMobile}>
             <SwitchDarkLight />
-            <Button size="md" variant="outline" leftIcon={<UserIcon className="h-5 w-5 fill-primary" />} component="a" href={`${process.env.BILLING_URL}index.php?rp=/login`}>
+            <Button size="md" variant="outline" leftIcon={<UserIcon className="h-5 w-5 fill-primary" />} component="a" href={`${process.env.BILLING_URL}/index.php/login`}>
               Account
             </Button>
           </Group>

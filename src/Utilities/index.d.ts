@@ -31,9 +31,21 @@ declare global {
         productDescription?: string;
         productId: number;
         featured?: boolean;
+
         additionalMonths?: string;
         promoCode?: string;
         additionalDiscount: number;
+
+
+        additionalMonths2YearsPackage?: string;
+        promoCode2YearsPackage?: string;
+        additionalDiscount2YearsPackage: number;
+
+        additionalMonths3YearsPackage?: string;
+        promoCode3YearsPackage?: string;
+        additionalDiscount3YearsPackage: number;
+
+
         monthlyPrice: number;
         annuallyPrice: number;
         bienniallyPrice: number;
