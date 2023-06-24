@@ -1,13 +1,14 @@
 import type { AppProps } from "next/app";
 import Layout from "@/Components/Layout/Layout";
 import "@/styles/globals.css";
-import { ReactElement, ReactNode, useEffect, useState } from "react";
+import { ReactElement, ReactNode, useEffect, useState, useRef } from "react";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import LoaderComponent from "@/Components/Loader/LoaderComponent";
 import { toast, ToastBar, Toaster } from "react-hot-toast";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Progress } from "@mantine/core";
 // https://www.youtube.com/watch?v=0ofxWRzBLWY
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -24,25 +25,67 @@ const queryClient = new QueryClient();
 export default function App({ Component, pageProps }: AppProps) {
   // To show loader
   const [loading, setLoading] = useState(false);
+  const [progressValue, setProgressValue] = useState(0);
   const router = useRouter();
-  useEffect(() => {
-    const handleStart = () => setLoading(true);
-    const handleComplete = () => setLoading(false);
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleComplete);
+  // VERSION 1.0
+  // useEffect(() => {
+  //   const handleStart = () => {
+  //     setLoading(true);
+  //     setProgressValue(0);
+  //   };
+  //   const handleComplete = () => setLoading(false);
+
+  //   router.events.on("routeChangeStart", handleStart);
+  //   router.events.on("routeChangeComplete", handleComplete);
+
+  //   return () => {
+  //     router.events.off("routeChangeStart", handleStart);
+  //     router.events.off("routeChangeComplete", handleComplete);
+  //   };
+  // }, [router]);
+  //# To show loader
+
+  // VERSION 2.0
+  const progressIntervalRef = useRef<number | null>(null);
+
+  const handleStart = () => {
+    setLoading(true);
+    setProgressValue(0);
+  };
+
+  const handleComplete = () => {
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    const startLoading = () => {
+      handleStart();
+      progressIntervalRef.current = setInterval(() => {
+        setProgressValue((prevValue) => (prevValue + 10) % 100);
+      }, 100) as unknown as number;
+    };
+
+    const completeLoading = () => {
+      clearInterval(progressIntervalRef.current as number);
+      handleComplete();
+    };
+
+    router.events.on("routeChangeStart", startLoading);
+    router.events.on("routeChangeComplete", completeLoading);
 
     return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleComplete);
+      clearInterval(progressIntervalRef.current as number);
+      router.events.off("routeChangeStart", startLoading);
+      router.events.off("routeChangeComplete", completeLoading);
     };
   }, [router]);
-  //# To show loader
 
   return (
     <Layout>
       {/* Loader  */}
-      {loading && <LoaderComponent />}
+      {/* {loading && <LoaderComponent />} */}
+      {loading && <Progress  size="sm" className="fixed z-auto left-0 w-full top-16" color="green" value={progressValue} />}
       {/* by wrapping the component tree with the QueryClientProvider, you're setting up the queryClient object, which provides a centralized data management system and caching mechanism for all the child components that use the react-query library. */}
       <QueryClientProvider client={queryClient}>
         <Component {...pageProps} />

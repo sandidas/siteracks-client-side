@@ -15,6 +15,8 @@ const LoaderComponent = () => {
           {/* <div className={`bg-primary h-1 w-1 animate-spin`}></div> */}
           <Loader color="green" variant="bars" size={"xl"} />
         </div>
+
+        
       </div>
     </section>
   );
