@@ -36,7 +36,7 @@ const HomeProducts: FC<IProps> = ({ products, isLoading }) => {
         return orderA - orderB;
       });
 
-  return <div className="grid gap-4 md:gap-6 xl:gap-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 py-[10vh]">{!packages ? <Loader color="green" /> : packages.map((product: IProduct, index: number) => <ProductCardHome key={index} product={product} />)}</div>;
+  return <div className="grid gap-4 md:gap-6 xl:gap-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 py-[10vh]">{!sortedPackage ? <Loader color="green" /> : sortedPackage.map((product: IProduct, index: number) => <ProductCardHome key={index} product={product} />)}</div>;
 };
 
 export default HomeProducts;
