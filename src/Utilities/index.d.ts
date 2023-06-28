@@ -65,6 +65,7 @@ declare global {
         customTextClassName?: string;
         customPriceCLassName?: string;
         icon?: string;
+        order?: number;
         seePlansLink?: string;
         packages: [IProductPackage];
 

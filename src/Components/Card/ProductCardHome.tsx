@@ -33,7 +33,7 @@ const ProductCardHome: FC<IProps> = ({ product }) => {
           <h2 className={`font-bold text-3xl flex flex-col pt-1 ${product?.customTitleClassName}`}>
             {product?.preTitle !== "false" && <small className="text-xs w-full">{product?.preTitle} </small>}
 
-            <span className="-mt-2">{product?.title}</span>
+            <span className="-mt-2">{product?.title} {product?.order} </span>
           </h2>
           <p className={`${product?.customTextClassName}`}>{product?.shortDescription}</p>
         </div>
