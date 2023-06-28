@@ -14,7 +14,7 @@ interface IProps {
 const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/wordpress-hosting");
+    router.push("/wordpress-hosting/#orderNow");
   };
 
   return (

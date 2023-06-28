@@ -30,7 +30,7 @@ const WebHostingPricing: FC<IProps> = ({ product, isLoading, isError }) => {
 
   return (
     <div>
-      <SectionTitle bottomSpace title="Choose Your WordPress Hosting Plan" />
+      <SectionTitle bottomSpace title="Choose Your Web Hosting Plan" />
 
       {packages.length === 0 ? (
         <h3 className="text-3xl font-bold text-primary text-center">Please refresh the page.</h3>

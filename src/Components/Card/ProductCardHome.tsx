@@ -20,7 +20,7 @@ const ProductCardHome: FC<IProps> = ({ product }) => {
 
   const router = useRouter();
   const handleClick = () => {
-    router.push(product?.seePlansLink as string);
+    router.push(`${product?.seePlansLink}/#orderNow` as string);
   };
 
   return (
