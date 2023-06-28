@@ -25,6 +25,8 @@ const HomeProducts: FC<IProps> = ({ products, isLoading }) => {
   // console.log(products.length);
   const getPackages = products && products.length > 0 ? products : null;
   const packages = getPackages && getPackages.filter((p: IProduct) => p.nameSlug !== "resellerHosting");
+  // PRODUCT SORTING NOT WORKS FROM DATABASE QUERY.
+  // THATS WHY TRYING TO SORTING FROM THIS CLIENT SIDE.
   // Sort the result array based on the "order" field
   const sortedPackage =
     packages &&
