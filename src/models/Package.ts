@@ -142,6 +142,7 @@ const PackageSchema = new Schema({
     required: true,
   },
   packages: [ChildSchema],
+  order: Number,
 });
 
 const Package = models.Package || model('Package', PackageSchema);

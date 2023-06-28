@@ -56,7 +56,7 @@ export default async function handler(
             "packages.featured": 0,
             "packages.additionalMonths": 0,
             "packages.promoCode": 0,
-        }).sort({ _id: 1 }).lean();
+        }).sort({ order: 1 }).lean();
 
         let metaData = await Seo.findOne({
             pageSlug: "home"
