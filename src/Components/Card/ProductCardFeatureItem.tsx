@@ -17,8 +17,15 @@ const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
           {
             // condition one
             // if status false then will show CROSS icon
+            // feature?.status ? (
+            //   <CompleteCheckIcon className={`w-5 h-5 ${feature?.iconColor === "" ? "fill-primary" : feature?.iconColor}`} />
+            // ) : (
+            //   // condition one alternative render
+            //   <NegativeCloseIcon className="w-5 h-5 fill-red-500" />
+            // )
+
             feature?.status ? (
-              <CompleteCheckIcon className={`w-5 h-5 ${feature?.iconColor ? feature?.iconColor : "fill-primary"}`} />
+              <CompleteCheckIcon className={`w-5 h-5 ${!feature?.iconColor || feature?.iconColor === "null" ? "fill-green-600" : feature?.iconColor}`} />
             ) : (
               // condition one alternative render
               <NegativeCloseIcon className="w-5 h-5 fill-red-500" />
