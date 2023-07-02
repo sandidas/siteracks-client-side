@@ -185,6 +185,7 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
               <UnstyledButton
                 onClick={() => {
                   setSearchKeyword("");
+                  setInputText("");
                 }}
               >
                 <XMarkIcon className="w-4 h-4 xl:w-6 xl:h-6 fill-slate-400 dark:fill-slate-400 hover:fill-primary dark:hover:fill-primary" />
