@@ -329,13 +329,11 @@ export function HeaderMegaMenu() {
 
           {/* MOBILE  */}
           <Group spacing="xs" className={`w-full flex justify-between xl:hidden`}>
-       
-              <Burger size={"sm"} opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+            <Burger size={"sm"} opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
 
-              <Link href="/" className="flex">
-                <Logo />
-              </Link>
-           
+            <Link href="/" className="flex">
+              <Logo />
+            </Link>
 
             <SwitchDarkLight />
           </Group>
@@ -362,9 +360,6 @@ export function HeaderMegaMenu() {
                   </Center>
                 </a>
               </HoverCard.Target>
-
-
-              
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
                 {/* <Group position="apart" px="md">
@@ -519,7 +514,7 @@ export function HeaderMegaMenu() {
         </Group>
       </Header>
 
-      <Drawer opened={drawerOpened} position="top" onClose={closeDrawer} size="100%" padding="md" title={<Logo />} className={classes.hiddenDesktop} zIndex={1000000} transition="fade" transitionDuration={100} transitionTimingFunction="ease-in">
+      <Drawer opened={drawerOpened} position="top" onClose={closeDrawer} size="100%" padding="md" title={<Logo />} className={classes.hiddenDesktop} zIndex={1000000} transition="slide-left" transitionDuration={300} transitionTimingFunction="ease-in">
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
