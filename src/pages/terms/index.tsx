@@ -7,6 +7,7 @@ import { GetServerSidePropsContext } from "next";
 import React, { FC } from "react";
 import jwt from "jsonwebtoken";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
+import { useRouter } from "next/router";
 
 interface IProps {
   response: {
@@ -17,6 +18,11 @@ interface IProps {
 }
 
 const TosIndexPage: FC<IProps> = ({ response, error }) => {
+  const router = useRouter();
+
+  const handlePageDetails = (pageSlug: string) => {
+    router.push(`/terms/${pageSlug}`);
+  };
   const pages = response?.data;
   const metaData = response?.metaData;
 
@@ -35,7 +41,7 @@ const TosIndexPage: FC<IProps> = ({ response, error }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5">
           {pages &&
             pages.map((item: IPage, index: number) => (
-              <Button size="md" className="" leftIcon={<ArrowRightIcon className="h-5 w-5 fill-primary" />} variant="default" key={index} component="a" href={`terms/${item?.pageSlug}`}>
+              <Button size="md" className="" leftIcon={<ArrowRightIcon className="h-5 w-5 fill-primary" />} variant="default" key={index} onClick={() => handlePageDetails(item?.pageSlug as string)}>
                 {item.pageTitle}
               </Button>
             ))}
@@ -68,7 +74,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           response,
         },
-       
       };
     } else {
       return { props: { error: true } };
