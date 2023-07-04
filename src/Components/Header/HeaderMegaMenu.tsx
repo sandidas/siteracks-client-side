@@ -519,7 +519,7 @@ export function HeaderMegaMenu() {
         </Group>
       </Header>
 
-      <Drawer opened={drawerOpened} position="top" onClose={closeDrawer} size="100%" padding="md" title={<Logo />} className={classes.hiddenDesktop} zIndex={1000000} transition="slide-up" transitionDuration={500} transitionTimingFunction="ease-in">
+      <Drawer opened={drawerOpened} position="top" onClose={closeDrawer} size="100%" padding="md" title={<Logo />} className={classes.hiddenDesktop} zIndex={1000000} transition="fade" transitionDuration={100} transitionTimingFunction="ease-in">
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider my="sm" color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"} />
 
