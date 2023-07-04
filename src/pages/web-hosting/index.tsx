@@ -142,36 +142,3 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     return { props: { isError: true } };
   }
 }
-
-// /**
-//  * OLD VERSION OF REQUEST
-//  *
-//  export async function getStaticProps(context: GetStaticPropsContext) {
-//   const slug = "web-hosting";
-//   const metaData = await getMetaData(slug);
-
-//   if (!metaData) {
-//     // Return a default value if metaData is undefined
-//     return {
-//       props: {
-//         metaData: {
-//           // title: "Default Title",
-//           // description: "Default description",
-//           // // ...other default values
-//         },
-//       },
-//
-//     };
-//   }
-
-//   return {
-//     props: {
-//       metaData,
-//     },
-//
-//   };
-// }
-//  *
-//  *
-//  *
-//  */

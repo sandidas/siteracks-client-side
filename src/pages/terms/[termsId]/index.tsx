@@ -26,7 +26,7 @@ const TermsPageIndividualItem: FC<IProps> = ({ response }) => {
 
         {/* Print rich text editor data here  */}
 
-        <div dangerouslySetInnerHTML={{ __html: page?.pageContent ?? "" }}></div>
+        <div className="blogSingle" dangerouslySetInnerHTML={{ __html: page?.pageContent ?? "" }}></div>
       </div>
     </>
   );
