@@ -152,7 +152,8 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
   // console.log("Individual Product Details", product);
 
   return (
-    <div className={`px-4 relative py-8 flex flex-col xl:px-8 xl:py-12 rounded-lg group hover:scale-x-105 duration-500 border-2 border-t-2 border-slate-100 dark:border-slate-800  hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg`}>
+    // hover:-translate-y-3 duration-200
+    <div className={`px-4 relative py-8 flex flex-col xl:px-8 xl:py-12 rounded-lg group border-2 border-t-2 border-slate-100 dark:border-slate-900 hover:border-surface dark:hover:border-surface shadow-md hover:shadow-lg dark:shadow-slate-900`}>
       {/* Absolute section for featured item */}
       {product?.featured && <div className="absolute text-center w-2/4 left-1/4 -top-5 text-white font-medium rounded-md py-1 bg-red-400 dark:bg-red-700">Most popular</div>}
 
@@ -168,9 +169,9 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
           How much saving the money 
           
           */}
-          <div className="flex justify-center items-center py-2 space-x-2 text-text text-sm">
+          <div className="flex justify-center items-center py-2 space-x-2 text-text">
             {" "}
-            <span className="line-through ">
+            <span className="line-through text-lg">
               {/*
               
               if selected price not monthly it will show monthly price in line through 
@@ -183,7 +184,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
             if this is features then it will show in red 
             
             */}
-            <div className={`${product?.featured ? "bg-red-400 dark:bg-red-700 text-white" : "bg-green-600/10 text-primary"} px-3 py-1 rounded-2xl font-bold group-hover:bg-secondary dark:group-hover:bg-secondary group-hover:text-white`}>SAVE {savingPercent.toFixed(0)}%</div>
+            <div className={`${product?.featured ? "bg-red-400 dark:bg-red-700 text-white" : "bg-secondary text-white"} px-3 py-1 text-lg rounded-2xl font-bold group-hover:bg-primary dark:group-hover:bg-primary group-hover:text-white`}>SAVE {savingPercent.toFixed(0)}%</div>
           </div>
           {/* 
 

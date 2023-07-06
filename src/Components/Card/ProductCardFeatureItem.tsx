@@ -1,7 +1,7 @@
 import QuestionIcon from "../../../public/images/icons/QuestionIcon.svg";
 import CompleteCheckIcon from "../../../public/images/icons/CompleteCheckIcon.svg";
 import NegativeCloseIcon from "../../../public/images/icons/NegativeCloseIcon.svg";
-import { Tooltip } from "@mantine/core";
+import { Button, Popover, Text, Tooltip, UnstyledButton } from "@mantine/core";
 import React, { FC } from "react";
 
 interface IFeature {
@@ -39,21 +39,15 @@ const ProductCardFeatureItem: FC<IFeature> = ({ feature }) => {
       </div>
       {feature?.toolTip && (
         <div>
-          <Tooltip
-            sx={(theme) => ({
-              fontSize: "12px",
-            })}
-            transition="pop-top-right"
-            multiline
-            width={220}
-            withArrow
-            label={feature?.toolTip}
-            offset={5}
-          >
-            <div>
-              <QuestionIcon className="w-5 h-5 fill-slate-500" />
-            </div>
-          </Tooltip>
+
+<Popover width={350} position="top" withArrow shadow="md">
+      <Popover.Target>
+      <UnstyledButton><QuestionIcon className="w-5 h-5 fill-slate-500" /></UnstyledButton>
+      </Popover.Target>
+      <Popover.Dropdown>
+        <Text size="sm">{feature?.toolTip}</Text>
+      </Popover.Dropdown>
+    </Popover>
         </div>
       )}
     </div>
