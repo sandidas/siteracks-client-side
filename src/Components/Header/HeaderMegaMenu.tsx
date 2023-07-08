@@ -328,14 +328,17 @@ export function HeaderMegaMenu() {
           {/* burger icon for mobile */}
 
           {/* MOBILE  */}
-          <Group spacing="xs" className={`w-full flex justify-between xl:hidden`}>
-            <Burger size={"sm"} opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+          {/* <Group spacing="xs" className={`w-full flex 
+          justify-between xl:hidden`}> */}
+          <Group spacing="xs" className={classes.hiddenDesktop + " w-full"}>
+            <div className="w-full justify-between flex">
+              <Burger size={"sm"} opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+              <Link href="/" className="flex">
+                <Logo />
+              </Link>
 
-            <Link href="/" className="flex">
-              <Logo />
-            </Link>
-
-            <SwitchDarkLight />
+              <SwitchDarkLight />
+            </div>
           </Group>
 
           {/* DESKTOP  */}
