@@ -138,6 +138,21 @@ declare global {
         createdAt: Date;
     }
 
+    // = = = = = = = = = = 
+    // IMAGES
+    // = = = = = = = = = = 
+    interface IImage {
+        _id: string;
+        source?: string;// this is related
+        filename: string;
+        fileUrl: string;
+        fileUrl_medium: string;
+        fileUrl_small: string;
+        referenceId: string;
+        referenceType: string;
+        createdAt?: Date;
+        updatedAt?: Date;
+    }
 
 
     interface IBlog {
@@ -177,7 +192,7 @@ declare global {
         metaOgTitle: string;
         metaOgDescription: string;
         metaOgImage: string;
-        featuredImage: string;
+        featuredImage: IImage;
         createdAt: Date;
         updatedAt: Date;
     }

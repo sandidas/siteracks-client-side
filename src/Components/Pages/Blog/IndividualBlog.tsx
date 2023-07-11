@@ -53,7 +53,7 @@ const IndividualBlog: FC<IProps> = ({ blog }) => {
         <div className="space-y-5">
           <Link href={`${ASKME_URL}/blog/${blog?.slug}`} className="flex">
             {blog?.featuredImage ? (
-              <Image className="w-full max-h-96" src={`https://${process.env.BUCKET_NAME_AWS}.s3.${process.env.REGION_AWS}.amazonaws.com/${blog?.featuredImage}`} alt={blog?.subject} width={600} height={200} />
+              <Image className="w-full max-h-96" src={`https://${process.env.BUCKET_NAME_AWS}.s3.${process.env.REGION_AWS}.amazonaws.com/${blog?.featuredImage?.fileUrl_medium}`} alt={blog?.subject} width={600} height={200} />
             ) : (
               <Image className="w-full max-h-96" src={"https://siteracks-content.s3.us-west-2.amazonaws.com/images/blogs/SiteRacks-Blog-Default-Image-medium-1689098222464-451445088.jpg"} alt={blog?.subject} width={600} height={200} />
             )}
