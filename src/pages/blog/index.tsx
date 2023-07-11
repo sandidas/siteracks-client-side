@@ -5,7 +5,7 @@ import React, { ChangeEvent, useEffect, useRef, useState, FC } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import IndividualBlog from "@/Components/Pages/Blog/IndividualBlog";
 import BlogBanner from "@/Components/Pages/Blog/BlogBanner";
-import { ArrowDownIcon, ArrowLongRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { ArrowDownIcon, ArrowLongRightIcon, ArrowPathIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import jwt from "jsonwebtoken";
 import { GetServerSidePropsContext } from "next";
@@ -178,29 +178,49 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
       <main className="max-w-screen-2xl mx-auto space-y-10 flex flex-col min-h-screen">
         <BlogBanner />
 
-        <Group>
-          <div className="flex w-full items-center border dark:border-gray-800  py-3 dark:bg-slate-800 bg-slate-50">
-            <TextInput variant="unstyled" className="px-5 w-11/12 text-lg font-bold" placeholder="Search Here" onKeyDown={handleKeyDown} value={inputText} onChange={handleInputChange} />
-            {searchKeyword ? (
-              <UnstyledButton
-                onClick={() => {
-                  setSearchKeyword("");
-                  setInputText("");
-                }}
-              >
-                <XMarkIcon className="w-4 h-4 xl:w-6 xl:h-6 fill-slate-400 dark:fill-slate-400 hover:fill-primary dark:hover:fill-primary" />
-              </UnstyledButton>
-            ) : (
-              <UnstyledButton
-                onClick={() => {
-                  setSearchKeyword(inputText);
-                }}
-              >
-                <ArrowLongRightIcon className="w-4 h-4 xl:w-6 xl:h-6 fill-slate-400 dark:fill-slate-400 hover:fill-primary dark:hover:fill-primary" />
-              </UnstyledButton>
-            )}
+        {/* 
+// = = = = = = = = =
+// SEARCH and RELOAD
+// = = = = = = = = =
+      */}
+        <div className="flex gap-2">
+          {/* // = = = = = = = 
+            // RELOAD DATA BUTTON
+            // = = = = = = = 
+        */}
+
+          <div className="mx-auto">
+            <Button loading={isFetching} variant="light" radius="sm" size="xl" onClick={() => handleRefetch()} disabled={isFetchingNextPage || isFetching}>
+              <ArrowPathIcon className="h-5 w-5" />
+            </Button>
           </div>
-        </Group>
+
+          {/* # */}
+
+          <Group className="grow">
+            <div className="flex w-full items-center border dark:border-gray-800  py-3 dark:bg-slate-800 bg-slate-50">
+              <TextInput variant="unstyled" className="px-5 w-11/12 text-lg font-bold" placeholder="Search Here" onKeyDown={handleKeyDown} value={inputText} onChange={handleInputChange} />
+              {searchKeyword ? (
+                <UnstyledButton
+                  onClick={() => {
+                    setSearchKeyword("");
+                    setInputText("");
+                  }}
+                >
+                  <XMarkIcon className="w-16 h-5 xl:w-6 xl:h-6 fill-slate-400 dark:fill-slate-400 hover:fill-primary dark:hover:fill-primary" />
+                </UnstyledButton>
+              ) : (
+                <UnstyledButton
+                  onClick={() => {
+                    setSearchKeyword(inputText);
+                  }}
+                >
+                  <ArrowLongRightIcon className="w-16 h-5 xl:w-6 xl:h-6 fill-slate-400 dark:fill-slate-400 hover:fill-primary dark:hover:fill-primary" />
+                </UnstyledButton>
+              )}
+            </div>
+          </Group>
+        </div>
 
         {/* 
   // = = = = = = = = =
