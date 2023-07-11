@@ -1,5 +1,16 @@
 import { Schema, model, models, Document } from "mongoose";
 
+interface IImage extends Document {
+    _id: string;
+    updatedAt: string;
+    createdAt: string;
+    filename: string;
+    fileUrl: string;
+    fileUrl_medium: string;
+    fileUrl_small: string;
+    referenceId: string;
+    referenceType: string;
+}
 interface IReaction {
     author: Schema.Types.ObjectId;
     authorName?: string;
@@ -57,18 +68,42 @@ interface IBlog extends Document {
         dislikes: IReaction[];
         saves: IReaction[];
     };
+    lastReplyBy: string,
     seoTitle: string,
     metaDescription: string,
     metaKeywords: string,
     metaOgTitle: string,
     metaOgDescription: string,
     metaOgImage: string,
-    featuredImage: string,
+    featuredImage: IImage,
     createdAt: Date;
     updatedAt: Date;
 
 }
 
+const ImageSchema = new Schema<IImage>({
+    filename: {
+        type: String,
+    },
+    fileUrl: {
+        type: String,
+    },
+    fileUrl_medium: {
+        type: String,
+    },
+    fileUrl_small: {
+        type: String,
+    },
+    referenceId: {
+        type: String,
+    },
+    referenceType: {
+        type: String,
+    },
+    _id: String,
+    updatedAt: String,
+    createdAt: String,
+});
 
 const CategorySchema = new Schema<ICategory>({
     title: {
@@ -207,7 +242,10 @@ const BlogSchema = new Schema<IBlog>({
         type: Boolean,
         default: false,
     },
-    featuredImage: String,
+    lastReplyBy: String,
+    featuredImage: {
+        type: ImageSchema
+    },
     seoTitle: String,
     metaDescription: String,
     metaKeywords: String,
