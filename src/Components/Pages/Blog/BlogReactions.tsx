@@ -13,10 +13,9 @@ interface IProps {
 
 const BlogReactions: FC<IProps> = ({ answers, reactions }) => {
   // userState for like count
-  const [totalLikes, setTotalLikes] = useState(0);
+  const [totalLikes, setTotalLikes] = useState(reactions?.likes.length ?? 0);
   const [totalDisLikes, setTotalDisLikes] = useState(0);
-  const [totalComments, setTotalComments] = useState(0);
-
+  const [totalComments, setTotalComments] = useState(answers?.length ?? 0);
   return (
     <>
       <div className="flex items-center gap-2 xl:gap-5">
