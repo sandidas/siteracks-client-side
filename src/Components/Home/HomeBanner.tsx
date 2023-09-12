@@ -18,10 +18,10 @@ const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-16 md:5 xl:gap-16 2xl:gap-32">
+    <div className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 xl:grid-cols-12 gap-5">
       {/* left column  */}
-      <div className="flex flex-col justify-center items-start space-y-3 group min-h-screen py-[10vh]">
-        <h1 className="flex flex-col md:leading-normal">
+      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 py-[5vh] xl:py-[7vh]">
+        <h1 className="flex flex-col md:leading-normal text-center xl:text-left">
           <span className="uppercase text-xl font-bold tracking-wider">Easy To Use, WordPress Optimized</span>
           <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight">Blazing Fast Web Hosting</span>
           <span className="uppercase text-xl">
@@ -29,22 +29,18 @@ const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
           </span>
         </h1>
 
-        <p className="text-text lg:text-base hidden xl:block">
+        <p className="text-text lg:text-base hidden xl:block  text-center xl:text-left">
           Whether you are just starting, growing fast, or running a high-traffic website, your <span className="text-primary font-bold">SITERACKS</span> web hosting services allow you to choose what works best for your brand.
         </p>
-        <ul className="text-text space-y-0 flex flex-wrap flex-col items-start">
-          <li className="bg-lime-500/10 dark:bg-lime-500/20 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Free & Easy Website Migration</li>
-          <li className="bg-green-500/10 dark:bg-green-500/20 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">24/7 priority support</li>
-          <li className="bg-violet-500/10 dark:bg-violet-500/20 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Free-.com domain, SSL, Email, and Backups</li>
+        <ul className="text-text gap-2 flex flex-wrap flex-col items-center xl:items-start text-center xl:text-left ">
+          <li className="bg-lime-500/20 dark:bg-lime-500/70 text-title px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Free & Easy Website Migration</li>
+          <li className="bg-green-500/10 dark:bg-green-500/70  text-title px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">24/7 priority support</li>
+          <li className="bg-violet-500/20 dark:bg-violet-500/70  text-title px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Free-.com domain, SSL, Email, and Backups</li>
           {/* <li className="bg-purple-500/10 dark:bg-purple-500/10 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">Dedicated WordPress expert</li> */}
-          <li className="bg-blue-500/10 dark:bg-blue-500/20 px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">30-day of money back guarantee</li>
+          <li className="bg-blue-500/20 dark:bg-blue-500/70  text-title px-2 py-1 lg:px-5 lg:font-bold rounded shadow hover:translate-x-2 duration-200">30-day of money back guarantee</li>
         </ul>
 
-        <Button component="button" onClick={handleClick} size="xl" className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary">
-          View Plans
-          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
-        </Button>
-        <div className="space-y-0">
+        <div className="text-center flex flex-col items-center xl:items-start xl:text-left">
           <div className="flex space-x-1">
             <div className="text-text pt-3">Starting at </div>
 
@@ -54,14 +50,18 @@ const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
 
             <div className="text-text pt-3">/mo*</div>
           </div>
-          <p className="text-sm">
+          <p className="text-sm m-0">
             Powered by <span className="text-primary font-medium">AWS and Digital Ocean</span> Premium servers
           </p>
         </div>
+
+        <Button component="button" onClick={handleClick} size="xl" className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary w-full xl:w-4/12">
+          View Plans
+          <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
+        </Button>
       </div>
       {/* right column  */}
-      <div className="flex flex-col justify-start items-center w-full">
-        <div className="grow"></div>
+      <div className="items-center justify-center w-full hidden xl:col-span-5 xl:flex flex-col">
         <HomeBannerImage className="w-full h-fit" />
       </div>
     </div>
