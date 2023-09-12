@@ -5,7 +5,7 @@ import FeaturesSiteLock from "@/Components/Pages/SiteLock/FeaturesSiteLock";
 import jwt from "jsonwebtoken";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext } from "next";
+import { GetStaticProps } from "next";
 import React, { FC } from "react";
 interface IProps {
   metaData: IHeadData;
@@ -26,7 +26,7 @@ const SiteLockPage: FC<IProps> = ({ metaData }) => {
 
 export default SiteLockPage;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 

@@ -1,23 +1,21 @@
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-import WebHostingArticle from "@/Components/Pages/WebHosting/WebHostingArticle";
+
 import WebHostingBanner from "@/Components/Pages/WebHosting/WebHostingBanner";
 import WebHostingPricing from "@/Components/Pages/WebHosting/WebHostingPricing";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext } from "next";
-import React, { FC, useState, useEffect } from "react";
+import { GetStaticProps } from "next";
+import React, { FC, useState } from "react";
 import dynamic from "next/dynamic";
+
+
+
+const WebHostingArticle = dynamic(() => import("@/Components/Pages/WebHosting/WebHostingArticle"));
 const MoneyBackGuarantee = dynamic(() => import("@/Components/Home/MoneyBackGuarantee"));
 const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
 const WebHostingFaq = dynamic(() => import("@/Components/Pages/WebHosting/WebHostingFaq"));
 const WebHostingEssentials = dynamic(() => import("@/Components/Pages/WebHosting/WebHostingEssentials"));
 const WebHostingPremiumAdvantage = dynamic(() => import("@/Components/Pages/WebHosting/WebHostingPremiumAdvantage"));
-
-// import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
-// import LiveChat from "@/Components/LiveChat/LiveChat";
-// import WebHostingFaq from "@/Components/Pages/WebHosting/WebHostingFaq";
-// import WebHostingEssentials from "@/Components/Pages/WebHosting/WebHostingEssentials";
-// import WebHostingPremiumAdvantage from "@/Components/Pages/WebHosting/WebHostingPremiumAdvantage";
 
 const jwt = require("jsonwebtoken");
 
@@ -30,26 +28,6 @@ interface IProps {
 }
 
 export const WebHosting: FC<IProps> = ({ response, isError }) => {
-  // useEffect(() => {
-  //   const nameSlug = "sharedWebHosting";
-  //   const seoPageSlug = "webHosting";
-
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await UseAxiosAdmin({
-  //         axiosInstance: axios,
-  //         method: "get",
-  //         url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-  //       });
-  //       // console.log("Response", response);
-  //     } catch (error) {
-  //       console.error("Error", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-
   const metaData = response?.metaData;
   const product = response?.data;
   const [isLoading, setIsLoading] = useState<boolean>(!product ? true : false);
@@ -96,23 +74,7 @@ export const WebHosting: FC<IProps> = ({ response, isError }) => {
 
 export default WebHosting;
 
-// const getApiData = async () => {
-//   const nameSlug = "sharedWebHosting";
-//   const seoPageSlug = "webHosting";
-
-//   const response = await UseAxiosAdmin({
-//     axiosInstance: axios,
-//     method: "get",
-//     url: `/api/pages/package?nameSlug=${nameSlug}&seoPageSlug=${seoPageSlug}`,
-//   });
-
-//   return response;
-// };
-
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const { res } = context;
-  res.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=600");
-
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
   const nameSlug = "sharedWebHosting";
@@ -141,4 +103,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     // console.error(error);
     return { props: { isError: true } };
   }
-}
+};

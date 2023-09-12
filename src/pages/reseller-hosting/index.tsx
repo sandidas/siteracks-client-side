@@ -1,7 +1,7 @@
 import ResellerHostingBanner from "@/Components/Pages/ResellerHosting/ResellerHostingBanner";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext } from "next";
+import { GetStaticProps } from "next";
 import React, { FC, useState } from "react";
 import jwt from "jsonwebtoken";
 import dynamic from "next/dynamic";
@@ -15,16 +15,7 @@ const ResellerHostingWhmcs = dynamic(() => import("@/Components/Pages/ResellerHo
 const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
 
 
-
-
-
-// import FCFeatureForAllPackage from "@/Components/Pages/FeatureCard/FCFeatureForAllPackage";
-// import ResellerHostingArticle from "@/Components/Pages/ResellerHosting/ResellerHostingArticle";
-// import ResellerHostingFaq from "@/Components/Pages/ResellerHosting/ResellerHostingFaq";
-// import ResellerHostingPricing from "@/Components/Pages/ResellerHosting/ResellerHostingPricing";
-// import ResellerHostingWhmcs from "@/Components/Pages/ResellerHosting/ResellerHostingWhmcs";
-// import LiveChat from "@/Components/LiveChat/LiveChat";
-
+ 
 
 
 interface IProps {
@@ -70,7 +61,7 @@ const ResellerHosting: FC<IProps> = ({ response, isError }) => {
 
 export default ResellerHosting;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
   const nameSlug = "resellerHosting";
@@ -100,27 +91,3 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     return { props: { isError: true } };
   }
 }
-
-// export async function getStaticProps(context: GetStaticPropsContext) {
-//   const slug = "reseller-hosting"; // CHANGE THIS SLUG
-//   const metaData = await getMetaData(slug);
-//   if (!metaData) {
-//     // Return a default value if metaData is undefined
-//     return {
-//       props: {
-//         metaData: {
-//           // title: "Default Title",
-//           // description: "Default description",
-//           // // ...other default values
-//         },
-//       },
-//      
-//     };
-//   }
-//   return {
-//     props: {
-//       metaData,
-//     },
-//    
-//   };
-// }

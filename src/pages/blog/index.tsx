@@ -8,7 +8,7 @@ import BlogBanner from "@/Components/Pages/Blog/BlogBanner";
 import { ArrowDownIcon, ArrowLongRightIcon, ArrowPathIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import jwt from "jsonwebtoken";
-import { GetServerSidePropsContext } from "next";
+import { GetStaticProps } from "next";
 interface ICResponse {
   blogs: IBlog[];
   nextCursor: string;
@@ -264,7 +264,7 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
 
 export default BlogIndex;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 

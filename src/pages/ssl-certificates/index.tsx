@@ -5,7 +5,7 @@ import SSLBrand from "@/Components/Pages/SslCertificates/SSLBrand";
 import SSLTypes from "@/Components/Pages/SslCertificates/SSLTypes";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext } from "next";
+import { GetStaticProps } from "next";
 import React, { FC } from "react";
 import jwt from "jsonwebtoken";
 interface IProps {
@@ -28,7 +28,7 @@ const SslCertificates: FC<IProps> = ({ metaData }) => {
 
 export default SslCertificates;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 
@@ -50,7 +50,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           metaData,
         },
-       
       };
     }
     return { props: { isError: true } };
@@ -58,7 +57,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     // console.error(error);
     return { props: { isError: true } };
   }
-}
+};
 
 // export async function getStaticProps(context: GetStaticPropsContext) {
 //   const slug = "ssl-certificates";
@@ -74,7 +73,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //           // // ...other default values
 //         },
 //       },
-//      
+//
 //     };
 //   }
 
@@ -82,6 +81,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //     props: {
 //       metaData,
 //     },
-//    
+//
 //   };
 // }

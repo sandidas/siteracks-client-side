@@ -1,12 +1,16 @@
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import CareerBanner from "@/Components/Pages/Careers/CareerBanner";
-import CareerOpenPositions from "@/Components/Pages/Careers/CareerOpenPositions";
-import CareerPerksAndBenefits from "@/Components/Pages/Careers/CareerPerksAndBenefits";
+
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext } from "next";
+import { GetStaticProps } from "next";
 import React, { FC } from "react";
 import jwt from "jsonwebtoken";
+
+import dynamic from "next/dynamic";
+const CareerOpenPositions = dynamic(() => import("@/Components/Pages/Careers/CareerOpenPositions"));
+const CareerPerksAndBenefits = dynamic(() => import("@/Components/Pages/Careers/CareerPerksAndBenefits"));
+
 interface IProps {
   metaData: IHeadData;
 }
@@ -34,7 +38,7 @@ const Careers: FC<IProps> = ({ metaData }) => {
 
 export default Careers;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 
@@ -56,7 +60,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           metaData,
         },
-       
       };
     }
     return { props: { isError: true } };
@@ -64,28 +67,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     // console.error(error);
     return { props: { isError: true } };
   }
-}
-
-// export async function getStaticProps(context: GetStaticPropsContext) {
-//   const slug = "careers"; // CHANGE THIS SLUG
-//   const metaData = await getMetaData(slug);
-//   if (!metaData) {
-//     // Return a default value if metaData is undefined
-//     return {
-//       props: {
-//         metaData: {
-//           // title: "Default Title",
-//           // description: "Default description",
-//           // // ...other default values
-//         },
-//       },
-//      
-//     };
-//   }
-//   return {
-//     props: {
-//       metaData,
-//     },
-//    
-//   };
-// }
+};

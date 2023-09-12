@@ -1,15 +1,19 @@
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import AffiliateBanner from "@/Components/Pages/Affiliate/AffiliateBanner";
-import AffiliateFaq from "@/Components/Pages/Affiliate/AffiliateFaq";
-import AffiliateHowItWorks from "@/Components/Pages/Affiliate/AffiliateHowItWorks";
-import AffiliateLucrative from "@/Components/Pages/Affiliate/AffiliateLucrative";
-import AffiliateNothingToLose from "@/Components/Pages/Affiliate/AffiliateNothingToLose";
-import AffiliateWhy from "@/Components/Pages/Affiliate/AffiliateWhy";
+
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext } from "next";
+import { GetStaticProps } from "next";
 import jwt from "jsonwebtoken";
 import React, { FC } from "react";
+
+import dynamic from "next/dynamic";
+const AffiliateFaq = dynamic(() => import("@/Components/Pages/Affiliate/AffiliateFaq"));
+const AffiliateHowItWorks = dynamic(() => import("@/Components/Pages/Affiliate/AffiliateHowItWorks"));
+const AffiliateLucrative = dynamic(() => import("@/Components/Pages/Affiliate/AffiliateLucrative"));
+const AffiliateNothingToLose = dynamic(() => import("@/Components/Pages/Affiliate/AffiliateNothingToLose"));
+const AffiliateWhy = dynamic(() => import("@/Components/Pages/Affiliate/AffiliateWhy"));
+
 interface IProps {
   metaData: IHeadData;
 }
@@ -60,7 +64,7 @@ const Affiliate: FC<IProps> = ({ metaData }) => {
 };
 export default Affiliate;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 
@@ -81,7 +85,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           metaData,
         },
-       
       };
     }
     return { props: { isError: true } };
@@ -89,7 +92,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     // console.error(error);
     return { props: { isError: true } };
   }
-}
+};
 
 // export async function getStaticProps(context: GetStaticPropsContext) {
 //   const slug = "affiliate";
@@ -105,7 +108,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //           // // ...other default values
 //         },
 //       },
-//      
+//
 //     };
 //   }
 
@@ -113,6 +116,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 //     props: {
 //       metaData,
 //     },
-//    
+//
 //   };
 // }

@@ -4,7 +4,7 @@ import FaqBackup from "@/Components/Pages/Backup/FaqBackup";
 import FeaturesOfCodeGuardBackup from "@/Components/Pages/Backup/FeaturesOfCodeGuardBackup";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext } from "next";
+import {  GetStaticProps } from "next";
 import React, { FC } from "react";
 import jwt from "jsonwebtoken";
 interface IProps {
@@ -25,7 +25,7 @@ const BackupPage: FC<IProps> = ({ metaData }) => {
 
 export default BackupPage;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 
@@ -47,7 +47,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           metaData,
         },
-       
       };
     }
     return { props: { isError: true } };
@@ -55,30 +54,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     // console.error(error);
     return { props: { isError: true } };
   }
-}
-
-// export async function getStaticProps(context: GetStaticPropsContext) {
-//   const slug = "backup";
-//   const metaData = await getMetaData(slug);
-
-//   if (!metaData) {
-//     // Return a default value if metaData is undefined
-//     return {
-//       props: {
-//         metaData: {
-//           // title: "Default Title",
-//           // description: "Default description",
-//           // // ...other default values
-//         },
-//       },
-//      
-//     };
-//   }
-
-//   return {
-//     props: {
-//       metaData,
-//     },
-//    
-//   };
-// }
+};

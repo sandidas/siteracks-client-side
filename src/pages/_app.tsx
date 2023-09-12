@@ -28,23 +28,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const [progressValue, setProgressValue] = useState(0);
   const router = useRouter();
 
-  // VERSION 1.0
-  // useEffect(() => {
-  //   const handleStart = () => {
-  //     setLoading(true);
-  //     setProgressValue(0);
-  //   };
-  //   const handleComplete = () => setLoading(false);
-
-  //   router.events.on("routeChangeStart", handleStart);
-  //   router.events.on("routeChangeComplete", handleComplete);
-
-  //   return () => {
-  //     router.events.off("routeChangeStart", handleStart);
-  //     router.events.off("routeChangeComplete", handleComplete);
-  //   };
-  // }, [router]);
-  //# To show loader
 
   // VERSION 2.0
   const progressIntervalRef = useRef<number | null>(null);
@@ -86,7 +69,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Layout>
         {/* Loader  */}
         {/* {loading && <LoaderComponent />} */}
-        {loading && <Progress size="sm" className="fixed z-auto left-0 w-full top-16" color="green" value={progressValue} />}
+        {loading && <Progress size="sm" className="fixed z-auto left-0 w-full top-14" color="green" value={progressValue} />}
         {/* by wrapping the component tree with the QueryClientProvider, you're setting up the queryClient object, which provides a centralized data management system and caching mechanism for all the child components that use the react-query library. */}
         <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />

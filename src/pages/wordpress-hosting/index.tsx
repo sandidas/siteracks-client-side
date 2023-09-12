@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from "next";
+import { GetStaticProps } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import React, { FC, useState } from "react";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
@@ -15,8 +15,6 @@ const WordPressHostingMoreBenefits = dynamic(() => import("@/Components/Pages/Wo
 const WordPressHostingPricing = dynamic(() => import("@/Components/Pages/WordPressHosting/WordPressHostingPricing"));
 const WordPressBusinessTools = dynamic(() => import("@/Components/Pages/WordPressHosting/WordPressBusinessTools"));
 const FCFeatureForAllPackage = dynamic(() => import("@/Components/Pages/FeatureCard/FCFeatureForAllPackage"));
-
-
 
 // import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 // import LiveChat from "@/Components/LiveChat/LiveChat";
@@ -81,7 +79,7 @@ const WordPressHosting: FC<IProps> = ({ response, isError }) => {
 };
 export default WordPressHosting;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 
@@ -114,36 +112,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     // console.error(error);
     return { props: { isError: true } };
   }
-}
-
-/*
-
- * OLD VERSION OF REQUEST
-
-
-export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = "wordpress-hosting"; // CHANGE THIS SLUG
-  // const metaData = await getMetaData(slug);
-  if (!metaData) {
-    // Return a default value if metaData is undefined
-    return {
-      props: {
-        metaData: {
-          // title: "Default Title",
-          // description: "Default description",
-          // // ...other default values
-        },
-      },
-     
-    };
-  }
-  return {
-    props: {
-      metaData,
-    },
-   
-  };
-}
-
-
-*/
+};

@@ -15,10 +15,10 @@ interface IProps {
 const ResellerHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
   // const packagePrice = getPriceForBanner("resellerHosting", "startUpResellerHosting");
   return (
-    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
+    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 gap-16 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
-      <div className="flex flex-col justify-center items-start space-y-8 group">
-        <h1 className="flex flex-col md:leading-normal space-y-3">
+      <div className="flex flex-col justify-center items-start space-y-3 group min-h-screen py-[10vh]">
+        <h1 className="flex flex-col md:leading-normal space-y-1">
           <span className="uppercase text-xl font-bold tracking-wider">Effortlessly available and ready-to-run</span>
 
           <span className="text-4xl lg:text-6xl lg:leading-tight text-title font-bold">Industry leader reseller hosting</span>
@@ -26,7 +26,7 @@ const ResellerHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
           <span className="uppercase text-xl">Made for you to manage multiple sites easily</span>
           <span className="uppercase text-xl font-bold text-primary tracking-wider">and allows you to earn money by hosting your clients</span>
         </h1>
-        <ul className="text-text lg:text-xl space-y-3 list-disc pl-8">
+        <ul className="text-text list-disc pl-8">
           <li>Host Unlimited Websites with Free SSL Certificate</li>
           <li>Built For Your Success</li>
           <li>Dedicated one-to-one support.</li>
@@ -49,7 +49,7 @@ const ResellerHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
       </div>
 
       {/* right column  */}
-      <div className="flex flex-col justify-start items-center w-full">
+      <div className="flex flex-col justify-start items-center w-full pt-[10vh]">
         <BannerImage className="w-full h-fit" />
       </div>
     </div>

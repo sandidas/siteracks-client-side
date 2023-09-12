@@ -12,10 +12,10 @@ interface IProps {
 
 const WordPressHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
+    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 gap-16 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
-      <div className="flex flex-col justify-center items-start space-y-8 group order-2 md:order-1">
-        <h1 className="flex flex-col md:leading-normal space-y-3">
+      <div className="flex flex-col justify-center items-start gap-3 group order-2 md:order-1 min-h-screen py-[10vh]">
+        <h1 className="flex flex-col">
           <span className="uppercase text-xl font-bold tracking-wider">No hidden cost, No hassle</span>
           <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight">Get a significant combo benefit</span>
           <span className="uppercase text-lg">
@@ -23,7 +23,7 @@ const WordPressHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => 
           </span>
           {/*  */}
         </h1>
-        <ul className="text-text lg:text-xl space-y-3 list-disc pl-8">
+        <ul className="text-text list-disc pl-8">
           <li>Blazing fast and Light speed WordPress optimized server.</li>
           <li>Latest technologies with advanced security.</li>
           <li>User friendly dashboard</li>

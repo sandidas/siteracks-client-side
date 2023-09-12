@@ -1,13 +1,16 @@
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
-import BehindOurLogo from "@/Components/Pages/AboutUs/BehindOurLogo";
-import BrandAssetsBanner from "@/Components/Pages/BrandAssets/BrandAssetsBanner";
-import BrandAssetsColor from "@/Components/Pages/BrandAssets/BrandAssetsColor";
-import BrandAssetsDoDont from "@/Components/Pages/BrandAssets/BrandAssetsDoDont";
-import BrandAssetsGuideLine from "@/Components/Pages/BrandAssets/BrandAssetsGuideLine";
-import BrandAssetsLogo from "@/Components/Pages/BrandAssets/BrandAssetsLogo";
 import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import axios from "axios";
-import { GetServerSidePropsContext } from "next";
+import { GetStaticProps } from "next";
+import BrandAssetsBanner from "@/Components/Pages/BrandAssets/BrandAssetsBanner";
+
+import dynamic from "next/dynamic";
+const BehindOurLogo = dynamic(() => import("@/Components/Pages/AboutUs/BehindOurLogo"));
+const BrandAssetsColor = dynamic(() => import("@/Components/Pages/BrandAssets/BrandAssetsColor"));
+const BrandAssetsDoDont = dynamic(() => import("@/Components/Pages/BrandAssets/BrandAssetsDoDont"));
+const BrandAssetsGuideLine = dynamic(() => import("@/Components/Pages/BrandAssets/BrandAssetsGuideLine"));
+const BrandAssetsLogo = dynamic(() => import("@/Components/Pages/BrandAssets/BrandAssetsLogo"));
+
 import React, { FC } from "react";
 import jwt from "jsonwebtoken";
 interface IProps {
@@ -53,7 +56,7 @@ const BrandAssets: FC<IProps> = ({ metaData }) => {
 
 export default BrandAssets;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
 
@@ -75,7 +78,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         props: {
           metaData,
         },
-       
       };
     }
     return { props: { isError: true } };
@@ -83,28 +85,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     // console.error(error);
     return { props: { isError: true } };
   }
-}
-
-// export async function getStaticProps(context: GetStaticPropsContext) {
-//   const slug = "brand-assets"; // CHANGE THIS SLUG
-//   const metaData = await getMetaData(slug);
-//   if (!metaData) {
-//     // Return a default value if metaData is undefined
-//     return {
-//       props: {
-//         metaData: {
-//           // title: "Default Title",
-//           // description: "Default description",
-//           // // ...other default values
-//         },
-//       },
-//      
-//     };
-//   }
-//   return {
-//     props: {
-//       metaData,
-//     },
-//    
-//   };
-// }
+};

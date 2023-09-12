@@ -2,21 +2,23 @@ import { Inter } from "@next/font/google";
 import dynamic from "next/dynamic";
 import React, { FC, useState } from "react";
 import HomeBanner from "@/Components/Home/HomeBanner";
-import WebsiteUpSection from "@/Components/Home/WebsiteUpSection";
-import SiteRacksParkSection from "@/Components/Home/SiteRacksParkSection";
-import HomeFaq from "@/Components/Home/HomeFaq";
 
 const LiveChat = dynamic(() => import("@/Components/LiveChat/LiveChat"));
 const MoneyBackGuarantee = dynamic(() => import("@/Components/Home/MoneyBackGuarantee"));
 const HireAnExpert = dynamic(() => import("@/Components/Home/HireAnExpert"));
 const HomeReview = dynamic(() => import("@/Components/Home/HomeReview"));
+
+
+const WebsiteUpSection = dynamic(() => import("@/Components/Home/WebsiteUpSection"));
+const HomeFaq = dynamic(() => import("@/Components/Home/HomeFaq"));
+const SiteRacksParkSection = dynamic(() => import("@/Components/Home/SiteRacksParkSection"));
+const HomeArticle = dynamic(() => import("@/Components/Home/HomeArticle"));
 // import HomeReview from "@/Components/Home/HomeReview";
 // import MoneyBackGuarantee from "@/Components/Home/MoneyBackGuarantee";
 // import HireAnExpert from "@/Components/Home/HireAnExpert";
 // import HomeReview from "@/Components/Home/HomeReview";
 // import LiveChat from "@/Components/LiveChat/LiveChat";
-import HomeArticle from "@/Components/Home/HomeArticle";
-import { GetServerSidePropsContext } from "next";
+import { GetServerSidePropsContext, GetStaticProps } from "next";
 import MetaDataComponent from "@/Components/Meta/MetaDataComponent";
 import HomeProducts from "@/Components/Pages/Home/HomeProducts";
 import axios from "axios";
@@ -83,11 +85,8 @@ export const Home: FC<IProps> = ({ response, error }) => {
           <HomeReview />
         </section>
 
-
         <LiveChat />
 
-
-        
         <div className="max-w-screen-2xl mx-auto px-3 md:px-5">
           <HomeFaq />
         </div>
@@ -98,19 +97,12 @@ export const Home: FC<IProps> = ({ response, error }) => {
 
 export default Home;
 
-export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-  const { res } = context;
-  res.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=600");
-  // let error;
-  // const response = await GetSrData();
+export const getStaticProps: GetStaticProps = async () => {
   const tokenSecret = process.env.ACCESS_TOKEN_SECRET as string;
   const apiKey = jwt.sign({}, tokenSecret);
-  const nameSlug = "resellerHosting";
-  const seoPageSlug = "resellerHosting";
 
   try {
     // const serializedMetaData = JSON.stringify(response.metaData);
-
     const response = await UseAxiosAdmin({
       axiosInstance: axios,
       method: "get",

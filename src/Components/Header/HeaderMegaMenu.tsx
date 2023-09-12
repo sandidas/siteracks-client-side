@@ -2,7 +2,7 @@ import { createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, S
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import SwitchDarkLight from "./SwitchDarkLight";
 
-import { ChatBubbleLeftRightIcon, ChevronDownIcon, UserIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon, UserIcon } from "@heroicons/react/24/solid";
 import Logo from "./Logo";
 import LiveChatIcon from "../../../public/images/nav/LiveChatIcon.svg";
 
@@ -68,129 +68,6 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
-
-// const hostingMenuItems = [
-//   {
-//     icon: WebHosting,
-//     title: "Web Hosting",
-//     description: "Scalable, reliable and secure cloud hosting compared to traditional hosting.",
-//     linkUrl: "web-hosting",
-//   },
-//   {
-//     icon: WordPressHosting,
-//     title: "WordPress Hosting",
-//     description: "Specialized features, tools, performance and security optimized for WordPress",
-//     linkUrl: "wordpress-hosting",
-//   },
-//   {
-//     icon: BusinessHosting,
-//     title: "Business Hosting",
-//     description: "Features and resources that needs of online businesses, such as high uptime.",
-//     linkUrl: "business-hosting",
-//   },
-//   {
-//     icon: preManagedVpsHosting,
-//     title: "pre-Managed VPS Hosting Light",
-//     description: "Offers dedicated resources and complete management services.",
-//     linkUrl: "pre-managed-vps-hosting-light",
-//   },
-//   {
-//     icon: ResellerHosting,
-//     title: "Reseller Hosting",
-//     description: "Build your hosting business empire with SiteRacks reseller hosting.",
-//     linkUrl: "reseller-hosting",
-//   },
-// ];
-
-// const domainMenuItems = [
-//   {
-//     icon: RegisterDomain,
-//     title: "Register a New Domain",
-//     description: "This Pokémon’s cry is very loud and distracting",
-//     linkUrl: "register-domain",
-//   },
-//   {
-//     icon: TransferDomain,
-//     title: "Transfer Domain To Us",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//     linkUrl: "transfer-domain",
-//   },
-//   {
-//     icon: SiteLockCertificate,
-//     title: "Privacy & Protection for Domains",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//     linkUrl: "privacy-protection-for-domains",
-//   },
-//   {
-//     icon: RegisterDomain,
-//     title: "WHOIS",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//     linkUrl: "domain-whois",
-//   },
-// ];
-
-// const websiteMenuItems = [
-//   {
-//     icon: WordPressHosting,
-//     title: "WordPress Website Design",
-//     description: "This Pokémon’s cry is very loud and distracting",
-//     linkUrl: "wordpress-website-design",
-//   },
-//   {
-//     icon: CustomWebsiteDevelopment,
-//     title: "Custom Website Development",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//     linkUrl: "custom-website-development",
-//   },
-// ];
-
-// const securityMenuItems = [
-//   {
-//     icon: WebsiteBackup,
-//     title: "Website Backups",
-//     description: "This Pokémon’s cry is very loud and distracting",
-//     linkUrl: "website-backup",
-//   },
-//   {
-//     icon: SslCertificates,
-//     title: "SSL Certificates",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//     linkUrl: "ssl-certificates",
-//   },
-//   {
-//     icon: SiteLockCertificate,
-//     title: "SiteLock Certificates",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//     linkUrl: "siteLock-certificates",
-//   },
-//   {
-//     icon: WildCardCertificate,
-//     title: "Wildcard SSL",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//     linkUrl: "wildcard-certificates",
-//   },
-// ];
-
-// const helpMenuItems = [
-//   // {
-//   //   icon: BlogsIcon,
-//   //   title: "Blogs",
-//   //   description: "This Pokémon’s cry is very loud and distracting",
-//   //   linkUrl: "blogs",
-//   // },
-//   {
-//     icon: OpenSupportTicket,
-//     title: "Open Support Ticket",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//     linkUrl: "open-support-ticket",
-//   },
-//   // {
-//   //   icon: KnowledgeBase,
-//   //   title: "Knowledge Base",
-//   //   description: "The fluid of Smeargle’s tail secretions changes",
-//   //   linkUrl: "knowldege-base",
-//   // },
-// ];
 
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
@@ -319,11 +196,8 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <Box pb={0}>
-      {/* {menuItems.map((item:any) =>(
-        "s"
-      ))      } */}
-      <Header fixed={true} height={60} px="md" className="border-none w-full">
+    <Box p={0} className="overflow-hidden h-0">
+      <Header fixed={true} height={60} px={0} className="border-none">
         <Group className="max-w-screen-2xl mx-auto" position="apart" spacing={"xs"} sx={{ height: "100%" }}>
           {/* burger icon for mobile */}
 

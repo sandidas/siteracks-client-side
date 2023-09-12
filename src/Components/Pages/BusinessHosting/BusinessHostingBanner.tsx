@@ -13,19 +13,19 @@ interface IProps {
 
 const BusinessHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 pt-[8vh] md:pt-[12vh] pb-[8vh] gap-16 md:5 xl:gap-16 2xl:gap-32">
+    <div className="max-w-screen-2xl mx-auto px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 gap-16 md:5 xl:gap-16 2xl:gap-32">
       {/* left column  */}
-      <div className="flex flex-col justify-center items-start space-y-8 group">
+      <div className="flex flex-col justify-center items-start space-y-3 group min-h-screen py-[10vh]">
         <h1 className="flex flex-col md:leading-normal space-y-3">
-          <span className="uppercase text-xl font-bold tracking-wider">Greater Stability, Enhanced Performance</span>
+          {/* <span className="uppercase text-xl font-bold tracking-wider">Greater Stability, Enhanced Performance</span> */}
           <span className="text-4xl lg:text-6xl lg:leading-tight text-title font-bold">Boost your business website, and pay less</span>
           <span className="uppercase text-xl">
             by SiteRacks <span className="uppercase text-xl font-bold text-primary tracking-wider">High Performance Business Web Hosting</span>{" "}
           </span>
           {/*  */}
         </h1>
-        <p className="text-text lg:text-xl lg:leading-9">The flexibility of cloud hosting, and the power of a VPS server. A complete solution for your business websites.</p>
-        <ul className="text-text lg:text-xl space-y-3 list-disc pl-8">
+        {/* <p className="text-text">The flexibility of cloud hosting, and the power of a VPS server. A complete solution for your business websites.</p> */}
+        <ul className="text-text list-disc pl-8">
           <li>Dedicated one-to-one support.</li>
           <li>Latest technologies with advanced security.</li>
           <li>Unlimited Traffic</li>
@@ -49,7 +49,7 @@ const BusinessHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
       </div>
 
       {/* right column  */}
-      <div className="flex flex-col justify-start items-center w-full">
+      <div className="flex flex-col justify-start items-center w-full pt-[10vh]">
         <BusinessHostingBannerImage className="w-full h-fit" />
       </div>
     </div>

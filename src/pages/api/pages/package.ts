@@ -36,9 +36,6 @@ export default async function handler(
     }
     // SECURITY PASSED
     else {
-
-
-
         try {
             let metaData
             const { nameSlug, seoPageSlug } = req.query;
