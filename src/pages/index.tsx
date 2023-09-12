@@ -1,4 +1,4 @@
-import { Inter } from "@next/font/google";
+
 import dynamic from "next/dynamic";
 import React, { FC, useState } from "react";
 import HomeBanner from "@/Components/Home/HomeBanner";
@@ -26,7 +26,7 @@ import UseAxiosAdmin from "@/Helpers/UseAxiosAdmin";
 import jwt from "jsonwebtoken";
 // import GetSrData from "@/models/getData/GetSrData";
 
-const inter = Inter({ subsets: ["latin"] });
+ 
 interface IProps {
   response: {
     metaData: IHeadData;
