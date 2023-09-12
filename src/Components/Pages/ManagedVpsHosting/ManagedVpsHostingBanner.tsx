@@ -14,7 +14,7 @@ const ManagedVpsHostingBanner: FC<IProps> = ({ product, isLoading, isError }) =>
   return (
     <div className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 xl:grid-cols-12 gap-5">
       {/* left column  */}
-      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 pb-[5vh] xl:py-[7vh] mx-auto min-h-screen justify-center">
+      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-5 py-[8vh] xl:py-[10vh] mx-auto">
         <h1 className="flex flex-col text-center xl:text-left gap-2">
           <span className="uppercase text-xs xl:text-xl font-bold tracking-wider">No Complexity, No Hassle</span>
           <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight"> A 100% Fully Managed VPS Hosting.</span>
@@ -25,9 +25,9 @@ const ManagedVpsHostingBanner: FC<IProps> = ({ product, isLoading, isError }) =>
           Our cost-effective and powerful managed VPS hosting plans are perfect for hosting websites on a secure and resilient infrastructure without the burden of managing the server. Don&#39;t wait any longer; pick the plan that suits your needs and start right away.
         </p> */}
         <ul className="text-text gap-2 flex flex-wrap flex-col items-center xl:items-start text-center xl:text-left">
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Dedicated one-to-one support.</li>
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Latest technologies with advanced security.</li>
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Ready to Use Tools</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">Dedicated one-to-one support.</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">Latest technologies with advanced security.</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">Ready to Use Tools</li>
         </ul>
 
         <div className="text-center flex flex-col items-center xl:items-start xl:text-left">

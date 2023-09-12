@@ -14,7 +14,7 @@ const WordPressHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => 
   return (
     <div className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 xl:grid-cols-12 gap-5">
       {/* left column  */}
-      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 pb-[5vh] xl:py-[7vh] mx-auto min-h-screen justify-center">
+      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-5 py-[8vh] xl:py-[10vh] mx-auto justify-center">
         <h1 className="flex flex-col text-center xl:text-left gap-2">
           <span className="uppercase font-bold tracking-wider text-xs xl:text-xl">No hidden cost, No hassle</span>
           <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight">Get a significant combo benefit</span>
@@ -24,9 +24,9 @@ const WordPressHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => 
           {/*  */}
         </h1>
         <ul className="text-text gap-2 flex flex-wrap flex-col items-center xl:items-start text-center xl:text-left">
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Blazing fast and Light speed WordPress optimized server.</li>
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Latest technologies with advanced security.</li>
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">User friendly dashboard</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">Blazing fast and Light speed WordPress optimized server.</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">Latest technologies with advanced security.</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">User friendly dashboard</li>
         </ul>
 
         <div className="text-center flex flex-col items-center xl:items-start xl:text-left">
@@ -40,7 +40,7 @@ const WordPressHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => 
           <p className="text-primary font-medium">Free Wordpress Website Migration</p>
         </div>
 
-        <Button component="a" href="#orderNow" size="xl" className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary w-full xl:w-4/12">
+        <Button component="a" href="#orderNow" size="lg" className="shadow-md transition ease-in-out duration-500  group-hover:text-white group-hover:bg-secondary w-full xl:w-4/12">
           View Plans
           <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
         </Button>

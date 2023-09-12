@@ -175,7 +175,7 @@ const BlogIndex: FC<IProps> = ({ metaData }) => {
   return (
     <>
       {metaData && <MetaDataComponent metaData={metaData} />}
-      <main className="max-w-screen-2xl mx-auto space-y-10 flex flex-col min-h-screen">
+      <main className="max-w-screen-2xl mx-auto space-y-10 flex flex-col py-[8vh]">
         <BlogBanner />
 
         {/* 

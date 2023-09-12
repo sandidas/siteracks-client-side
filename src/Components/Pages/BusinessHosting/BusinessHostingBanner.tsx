@@ -15,7 +15,7 @@ const BusinessHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
   return (
     <div className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 xl:grid-cols-12 gap-5">
       {/* left column  */}
-      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 pb-[5vh] xl:py-[7vh] mx-auto min-h-screen justify-center">
+      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-5 py-[8vh] xl:py-[10vh] mx-auto justify-center">
         <h1 className="flex flex-col text-center xl:text-left gap-2">
           {/* <span className="uppercase text-xl font-bold tracking-wider">Greater Stability, Enhanced Performance</span> */}
           <span className="text-4xl lg:text-6xl lg:leading-tight text-title font-bold">Boost your business website, and pay less</span>
@@ -26,10 +26,10 @@ const BusinessHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
         </h1>
         {/* <p className="text-text">The flexibility of cloud hosting, and the power of a VPS server. A complete solution for your business websites.</p> */}
         <ul className="text-text gap-2 flex flex-wrap flex-col items-center xl:items-start text-center xl:text-left">
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Dedicated one-to-one support.</li>
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Latest technologies with advanced security.</li>
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Unlimited Traffic</li>
-          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">24/7 Security Monitoring</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">Dedicated one-to-one support.</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">Latest technologies with advanced security.</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">Unlimited Traffic</li>
+          <li className="bg-green-500/20 rounded-sm py-1 px-2 text-title text-sm xl:text-base">24/7 Security Monitoring</li>
         </ul>
 
         <div className="text-center flex flex-col items-center xl:items-start xl:text-left">
