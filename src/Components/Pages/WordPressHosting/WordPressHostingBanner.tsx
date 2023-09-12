@@ -14,21 +14,19 @@ const WordPressHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => 
   return (
     <div className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 xl:grid-cols-12 gap-5">
       {/* left column  */}
-      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 py-[5vh] xl:py-[7vh] mx-auto min-h-screen justify-center">
-
+      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 pb-[5vh] xl:py-[7vh] mx-auto min-h-screen justify-center">
         <h1 className="flex flex-col text-center xl:text-left gap-2">
-          
-          <span className="uppercase text-xl font-bold tracking-wider">No hidden cost, No hassle</span>
+          <span className="uppercase font-bold tracking-wider text-xs xl:text-xl">No hidden cost, No hassle</span>
           <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight">Get a significant combo benefit</span>
-          <span className="uppercase text-lg">
-            by SiteRacks <span className="uppercase text-xl font-bold text-primary tracking-wider">Managed WordPress Hosting</span>{" "}
+          <span className="uppercase text-xs xl:text-xl">
+            by SiteRacks <span className="uppercase font-bold text-primary tracking-wider text-xs xl:text-xl">Managed WordPress Hosting</span>{" "}
           </span>
           {/*  */}
         </h1>
         <ul className="text-text gap-2 flex flex-wrap flex-col items-center xl:items-start text-center xl:text-left">
-          <li className="bg-background px-2 text-title">Blazing fast and Light speed WordPress optimized server.</li>
-          <li className="bg-background px-2 text-title">Latest technologies with advanced security.</li>
-          <li className="bg-background px-2 text-title">User friendly dashboard</li>
+          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Blazing fast and Light speed WordPress optimized server.</li>
+          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Latest technologies with advanced security.</li>
+          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">User friendly dashboard</li>
         </ul>
 
         <div className="text-center flex flex-col items-center xl:items-start xl:text-left">

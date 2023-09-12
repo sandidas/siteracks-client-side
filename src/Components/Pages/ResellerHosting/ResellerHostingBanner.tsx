@@ -17,21 +17,21 @@ const ResellerHostingBanner: FC<IProps> = ({ product, isLoading, isError }) => {
   return (
     <div className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 xl:grid-cols-12 gap-5">
       {/* left column  */}
-      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 py-[5vh] xl:py-[7vh] mx-auto min-h-screen justify-center">
+      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 pb-[5vh] xl:py-[7vh] mx-auto min-h-screen justify-center">
         <h1 className="flex flex-col text-center xl:text-left gap-2">
-          <span className="uppercase text-xl font-bold tracking-wider">Effortlessly available and ready-to-run</span>
+          <span className="uppercase text-xs xl:text-xl font-bold tracking-wider">Effortlessly available and ready-to-run</span>
 
           <span className="text-4xl lg:text-6xl lg:leading-tight text-title font-bold">Industry leader reseller hosting</span>
 
           <span className="uppercase text-xl">Made for you to manage multiple sites easily</span>
-          <span className="uppercase text-xl font-bold text-primary tracking-wider">and allows you to earn money by hosting your clients</span>
+          <span className="uppercase text-xs xl:text-xl font-bold text-primary tracking-wider">and allows you to earn money by hosting your clients</span>
         </h1>
         <ul className="text-text gap-2 flex flex-wrap flex-col items-center xl:items-start text-center xl:text-left">
-          <li className="bg-background px-2 text-title">Host Unlimited Websites with Free SSL Certificate</li>
-          <li className="bg-background px-2 text-title">Built For Your Success</li>
-          <li className="bg-background px-2 text-title">Dedicated one-to-one support.</li>
-          <li className="bg-background px-2 text-title">Scale your business when needed</li>
-          <li className="bg-background px-2 text-title">White Labeled</li>
+          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Host Unlimited Websites with Free SSL Certificate</li>
+          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Built For Your Success</li>
+          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Dedicated one-to-one support.</li>
+          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">Scale your business when needed</li>
+          <li className="bg-green-500/20 rounded-sm px-2 text-title text-sm xl:text-base">White Labeled</li>
         </ul>
 
         <div className="text-center flex flex-col items-center xl:items-start xl:text-left">
