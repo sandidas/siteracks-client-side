@@ -20,7 +20,7 @@ const HomeBanner: FC<IProps> = ({ products, isLoading }) => {
   return (
     <div className="max-w-screen-2xl mx-auto px-5 grid grid-cols-1 xl:grid-cols-12 gap-5">
       {/* left column  */}
-      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 py-[5vh] xl:py-[7vh]">
+      <div className="xl:col-span-7 flex flex-col items-center xl:items-start group max-w-4xl gap-8 xl:gap-3 py-[5vh] xl:py-[7vh] mx-auto">
         <h1 className="flex flex-col md:leading-normal text-center xl:text-left">
           <span className="uppercase text-xl font-bold tracking-wider">Easy To Use, WordPress Optimized</span>
           <span className="text-4xl lg:text-6xl text-title font-bold lg:leading-tight">Blazing Fast Web Hosting</span>
