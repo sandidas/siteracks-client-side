@@ -5,6 +5,7 @@ import { hostingMenuItems, domainMenuItems, securityMenuItems, helpMenuItems, ab
 import ScrollToTop from "./ScrollToTop";
 import SocialIcons from "./SocialIcons";
 import { UnstyledButton } from "@mantine/core";
+import PaymentIcons from "./Payment";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear().toString();
@@ -67,7 +68,8 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              <li className="cursor-pointer"
+              <li
+                className="cursor-pointer"
                 onClick={() => {
                   Tawk_API.toggle();
                 }}
@@ -97,7 +99,15 @@ const Footer = () => {
 
             <SocialIcons />
           </div>
+
           <div className="py-[2vh] border-t border-slate-300 dark:border-slate-600 text-text">
+            <div><PaymentIcons />
+
+
+
+
+            </div>
+
             <p>Copyright © {currentYear} SiteRacks, LLC. All Rights Reserved.</p>
             <p className="text-xs">All trademarks, logos, and brand names are the property of their respective owners.</p>
             <ul className="flex text-sm gap-5 justify-end">
