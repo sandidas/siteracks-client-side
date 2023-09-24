@@ -116,7 +116,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setRegularPrice(oneYearPackage);
       // notifications
       const notification = `You are getting $${totalSavings.toFixed(0)} discount for 1-Year service term of the ${product?.productTitle}.`;
-      toast.success(notification);
+      // toast.success(notification);
     }
     if (selectedPackage == 24) {
       orderLinkSwitcher("biennially");
@@ -131,7 +131,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setRegularPrice(twoYearPackage);
       // notifications
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 2-Year service term of the ${product?.productTitle}.`;
-      toast.success(notification);
+      // toast.success(notification);
     }
     if (selectedPackage == 36) {
       orderLinkSwitcher("triennially");
@@ -146,7 +146,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
       setRegularPrice(threeYearPackage);
       // notifications
       const notification = `Congrats! You are getting $${totalSavings.toFixed(0)} discount for 3-Year service term of the ${product?.productTitle}.`;
-      toast.success(notification);
+      // toast.success(notification);
     }
   };
   // console.log("Individual Product Details", product);
@@ -226,7 +226,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
             Order Now
             <ArrowLongRightIcon className="h-10 w-10 hover:fill-white pl-2 hidden group-hover:block" />
           </Button>
-          <p className="text-text text-xs leading-relaxed">
+          {/* <p className="text-text text-xs leading-relaxed">
             No hidden cost, no extra charge <br />
             You pay $ {payToday.toFixed(2)} today for {currentPackage == 1 ? currentPackage : currentPackage == 12 ? <>1</> : currentPackage == 24 ? <>2</> : <>3</>}
             {currentPackage == 1 ? " Month" : "-Year"} service term
@@ -236,7 +236,7 @@ const ProductCard: FC<IProps> = ({ product, className, type }) => {
               </span>
             )}
             . <br /> The renewal price ${regularPrice}.
-          </p>
+          </p> */}
         </div>
 
         {/*         
