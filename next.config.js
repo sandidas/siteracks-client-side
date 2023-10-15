@@ -14,7 +14,7 @@ const nextConfig = {
       },
     ];
   },
-  webpack5: false, // to avoid warnings: TypeError: Cannot read properties of undefined (reading 'forEach')
+  // webpack5: false, // to avoid warnings: TypeError: Cannot read properties of undefined (reading 'forEach')
 
   pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
   reactStrictMode: true,
