@@ -101,11 +101,8 @@ const Footer = () => {
           </div>
 
           <div className="py-[2vh] border-t border-slate-300 dark:border-slate-600 text-text">
-            <div><PaymentIcons />
-
-
-
-
+            <div>
+              <PaymentIcons />
             </div>
 
             <p>Copyright © {currentYear} SiteRacks, LLC. All Rights Reserved.</p>
@@ -129,6 +126,7 @@ const Footer = () => {
           </div>
         </section>
       </footer>
+
       <ScrollToTop />
     </>
   );
